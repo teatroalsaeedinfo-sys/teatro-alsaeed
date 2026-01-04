@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>About | تياترو الصعيد</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --bg:#f4f5f6;--white:#fff;--dark:#1f1f1f;--muted:#555;--accent:#2bb3b1;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--dark);line-height:1.9}
+section{background:var(--white);margin-bottom:40px}
+.container{max-width:1100px;margin:auto;padding:80px 20px}
+
+header{background:#fff;border-bottom:1px solid #eee}
+.nav{max-width:1100px;margin:auto;padding:20px;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{height:50px}
+nav a{margin:0 10px;font-weight:600;color:var(--accent);text-decoration:none}
+
+.lang-switch button{background:none;border:none;font-weight:600;cursor:pointer;margin:0 5px}
+
+h1{font-size:42px;margin-bottom:20px}
+h2{font-size:32px;margin-bottom:20px}
+p{font-size:17px;color:var(--muted)}
+
+.hero{padding:120px 20px;text-align:center;background:linear-gradient(#f4f5f6,#e8eaeb)}
+.hero p{max-width:760px;margin:auto}
+
+.impact{background:var(--accent);color:#fff;text-align:center}
+.impact p{color:#fff;font-size:22px;max-width:900px;margin:auto}
+
+footer{background:#1f1f1f;color:#ccc;text-align:center;padding:50px 20px}
+footer h3{color:#fff;margin-bottom:10px}
+.address{font-size:14px;color:#aaa}
+
+.en{display:none;font-family:'Inter',sans-serif;direction:ltr}
+
+@media(max-width:768px){
+h1{font-size:32px}
+.nav{flex-direction:column;gap:10px}
+}
+</style>
+
+<script>
+function switchLang(lang){
+ document.querySelectorAll('.ar').forEach(e=>e.style.display= lang==='ar'?'block':'none');
+ document.querySelectorAll('.en').forEach(e=>e.style.display= lang==='en'?'block':'none');
+ document.documentElement.dir = lang==='ar'?'rtl':'ltr';
+ localStorage.setItem('lang', lang);
+}
+window.onload = () => {
+ const saved = localStorage.getItem('lang') || 'ar';
+ switchLang(saved);
+}
+</script>
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+<div class="logo">
+<img src="logo.png" alt="Teatro AlSaeed Logo">
+<strong>Teatro AlSaeed</strong>
+</div>
+<nav>
+<a href="index.html">الرئيسية</a>
+<a href="about.html">عنّا</a>
+<a href="programs.html">البرامج</a>
+<a href="festival.html">المهرجان</a>
+<a href="contact.html">تواصل</a>
+</nav>
+<div class="lang-switch">
+<button onclick="switchLang('ar')">AR</button> |
+<button onclick="switchLang('en')">EN</button>
+</div>
+</div>
+</header>
+
+<div class="hero">
+<div class="ar">
+<h1>من نحن</h1>
+<p>
+تياترو الصعيد مؤسسة ثقافية مستقلة تعمل على إحياء وتنمية الفنون الأدائية،
+وتأسست بهدف خلق مساحات حقيقية وآمنة للفنانين في صعيد مصر،
+تقوم على الاحتراف، والاستمرارية، والإتاحة الثقافية.
+</p>
+</div>
+
+<div class="en">
+<h1>About Us</h1>
+<p>
+Teatro AlSaeed is an independent cultural institution founded to revive and develop performing arts,
+and to create real, safe, and professional spaces for artists in Upper Egypt,
+based on sustainability, access, and artistic integrity.
+</p>
+</div>
+</div>
+
+<section>
+<div class="container">
+<div class="ar">
+<h2>قصتنا</h2>
+<p>
+نشأ تياترو الصعيد من إيمان عميق بحق الفنانين في الأقاليم
+في التعلم والعمل والإنتاج داخل منظومة ثقافية تحترم التجربة
+ولا تختزل الفن في الهواية أو الموسمية.
+من هنا بدأت رحلتنا في بناء مساحة ثقافية مستقلة
+تعمل من صعيد مصر وإليه.
+</p>
+</div>
+
+<div class="en">
+<h2>Our Story</h2>
+<p>
+Teatro AlSaeed emerged from a deep belief in the right of artists outside capital cities
+to learn, work, and produce within a cultural ecosystem that respects experience
+and does not reduce art to a hobby or seasonal activity.
+From this belief, our journey began in Upper Egypt.
+</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="ar">
+<h2>رؤيتنا</h2>
+<p>
+نسعى إلى مشهد ثقافي عادل ومتاح،
+يمنح الفنانين في صعيد مصر فرصًا حقيقية للنمو والتطور،
+ويعيد توزيع الفعل الثقافي خارج المركز.
+</p>
+</div>
+
+<div class="en">
+<h2>Our Vision</h2>
+<p>
+We strive for an accessible and equitable cultural landscape,
+offering real opportunities for artists in Upper Egypt,
+and decentralizing cultural production beyond capital cities.
+</p>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="ar">
+<h2>رسالتنا</h2>
+<p>
+دعم المواهب الفنية الشابة،
+بناء قدرات العاملين في المجال الثقافي،
+إنتاج وتقديم تجارب فنية جادة،
+وتعزيز الشراكات الثقافية محليًا ودوليًا
+بما يضمن استدامة التأثير الثقافي.
+</p>
+</div>
+
+<div class="en">
+<h2>Our Mission</h2>
+<p>
+To support emerging artistic talents,
+build the capacities of cultural practitioners,
+produce and present serious artistic experiences,
+and foster local and international cultural partnerships
+to ensure long-term cultural impact.
+</p>
+</div>
+</div>
+</section>
+
+<section class="impact">
+<div class="container">
+<div class="ar">
+<p>
+نحن لا نخلق مساحات للفن فقط،
+بل نؤسس بيئة عمل ثقافي حقيقية
+تؤمن بأن الحلم حين يُدار باحتراف… يصبح مشروعًا.
+</p>
+</div>
+<div class="en">
+<p>
+We do not only create artistic spaces,
+we build real cultural working environments
+where dreams, when managed professionally, become projects.
+</p>
+</div>
+</div>
+</section>
+
+<footer>
+<h3>Teatro AlSaeed | تياترو الصعيد</h3>
+<p class="address ar">المنيا – شارع الحسيني – بجوار بي تك</p>
+<p class="address en">Minya – Al-Husseiny Street – Next to B.Tech</p>
+<p>Your Dream Is Legal</p>
+</footer>
+
+</body>
+</html>
