@@ -64,24 +64,30 @@ window.onload = () => {
 
 <header>
 <div class="nav">
+
 <div class="logo">
-<img src="logo.png" alt="Teatro AlSaeed Logo">
-<strong>Teatro AlSaeed</strong>
+<img src="logo.png">
 </div>
+
 <nav>
-<a href="index.html">الرئيسية</a>
-<a href="about.html">عنّا</a>
-<a href="programs.html">البرامج</a>
-<a href="festival.html">المهرجان</a>
-<a href="contact.html">تواصل</a>
+<a href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
+<a href="about.html"><span class="ar">عنّا</span><span class="en">About</span></a>
+<a href="troupe.html"><span class="ar">الفرقة</span><span class="en">Troupe</span></a>
+<a href="productions.html"><span class="ar">العروض</span><span class="en">Productions</span></a>
+<a href="academy.html"><span class="ar">الأكاديمية</span><span class="en">Academy</span></a>
+<a href="festival.html"><span class="ar">المهرجان</span><span class="en">Festival</span></a>
+<a href="sahara.html"><span class="ar">صحارة</span><span class="en">Sahara</span></a>
+<a href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
 </nav>
-<div class="lang-switch">
-<button onclick="switchLang('ar')">AR</button> |
-<button onclick="switchLang('en')">EN</button>
+
+<div class="lang-toggle">
+<button id="ar" onclick="switchLang('ar')">AR</button>
+<button id="en" onclick="switchLang('en')">EN</button>
 </div>
+
 </div>
 </header>
-
+ 
 <div class="hero">
 <div class="ar">
 <h1>من نحن</h1>
