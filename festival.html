@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>Minya International Theatre Festival</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+ --accent:#2bb3b1;
+ --dark:#111;
+ --light:#f5f6f7;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{font-family:'Cairo',sans-serif}
+
+/* NAV */
+header{
+ position:fixed;
+ width:100%;
+ background:#fff;
+ z-index:1000;
+ box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+.nav{
+ max-width:1200px;
+ margin:auto;
+ padding:15px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+}
+
+/* HERO */
+.hero{
+ height:80vh;
+ background:url('images/festival.jpg') center/cover no-repeat;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ color:#fff;
+ position:relative;
+}
+.hero::after{
+ content:'';
+ position:absolute;
+ inset:0;
+ background:rgba(0,0,0,0.6);
+}
+.hero-content{position:relative;z-index:2}
+
+/* SECTION */
+.section{padding:80px 20px;text-align:center}
+.container{max-width:1000px;margin:auto}
+
+/* STATS */
+.stats{
+ display:flex;
+ justify-content:center;
+ gap:40px;
+ margin-top:40px;
+ flex-wrap:wrap;
+}
+.stat{
+ text-align:center;
+}
+.stat span{
+ font-size:40px;
+ font-weight:700;
+ color:var(--accent);
+}
+
+/* TIMELINE */
+.timeline{
+ margin-top:60px;
+ position:relative;
+}
+.timeline::before{
+ content:'';
+ position:absolute;
+ right:50%;
+ width:3px;
+ height:100%;
+ background:#ddd;
+}
+
+.timeline-item{
+ width:50%;
+ padding:20px;
+ position:relative;
+ opacity:0;
+ transform:translateY(40px);
+ transition:0.6s;
+}
+
+.timeline-item.show{
+ opacity:1;
+ transform:translateY(0);
+}
+
+.timeline-item:nth-child(odd){
+ right:0;
+ text-align:right;
+}
+.timeline-item:nth-child(even){
+ right:50%;
+ text-align:left;
+}
+
+.year{
+ background:var(--accent);
+ color:#fff;
+ padding:6px 14px;
+ border-radius:20px;
+ display:inline-block;
+ margin-bottom:10px;
+}
+
+/* CTA */
+.cta{
+ background:var(--accent);
+ color:#fff;
+ padding:80px 20px;
+}
+.cta a{
+ background:#fff;
+ color:var(--accent);
+ padding:12px 30px;
+ border-radius:30px;
+ text-decoration:none;
+ display:inline-block;
+ margin-top:20px;
+}
+
+/* FOOTER */
+footer{
+ background:#111;
+ color:#ccc;
+ text-align:center;
+ padding:40px;
+}
+
+.en{display:none;font-family:'Inter',sans-serif}
+</style>
+
+<script>
+function switchLang(lang){
+ document.querySelectorAll('.ar').forEach(e=>e.style.display= lang==='ar'?'block':'none');
+ document.querySelectorAll('.en').forEach(e=>e.style.display= lang==='en'?'block':'none');
+ document.documentElement.dir = lang==='ar'?'rtl':'ltr';
+ localStorage.setItem('lang', lang);
+}
+window.onload=()=>{
+ switchLang(localStorage.getItem('lang')||'ar');
+}
+
+/* Timeline animation */
+window.addEventListener('scroll',()=>{
+ document.querySelectorAll('.timeline-item').forEach(item=>{
+  let pos=item.getBoundingClientRect().top;
+  if(pos < window.innerHeight - 100){
+    item.classList.add('show');
+  }
+ });
+});
+</script>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-content">
+
+<div class="ar">
+<h1>مهرجان المنيا الدولي للمسرح</h1>
+<p>منصة دولية للاحتفاء بالمسرح المستقل</p>
+</div>
+
+<div class="en">
+<h1>Minya International Theatre Festival</h1>
+<p>An international platform for independent theatre</p>
+</div>
+
+</div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+<div class="container">
+
+<div class="ar">
+<h2>عن المهرجان</h2>
+<p>مساحة لتبادل الخبرات وتقديم العروض المسرحية المعاصرة.</p>
+</div>
+
+<div class="en">
+<h2>About</h2>
+<p>A platform for exchange and contemporary theatre.</p>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+
+<div class="stat">
+<span>50+</span>
+<p class="ar">عرض مسرحي</p>
+<p class="en">Performances</p>
+</div>
+
+<div class="stat">
+<span>10+</span>
+<p class="ar">دول مشاركة</p>
+<p class="en">Countries</p>
+</div>
+
+<div class="stat">
+<span>300+</span>
+<p class="ar">مشارك</p>
+<p class="en">Participants</p>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!-- TIMELINE -->
+<div class="section">
+<div class="container">
+
+<div class="ar"><h2>الدورات</h2></div>
+<div class="en"><h2>Editions</h2></div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<span class="year">2022</span>
+<h3 class="ar">مهرجان المنيا للعروض المسرحية القصيرة</h3>
+<h3 class="en">Minya Short Theatre Festival</h3>
+</div>
+
+<div class="timeline-item">
+<span class="year">2024</span>
+<h3 class="ar">مهرجان المنيا للعروض المسرحية</h3>
+<h3 class="en">Minya Theatre Festival</h3>
+</div>
+
+<div class="timeline-item">
+<span class="year">2025</span>
+<h3 class="ar">مهرجان المنيا الدولي للمسرح</h3>
+<h3 class="en">Minya International Theatre Festival</h3>
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+<div class="ar">
+<h2>شارك في المهرجان</h2>
+<a href="contact.html">قدّم الآن</a>
+</div>
+
+<div class="en">
+<h2>Join the Festival</h2>
+<a href="contact.html">Apply Now</a>
+</div>
+</div>
+
+<footer>
+<p>Teatro AlSaeed</p>
+</footer>
+
+</body>
+</html>
