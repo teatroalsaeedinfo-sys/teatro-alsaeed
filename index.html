@@ -2,54 +2,149 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>Teatro AlSaeed | تياترو الصعيد</title>
+<title>تياترو الصعيد | Teatro AlSaeed</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
- --bg:#f4f5f6;--white:#fff;--dark:#1f1f1f;--muted:#555;--accent:#2bb3b1;
+ --accent:#2bb3b1;
+ --dark:#1f1f1f;
+ --light:#f4f5f6;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Cairo',sans-serif;background:var(--bg);color:var(--dark);line-height:1.9}
-section{background:var(--white);margin-bottom:40px}
-.container{max-width:1100px;margin:auto;padding:80px 20px}
-header{background:#fff;border-bottom:1px solid #eee}
-.nav{max-width:1100px;margin:auto;padding:20px;display:flex;justify-content:space-between;align-items:center}
-.logo{display:flex;align-items:center;gap:12px}
-.logo img{height:50px}
-.lang-switch button{background:none;border:none;font-weight:600;cursor:pointer;margin:0 5px}
 
-.hero{text-align:center;padding:140px 20px;background:linear-gradient(#f4f5f6,#e8eaeb)}
-.hero h1{font-size:48px;margin-bottom:20px}
-.hero p{max-width:780px;margin:auto;color:var(--muted)}
-.btns{margin-top:40px;display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
-.btn{padding:14px 36px;border-radius:6px;border:2px solid var(--accent);font-weight:600}
-.primary{background:var(--accent);color:#fff}
-.secondary{color:var(--accent)}
-
-h2{font-size:32px;margin-bottom:20px}
-p{font-size:17px;color:var(--muted)}
-
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:30px;margin-top:40px}
-.card{background:#fafafa;border:1px solid #eee;border-radius:8px;padding:30px}
-.card h3{color:var(--accent);margin-bottom:15px}
-
-.impact{background:var(--accent);color:#fff;text-align:center}
-.impact p{color:#fff;font-size:22px;max-width:900px;margin:auto}
-
-footer{background:#1f1f1f;color:#ccc;text-align:center;padding:50px 20px}
-footer h3{color:#fff;margin-bottom:10px}
-.socials a{margin:0 10px;color:#2bb3b1;font-weight:600;text-decoration:none}
-.address{font-size:14px;color:#aaa}
-
-.en{display:none;font-family:'Inter',sans-serif;direction:ltr}
-
-@media(max-width:768px){
-.hero h1{font-size:36px}
-.nav{flex-direction:column;gap:10px}
+body{
+ font-family:'Cairo',sans-serif;
+ background:#fff;
+ color:var(--dark);
 }
+
+/* ===== HEADER ===== */
+header{
+ position:fixed;
+ width:100%;
+ background:#fff;
+ z-index:999;
+ box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+.nav{
+ max-width:1100px;
+ margin:auto;
+ padding:15px;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+}
+.logo img{height:45px}
+nav a{
+ margin:0 8px;
+ color:var(--accent);
+ font-weight:600;
+ text-decoration:none;
+}
+
+/* ===== HERO ===== */
+.hero{
+ height:100vh;
+ background:url('images/show1.jpg') center/cover no-repeat;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ text-align:center;
+ color:#fff;
+ position:relative;
+}
+.hero::after{
+ content:'';
+ position:absolute;
+ inset:0;
+ background:rgba(0,0,0,0.5);
+}
+.hero-content{
+ position:relative;
+ z-index:2;
+ animation:fadeUp 1s ease;
+}
+.hero h1{font-size:50px;margin-bottom:20px}
+.hero p{max-width:700px;margin:auto}
+
+.cta-btn{
+ display:inline-block;
+ margin-top:25px;
+ padding:12px 30px;
+ background:var(--accent);
+ color:#fff;
+ border-radius:30px;
+ text-decoration:none;
+}
+
+/* ===== SECTION ===== */
+.section{
+ padding:100px 20px;
+ text-align:center;
+}
+.grid{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ gap:30px;
+ margin-top:40px;
+}
+.card{
+ padding:30px;
+ border-radius:10px;
+ background:#fafafa;
+ transition:.3s;
+}
+.card:hover{transform:translateY(-5px)}
+.card img{
+ width:100%;
+ height:180px;
+ object-fit:cover;
+ border-radius:8px;
+ margin-bottom:15px;
+}
+
+/* ===== CONTACT ===== */
+.contact{
+ background:#f4f5f6;
+ padding:80px 20px;
+ text-align:center;
+}
+.contact input, .contact textarea{
+ width:100%;
+ max-width:500px;
+ margin:10px auto;
+ padding:12px;
+ border:1px solid #ddd;
+ border-radius:8px;
+ display:block;
+}
+.contact button{
+ padding:12px 30px;
+ background:var(--accent);
+ color:#fff;
+ border:none;
+ border-radius:25px;
+ cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
+footer{
+ background:#1f1f1f;
+ color:#ccc;
+ text-align:center;
+ padding:40px;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp{
+ from{opacity:0;transform:translateY(30px)}
+ to{opacity:1;transform:translateY(0)}
+}
+
+.en{display:none;direction:ltr;font-family:'Inter',sans-serif}
 </style>
 
 <script>
@@ -59,9 +154,8 @@ function switchLang(lang){
  document.documentElement.dir = lang==='ar'?'rtl':'ltr';
  localStorage.setItem('lang', lang);
 }
-window.onload = () => {
- const saved = localStorage.getItem('lang') || 'ar';
- switchLang(saved);
+window.onload=()=>{
+ switchLang(localStorage.getItem('lang')||'ar')
 }
 </script>
 </head>
@@ -71,161 +165,88 @@ window.onload = () => {
 <header>
 <div class="nav">
 <div class="logo">
-<img src="logo.png" alt="Teatro AlSaeed Logo">
-<strong>Teatro AlSaeed</strong>
+<img src="logo.png">
 </div>
-<div class="lang-switch">
-<button onclick="switchLang('ar')">AR</button> | 
+
+<nav>
+<a href="index.html">الرئيسية</a>
+<a href="troupe.html">الفرقة</a>
+<a href="productions.html">العروض</a>
+<a href="academy.html">الأكاديمية</a>
+<a href="contact.html">تواصل</a>
+</nav>
+
+<div>
+<button onclick="switchLang('ar')">AR</button> |
 <button onclick="switchLang('en')">EN</button>
 </div>
 </div>
 </header>
 
+<!-- HERO -->
 <div class="hero">
+<div class="hero-content">
 <div class="ar">
-<h1>حلمك مشروع</h1>
-<p>
-في تياترو الصعيد لإحياء وتنمية الفنون،
-نحوّل الشغف الفني إلى مسارات حقيقية،
-من الحلم، إلى التدريب، إلى الإنتاج، إلى الاستدامة.
-</p>
+<h1>تياترو الصعيد</h1>
+<p>مساحة لصناعة الفن الحقيقي في قلب الصعيد</p>
+<a href="academy.html" class="cta-btn">ابدأ رحلتك</a>
 </div>
+
 <div class="en">
-<h1>Your Dream Is Legal</h1>
-<p>
-At Teatro AlSaeed for Arts Revival & Development,
-we transform artistic passion into real paths,
-from dream, to training, to production, to sustainability.
-</p>
+<h1>Teatro AlSaeed</h1>
+<p>A space for real art in Upper Egypt</p>
+<a href="academy.html" class="cta-btn">Start Your Journey</a>
 </div>
-<div class="btns">
-<a class="btn primary">Explore Our Work</a>
-<a class="btn secondary">Contact Us</a>
 </div>
 </div>
 
-<section>
-<div class="container">
-<div class="ar">
-<h2>من نحن</h2>
-<p>
-تياترو الصعيد مؤسسة ثقافية مستقلة تعمل على إحياء وتنمية الفنون الأدائية،
-وخلق مساحات آمنة وجادة تُمكّن الفنانين من التعلم، والتجريب، والعمل،
-خصوصًا في المناطق المهمشة بصعيد مصر.
-نؤمن أن الثقافة حق، وأن الفن ليس رفاهية،
-بل أداة وعي، وبناء، وتنمية مستدامة.
-</p>
-</div>
-<div class="en">
-<h2>About Us</h2>
-<p>
-Teatro AlSaeed is an independent cultural institution dedicated to reviving
-and developing performing arts, and creating safe, professional spaces for artists,
-particularly in underserved areas of Upper Egypt.
-We believe culture is a right, and art is not a luxury,
-but a tool for awareness, development, and sustainable impact.
-</p>
-</div>
-</div>
-</section>
-
-<section>
-<div class="container">
-<div class="ar">
-<h2>رؤيتنا</h2>
-<p>
-نحو مشهد ثقافي عادل ومتاح،
-يمنح الفنانين في الأقاليم فرصًا حقيقية للإنتاج والتطور،
-ويضع صعيد مصر على خريطة الفعل الثقافي محليًا ودوليًا.
-</p>
-</div>
-<div class="en">
-<h2>Our Vision</h2>
-<p>
-Towards an accessible and equitable cultural landscape,
-providing real opportunities for artists outside capital cities,
-and positioning Upper Egypt on the regional and international cultural map.
-</p>
-</div>
-</div>
-</section>
-
-<section>
-<div class="container">
-<div class="ar">
-<h2>رسالتنا</h2>
-<p>
-نعمل على دعم المواهب الفنية الشابة،
-وبناء قدرات العاملين في المجال الثقافي،
-وإنتاج وتقديم تجارب فنية جادة،
-وتعزيز الشراكات الثقافية المحلية والدولية
-من خلال برامج قائمة على الاحتراف والاستمرارية والتأثير المجتمعي.
-</p>
-</div>
-<div class="en">
-<h2>Our Mission</h2>
-<p>
-We support emerging artistic talents,
-build capacities of cultural practitioners,
-produce and present serious artistic experiences,
-and foster local and international cultural partnerships
-through professional, sustainable, and community-driven programs.
-</p>
-</div>
-</div>
-</section>
-
-<section>
-<div class="container">
-<div class="ar"><h2>محاور عملنا</h2></div>
-<div class="en"><h2>What We Do</h2></div>
+<!-- SERVICES -->
+<div class="section">
+<h2 class="ar">ما نقدمه</h2>
+<h2 class="en">What We Do</h2>
 
 <div class="grid">
-<div class="card ar"><h3>التدريب الفني</h3><p>ورش وبرامج احترافية في التمثيل، الإخراج، الكتابة، السينوغرافيا، والإدارة الثقافية.</p></div>
-<div class="card en"><h3>Artistic Training</h3><p>Professional workshops and programs in acting, directing, writing, scenography, and cultural management.</p></div>
 
-<div class="card ar"><h3>الإنتاج الثقافي</h3><p>إنتاج عروض وتجارب فنية مستقلة تعكس الواقع المحلي وتخاطب جمهورًا أوسع.</p></div>
-<div class="card en"><h3>Cultural Production</h3><p>Producing independent artistic works rooted locally and reaching wider audiences.</p></div>
+<div class="card">
+<img src="images/show2.jpg">
+<h3 class="ar">الفرقة</h3>
+<h3 class="en">Troupe</h3>
+<p class="ar">أكثر من 600 ليلة عرض</p>
+<p class="en">600+ performances</p>
+</div>
 
-<div class="card ar"><h3>العمل المجتمعي</h3><p>مشروعات فنية تستخدم الفن كوسيلة للحوار، والتعبير، وبناء الوعي.</p></div>
-<div class="card en"><h3>Community Engagement</h3><p>Art-based projects fostering dialogue, expression, and community awareness.</p></div>
+<div class="card">
+<img src="images/show3.jpg">
+<h3 class="ar">العروض</h3>
+<h3 class="en">Productions</h3>
+<p class="ar">إنتاجات مسرحية متنوعة</p>
+<p class="en">Theatrical productions</p>
+</div>
 
-<div class="card ar"><h3>الشراكات الدولية</h3><p>تعاونات مع مؤسسات ثقافية إقليمية ودولية تفتح آفاق التبادل والتأثير.</p></div>
-<div class="card en"><h3>International Collaboration</h3><p>Partnerships with regional and international cultural institutions enabling exchange and long-term impact.</p></div>
+<div class="card">
+<img src="images/show4.jpg">
+<h3 class="ar">الأكاديمية</h3>
+<h3 class="en">Academy</h3>
+<p class="ar">تدريب وصناعة الفنان</p>
+<p class="en">Training artists</p>
 </div>
-</div>
-</section>
 
-<section class="impact">
-<div class="container">
-<div class="ar"><p>نحن لا نصنع عروضًا فقط، بل نبني منظومة ثقافية مستدامة تعترف بالمحليات وتحترم التجربة.</p></div>
-<div class="en"><p>We don’t only create performances — we build sustainable cultural ecosystems rooted in local realities.</p></div>
 </div>
-</section>
+</div>
 
-<section>
-<div class="container" style="text-align:center">
-<div class="ar">
-<h2>تواصل معنا</h2>
-<p>إذا كنت فنانًا، أو مؤسسة، أو شريكًا ثقافيًا، فنحن نرحب بالتواصل والتعاون.</p>
+<!-- CONTACT -->
+<div class="contact">
+<h2 class="ar">تواصل معنا</h2>
+<h2 class="en">Contact Us</h2>
+
+<input type="text" placeholder="الاسم / Name">
+<input type="email" placeholder="Email">
+<textarea placeholder="رسالتك / Your Message"></textarea>
+<button>إرسال</button>
 </div>
-<div class="en">
-<h2>Get in Touch</h2>
-<p>If you are an artist, cultural institution, or partner, we welcome collaboration and dialogue.</p>
-</div>
-<a class="btn primary">Contact Us</a>
-</div>
-</section>
 
 <footer>
-<h3>Teatro AlSaeed | تياترو الصعيد</h3>
-<div class="socials">
-<a href="www.facebook.com/teatroalsaeed">Facebook</a>
-<a href="#">Instagram</a>
-<a href="#">YouTube</a>
-</div>
-<p class="address ar">المنيا – شارع الحسيني – بجوار بي تك</p>
-<p class="address en">Minya – Al-Husseiny Street – Next to B.Tech</p>
+<p>Teatro AlSaeed</p>
 <p>Your Dream Is Legal</p>
 </footer>
 
