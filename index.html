@@ -2,7 +2,7 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>تياترو الصعيد</title>
+<title>Teatro AlSaeed</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -10,20 +10,27 @@
 <style>
 :root{
  --accent:#2bb3b1;
- --dark:#1f1f1f;
- --light:#f4f5f6;
+ --dark:#111;
+ --light:#f5f6f7;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Cairo',sans-serif}
 
-/* HEADER */
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+ font-family:'Cairo',sans-serif;
+ background:#fff;
+ color:var(--dark);
+}
+
+/* ===== NAVBAR ===== */
 header{
  position:fixed;
  width:100%;
  background:#fff;
- z-index:999;
+ z-index:1000;
  box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
+
 .nav{
  max-width:1200px;
  margin:auto;
@@ -32,20 +39,53 @@ header{
  justify-content:space-between;
  align-items:center;
 }
-nav a{
- margin:0 6px;
- color:var(--accent);
- font-weight:600;
- text-decoration:none;
- font-size:14px;
+
+.logo img{height:45px}
+
+nav{
+ display:flex;
+ gap:15px;
+ flex-wrap:wrap;
 }
 
-/* HERO */
+nav a{
+ text-decoration:none;
+ font-weight:600;
+ color:#333;
+ font-size:14px;
+ position:relative;
+}
+
+nav a:hover{color:var(--accent)}
+
+/* ===== LANG TOGGLE ===== */
+.lang-toggle{
+ display:flex;
+ background:#eee;
+ border-radius:30px;
+ overflow:hidden;
+}
+
+.lang-toggle button{
+ border:none;
+ padding:6px 14px;
+ cursor:pointer;
+ background:transparent;
+ font-weight:600;
+}
+
+.lang-toggle .active{
+ background:var(--accent);
+ color:#fff;
+}
+
+/* ===== HERO ===== */
 .hero{
  height:100vh;
  position:relative;
  overflow:hidden;
 }
+
 .slide{
  position:absolute;
  width:100%;
@@ -55,6 +95,7 @@ nav a{
  opacity:0;
  transition:opacity 1s ease;
 }
+
 .slide.active{opacity:1}
 
 .hero::after{
@@ -71,11 +112,14 @@ nav a{
  text-align:center;
  top:50%;
  transform:translateY(-50%);
+ padding:20px;
 }
 
-.hero h1{font-size:48px}
+.hero h1{font-size:48px;margin-bottom:20px}
+.hero p{max-width:700px;margin:auto}
+
 .cta-btn{
- margin-top:20px;
+ margin-top:25px;
  display:inline-block;
  padding:12px 30px;
  background:var(--accent);
@@ -84,46 +128,71 @@ nav a{
  text-decoration:none;
 }
 
-/* SECTIONS */
-.section{padding:100px 20px;text-align:center}
+/* ===== SECTION ===== */
+.section{
+ padding:100px 20px;
+ text-align:center;
+}
+
 .grid{
  display:grid;
- grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+ grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
  gap:30px;
  margin-top:40px;
 }
+
 .card{
  background:#fafafa;
- padding:30px;
- border-radius:10px;
+ padding:25px;
+ border-radius:12px;
  transition:.3s;
 }
-.card:hover{transform:translateY(-5px)}
-.card img{width:100%;height:180px;object-fit:cover}
+.card:hover{transform:translateY(-6px)}
 
-/* CONTACT */
+.card img{
+ width:100%;
+ height:180px;
+ object-fit:cover;
+ border-radius:10px;
+ margin-bottom:15px;
+}
+
+/* ===== CONTACT ===== */
 .contact{
- background:#f4f5f6;
+ background:var(--light);
  padding:80px 20px;
  text-align:center;
 }
-.contact input,.contact textarea{
+
+.contact input,
+.contact textarea{
  width:100%;
  max-width:500px;
  margin:10px auto;
  padding:12px;
+ border-radius:8px;
+ border:1px solid #ddd;
  display:block;
 }
 
-/* FOOTER */
+.contact button{
+ padding:12px 30px;
+ background:var(--accent);
+ color:#fff;
+ border:none;
+ border-radius:25px;
+ cursor:pointer;
+}
+
+/* ===== FOOTER ===== */
 footer{
- background:#1f1f1f;
+ background:#111;
  color:#ccc;
  text-align:center;
  padding:40px;
 }
 
-.en{display:none}
+.en{display:none;font-family:'Inter',sans-serif}
 </style>
 
 <script>
@@ -131,21 +200,27 @@ function switchLang(lang){
  document.querySelectorAll('.ar').forEach(e=>e.style.display= lang==='ar'?'block':'none');
  document.querySelectorAll('.en').forEach(e=>e.style.display= lang==='en'?'block':'none');
  document.documentElement.dir = lang==='ar'?'rtl':'ltr';
+
+ document.querySelectorAll('.lang-toggle button').forEach(btn=>btn.classList.remove('active'));
+ document.getElementById(lang).classList.add('active');
+
  localStorage.setItem('lang', lang);
 }
 
-window.onload = ()=>{
- switchLang(localStorage.getItem('lang') || 'ar');
+window.onload=()=>{
+ let saved=localStorage.getItem('lang')||'ar';
+ switchLang(saved);
 }
 
+/* Slider */
 let current=0;
-function changeSlide(){
- let slides=document.querySelectorAll('.slide');
- slides[current].classList.remove('active');
- current=(current+1)%slides.length;
- slides[current].classList.add('active');
+function slide(){
+ let s=document.querySelectorAll('.slide');
+ s[current].classList.remove('active');
+ current=(current+1)%s.length;
+ s[current].classList.add('active');
 }
-setInterval(changeSlide,5000);
+setInterval(slide,5000);
 </script>
 </head>
 
@@ -153,52 +228,76 @@ setInterval(changeSlide,5000);
 
 <header>
 <div class="nav">
+
+<div class="logo">
+<img src="logo.png">
+</div>
+
 <nav>
-<a href="index.html">الرئيسية</a>
-<a href="troupe.html">الفرقة</a>
-<a href="productions.html">العروض</a>
-<a href="academy.html">الأكاديمية</a>
-<a href="festival.html">المهرجان</a>
-<a href="sahara.html">صحارة</a>
-<a href="contact.html">تواصل</a>
+<a href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
+<a href="about.html"><span class="ar">عنّا</span><span class="en">About</span></a>
+<a href="troupe.html"><span class="ar">الفرقة</span><span class="en">Troupe</span></a>
+<a href="productions.html"><span class="ar">العروض</span><span class="en">Productions</span></a>
+<a href="academy.html"><span class="ar">الأكاديمية</span><span class="en">Academy</span></a>
+<a href="festival.html"><span class="ar">مهرجان المنيا الدولي</span><span class="en">Minya Festival</span></a>
+<a href="sahara.html"><span class="ar">صحارة</span><span class="en">Sahara</span></a>
+<a href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
 </nav>
+
+<div class="lang-toggle">
+<button id="ar" onclick="switchLang('ar')">AR</button>
+<button id="en" onclick="switchLang('en')">EN</button>
+</div>
+
 </div>
 </header>
 
 <!-- HERO -->
 <div class="hero">
+
 <div class="slide active" style="background-image:url('images/hero1.jpg')"></div>
 <div class="slide" style="background-image:url('images/hero2.jpg')"></div>
 <div class="slide" style="background-image:url('images/hero3.jpg')"></div>
 
 <div class="hero-content">
+<div class="ar">
 <h1>تياترو الصعيد</h1>
 <p>مساحة آمنة تُمكّن الفنان من التعبير وصناعة الفن في صعيد مصر</p>
 <a href="academy.html" class="cta-btn">ابدأ رحلتك</a>
 </div>
+
+<div class="en">
+<h1>Teatro AlSaeed</h1>
+<p>A safe space that empowers artists to express and create art in Upper Egypt</p>
+<a href="academy.html" class="cta-btn">Start Your Journey</a>
+</div>
+</div>
+
 </div>
 
 <!-- WHAT WE DO -->
 <div class="section">
-<h2>ماذا نقدم</h2>
+<h2 class="ar">ماذا نقدم</h2>
+<h2 class="en">What We Do</h2>
+
 <div class="grid">
 
 <div class="card">
-<img src="images/troupe.jpg">
-<h3>الفرقة</h3>
-<p>أكثر من 600 ليلة عرض</p>
+<img src="images/show2.jpg">
+<h3 class="ar">الفرقة</h3>
+<h3 class="en">Troupe</h3>
 </div>
 
 <div class="card">
-<img src="images/shows.jpg">
-<h3>العروض</h3>
-<p>إنتاجات مسرحية متنوعة</p>
+<img src="images/show3.jpg">
+<h3 class="ar">العروض</h3>
+<h3 class="en">Productions</h3>
 </div>
 
 <div class="card">
-<img src="images/academy.jpg">
-<h3>الأكاديمية</h3>
-<p>برامج تدريبية لصناعة الفنان</p>
+<img src="images/show4.jpg">
+<h3 class="ar">الأكاديمية</h3>
+<h3 class="en">Academy</h3>
 </div>
 
 </div>
@@ -206,19 +305,21 @@ setInterval(changeSlide,5000);
 
 <!-- CONTACT -->
 <div class="contact">
-<h2>تواصل معنا</h2>
+<h2 class="ar">تواصل معنا</h2>
+<h2 class="en">Contact Us</h2>
 
 <form action="https://formspree.io/f/mdalwvzk" method="POST">
-<input type="text" name="name" placeholder="الاسم" required>
+<input type="text" name="name" placeholder="Name" required>
 <input type="email" name="email" placeholder="Email" required>
-<textarea name="message" placeholder="رسالتك" required></textarea>
-<button type="submit">إرسال</button>
+<textarea name="message" placeholder="Message" required></textarea>
+<button type="submit">Send</button>
 </form>
 
 </div>
 
 <footer>
 <p>Teatro AlSaeed</p>
+<p>Your Dream Is Legal</p>
 </footer>
 
 </body>
