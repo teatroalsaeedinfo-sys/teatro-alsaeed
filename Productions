@@ -1,0 +1,2987 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>عروض الفرقة | تياترو الصعيد</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --accent:#2bb3b1;
+    --accent-light:#8ce5df;
+    --black:#080909;
+    --dark:#111314;
+    --dark2:#17191a;
+    --white:#ffffff;
+    --muted:#9da5a7;
+    --line:rgba(255,255,255,.10);
+}
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Cairo',sans-serif;
+    background:#090a0a;
+    color:#fff;
+    line-height:1.8;
+    overflow-x:hidden;
+}
+
+body.en{
+    font-family:'Inter',sans-serif;
+    direction:ltr;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.ar{
+    display:block;
+}
+
+.en{
+    display:none!important;
+}
+
+body.en .ar{
+    display:none!important;
+}
+
+body.en .en{
+    display:block!important;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    height:78px;
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 5%;
+
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(15px);
+
+    border-bottom:1px solid rgba(0,0,0,.08);
+}
+
+.logo{
+    height:50px;
+    width:auto;
+    object-fit:contain;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+
+    font-size:14px;
+    font-weight:600;
+}
+
+.nav-links a{
+    position:relative;
+    white-space:nowrap;
+    color:#111;
+}
+
+.nav-links a::after{
+    content:"";
+    position:absolute;
+    right:0;
+    bottom:-7px;
+
+    width:0;
+    height:2px;
+
+    background:var(--accent);
+
+    transition:.3s;
+}
+
+.nav-links a:hover::after{
+    width:100%;
+}
+
+.lang-btn{
+    border:1px solid #ccc;
+    background:#fff;
+    color:#111;
+
+    border-radius:30px;
+
+    padding:7px 14px;
+
+    cursor:pointer;
+
+    font-family:inherit;
+    font-weight:800;
+
+    transition:.3s;
+}
+
+.lang-btn:hover{
+    border-color:var(--accent);
+    color:var(--accent);
+}
+
+.menu-btn{
+    display:none;
+
+    border:0;
+    background:none;
+
+    color:#111;
+
+    font-size:28px;
+
+    cursor:pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    margin-top:78px;
+
+    min-height:72vh;
+
+    position:relative;
+
+    display:flex;
+    align-items:flex-end;
+
+    overflow:hidden;
+
+    background:#080909;
+}
+
+.hero-bg{
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.82),
+            rgba(0,0,0,.25)
+        ),
+        url('images/troupe.jpg') center/cover no-repeat;
+
+    filter:saturate(.75);
+
+    transform:scale(1.03);
+}
+
+.hero::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            0deg,
+            #090a0a 0%,
+            transparent 55%
+        );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    width:100%;
+    max-width:1250px;
+
+    margin:auto;
+
+    padding:90px 5% 80px;
+}
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+
+    gap:10px;
+
+    color:var(--accent-light);
+
+    font-size:12px;
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    margin-bottom:18px;
+}
+
+.eyebrow::before{
+    content:"";
+
+    width:35px;
+    height:2px;
+
+    background:var(--accent);
+}
+
+.hero h1{
+    max-width:900px;
+
+    font-size:clamp(45px,7vw,88px);
+
+    line-height:1.08;
+
+    font-weight:900;
+
+    letter-spacing:-2px;
+}
+
+.hero p{
+    max-width:720px;
+
+    margin-top:22px;
+
+    color:#d3d7d8;
+
+    font-size:17px;
+
+    line-height:2;
+}
+
+.hero-stats{
+    display:flex;
+
+    gap:40px;
+
+    margin-top:35px;
+
+    flex-wrap:wrap;
+}
+
+.hero-stat strong{
+    display:block;
+
+    font-size:34px;
+
+    color:#fff;
+}
+
+.hero-stat span{
+    color:#9fa5a7;
+
+    font-size:12px;
+}
+
+
+/* =========================
+   PRODUCTIONS
+========================= */
+
+.productions-section{
+    position:relative;
+
+    padding:80px 5% 110px;
+
+    background:#090a0a;
+}
+
+.productions-section::before{
+    content:"";
+
+    position:absolute;
+
+    left:-10%;
+    top:10%;
+
+    width:420px;
+    height:420px;
+
+    background:rgba(43,179,177,.06);
+
+    filter:blur(80px);
+
+    border-radius:50%;
+}
+
+.section-wrap{
+    position:relative;
+
+    max-width:1250px;
+
+    margin:auto;
+}
+
+.section-head{
+    display:flex;
+
+    align-items:flex-end;
+    justify-content:space-between;
+
+    gap:25px;
+
+    margin-bottom:32px;
+}
+
+.section-head h2{
+    font-size:clamp(27px,3vw,38px);
+
+    font-weight:900;
+}
+
+.section-head p{
+    margin-top:5px;
+
+    color:var(--muted);
+
+    font-size:14px;
+}
+
+.counter{
+    padding:9px 15px;
+
+    border:1px solid var(--line);
+
+    background:rgba(255,255,255,.04);
+
+    border-radius:999px;
+
+    color:#ddd;
+
+    font-size:12px;
+
+    white-space:nowrap;
+}
+
+.counter b{
+    color:var(--accent);
+
+    font-size:17px;
+}
+
+
+/* SEARCH */
+
+.tools{
+    display:flex;
+
+    margin-bottom:32px;
+}
+
+.search{
+    width:min(420px,100%);
+
+    height:48px;
+
+    padding:0 18px;
+
+    border:1px solid var(--line);
+
+    border-radius:4px;
+
+    outline:none;
+
+    background:#111415;
+
+    color:#fff;
+
+    font-family:inherit;
+
+    font-size:13px;
+
+    transition:.3s;
+}
+
+.search::placeholder{
+    color:#777;
+}
+
+.search:focus{
+    border-color:var(--accent);
+
+    box-shadow:
+        0 0 0 3px
+        rgba(43,179,177,.08);
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.production-grid{
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:24px;
+}
+
+.card{
+    position:relative;
+
+    overflow:hidden;
+
+    background:#111314;
+
+    border:1px solid rgba(255,255,255,.09);
+
+    cursor:pointer;
+
+    box-shadow:
+        0 10px 35px
+        rgba(0,0,0,.20);
+
+    transition:.45s ease;
+}
+
+.card:hover{
+    transform:translateY(-9px);
+
+    border-color:
+        rgba(43,179,177,.55);
+
+    box-shadow:
+        0 25px 55px
+        rgba(0,0,0,.42);
+}
+
+
+/* POSTER */
+
+.poster{
+    position:relative;
+
+    aspect-ratio:2/3;
+
+    overflow:hidden;
+
+    background:#171919;
+}
+
+.poster img{
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+        transform .8s
+        cubic-bezier(.2,.7,.2,1),
+        filter .6s ease;
+}
+
+.card:hover .poster img{
+    transform:scale(1.07);
+
+    filter:brightness(.70);
+}
+
+.poster::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(0,0,0,.15),
+            transparent 35%,
+            rgba(0,0,0,.90)
+        );
+
+    pointer-events:none;
+}
+
+
+/* NUMBER */
+
+.card-no{
+    position:absolute;
+
+    top:13px;
+    right:13px;
+
+    z-index:5;
+
+    width:35px;
+    height:35px;
+
+    display:grid;
+    place-items:center;
+
+    border-radius:50%;
+
+    background:rgba(5,5,5,.70);
+
+    border:1px solid
+        rgba(255,255,255,.25);
+
+    color:#fff;
+
+    font-family:Inter,sans-serif;
+
+    font-size:11px;
+
+    font-weight:700;
+}
+
+
+/* YEAR */
+
+.year{
+    position:absolute;
+
+    top:14px;
+    left:13px;
+
+    z-index:5;
+
+    padding:4px 9px;
+
+    background:rgba(43,179,177,.90);
+
+    color:#fff;
+
+    font-family:Inter,sans-serif;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:1px;
+}
+
+
+/* OVERLAY */
+
+.poster-overlay{
+    position:absolute;
+
+    inset:0;
+
+    z-index:4;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:18px;
+
+    opacity:0;
+
+    transition:.4s;
+}
+
+.card:hover .poster-overlay{
+    opacity:1;
+}
+
+.details-btn{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:9px 14px;
+
+    background:#fff;
+
+    color:#0a0b0b;
+
+    font-size:11px;
+
+    font-weight:900;
+}
+
+.details-btn span:first-child{
+    font-size:15px;
+}
+
+
+/* BODY */
+
+.card-body{
+    padding:17px 17px 19px;
+}
+
+.card h3{
+    margin-bottom:8px;
+
+    font-size:18px;
+
+    line-height:1.45;
+
+    font-weight:800;
+}
+
+.card-meta{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#92999b;
+
+    font-size:10px;
+
+    font-weight:700;
+}
+
+.type{
+    color:var(--accent);
+}
+
+.card-desc{
+    margin-top:8px;
+
+    color:#8f9698;
+
+    font-size:12px;
+
+    line-height:1.8;
+
+    display:-webkit-box;
+
+    -webkit-line-clamp:2;
+
+    -webkit-box-orient:vertical;
+
+    overflow:hidden;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+    position:fixed;
+
+    inset:0;
+
+    z-index:3000;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:25px;
+
+    background:rgba(0,0,0,.92);
+
+    backdrop-filter:blur(12px);
+}
+
+.modal.open{
+    display:flex;
+}
+
+.modal-box{
+    position:relative;
+
+    width:min(1100px,96vw);
+
+    max-height:92vh;
+
+    overflow:hidden;
+
+    display:grid;
+
+    grid-template-columns:46% 54%;
+
+    background:#111314;
+
+    border:1px solid
+        rgba(255,255,255,.12);
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.55);
+}
+
+.modal-img{
+    min-height:600px;
+
+    background:#050505;
+}
+
+.modal-img img{
+    display:block;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+}
+
+.modal-content{
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    padding:55px 48px;
+}
+
+.modal-kicker{
+    margin-bottom:17px;
+
+    color:var(--accent);
+
+    font-family:Inter,sans-serif;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+.modal-content h2{
+    margin-bottom:20px;
+
+    font-size:clamp(30px,4vw,52px);
+
+    line-height:1.2;
+
+    font-weight:900;
+}
+
+.modal-content p{
+    color:#aeb3b5;
+
+    font-size:15px;
+
+    line-height:2;
+}
+
+.modal-meta{
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin:25px 0;
+}
+
+.modal-pill{
+    padding:7px 12px;
+
+    border:1px solid var(--line);
+
+    color:#ddd;
+
+    font-size:11px;
+}
+
+.close{
+    position:absolute;
+
+    top:15px;
+    left:15px;
+
+    z-index:10;
+
+    width:42px;
+    height:42px;
+
+    border:1px solid
+        rgba(255,255,255,.20);
+
+    background:rgba(0,0,0,.70);
+
+    color:#fff;
+
+    font-size:25px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.close:hover{
+    background:var(--accent);
+
+    color:#000;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    padding:50px 5%;
+
+    text-align:center;
+
+    background:#050606;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.08);
+}
+
+footer img{
+    height:48px;
+
+    margin-bottom:14px;
+
+    filter:
+        brightness(0)
+        invert(1);
+}
+
+footer p{
+    color:#777;
+
+    font-size:12px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+    .production-grid{
+        grid-template-columns:
+            repeat(3,1fr);
+    }
+
+    .nav-links{
+        gap:15px;
+
+        font-size:13px;
+    }
+
+}
+
+
+@media(max-width:760px){
+
+    .navbar{
+        height:70px;
+
+        padding:0 18px;
+    }
+
+    .logo{
+        height:44px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+
+        top:70px;
+
+        right:0;
+        left:0;
+
+        display:none;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:0;
+
+        padding:15px 22px 22px;
+
+        background:#fff;
+
+        box-shadow:
+            0 20px 35px
+            rgba(0,0,0,.18);
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .nav-links a{
+        padding:12px 0;
+
+        border-bottom:
+            1px solid
+            rgba(0,0,0,.08);
+    }
+
+    .nav-links a::after{
+        display:none;
+    }
+
+    .lang-btn{
+        width:100%;
+
+        margin-top:13px;
+    }
+
+    .hero{
+        margin-top:70px;
+
+        min-height:68vh;
+    }
+
+    .hero-content{
+        padding:
+            70px
+            20px
+            55px;
+    }
+
+    .hero h1{
+        font-size:48px;
+
+        letter-spacing:-1px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .hero-stats{
+        gap:22px;
+    }
+
+    .hero-stat strong{
+        font-size:27px;
+    }
+
+    .productions-section{
+        padding:
+            55px
+            18px
+            75px;
+    }
+
+    .section-head{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .production-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:14px;
+    }
+
+    .card-body{
+        padding:13px;
+    }
+
+    .card h3{
+        font-size:16px;
+    }
+
+    .card-desc{
+        font-size:11px;
+    }
+
+    .modal-box{
+        grid-template-columns:1fr;
+
+        max-height:94vh;
+
+        overflow:auto;
+    }
+
+    .modal-img{
+        height:55vh;
+
+        min-height:0;
+    }
+
+    .modal-content{
+        padding:28px;
+    }
+
+    .modal-content h2{
+        font-size:32px;
+    }
+
+}
+
+
+@media(max-width:430px){
+
+    .production-grid{
+        grid-template-columns:1fr;
+    }
+
+    .poster{
+        aspect-ratio:2/2.9;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero{
+        min-height:65vh;
+    }
+
+    .modal-img{
+        height:48vh;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVBAR
+========================= -->
+
+<header class="navbar">
+
+    <a href="index.html">
+        <img
+            src="logo.png"
+            class="logo"
+            alt="Teatro Alsaeed">
+    </a>
+
+    <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Menu">
+        ☰
+    </button>
+
+    <nav
+        class="nav-links"
+        id="navLinks">
+
+        <a href="index.html">
+            <span class="ar">الرئيسية</span>
+            <span class="en">Home</span>
+        </a>
+
+        <a href="about.html">
+            <span class="ar">عنّا</span>
+            <span class="en">About</span>
+        </a>
+
+        <a href="troupe.html">
+            <span class="ar">الفرقة</span>
+            <span class="en">Troupe</span>
+        </a>
+
+        <a href="productions.html">
+            <span class="ar">العروض</span>
+            <span class="en">Productions</span>
+        </a>
+
+        <a href="academy.html">
+            <span class="ar">الأكاديمية</span>
+            <span class="en">Academy</span>
+        </a>
+
+        <a href="festival.html">
+            <span class="ar">المهرجان</span>
+            <span class="en">Festival</span>
+        </a>
+
+        <a href="sahara.html">
+            <span class="ar">صحارة</span>
+            <span class="en">Sahara</span>
+        </a>
+
+        <a href="contact.html">
+            <span class="ar">تواصل</span>
+            <span class="en">Contact</span>
+        </a>
+
+        <button
+            class="lang-btn"
+            id="langBtn">
+            EN
+        </button>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+
+            <span class="ar">
+                أرشيف العروض
+            </span>
+
+            <span class="en">
+                PRODUCTION ARCHIVE
+            </span>
+
+        </div>
+
+
+        <h1>
+
+            <span class="ar">
+                عروض الفرقة
+            </span>
+
+            <span class="en">
+                Troupe Productions
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            <span class="ar">
+                رحلة مسرحية تمتد عبر سنوات من التجريب والإنتاج والعمل الجماعي،
+                توثقها عروض صنعتها فرقة تياترو الصعيد على خشبة المسرح وفي مساحات مختلفة.
+            </span>
+
+            <span class="en">
+                A theatrical journey shaped by years of experimentation,
+                production and collective work — documenting the productions
+                created by Teatro Alsaeed across different stages and spaces.
+            </span>
+
+        </p>
+
+
+        <div class="hero-stats">
+
+            <div class="hero-stat">
+
+                <strong>23</strong>
+
+                <span class="ar">
+                    عرضًا في الأرشيف
+                </span>
+
+                <span class="en">
+                    Productions
+                </span>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <strong>2014</strong>
+
+                <span class="ar">
+                    بداية الرحلة
+                </span>
+
+                <span class="en">
+                    Journey Started
+                </span>
+
+            </div>
+
+
+            <div class="hero-stat">
+
+                <strong>600+</strong>
+
+                <span class="ar">
+                    ليلة عرض
+                </span>
+
+                <span class="en">
+                    Performance Nights
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRODUCTIONS
+========================= -->
+
+<section class="productions-section">
+
+<div class="section-wrap">
+
+
+    <div class="section-head">
+
+        <div>
+
+            <h2>
+
+                <span class="ar">
+                    أرشيف العروض
+                </span>
+
+                <span class="en">
+                    Production Archive
+                </span>
+
+            </h2>
+
+            <p>
+
+                <span class="ar">
+                    استكشف عروض فرقة تياترو الصعيد
+                </span>
+
+                <span class="en">
+                    Explore Teatro Alsaeed's theatrical productions
+                </span>
+
+            </p>
+
+        </div>
+
+
+        <div class="counter">
+
+            <span class="ar">
+                عدد العروض:
+            </span>
+
+            <span class="en">
+                Productions:
+            </span>
+
+            <b id="count">
+                23
+            </b>
+
+        </div>
+
+    </div>
+
+
+    <div class="tools">
+
+        <input
+            type="text"
+            id="search"
+            class="search"
+            placeholder="ابحث عن عرض..."
+            autocomplete="off">
+
+    </div>
+
+
+
+    <div class="production-grid"
+         id="productionGrid">
+
+
+        <!-- 01 -->
+
+        <article
+            class="card"
+            data-title="أشتاتاً شلتوت"
+            data-en="Ashtatan Shaltout"
+            data-img="images/32602596_837909023064841_6844016629395750912_n.jpg_stp=dst-jpg_s417x417_tt6%26_nc_cat=100%26ccb=1-7%26_nc_sid=f798df%26_nc_ohc=AeOoWA05b84Q7kNvwHO98q7%26_nc_oc=AdnH_r8snGHcCpGSj8LRGs9qHKQZScOnKbs3MDRqxQUviy_c_BPw.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="تجربة مسرحية ذات روح شعبية وشخصيات تنطلق من عالم الفرجة والحكاية.">
+
+            <div class="poster">
+
+                <span class="card-no">01</span>
+
+                <span class="year">—</span>
+
+                <img
+                    src="images/32602596_837909023064841_6844016629395750912_n.jpg_stp=dst-jpg_s417x417_tt6%26_nc_cat=100%26ccb=1-7%26_nc_sid=f798df%26_nc_ohc=AeOoWA05b84Q7kNvwHO98q7%26_nc_oc=AdnH_r8snGHcCpGSj8LRGs9qHKQZScOnKbs3MDRqxQUviy_c_BPw.jpg"
+                    alt="أشتاتاً شلتوت"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-body">
+
+                <h3 class="ar">
+                    أشتاتاً شلتوت
+                </h3>
+
+                <h3 class="en">
+                    Ashtatan Shaltout
+                </h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    تجربة مسرحية ذات روح شعبية وشخصيات تنطلق من عالم الفرجة والحكاية.
+                </p>
+
+                <p class="card-desc en">
+                    A theatrical production from Teatro Alsaeed's archive.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 02 -->
+
+        <article
+            class="card"
+            data-title="ملك وكتابة"
+            data-en="Malek w Ketaba"
+            data-img="images/32420667_837909156398161_3806568405650112512_n.jpg_stp=dst-jpg_s417x417_tt6%26_nc_cat=100%26ccb=1-7%26_nc_sid=f798df%26_nc_ohc=Zc3RO07_sYkQ7kNvwF6UQcf%26_nc_oc=AdnZ4GezqMwAPKHwqYSkosIwop_ZAOvouPXQvsEJD1JoshQGrIj7.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="عرض مسرحي من أرشيف الفرقة يحمل عنوانًا يفتح الباب أمام لعبة بين الملك والكتابة.">
+
+            <div class="poster">
+
+                <span class="card-no">02</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/32420667_837909156398161_3806568405650112512_n.jpg_stp=dst-jpg_s417x417_tt6%26_nc_cat=100%26ccb=1-7%26_nc_sid=f798df%26_nc_ohc=Zc3RO07_sYkQ7kNvwF6UQcf%26_nc_oc=AdnZ4GezqMwAPKHwqYSkosIwop_ZAOvouPXQvsEJD1JoshQGrIj7.jpg"
+                    alt="ملك وكتابة"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">ملك وكتابة</h3>
+                <h3 class="en">Malek w Ketaba</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    عرض مسرحي من أرشيف الفرقة يحمل عنوانًا يفتح الباب أمام لعبة بين الملك والكتابة.
+                </p>
+
+                <p class="card-desc en">
+                    A theatrical production from Teatro Alsaeed's archive.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 03 -->
+
+        <article
+            class="card"
+            data-title="فرحة"
+            data-en="Farha"
+            data-img="images/32467207_837909089731501_8943020086717841408_n.jpg_stp=dst-jpg_s552x414_tt6%26_nc_cat=101%26ccb=1-7%26_nc_sid=f798df%26_nc_ohc=I8m6ibg2D_4Q7kNvwHZraek%26_nc_oc=AdmAkXr-saQzEaqKFaOFpiqzPbn5HoOqzCIgPd7CmRH6tUdLwG5P.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="حكاية مسرحية تنطلق من الفرح بوصفه لحظة إنسانية وجماعية.">
+
+            <div class="poster">
+
+                <span class="card-no">03</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/32467207_837909089731501_8943020086717841408_n.jpg_stp=dst-jpg_s552x414_tt6%26_nc_cat=101%26ccb=1-7%26_nc_sid=f798df%26_nc_ohc=I8m6ibg2D_4Q7kNvwHZraek%26_nc_oc=AdmAkXr-saQzEaqKFaOFpiqzPbn5HoOqzCIgPd7CmRH6tUdLwG5P.jpg"
+                    alt="فرحة"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">فرحة</h3>
+                <h3 class="en">Farha</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    حكاية مسرحية تنطلق من الفرح بوصفه لحظة إنسانية وجماعية.
+                </p>
+
+                <p class="card-desc en">
+                    A theatrical production from Teatro Alsaeed's archive.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 04 -->
+
+        <article
+            class="card"
+            data-title="فستان فرح"
+            data-en="Wedding Dress"
+            data-img="images/498540314_2713720478817010_397253486224115346_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="عرض يقترب من تفاصيل الفرح وما تحمله المناسبة من علاقات وأسئلة.">
+
+            <div class="poster">
+
+                <span class="card-no">04</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/498540314_2713720478817010_397253486224115346_n.jpg"
+                    alt="فستان فرح"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">فستان فرح</h3>
+                <h3 class="en">Wedding Dress</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    عرض يقترب من تفاصيل الفرح وما تحمله المناسبة من علاقات وأسئلة.
+                </p>
+
+                <p class="card-desc en">
+                    A theatrical production from Teatro Alsaeed's archive.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 05 -->
+
+        <article
+            class="card"
+            data-title="بطن الزير"
+            data-en="Batn El Zeer"
+            data-img="images/32430383_837908986398178_91252481488584704_n.jpg_stp=dst-jpg_s552x414_tt6%26_nc_cat=105%26ccb=1-7%26_nc_sid=f798df%26_nc_ohc=mS3WzlzWZ10Q7kNvwHRqwZ5%26_nc_oc=Adl6ruYD5pWnrUodSwMykI9JkMqejKL5PaLUI9-fmIsSlxTVx7IX1M.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="تجربة من أرشيف الفرقة تستند إلى عنوان وصورة يحملان ملامح من الحكاية الشعبية.">
+
+            <div class="poster">
+
+                <span class="card-no">05</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/32430383_837908986398178_91252481488584704_n.jpg_stp=dst-jpg_s552x414_tt6%26_nc_cat=105%26ccb=1-7%26_nc_sid=f798df%26_nc_ohc=mS3WzlzWZ10Q7kNvwHRqwZ5%26_nc_oc=Adl6ruYD5pWnrUodSwMykI9JkMqejKL5PaLUI9-fmIsSlxTVx7IX1M.jpg"
+                    alt="بطن الزير"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">بطن الزير</h3>
+                <h3 class="en">Batn El Zeer</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    تجربة من أرشيف الفرقة تستند إلى ملامح من الحكاية الشعبية.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 06 -->
+
+        <article
+            class="card"
+            data-title="عملة نادرة"
+            data-en="Rare Coin"
+            data-img="images/32474081_837909653064778_9162385386742218752_n.jpg_stp=dst-jpg_s552x414_tt6%26_nc_cat=103%26ccb=1-7%26_nc_sid=f798df%26_nc_ohc=f8LUm4mKdW4Q7kNvwHmcVm5%26_nc_oc=AdlkpEwPArcszFL7Dp1hSfP_mbclXAxuMTAFfP2JgNghbPdLhfu6.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="عنوان يستدعي قيمة نادرة وسط عالم من الشخصيات والعلاقات.">
+
+            <div class="poster">
+
+                <span class="card-no">06</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/32474081_837909653064778_9162385386742218752_n.jpg_stp=dst-jpg_s552x414_tt6%26_nc_cat=103%26ccb=1-7%26_nc_sid=f798df%26_nc_ohc=f8LUm4mKdW4Q7kNvwHmcVm5%26_nc_oc=AdlkpEwPArcszFL7Dp1hSfP_mbclXAxuMTAFfP2JgNghbPdLhfu6.jpg"
+                    alt="عملة نادرة"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">عملة نادرة</h3>
+                <h3 class="en">Rare Coin</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    عنوان يستدعي قيمة نادرة وسط عالم من الشخصيات والعلاقات.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 07 -->
+
+        <article
+            class="card"
+            data-title="كوميديا بنات"
+            data-en="Girls Comedy"
+            data-img="images/40875946_931316070390802_7873172067183493120_n.jpg"
+            data-type="كوميديا مسرحية"
+            data-year="—"
+            data-desc="كوميديا جماعية مليئة بالمواقف والشخصيات المتباينة.">
+
+            <div class="poster">
+
+                <span class="card-no">07</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/40875946_931316070390802_7873172067183493120_n.jpg"
+                    alt="كوميديا بنات"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">كوميديا بنات</h3>
+                <h3 class="en">Girls Comedy</h3>
+
+                <div class="card-meta">
+                    <span class="type">كوميديا مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    كوميديا جماعية مليئة بالمواقف والشخصيات المتباينة.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 08 -->
+
+        <article
+            class="card"
+            data-title="الجنوب تحت"
+            data-en="South Is Down"
+            data-img="images/494746673_2699597373562654_3690321139029275488_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="تجربة مرتبطة بفكرة الجنوب، وبالأسئلة التي يطرحها المكان والإنسان.">
+
+            <div class="poster">
+
+                <span class="card-no">08</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/494746673_2699597373562654_3690321139029275488_n.jpg"
+                    alt="الجنوب تحت"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">الجنوب تحت</h3>
+                <h3 class="en">South Is Down</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    تجربة مرتبطة بفكرة الجنوب، وبالأسئلة التي يطرحها المكان والإنسان.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 09 -->
+
+        <article
+            class="card"
+            data-title="الموجوعة"
+            data-en="Al-Mawgoua"
+            data-img="images/177814690_1627983540724048_376018102197460051_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="حكاية إنسانية عن الألم الذي يسكن في الداخل، وعن وجع قد لا يراه أحد لكنه يترك أثره في كل شيء.">
+
+            <div class="poster">
+
+                <span class="card-no">09</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/177814690_1627983540724048_376018102197460051_n.jpg"
+                    alt="الموجوعة"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">الموجوعة</h3>
+                <h3 class="en">Al-Mawgoua</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    حكاية إنسانية عن الألم الذي يسكن في الداخل، وعن وجع قد لا يراه أحد.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 10 -->
+
+        <article
+            class="card"
+            data-title="ولاد تسعة"
+            data-en="Wlad Tesaa"
+            data-img="images/495503416_2711071459081912_448345279639170154_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="طاقة جماعية وحكايات متعددة تلتقي فوق خشبة واحدة.">
+
+            <div class="poster">
+
+                <span class="card-no">10</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/495503416_2711071459081912_448345279639170154_n.jpg"
+                    alt="ولاد تسعة"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">ولاد تسعة</h3>
+                <h3 class="en">Wlad Tesaa</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    طاقة جماعية وحكايات متعددة تلتقي فوق خشبة واحدة.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 11 -->
+
+        <article
+            class="card"
+            data-title="سرير لا يصلح للنوم"
+            data-en="A Bed Not Fit for Sleep"
+            data-img="images/592174885_1303149445190745_2503330518167656405_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="حين يفقد المكان وظيفته، تبدأ الأسئلة في الظهور.">
+
+            <div class="poster">
+
+                <span class="card-no">11</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/592174885_1303149445190745_2503330518167656405_n.jpg"
+                    alt="سرير لا يصلح للنوم"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">سرير لا يصلح للنوم</h3>
+                <h3 class="en">A Bed Not Fit for Sleep</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    حين يفقد المكان وظيفته، تبدأ الأسئلة في الظهور.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 12 -->
+
+        <article
+            class="card"
+            data-title="قابل للنشر"
+            data-en="Publishable"
+            data-img="images/549591786_1238407301664960_662625069328990146_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="ما الذي نعرضه للآخرين؟ وما الذي يبقى خلف الصورة؟">
+
+            <div class="poster">
+
+                <span class="card-no">12</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/549591786_1238407301664960_662625069328990146_n.jpg"
+                    alt="قابل للنشر"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">قابل للنشر</h3>
+                <h3 class="en">Publishable</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    ما الذي نعرضه للآخرين؟ وما الذي يبقى خلف الصورة؟
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 13 -->
+
+        <article
+            class="card"
+            data-title="قهوة زيادة"
+            data-en="Extra Coffee"
+            data-img="images/44943333_958978290957913_5010694922676731904_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="تفاصيل يومية صغيرة تتحول إلى حكاية مسرحية.">
+
+            <div class="poster">
+
+                <span class="card-no">13</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/44943333_958978290957913_5010694922676731904_n.jpg"
+                    alt="قهوة زيادة"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">قهوة زيادة</h3>
+                <h3 class="en">Extra Coffee</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    تفاصيل يومية صغيرة تتحول إلى حكاية مسرحية.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 14 -->
+
+        <article
+            class="card"
+            data-title="خشبة"
+            data-en="The Stage"
+            data-img="images/55771691_1048810578641350_4153210358502260736_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="المسرح من الداخل؛ حيث تبدأ الحكاية من الخشبة.">
+
+            <div class="poster">
+
+                <span class="card-no">14</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/55771691_1048810578641350_4153210358502260736_n.jpg"
+                    alt="خشبة"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">خشبة</h3>
+                <h3 class="en">The Stage</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    المسرح من الداخل؛ حيث تبدأ الحكاية من الخشبة.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 15 -->
+
+        <article
+            class="card"
+            data-title="ليلة عيد ميلاد"
+            data-en="Birthday Night"
+            data-img="images/485157586_1087936753378683_5733754134865624980_n(2).jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="ليلة واحدة كفيلة بكشف ما تخفيه الشخصيات.">
+
+            <div class="poster">
+
+                <span class="card-no">15</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/485157586_1087936753378683_5733754134865624980_n(2).jpg"
+                    alt="ليلة عيد ميلاد"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">ليلة عيد ميلاد</h3>
+                <h3 class="en">Birthday Night</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    ليلة واحدة كفيلة بكشف ما تخفيه الشخصيات.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 16 -->
+
+        <article
+            class="card"
+            data-title="يخلق من الشبه"
+            data-en="Yokhlaq Min El-Shebh"
+            data-img="images/175881319_1625484124307323_4867194124824772295_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="بين الشبه والاختلاف، تتغير نظرتنا إلى الشخصيات.">
+
+            <div class="poster">
+
+                <span class="card-no">16</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/175881319_1625484124307323_4867194124824772295_n.jpg"
+                    alt="يخلق من الشبه"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">يخلق من الشبه</h3>
+                <h3 class="en">Yokhlaq Min El-Shebh</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    بين الشبه والاختلاف، تتغير نظرتنا إلى الشخصيات.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 17 -->
+
+        <article
+            class="card"
+            data-title="الجانب المظلم"
+            data-en="The Dark Side"
+            data-img="images/719483408_1255701503307965_1167393525363020739_n.jpg"
+            data-type="مشروع تخرج · الدفعة 22"
+            data-year="—"
+            data-desc="مشروع تخرج أكاديمية تياترو الصعيد – الدفعة 22.">
+
+            <div class="poster">
+
+                <span class="card-no">17</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/719483408_1255701503307965_1167393525363020739_n.jpg"
+                    alt="الجانب المظلم"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">الجانب المظلم</h3>
+                <h3 class="en">The Dark Side</h3>
+
+                <div class="card-meta">
+                    <span class="type">
+                        مشروع تخرج · الدفعة 22
+                    </span>
+
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    مشروع تخرج أكاديمية تياترو الصعيد – الدفعة 22.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 18 -->
+
+        <article
+            class="card"
+            data-title="حبشي بنات"
+            data-en="Habshi Banat"
+            data-img="images/69695689_1150740295115044_3131724856131846144_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="تجربة جماعية تستلهم روح الصعيد والفرجة الشعبية.">
+
+            <div class="poster">
+
+                <span class="card-no">18</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/69695689_1150740295115044_3131724856131846144_n.jpg"
+                    alt="حبشي بنات"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">حبشي بنات</h3>
+                <h3 class="en">Habshi Banat</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    تجربة جماعية تستلهم روح الصعيد والفرجة الشعبية.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 19 -->
+
+        <article
+            class="card"
+            data-title="الكبار"
+            data-en="The Elders"
+            data-img="images/485696820_1090587506446941_294884298952936428_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="حكاية اجتماعية عن السلطة والصورة والمجتمع.">
+
+            <div class="poster">
+
+                <span class="card-no">19</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/485696820_1090587506446941_294884298952936428_n.jpg"
+                    alt="الكبار"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">الكبار</h3>
+                <h3 class="en">The Elders</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    حكاية اجتماعية عن السلطة والصورة والمجتمع.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 20 -->
+
+        <article
+            class="card"
+            data-title="سوق"
+            data-en="Souq"
+            data-img="images/souq.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="مساحة شعبية تتقاطع فيها الحكايات والمصالح.">
+
+            <div class="poster">
+
+                <span class="card-no">20</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/souq.jpg"
+                    alt="سوق"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">سوق</h3>
+                <h3 class="en">Souq</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    مساحة شعبية تتقاطع فيها الحكايات والمصالح.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 21 -->
+
+        <article
+            class="card"
+            data-title="خمسة رجال في الطابق العلوي"
+            data-en="Five Men Upstairs"
+            data-img="images/486554527_1092389119600113_6131837336494934681_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="خمس شخصيات ومساحة واحدة وأسئلة لا تنتهي.">
+
+            <div class="poster">
+
+                <span class="card-no">21</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/486554527_1092389119600113_6131837336494934681_n.jpg"
+                    alt="خمسة رجال في الطابق العلوي"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">
+                    خمسة رجال في الطابق العلوي
+                </h3>
+
+                <h3 class="en">
+                    Five Men Upstairs
+                </h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    خمس شخصيات ومساحة واحدة وأسئلة لا تنتهي.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 22 -->
+
+        <article
+            class="card"
+            data-title="سوق العبيد"
+            data-en="The Slave Market"
+            data-img="images/souq-alabeed.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="حكاية عن الإنسان حين يتحول إلى سلعة داخل منظومة قاسية.">
+
+            <div class="poster">
+
+                <span class="card-no">22</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/souq-alabeed.jpg"
+                    alt="سوق العبيد"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">سوق العبيد</h3>
+                <h3 class="en">The Slave Market</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    حكاية عن الإنسان حين يتحول إلى سلعة داخل منظومة قاسية.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 23 -->
+
+        <article
+            class="card"
+            data-title="قبل منتصف الليل"
+            data-en="Before Midnight"
+            data-img="images/763925845_2114418519449642_770211266055518592_n.jpg"
+            data-type="مسرحية"
+            data-year="—"
+            data-desc="ليلة واحدة، شخصيات متعددة، وما قبل منتصف الليل ليس كابعده.">
+
+            <div class="poster">
+
+                <span class="card-no">23</span>
+                <span class="year">—</span>
+
+                <img
+                    src="images/763925845_2114418519449642_770211266055518592_n.jpg"
+                    alt="قبل منتصف الليل"
+                    loading="lazy">
+
+                <div class="poster-overlay">
+                    <span class="details-btn">
+                        ↗
+                        <span class="ar">عرض التفاصيل</span>
+                        <span class="en">View Details</span>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h3 class="ar">قبل منتصف الليل</h3>
+                <h3 class="en">Before Midnight</h3>
+
+                <div class="card-meta">
+                    <span class="type">مسرحية</span>
+                    <span>—</span>
+                </div>
+
+                <p class="card-desc ar">
+                    ليلة واحدة، شخصيات متعددة، وما قبل منتصف الليل ليس كابعده.
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+<!-- =========================
+     DETAILS MODAL
+========================= -->
+
+<div
+    class="modal"
+    id="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            id="close"
+            aria-label="Close">
+            ×
+        </button>
+
+
+        <div class="modal-img">
+
+            <img
+                id="modalImg"
+                src=""
+                alt="">
+
+        </div>
+
+
+        <div class="modal-content">
+
+            <div class="modal-kicker">
+                TEATRO ALSAEED / PRODUCTION ARCHIVE
+            </div>
+
+            <h2 id="modalTitle"></h2>
+
+            <div class="modal-meta">
+
+                <span
+                    class="modal-pill"
+                    id="modalType">
+                </span>
+
+                <span
+                    class="modal-pill"
+                    id="modalYear">
+                </span>
+
+            </div>
+
+            <p id="modalDesc"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <img
+        src="logo.png"
+        alt="Teatro Alsaeed">
+
+    <p class="ar">
+        تياترو الصعيد — إحياء وتطوير الفنون
+    </p>
+
+    <p class="en">
+        Teatro Alsaeed — Reviving and Developing Performing Arts
+    </p>
+
+</footer>
+
+
+
+<script>
+
+/* =========================
+   ELEMENTS
+========================= */
+
+const body =
+    document.body;
+
+const langBtn =
+    document.getElementById('langBtn');
+
+const menuBtn =
+    document.getElementById('menuBtn');
+
+const navLinks =
+    document.getElementById('navLinks');
+
+const search =
+    document.getElementById('search');
+
+const cards =
+    [...document.querySelectorAll('.card')];
+
+const count =
+    document.getElementById('count');
+
+const modal =
+    document.getElementById('modal');
+
+const close =
+    document.getElementById('close');
+
+const modalImg =
+    document.getElementById('modalImg');
+
+const modalTitle =
+    document.getElementById('modalTitle');
+
+const modalDesc =
+    document.getElementById('modalDesc');
+
+const modalType =
+    document.getElementById('modalType');
+
+const modalYear =
+    document.getElementById('modalYear');
+
+
+/* =========================
+   LANGUAGE
+========================= */
+
+function setLang(lang){
+
+    const english =
+        lang === 'en';
+
+    body.classList.toggle(
+        'en',
+        english
+    );
+
+    document.documentElement.lang =
+        english ? 'en' : 'ar';
+
+    document.documentElement.dir =
+        english ? 'ltr' : 'rtl';
+
+    langBtn.textContent =
+        english ? 'AR' : 'EN';
+
+    search.placeholder =
+        english
+        ? 'Search productions...'
+        : 'ابحث عن عرض...';
+
+    localStorage.setItem(
+        'siteLang',
+        lang
+    );
+
+}
+
+
+/* LOAD LANGUAGE */
+
+setLang(
+    localStorage.getItem('siteLang') || 'ar'
+);
+
+
+/* LANGUAGE BUTTON */
+
+langBtn.addEventListener(
+    'click',
+    () => {
+
+        setLang(
+            body.classList.contains('en')
+            ? 'ar'
+            : 'en'
+        );
+
+    }
+);
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+menuBtn.addEventListener(
+    'click',
+    () => {
+
+        navLinks.classList.toggle(
+            'open'
+        );
+
+    }
+);
+
+
+navLinks
+.querySelectorAll('a')
+.forEach(link => {
+
+    link.addEventListener(
+        'click',
+        () => {
+
+            navLinks.classList.remove(
+                'open'
+            );
+
+        }
+    );
+
+});
+
+
+/* =========================
+   SEARCH
+========================= */
+
+function filterCards(){
+
+    const query =
+        search.value
+        .trim()
+        .toLowerCase();
+
+    let visible = 0;
+
+
+    cards.forEach(card => {
+
+        const text =
+            (
+                card.dataset.title +
+                ' ' +
+                card.dataset.en +
+                ' ' +
+                card.dataset.desc +
+                ' ' +
+                card.dataset.type +
+                ' ' +
+                card.dataset.year
+            )
+            .toLowerCase();
+
+
+        const show =
+            text.includes(query);
+
+
+        card.style.display =
+            show ? 'block' : 'none';
+
+
+        if(show){
+            visible++;
+        }
+
+    });
+
+
+    count.textContent =
+        visible;
+
+}
+
+
+search.addEventListener(
+    'input',
+    filterCards
+);
+
+
+/* =========================
+   MODAL
+========================= */
+
+function openModal(card){
+
+    const english =
+        body.classList.contains('en');
+
+
+    modalImg.src =
+        card.dataset.img;
+
+
+    modalImg.alt =
+        card.dataset.title;
+
+
+    modalTitle.textContent =
+        english
+        ? card.dataset.en
+        : card.dataset.title;
+
+
+    modalType.textContent =
+        english
+        ? (
+            card.dataset.type.includes('مشروع')
+            ? 'Graduation Project'
+            : 'Theatre Production'
+          )
+        : card.dataset.type;
+
+
+    modalYear.textContent =
+        card.dataset.year === '—'
+        ? (
+            english
+            ? 'Year not specified'
+            : 'السنة غير محددة'
+          )
+        : card.dataset.year;
+
+
+    if(english){
+
+        if(
+            card.dataset.title ===
+            'الجانب المظلم'
+        ){
+
+            modalDesc.textContent =
+                'A graduation production from Teatro Alsaeed Academy — Group 22.';
+
+        }else{
+
+            modalDesc.textContent =
+                'A theatrical production from the Teatro Alsaeed troupe archive.';
+
+        }
+
+    }else{
+
+        modalDesc.textContent =
+            card.dataset.desc;
+
+    }
+
+
+    modal.classList.add(
+        'open'
+    );
+
+    document.body.style.overflow =
+        'hidden';
+
+}
+
+
+/* OPEN */
+
+cards.forEach(card => {
+
+    card.addEventListener(
+        'click',
+        () => openModal(card)
+    );
+
+});
+
+
+/* CLOSE */
+
+function closeModal(){
+
+    modal.classList.remove(
+        'open'
+    );
+
+    document.body.style.overflow =
+        '';
+
+}
+
+
+close.addEventListener(
+    'click',
+    closeModal
+);
+
+
+/* CLICK OUTSIDE */
+
+modal.addEventListener(
+    'click',
+    event => {
+
+        if(
+            event.target === modal
+        ){
+
+            closeModal();
+
+        }
+
+    }
+);
+
+
+/* ESC */
+
+document.addEventListener(
+    'keydown',
+    event => {
+
+        if(
+            event.key === 'Escape'
+        ){
+
+            closeModal();
+
+        }
+
+    }
+);
+
+</script>
+
+</body>
+</html>
