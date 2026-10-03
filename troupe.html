@@ -2,8 +2,11 @@
 <html lang="ar" dir="rtl">
 
 <head>
+
 <meta charset="UTF-8">
+
 <title>الفرقة | Teatro AlSaeed</title>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -23,6 +26,10 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:'Cairo',sans-serif;
     background:#fff;
@@ -30,7 +37,9 @@ body{
     padding-top:80px;
 }
 
-/* ================= NAVBAR ================= */
+/* =====================================================
+   NAVBAR
+===================================================== */
 
 header{
     position:fixed;
@@ -46,9 +55,11 @@ header{
     max-width:1200px;
     margin:auto;
     padding:15px 20px;
+
     display:flex;
     align-items:center;
     justify-content:space-between;
+
     gap:20px;
 }
 
@@ -66,8 +77,10 @@ nav{
 nav a{
     text-decoration:none;
     color:#333;
+
     font-size:14px;
     font-weight:600;
+
     transition:.3s;
 }
 
@@ -77,25 +90,39 @@ nav a:hover{
 
 .menu-toggle{
     display:none;
+
     font-size:27px;
     cursor:pointer;
+
+    user-select:none;
 }
 
-/* LANGUAGE */
+/* =====================================================
+   LANGUAGE
+===================================================== */
 
 .lang-toggle{
     display:flex;
+
     background:#eee;
+
     border-radius:30px;
+
     overflow:hidden;
 }
 
 .lang-toggle button{
     border:none;
+
     background:transparent;
+
     padding:7px 14px;
+
     cursor:pointer;
+
     font-weight:600;
+
+    transition:.3s;
 }
 
 .lang-toggle .active{
@@ -103,127 +130,211 @@ nav a:hover{
     color:#fff;
 }
 
-/* ================= HERO ================= */
+/* =====================================================
+   LANGUAGE CONTENT
+===================================================== */
 
-.hero-image{
-    height:55vh;
-    min-height:350px;
-    background:
-        linear-gradient(
-            rgba(0,0,0,.15),
-            rgba(0,0,0,.15)
-        ),
-        url('images/troupe.jpg') center/cover no-repeat;
+.en{
+    display:none;
+    font-family:'Inter',sans-serif;
 }
 
-/* ================= TITLE ================= */
+/* =====================================================
+   COVER
+   troupe7.jpg ONLY
+===================================================== */
+
+.cover-image{
+    width:100%;
+
+    height:62vh;
+    min-height:400px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.10),
+            rgba(0,0,0,.10)
+        ),
+        url('images/troupe7.jpg')
+        center center / cover no-repeat;
+}
+
+/* =====================================================
+   PAGE TITLE
+===================================================== */
 
 .page-title{
     text-align:center;
-    padding:35px 20px 10px;
+
+    padding:42px 20px 20px;
 }
 
 .page-title h1{
     font-size:42px;
+
     font-weight:700;
+
+    line-height:1.3;
 }
 
 .page-title p{
-    margin-top:10px;
-    color:var(--gray);
-    font-size:17px;
+    margin-top:12px;
+
+    color:var(--accent);
+
+    font-size:19px;
+
+    font-weight:600;
 }
 
-/* ================= INTRO ================= */
+/* =====================================================
+   INTRO
+===================================================== */
 
 .intro{
     max-width:900px;
+
     margin:auto;
-    padding:45px 20px 70px;
+
+    padding:35px 20px 75px;
+
     text-align:center;
 }
 
 .intro p{
     font-size:18px;
+
     line-height:2;
+
     color:#444;
 }
 
-/* ================= STATS ================= */
+/* =====================================================
+   STATS
+===================================================== */
 
 .stats{
     background:var(--light);
-    padding:60px 20px;
+
+    padding:65px 20px;
 }
 
 .stats-grid{
-    max-width:1000px;
+    max-width:900px;
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+
+    grid-template-columns:
+        repeat(2,1fr);
+
     gap:25px;
 }
 
 .stat{
     background:#fff;
+
     padding:35px 20px;
+
     text-align:center;
-    border-radius:15px;
-    box-shadow:0 5px 25px rgba(0,0,0,.05);
+
+    border-radius:16px;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,.05);
 }
 
 .stat-number{
-    font-size:42px;
+    font-size:44px;
+
     font-weight:700;
+
     color:var(--accent);
 }
 
 .stat-title{
-    margin-top:5px;
+    margin-top:7px;
+
     font-size:17px;
+
     font-weight:600;
 }
 
-/* ================= STORY ================= */
+/* =====================================================
+   FROM TROUPE TO INSTITUTION
+   troupe8.jpg ONLY
+===================================================== */
 
 .story{
     max-width:1100px;
+
     margin:auto;
-    padding:80px 20px;
+
+    padding:90px 20px;
+
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:55px;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:60px;
+
     align-items:center;
 }
 
+/* الصورة الخاصة بهذا الجزء */
+
 .story-image{
-    height:430px;
-    border-radius:18px;
-    background:url('images/troupe2.jpg') center/cover no-repeat;
+    width:100%;
+
+    height:440px;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.08),
+            rgba(0,0,0,.08)
+        ),
+        url('images/troupe8.jpg')
+        center center / cover no-repeat;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.12);
 }
 
 .story-text h2{
-    font-size:32px;
-    margin-bottom:20px;
+    font-size:34px;
+
+    margin-bottom:22px;
 }
 
 .story-text p{
     color:#555;
+
     line-height:2;
+
     font-size:17px;
-    margin-bottom:18px;
+
+    margin-bottom:20px;
 }
 
-/* ================= VALUES ================= */
+/* =====================================================
+   VALUES
+===================================================== */
 
 .values{
     background:#111;
+
     color:#fff;
-    padding:80px 20px;
+
+    padding:85px 20px;
 }
 
 .values-title{
     text-align:center;
+
     margin-bottom:45px;
 }
 
@@ -233,109 +344,170 @@ nav a:hover{
 
 .values-grid{
     max-width:1000px;
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap:20px;
 }
 
 .value{
-    padding:30px 20px;
-    border:1px solid rgba(255,255,255,.12);
-    border-radius:15px;
+    padding:32px 20px;
+
+    border:1px solid
+        rgba(255,255,255,.12);
+
+    border-radius:16px;
+
     text-align:center;
 }
 
 .value h3{
     color:var(--accent);
+
     margin-bottom:12px;
+
+    font-size:21px;
 }
 
 .value p{
     color:#ccc;
-    line-height:1.8;
+
+    line-height:1.9;
 }
 
-/* ================= GALLERY ================= */
+/* =====================================================
+   GALLERY
+   troupe1 → troupe6 ONLY
+===================================================== */
 
 .gallery{
-    padding:80px 20px;
+    padding:90px 20px;
 }
 
 .gallery-title{
     text-align:center;
-    margin-bottom:40px;
+
+    margin-bottom:45px;
 }
 
 .gallery-title h2{
-    font-size:32px;
+    font-size:34px;
+}
+
+.gallery-title p{
+    margin-top:8px;
+
+    color:#777;
 }
 
 .gallery-grid{
     max-width:1100px;
+
     margin:auto;
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:15px;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:16px;
 }
 
-.gallery-grid img{
+.gallery-item{
+    overflow:hidden;
+
+    border-radius:14px;
+
+    background:#eee;
+
+    position:relative;
+}
+
+.gallery-item img{
     width:100%;
-    height:260px;
+
+    height:270px;
+
     object-fit:cover;
-    border-radius:12px;
-    transition:.3s;
+
+    display:block;
+
+    transition:
+        transform .5s ease;
 }
 
-.gallery-grid img:hover{
-    transform:scale(1.02);
+.gallery-item:hover img{
+    transform:scale(1.04);
 }
 
-/* ================= CTA ================= */
+/* =====================================================
+   CTA
+===================================================== */
 
 .cta{
     background:var(--accent);
-    padding:70px 20px;
+
+    padding:75px 20px;
+
     text-align:center;
+
     color:#fff;
 }
 
 .cta h2{
     font-size:32px;
+
     margin-bottom:12px;
 }
 
 .cta p{
-    margin-bottom:25px;
+    margin-bottom:28px;
 }
 
 .cta a{
     display:inline-block;
-    padding:12px 28px;
+
+    padding:13px 30px;
+
     border-radius:30px;
+
     background:#fff;
+
     color:#111;
+
     text-decoration:none;
+
     font-weight:700;
+
+    transition:.3s;
 }
 
-/* ================= FOOTER ================= */
+.cta a:hover{
+    transform:translateY(-2px);
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer{
     text-align:center;
-    padding:30px;
+
+    padding:32px;
+
     background:#111;
+
     color:#fff;
 }
 
-/* ================= LANGUAGE ================= */
-
-.en{
-    display:none;
-    font-family:'Inter',sans-serif;
-}
-
-/* ================= MOBILE ================= */
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:768px){
 
@@ -357,25 +529,47 @@ footer{
 
     nav{
         display:none;
+
         position:absolute;
+
         top:69px;
+
         right:0;
+
         width:100%;
+
         background:#fff;
-        padding:20px;
+
+        padding:22px;
+
         flex-direction:column;
+
         align-items:flex-start;
+
         gap:18px;
-        box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+        box-shadow:
+            0 8px 20px
+            rgba(0,0,0,.08);
     }
 
     nav.active{
         display:flex;
     }
 
-    .hero-image{
+    /* COVER */
+
+    .cover-image{
         height:42vh;
+
         min-height:280px;
+    }
+
+    /* TITLE */
+
+    .page-title{
+        padding:
+            32px 18px 15px;
     }
 
     .page-title h1{
@@ -383,25 +577,36 @@ footer{
     }
 
     .page-title p{
-        font-size:15px;
+        font-size:17px;
     }
 
+    /* INTRO */
+
     .intro{
-        padding:35px 20px 50px;
+        padding:
+            30px 20px 50px;
     }
 
     .intro p{
         font-size:16px;
+
+        line-height:1.9;
     }
+
+    /* STATS */
 
     .stats-grid{
         grid-template-columns:1fr;
     }
 
+    /* STORY */
+
     .story{
         grid-template-columns:1fr;
-        padding:55px 20px;
-        gap:30px;
+
+        padding:60px 20px;
+
+        gap:32px;
     }
 
     .story-image{
@@ -409,20 +614,38 @@ footer{
     }
 
     .story-text h2{
-        font-size:27px;
+        font-size:28px;
     }
+
+    .story-text p{
+        font-size:16px;
+    }
+
+    /* VALUES */
 
     .values-grid{
         grid-template-columns:1fr;
+    }
+
+    /* GALLERY */
+
+    .gallery{
+        padding:65px 20px;
+    }
+
+    .gallery-title h2{
+        font-size:28px;
     }
 
     .gallery-grid{
         grid-template-columns:1fr;
     }
 
-    .gallery-grid img{
+    .gallery-item img{
         height:250px;
     }
+
+    /* CTA */
 
     .cta h2{
         font-size:27px;
@@ -432,40 +655,91 @@ footer{
 
 </style>
 
+
 <script>
+
+/* =====================================================
+   LANGUAGE SWITCH
+===================================================== */
 
 function switchLang(lang){
 
-    document.querySelectorAll('.ar').forEach(e=>{
-        e.style.display = lang === 'ar' ? 'block' : 'none';
-    });
+    document
+        .querySelectorAll('.ar')
+        .forEach(e=>{
 
-    document.querySelectorAll('.en').forEach(e=>{
-        e.style.display = lang === 'en' ? 'block' : 'none';
-    });
+            e.style.display =
+                lang === 'ar'
+                ? 'block'
+                : 'none';
+
+        });
+
+
+    document
+        .querySelectorAll('.en')
+        .forEach(e=>{
+
+            e.style.display =
+                lang === 'en'
+                ? 'block'
+                : 'none';
+
+        });
+
 
     document.documentElement.dir =
-        lang === 'ar' ? 'rtl' : 'ltr';
+        lang === 'ar'
+        ? 'rtl'
+        : 'ltr';
 
-    document.querySelectorAll('.lang-toggle button')
-        .forEach(btn => btn.classList.remove('active'));
 
-    document.getElementById(lang).classList.add('active');
+    document
+        .querySelectorAll(
+            '.lang-toggle button'
+        )
+        .forEach(btn=>{
 
-    localStorage.setItem('lang',lang);
+            btn.classList.remove('active');
+
+        });
+
+
+    document
+        .getElementById(lang)
+        .classList.add('active');
+
+
+    localStorage.setItem(
+        'lang',
+        lang
+    );
+
 }
+
+
+/* =====================================================
+   MOBILE MENU
+===================================================== */
 
 function toggleMenu(){
 
-    document.querySelector('nav')
+    document
+        .querySelector('nav')
         .classList.toggle('active');
 
 }
 
-window.onload = function(){
+
+/* =====================================================
+   LOAD LANGUAGE
+===================================================== */
+
+window.onload=function(){
 
     switchLang(
-        localStorage.getItem('lang') || 'ar'
+        localStorage.getItem('lang')
+        || 'ar'
     );
 
 };
@@ -478,60 +752,136 @@ window.onload = function(){
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
 
 <header>
 
 <div class="nav">
 
+
 <div class="logo">
-<img src="logo.png" alt="Teatro AlSaeed">
+
+<img
+src="logo.png"
+alt="Teatro AlSaeed">
+
 </div>
 
-<div class="menu-toggle" onclick="toggleMenu()">
+
+<div
+class="menu-toggle"
+onclick="toggleMenu()">
+
 ☰
+
 </div>
+
 
 <nav>
 
 <a href="index.html">
-<span class="ar">الرئيسية</span>
-<span class="en">Home</span>
+
+<span class="ar">
+الرئيسية
+</span>
+
+<span class="en">
+Home
+</span>
+
 </a>
+
 
 <a href="about.html">
-<span class="ar">عنّا</span>
-<span class="en">About</span>
+
+<span class="ar">
+عنّا
+</span>
+
+<span class="en">
+About
+</span>
+
 </a>
+
 
 <a href="troupe.html">
-<span class="ar">الفرقة</span>
-<span class="en">Troupe</span>
+
+<span class="ar">
+الفرقة
+</span>
+
+<span class="en">
+Troupe
+</span>
+
 </a>
+
 
 <a href="productions.html">
-<span class="ar">العروض</span>
-<span class="en">Productions</span>
+
+<span class="ar">
+العروض
+</span>
+
+<span class="en">
+Productions
+</span>
+
 </a>
+
 
 <a href="academy.html">
-<span class="ar">الأكاديمية</span>
-<span class="en">Academy</span>
+
+<span class="ar">
+الأكاديمية
+</span>
+
+<span class="en">
+Academy
+</span>
+
 </a>
+
 
 <a href="festival.html">
-<span class="ar">المهرجان</span>
-<span class="en">Festival</span>
+
+<span class="ar">
+المهرجان
+</span>
+
+<span class="en">
+Festival
+</span>
+
 </a>
+
 
 <a href="sahara.html">
-<span class="ar">صحارة</span>
-<span class="en">Sahara</span>
+
+<span class="ar">
+صحارة
+</span>
+
+<span class="en">
+Sahara
+</span>
+
 </a>
 
+
 <a href="contact.html">
-<span class="ar">تواصل</span>
-<span class="en">Contact</span>
+
+<span class="ar">
+تواصل
+</span>
+
+<span class="en">
+Contact
+</span>
+
 </a>
 
 </nav>
@@ -539,174 +889,244 @@ window.onload = function(){
 
 <div class="lang-toggle">
 
-<button id="ar" onclick="switchLang('ar')">
+<button
+id="ar"
+onclick="switchLang('ar')">
+
 AR
+
 </button>
 
-<button id="en" onclick="switchLang('en')">
+
+<button
+id="en"
+onclick="switchLang('en')">
+
 EN
+
 </button>
 
 </div>
+
 
 </div>
 
 </header>
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     COVER
+     troupe7.jpg
+===================================================== -->
 
-<div class="hero-image"></div>
+<section class="cover-image">
+</section>
 
 
-<!-- ================= TITLE ================= -->
+<!-- =====================================================
+     PAGE TITLE
+===================================================== -->
 
 <section class="page-title">
+
 
 <h1 class="ar">
 فرقة تياترو الصعيد
 </h1>
 
+
 <h1 class="en">
 Teatro AlSaeed Troupe
 </h1>
+
 
 <p class="ar">
 من المسرح بدأت الحكاية
 </p>
 
+
 <p class="en">
 Where the story began — on stage
 </p>
 
+
 </section>
 
 
-<!-- ================= INTRO ================= -->
+<!-- =====================================================
+     INTRO
+===================================================== -->
 
 <section class="intro">
 
+
 <p class="ar">
-فرقة تياترو الصعيد هي النواة التي انطلقت منها مؤسسة تياترو الصعيد،
-وتعود بدايتها إلى عام 2014.
-منذ ذلك الوقت، واصلت الفرقة العمل على تقديم المسرح
+
+فرقة تياترو الصعيد هي النواة التي انطلقت منها
+مؤسسة تياترو الصعيد، وتعود بدايتها إلى عام 2014.
+ومنذ ذلك الوقت واصلت الفرقة العمل على تقديم المسرح
 وصناعة تجارب فنية مستقلة في صعيد مصر.
+
 </p>
 
+
 <p class="en">
-Teatro AlSaeed Troupe is the founding nucleus of Teatro AlSaeed.
-The troupe began in 2014 and has continued to create
-independent theatrical experiences and support performing arts
-in Upper Egypt.
+
+Teatro AlSaeed Troupe is the founding nucleus
+of Teatro AlSaeed. The troupe began in 2014
+and has continued to create independent theatrical
+experiences and support performing arts in Upper Egypt.
+
 </p>
+
 
 </section>
 
 
-<!-- ================= STATS ================= -->
+<!-- =====================================================
+     STATS
+===================================================== -->
 
 <section class="stats">
 
+
 <div class="stats-grid">
 
+
 <div class="stat">
+
 
 <div class="stat-number">
 2014
 </div>
 
+
 <div class="stat-title ar">
 عام التأسيس
 </div>
 
+
 <div class="stat-title en">
 Year Founded
 </div>
+
 
 </div>
 
 
 <div class="stat">
 
+
 <div class="stat-number">
 600+
 </div>
+
 
 <div class="stat-title ar">
 ليلة عرض مسرحي
 </div>
 
+
 <div class="stat-title en">
 Performance Nights
 </div>
 
+
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- ================= STORY ================= -->
+<!-- =====================================================
+     FROM TROUPE TO INSTITUTION
+     troupe8.jpg
+===================================================== -->
 
 <section class="story">
 
-<div class="story-image"></div>
+
+<div class="story-image">
+</div>
+
 
 <div class="story-text">
+
 
 <h2 class="ar">
 من فرقة إلى مؤسسة
 </h2>
 
+
 <h2 class="en">
 From a Troupe to an Institution
 </h2>
 
+
 <p class="ar">
+
 بدأت تياترو الصعيد كفرقة مسرحية عام 2014،
 وكانت التجربة المسرحية هي النواة الأولى التي قادت
 إلى تأسيس مؤسسة ثقافية تعمل على دعم وتطوير الفنون
 الأدائية في صعيد مصر.
+
 </p>
+
 
 <p class="en">
+
 Teatro AlSaeed started as a theatre troupe in 2014.
-The theatrical experience became the foundation for building
-a cultural institution dedicated to supporting and developing
-performing arts in Upper Egypt.
+The theatrical experience became the foundation
+for building a cultural institution dedicated to
+supporting and developing performing arts in Upper Egypt.
+
 </p>
 
+
 <p class="ar">
+
 قدمت الفرقة أكثر من 600 ليلة عرض مسرحي،
 وشاركت في بناء تجربة فنية مستقلة تقوم على
 الإبداع والتجريب والعمل الجماعي.
+
 </p>
 
+
 <p class="en">
-The troupe has presented more than 600 performance nights,
-building an independent artistic experience based on
-creativity, experimentation and collaboration.
+
+The troupe has presented more than 600 performance
+nights, building an independent artistic experience
+based on creativity, experimentation and collaboration.
+
 </p>
+
 
 </div>
 
 </section>
 
 
-<!-- ================= VALUES ================= -->
+<!-- =====================================================
+     VALUES
+===================================================== -->
 
 <section class="values">
 
+
 <div class="values-title">
+
 
 <h2 class="ar">
 روح الفرقة
 </h2>
 
+
 <h2 class="en">
 The Spirit of the Troupe
 </h2>
+
 
 </div>
 
@@ -716,63 +1136,78 @@ The Spirit of the Troupe
 
 <div class="value">
 
+
 <h3 class="ar">
 الإبداع
 </h3>
+
 
 <h3 class="en">
 Creativity
 </h3>
 
+
 <p class="ar">
 مساحة للتجريب واكتشاف طرق جديدة لصناعة المسرح.
 </p>
+
 
 <p class="en">
 A space for experimentation and new approaches to theatre-making.
 </p>
 
+
 </div>
 
 
 <div class="value">
+
 
 <h3 class="ar">
 العمل الجماعي
 </h3>
 
+
 <h3 class="en">
 Collaboration
 </h3>
+
 
 <p class="ar">
 المسرح تجربة جماعية تقوم على التعاون والثقة.
 </p>
 
+
 <p class="en">
 Theatre is a collective experience built on collaboration and trust.
 </p>
+
 
 </div>
 
 
 <div class="value">
 
+
 <h3 class="ar">
 صعيد مصر
 </h3>
+
 
 <h3 class="en">
 Upper Egypt
 </h3>
 
+
 <p class="ar">
 صناعة الفن من قلب الصعيد وإتاحة الفرص للفنانين.
 </p>
 
+
 <p class="en">
 Creating art from Upper Egypt and opening opportunities for artists.
 </p>
+
 
 </div>
 
@@ -782,78 +1217,163 @@ Creating art from Upper Egypt and opening opportunities for artists.
 </section>
 
 
-<!-- ================= GALLERY ================= -->
+<!-- =====================================================
+     GALLERY
+     troupe1 → troupe6
+===================================================== -->
 
 <section class="gallery">
 
+
 <div class="gallery-title">
+
 
 <h2 class="ar">
 من ذاكرة الفرقة
 </h2>
 
+
 <h2 class="en">
 From the Troupe's Archive
 </h2>
+
+
+<p class="ar">
+محطات وصور من رحلة الفرقة
+</p>
+
+
+<p class="en">
+Moments from the troupe's journey
+</p>
+
 
 </div>
 
 
 <div class="gallery-grid">
 
-<img src="images/troupe1.jpg" alt="Teatro AlSaeed Troupe">
 
-<img src="images/troupe2.jpg" alt="Teatro AlSaeed Troupe">
+<!-- troupe1 -->
 
-<img src="images/troupe3.jpg" alt="Teatro AlSaeed Troupe">
+<div class="gallery-item">
 
-<img src="images/troupe4.jpg" alt="Teatro AlSaeed Troupe">
+<img
+src="images/troupe1.jpg"
+alt="Teatro AlSaeed Troupe">
 
-<img src="images/troupe5.jpg" alt="Teatro AlSaeed Troupe">
+</div>
 
-<img src="images/troupe6.jpg" alt="Teatro AlSaeed Troupe">
+
+<!-- troupe2 -->
+
+<div class="gallery-item">
+
+<img
+src="images/troupe2.jpg"
+alt="Teatro AlSaeed Troupe">
+
+</div>
+
+
+<!-- troupe3 -->
+
+<div class="gallery-item">
+
+<img
+src="images/troupe3.jpg"
+alt="Teatro AlSaeed Troupe">
+
+</div>
+
+
+<!-- troupe4 -->
+
+<div class="gallery-item">
+
+<img
+src="images/troupe4.jpg"
+alt="Teatro AlSaeed Troupe">
+
+</div>
+
+
+<!-- troupe5 -->
+
+<div class="gallery-item">
+
+<img
+src="images/troupe5.jpg"
+alt="Teatro AlSaeed Troupe">
+
+</div>
+
+
+<!-- troupe6 -->
+
+<div class="gallery-item">
+
+<img
+src="images/troupe6.jpg"
+alt="Teatro AlSaeed Troupe">
+
+</div>
+
 
 </div>
 
 </section>
 
 
-<!-- ================= CTA ================= -->
+<!-- =====================================================
+     CTA
+===================================================== -->
 
 <section class="cta">
+
 
 <h2 class="ar">
 اكتشف عروضنا
 </h2>
 
+
 <h2 class="en">
 Explore Our Productions
 </h2>
+
 
 <p class="ar">
 اكتشف التجارب المسرحية التي صنعتها الفرقة على مدار السنوات.
 </p>
 
+
 <p class="en">
 Discover the theatrical experiences created by the troupe over the years.
 </p>
 
+
 <a href="productions.html">
+
 
 <span class="ar">
 العروض المسرحية
 </span>
 
+
 <span class="en">
 Productions
 </span>
 
+
 </a>
+
 
 </section>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -863,4 +1383,5 @@ Teatro AlSaeed
 
 
 </body>
+
 </html>
