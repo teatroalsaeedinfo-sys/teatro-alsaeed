@@ -553,6 +553,7 @@ body.en .en{
     box-shadow:
 
         0 0 0 3px
+
         rgba(43,179,177,.08);
 
 }
@@ -610,6 +611,7 @@ body.en .en{
     box-shadow:
 
         0 25px 60px
+
         rgba(0,0,0,.45);
 
 }
@@ -914,6 +916,7 @@ body.en .en{
     box-shadow:
 
         0 30px 90px
+
         rgba(0,0,0,.65);
 
 }
@@ -1520,7 +1523,9 @@ footer p{
 
             <div class="hero-stat">
 
-                <strong>23</strong>
+                <strong id="heroTotal">
+                    25
+                </strong>
 
                 <span class="ar">
                     عرضًا
@@ -1535,7 +1540,9 @@ footer p{
 
             <div class="hero-stat">
 
-                <strong>2014</strong>
+                <strong>
+                    2014
+                </strong>
 
                 <span class="ar">
                     أقدم إنتاج في الأرشيف
@@ -1550,7 +1557,9 @@ footer p{
 
             <div class="hero-stat">
 
-                <strong>2026</strong>
+                <strong>
+                    2026
+                </strong>
 
                 <span class="ar">
                     أحدث إنتاج في الأرشيف
@@ -1625,7 +1634,7 @@ footer p{
             </span>
 
             <strong id="totalCount">
-                23
+                25
             </strong>
 
         </div>
@@ -1649,6 +1658,7 @@ footer p{
     <div
         class="production-grid"
         id="productionGrid">
+
     </div>
 
 
@@ -1777,90 +1787,6 @@ footer p{
 const productions = [
 
     {
-        title:"أشتاتاً شلتوت",
-        en:"Ashtatan Shaltout",
-        year:"2018",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/أشتاتاً شلتوت.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-
-    {
-        title:"ملك وكتابة",
-        en:"Malek w Ketaba",
-        year:"2019",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/ملك وكتابة.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-
-    {
-        title:"فرحة",
-        en:"Farha",
-        year:"2019",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/فرحة.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-
-    {
-        title:"فستان فرح",
-        en:"Wedding Dress",
-        year:"2019",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/فستان فرح.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-
-    {
-        title:"بطن الزير",
-        en:"Batn El Zeer",
-        year:"2018",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/بطن الزير.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-
-    {
-        title:"عملة نادرة",
-        en:"Rare Coin",
-        year:"2018",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/عملة نادرة.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-
-    {
-        title:"كوميديا بنات",
-        en:"Girls Comedy",
-        year:"2018",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/كوميديا بنات.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-
-    {
         title:"الجنوب تحت",
         en:"South Is Down",
         year:"2014",
@@ -1870,7 +1796,6 @@ const productions = [
         description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
         descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
     },
-
 
     {
         title:"الموجوعة",
@@ -1883,7 +1808,6 @@ const productions = [
         descriptionEn:"A human story about inner pain and the invisible wounds that leave lasting marks."
     },
 
-
     {
         title:"ولاد تسعة",
         en:"Wlad Tesaa",
@@ -1894,31 +1818,6 @@ const productions = [
         description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
         descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
     },
-
-
-    {
-        title:"سرير لا يصلح للنوم",
-        en:"A Bed Not Fit for Sleep",
-        year:"2025",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/سرير لا يصلح للنوم.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-
-    {
-        title:"قابل للنشر",
-        en:"Publishable",
-        year:"2025",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/قابل للنشر.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
 
     {
         title:"قهوة زيادة",
@@ -1931,7 +1830,6 @@ const productions = [
         descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
     },
 
-
     {
         title:"خشبة",
         en:"The Stage",
@@ -1942,19 +1840,6 @@ const productions = [
         description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
         descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
     },
-
-
-    {
-        title:"ليلة عيد ميلاد",
-        en:"Birthday Night",
-        year:"2024",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/ليلة عيد ميلاد.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
 
     {
         title:"يخلق من الشبه",
@@ -1967,18 +1852,93 @@ const productions = [
         descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
     },
 
-
     {
-        title:"الجانب المظلم",
-        en:"The Dark Side",
-        year:"2026",
-        type:"مشروع تخرج · الدفعة 22",
-        typeEn:"Graduation Project · Group 22",
-        image:"images/الجانب المظلم.jpg",
-        description:"مشروع تخرج أكاديمية تياترو الصعيد – الدفعة 22.",
-        descriptionEn:"Graduation production of Teatro Alsaeed Academy – Group 22."
+        title:"أشتاتاً شلتوت",
+        en:"Ashtatan Shaltout",
+        year:"2018",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/أشتاتاً شلتوت.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
     },
 
+    {
+        title:"بطن الزير",
+        en:"Batn El Zeer",
+        year:"2018",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/بطن الزير.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
+
+    {
+        title:"عملة نادرة",
+        en:"Rare Coin",
+        year:"2018",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/عملة نادرة.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
+
+    {
+        title:"كوميديا بنات",
+        en:"Girls Comedy",
+        year:"2018",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/كوميديا بنات.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
+
+    {
+        title:"ملك وكتابة",
+        en:"Malek w Ketaba",
+        year:"2019",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/ملك وكتابة.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
+
+    {
+        title:"فرحة",
+        en:"Farha",
+        year:"2019",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/فرحة.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
+
+    {
+        title:"فستان فرح",
+        en:"Wedding Dress",
+        year:"2019",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/فستان فرح.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
+
+    {
+        title:"الكبار",
+        en:"The Elders",
+        year:"2019",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/الكبار.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
 
     {
         title:"حبشي بنات",
@@ -1991,66 +1951,16 @@ const productions = [
         descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
     },
 
-
     {
-        title:"الكبار",
-        en:"The Elders",
-        year:"2024",
+        title:"جريمة في فرقة الغرابلي",
+        en:"A Crime in Al-Gharabli Troupe",
+        year:"2020",
         type:"مسرحية",
         typeEn:"Theatre Production",
-        image:"images/الكبار.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        image:"images/جريمة في فرقة الغرابلي.jpg",
+        description:"إنتاج تياترو الصعيد – 2020.",
         descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
     },
-
-
-    {
-        title:"سوق",
-        en:"Souq",
-        year:"2022",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/سوق.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-
-    {
-        title:"خمسة رجال في الطابق العلوي",
-        en:"Five Men Upstairs",
-        year:"2024",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/خمسة رجال في الطابق العلوي.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-
-    {
-  title: "بولي آرت",
-  en:"Poly Art",
-  year: "2025",
-  image: "images/بولي آرت.jpg",
-  type: "مسرحية",
-  description: "عرض مسرحي من أرشيف فرقة تياترو الصعيد."
-  descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-
-    },
-
-
-    {
-  title: "جريمة في فرقة الغرابلي",
-  en:"A Crime in Al-Gharabli Troupe",
-  year: "2020",
-  image: "images/جريمة في فرقة الغرابلي.jpg",
-  type: "مسرحية",
-  description: "إنتاج تياترو الصعيد – 2020."
-  descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-
-    },
-
 
     {
         title:"سوق العبيد",
@@ -2063,6 +1973,82 @@ const productions = [
         descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
     },
 
+    {
+        title:"سوق",
+        en:"Souq",
+        year:"2022",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/سوق.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
+
+    {
+        title:"ليلة عيد ميلاد",
+        en:"Birthday Night",
+        year:"2024",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/ليلة عيد ميلاد.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
+
+    {
+        title:"خمسة رجال في الطابق العلوي",
+        en:"Five Men Upstairs",
+        year:"2024",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/خمسة رجال في الطابق العلوي.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
+
+    {
+        title:"سرير لا يصلح للنوم",
+        en:"A Bed Not Fit for Sleep",
+        year:"2025",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/سرير لا يصلح للنوم.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
+
+    {
+        title:"قابل للنشر",
+        en:"Publishable",
+        year:"2025",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/قابل للنشر.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
+
+    {
+        title:"بولي آرت",
+        en:"Poly Art",
+        year:"2025",
+        type:"مسرحية",
+        typeEn:"Theatre Production",
+        image:"images/بولي آرت.jpg",
+        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
+        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
+    },
+
+    {
+        title:"الجانب المظلم",
+        en:"The Dark Side",
+        year:"2026",
+        type:"مشروع تخرج · الدفعة 22",
+        typeEn:"Graduation Project · Group 22",
+        image:"images/الجانب المظلم.jpg",
+        description:"مشروع تخرج أكاديمية تياترو الصعيد – الدفعة 22.",
+        descriptionEn:"Graduation production of Teatro Alsaeed Academy – Group 22."
+    },
 
     {
         title:"قبل منتصف الليل",
@@ -2106,6 +2092,11 @@ const search =
 const totalCount =
     document.getElementById(
         "totalCount"
+    );
+
+const heroTotal =
+    document.getElementById(
+        "heroTotal"
     );
 
 const modal =
@@ -2199,6 +2190,10 @@ function renderProductions(
 
     totalCount.textContent =
         filtered.length;
+
+
+    heroTotal.textContent =
+        productions.length;
 
 
     grid.innerHTML =
@@ -2589,4 +2584,5 @@ renderProductions();
 
 
 </body>
+
 </html>
