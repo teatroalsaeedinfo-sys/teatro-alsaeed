@@ -1,82 +1,1441 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>أكاديمية تياترو الصعيد | Teatro Alsaeed Academy</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-:root{--a:#2bb3b1;--d:#111;--l:#f5f6f7;--g:#777;--max:1200px}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Cairo,sans-serif;color:var(--d);line-height:1.8}body.en{font-family:Inter,sans-serif;direction:ltr}.en{display:none}body.en .ar{display:none!important}body.en .en{display:block!important}a{text-decoration:none;color:inherit}img{max-width:100%;display:block}.navbar{position:fixed;z-index:99;top:0;left:0;right:0;height:78px;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-bottom:1px solid #eee}.nav{max-width:var(--max);height:100%;margin:auto;padding:0 22px;display:flex;align-items:center;gap:24px}.logo img{width:58px;height:58px;object-fit:contain}.links{display:flex;gap:24px;align-items:center;margin-right:auto}.enbody{}.links a{font-size:14px;font-weight:700}.links a:hover,.links .active{color:var(--a)}.lang{border:1px solid #ddd;background:white;border-radius:50px;padding:6px 13px;font-weight:800;cursor:pointer}.menu{display:none;border:0;background:none;font-size:25px;cursor:pointer}.hero{margin-top:78px;height:70vh;min-height:500px;background:linear-gradient(to bottom,rgba(0,0,0,.1),rgba(0,0,0,.85)),url('academy-hero.jpg') center/cover;display:flex;align-items:flex-end;color:#fff}.hero-in{width:100%;max-width:var(--max);margin:auto;padding:70px 24px}.eyebrow{color:var(--a);font-weight:800;font-size:13px;letter-spacing:1px}.hero h1{font-size:clamp(44px,7vw,88px);line-height:1.05;margin:12px 0}.hero p{max-width:700px;font-size:18px;color:#ddd}.section{padding:95px 24px}.container{max-width:var(--max);margin:auto}.head{max-width:760px;margin-bottom:45px}.kicker{color:var(--a);font-size:13px;font-weight:800;letter-spacing:1px}.title{font-size:clamp(32px,4vw,52px);line-height:1.2;margin:8px 0 15px}.text{color:#666;font-size:17px}.intro{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}.intro h2{font-size:clamp(32px,4vw,50px);line-height:1.3}.intro h2 span{color:var(--a)}.intro p{color:#666;font-size:17px;margin-top:16px}.number{background:#111;color:#fff;min-height:380px;padding:45px;display:flex;flex-direction:column;justify-content:flex-end}.number b{font:800 110px/1 Inter;color:var(--a)}.number h3{font-size:25px}.number p{color:#aaa}.stats{background:var(--l)}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#ddd}.stat{background:#fff;text-align:center;padding:40px 20px}.stat b{font:800 46px/1 Inter;color:var(--a);display:block;margin-bottom:10px}.dark{background:#111;color:#fff}.dark .text{color:#aaa}.timeline{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:50px}.mile{text-align:center}.dot{width:58px;height:58px;border:2px solid var(--a);border-radius:50%;display:grid;place-items:center;margin:0 auto 15px;color:var(--a);font:800 15px Inter}.mile strong{font-size:14px}.mile small{display:block;color:#777;font:12px Inter;margin-top:3px}.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.photo{position:relative;overflow:hidden;background:#eee;aspect-ratio:4/3;cursor:pointer}.photo img{width:100%;height:100%;object-fit:cover;transition:.5s}.photo:hover img{transform:scale(1.06)}.photo span{position:absolute;bottom:10px;right:10px;background:rgba(0,0,0,.72);color:#fff;padding:4px 9px;font-size:11px}.enbody{}.archive-note{margin-top:20px;color:#777;font-size:14px}.quote{background:var(--a);color:#fff;text-align:center;padding:95px 24px}.quote p{max-width:850px;margin:auto;font-size:clamp(26px,4vw,42px);font-weight:800}.cta{text-align:center;padding:90px 24px}.btn{display:inline-block;background:#111;color:#fff;padding:13px 27px;border-radius:50px;font-weight:800;margin-top:22px}.btn:hover{background:var(--a)}footer{background:#111;color:#fff;padding:55px 24px 22px}.foot{max-width:var(--max);margin:auto;display:flex;justify-content:space-between;gap:30px}.foot img{width:68px;margin-bottom:15px}.foot p{color:#888;max-width:420px;font-size:14px}.footlinks{display:flex;gap:18px;flex-wrap:wrap}.footlinks a{color:#aaa;font-size:13px}.bottom{max-width:var(--max);margin:35px auto 0;padding-top:18px;border-top:1px solid #292929;color:#666;font-size:12px;display:flex;justify-content:space-between}.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:999;padding:30px;align-items:center;justify-content:center}.lightbox.show{display:flex}.lightbox img{max-width:92vw;max-height:88vh;object-fit:contain}.close{position:absolute;top:20px;right:25px;border:1px solid #555;background:#111;color:#fff;width:45px;height:45px;border-radius:50%;font-size:25px;cursor:pointer}@media(max-width:900px){.links{display:none;position:absolute;top:78px;right:0;left:0;background:#fff;padding:12px 20px;flex-direction:column;align-items:stretch;gap:0;box-shadow:0 15px 30px #0001}.links.show{display:flex}.links a{padding:12px;border-bottom:1px solid #eee}.menu{display:block}.intro{grid-template-columns:1fr;gap:40px}.stats-grid{grid-template-columns:1fr 1fr}.timeline{grid-template-columns:repeat(3,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.foot{flex-direction:column}}@media(max-width:560px){.hero{margin-top:70px;min-height:440px}.navbar{height:70px}.links{top:70px}.hero-in{padding:45px 20px}.section{padding:70px 20px}.gallery{grid-template-columns:1fr}.timeline{grid-template-columns:repeat(2,1fr)}.stats-grid{grid-template-columns:1fr 1fr}.bottom{flex-direction:column}}
-</style></head>
+
+:root{
+--a:#2bb3b1;
+--d:#111;
+--l:#f5f6f7;
+--g:#777;
+--max:1200px;
+}
+
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Cairo,sans-serif;
+color:var(--d);
+line-height:1.8;
+}
+
+body.en{
+font-family:Inter,sans-serif;
+direction:ltr;
+}
+
+.en{
+display:none;
+}
+
+body.en .ar{
+display:none!important;
+}
+
+body.en .en{
+display:block!important;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+/* NAVBAR */
+
+.navbar{
+position:fixed;
+z-index:99;
+top:0;
+left:0;
+right:0;
+height:78px;
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(12px);
+border-bottom:1px solid #eee;
+}
+
+.nav{
+max-width:var(--max);
+height:100%;
+margin:auto;
+padding:0 22px;
+display:flex;
+align-items:center;
+gap:24px;
+}
+
+.logo img{
+width:58px;
+height:58px;
+object-fit:contain;
+}
+
+.links{
+display:flex;
+gap:24px;
+align-items:center;
+margin-right:auto;
+}
+
+.links a{
+font-size:14px;
+font-weight:700;
+}
+
+.links a:hover,
+.links .active{
+color:var(--a);
+}
+
+.lang{
+border:1px solid #ddd;
+background:white;
+border-radius:50px;
+padding:6px 13px;
+font-weight:800;
+cursor:pointer;
+}
+
+.menu{
+display:none;
+border:0;
+background:none;
+font-size:25px;
+cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+margin-top:78px;
+height:70vh;
+min-height:500px;
+
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,.1),
+rgba(0,0,0,.85)
+),
+url("images/academy-hero.jpg") center center / cover no-repeat;
+
+display:flex;
+align-items:flex-end;
+color:#fff;
+}
+
+.hero-in{
+width:100%;
+max-width:var(--max);
+margin:auto;
+padding:70px 24px;
+}
+
+.eyebrow{
+color:var(--a);
+font-weight:800;
+font-size:13px;
+letter-spacing:1px;
+}
+
+.hero h1{
+font-size:clamp(44px,7vw,88px);
+line-height:1.05;
+margin:12px 0;
+}
+
+.hero p{
+max-width:700px;
+font-size:18px;
+color:#ddd;
+}
+
+/* GENERAL */
+
+.section{
+padding:95px 24px;
+}
+
+.container{
+max-width:var(--max);
+margin:auto;
+}
+
+.head{
+max-width:760px;
+margin-bottom:45px;
+}
+
+.kicker{
+color:var(--a);
+font-size:13px;
+font-weight:800;
+letter-spacing:1px;
+}
+
+.title{
+font-size:clamp(32px,4vw,52px);
+line-height:1.2;
+margin:8px 0 15px;
+}
+
+.text{
+color:#666;
+font-size:17px;
+}
+
+/* INTRO */
+
+.intro{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:70px;
+align-items:center;
+}
+
+.intro h2{
+font-size:clamp(32px,4vw,50px);
+line-height:1.3;
+}
+
+.intro h2 span{
+color:var(--a);
+}
+
+.intro p{
+color:#666;
+font-size:17px;
+margin-top:16px;
+}
+
+.number{
+background:#111;
+color:#fff;
+min-height:380px;
+padding:45px;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+}
+
+.number b{
+font:800 110px/1 Inter;
+color:var(--a);
+}
+
+.number h3{
+font-size:25px;
+}
+
+.number p{
+color:#aaa;
+}
+
+/* STATS */
+
+.stats{
+background:var(--l);
+}
+
+.stats-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:1px;
+background:#ddd;
+}
+
+.stat{
+background:#fff;
+text-align:center;
+padding:40px 20px;
+}
+
+.stat b{
+font:800 46px/1 Inter;
+color:var(--a);
+display:block;
+margin-bottom:10px;
+}
+
+/* DARK */
+
+.dark{
+background:#111;
+color:#fff;
+}
+
+.dark .text{
+color:#aaa;
+}
+
+/* TIMELINE */
+
+.timeline{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:18px;
+margin-top:50px;
+}
+
+.mile{
+text-align:center;
+}
+
+.dot{
+width:58px;
+height:58px;
+border:2px solid var(--a);
+border-radius:50%;
+display:grid;
+place-items:center;
+margin:0 auto 15px;
+color:var(--a);
+font:800 15px Inter;
+}
+
+.mile strong{
+font-size:14px;
+}
+
+.mile small{
+display:block;
+color:#777;
+font:12px Inter;
+margin-top:3px;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:14px;
+}
+
+.photo{
+position:relative;
+overflow:hidden;
+background:#eee;
+aspect-ratio:4/3;
+cursor:pointer;
+}
+
+.photo img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s;
+}
+
+.photo:hover img{
+transform:scale(1.06);
+}
+
+.photo span{
+position:absolute;
+bottom:10px;
+right:10px;
+background:rgba(0,0,0,.72);
+color:#fff;
+padding:4px 9px;
+font-size:11px;
+}
+
+.archive-note{
+margin-top:20px;
+color:#777;
+font-size:14px;
+}
+
+/* QUOTE */
+
+.quote{
+background:var(--a);
+color:#fff;
+text-align:center;
+padding:95px 24px;
+}
+
+.quote p{
+max-width:850px;
+margin:auto;
+font-size:clamp(26px,4vw,42px);
+font-weight:800;
+}
+
+/* CTA */
+
+.cta{
+text-align:center;
+padding:90px 24px;
+}
+
+.btn{
+display:inline-block;
+background:#111;
+color:#fff;
+padding:13px 27px;
+border-radius:50px;
+font-weight:800;
+margin-top:22px;
+}
+
+.btn:hover{
+background:var(--a);
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:#fff;
+padding:55px 24px 22px;
+}
+
+.foot{
+max-width:var(--max);
+margin:auto;
+display:flex;
+justify-content:space-between;
+gap:30px;
+}
+
+.foot img{
+width:68px;
+margin-bottom:15px;
+}
+
+.foot p{
+color:#888;
+max-width:420px;
+font-size:14px;
+}
+
+.footlinks{
+display:flex;
+gap:18px;
+flex-wrap:wrap;
+}
+
+.footlinks a{
+color:#aaa;
+font-size:13px;
+}
+
+.bottom{
+max-width:var(--max);
+margin:35px auto 0;
+padding-top:18px;
+border-top:1px solid #292929;
+color:#666;
+font-size:12px;
+display:flex;
+justify-content:space-between;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+display:none;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.94);
+z-index:999;
+padding:30px;
+align-items:center;
+justify-content:center;
+}
+
+.lightbox.show{
+display:flex;
+}
+
+.lightbox img{
+max-width:92vw;
+max-height:88vh;
+object-fit:contain;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:25px;
+border:1px solid #555;
+background:#111;
+color:#fff;
+width:45px;
+height:45px;
+border-radius:50%;
+font-size:25px;
+cursor:pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+.links{
+display:none;
+position:absolute;
+top:78px;
+right:0;
+left:0;
+background:#fff;
+padding:12px 20px;
+flex-direction:column;
+align-items:stretch;
+gap:0;
+box-shadow:0 15px 30px #0001;
+}
+
+.links.show{
+display:flex;
+}
+
+.links a{
+padding:12px;
+border-bottom:1px solid #eee;
+}
+
+.menu{
+display:block;
+}
+
+.intro{
+grid-template-columns:1fr;
+gap:40px;
+}
+
+.stats-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.timeline{
+grid-template-columns:repeat(3,1fr);
+}
+
+.gallery{
+grid-template-columns:repeat(2,1fr);
+}
+
+.foot{
+flex-direction:column;
+}
+
+}
+
+@media(max-width:560px){
+
+.hero{
+margin-top:70px;
+min-height:440px;
+}
+
+.navbar{
+height:70px;
+}
+
+.links{
+top:70px;
+}
+
+.hero-in{
+padding:45px 20px;
+}
+
+.section{
+padding:70px 20px;
+}
+
+.gallery{
+grid-template-columns:1fr;
+}
+
+.timeline{
+grid-template-columns:repeat(2,1fr);
+}
+
+.stats-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.bottom{
+flex-direction:column;
+}
+
+}
+
+</style>
+</head>
+
 <body>
-<header class="navbar"><div class="nav"><a class="logo" href="index.html"><img src="logo.png" alt="Teatro Alsaeed"></a><nav class="links" id="links"><a href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a><a href="about.html"><span class="ar">عنّا</span><span class="en">About</span></a><a href="troupe.html"><span class="ar">الفرقة</span><span class="en">Troupe</span></a><a href="productions.html"><span class="ar">العروض</span><span class="en">Productions</span></a><a class="active" href="academy.html"><span class="ar">الأكاديمية</span><span class="en">Academy</span></a><a href="festival.html"><span class="ar">المهرجان</span><span class="en">Festival</span></a><a href="sahara.html"><span class="ar">صحارة</span><span class="en">Sahara</span></a><a href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a></nav><button class="lang" id="lang">EN</button><button class="menu" id="menu">☰</button></div></header>
-<section class="hero"><div class="hero-in"><div class="eyebrow ar">أكاديمية تياترو الصعيد</div><div class="eyebrow en">TEATRO ALSAEED ACADEMY</div><h1><span class="ar">الأكاديمية</span><span class="en">The Academy</span></h1><p class="ar">رحلة مستمرة لصناعة الفنان، وبناء جيل جديد من المبدعين في صعيد مصر.</p><p class="en">A continuous journey of artistic training, empowering a new generation of creators in Upper Egypt.</p></div></section>
-<section class="section"><div class="container intro"><div><div class="kicker ar">عن الأكاديمية</div><div class="kicker en">ABOUT THE ACADEMY</div><h2 class="ar">من التدريب إلى <span>خشبة المسرح</span></h2><h2 class="en">From training to the <span>stage</span></h2><p class="ar">أكاديمية تياترو الصعيد مساحة للتعلم والتجريب واكتشاف الإمكانات الفنية، تهدف إلى تطوير مهارات الشباب في الفنون الأدائية وربط المعرفة بالممارسة.</p><p class="en">Teatro Alsaeed Academy is a space for learning, experimentation and artistic discovery, developing young people's performing arts skills and connecting knowledge with practice.</p></div><div class="number"><b>23</b><h3 class="ar">دفعة تخرجت</h3><h3 class="en">Graduated Groups</h3><p class="ar">من المجموعات الأولى وحتى أحدث دفعات الأكاديمية.</p><p class="en">From the earliest groups to the latest graduating groups.</p></div></div></section>
-<section class="section stats"><div class="container"><div class="head"><div class="kicker ar">بالأرقام</div><div class="kicker en">BY THE NUMBERS</div><h2 class="title ar">رحلة من الخبرة والتجربة</h2><h2 class="title en">A journey built on experience</h2></div><div class="stats-grid"><div class="stat"><b>23</b><span class="ar">مجموعة تخرجت</span><span class="en">Graduated Groups</span></div><div class="stat"><b>A–W</b><span class="ar">نظام تسمية المجموعات</span><span class="en">Group Naming System</span></div><div class="stat"><b>2014</b><span class="ar">بداية رحلة تياترو الصعيد</span><span class="en">Beginning of the Journey</span></div><div class="stat"><b>∞</b><span class="ar">مساحة للتجريب</span><span class="en">Space for Experimentation</span></div></div></div></section>
-<section class="section dark"><div class="container"><div class="head"><div class="kicker ar">رحلة المجموعات</div><div class="kicker en">THE GROUP JOURNEY</div><h2 class="title ar">من A إلى W</h2><h2 class="title en">From A to W</h2><p class="text ar">في بداية رحلة الأكاديمية كانت المجموعات تحمل أسماء الحروف الإنجليزية، ثم استمر الترقيم بالأرقام؛ فالمجموعة C هي المجموعة الثالثة، وصولًا إلى المجموعة 23.</p><p class="text en">The Academy's early groups were identified by English letters before continuing with numerical group numbers: Group C became Group 3, continuing through Group 23.</p></div><div class="timeline"><div class="mile"><div class="dot">A</div><strong class="ar">المجموعة 1</strong><strong class="en">Group 1</strong><small>01</small></div><div class="mile"><div class="dot">C</div><strong class="ar">المجموعة 3</strong><strong class="en">Group 3</strong><small>03</small></div><div class="mile"><div class="dot">F</div><strong class="ar">المجموعة 6</strong><strong class="en">Group 6</strong><small>06</small></div><div class="mile"><div class="dot">J</div><strong class="ar">المجموعة 10</strong><strong class="en">Group 10</strong><small>10</small></div><div class="mile"><div class="dot">N</div><strong class="ar">المجموعة 14</strong><strong class="en">Group 14</strong><small>14</small></div><div class="mile"><div class="dot">W</div><strong class="ar">المجموعة 23</strong><strong class="en">Group 23</strong><small>23</small></div></div></div></section>
-<section class="section"><div class="container"><div class="head"><div class="kicker ar">الأرشيف</div><div class="kicker en">ARCHIVE</div><h2 class="title ar">أرشيف أكاديمية تياترو الصعيد</h2><h2 class="title en">Teatro Alsaeed Academy Archive</h2><p class="text ar">مجموعة من الصور المتاحة من رحلة التدريب، المحاضرات، المجموعات، ومشروعات التخرج. تم الحفاظ على الصور كما هي، مع إعادة تسمية الملفات لتسهيل إدارتها داخل الموقع.</p><p class="text en">A collection of available images from training, lectures, groups and graduation projects. The original images are preserved, with clean filenames for easier website management.</p></div><div class="gallery">
-<div class="photo" data-src="images/academy-archive-01.jpg"><img src="images/academy-archive-01.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 1"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-02.jpg"><img src="images/academy-archive-02.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 2"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-03.jpg"><img src="images/academy-archive-03.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 3"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-04.jpg"><img src="images/academy-archive-04.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 4"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-05.jpg"><img src="images/academy-archive-05.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 5"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-06.jpg"><img src="images/academy-archive-06.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 6"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-07.jpg"><img src="images/academy-archive-07.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 7"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-08.jpg"><img src="images/academy-archive-08.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 8"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-09.jpg"><img src="images/academy-archive-09.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 9"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-10.jpg"><img src="images/academy-archive-10.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 10"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-11.jpg"><img src="images/academy-archive-11.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 11"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-12.jpg"><img src="images/academy-archive-12.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 12"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-13.jpg"><img src="images/academy-archive-13.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 13"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-14.jpg"><img src="images/academy-archive-14.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 14"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-15.jpg"><img src="images/academy-archive-15.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 15"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-16.jpg"><img src="images/academy-archive-16.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 16"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-17.jpg"><img src="images/academy-archive-17.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 17"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-18.jpg"><img src="images/academy-archive-18.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 18"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-19.jpg"><img src="images/academy-archive-19.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 19"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-20.jpg"><img src="images/academy-archive-20.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 20"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-21.jpg"><img src="images/academy-archive-21.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 21"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-22.jpg"><img src="images/academy-archive-22.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 22"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-23.jpg"><img src="images/academy-archive-23.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 23"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-24.jpg"><img src="images/academy-archive-24.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 24"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-25.jpg"><img src="images/academy-archive-25.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 25"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-26.jpg"><img src="images/academy-archive-26.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 26"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-27.jpg"><img src="images/academy-archive-27.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 27"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-28.jpg"><img src="images/academy-archive-28.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 28"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-29.jpg"><img src="images/academy-archive-29.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 29"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-30.jpg"><img src="images/academy-archive-30.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 30"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-31.jpg"><img src="images/academy-archive-31.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 31"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-32.jpg"><img src="images/academy-archive-32.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 32"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-33.jpg"><img src="images/academy-archive-33.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 33"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-34.jpg"><img src="images/academy-archive-34.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 34"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-35.jpg"><img src="images/academy-archive-35.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 35"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-36.jpg"><img src="images/academy-archive-36.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 36"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-37.jpg"><img src="images/academy-archive-37.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 37"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-38.jpg"><img src="images/academy-archive-38.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 38"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-39.jpg"><img src="images/academy-archive-39.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 39"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-40.jpg"><img src="images/academy-archive-40.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 40"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-41.jpg"><img src="images/academy-archive-41.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 41"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-42.jpg"><img src="images/academy-archive-42.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 42"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-43.jpg"><img src="images/academy-archive-43.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 43"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-44.jpg"><img src="images/academy-archive-44.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 44"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-45.jpg"><img src="images/academy-archive-45.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 45"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-46.jpg"><img src="images/academy-archive-46.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 46"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-47.jpg"><img src="images/academy-archive-47.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 47"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-48.jpg"><img src="images/academy-archive-48.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 48"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-49.jpg"><img src="images/academy-archive-49.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 49"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-50.jpg"><img src="images/academy-archive-50.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 50"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-51.jpg"><img src="images/academy-archive-51.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 51"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-52.jpg"><img src="images/academy-archive-52.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 52"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-53.jpg"><img src="images/academy-archive-53.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 53"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-54.jpg"><img src="images/academy-archive-54.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 54"><span>Academy Archive</span></div>
-<div class="photo" data-src="images/academy-archive-55.jpg"><img src="images/academy-archive-55.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 55"><span>Academy Archive</span></div>
-</div><p class="archive-note ar">الأرشيف الحالي مبني على الصور المتاحة في المحادثة، ويمكن إضافة أي صور جديدة لاحقًا بنفس نظام التسمية.</p><p class="archive-note en">This archive is built from the images currently available and can be expanded later using the same naming system.</p></div></section>
-<section class="quote"><p class="ar">الفن مش مجرد موهبة... الفن مساحة نتعلم فيها، نجرب، ونكتشف نفسنا.</p><p class="en">Art is not only talent. It is a space where we learn, experiment and discover ourselves.</p></section>
-<section class="cta"><div class="container"><h2 class="title ar">رحلتنا مستمرة</h2><h2 class="title en">The journey continues</h2><p class="text ar">من أول مجموعة إلى المجموعة 23، تستمر الأكاديمية في صناعة مساحات جديدة للتعلم والتجريب والإبداع.</p><p class="text en">From the first group to Group 23, the Academy continues to create spaces for learning, experimentation and creativity.</p><a class="btn" href="contact.html"><span class="ar">تواصل معنا</span><span class="en">Get in Touch</span></a></div></section>
-<footer><div class="foot"><div><img src="logo.png" alt="Teatro Alsaeed"><p class="ar">تياترو الصعيد — إحياء وتطوير الفنون.</p><p class="en">Teatro Alsaeed — Reviving and Developing Performing Arts.</p></div><div class="footlinks"><a href="index.html">Home</a><a href="about.html">About</a><a href="productions.html">Productions</a><a href="academy.html">Academy</a><a href="festival.html">Festival</a><a href="contact.html">Contact</a></div></div><div class="bottom"><span>© 2026 Teatro Alsaeed</span><span class="ar">جميع الحقوق محفوظة</span><span class="en">All Rights Reserved</span></div></footer>
-<div class="lightbox" id="lb"><button class="close" id="close">×</button><img id="lbimg" src="" alt=""></div>
+
+<header class="navbar">
+
+<div class="nav">
+
+<a class="logo" href="index.html">
+<img src="logo.png" alt="Teatro Alsaeed">
+</a>
+
+<nav class="links" id="links">
+
+<a href="index.html">
+<span class="ar">الرئيسية</span>
+<span class="en">Home</span>
+</a>
+
+<a href="about.html">
+<span class="ar">عنّا</span>
+<span class="en">About</span>
+</a>
+
+<a href="troupe.html">
+<span class="ar">الفرقة</span>
+<span class="en">Troupe</span>
+</a>
+
+<a href="productions.html">
+<span class="ar">العروض</span>
+<span class="en">Productions</span>
+</a>
+
+<a class="active" href="academy.html">
+<span class="ar">الأكاديمية</span>
+<span class="en">Academy</span>
+</a>
+
+<a href="festival.html">
+<span class="ar">المهرجان</span>
+<span class="en">Festival</span>
+</a>
+
+<a href="sahara.html">
+<span class="ar">صحارة</span>
+<span class="en">Sahara</span>
+</a>
+
+<a href="contact.html">
+<span class="ar">تواصل</span>
+<span class="en">Contact</span>
+</a>
+
+</nav>
+
+<button class="lang" id="lang">EN</button>
+
+<button class="menu" id="menu">☰</button>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-in">
+
+<div class="eyebrow ar">
+أكاديمية تياترو الصعيد
+</div>
+
+<div class="eyebrow en">
+TEATRO ALSAEED ACADEMY
+</div>
+
+<h1>
+<span class="ar">الأكاديمية</span>
+<span class="en">The Academy</span>
+</h1>
+
+<p class="ar">
+رحلة مستمرة لصناعة الفنان، وبناء جيل جديد من المبدعين في صعيد مصر.
+</p>
+
+<p class="en">
+A continuous journey of artistic training, empowering a new generation of creators in Upper Egypt.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- INTRO -->
+
+<section class="section">
+
+<div class="container intro">
+
+<div>
+
+<div class="kicker ar">
+عن الأكاديمية
+</div>
+
+<div class="kicker en">
+ABOUT THE ACADEMY
+</div>
+
+<h2 class="ar">
+من التدريب إلى <span>خشبة المسرح</span>
+</h2>
+
+<h2 class="en">
+From training to the <span>stage</span>
+</h2>
+
+<p class="ar">
+أكاديمية تياترو الصعيد مساحة للتعلم والتجريب واكتشاف الإمكانات الفنية، تهدف إلى تطوير مهارات الشباب في الفنون الأدائية وربط المعرفة بالممارسة.
+</p>
+
+<p class="en">
+Teatro Alsaeed Academy is a space for learning, experimentation and artistic discovery, developing young people's performing arts skills and connecting knowledge with practice.
+</p>
+
+</div>
+
+<div class="number">
+
+<b>23</b>
+
+<h3 class="ar">
+دفعة تخرجت
+</h3>
+
+<h3 class="en">
+Graduated Groups
+</h3>
+
+<p class="ar">
+من المجموعات الأولى وحتى أحدث دفعات الأكاديمية.
+</p>
+
+<p class="en">
+From the earliest groups to the latest graduating groups.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="section stats">
+
+<div class="container">
+
+<div class="head">
+
+<div class="kicker ar">
+بالأرقام
+</div>
+
+<div class="kicker en">
+BY THE NUMBERS
+</div>
+
+<h2 class="title ar">
+رحلة من الخبرة والتجربة
+</h2>
+
+<h2 class="title en">
+A journey built on experience
+</h2>
+
+</div>
+
+<div class="stats-grid">
+
+<div class="stat">
+<b>23</b>
+<span class="ar">مجموعة تخرجت</span>
+<span class="en">Graduated Groups</span>
+</div>
+
+<div class="stat">
+<b>A–W</b>
+<span class="ar">نظام تسمية المجموعات</span>
+<span class="en">Group Naming System</span>
+</div>
+
+<div class="stat">
+<b>2014</b>
+<span class="ar">بداية رحلة تياترو الصعيد</span>
+<span class="en">Beginning of the Journey</span>
+</div>
+
+<div class="stat">
+<b>∞</b>
+<span class="ar">مساحة للتجريب</span>
+<span class="en">Space for Experimentation</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TIMELINE -->
+
+<section class="section dark">
+
+<div class="container">
+
+<div class="head">
+
+<div class="kicker ar">
+رحلة المجموعات
+</div>
+
+<div class="kicker en">
+THE GROUP JOURNEY
+</div>
+
+<h2 class="title ar">
+من A إلى W
+</h2>
+
+<h2 class="title en">
+From A to W
+</h2>
+
+<p class="text ar">
+في بداية رحلة الأكاديمية كانت المجموعات تحمل أسماء الحروف الإنجليزية، ثم استمر الترقيم بالأرقام؛ فالمجموعة C هي المجموعة الثالثة، وصولًا إلى المجموعة 23.
+</p>
+
+<p class="text en">
+The Academy's early groups were identified by English letters before continuing with numerical group numbers: Group C became Group 3, continuing through Group 23.
+</p>
+
+</div>
+
+<div class="timeline">
+
+<div class="mile">
+<div class="dot">A</div>
+<strong class="ar">المجموعة 1</strong>
+<strong class="en">Group 1</strong>
+<small>01</small>
+</div>
+
+<div class="mile">
+<div class="dot">C</div>
+<strong class="ar">المجموعة 3</strong>
+<strong class="en">Group 3</strong>
+<small>03</small>
+</div>
+
+<div class="mile">
+<div class="dot">F</div>
+<strong class="ar">المجموعة 6</strong>
+<strong class="en">Group 6</strong>
+<small>06</small>
+</div>
+
+<div class="mile">
+<div class="dot">J</div>
+<strong class="ar">المجموعة 10</strong>
+<strong class="en">Group 10</strong>
+<small>10</small>
+</div>
+
+<div class="mile">
+<div class="dot">N</div>
+<strong class="ar">المجموعة 14</strong>
+<strong class="en">Group 14</strong>
+<small>14</small>
+</div>
+
+<div class="mile">
+<div class="dot">23</div>
+<strong class="ar">المجموعة 23</strong>
+<strong class="en">Group 23</strong>
+<small>23</small>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ARCHIVE -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="head">
+
+<div class="kicker ar">
+أرشيف الأكاديمية
+</div>
+
+<div class="kicker en">
+ACADEMY ARCHIVE
+</div>
+
+<h2 class="title ar">
+ذاكرة المجموعات
+</h2>
+
+<h2 class="title en">
+The Groups Archive
+</h2>
+
+<p class="text ar">
+صور من رحلة الأكاديمية وتدريباتها ومشروعات التخرج والاحتفالات عبر السنوات.
+</p>
+
+<p class="text en">
+A visual archive of the Academy's training journey, graduation projects and celebrations throughout the years.
+</p>
+
+</div>
+
+
+<div class="gallery">
+
+<div class="photo" data-src="images/academy-archive-01.jpg">
+<img src="images/academy-archive-01.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 01">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-02.jpg">
+<img src="images/academy-archive-02.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 02">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-03.jpg">
+<img src="images/academy-archive-03.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 03">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-04.jpg">
+<img src="images/academy-archive-04.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 04">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-05.jpg">
+<img src="images/academy-archive-05.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 05">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-06.jpg">
+<img src="images/academy-archive-06.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 06">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-07.jpg">
+<img src="images/academy-archive-07.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 07">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-08.jpg">
+<img src="images/academy-archive-08.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 08">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-09.jpg">
+<img src="images/academy-archive-09.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 09">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-10.jpg">
+<img src="images/academy-archive-10.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 10">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-11.jpg">
+<img src="images/academy-archive-11.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 11">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-12.jpg">
+<img src="images/academy-archive-12.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 12">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-13.jpg">
+<img src="images/academy-archive-13.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 13">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-14.jpg">
+<img src="images/academy-archive-14.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 14">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-15.jpg">
+<img src="images/academy-archive-15.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 15">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-16.jpg">
+<img src="images/academy-archive-16.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 16">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-17.jpg">
+<img src="images/academy-archive-17.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 17">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-18.jpg">
+<img src="images/academy-archive-18.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 18">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-19.jpg">
+<img src="images/academy-archive-19.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 19">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-20.jpg">
+<img src="images/academy-archive-20.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 20">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-21.jpg">
+<img src="images/academy-archive-21.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 21">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-22.jpg">
+<img src="images/academy-archive-22.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 22">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-23.jpg">
+<img src="images/academy-archive-23.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 23">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-24.jpg">
+<img src="images/academy-archive-24.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 24">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-25.jpg">
+<img src="images/academy-archive-25.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 25">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-26.jpg">
+<img src="images/academy-archive-26.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 26">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-27.jpg">
+<img src="images/academy-archive-27.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 27">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-28.jpg">
+<img src="images/academy-archive-28.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 28">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-29.jpg">
+<img src="images/academy-archive-29.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 29">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-30.jpg">
+<img src="images/academy-archive-30.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 30">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-31.jpg">
+<img src="images/academy-archive-31.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 31">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-32.jpg">
+<img src="images/academy-archive-32.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 32">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-33.jpg">
+<img src="images/academy-archive-33.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 33">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-34.jpg">
+<img src="images/academy-archive-34.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 34">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-35.jpg">
+<img src="images/academy-archive-35.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 35">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-36.jpg">
+<img src="images/academy-archive-36.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 36">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-37.jpg">
+<img src="images/academy-archive-37.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 37">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-38.jpg">
+<img src="images/academy-archive-38.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 38">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-39.jpg">
+<img src="images/academy-archive-39.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 39">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-40.jpg">
+<img src="images/academy-archive-40.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 40">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-41.jpg">
+<img src="images/academy-archive-41.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 41">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-42.jpg">
+<img src="images/academy-archive-42.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 42">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-43.jpg">
+<img src="images/academy-archive-43.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 43">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-44.jpg">
+<img src="images/academy-archive-44.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 44">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-45.jpg">
+<img src="images/academy-archive-45.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 45">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-46.jpg">
+<img src="images/academy-archive-46.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 46">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-47.jpg">
+<img src="images/academy-archive-47.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 47">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-48.jpg">
+<img src="images/academy-archive-48.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 48">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-49.jpg">
+<img src="images/academy-archive-49.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 49">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-50.jpg">
+<img src="images/academy-archive-50.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 50">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-51.jpg">
+<img src="images/academy-archive-51.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 51">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-52.jpg">
+<img src="images/academy-archive-52.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 52">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-53.jpg">
+<img src="images/academy-archive-53.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 53">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-54.jpg">
+<img src="images/academy-archive-54.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 54">
+<span>Academy Archive</span>
+</div>
+
+<div class="photo" data-src="images/academy-archive-55.jpg">
+<img src="images/academy-archive-55.jpg" loading="lazy" alt="Teatro Alsaeed Academy Archive 55">
+<span>Academy Archive</span>
+</div>
+
+</div>
+
+<p class="archive-note ar">
+الأرشيف الحالي مبني على الصور المتاحة في المحادثة، ويمكن إضافة أي صور جديدة لاحقًا بنفس نظام التسمية.
+</p>
+
+<p class="archive-note en">
+This archive is built from the images currently available and can be expanded later using the same naming system.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- QUOTE -->
+
+<section class="quote">
+
+<p class="ar">
+الفن مش مجرد موهبة... الفن مساحة نتعلم فيها، نجرب، ونكتشف نفسنا.
+</p>
+
+<p class="en">
+Art is not only talent. It is a space where we learn, experiment and discover ourselves.
+</p>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="container">
+
+<h2 class="title ar">
+رحلتنا مستمرة
+</h2>
+
+<h2 class="title en">
+The journey continues
+</h2>
+
+<p class="text ar">
+من أول مجموعة إلى المجموعة 23، تستمر الأكاديمية في صناعة مساحات جديدة للتعلم والتجريب والإبداع.
+</p>
+
+<p class="text en">
+From the first group to Group 23, the Academy continues to create spaces for learning, experimentation and creativity.
+</p>
+
+<a class="btn" href="contact.html">
+
+<span class="ar">
+تواصل معنا
+</span>
+
+<span class="en">
+Get in Touch
+</span>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="foot">
+
+<div>
+
+<img src="logo.png" alt="Teatro Alsaeed">
+
+<p class="ar">
+تياترو الصعيد — إحياء وتطوير الفنون.
+</p>
+
+<p class="en">
+Teatro Alsaeed — Reviving and Developing Performing Arts.
+</p>
+
+</div>
+
+<div class="footlinks">
+
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="productions.html">Productions</a>
+<a href="academy.html">Academy</a>
+<a href="festival.html">Festival</a>
+<a href="contact.html">Contact</a>
+
+</div>
+
+</div>
+
+<div class="bottom">
+
+<span>
+© 2026 Teatro Alsaeed
+</span>
+
+<span class="ar">
+جميع الحقوق محفوظة
+</span>
+
+<span class="en">
+All Rights Reserved
+</span>
+
+</div>
+
+</footer>
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lb">
+
+<button class="close" id="close">
+×
+</button>
+
+<img id="lbimg" src="" alt="">
+
+</div>
+
+
 <script>
-const lang=document.getElementById('lang');const links=document.getElementById('links');const menu=document.getElementById('menu');
-function setLang(x){document.body.classList.toggle('en',x==='en');document.documentElement.lang=x;document.documentElement.dir=x==='en'?'ltr':'rtl';lang.textContent=x==='en'?'AR':'EN';localStorage.setItem('siteLang',x)}setLang(localStorage.getItem('siteLang')||'ar');lang.onclick=()=>setLang(document.body.classList.contains('en')?'ar':'en');menu.onclick=()=>links.classList.toggle('show');document.querySelectorAll('.links a').forEach(a=>a.onclick=()=>links.classList.remove('show'));
-const lb=document.getElementById('lb'),im=document.getElementById('lbimg');document.querySelectorAll('.photo').forEach(p=>p.onclick=()=>{im.src=p.dataset.src;lb.classList.add('show');document.body.style.overflow='hidden'});function close(){lb.classList.remove('show');document.body.style.overflow='';im.src=''}document.getElementById('close').onclick=close;lb.onclick=e=>{if(e.target===lb)close()};document.onkeydown=e=>{if(e.key==='Escape')close()};
-</script></body></html>
+
+const lang=document.getElementById('lang');
+const links=document.getElementById('links');
+const menu=document.getElementById('menu');
+
+function setLang(x){
+
+document.body.classList.toggle('en',x==='en');
+
+document.documentElement.lang=x;
+
+document.documentElement.dir=x==='en'?'ltr':'rtl';
+
+lang.textContent=x==='en'?'AR':'EN';
+
+localStorage.setItem('siteLang',x);
+
+}
+
+setLang(localStorage.getItem('siteLang')||'ar');
+
+lang.onclick=()=>{
+
+setLang(
+document.body.classList.contains('en')
+?'ar'
+:'en'
+);
+
+};
+
+menu.onclick=()=>{
+
+links.classList.toggle('show');
+
+};
+
+document.querySelectorAll('.links a').forEach(a=>{
+
+a.onclick=()=>links.classList.remove('show');
+
+});
+
+
+/* LIGHTBOX */
+
+const lb=document.getElementById('lb');
+const im=document.getElementById('lbimg');
+
+document.querySelectorAll('.photo').forEach(p=>{
+
+p.onclick=()=>{
+
+im.src=p.dataset.src;
+
+lb.classList.add('show');
+
+document.body.style.overflow='hidden';
+
+};
+
+});
+
+function close(){
+
+lb.classList.remove('show');
+
+document.body.style.overflow='';
+
+im.src='';
+
+}
+
+document.getElementById('close').onclick=close;
+
+lb.onclick=e=>{
+
+if(e.target===lb){
+
+close();
+
+}
+
+};
+
+document.onkeydown=e=>{
+
+if(e.key==='Escape'){
+
+close();
+
+}
+
+};
+
+</script>
+
+</body>
+</html>
