@@ -1,289 +1,2068 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>أكاديمية تياترو الصعيد | Teatro AlSaeed Academy</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>أكاديمية تياترو الصعيد | Teatro Alsaeed Academy</title>
 
-<style>
-:root{
- --bg:#f4f5f6;
- --white:#ffffff;
- --dark:#1f1f1f;
- --muted:#555;
- --accent:#2bb3b1;
-}
-*{margin:0;padding:0;box-sizing:border-box}
+  <meta
+    name="description"
+    content="أكاديمية تياترو الصعيد — مساحة للتدريب والتجريب وتطوير المواهب في الفنون الأدائية."
+  >
 
-body{
-  font-family:'Cairo',sans-serif;
-  background:var(--bg);
-  color:var(--dark);
-  line-height:1.9;
-}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-section{background:var(--white);margin-bottom:40px}
-.container{max-width:1100px;margin:auto;padding:80px 20px}
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
-/* ===== Header ===== */
-header{background:#fff;border-bottom:1px solid #eee}
-.nav{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-.logo{display:flex;align-items:center;gap:12px}
-.logo img{height:50px}
+  <style>
+    :root {
+      --accent: #2bb3b1;
+      --accent-dark: #168b89;
+      --dark: #111111;
+      --dark-2: #181818;
+      --light: #f5f6f7;
+      --white: #ffffff;
+      --gray: #777777;
+      --border: rgba(0,0,0,.08);
+      --shadow: 0 20px 60px rgba(0,0,0,.10);
+    }
 
-nav a{
-  margin:0 10px;
-  font-weight:600;
-  color:var(--accent);
-  text-decoration:none;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.lang-switch button{
-  background:none;
-  border:none;
-  font-weight:600;
-  cursor:pointer;
-  margin:0 5px;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-/* ===== Hero ===== */
-.hero{
-  text-align:center;
-  padding:120px 20px;
-  background:linear-gradient(#f4f5f6,#e8eaeb);
-}
-.hero h1{font-size:42px;margin-bottom:20px}
-.hero p{max-width:850px;margin:auto;color:var(--muted)}
+    body {
+      font-family: "Cairo", sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
 
-/* ===== Stats ===== */
-.stats{
-  display:flex;
-  justify-content:center;
-  gap:60px;
-  margin-top:50px;
-  flex-wrap:wrap;
-}
-.stat-box{text-align:center}
-.stat-box span{
-  font-size:46px;
-  font-weight:700;
-  color:var(--accent);
-}
-.stat-box p{color:var(--muted)}
+    body.en {
+      font-family: "Inter", sans-serif;
+      direction: ltr;
+    }
 
-/* ===== Typography ===== */
-h2{font-size:32px;margin-bottom:20px}
-h3{font-size:22px;margin-bottom:10px;color:var(--accent)}
-p{font-size:17px;color:var(--muted)}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-/* ===== Grid ===== */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-  margin-top:40px;
-}
-.card{
-  background:#fafafa;
-  border:1px solid #eee;
-  border-radius:10px;
-  padding:30px;
-}
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-/* ===== CTA ===== */
-.cta{
-  background:linear-gradient(135deg,var(--accent),#1f9d9b);
-  color:#fff;
-  text-align:center;
-}
-.cta h2{color:#fff}
-.cta p{color:#f1f1f1;max-width:800px;margin:20px auto}
-.cta a{
-  display:inline-block;
-  margin-top:30px;
-  padding:14px 40px;
-  background:#fff;
-  color:var(--accent);
-  font-weight:700;
-  border-radius:30px;
-  text-decoration:none;
-}
+    button {
+      font-family: inherit;
+    }
 
-/* ===== Footer ===== */
-footer{
-  background:#1f1f1f;
-  color:#ccc;
-  text-align:center;
-  padding:50px 20px;
-}
-footer h3{color:#fff;margin-bottom:10px}
-.address{font-size:14px;color:#aaa}
+    /* =========================
+       LANGUAGE
+    ========================== */
 
-.en{display:none;font-family:'Inter',sans-serif;direction:ltr}
+    .ar {
+      display: inline;
+    }
 
-@media(max-width:768px){
-.hero h1{font-size:32px}
-.nav{flex-direction:column;gap:10px}
-}
-</style>
+    .en {
+      display: none;
+    }
 
-<script>
-function switchLang(lang){
- document.querySelectorAll('.ar').forEach(e=>e.style.display= lang==='ar'?'block':'none');
- document.querySelectorAll('.en').forEach(e=>e.style.display= lang==='en'?'block':'none');
- document.documentElement.dir = lang==='ar'?'rtl':'ltr';
- localStorage.setItem('lang', lang);
-}
-window.onload = ()=>{
- const saved = localStorage.getItem('lang') || 'ar';
- switchLang(saved);
-}
-</script>
+    body.en .ar {
+      display: none !important;
+    }
+
+    body.en .en {
+      display: inline !important;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================== */
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 78px;
+      z-index: 9999;
+
+      background: rgba(255,255,255,.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+
+      border-bottom: 1px solid rgba(0,0,0,.06);
+
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-container {
+      width: min(1400px, calc(100% - 50px));
+      margin: auto;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      width: 120px;
+      flex-shrink: 0;
+    }
+
+    .logo img {
+      width: 100%;
+      height: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 27px;
+      flex: 1;
+    }
+
+    .nav-links a {
+      position: relative;
+
+      font-size: 14px;
+      font-weight: 600;
+      color: #222;
+
+      padding: 28px 0;
+
+      transition: .3s ease;
+      white-space: nowrap;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+
+      bottom: 20px;
+      right: 0;
+
+      width: 0;
+      height: 2px;
+
+      background: var(--accent);
+
+      transition: .3s ease;
+    }
+
+    body.en .nav-links a::after {
+      right: auto;
+      left: 0;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--accent-dark);
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .language-btn {
+      border: 1px solid rgba(0,0,0,.15);
+      background: transparent;
+
+      min-width: 48px;
+      height: 38px;
+
+      border-radius: 22px;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition: .3s ease;
+    }
+
+    .language-btn:hover {
+      background: var(--dark);
+      color: white;
+      border-color: var(--dark);
+    }
+
+    .menu-toggle {
+      display: none;
+
+      width: 42px;
+      height: 42px;
+
+      border: none;
+      background: transparent;
+
+      cursor: pointer;
+
+      position: relative;
+    }
+
+    .menu-toggle span {
+      position: absolute;
+      left: 9px;
+
+      width: 24px;
+      height: 2px;
+
+      background: var(--dark);
+
+      transition: .3s ease;
+    }
+
+    .menu-toggle span:nth-child(1) {
+      top: 12px;
+    }
+
+    .menu-toggle span:nth-child(2) {
+      top: 20px;
+    }
+
+    .menu-toggle span:nth-child(3) {
+      top: 28px;
+    }
+
+    .menu-toggle.open span:nth-child(1) {
+      transform: rotate(45deg);
+      top: 20px;
+    }
+
+    .menu-toggle.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .menu-toggle.open span:nth-child(3) {
+      transform: rotate(-45deg);
+      top: 20px;
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+      margin-top: 78px;
+
+      min-height: 76vh;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,.84) 0%,
+          rgba(0,0,0,.62) 45%,
+          rgba(0,0,0,.20) 100%
+        ),
+        url("images/academy.jpg") center center / cover no-repeat;
+
+      display: flex;
+      align-items: center;
+
+      overflow: hidden;
+    }
+
+    body:not(.en) .hero {
+      background:
+        linear-gradient(
+          270deg,
+          rgba(0,0,0,.84) 0%,
+          rgba(0,0,0,.62) 45%,
+          rgba(0,0,0,.20) 100%
+        ),
+        url("images/academy.jpg") center center / cover no-repeat;
+    }
+
+    .hero::before {
+      content: "";
+
+      position: absolute;
+      inset: 0;
+
+      background:
+        radial-gradient(
+          circle at 80% 50%,
+          rgba(43,179,177,.16),
+          transparent 35%
+        );
+
+      pointer-events: none;
+    }
+
+    .hero-container {
+      width: min(1400px, calc(100% - 50px));
+      margin: auto;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-content {
+      max-width: 760px;
+      color: white;
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+
+      margin-bottom: 24px;
+
+      font-size: 13px;
+      font-weight: 700;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      color: var(--accent);
+    }
+
+    .hero-kicker::before {
+      content: "";
+
+      width: 42px;
+      height: 2px;
+
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-size: clamp(46px, 7vw, 92px);
+      line-height: 1.05;
+
+      font-weight: 800;
+
+      margin-bottom: 25px;
+
+      letter-spacing: -2px;
+    }
+
+    .hero-description {
+      max-width: 690px;
+
+      font-size: clamp(17px, 2vw, 22px);
+      line-height: 2;
+
+      color: rgba(255,255,255,.84);
+
+      margin-bottom: 35px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      min-height: 52px;
+
+      padding: 0 28px;
+
+      border-radius: 3px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 14px;
+      font-weight: 700;
+
+      transition: .3s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: white;
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,.5);
+      color: white;
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--dark);
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       SECTION GENERAL
+    ========================== */
+
+    section {
+      padding: 110px 0;
+    }
+
+    .container {
+      width: min(1200px, calc(100% - 50px));
+      margin: auto;
+    }
+
+    .section-heading {
+      margin-bottom: 60px;
+    }
+
+    .section-label {
+      display: inline-block;
+
+      color: var(--accent-dark);
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      margin-bottom: 13px;
+    }
+
+    .section-title {
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 1.15;
+
+      font-weight: 800;
+
+      margin-bottom: 18px;
+    }
+
+    .section-description {
+      max-width: 760px;
+
+      color: #666;
+
+      font-size: 17px;
+      line-height: 2;
+    }
+
+    /* =========================
+       INTRO
+    ========================== */
+
+    .intro {
+      background: white;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .intro-text h2 {
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.25;
+
+      margin-bottom: 25px;
+    }
+
+    .intro-text h2 span {
+      color: var(--accent-dark);
+    }
+
+    .intro-text p {
+      font-size: 17px;
+      line-height: 2.1;
+      color: #666;
+
+      margin-bottom: 18px;
+    }
+
+    .intro-visual {
+      position: relative;
+
+      min-height: 470px;
+
+      overflow: hidden;
+
+      background: #ddd;
+    }
+
+    .intro-visual img {
+      width: 100%;
+      height: 100%;
+      min-height: 470px;
+
+      object-fit: cover;
+
+      transition: transform .8s ease;
+    }
+
+    .intro-visual:hover img {
+      transform: scale(1.05);
+    }
+
+    .intro-visual::after {
+      content: "";
+
+      position: absolute;
+      inset: 20px;
+
+      border: 1px solid rgba(255,255,255,.55);
+
+      pointer-events: none;
+    }
+
+    /* =========================
+       STATS
+    ========================== */
+
+    .stats-section {
+      background: var(--dark);
+      color: white;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stats-section::before {
+      content: "23";
+
+      position: absolute;
+
+      font-family: "Inter", sans-serif;
+
+      font-size: 430px;
+      font-weight: 800;
+
+      line-height: .7;
+
+      color: rgba(255,255,255,.025);
+
+      left: -40px;
+      bottom: -60px;
+
+      pointer-events: none;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      position: relative;
+      z-index: 2;
+    }
+
+    .stat {
+      padding: 50px 40px;
+
+      border-right: 1px solid rgba(255,255,255,.12);
+
+      text-align: center;
+    }
+
+    body:not(.en) .stat:first-child {
+      border-right: 0;
+    }
+
+    body.en .stat {
+      border-right: 0;
+      border-left: 1px solid rgba(255,255,255,.12);
+    }
+
+    body.en .stat:first-child {
+      border-left: 0;
+    }
+
+    .stat-number {
+      font-family: "Inter", sans-serif;
+
+      font-size: clamp(55px, 7vw, 90px);
+      line-height: 1;
+
+      font-weight: 800;
+
+      color: var(--accent);
+
+      margin-bottom: 15px;
+    }
+
+    .stat-title {
+      font-size: 18px;
+      font-weight: 700;
+
+      margin-bottom: 8px;
+    }
+
+    .stat-description {
+      color: rgba(255,255,255,.55);
+
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    /* =========================
+       APPROACH
+    ========================== */
+
+    .approach {
+      background: var(--light);
+    }
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .approach-card {
+      background: white;
+
+      padding: 42px;
+
+      min-height: 250px;
+
+      position: relative;
+
+      border: 1px solid var(--border);
+
+      transition: .4s ease;
+    }
+
+    .approach-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+      border-color: transparent;
+    }
+
+    .approach-number {
+      font-family: "Inter", sans-serif;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      color: var(--accent);
+
+      margin-bottom: 35px;
+    }
+
+    .approach-card h3 {
+      font-size: 25px;
+
+      margin-bottom: 15px;
+    }
+
+    .approach-card p {
+      color: #666;
+
+      line-height: 2;
+
+      font-size: 15px;
+    }
+
+    /* =========================
+       QUOTE
+    ========================== */
+
+    .quote-section {
+      padding: 130px 0;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,.82),
+          rgba(0,0,0,.82)
+        ),
+        url("images/academy.jpg") center / cover fixed;
+
+      color: white;
+
+      text-align: center;
+    }
+
+    .quote-mark {
+      font-family: Georgia, serif;
+
+      color: var(--accent);
+
+      font-size: 100px;
+
+      line-height: .6;
+
+      margin-bottom: 35px;
+    }
+
+    .quote-text {
+      max-width: 920px;
+
+      margin: auto;
+
+      font-size: clamp(28px, 4vw, 52px);
+
+      line-height: 1.5;
+
+      font-weight: 700;
+    }
+
+    .quote-source {
+      margin-top: 30px;
+
+      color: rgba(255,255,255,.55);
+
+      font-size: 14px;
+    }
+
+    /* =========================
+       CTA
+    ========================== */
+
+    .cta {
+      background: white;
+    }
+
+    .cta-box {
+      background: var(--dark);
+
+      padding: 70px 80px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 50px;
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-box::after {
+      content: "";
+
+      position: absolute;
+
+      width: 300px;
+      height: 300px;
+
+      border-radius: 50%;
+
+      background: rgba(43,179,177,.10);
+
+      right: -100px;
+      top: -100px;
+    }
+
+    body.en .cta-box::after {
+      right: auto;
+      left: -100px;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .cta-content h2 {
+      color: white;
+
+      font-size: clamp(30px, 4vw, 48px);
+
+      margin-bottom: 15px;
+    }
+
+    .cta-content p {
+      color: rgba(255,255,255,.65);
+
+      max-width: 650px;
+
+      line-height: 2;
+    }
+
+    .cta-action {
+      position: relative;
+      z-index: 2;
+
+      flex-shrink: 0;
+    }
+
+    /* =========================
+       FOOTER
+    ========================== */
+
+    footer {
+      background: #0b0b0b;
+      color: white;
+
+      padding: 65px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns: 1.3fr 1fr 1fr;
+
+      gap: 60px;
+
+      padding-bottom: 50px;
+
+      border-bottom: 1px solid rgba(255,255,255,.1);
+    }
+
+    .footer-logo {
+      width: 130px;
+
+      margin-bottom: 22px;
+
+      filter: brightness(0) invert(1);
+    }
+
+    .footer-about p {
+      max-width: 430px;
+
+      color: rgba(255,255,255,.55);
+
+      font-size: 14px;
+
+      line-height: 2;
+    }
+
+    .footer-column h4 {
+      font-size: 15px;
+
+      margin-bottom: 20px;
+    }
+
+    .footer-column a {
+      display: block;
+
+      color: rgba(255,255,255,.55);
+
+      font-size: 14px;
+
+      margin-bottom: 11px;
+
+      transition: .25s ease;
+    }
+
+    .footer-column a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      padding-top: 25px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      gap: 20px;
+
+      color: rgba(255,255,255,.4);
+
+      font-size: 12px;
+    }
+
+    /* =========================
+       REVEAL ANIMATION
+    ========================== */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(35px);
+
+      transition:
+        opacity .8s ease,
+        transform .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================
+       MOBILE
+    ========================== */
+
+    @media (max-width: 1100px) {
+
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+      }
+
+      .intro-grid {
+        gap: 45px;
+      }
+
+      .cta-box {
+        padding: 55px;
+      }
+    }
+
+    @media (max-width: 900px) {
+
+      .navbar {
+        height: 70px;
+      }
+
+      .nav-container {
+        width: min(100% - 35px, 1400px);
+      }
+
+      .logo {
+        width: 105px;
+      }
+
+      .nav-links {
+        position: fixed;
+
+        top: 70px;
+        left: 0;
+        right: 0;
+
+        background: rgba(255,255,255,.98);
+
+        backdrop-filter: blur(15px);
+
+        padding: 25px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 0;
+
+        transform: translateY(-120%);
+        opacity: 0;
+        pointer-events: none;
+
+        transition: .4s ease;
+
+        box-shadow: 0 15px 40px rgba(0,0,0,.1);
+      }
+
+      .nav-links.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .nav-links a {
+        width: 100%;
+
+        padding: 15px 5px;
+
+        border-bottom: 1px solid rgba(0,0,0,.06);
+      }
+
+      .nav-links a::after {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .hero {
+        min-height: 75vh;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .intro-visual {
+        min-height: 400px;
+      }
+
+      .intro-visual img {
+        min-height: 400px;
+      }
+
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat,
+      body.en .stat {
+        border: 0;
+
+        border-bottom: 1px solid rgba(255,255,255,.12);
+      }
+
+      .stat:last-child {
+        border-bottom: 0;
+      }
+
+      .approach-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-about {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      section {
+        padding: 75px 0;
+      }
+
+      .container,
+      .hero-container {
+        width: calc(100% - 35px);
+      }
+
+      .hero {
+        min-height: 78vh;
+      }
+
+      .hero h1 {
+        font-size: 47px;
+        letter-spacing: -1px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+        line-height: 1.9;
+      }
+
+      .hero-buttons {
+        width: 100%;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .intro-visual,
+      .intro-visual img {
+        min-height: 330px;
+      }
+
+      .intro-text p {
+        font-size: 15px;
+      }
+
+      .stat {
+        padding: 40px 20px;
+      }
+
+      .approach-card {
+        padding: 30px;
+      }
+
+      .quote-section {
+        padding: 90px 20px;
+      }
+
+      .quote-text {
+        font-size: 28px;
+      }
+
+      .cta-box {
+        padding: 40px 28px;
+      }
+
+      .cta-action,
+      .cta-action .btn {
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .footer-about {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 430px) {
+
+      .logo {
+        width: 95px;
+      }
+
+      .hero h1 {
+        font-size: 41px;
+      }
+
+      .section-title {
+        font-size: 34px;
+      }
+
+      .stat-number {
+        font-size: 65px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<div class="nav">
-  <div class="logo">
-    <img src="logo.png" alt="Teatro AlSaeed Logo">
-    <strong>Teatro AlSaeed</strong>
-  </div>
+  <!-- =========================
+       NAVBAR
+  ========================== -->
 
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="about.html">عنّا</a>
-    <a href="troupe.html">الفرقة</a>
-    <a href="productions.html">العروض</a>
-    <a href="academy.html">الأكاديمية</a>
-    <a href="contact.html">تواصل</a>
-  </nav>
+  <header class="navbar">
 
-  <div class="lang-switch">
-    <button onclick="switchLang('ar')">AR</button> |
-    <button onclick="switchLang('en')">EN</button>
-  </div>
-</div>
-</header>
+    <div class="nav-container">
 
-<!-- ===== HERO ===== -->
-<div class="hero">
-<div class="ar">
-<h1>أكاديمية تياترو الصعيد</h1>
-<p>
-الذراع التعليمية والتدريبية لمؤسسة تياترو الصعيد،
-تعمل على بناء الفنان وصقل أدواته داخل مسار مهني
-قائم على الاحتراف والتجريب والاستمرارية.
-</p>
-</div>
+      <a href="index.html" class="logo">
+        <img src="logo.png" alt="Teatro Alsaeed">
+      </a>
 
-<div class="en">
-<h1>Teatro AlSaeed Academy</h1>
-<p>
-The educational and training arm of Teatro AlSaeed,
-dedicated to building artists and cultural practitioners
-through professional and practice-based learning paths.
-</p>
-</div>
+      <nav class="nav-links" id="navLinks">
 
-<div class="stats">
-  <div class="stat-box">
-    <span>21</span>
-    <p class="ar">مجموعة تخرجت</p>
-    <p class="en">Graduated Groups</p>
-  </div>
-  <div class="stat-box">
-    <span>22 – 23</span>
-    <p class="ar">مجموعات قيد الدراسة</p>
-    <p class="en">Current Groups</p>
-  </div>
-</div>
-</div>
+        <a href="index.html">
+          <span class="ar">الرئيسية</span>
+          <span class="en">Home</span>
+        </a>
 
-<!-- ===== PROGRAMS ===== -->
-<section>
-<div class="container">
-<div class="ar"><h2>برامج الأكاديمية</h2></div>
-<div class="en"><h2>Academy Programs</h2></div>
+        <a href="about.html">
+          <span class="ar">عنّا</span>
+          <span class="en">About</span>
+        </a>
 
-<div class="grid">
-<div class="card ar">
-<h3>التمثيل</h3>
-<p>بناء أدوات الممثل والأداء الجسدي والصوتي.</p>
-</div>
-<div class="card en">
-<h3>Acting</h3>
-<p>Developing acting tools, physical and vocal performance.</p>
-</div>
+        <a href="troupe.html">
+          <span class="ar">الفرقة</span>
+          <span class="en">Troupe</span>
+        </a>
 
-<div class="card ar">
-<h3>الإخراج</h3>
-<p>الرؤية الإخراجية وإدارة الممثل وبناء العرض.</p>
-</div>
-<div class="card en">
-<h3>Directing</h3>
-<p>Directorial vision, working with actors and staging.</p>
-</div>
+        <a href="productions.html">
+          <span class="ar">العروض</span>
+          <span class="en">Productions</span>
+        </a>
 
-<div class="card ar">
-<h3>الكتابة المسرحية</h3>
-<p>تطوير النص وبناء الدراما المعاصرة.</p>
-</div>
-<div class="card en">
-<h3>Playwriting</h3>
-<p>Developing theatrical texts and dramaturgy.</p>
-</div>
+        <a href="academy.html" class="active">
+          <span class="ar">الأكاديمية</span>
+          <span class="en">Academy</span>
+        </a>
 
-<div class="card ar">
-<h3>الإدارة الثقافية</h3>
-<p>إدارة المشاريع الفنية والاستدامة.</p>
-</div>
-<div class="card en">
-<h3>Cultural Management</h3>
-<p>Managing cultural projects and sustainability.</p>
-</div>
-</div>
-</div>
-</section>
+        <a href="festival.html">
+          <span class="ar">المهرجان</span>
+          <span class="en">Festival</span>
+        </a>
 
-<!-- ===== CTA ===== -->
-<section class="cta">
-<div class="container">
-<div class="ar">
-<h2>هل ترغب في الانضمام إلى الأكاديمية؟</h2>
-<p>
-باب التعلّم مفتوح أمام كل من يمتلك الشغف والرغبة
-في بناء مسار فني حقيقي ومستدام.
-</p>
-<a href="contact.html">قدّم الآن</a>
-</div>
+        <a href="sahara.html">
+          <span class="ar">صحارة</span>
+          <span class="en">Sahara</span>
+        </a>
 
-<div class="en">
-<h2>Want to Join the Academy?</h2>
-<p>
-Learning is open to everyone with passion
-and the desire to build a real and sustainable artistic career.
-</p>
-<a href="contact.html">Apply Now</a>
-</div>
-</div>
-</section>
+        <a href="contact.html">
+          <span class="ar">تواصل</span>
+          <span class="en">Contact</span>
+        </a>
 
-<footer>
-<h3>Teatro AlSaeed | تياترو الصعيد</h3>
-<p class="address ar">المنيا – شارع الحسيني – بجوار بي تك</p>
-<p class="address en">Minya – Al-Husseiny Street – Next to B.Tech</p>
-<p>Your Dream Is Legal</p>
-</footer>
+      </nav>
+
+      <div class="nav-actions">
+
+        <button class="language-btn" id="languageBtn">
+          EN
+        </button>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-container">
+
+        <div class="hero-content reveal">
+
+          <div class="hero-kicker">
+
+            <span class="ar">أكاديمية تياترو الصعيد</span>
+            <span class="en">Teatro Alsaeed Academy</span>
+
+          </div>
+
+          <h1>
+
+            <span class="ar">
+              نصنع الفنان<br>
+              قبل العرض.
+            </span>
+
+            <span class="en">
+              We Build<br>
+              the Artist.
+            </span>
+
+          </h1>
+
+          <p class="hero-description">
+
+            <span class="ar">
+              مساحة للتعلم والتجريب واكتشاف الإمكانيات الفنية،
+              حيث تتحول الموهبة إلى معرفة، والمعرفة إلى ممارسة،
+              والممارسة إلى تجربة حقيقية.
+            </span>
+
+            <span class="en">
+              A space for learning, experimentation and artistic
+              discovery — where talent becomes knowledge,
+              knowledge becomes practice, and practice becomes
+              real experience.
+            </span>
+
+          </p>
+
+          <div class="hero-buttons">
+
+            <a href="#academy" class="btn btn-primary">
+
+              <span class="ar">اكتشف الأكاديمية</span>
+              <span class="en">Discover the Academy</span>
+
+            </a>
+
+            <a href="contact.html" class="btn btn-outline">
+
+              <span class="ar">تواصل معنا</span>
+              <span class="en">Contact Us</span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         INTRO
+    ========================== -->
+
+    <section class="intro" id="academy">
+
+      <div class="container">
+
+        <div class="intro-grid">
+
+          <div class="intro-text reveal">
+
+            <span class="section-label">
+
+              <span class="ar">منصة للتعلم</span>
+              <span class="en">A Learning Platform</span>
+
+            </span>
+
+            <h2>
+
+              <span class="ar">
+                من الموهبة إلى
+                <span>الممارسة.</span>
+              </span>
+
+              <span class="en">
+                From Talent to
+                <span>Practice.</span>
+              </span>
+
+            </h2>
+
+            <p>
+
+              <span class="ar">
+                أكاديمية تياترو الصعيد هي أحد المسارات الأساسية
+                التي تعمل من خلالها تياترو الصعيد على تطوير
+                قدرات الشباب في الفنون الأدائية.
+              </span>
+
+              <span class="en">
+                Teatro Alsaeed Academy is one of the key paths
+                through which Teatro Alsaeed develops the
+                abilities of young people in the performing arts.
+              </span>
+
+            </p>
+
+            <p>
+
+              <span class="ar">
+                تقوم الأكاديمية على التعلم من خلال الممارسة،
+                والعمل الجماعي، والتجريب، وخوض التجربة الفنية
+                داخل بيئة حقيقية.
+              </span>
+
+              <span class="en">
+                The Academy is built around learning through
+                practice, teamwork, experimentation and real
+                artistic experience.
+              </span>
+
+            </p>
+
+            <p>
+
+              <span class="ar">
+                وحتى الآن، تخرجت من الأكاديمية
+                <strong>23 دفعة</strong>، في رحلة مستمرة
+                لصناعة أجيال جديدة من الفنانين في صعيد مصر.
+              </span>
+
+              <span class="en">
+                To date, <strong>23 groups</strong> have graduated
+                from the Academy, contributing to an ongoing
+                journey of developing new generations of artists
+                in Upper Egypt.
+              </span>
+
+            </p>
+
+          </div>
+
+
+          <div class="intro-visual reveal">
+
+            <img
+              src="images/academy.jpg"
+              alt="Teatro Alsaeed Academy"
+              loading="lazy"
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         STATS
+    ========================== -->
+
+    <section class="stats-section">
+
+      <div class="container">
+
+        <div class="stats-grid">
+
+          <div class="stat reveal">
+
+            <div class="stat-number">
+              23+
+            </div>
+
+            <div class="stat-title">
+
+              <span class="ar">دفعة تخرجت</span>
+              <span class="en">Graduated Groups</span>
+
+            </div>
+
+            <div class="stat-description">
+
+              <span class="ar">
+                أجيال خاضت تجربة الأكاديمية وتخرجت منها.
+              </span>
+
+              <span class="en">
+                Generations that completed the Academy experience.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="stat reveal">
+
+            <div class="stat-number">
+              01
+            </div>
+
+            <div class="stat-title">
+
+              <span class="ar">مساحة للتجريب</span>
+              <span class="en">Space for Experimentation</span>
+
+            </div>
+
+            <div class="stat-description">
+
+              <span class="ar">
+                بيئة تتيح التعلم من خلال الممارسة والتجربة.
+              </span>
+
+              <span class="en">
+                An environment for learning through practice
+                and experimentation.
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="stat reveal">
+
+            <div class="stat-number">
+              ∞
+            </div>
+
+            <div class="stat-title">
+
+              <span class="ar">إمكانيات بلا حدود</span>
+              <span class="en">Endless Possibilities</span>
+
+            </div>
+
+            <div class="stat-description">
+
+              <span class="ar">
+                لأن كل فنان يبدأ من خطوة.
+              </span>
+
+              <span class="en">
+                Because every artist starts with one step.
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         APPROACH
+    ========================== -->
+
+    <section class="approach">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+
+          <span class="section-label">
+
+            <span class="ar">منهج الأكاديمية</span>
+            <span class="en">Our Approach</span>
+
+          </span>
+
+          <h2 class="section-title">
+
+            <span class="ar">
+              نتعلم من خلال التجربة.
+            </span>
+
+            <span class="en">
+              We Learn Through Experience.
+            </span>
+
+          </h2>
+
+          <p class="section-description">
+
+            <span class="ar">
+              الأكاديمية ليست مجرد مساحة لتلقي المعلومات،
+              بل تجربة عملية تضع المتدرب في قلب العملية الفنية.
+            </span>
+
+            <span class="en">
+              The Academy is not simply a place to receive
+              information. It is a practical experience that
+              places participants at the heart of the artistic process.
+            </span>
+
+          </p>
+
+        </div>
+
+
+        <div class="approach-grid">
+
+          <article class="approach-card reveal">
+
+            <div class="approach-number">
+              01
+            </div>
+
+            <h3>
+
+              <span class="ar">التجريب</span>
+              <span class="en">Experimentation</span>
+
+            </h3>
+
+            <p>
+
+              <span class="ar">
+                مساحة تسمح للفنان باكتشاف أدواته وقدراته
+                من خلال التجربة والمحاولة.
+              </span>
+
+              <span class="en">
+                A space where artists can discover their tools
+                and abilities through experimentation.
+              </span>
+
+            </p>
+
+          </article>
+
+
+          <article class="approach-card reveal">
+
+            <div class="approach-number">
+              02
+            </div>
+
+            <h3>
+
+              <span class="ar">الممارسة</span>
+              <span class="en">Practice</span>
+
+            </h3>
+
+            <p>
+
+              <span class="ar">
+                تحويل المعرفة النظرية إلى ممارسة فعلية
+                داخل العملية الفنية.
+              </span>
+
+              <span class="en">
+                Turning knowledge into practical experience
+                within the artistic process.
+              </span>
+
+            </p>
+
+          </article>
+
+
+          <article class="approach-card reveal">
+
+            <div class="approach-number">
+              03
+            </div>
+
+            <h3>
+
+              <span class="ar">العمل الجماعي</span>
+              <span class="en">Collaboration</span>
+
+            </h3>
+
+            <p>
+
+              <span class="ar">
+                الإبداع المسرحي يبدأ من القدرة على العمل
+                مع الآخرين وبناء تجربة مشتركة.
+              </span>
+
+              <span class="en">
+                Theatre begins with the ability to work
+                with others and build a shared experience.
+              </span>
+
+            </p>
+
+          </article>
+
+
+          <article class="approach-card reveal">
+
+            <div class="approach-number">
+              04
+            </div>
+
+            <h3>
+
+              <span class="ar">التجربة الحقيقية</span>
+              <span class="en">Real Experience</span>
+
+            </h3>
+
+            <p>
+
+              <span class="ar">
+                الانتقال من التدريب إلى مواجهة الجمهور
+                وصناعة تجربة فنية حقيقية.
+              </span>
+
+              <span class="en">
+                Moving from training to facing an audience
+                and creating a real artistic experience.
+              </span>
+
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUOTE
+    ========================== -->
+
+    <section class="quote-section">
+
+      <div class="container">
+
+        <div class="quote-mark">
+          “
+        </div>
+
+        <div class="quote-text reveal">
+
+          <span class="ar">
+            الفن لا يُدرّس فقط...
+            <br>
+            الفن يُعاش.
+          </span>
+
+          <span class="en">
+            Art is not only taught...
+            <br>
+            Art is lived.
+          </span>
+
+        </div>
+
+        <div class="quote-source">
+
+          <span class="ar">
+            أكاديمية تياترو الصعيد
+          </span>
+
+          <span class="en">
+            Teatro Alsaeed Academy
+          </span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CTA
+    ========================== -->
+
+    <section class="cta">
+
+      <div class="container">
+
+        <div class="cta-box reveal">
+
+          <div class="cta-content">
+
+            <h2>
+
+              <span class="ar">
+                مستعد تبدأ رحلتك؟
+              </span>
+
+              <span class="en">
+                Ready to Start Your Journey?
+              </span>
+
+            </h2>
+
+            <p>
+
+              <span class="ar">
+                تابع أخبار الأكاديمية وتياترو الصعيد،
+                وتواصل معنا لمعرفة الفرص والأنشطة القادمة.
+              </span>
+
+              <span class="en">
+                Follow Teatro Alsaeed and stay connected
+                to upcoming opportunities and activities.
+              </span>
+
+            </p>
+
+          </div>
+
+          <div class="cta-action">
+
+            <a href="contact.html" class="btn btn-primary">
+
+              <span class="ar">تواصل معنا</span>
+              <span class="en">Contact Us</span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-about">
+
+          <img
+            src="logo.png"
+            alt="Teatro Alsaeed"
+            class="footer-logo"
+          >
+
+          <p>
+
+            <span class="ar">
+              تياترو الصعيد مؤسسة ثقافية مستقلة تعمل على
+              إحياء وتطوير الفنون الأدائية في صعيد مصر،
+              وخلق مساحات آمنة للتعبير وصناعة الفن.
+            </span>
+
+            <span class="en">
+              Teatro Alsaeed is an independent cultural
+              institution working to revive and develop
+              performing arts in Upper Egypt and create
+              safe spaces for artistic expression.
+            </span>
+
+          </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+
+            <span class="ar">روابط سريعة</span>
+            <span class="en">Quick Links</span>
+
+          </h4>
+
+          <a href="index.html">
+
+            <span class="ar">الرئيسية</span>
+            <span class="en">Home</span>
+
+          </a>
+
+          <a href="about.html">
+
+            <span class="ar">عنّا</span>
+            <span class="en">About</span>
+
+          </a>
+
+          <a href="productions.html">
+
+            <span class="ar">العروض</span>
+            <span class="en">Productions</span>
+
+          </a>
+
+          <a href="academy.html">
+
+            <span class="ar">الأكاديمية</span>
+            <span class="en">Academy</span>
+
+          </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+          <h4>
+
+            <span class="ar">تواصل</span>
+            <span class="en">Contact</span>
+
+          </h4>
+
+          <a href="contact.html">
+
+            <span class="ar">تواصل معنا</span>
+            <span class="en">Contact Us</span>
+
+          </a>
+
+          <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank">
+            Facebook
+          </a>
+
+          <a href="https://www.instagram.com/teatroalsaeed/" target="_blank">
+            Instagram
+          </a>
+
+          <a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank">
+            YouTube
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="footer-bottom">
+
+        <div>
+          © 2026 Teatro Alsaeed. All Rights Reserved.
+        </div>
+
+        <div>
+
+          <span class="ar">
+            إحياء وتطوير الفنون
+          </span>
+
+          <span class="en">
+            Reviving & Developing Performing Arts
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* =========================
+       LANGUAGE
+    ========================== */
+
+    const languageBtn =
+      document.getElementById("languageBtn");
+
+    function setLanguage(lang) {
+
+      if (lang === "en") {
+
+        document.body.classList.add("en");
+        document.documentElement.lang = "en";
+        document.documentElement.dir = "ltr";
+
+        languageBtn.textContent = "AR";
+
+        localStorage.setItem(
+          "teatro-language",
+          "en"
+        );
+
+      } else {
+
+        document.body.classList.remove("en");
+        document.documentElement.lang = "ar";
+        document.documentElement.dir = "rtl";
+
+        languageBtn.textContent = "EN";
+
+        localStorage.setItem(
+          "teatro-language",
+          "ar"
+        );
+      }
+    }
+
+
+    const savedLanguage =
+      localStorage.getItem("teatro-language") || "ar";
+
+    setLanguage(savedLanguage);
+
+
+    languageBtn.addEventListener(
+      "click",
+      () => {
+
+        const current =
+          document.body.classList.contains("en")
+            ? "en"
+            : "ar";
+
+        setLanguage(
+          current === "en"
+            ? "ar"
+            : "en"
+        );
+
+      }
+    );
+
+
+    /* =========================
+       MOBILE MENU
+    ========================== */
+
+    const menuToggle =
+      document.getElementById("menuToggle");
+
+    const navLinks =
+      document.getElementById("navLinks");
+
+
+    menuToggle.addEventListener(
+      "click",
+      () => {
+
+        menuToggle.classList.toggle("open");
+        navLinks.classList.toggle("open");
+
+      }
+    );
+
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(link => {
+
+        link.addEventListener(
+          "click",
+          () => {
+
+            menuToggle.classList.remove("open");
+            navLinks.classList.remove("open");
+
+          }
+        );
+
+      });
+
+
+    /* =========================
+       REVEAL
+    ========================== */
+
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+
+    const revealObserver =
+      new IntersectionObserver(
+        entries => {
+
+          entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+              entry.target.classList.add("visible");
+
+              revealObserver.unobserve(
+                entry.target
+              );
+
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+
+    revealElements.forEach(
+      element => revealObserver.observe(element)
+    );
+
+  </script>
 
 </body>
 </html>
