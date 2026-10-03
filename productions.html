@@ -1,2588 +1,1422 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>عروض الفرقة | تياترو الصعيد</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
 
-/* =========================
-   ROOT
-========================= */
-
 :root{
-
-    --accent:#2bb3b1;
-    --accent-light:#8ce5df;
-
-    --black:#070808;
-    --dark:#0d0f10;
-    --dark2:#151718;
-
-    --white:#fff;
-
-    --text:#eeeeee;
-    --muted:#92999b;
-
-    --line:rgba(255,255,255,.10);
-
+--accent:#2bb3b1;
+--black:#070808;
+--dark:#101212;
+--text:#eee;
+--muted:#92999b;
 }
 
-
-/* =========================
-   RESET
-========================= */
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-
-    background:var(--black);
-
-    color:var(--text);
-
-    font-family:'Cairo',sans-serif;
-
-    line-height:1.8;
-
-    overflow-x:hidden;
-
+background:var(--black);
+color:var(--text);
+font-family:Cairo,sans-serif;
+line-height:1.8;
+overflow-x:hidden;
 }
 
 body.en{
-    font-family:'Inter',sans-serif;
-    direction:ltr;
+font-family:Inter,sans-serif;
+direction:ltr;
 }
 
 a{
-    color:inherit;
-    text-decoration:none;
+color:inherit;
+text-decoration:none;
 }
-
-button,
-input{
-    font-family:inherit;
-}
-
-
-/* =========================
-   LANGUAGE
-========================= */
 
 .en{
-    display:none!important;
+display:none!important;
 }
 
 body.en .ar{
-    display:none!important;
+display:none!important;
 }
 
 body.en .en{
-    display:block!important;
+display:block!important;
 }
 
+img{
+display:block;
+max-width:100%;
+}
 
-/* =========================
-   NAVBAR
-========================= */
+/* NAV */
 
 .navbar{
+height:78px;
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index:1000;
+background:rgba(255,255,255,.97);
+backdrop-filter:blur(15px);
+border-bottom:1px solid #ddd;
+}
 
-    height:78px;
-
-    position:fixed;
-
-    top:0;
-    left:0;
-    right:0;
-
-    z-index:1000;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    padding:0 5%;
-
-    background:rgba(255,255,255,.97);
-
-    backdrop-filter:blur(18px);
-
-    border-bottom:1px solid rgba(0,0,0,.08);
-
+.nav{
+height:100%;
+max-width:1300px;
+margin:auto;
+padding:0 25px;
+display:flex;
+align-items:center;
+gap:25px;
 }
 
 .logo{
-
-    height:50px;
-
-    width:auto;
-
-    object-fit:contain;
-
+width:58px;
+height:58px;
+object-fit:contain;
 }
 
 .nav-links{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:24px;
-
-    font-size:14px;
-
-    font-weight:600;
-
+margin-right:auto;
+display:flex;
+align-items:center;
+gap:22px;
 }
 
 .nav-links a{
-
-    position:relative;
-
-    color:#111;
-
-    white-space:nowrap;
-
+color:#111;
+font-size:13px;
+font-weight:700;
+white-space:nowrap;
 }
 
-.nav-links a::after{
-
-    content:"";
-
-    position:absolute;
-
-    right:0;
-
-    bottom:-7px;
-
-    width:0;
-
-    height:2px;
-
-    background:var(--accent);
-
-    transition:.3s;
-
-}
-
-.nav-links a:hover::after{
-
-    width:100%;
-
+.nav-links a:hover{
+color:var(--accent);
 }
 
 .lang-btn{
-
-    border:1px solid #ccc;
-
-    background:#fff;
-
-    color:#111;
-
-    border-radius:30px;
-
-    padding:7px 15px;
-
-    cursor:pointer;
-
-    font-weight:800;
-
-    transition:.3s;
-
-}
-
-.lang-btn:hover{
-
-    color:var(--accent);
-
-    border-color:var(--accent);
-
+border:1px solid #ccc;
+background:#fff;
+border-radius:50px;
+padding:7px 15px;
+font-weight:800;
+cursor:pointer;
 }
 
 .menu-btn{
-
-    display:none;
-
-    border:0;
-
-    background:none;
-
-    color:#111;
-
-    font-size:28px;
-
-    cursor:pointer;
-
+display:none;
+border:0;
+background:none;
+font-size:28px;
+cursor:pointer;
+color:#111;
 }
 
-
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
-
-    position:relative;
-
-    min-height:78vh;
-
-    margin-top:78px;
-
-    display:flex;
-
-    align-items:flex-end;
-
-    overflow:hidden;
-
+margin-top:78px;
+min-height:76vh;
+position:relative;
+display:flex;
+align-items:flex-end;
+overflow:hidden;
 }
 
 .hero-bg{
+position:absolute;
+inset:0;
 
-    position:absolute;
+background:
+linear-gradient(
+90deg,
+rgba(0,0,0,.88),
+rgba(0,0,0,.25)
+),
+linear-gradient(
+0deg,
+rgba(0,0,0,.92),
+transparent 60%
+),
+url("images/قبل منتصف الليل.jpg") center/cover no-repeat;
 
-    inset:0;
-
-    background:
-
-        linear-gradient(
-            90deg,
-            rgba(0,0,0,.88),
-            rgba(0,0,0,.30)
-        ),
-
-        linear-gradient(
-            0deg,
-            rgba(0,0,0,.90),
-            transparent 60%
-        ),
-
-        url("images/الموجوعة.jpg")
-        center/cover no-repeat;
-
-    transform:scale(1.03);
-
-    filter:saturate(.75);
-
-}
-
-.hero-bg::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-
-        radial-gradient(
-            circle at 75% 35%,
-            rgba(43,179,177,.15),
-            transparent 30%
-        );
-
+transform:scale(1.02);
 }
 
 .hero-content{
-
-    position:relative;
-
-    z-index:2;
-
-    width:100%;
-
-    max-width:1300px;
-
-    margin:auto;
-
-    padding:100px 5% 85px;
-
+position:relative;
+z-index:2;
+width:100%;
+max-width:1300px;
+margin:auto;
+padding:90px 5%;
 }
 
 .eyebrow{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    margin-bottom:18px;
-
-    color:var(--accent-light);
-
-    font-size:12px;
-
-    font-weight:800;
-
-    letter-spacing:2px;
-
-}
-
-.eyebrow::before{
-
-    content:"";
-
-    width:42px;
-
-    height:2px;
-
-    background:var(--accent);
-
+color:#8ce5df;
+font-size:12px;
+font-weight:800;
+letter-spacing:2px;
 }
 
 .hero h1{
-
-    font-size:clamp(48px,7vw,92px);
-
-    line-height:1.05;
-
-    font-weight:900;
-
-    letter-spacing:-3px;
-
+font-size:clamp(45px,7vw,90px);
+line-height:1.05;
+font-weight:900;
+margin:15px 0;
 }
 
 .hero-description{
-
-    max-width:700px;
-
-    margin-top:25px;
-
-    color:#d2d6d7;
-
-    font-size:16px;
-
-    line-height:2;
-
+max-width:700px;
+color:#d0d4d5;
+font-size:16px;
 }
 
 .hero-stats{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:45px;
-
-    margin-top:38px;
-
+display:flex;
+gap:45px;
+margin-top:35px;
+flex-wrap:wrap;
 }
 
-.hero-stat strong{
-
-    display:block;
-
-    font-family:Inter,sans-serif;
-
-    font-size:34px;
-
-    line-height:1;
-
+.stat strong{
+display:block;
+font:900 34px/1 Inter;
 }
 
-.hero-stat span{
-
-    display:block;
-
-    margin-top:7px;
-
-    color:#9ba1a3;
-
-    font-size:11px;
-
+.stat span{
+display:block;
+font-size:11px;
+color:#92999b;
+margin-top:7px;
 }
 
+/* SECTION */
 
-/* =========================
-   SECTION
-========================= */
-
-.productions{
-
-    position:relative;
-
-    padding:85px 5% 110px;
-
-    background:#090a0a;
-
+.section{
+padding:85px 5% 110px;
+background:#090a0a;
 }
 
-.section-container{
-
-    position:relative;
-
-    max-width:1300px;
-
-    margin:auto;
-
+.container{
+max-width:1300px;
+margin:auto;
 }
 
-.section-header{
-
-    display:flex;
-
-    align-items:flex-end;
-
-    justify-content:space-between;
-
-    gap:30px;
-
-    margin-bottom:35px;
-
+.section-head{
+display:flex;
+align-items:flex-end;
+justify-content:space-between;
+gap:25px;
+margin-bottom:35px;
 }
 
-.section-title h2{
-
-    font-size:38px;
-
-    font-weight:900;
-
-    line-height:1.2;
-
+.kicker{
+color:var(--accent);
+font-size:12px;
+font-weight:800;
+letter-spacing:1px;
 }
 
-.section-title p{
-
-    margin-top:8px;
-
-    color:var(--muted);
-
-    font-size:13px;
-
+.section-head h2{
+font-size:38px;
+font-weight:900;
+line-height:1.2;
 }
 
-.total{
-
-    padding:8px 16px;
-
-    border:1px solid var(--line);
-
-    border-radius:50px;
-
-    background:rgba(255,255,255,.03);
-
-    color:#aaa;
-
-    font-size:12px;
-
-    white-space:nowrap;
-
+.section-head p{
+color:#888;
+font-size:13px;
+margin-top:5px;
 }
 
-.total strong{
-
-    margin-right:5px;
-
-    color:var(--accent);
-
-    font-family:Inter,sans-serif;
-
-    font-size:18px;
-
+.counter{
+border:1px solid rgba(255,255,255,.1);
+border-radius:50px;
+padding:7px 15px;
+font-size:12px;
+white-space:nowrap;
 }
 
+.counter strong{
+font:800 18px Inter;
+color:var(--accent);
+}
 
-/* =========================
-   SEARCH
-========================= */
+/* SEARCH */
 
 .search-wrap{
-
-    margin-bottom:35px;
-
+margin-bottom:35px;
 }
 
 .search{
-
-    width:100%;
-
-    max-width:430px;
-
-    height:50px;
-
-    padding:0 18px;
-
-    border:1px solid var(--line);
-
-    outline:none;
-
-    border-radius:3px;
-
-    background:#121415;
-
-    color:white;
-
-    font-size:13px;
-
-    transition:.3s;
-
+width:100%;
+max-width:430px;
+height:50px;
+padding:0 18px;
+border:1px solid rgba(255,255,255,.1);
+border-radius:4px;
+background:#121415;
+color:#fff;
+font-family:inherit;
+outline:none;
 }
 
 .search::placeholder{
-
-    color:#707779;
-
+color:#666;
 }
 
 .search:focus{
-
-    border-color:var(--accent);
-
-    box-shadow:
-
-        0 0 0 3px
-
-        rgba(43,179,177,.08);
-
+border-color:var(--accent);
 }
 
+/* GRID */
 
-/* =========================
-   GRID
-========================= */
-
-.production-grid{
-
-    display:grid;
-
-    grid-template-columns:
-        repeat(4,1fr);
-
-    gap:25px;
-
+.grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:24px;
 }
 
+/* CARD */
 
-/* =========================
-   CARD
-========================= */
-
-.production-card{
-
-    position:relative;
-
-    background:#111314;
-
-    border:1px solid rgba(255,255,255,.08);
-
-    overflow:hidden;
-
-    cursor:pointer;
-
-    transition:
-
-        transform .45s ease,
-
-        border-color .45s ease,
-
-        box-shadow .45s ease;
-
+.card{
+background:#111314;
+border:1px solid rgba(255,255,255,.08);
+overflow:hidden;
+cursor:pointer;
+transition:.4s;
 }
 
-.production-card:hover{
-
-    transform:translateY(-9px);
-
-    border-color:
-        rgba(43,179,177,.55);
-
-    box-shadow:
-
-        0 25px 60px
-
-        rgba(0,0,0,.45);
-
+.card:hover{
+transform:translateY(-8px);
+border-color:rgba(43,179,177,.5);
+box-shadow:0 25px 60px rgba(0,0,0,.45);
 }
-
-
-/* =========================
-   POSTER
-========================= */
 
 .poster{
-
-    position:relative;
-
-    aspect-ratio:2/3;
-
-    overflow:hidden;
-
-    background:#171919;
-
+position:relative;
+aspect-ratio:2/3;
+overflow:hidden;
+background:#171919;
 }
 
 .poster img{
-
-    width:100%;
-
-    height:100%;
-
-    display:block;
-
-    object-fit:cover;
-
-    transition:
-
-        transform .8s
-        cubic-bezier(.2,.7,.2,1),
-
-        filter .6s ease;
-
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.6s;
 }
 
-.production-card:hover .poster img{
-
-    transform:scale(1.07);
-
-    filter:brightness(.62)
-           saturate(.85);
-
+.card:hover .poster img{
+transform:scale(1.06);
+filter:brightness(.7);
 }
 
-.poster::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-
-        linear-gradient(
-            180deg,
-            rgba(0,0,0,.08),
-            transparent 45%,
-            rgba(0,0,0,.88)
-        );
-
-    pointer-events:none;
-
+.number{
+position:absolute;
+top:12px;
+right:12px;
+z-index:2;
+width:34px;
+height:34px;
+border-radius:50%;
+background:rgba(0,0,0,.75);
+border:1px solid rgba(255,255,255,.3);
+display:grid;
+place-items:center;
+font:800 10px Inter;
 }
 
-
-/* =========================
-   NUMBER
-========================= */
-
-.card-number{
-
-    position:absolute;
-
-    top:14px;
-
-    right:14px;
-
-    z-index:5;
-
-    width:35px;
-
-    height:35px;
-
-    display:grid;
-
-    place-items:center;
-
-    border-radius:50%;
-
-    background:rgba(0,0,0,.72);
-
-    border:1px solid rgba(255,255,255,.25);
-
-    color:#fff;
-
-    font-family:Inter,sans-serif;
-
-    font-size:10px;
-
-    font-weight:800;
-
+.year{
+position:absolute;
+top:12px;
+left:12px;
+z-index:2;
+background:var(--accent);
+padding:3px 9px;
+font:800 10px Inter;
 }
 
-
-/* =========================
-   YEAR
-========================= */
-
-.card-year{
-
-    position:absolute;
-
-    top:14px;
-
-    left:14px;
-
-    z-index:5;
-
-    padding:4px 10px;
-
-    background:var(--accent);
-
-    color:#fff;
-
-    font-family:Inter,sans-serif;
-
-    font-size:10px;
-
-    font-weight:800;
-
-    letter-spacing:1px;
-
+.card-body{
+padding:17px;
 }
 
-
-/* =========================
-   VIEW BUTTON
-========================= */
-
-.poster-action{
-
-    position:absolute;
-
-    left:0;
-    right:0;
-    bottom:0;
-
-    z-index:6;
-
-    display:flex;
-
-    justify-content:center;
-
-    padding:20px;
-
-    opacity:0;
-
-    transform:translateY(10px);
-
-    transition:.4s;
-
+.card h3{
+font-size:18px;
+line-height:1.45;
+font-weight:800;
 }
 
-.production-card:hover .poster-action{
-
-    opacity:1;
-
-    transform:translateY(0);
-
+.card p{
+color:#858b8d;
+font-size:11px;
+line-height:1.8;
+margin-top:7px;
 }
 
-.details-btn{
-
-    padding:10px 18px;
-
-    background:#fff;
-
-    color:#080909;
-
-    font-size:11px;
-
-    font-weight:900;
-
+.meta{
+color:var(--accent);
+font:700 10px Inter;
+margin-top:10px;
 }
 
-
-/* =========================
-   CARD INFO
-========================= */
-
-.card-info{
-
-    padding:18px 17px 20px;
-
-}
-
-.card-info h3{
-
-    font-size:18px;
-
-    line-height:1.45;
-
-    font-weight:800;
-
-}
-
-.card-meta{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:10px;
-
-    margin-top:8px;
-
-    color:#858c8e;
-
-    font-size:10px;
-
-}
-
-.card-type{
-
-    color:var(--accent);
-
-    font-weight:700;
-
-}
-
-.card-info p{
-
-    margin-top:9px;
-
-    color:#858b8d;
-
-    font-size:11px;
-
-    line-height:1.8;
-
-}
-
-
-/* =========================
-   MODAL
-========================= */
+/* MODAL */
 
 .modal{
-
-    position:fixed;
-
-    inset:0;
-
-    z-index:3000;
-
-    display:none;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:25px;
-
-    background:rgba(0,0,0,.94);
-
-    backdrop-filter:blur(15px);
-
+position:fixed;
+inset:0;
+z-index:3000;
+background:rgba(0,0,0,.94);
+display:none;
+align-items:center;
+justify-content:center;
+padding:25px;
 }
 
 .modal.active{
-
-    display:flex;
-
+display:flex;
 }
 
 .modal-box{
-
-    position:relative;
-
-    width:min(1100px,96vw);
-
-    max-height:92vh;
-
-    display:grid;
-
-    grid-template-columns:45% 55%;
-
-    overflow:hidden;
-
-    background:#111314;
-
-    border:1px solid rgba(255,255,255,.12);
-
-    box-shadow:
-
-        0 30px 90px
-
-        rgba(0,0,0,.65);
-
+width:min(1050px,95vw);
+max-height:90vh;
+background:#111;
+border:1px solid rgba(255,255,255,.12);
+display:grid;
+grid-template-columns:45% 55%;
+overflow:hidden;
+position:relative;
 }
 
-.modal-poster{
-
-    min-height:650px;
-
-    background:#050606;
-
+.modal-image{
+background:#050606;
+min-height:600px;
 }
 
-.modal-poster img{
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:contain;
-
-    display:block;
-
+.modal-image img{
+width:100%;
+height:100%;
+object-fit:contain;
 }
 
-.modal-info{
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    padding:55px;
-
+.modal-content{
+padding:55px;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 
-.modal-label{
-
-    color:var(--accent);
-
-    font-family:Inter,sans-serif;
-
-    font-size:10px;
-
-    font-weight:800;
-
-    letter-spacing:2px;
-
-    margin-bottom:18px;
-
+.modal-content h2{
+font-size:clamp(32px,4vw,58px);
+line-height:1.15;
 }
 
-.modal-info h2{
-
-    font-size:clamp(32px,4vw,58px);
-
-    line-height:1.15;
-
-    font-weight:900;
-
+.modal-content p{
+color:#aaa;
+margin-top:22px;
+font-size:15px;
+line-height:2;
 }
 
-.modal-info p{
-
-    margin-top:24px;
-
-    color:#aeb4b5;
-
-    font-size:15px;
-
-    line-height:2;
-
+.modal-year{
+display:inline-block;
+align-self:flex-start;
+color:var(--accent);
+font:800 11px Inter;
+letter-spacing:2px;
+margin-bottom:15px;
 }
 
-.modal-meta{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    gap:10px;
-
-    margin-top:25px;
-
+.close{
+position:absolute;
+top:15px;
+left:15px;
+width:42px;
+height:42px;
+border:0;
+border-radius:50%;
+background:#222;
+color:#fff;
+font-size:25px;
+cursor:pointer;
+z-index:5;
 }
 
-.modal-pill{
-
-    padding:7px 13px;
-
-    border:1px solid var(--line);
-
-    color:#ddd;
-
-    font-size:11px;
-
-}
-
-.close-modal{
-
-    position:absolute;
-
-    top:15px;
-
-    left:15px;
-
-    z-index:20;
-
-    width:42px;
-
-    height:42px;
-
-    border:1px solid rgba(255,255,255,.2);
-
-    background:rgba(0,0,0,.7);
-
-    color:#fff;
-
-    font-size:26px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.close-modal:hover{
-
-    background:var(--accent);
-
-    color:#000;
-
-}
-
-
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
-
-    padding:50px 5%;
-
-    text-align:center;
-
-    background:#050606;
-
-    border-top:1px solid rgba(255,255,255,.08);
-
+background:#111;
+padding:45px 20px 25px;
+text-align:center;
 }
 
 footer img{
-
-    height:48px;
-
-    margin-bottom:15px;
-
+width:70px;
+margin:0 auto 15px;
 }
 
 footer p{
+color:#888;
+font-size:13px;
+}
 
-    color:#777;
+/* MOBILE */
 
-    font-size:12px;
+@media(max-width:1000px){
+
+.grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.nav-links{
+gap:14px;
+}
 
 }
 
+@media(max-width:800px){
 
-/* =========================
-   MOBILE
-========================= */
+.navbar{
+height:70px;
+}
 
-@media(max-width:1100px){
+.nav{
+padding:0 18px;
+}
 
-    .production-grid{
+.logo{
+width:50px;
+height:50px;
+}
 
-        grid-template-columns:
-            repeat(3,1fr);
+.menu-btn{
+display:block;
+}
 
-    }
+.nav-links{
+display:none;
+position:absolute;
+top:70px;
+right:0;
+left:0;
+background:#fff;
+padding:15px 25px 25px;
+flex-direction:column;
+align-items:stretch;
+gap:0;
+}
 
-    .nav-links{
+.nav-links.open{
+display:flex;
+}
 
-        gap:15px;
+.nav-links a{
+padding:12px 0;
+border-bottom:1px solid #eee;
+}
 
-        font-size:13px;
+.lang-btn{
+margin-top:15px;
+}
 
-    }
+.hero{
+margin-top:70px;
+min-height:65vh;
+}
+
+.grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.modal-box{
+grid-template-columns:1fr;
+max-height:94vh;
+overflow:auto;
+}
+
+.modal-image{
+height:50vh;
+min-height:0;
+}
+
+.modal-content{
+padding:30px;
+}
 
 }
 
+@media(max-width:500px){
 
-@media(max-width:760px){
-
-    .navbar{
-
-        height:70px;
-
-        padding:0 18px;
-
-    }
-
-    .logo{
-
-        height:44px;
-
-    }
-
-    .menu-btn{
-
-        display:block;
-
-    }
-
-    .nav-links{
-
-        position:absolute;
-
-        top:70px;
-
-        right:0;
-        left:0;
-
-        display:none;
-
-        flex-direction:column;
-
-        align-items:stretch;
-
-        gap:0;
-
-        padding:15px 22px 22px;
-
-        background:#fff;
-
-        box-shadow:
-            0 20px 35px
-            rgba(0,0,0,.18);
-
-    }
-
-    .nav-links.open{
-
-        display:flex;
-
-    }
-
-    .nav-links a{
-
-        padding:12px 0;
-
-        border-bottom:
-            1px solid
-            rgba(0,0,0,.08);
-
-    }
-
-    .nav-links a::after{
-
-        display:none;
-
-    }
-
-    .lang-btn{
-
-        width:100%;
-
-        margin-top:13px;
-
-    }
-
-    .hero{
-
-        margin-top:70px;
-
-        min-height:72vh;
-
-    }
-
-    .hero-content{
-
-        padding:
-            80px
-            20px
-            55px;
-
-    }
-
-    .hero h1{
-
-        font-size:48px;
-
-        letter-spacing:-1px;
-
-    }
-
-    .hero-description{
-
-        font-size:14px;
-
-    }
-
-    .hero-stats{
-
-        gap:25px;
-
-    }
-
-    .hero-stat strong{
-
-        font-size:28px;
-
-    }
-
-    .productions{
-
-        padding:
-            60px
-            18px
-            80px;
-
-    }
-
-    .section-header{
-
-        flex-direction:column;
-
-        align-items:flex-start;
-
-    }
-
-    .section-title h2{
-
-        font-size:30px;
-
-    }
-
-    .production-grid{
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-        gap:14px;
-
-    }
-
-    .card-info{
-
-        padding:13px;
-
-    }
-
-    .card-info h3{
-
-        font-size:15px;
-
-    }
-
-    .card-info p{
-
-        font-size:10px;
-
-    }
-
-    .modal{
-
-        padding:12px;
-
-    }
-
-    .modal-box{
-
-        grid-template-columns:1fr;
-
-        max-height:95vh;
-
-        overflow-y:auto;
-
-    }
-
-    .modal-poster{
-
-        min-height:0;
-
-        height:52vh;
-
-    }
-
-    .modal-info{
-
-        padding:30px;
-
-    }
-
+.hero h1{
+font-size:43px;
 }
 
+.hero-content{
+padding:60px 20px;
+}
 
-@media(max-width:430px){
+.section{
+padding:65px 18px;
+}
 
-    .production-grid{
+.section-head{
+align-items:flex-start;
+flex-direction:column;
+}
 
-        grid-template-columns:1fr;
+.grid{
+grid-template-columns:1fr;
+}
 
-    }
-
-    .poster{
-
-        aspect-ratio:2/2.9;
-
-    }
-
-    .hero h1{
-
-        font-size:42px;
-
-    }
-
-    .hero{
-
-        min-height:68vh;
-
-    }
-
-    .modal-poster{
-
-        height:46vh;
-
-    }
+.hero-stats{
+gap:25px;
+}
 
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- =========================
-     NAVBAR
-========================= -->
-
 <header class="navbar">
 
-    <a href="index.html">
+<div class="nav">
 
-        <img
-            src="logo.png"
-            class="logo"
-            alt="Teatro Alsaeed">
+<a href="index.html">
+<img src="logo.png" class="logo" alt="Teatro Alsaeed">
+</a>
 
-    </a>
+<nav class="nav-links" id="navLinks">
 
+<a href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
+<a href="about.html"><span class="ar">عنّا</span><span class="en">About</span></a>
+<a href="troupe.html"><span class="ar">الفرقة</span><span class="en">Troupe</span></a>
+<a href="productions.html"><span class="ar">العروض</span><span class="en">Productions</span></a>
+<a href="academy.html"><span class="ar">الأكاديمية</span><span class="en">Academy</span></a>
+<a href="festival.html"><span class="ar">المهرجان</span><span class="en">Festival</span></a>
+<a href="sahara.html"><span class="ar">صحارة</span><span class="en">Sahara</span></a>
+<a href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
 
-    <button
-        class="menu-btn"
-        id="menuBtn">
+<button class="lang-btn" id="langBtn">EN</button>
 
-        ☰
+</nav>
 
-    </button>
+<button class="menu-btn" id="menuBtn">☰</button>
 
-
-    <nav
-        class="nav-links"
-        id="navLinks">
-
-
-        <a href="index.html">
-
-            <span class="ar">الرئيسية</span>
-            <span class="en">Home</span>
-
-        </a>
-
-
-        <a href="about.html">
-
-            <span class="ar">عنّا</span>
-            <span class="en">About</span>
-
-        </a>
-
-
-        <a href="troupe.html">
-
-            <span class="ar">الفرقة</span>
-            <span class="en">Troupe</span>
-
-        </a>
-
-
-        <a href="productions.html">
-
-            <span class="ar">العروض</span>
-            <span class="en">Productions</span>
-
-        </a>
-
-
-        <a href="academy.html">
-
-            <span class="ar">الأكاديمية</span>
-            <span class="en">Academy</span>
-
-        </a>
-
-
-        <a href="festival.html">
-
-            <span class="ar">المهرجان</span>
-            <span class="en">Festival</span>
-
-        </a>
-
-
-        <a href="sahara.html">
-
-            <span class="ar">صحارة</span>
-            <span class="en">Sahara</span>
-
-        </a>
-
-
-        <a href="contact.html">
-
-            <span class="ar">تواصل</span>
-            <span class="en">Contact</span>
-
-        </a>
-
-
-        <button
-            class="lang-btn"
-            id="langBtn">
-
-            EN
-
-        </button>
-
-
-    </nav>
+</div>
 
 </header>
 
 
-
-<!-- =========================
-     HERO
-========================= -->
-
 <section class="hero">
 
-    <div class="hero-bg"></div>
+<div class="hero-bg"></div>
 
+<div class="hero-content">
 
-    <div class="hero-content">
+<div class="eyebrow ar">من أرشيف الفرقة</div>
+<div class="eyebrow en">FROM THE TROUPE ARCHIVE</div>
 
+<h1 class="ar">
+عروض صنعت<br>
+حكاية تياترو الصعيد
+</h1>
 
-        <div class="eyebrow">
+<h1 class="en">
+Productions that shaped<br>
+the Teatro Alsaeed story
+</h1>
 
-            <span class="ar">
-                أرشيف العروض المسرحية
-            </span>
+<div class="hero-description">
 
-            <span class="en">
-                THEATRE PRODUCTION ARCHIVE
-            </span>
+<span class="ar">
+أرشيف من التجارب المسرحية التي حملت روح الفرقة، من الحكايات الإنسانية إلى التجريب والفرجة الشعبية.
+</span>
 
-        </div>
+<span class="en">
+An archive of theatrical experiences shaped by the troupe's spirit — from human stories to experimentation and popular performance.
+</span>
 
+</div>
 
-        <h1>
+<div class="hero-stats">
 
-            <span class="ar">
-                عروض الفرقة
-            </span>
+<div class="stat">
+<strong>25</strong>
+<span class="ar">إنتاجًا مسرحيًا</span>
+<span class="en">Productions</span>
+</div>
 
-            <span class="en">
-                Troupe Productions
-            </span>
+<div class="stat">
+<strong>2014</strong>
+<span class="ar">بداية الأرشيف</span>
+<span class="en">Archive Begins</span>
+</div>
 
-        </h1>
+<div class="stat">
+<strong>2026</strong>
+<span class="ar">أحدث إنتاج</span>
+<span class="en">Latest Production</span>
+</div>
 
-
-        <div class="hero-description">
-
-            <span class="ar">
-                أرشيف من العروض المسرحية التي قدمتها فرقة تياترو الصعيد
-                عبر سنوات من العمل والإنتاج والتجريب المسرحي.
-            </span>
-
-            <span class="en">
-                An archive of theatrical productions created by Teatro Alsaeed
-                through years of artistic work, production and experimentation.
-            </span>
-
-        </div>
-
-
-        <div class="hero-stats">
-
-
-            <div class="hero-stat">
-
-                <strong id="heroTotal">
-                    25
-                </strong>
-
-                <span class="ar">
-                    عرضًا
-                </span>
-
-                <span class="en">
-                    Productions
-                </span>
-
-            </div>
-
-
-            <div class="hero-stat">
-
-                <strong>
-                    2014
-                </strong>
-
-                <span class="ar">
-                    أقدم إنتاج في الأرشيف
-                </span>
-
-                <span class="en">
-                    Earliest Production
-                </span>
-
-            </div>
-
-
-            <div class="hero-stat">
-
-                <strong>
-                    2026
-                </strong>
-
-                <span class="ar">
-                    أحدث إنتاج في الأرشيف
-                </span>
-
-                <span class="en">
-                    Latest Production
-                </span>
-
-            </div>
-
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-
-<!-- =========================
-     PRODUCTIONS
-========================= -->
-
-<section class="productions">
-
-<div class="section-container">
-
-
-    <div class="section-header">
-
-
-        <div class="section-title">
-
-            <h2>
-
-                <span class="ar">
-                    أرشيف العروض
-                </span>
-
-                <span class="en">
-                    Production Archive
-                </span>
-
-            </h2>
-
-
-            <p>
-
-                <span class="ar">
-                    من 2014 إلى اليوم
-                </span>
-
-                <span class="en">
-                    From 2014 to the present
-                </span>
-
-            </p>
-
-        </div>
-
-
-        <div class="total">
-
-            <span class="ar">
-                إجمالي العروض
-            </span>
-
-            <span class="en">
-                Total Productions
-            </span>
-
-            <strong id="totalCount">
-                25
-            </strong>
-
-        </div>
-
-
-    </div>
-
-
-    <div class="search-wrap">
-
-        <input
-            type="text"
-            id="search"
-            class="search"
-            placeholder="ابحث عن عرض..."
-            autocomplete="off">
-
-    </div>
-
-
-    <div
-        class="production-grid"
-        id="productionGrid">
-
-    </div>
-
+</div>
 
 </div>
 
 </section>
 
 
+<section class="section">
 
-<!-- =========================
-     MODAL
-========================= -->
+<div class="container">
 
-<div
-    class="modal"
-    id="modal">
+<div class="section-head">
 
+<div>
 
-    <div class="modal-box">
+<div class="kicker ar">أرشيف العروض</div>
+<div class="kicker en">PRODUCTION ARCHIVE</div>
 
+<h2>
+<span class="ar">كل العروض</span>
+<span class="en">All Productions</span>
+</h2>
 
-        <button
-            class="close-modal"
-            id="closeModal">
+<p class="ar">اضغط على أي عرض لعرض تفاصيله.</p>
+<p class="en">Click any production to explore it.</p>
 
-            ×
+</div>
 
-        </button>
-
-
-        <div class="modal-poster">
-
-            <img
-                id="modalImage"
-                src=""
-                alt="">
-
-        </div>
-
-
-        <div class="modal-info">
-
-
-            <div class="modal-label">
-
-                TEATRO ALSAEED
-                / PRODUCTION ARCHIVE
-
-            </div>
-
-
-            <h2
-                id="modalTitle">
-            </h2>
-
-
-            <div class="modal-meta">
-
-
-                <span
-                    class="modal-pill"
-                    id="modalYear">
-                </span>
-
-
-                <span
-                    class="modal-pill"
-                    id="modalType">
-                </span>
-
-
-            </div>
-
-
-            <p
-                id="modalDescription">
-            </p>
-
-
-        </div>
-
-
-    </div>
+<div class="counter">
+<strong id="count">25</strong>
+<span class="ar"> عرضًا</span>
+<span class="en"> productions</span>
+</div>
 
 </div>
 
 
+<div class="search-wrap">
 
-<!-- =========================
-     FOOTER
-========================= -->
+<input
+type="search"
+id="search"
+class="search"
+placeholder="ابحث عن عرض..."
+>
+
+</div>
+
+
+<div class="grid" id="grid">
+
+
+<!-- 01 -->
+
+<article class="card"
+data-title="الجنوب تحت"
+data-en="South Is Down"
+data-year="2014"
+data-img="images/الجنوب تحت.jpg"
+data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">01</div>
+<div class="year">2014</div>
+<img src="images/الجنوب تحت.jpg" alt="الجنوب تحت" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>الجنوب تحت</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 02 -->
+
+<article class="card"
+data-title="الموجوعة"
+data-en="Al-Mawgoua"
+data-year="2014"
+data-img="images/الموجوعة.jpg"
+data-desc="حكاية إنسانية عن الألم الذي يسكن في الداخل، وعن وجع قد لا يراه أحد لكنه يترك أثره في كل شيء.">
+
+<div class="poster">
+<div class="number">02</div>
+<div class="year">2014</div>
+<img src="images/الموجوعة.jpg" alt="الموجوعة" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>الموجوعة</h3>
+<p>حكاية إنسانية عن الألم الذي يسكن في الداخل.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 03 -->
+
+<article class="card" data-title="ولاد تسعة" data-en="Wlad Tesaa" data-year="2016" data-img="images/ولاد تسعة.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">03</div>
+<div class="year">2016</div>
+<img src="images/ولاد تسعة.jpg" alt="ولاد تسعة" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>ولاد تسعة</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 04 -->
+
+<article class="card" data-title="قهوة زيادة" data-en="Extra Coffee" data-year="2017" data-img="images/قهوة زيادة.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">04</div>
+<div class="year">2017</div>
+<img src="images/قهوة زيادة.jpg" alt="قهوة زيادة" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>قهوة زيادة</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 05 -->
+
+<article class="card" data-title="خشبة" data-en="The Stage" data-year="2017" data-img="images/خشبة.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">05</div>
+<div class="year">2017</div>
+<img src="images/خشبة.jpg" alt="خشبة" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>خشبة</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 06 -->
+
+<article class="card" data-title="يخلق من الشبه" data-en="Yokhlaq Min El-Shebh" data-year="2017" data-img="images/يخلق من الشبه.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">06</div>
+<div class="year">2017</div>
+<img src="images/يخلق من الشبه.jpg" alt="يخلق من الشبه" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>يخلق من الشبه</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 07 -->
+
+<article class="card" data-title="أشتاتاً شلتوت" data-en="Ashtatan Shaltout" data-year="2018" data-img="images/أشتاتاً شلتوت.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">07</div>
+<div class="year">2018</div>
+<img src="images/أشتاتاً شلتوت.jpg" alt="أشتاتاً شلتوت" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>أشتاتاً شلتوت</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 08 -->
+
+<article class="card" data-title="بطن الزير" data-en="Batn El Zeer" data-year="2018" data-img="images/بطن الزير.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">08</div>
+<div class="year">2018</div>
+<img src="images/بطن الزير.jpg" alt="بطن الزير" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>بطن الزير</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 09 -->
+
+<article class="card" data-title="عملة نادرة" data-en="Rare Coin" data-year="2018" data-img="images/عملة نادرة.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">09</div>
+<div class="year">2018</div>
+<img src="images/عملة نادرة.jpg" alt="عملة نادرة" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>عملة نادرة</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 10 -->
+
+<article class="card" data-title="خيبتا" data-en="Hepta" data-year="2018" data-img="images/خيبتا.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">10</div>
+<div class="year">2018</div>
+<img src="images/خيبتا.jpg" alt="خيبتا" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>خيبتا</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 11 -->
+
+<article class="card" data-title="ملك وكتابة" data-en="Malek w Ketaba" data-year="2019" data-img="images/ملك وكتابة.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">11</div>
+<div class="year">2019</div>
+<img src="images/ملك وكتابة.jpg" alt="ملك وكتابة" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>ملك وكتابة</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 12 -->
+
+<article class="card" data-title="فرحة" data-en="Farha" data-year="2019" data-img="images/فرحة.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">12</div>
+<div class="year">2019</div>
+<img src="images/فرحة.jpg" alt="فرحة" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>فرحة</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 13 -->
+
+<article class="card" data-title="فستان فرح" data-en="Wedding Dress" data-year="2019" data-img="images/فستان فرح.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">13</div>
+<div class="year">2019</div>
+<img src="images/فستان فرح.jpg" alt="فستان فرح" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>فستان فرح</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 14 -->
+
+<article class="card" data-title="الكبار" data-en="The Elders" data-year="2019" data-img="images/الكبار.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">14</div>
+<div class="year">2019</div>
+<img src="images/الكبار.jpg" alt="الكبار" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>الكبار</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 15 -->
+
+<article class="card" data-title="المولد" data-en="Al-Mawlid" data-year="2019" data-img="images/المولد.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">15</div>
+<div class="year">2019</div>
+<img src="images/المولد.jpg" alt="المولد" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>المولد</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 16 -->
+
+<article class="card" data-title="حبشي بنات" data-en="Habshi Banat" data-year="2020" data-img="images/حبشي بنات.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">16</div>
+<div class="year">2020</div>
+<img src="images/حبشي بنات.jpg" alt="حبشي بنات" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>حبشي بنات</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 17 -->
+
+<article class="card" data-title="جريمة في فرقة الغرابلي" data-en="A Crime in Al-Gharabli Troupe" data-year="2020" data-img="images/جريمة في فرقة الغرابلي.jpg" data-desc="إنتاج تياترو الصعيد – 2020.">
+
+<div class="poster">
+<div class="number">17</div>
+<div class="year">2020</div>
+<img src="images/جريمة في فرقة الغرابلي.jpg" alt="جريمة في فرقة الغرابلي" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>جريمة في فرقة الغرابلي</h3>
+<p>إنتاج تياترو الصعيد – 2020.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 18 -->
+
+<article class="card" data-title="سوق العبيد" data-en="The Slave Market" data-year="2021" data-img="images/سوق العبيد.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">18</div>
+<div class="year">2021</div>
+<img src="images/سوق العبيد.jpg" alt="سوق العبيد" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>سوق العبيد</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 19 -->
+
+<article class="card" data-title="ليلة عيد ميلاد" data-en="Birthday Night" data-year="2024" data-img="images/ليلة عيد ميلاد.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">19</div>
+<div class="year">2024</div>
+<img src="images/ليلة عيد ميلاد.jpg" alt="ليلة عيد ميلاد" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>ليلة عيد ميلاد</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 20 -->
+
+<article class="card" data-title="خمسة رجال في الطابق العلوي" data-en="Five Men Upstairs" data-year="2024" data-img="images/خمسة رجال في الطابق العلوي.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">20</div>
+<div class="year">2024</div>
+<img src="images/خمسة رجال في الطابق العلوي.jpg" alt="خمسة رجال في الطابق العلوي" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>خمسة رجال في الطابق العلوي</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 21 -->
+
+<article class="card" data-title="سرير لا يصلح للنوم" data-en="A Bed Not Fit for Sleep" data-year="2025" data-img="images/سرير لا يصلح للنوم.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">21</div>
+<div class="year">2025</div>
+<img src="images/سرير لا يصلح للنوم.jpg" alt="سرير لا يصلح للنوم" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>سرير لا يصلح للنوم</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 22 -->
+
+<article class="card" data-title="قابل للنشر" data-en="Publishable" data-year="2025" data-img="images/قابل للنشر.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">22</div>
+<div class="year">2025</div>
+<img src="images/قابل للنشر.jpg" alt="قابل للنشر" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>قابل للنشر</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 23 -->
+
+<article class="card" data-title="بولي آرت" data-en="Poly Art" data-year="2025" data-img="images/بولي آرت.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">23</div>
+<div class="year">2025</div>
+<img src="images/بولي آرت.jpg" alt="بولي آرت" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>بولي آرت</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+<!-- 24 -->
+
+<article class="card" data-title="الجانب المظلم" data-en="The Dark Side" data-year="2026" data-img="images/الجانب المظلم.jpg" data-desc="مشروع تخرج أكاديمية تياترو الصعيد – الدفعة 22.">
+
+<div class="poster">
+<div class="number">24</div>
+<div class="year">2026</div>
+<img src="images/الجانب المظلم.jpg" alt="الجانب المظلم" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>الجانب المظلم</h3>
+<p>مشروع تخرج أكاديمية تياترو الصعيد – الدفعة 22.</p>
+<div class="meta">ACADEMY · GROUP 22</div>
+</div>
+
+</article>
+
+
+<!-- 25 -->
+
+<article class="card" data-title="قبل منتصف الليل" data-en="Before Midnight" data-year="2026" data-img="images/قبل منتصف الليل.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+
+<div class="poster">
+<div class="number">25</div>
+<div class="year">2026</div>
+<img src="images/قبل منتصف الليل.jpg" alt="قبل منتصف الليل" loading="lazy">
+</div>
+
+<div class="card-body">
+<h3>قبل منتصف الليل</h3>
+<p>عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+<div class="meta">THEATRE PRODUCTION</div>
+</div>
+
+</article>
+
+
+</div>
+</div>
+</section>
+
+
+<div class="modal" id="modal">
+
+<div class="modal-box">
+
+<button class="close" id="close">×</button>
+
+<div class="modal-image">
+<img id="modalImg" src="" alt="">
+</div>
+
+<div class="modal-content">
+
+<div class="modal-year" id="modalYear"></div>
+
+<h2 id="modalTitle"></h2>
+
+<p id="modalDesc"></p>
+
+</div>
+
+</div>
+
+</div>
+
 
 <footer>
 
+<img src="logo.png" alt="Teatro Alsaeed">
 
-    <img
-        src="logo.png"
-        alt="Teatro Alsaeed">
-
-
-    <p class="ar">
-
-        تياترو الصعيد — إحياء وتطوير الفنون
-
-    </p>
-
-
-    <p class="en">
-
-        Teatro Alsaeed — Reviving and Developing Performing Arts
-
-    </p>
-
+<p class="ar">تياترو الصعيد — إحياء وتطوير الفنون</p>
+<p class="en">Teatro Alsaeed — Reviving and Developing Performing Arts</p>
 
 </footer>
 
 
-
 <script>
 
+const langBtn=document.getElementById("langBtn");
+const menuBtn=document.getElementById("menuBtn");
+const nav=document.getElementById("navLinks");
 
-/* =====================================================
-   PRODUCTION DATA
-===================================================== */
+const search=document.getElementById("search");
+const cards=[...document.querySelectorAll(".card")];
+const count=document.getElementById("count");
 
-const productions = [
+const modal=document.getElementById("modal");
+const close=document.getElementById("close");
 
-    {
-        title:"الجنوب تحت",
-        en:"South Is Down",
-        year:"2014",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/الجنوب تحت.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
+const modalImg=document.getElementById("modalImg");
+const modalTitle=document.getElementById("modalTitle");
+const modalDesc=document.getElementById("modalDesc");
+const modalYear=document.getElementById("modalYear");
 
-    {
-        title:"الموجوعة",
-        en:"Al-Mawgoua",
-        year:"2014",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/الموجوعة.jpg",
-        description:"حكاية إنسانية عن الألم الذي يسكن في الداخل، وعن وجع قد لا يراه أحد لكنه يترك أثره في كل شيء.",
-        descriptionEn:"A human story about inner pain and the invisible wounds that leave lasting marks."
-    },
 
-    {
-        title:"ولاد تسعة",
-        en:"Wlad Tesaa",
-        year:"2016",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/ولاد تسعة.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
+function setLang(lang){
 
-    {
-        title:"قهوة زيادة",
-        en:"Extra Coffee",
-        year:"2017",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/قهوة زيادة.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
+document.body.classList.toggle("en",lang==="en");
 
-    {
-        title:"خشبة",
-        en:"The Stage",
-        year:"2017",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/خشبة.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
+document.documentElement.lang=lang;
+document.documentElement.dir=lang==="en"?"ltr":"rtl";
 
-    {
-        title:"يخلق من الشبه",
-        en:"Yokhlaq Min El-Shebh",
-        year:"2017",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/يخلق من الشبه.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
+langBtn.textContent=lang==="en"?"AR":"EN";
 
-    {
-        title:"أشتاتاً شلتوت",
-        en:"Ashtatan Shaltout",
-        year:"2018",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/أشتاتاً شلتوت.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
+search.placeholder=
+lang==="en"
+?"Search productions..."
+:"ابحث عن عرض...";
 
-    {
-        title:"بطن الزير",
-        en:"Batn El Zeer",
-        year:"2018",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/بطن الزير.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"عملة نادرة",
-        en:"Rare Coin",
-        year:"2018",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/عملة نادرة.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"خيبتا",
-        en:"Hepta",
-        year:"2018",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/خيبتا.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"ملك وكتابة",
-        en:"Malek w Ketaba",
-        year:"2019",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/ملك وكتابة.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"فرحة",
-        en:"Farha",
-        year:"2019",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/فرحة.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"فستان فرح",
-        en:"Wedding Dress",
-        year:"2019",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/فستان فرح.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"الكبار",
-        en:"The Elders",
-        year:"2019",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/الكبار.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"المولد",
-        en:"Al-Mawlid",
-        year:"2019",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/المولد.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"حبشي بنات",
-        en:"Habshi Banat",
-        year:"2020",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/حبشي بنات.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"جريمة في فرقة الغرابلي",
-        en:"A Crime in Al-Gharabli Troupe",
-        year:"2020",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/جريمة في فرقة الغرابلي.jpg",
-        description:"إنتاج تياترو الصعيد – 2020.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"سوق العبيد",
-        en:"The Slave Market",
-        year:"2021",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/سوق العبيد.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"ليلة عيد ميلاد",
-        en:"Birthday Night",
-        year:"2024",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/ليلة عيد ميلاد.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"خمسة رجال في الطابق العلوي",
-        en:"Five Men Upstairs",
-        year:"2024",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/خمسة رجال في الطابق العلوي.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"سرير لا يصلح للنوم",
-        en:"A Bed Not Fit for Sleep",
-        year:"2025",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/سرير لا يصلح للنوم.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"قابل للنشر",
-        en:"Publishable",
-        year:"2025",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/قابل للنشر.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"بولي آرت",
-        en:"Poly Art",
-        year:"2025",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/بولي آرت.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    },
-
-    {
-        title:"الجانب المظلم",
-        en:"The Dark Side",
-        year:"2026",
-        type:"مشروع تخرج · الدفعة 22",
-        typeEn:"Graduation Project · Group 22",
-        image:"images/الجانب المظلم.jpg",
-        description:"مشروع تخرج أكاديمية تياترو الصعيد – الدفعة 22.",
-        descriptionEn:"Graduation production of Teatro Alsaeed Academy – Group 22."
-    },
-
-    {
-        title:"قبل منتصف الليل",
-        en:"Before Midnight",
-        year:"2026",
-        type:"مسرحية",
-        typeEn:"Theatre Production",
-        image:"images/قبل منتصف الليل.jpg",
-        description:"عرض مسرحي من أرشيف فرقة تياترو الصعيد.",
-        descriptionEn:"A theatrical production from the Teatro Alsaeed archive."
-    }
-
-];
-
-
-/* =====================================================
-   SORT BY YEAR
-===================================================== */
-
-productions.sort(
-    (a,b) =>
-        Number(a.year) -
-        Number(b.year)
-);
-
-
-/* =====================================================
-   ELEMENTS
-===================================================== */
-
-const grid =
-    document.getElementById(
-        "productionGrid"
-    );
-
-const search =
-    document.getElementById(
-        "search"
-    );
-
-const totalCount =
-    document.getElementById(
-        "totalCount"
-    );
-
-const heroTotal =
-    document.getElementById(
-        "heroTotal"
-    );
-
-const modal =
-    document.getElementById(
-        "modal"
-    );
-
-const modalImage =
-    document.getElementById(
-        "modalImage"
-    );
-
-const modalTitle =
-    document.getElementById(
-        "modalTitle"
-    );
-
-const modalDescription =
-    document.getElementById(
-        "modalDescription"
-    );
-
-const modalYear =
-    document.getElementById(
-        "modalYear"
-    );
-
-const modalType =
-    document.getElementById(
-        "modalType"
-    );
-
-const closeModal =
-    document.getElementById(
-        "closeModal"
-    );
-
-const langBtn =
-    document.getElementById(
-        "langBtn"
-    );
-
-const menuBtn =
-    document.getElementById(
-        "menuBtn"
-    );
-
-const navLinks =
-    document.getElementById(
-        "navLinks"
-    );
-
-
-/* =====================================================
-   RENDER
-===================================================== */
-
-function renderProductions(
-    query = ""
-){
-
-    const isEnglish =
-        document.body.classList.contains(
-            "en"
-        );
-
-
-    const filtered =
-        productions.filter(
-            item => {
-
-                const text = (
-
-                    item.title +
-                    " " +
-                    item.en +
-                    " " +
-                    item.year +
-                    " " +
-                    item.type
-
-                ).toLowerCase();
-
-                return text.includes(
-                    query.toLowerCase()
-                );
-
-            }
-        );
-
-
-    totalCount.textContent =
-        filtered.length;
-
-
-    heroTotal.textContent =
-        productions.length;
-
-
-    grid.innerHTML =
-        filtered.map(
-            (item,index) => `
-
-            <article
-                class="production-card"
-                data-index="${productions.indexOf(item)}">
-
-
-                <div class="poster">
-
-
-                    <span class="card-number">
-
-                        ${String(
-                            productions.indexOf(item)+1
-                        ).padStart(2,"0")}
-
-                    </span>
-
-
-                    <span class="card-year">
-
-                        ${item.year}
-
-                    </span>
-
-
-                    <img
-                        src="${item.image}"
-                        alt="${item.title}"
-                        loading="lazy">
-
-
-                    <div class="poster-action">
-
-                        <span class="details-btn">
-
-                            ↗
-
-                            ${
-                                isEnglish
-                                ? "View Details"
-                                : "عرض التفاصيل"
-                            }
-
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-
-                <div class="card-info">
-
-
-                    <h3>
-
-                        ${
-                            isEnglish
-                            ? item.en
-                            : item.title
-                        }
-
-                    </h3>
-
-
-                    <div class="card-meta">
-
-                        <span class="card-type">
-
-                            ${
-                                isEnglish
-                                ? item.typeEn
-                                : item.type
-                            }
-
-                        </span>
-
-
-                        <span>
-
-                            ${item.year}
-
-                        </span>
-
-                    </div>
-
-
-                    <p>
-
-                        ${
-                            isEnglish
-                            ? item.descriptionEn
-                            : item.description
-                        }
-
-                    </p>
-
-
-                </div>
-
-
-            </article>
-
-        `
-        ).join("");
-
-
-    document
-        .querySelectorAll(
-            ".production-card"
-        )
-        .forEach(card => {
-
-            card.addEventListener(
-                "click",
-                () => {
-
-                    openModal(
-                        Number(
-                            card.dataset.index
-                        )
-                    );
-
-                }
-            );
-
-        });
+localStorage.setItem("siteLang",lang);
 
 }
 
 
-/* =====================================================
-   MODAL
-===================================================== */
-
-function openModal(index){
-
-    const item =
-        productions[index];
-
-    const isEnglish =
-        document.body.classList.contains(
-            "en"
-        );
+setLang(localStorage.getItem("siteLang")||"ar");
 
 
-    modalImage.src =
-        item.image;
+langBtn.onclick=()=>{
 
-    modalImage.alt =
-        item.title;
+setLang(
+document.body.classList.contains("en")
+?"ar"
+:"en"
+);
 
-
-    modalTitle.textContent =
-        isEnglish
-        ? item.en
-        : item.title;
+};
 
 
-    modalDescription.textContent =
-        isEnglish
-        ? item.descriptionEn
-        : item.description;
+menuBtn.onclick=()=>{
+
+nav.classList.toggle("open");
+
+};
 
 
-    modalYear.textContent =
-        isEnglish
-        ? `Year: ${item.year}`
-        : `السنة: ${item.year}`;
+function filterCards(){
 
+const q=search.value.trim().toLowerCase();
 
-    modalType.textContent =
-        isEnglish
-        ? item.typeEn
-        : item.type;
+let visible=0;
 
+cards.forEach(card=>{
 
-    modal.classList.add(
-        "active"
-    );
+const text=(
+card.dataset.title+
+" "+
+card.dataset.en+
+" "+
+card.dataset.year
+).toLowerCase();
 
+const show=text.includes(q);
 
-    document.body.style.overflow =
-        "hidden";
+card.style.display=show?"block":"none";
+
+if(show) visible++;
+
+});
+
+count.textContent=visible;
 
 }
 
 
-function closeTheModal(){
-
-    modal.classList.remove(
-        "active"
-    );
-
-    document.body.style.overflow =
-        "";
-
-}
+search.addEventListener("input",filterCards);
 
 
-/* =====================================================
-   SEARCH
-===================================================== */
+cards.forEach(card=>{
 
-search.addEventListener(
-    "input",
-    event => {
+card.onclick=()=>{
 
-        renderProductions(
-            event.target.value
-        );
+const en=document.body.classList.contains("en");
 
-    }
-);
+modalImg.src=card.dataset.img;
 
+modalTitle.textContent=
+en
+?card.dataset.en
+:card.dataset.title;
 
-/* =====================================================
-   CLOSE MODAL
-===================================================== */
+modalYear.textContent=
+card.dataset.year+
+" · TEATRO ALSAEED";
 
-closeModal.addEventListener(
-    "click",
-    closeTheModal
-);
+modalDesc.textContent=
+en
+?"A theatrical production from the Teatro Alsaeed archive."
+:card.dataset.desc;
 
+modal.classList.add("active");
 
-modal.addEventListener(
-    "click",
-    event => {
+document.body.style.overflow="hidden";
 
-        if(
-            event.target === modal
-        ){
+};
 
-            closeTheModal();
-
-        }
-
-    }
-);
+});
 
 
-document.addEventListener(
-    "keydown",
-    event => {
+function closeModal(){
 
-        if(
-            event.key === "Escape"
-        ){
+modal.classList.remove("active");
 
-            closeTheModal();
+document.body.style.overflow="";
 
-        }
-
-    }
-);
-
-
-/* =====================================================
-   LANGUAGE
-===================================================== */
-
-function setLanguage(
-    language
-){
-
-    const english =
-        language === "en";
-
-
-    document.body.classList.toggle(
-        "en",
-        english
-    );
-
-
-    document.documentElement.lang =
-        english
-        ? "en"
-        : "ar";
-
-
-    document.documentElement.dir =
-        english
-        ? "ltr"
-        : "rtl";
-
-
-    langBtn.textContent =
-        english
-        ? "AR"
-        : "EN";
-
-
-    search.placeholder =
-        english
-        ? "Search productions..."
-        : "ابحث عن عرض...";
-
-
-    localStorage.setItem(
-        "siteLang",
-        language
-    );
-
-
-    renderProductions(
-        search.value
-    );
+modalImg.src="";
 
 }
 
 
-setLanguage(
-    localStorage.getItem(
-        "siteLang"
-    ) || "ar"
-);
+close.onclick=closeModal;
 
 
-langBtn.addEventListener(
-    "click",
-    () => {
+modal.onclick=e=>{
 
-        setLanguage(
+if(e.target===modal){
 
-            document.body.classList.contains(
-                "en"
-            )
-            ? "ar"
-            : "en"
+closeModal();
 
-        );
+}
 
-    }
-);
+};
 
 
-/* =====================================================
-   MOBILE MENU
-===================================================== */
+document.addEventListener("keydown",e=>{
 
-menuBtn.addEventListener(
-    "click",
-    () => {
+if(e.key==="Escape"){
 
-        navLinks.classList.toggle(
-            "open"
-        );
+closeModal();
 
-    }
-);
+}
 
-
-navLinks
-    .querySelectorAll("a")
-    .forEach(
-        link => {
-
-            link.addEventListener(
-                "click",
-                () => {
-
-                    navLinks.classList.remove(
-                        "open"
-                    );
-
-                }
-            );
-
-        }
-    );
-
-
-/* =====================================================
-   INITIAL RENDER
-===================================================== */
-
-renderProductions();
-
+});
 
 </script>
 
-
 </body>
-
 </html>
