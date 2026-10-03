@@ -1,379 +1,866 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
-<title>فرقة تياترو الصعيد | Teatro AlSaeed Troupe</title>
+<title>الفرقة | Teatro AlSaeed</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
- --bg:#f4f5f6;
- --white:#ffffff;
- --dark:#1f1f1f;
- --muted:#555;
- --accent:#2bb3b1;
+    --accent:#2bb3b1;
+    --dark:#111;
+    --light:#f5f6f7;
+    --gray:#666;
 }
-*{margin:0;padding:0;box-sizing:border-box}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
-  font-family:'Cairo',sans-serif;
-  background:var(--bg);
-  color:var(--dark);
-  line-height:1.9;
+    font-family:'Cairo',sans-serif;
+    background:#fff;
+    color:#111;
+    padding-top:80px;
 }
 
-section{background:var(--white);margin-bottom:40px}
-.container{max-width:1100px;margin:auto;padding:80px 20px}
+/* ================= NAVBAR ================= */
 
-/* ===== Header ===== */
-header{background:#fff;border-bottom:1px solid #eee}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:#fff;
+    z-index:1000;
+    box-shadow:0 2px 15px rgba(0,0,0,.06);
+}
+
 .nav{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 }
-.logo{display:flex;align-items:center;gap:12px}
-.logo img{height:50px}
+
+.logo img{
+    height:45px;
+    display:block;
+}
+
+nav{
+    display:flex;
+    align-items:center;
+    gap:18px;
+}
 
 nav a{
-  margin:0 10px;
-  font-weight:600;
-  color:var(--accent);
-  text-decoration:none;
+    text-decoration:none;
+    color:#333;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
 }
 
-.lang-switch button{
-  background:none;
-  border:none;
-  font-weight:600;
-  cursor:pointer;
-  margin:0 5px;
+nav a:hover{
+    color:var(--accent);
 }
 
-/* ===== Hero ===== */
-.hero{
-  text-align:center;
-  padding:120px 20px;
-  background:linear-gradient(#f4f5f6,#e8eaeb);
-}
-.hero h1{font-size:42px;margin-bottom:20px}
-.hero p{max-width:850px;margin:auto;color:var(--muted)}
-
-/* ===== Counter ===== */
-.counter{
-  display:flex;
-  justify-content:center;
-  gap:60px;
-  margin-top:40px;
-  flex-wrap:wrap;
-}
-.counter-box{text-align:center}
-.counter-box span{
-  font-size:48px;
-  font-weight:700;
-  color:var(--accent);
+.menu-toggle{
+    display:none;
+    font-size:27px;
+    cursor:pointer;
 }
 
-/* ===== Typography ===== */
-h2{font-size:32px;margin-bottom:20px}
-h3{font-size:22px;margin-bottom:10px;color:var(--accent)}
-p{font-size:17px;color:var(--muted)}
+/* LANGUAGE */
 
-/* ===== Timeline ===== */
-.timeline{
-  margin-top:40px;
-  border-right:3px solid var(--accent);
-  padding-right:30px;
-}
-.timeline-item{margin-bottom:30px}
-
-/* ===== Slider ===== */
-.slider{
-  position:relative;
-  max-width:900px;
-  margin:40px auto 0;
-  overflow:hidden;
-  border-radius:10px;
-  background:#000;
-}
-.slides{
-  display:flex;
-  transition:transform 0.6s ease;
-}
-.slides img{
-  width:100%;
-  height:auto;          /* الحجم الطبيعي */
-  object-fit:contain;   /* بدون قص */
-  background:#000;
+.lang-toggle{
+    display:flex;
+    background:#eee;
+    border-radius:30px;
+    overflow:hidden;
 }
 
-/* Slider buttons */
-.slider .nav{
-  position:absolute;
-  top:50%;
-  transform:translateY(-50%);
-  background:rgba(0,0,0,0.5);
-  color:#fff;
-  border:none;
-  font-size:28px;
-  padding:10px 15px;
-  cursor:pointer;
-}
-.slider .prev{right:10px}
-.slider .next{left:10px}
-
-/* ===== Impact ===== */
-.impact{
-  background:var(--accent);
-  color:#fff;
-  text-align:center;
-}
-.impact p{
-  color:#fff;
-  font-size:22px;
-  max-width:900px;
-  margin:auto;
+.lang-toggle button{
+    border:none;
+    background:transparent;
+    padding:7px 14px;
+    cursor:pointer;
+    font-weight:600;
 }
 
-/* ===== Footer ===== */
+.lang-toggle .active{
+    background:var(--accent);
+    color:#fff;
+}
+
+/* ================= HERO ================= */
+
+.hero-image{
+    height:55vh;
+    min-height:350px;
+    background:
+        linear-gradient(
+            rgba(0,0,0,.15),
+            rgba(0,0,0,.15)
+        ),
+        url('images/troupe.jpg') center/cover no-repeat;
+}
+
+/* ================= TITLE ================= */
+
+.page-title{
+    text-align:center;
+    padding:35px 20px 10px;
+}
+
+.page-title h1{
+    font-size:42px;
+    font-weight:700;
+}
+
+.page-title p{
+    margin-top:10px;
+    color:var(--gray);
+    font-size:17px;
+}
+
+/* ================= INTRO ================= */
+
+.intro{
+    max-width:900px;
+    margin:auto;
+    padding:45px 20px 70px;
+    text-align:center;
+}
+
+.intro p{
+    font-size:18px;
+    line-height:2;
+    color:#444;
+}
+
+/* ================= STATS ================= */
+
+.stats{
+    background:var(--light);
+    padding:60px 20px;
+}
+
+.stats-grid{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+}
+
+.stat{
+    background:#fff;
+    padding:35px 20px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 25px rgba(0,0,0,.05);
+}
+
+.stat-number{
+    font-size:42px;
+    font-weight:700;
+    color:var(--accent);
+}
+
+.stat-title{
+    margin-top:5px;
+    font-size:17px;
+    font-weight:600;
+}
+
+/* ================= STORY ================= */
+
+.story{
+    max-width:1100px;
+    margin:auto;
+    padding:80px 20px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:55px;
+    align-items:center;
+}
+
+.story-image{
+    height:430px;
+    border-radius:18px;
+    background:url('images/troupe2.jpg') center/cover no-repeat;
+}
+
+.story-text h2{
+    font-size:32px;
+    margin-bottom:20px;
+}
+
+.story-text p{
+    color:#555;
+    line-height:2;
+    font-size:17px;
+    margin-bottom:18px;
+}
+
+/* ================= VALUES ================= */
+
+.values{
+    background:#111;
+    color:#fff;
+    padding:80px 20px;
+}
+
+.values-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.values-title h2{
+    font-size:32px;
+}
+
+.values-grid{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.value{
+    padding:30px 20px;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:15px;
+    text-align:center;
+}
+
+.value h3{
+    color:var(--accent);
+    margin-bottom:12px;
+}
+
+.value p{
+    color:#ccc;
+    line-height:1.8;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    padding:80px 20px;
+}
+
+.gallery-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.gallery-title h2{
+    font-size:32px;
+}
+
+.gallery-grid{
+    max-width:1100px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery-grid img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:12px;
+    transition:.3s;
+}
+
+.gallery-grid img:hover{
+    transform:scale(1.02);
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    background:var(--accent);
+    padding:70px 20px;
+    text-align:center;
+    color:#fff;
+}
+
+.cta h2{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    margin-bottom:25px;
+}
+
+.cta a{
+    display:inline-block;
+    padding:12px 28px;
+    border-radius:30px;
+    background:#fff;
+    color:#111;
+    text-decoration:none;
+    font-weight:700;
+}
+
+/* ================= FOOTER ================= */
+
 footer{
-  background:#1f1f1f;
-  color:#ccc;
-  text-align:center;
-  padding:50px 20px;
+    text-align:center;
+    padding:30px;
+    background:#111;
+    color:#fff;
 }
-footer h3{color:#fff;margin-bottom:10px}
-.address{font-size:14px;color:#aaa}
 
-.en{display:none;font-family:'Inter',sans-serif;direction:ltr}
+/* ================= LANGUAGE ================= */
+
+.en{
+    display:none;
+    font-family:'Inter',sans-serif;
+}
+
+/* ================= MOBILE ================= */
 
 @media(max-width:768px){
-.hero h1{font-size:32px}
-.nav{flex-direction:column;gap:10px}
-.timeline{
-  border-right:none;
-  border-left:3px solid var(--accent);
-  padding-left:30px;
+
+    body{
+        padding-top:70px;
+    }
+
+    .nav{
+        padding:12px 15px;
+    }
+
+    .logo img{
+        height:40px;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:69px;
+        right:0;
+        width:100%;
+        background:#fff;
+        padding:20px;
+        flex-direction:column;
+        align-items:flex-start;
+        gap:18px;
+        box-shadow:0 8px 20px rgba(0,0,0,.08);
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .hero-image{
+        height:42vh;
+        min-height:280px;
+    }
+
+    .page-title h1{
+        font-size:30px;
+    }
+
+    .page-title p{
+        font-size:15px;
+    }
+
+    .intro{
+        padding:35px 20px 50px;
+    }
+
+    .intro p{
+        font-size:16px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr;
+    }
+
+    .story{
+        grid-template-columns:1fr;
+        padding:55px 20px;
+        gap:30px;
+    }
+
+    .story-image{
+        height:300px;
+    }
+
+    .story-text h2{
+        font-size:27px;
+    }
+
+    .values-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid img{
+        height:250px;
+    }
+
+    .cta h2{
+        font-size:27px;
+    }
+
 }
-}
+
 </style>
 
 <script>
+
 function switchLang(lang){
- document.querySelectorAll('.ar').forEach(e=>e.style.display= lang==='ar'?'block':'none');
- document.querySelectorAll('.en').forEach(e=>e.style.display= lang==='en'?'block':'none');
- document.documentElement.dir = lang==='ar'?'rtl':'ltr';
- localStorage.setItem('lang', lang);
+
+    document.querySelectorAll('.ar').forEach(e=>{
+        e.style.display = lang === 'ar' ? 'block' : 'none';
+    });
+
+    document.querySelectorAll('.en').forEach(e=>{
+        e.style.display = lang === 'en' ? 'block' : 'none';
+    });
+
+    document.documentElement.dir =
+        lang === 'ar' ? 'rtl' : 'ltr';
+
+    document.querySelectorAll('.lang-toggle button')
+        .forEach(btn => btn.classList.remove('active'));
+
+    document.getElementById(lang).classList.add('active');
+
+    localStorage.setItem('lang',lang);
 }
 
-/* Counter animation */
-function animateCounters(){
- document.querySelectorAll('[data-target]').forEach(el=>{
-   let target = +el.dataset.target;
-   let suffix = el.dataset.suffix || '';
-   let count = 0;
-   let step = Math.ceil(target / 60);
-   let interval = setInterval(()=>{
-     count += step;
-     if(count >= target){
-       count = target;
-       clearInterval(interval);
-     }
-     el.innerText = count + suffix;
-   },30);
- });
+function toggleMenu(){
+
+    document.querySelector('nav')
+        .classList.toggle('active');
+
 }
 
-/* Slider */
-let index = 0;
-function showSlide(i){
-  const slides = document.querySelector('.slides');
-  const images = document.querySelectorAll('.slides img');
-  if(i >= images.length) index = 0;
-  if(i < 0) index = images.length - 1;
-  slides.style.transform = `translateX(${index * 100}%)`;
-}
+window.onload = function(){
 
-window.onload = () => {
- const saved = localStorage.getItem('lang') || 'ar';
- switchLang(saved);
- animateCounters();
+    switchLang(
+        localStorage.getItem('lang') || 'ar'
+    );
 
- document.querySelector('.next').onclick = () => {
-   index++; showSlide(index);
- };
- document.querySelector('.prev').onclick = () => {
-   index--; showSlide(index);
- };
+};
 
- setInterval(()=>{
-   index++; showSlide(index);
- },5000);
-}
 </script>
+
 </head>
+
 
 <body>
 
+
+<!-- ================= NAVBAR ================= -->
+
 <header>
+
 <div class="nav">
-  <div class="logo">
-    <img src="logo.png" alt="Teatro AlSaeed Logo">
-    <strong>Teatro AlSaeed</strong>
-  </div>
 
-  <nav>
-    <a href="index.html">الرئيسية</a>
-    <a href="about.html">عنّا</a>
-    <a href="troupe.html">الفرقة</a>
-    <a href="productions.html">العروض</a>
-    <a href="contact.html">تواصل</a>
-  </nav>
-
-  <div class="lang-switch">
-    <button onclick="switchLang('ar')">AR</button> |
-    <button onclick="switchLang('en')">EN</button>
-  </div>
+<div class="logo">
+<img src="logo.png" alt="Teatro AlSaeed">
 </div>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰
+</div>
+
+<nav>
+
+<a href="index.html">
+<span class="ar">الرئيسية</span>
+<span class="en">Home</span>
+</a>
+
+<a href="about.html">
+<span class="ar">عنّا</span>
+<span class="en">About</span>
+</a>
+
+<a href="troupe.html">
+<span class="ar">الفرقة</span>
+<span class="en">Troupe</span>
+</a>
+
+<a href="productions.html">
+<span class="ar">العروض</span>
+<span class="en">Productions</span>
+</a>
+
+<a href="academy.html">
+<span class="ar">الأكاديمية</span>
+<span class="en">Academy</span>
+</a>
+
+<a href="festival.html">
+<span class="ar">المهرجان</span>
+<span class="en">Festival</span>
+</a>
+
+<a href="sahara.html">
+<span class="ar">صحارة</span>
+<span class="en">Sahara</span>
+</a>
+
+<a href="contact.html">
+<span class="ar">تواصل</span>
+<span class="en">Contact</span>
+</a>
+
+</nav>
+
+
+<div class="lang-toggle">
+
+<button id="ar" onclick="switchLang('ar')">
+AR
+</button>
+
+<button id="en" onclick="switchLang('en')">
+EN
+</button>
+
+</div>
+
+</div>
+
 </header>
 
-<!-- ===== HERO ===== -->
-<div class="hero">
-<div class="ar">
-<h1>فرقة تياترو الصعيد</h1>
-<p>
-فرقة تياترو الصعيد هي <strong>نواة التأسيس الأولى</strong> لمؤسسة تياترو الصعيد لإحياء وتنمية الفنون.
-تأسست عام <strong>2014</strong> كمبادرة مسرحية مستقلة،
-وقدمت على مدار السنوات أكثر من <strong>600 ليلة عرض</strong>،
-لتتحول التجربة اليوم إلى مؤسسة ثقافية متكاملة.
+
+<!-- ================= HERO ================= -->
+
+<div class="hero-image"></div>
+
+
+<!-- ================= TITLE ================= -->
+
+<section class="page-title">
+
+<h1 class="ar">
+فرقة تياترو الصعيد
+</h1>
+
+<h1 class="en">
+Teatro AlSaeed Troupe
+</h1>
+
+<p class="ar">
+من المسرح بدأت الحكاية
 </p>
-</div>
 
-<div class="en">
-<h1>Teatro AlSaeed Troupe</h1>
-<p>
-The Teatro AlSaeed Troupe is the <strong>foundational nucleus</strong> of Teatro AlSaeed.
-Founded in <strong>2014</strong> as an independent theatre initiative,
-it has presented more than <strong>600 performance nights</strong>,
-eventually evolving into a full cultural institution.
+<p class="en">
+Where the story began — on stage
 </p>
-</div>
 
-<div class="counter">
-  <div class="counter-box">
-    <span data-target="2014"></span>
-    <p class="ar">سنة التأسيس</p>
-    <p class="en">Founded</p>
-  </div>
-  <div class="counter-box">
-    <span data-target="600" data-suffix="+"></span>
-    <p class="ar">ليلة عرض</p>
-    <p class="en">Performance Nights</p>
-  </div>
-</div>
-</div>
-
-<!-- ===== TIMELINE ===== -->
-<section>
-<div class="container">
-<div class="ar">
-<h2>المسار الزمني</h2>
-<div class="timeline">
-  <div class="timeline-item">
-    <h3>2014 – التأسيس</h3>
-    <p>انطلاق الفرقة كمبادرة مسرحية مستقلة في صعيد مصر.</p>
-  </div>
-  <div class="timeline-item">
-    <h3>2014–2020 – التراكم</h3>
-    <p>تقديم مئات ليالي العرض في مسارح وفضاءات مختلفة.</p>
-  </div>
-  <div class="timeline-item">
-    <h3>2021–الآن – التحول المؤسسي</h3>
-    <p>تحول التجربة إلى مؤسسة ثقافية تعمل على التدريب والإنتاج.</p>
-  </div>
-</div>
-</div>
-
-<div class="en">
-<h2>Timeline</h2>
-<div class="timeline">
-  <div class="timeline-item">
-    <h3>2014 – Foundation</h3>
-    <p>The troupe was founded as an independent theatre initiative.</p>
-  </div>
-  <div class="timeline-item">
-    <h3>2014–2020 – Accumulation</h3>
-    <p>Hundreds of performances across Egypt.</p>
-  </div>
-  <div class="timeline-item">
-    <h3>2021–Present – Institutional Growth</h3>
-    <p>The experience evolved into a full cultural institution.</p>
-  </div>
-</div>
-</div>
-</div>
 </section>
 
-<!-- ===== SLIDER ===== -->
-<section>
-<div class="container">
-<div class="ar"><h2>من عروض الفرقة</h2></div>
-<div class="en"><h2>From Our Performances</h2></div>
 
-<div class="slider">
-  <div class="slides">
-    <img src="images/show1.jpg">
-    <img src="images/show2.jpg">
-    <img src="images/show3.jpg">
-    <img src="images/show4.jpg">
-    <img src="images/show5.jpg">
-    <img src="images/show6.jpg">
-    <img src="images/show7.jpg">
-    <img src="images/show8.jpg">
-    <img src="images/show9.jpg">
-    <img src="images/show10.jpg">
-    <img src="images/show11.jpg">
-    <img src="images/show12.jpg">
-    <img src="images/show13.jpg">
-    <img src="images/show14.jpg">
-    <img src="images/show15.jpg">
-  </div>
+<!-- ================= INTRO ================= -->
 
-  <button class="nav prev">&#10094;</button>
-  <button class="nav next">&#10095;</button>
-</div>
-</div>
+<section class="intro">
+
+<p class="ar">
+فرقة تياترو الصعيد هي النواة التي انطلقت منها مؤسسة تياترو الصعيد،
+وتعود بدايتها إلى عام 2014.
+منذ ذلك الوقت، واصلت الفرقة العمل على تقديم المسرح
+وصناعة تجارب فنية مستقلة في صعيد مصر.
+</p>
+
+<p class="en">
+Teatro AlSaeed Troupe is the founding nucleus of Teatro AlSaeed.
+The troupe began in 2014 and has continued to create
+independent theatrical experiences and support performing arts
+in Upper Egypt.
+</p>
+
 </section>
 
-<!-- ===== IMPACT ===== -->
-<section class="impact">
-<div class="container">
-<div class="ar">
-<p>
-الفرقة ليست مجرد عروض مسرحية،
-بل مساحة مستمرة للتجريب وبناء المسار الفني الحقيقي.
-</p>
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+<div class="stats-grid">
+
+<div class="stat">
+
+<div class="stat-number">
+2014
 </div>
-<div class="en">
-<p>
-The troupe is not just performances,
-but a continuous space for experimentation and artistic growth.
-</p>
+
+<div class="stat-title ar">
+عام التأسيس
 </div>
+
+<div class="stat-title en">
+Year Founded
 </div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+600+
+</div>
+
+<div class="stat-title ar">
+ليلة عرض مسرحي
+</div>
+
+<div class="stat-title en">
+Performance Nights
+</div>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- ================= STORY ================= -->
+
+<section class="story">
+
+<div class="story-image"></div>
+
+<div class="story-text">
+
+<h2 class="ar">
+من فرقة إلى مؤسسة
+</h2>
+
+<h2 class="en">
+From a Troupe to an Institution
+</h2>
+
+<p class="ar">
+بدأت تياترو الصعيد كفرقة مسرحية عام 2014،
+وكانت التجربة المسرحية هي النواة الأولى التي قادت
+إلى تأسيس مؤسسة ثقافية تعمل على دعم وتطوير الفنون
+الأدائية في صعيد مصر.
+</p>
+
+<p class="en">
+Teatro AlSaeed started as a theatre troupe in 2014.
+The theatrical experience became the foundation for building
+a cultural institution dedicated to supporting and developing
+performing arts in Upper Egypt.
+</p>
+
+<p class="ar">
+قدمت الفرقة أكثر من 600 ليلة عرض مسرحي،
+وشاركت في بناء تجربة فنية مستقلة تقوم على
+الإبداع والتجريب والعمل الجماعي.
+</p>
+
+<p class="en">
+The troupe has presented more than 600 performance nights,
+building an independent artistic experience based on
+creativity, experimentation and collaboration.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ================= VALUES ================= -->
+
+<section class="values">
+
+<div class="values-title">
+
+<h2 class="ar">
+روح الفرقة
+</h2>
+
+<h2 class="en">
+The Spirit of the Troupe
+</h2>
+
+</div>
+
+
+<div class="values-grid">
+
+
+<div class="value">
+
+<h3 class="ar">
+الإبداع
+</h3>
+
+<h3 class="en">
+Creativity
+</h3>
+
+<p class="ar">
+مساحة للتجريب واكتشاف طرق جديدة لصناعة المسرح.
+</p>
+
+<p class="en">
+A space for experimentation and new approaches to theatre-making.
+</p>
+
+</div>
+
+
+<div class="value">
+
+<h3 class="ar">
+العمل الجماعي
+</h3>
+
+<h3 class="en">
+Collaboration
+</h3>
+
+<p class="ar">
+المسرح تجربة جماعية تقوم على التعاون والثقة.
+</p>
+
+<p class="en">
+Theatre is a collective experience built on collaboration and trust.
+</p>
+
+</div>
+
+
+<div class="value">
+
+<h3 class="ar">
+صعيد مصر
+</h3>
+
+<h3 class="en">
+Upper Egypt
+</h3>
+
+<p class="ar">
+صناعة الفن من قلب الصعيد وإتاحة الفرص للفنانين.
+</p>
+
+<p class="en">
+Creating art from Upper Egypt and opening opportunities for artists.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery">
+
+<div class="gallery-title">
+
+<h2 class="ar">
+من ذاكرة الفرقة
+</h2>
+
+<h2 class="en">
+From the Troupe's Archive
+</h2>
+
+</div>
+
+
+<div class="gallery-grid">
+
+<img src="images/troupe1.jpg" alt="Teatro AlSaeed Troupe">
+
+<img src="images/troupe2.jpg" alt="Teatro AlSaeed Troupe">
+
+<img src="images/troupe3.jpg" alt="Teatro AlSaeed Troupe">
+
+<img src="images/troupe4.jpg" alt="Teatro AlSaeed Troupe">
+
+<img src="images/troupe5.jpg" alt="Teatro AlSaeed Troupe">
+
+<img src="images/troupe6.jpg" alt="Teatro AlSaeed Troupe">
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<h2 class="ar">
+اكتشف عروضنا
+</h2>
+
+<h2 class="en">
+Explore Our Productions
+</h2>
+
+<p class="ar">
+اكتشف التجارب المسرحية التي صنعتها الفرقة على مدار السنوات.
+</p>
+
+<p class="en">
+Discover the theatrical experiences created by the troupe over the years.
+</p>
+
+<a href="productions.html">
+
+<span class="ar">
+العروض المسرحية
+</span>
+
+<span class="en">
+Productions
+</span>
+
+</a>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
-<h3>Teatro AlSaeed | تياترو الصعيد</h3>
-<p class="address ar">المنيا – شارع الحسيني – بجوار بي تك</p>
-<p class="address en">Minya – Al-Husseiny Street – Next to B.Tech</p>
-<p>Your Dream Is Legal</p>
+
+Teatro AlSaeed
+
 </footer>
+
 
 </body>
 </html>
