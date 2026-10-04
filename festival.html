@@ -67,6 +67,44 @@ url("images/festival-hero.jpg") center/cover}
 .intro-copy{font-size:18px;color:#515959;line-height:2.1}
 .intro-line{width:80px;height:3px;background:var(--a);margin-bottom:25px}
 
+
+/* VISION / MISSION / GOALS */
+.vision-section{padding:125px 0;background:#f4f5f5;color:#111414}
+.vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:#d9dddd;border:1px solid #d9dddd}
+.vision-card{background:#f4f5f5;padding:48px 42px;min-height:300px;position:relative;overflow:hidden}
+.vision-card:after{content:"";position:absolute;left:-30px;bottom:-55px;width:150px;height:150px;border:1px solid rgba(43,179,177,.25);border-radius:50%}
+.vision-no{font:800 11px Inter,sans-serif;letter-spacing:2px;color:#169693}
+.vision-card h3{font-size:clamp(28px,3.2vw,46px);line-height:1.15;font-weight:900;margin:34px 0 16px}
+.vision-card p{max-width:560px;color:#586161;font-size:16px;line-height:2.1;position:relative;z-index:1}
+.goals{margin-top:1px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#d9dddd;border:1px solid #d9dddd;border-top:0}
+.goal{background:#fff;padding:32px 30px;min-height:180px}
+.goal strong{display:block;font:900 34px/1 Inter,sans-serif;color:#d9dddd;margin-bottom:18px}
+.goal h4{font-size:20px;font-weight:900;margin-bottom:8px}
+.goal p{color:#687070;font-size:14px;line-height:1.9}
+
+/* HIGHER COMMITTEE */
+.committee{padding:125px 0;background:#0d1010}
+.committee-head{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:60px}
+.committee-head .section-title{margin-bottom:0}
+.committee-note{max-width:350px;color:#8f9898;font-size:14px;line-height:2}
+.committee-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-right:1px solid var(--line)}
+.member{min-height:290px;padding:30px 25px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;transition:.3s}
+.member:before{content:"";position:absolute;left:22px;top:22px;width:58px;height:58px;border:1px solid rgba(43,179,177,.35);border-radius:50%}
+.member:hover{background:#151919;transform:translateY(-5px)}
+.member-index{position:absolute;top:36px;left:40px;font:800 10px Inter,sans-serif;color:var(--a);letter-spacing:2px}
+.member h3{font-size:22px;line-height:1.35;font-weight:900;margin-bottom:10px}
+.member-role{color:var(--a);font-size:13px;font-weight:800;line-height:1.8}
+.member-en{display:none}
+
+@media(max-width:1000px){
+.committee-grid{grid-template-columns:repeat(2,1fr)}
+.committee-head{display:block}.committee-note{margin-top:20px}
+.vision-grid{grid-template-columns:1fr}.goals{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+.committee-grid{grid-template-columns:1fr}.member{min-height:240px}.vision-card{padding:35px 25px}
+}
+
 /* JOURNEY */
 .journey{padding:125px 0;background:var(--bg)}
 .section-title{margin-bottom:80px;max-width:900px}
@@ -189,6 +227,7 @@ footer{padding:55px 0 30px;background:#050606}
 <a href="productions.html"><span class="lang-ar">العروض</span><span class="lang-en">Productions</span></a>
 <a href="academy.html"><span class="lang-ar">الأكاديمية</span><span class="lang-en">Academy</span></a>
 <a href="festival.html"><span class="lang-ar">المهرجان</span><span class="lang-en">Festival</span></a>
+<a href="#committee"><span class="lang-ar">اللجنة العليا</span><span class="lang-en">Committee</span></a>
 <a href="sahara.html"><span class="lang-ar">صحارة</span><span class="lang-en">Sahara</span></a>
 <a href="contact.html"><span class="lang-ar">تواصل</span><span class="lang-en">Contact</span></a>
 </nav>
@@ -219,7 +258,7 @@ footer{padding:55px 0 30px;background:#050606}
 <p class="hero-copy lang-en">April 2027 — a new edition opening Minya to the world, bringing together theatre troupes and trainers from around the globe.</p>
 <div class="hero-actions">
 <a class="btn btn-primary" href="#journey"><span class="lang-ar">رحلة المهرجان</span><span class="lang-en">The festival journey</span></a>
-<a class="btn btn-outline" href="#edition"><span class="lang-ar">الدورة الرابعة</span><span class="lang-en">4th Edition</span></a>
+<a class="btn btn-outline" href="#vision"><span class="lang-ar">رؤية المهرجان</span><span class="lang-en">Festival Vision</span></a>
 </div>
 </div>
 <div class="hero-stamp">MINYA · EGYPT · 2027</div>
@@ -229,6 +268,60 @@ footer{padding:55px 0 30px;background:#050606}
 <div class="container intro-grid">
 <div><div class="kicker"><span class="lang-ar">رحلة تتطور كل عام</span><span class="lang-en">A FESTIVAL THAT EVOLVES</span></div><h2 class="lang-ar">ثلاث دورات صنعت الطريق.<br><span>والرابعة تتجاوز الحدود.</span></h2><h2 class="lang-en">Three editions built the road.<br><span>The fourth goes beyond borders.</span></h2></div>
 <div class="intro-copy"><div class="intro-line"></div><p class="lang-ar">بدأ المهرجان من المنيا، بصوت محلي وتجربة تجمع فناني المحافظة. ثم اتسع ليصل إلى المسرح المصري، قبل أن يعبر الحدود ويصبح مهرجانًا دوليًا. في 2027، تبدأ مرحلة جديدة من الرحلة.</p><p class="lang-en">The festival began in Minya as a local platform for artists from the governorate. It expanded to the Egyptian theatre scene, then crossed borders to become an international festival. In 2027, a new chapter begins.</p></div>
+</div>
+</section>
+
+<section class="vision-section" id="vision">
+<div class="container">
+<div class="section-title">
+<div class="kicker"><span class="lang-ar">هوية المهرجان</span><span class="lang-en">FESTIVAL IDENTITY</span></div>
+<h2 class="lang-ar">رؤية واضحة.<br><span>وهدف يتجاوز الحدود.</span></h2>
+<h2 class="lang-en">A clear vision.<br><span>A purpose beyond borders.</span></h2>
+<p class="lang-ar">المهرجان لا يكتفي بتقديم عروض مسرحية؛ بل يسعى إلى بناء مساحة مستدامة للقاء والتعلم والتبادل، تنطلق من صعيد مصر وتصل إلى العالم.</p>
+<p class="lang-en">The festival is more than a programme of performances. It aims to build a sustainable space for encounter, learning and exchange — rooted in Upper Egypt and connected to the world.</p>
+</div>
+<div class="vision-grid">
+<article class="vision-card">
+<div class="vision-no">01 / VISION</div>
+<h3 class="lang-ar">رؤية المهرجان</h3>
+<h3 class="lang-en">Our Vision</h3>
+<p class="lang-ar">أن تصبح المنيا مركزًا فاعلًا للقاء المسرحي، وأن يكون المهرجان منصة دولية تربط فناني صعيد مصر بالتجارب المسرحية في مصر والعالم.</p>
+<p class="lang-en">To position Minya as an active hub for theatrical encounter, and the festival as an international platform connecting Upper Egypt’s artists with theatre practices from Egypt and the world.</p>
+</article>
+<article class="vision-card">
+<div class="vision-no">02 / MISSION</div>
+<h3 class="lang-ar">رسالة المهرجان</h3>
+<h3 class="lang-en">Our Mission</h3>
+<p class="lang-ar">خلق مساحة حقيقية للعروض والتدريب والحوار والتبادل الثقافي، وإتاحة فرص للفنانين والفرق المسرحية للقاء والتطور وصناعة تجارب جديدة.</p>
+<p class="lang-en">To create a real space for performances, training, dialogue and cultural exchange, giving artists and theatre troupes opportunities to meet, grow and create new work.</p>
+</article>
+</div>
+<div class="goals">
+<article class="goal"><strong>01</strong><h4 class="lang-ar">دعم الفنان</h4><h4 class="lang-en">Support Artists</h4><p class="lang-ar">إتاحة فرص للعرض والتدريب والتواصل أمام الفنانين والفرق.</p><p class="lang-en">Create opportunities for artists and troupes to perform, train and connect.</p></article>
+<article class="goal"><strong>02</strong><h4 class="lang-ar">التبادل الثقافي</h4><h4 class="lang-en">Cultural Exchange</h4><p class="lang-ar">ربط التجارب المسرحية المحلية والمصرية والدولية في مساحة واحدة.</p><p class="lang-en">Connect local, Egyptian and international theatre practices in one space.</p></article>
+<article class="goal"><strong>03</strong><h4 class="lang-ar">توسيع الأثر</h4><h4 class="lang-en">Expand Impact</h4><p class="lang-ar">توسيع حضور المسرح في المنيا وصعيد مصر وفتح مسارات جديدة للتعاون.</p><p class="lang-en">Expand theatre’s presence in Minya and Upper Egypt and open new paths for collaboration.</p></article>
+</div>
+</div>
+</section>
+
+<section class="committee" id="committee">
+<div class="container">
+<div class="committee-head">
+<div class="section-title">
+<div class="kicker"><span class="lang-ar">إدارة المهرجان</span><span class="lang-en">FESTIVAL LEADERSHIP</span></div>
+<h2 class="lang-ar">اللجنة العليا<br><span>للمهرجان.</span></h2>
+<h2 class="lang-en">The Festival<br><span>Higher Committee.</span></h2>
+</div>
+<p class="committee-note lang-ar">تضم اللجنة العليا للمهرجان نخبة من صناع المسرح والإدارة الثقافية، وتعمل على رسم توجهات المهرجان ودعم مساره الفني والمؤسسي.</p>
+<p class="committee-note lang-en">The Higher Committee brings together theatre makers and cultural management professionals who help shape the festival’s artistic and institutional direction.</p>
+</div>
+<div class="committee-grid">
+<article class="member"><div class="member-index">01</div><h3>كيرو صابر</h3><div class="member-role lang-ar">المخرج والكاتب<br>مؤسس ورئيس المهرجان</div><div class="member-role lang-en">Director & Playwright<br>Founder & Festival President</div></article>
+<article class="member"><div class="member-index">02</div><h3>حمزة العيلي</h3><div class="member-role lang-ar">النجم<br>الرئيس الشرفي الدائم للمهرجان</div><div class="member-role lang-en">Actor<br>Permanent Honorary President</div></article>
+<article class="member"><div class="member-index">03</div><h3>أبو بكر الشريف</h3><div class="member-role lang-ar">السينوغرافر<br>عضو اللجنة</div><div class="member-role lang-en">Scenographer<br>Committee Member</div></article>
+<article class="member"><div class="member-index">04</div><h3>محمد ذكي</h3><div class="member-role lang-ar">المخرج والكاتب<br>عضو اللجنة</div><div class="member-role lang-en">Director & Playwright<br>Committee Member</div></article>
+<article class="member"><div class="member-index">05</div><h3>طاهرة طارق</h3><div class="member-role lang-ar">المديرة الثقافية<br>عضو اللجنة</div><div class="member-role lang-en">Cultural Director<br>Committee Member</div></article>
+</div>
 </div>
 </section>
 
@@ -260,7 +353,7 @@ footer{padding:55px 0 30px;background:#050606}
 </div>
 </section>
 
-<section class="current" id="edition">
+<section class="current" id="current-edition">
 <div class="container current-grid">
 <div><div class="kicker"><span class="lang-ar">الدورة الرابعة · 2027</span><span class="lang-en">4TH EDITION · 2027</span></div><h2 class="lang-ar">أبعد <span>من الحدود.</span></h2><h2 class="lang-en">Beyond <span>Borders.</span></h2><p class="lang-ar">ليست مجرد دورة جديدة، بل مرحلة جديدة في هوية المهرجان. من منصة انطلقت محليًا إلى مهرجان يطمح إلى جمع التجارب المسرحية من مختلف أنحاء العالم في مدينة المنيا.</p><p class="lang-en">Not simply another edition, but a new stage in the festival’s identity — from a local platform to a festival aspiring to bring theatre practices from around the world to Minya.</p></div>
 <div><div class="current-box"><div class="current-item"><strong class="lang-ar">التوقيت</strong><strong class="lang-en">When</strong><span>APRIL 2027</span></div><div class="current-item"><strong class="lang-ar">المكان</strong><strong class="lang-en">Where</strong><span>MINYA · EGYPT</span></div><div class="current-item"><strong class="lang-ar">المشاركة</strong><strong class="lang-en">Participants</strong><span class="lang-ar">فرق ومدربون من العالم</span><span class="lang-en">Troupes & trainers worldwide</span></div><div class="current-item"><strong class="lang-ar">الشعار</strong><strong class="lang-en">Theme</strong><span>BEYOND BORDERS</span></div></div></div>
