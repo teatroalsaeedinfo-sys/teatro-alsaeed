@@ -106,6 +106,7 @@ footer{padding:55px 0 30px;background:#050606}.footer-top{display:flex;justify-c
 .masterclass-feature-image img{width:100%;max-width:620px;height:520px;object-fit:cover;border:1px solid rgba(255,255,255,.14);box-shadow:0 30px 80px rgba(0,0,0,.35)}
 .masterclass-feature-image.image-missing:before{content:"MASTER CLASS · 2024";display:flex;align-items:center;justify-content:center;width:100%;height:520px;border:1px solid rgba(43,179,177,.3);color:var(--a);font:800 13px Inter,sans-serif;letter-spacing:3px;background:linear-gradient(135deg,#101515,#080a0a)}
 .masterclass-caption{position:absolute;bottom:45px;right:0;max-width:500px;padding:14px 18px;background:rgba(5,7,7,.88);border-right:2px solid var(--a);font-size:12px;color:#c6cccc;line-height:1.8}
+@media(max-width:700px){.archive{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:900px){.masterclass-feature{min-height:auto}.masterclass-feature-bg{background:linear-gradient(180deg,rgba(5,7,7,.94),rgba(5,7,7,.72) 50%,rgba(5,7,7,.96)),url('images/festival/2024/fathy-abdel-wahab.jpg') center/cover no-repeat}.masterclass-feature-inner{grid-template-columns:1fr;gap:10px;min-height:auto}.masterclass-feature-copy{padding:80px 0 25px}.masterclass-feature-image{min-height:420px;padding:0 0 70px}.masterclass-feature-image img,.masterclass-feature-image.image-missing:before{height:420px}.masterclass-caption{bottom:25px;left:0;right:0;max-width:none}.masterclass-metrics{width:100%}.masterclass-metrics>div{min-width:0;flex:1;padding:17px 12px}}
 @media(max-width:560px){.masterclass-feature-title{font-size:45px;letter-spacing:-1.5px}.masterclass-metrics{display:grid;grid-template-columns:1fr 1fr}.masterclass-metrics>div:last-child{grid-column:1/-1}}
 
@@ -317,15 +318,20 @@ url('images/festival/2024/hero.jpg') center/cover;">
 
 <section class="section dark">
 <div class="container">
-<div class="section-title">
-<div class="kicker"><span class="lang-ar">أرشيف الصور</span><span class="lang-en">PHOTO ARCHIVE</span></div>
-<h2 class="lang-ar">لحظات من<br>الدورة الثانية.</h2>
-<h2 class="lang-en">Moments from<br>the second edition.</h2>
-<p class="lang-ar">ضع صور أرشيف الدورة داخل المجلد <b>images/festival/2024/</b> بالأسماء من 01.jpg إلى 12.jpg.</p>
-<p class="lang-en">Place the edition archive photos inside <b>images/festival/2024/</b>, named 01.jpg through 12.jpg.</p>
-</div>
-<div class="archive-grid">
-<div class="archive-item"><img src="images/festival/2024/01.jpg" alt="Minya Theatre Festival 2024 archive 1" onerror="this.parentElement.classList.add('missing');this.style.display='none'"></div><div class="archive-item"><img src="images/festival/2024/02.jpg" alt="Minya Theatre Festival 2024 archive 2" onerror="this.parentElement.classList.add('missing');this.style.display='none'"></div><div class="archive-item"><img src="images/festival/2024/03.jpg" alt="Minya Theatre Festival 2024 archive 3" onerror="this.parentElement.classList.add('missing');this.style.display='none'"></div><div class="archive-item"><img src="images/festival/2024/04.jpg" alt="Minya Theatre Festival 2024 archive 4" onerror="this.parentElement.classList.add('missing');this.style.display='none'"></div><div class="archive-item"><img src="images/festival/2024/05.jpg" alt="Minya Theatre Festival 2024 archive 5" onerror="this.parentElement.classList.add('missing');this.style.display='none'"></div><div class="archive-item"><img src="images/festival/2024/06.jpg" alt="Minya Theatre Festival 2024 archive 6" onerror="this.parentElement.classList.add('missing');this.style.display='none'"></div><div class="archive-item"><img src="images/festival/2024/07.jpg" alt="Minya Theatre Festival 2024 archive 7" onerror="this.parentElement.classList.add('missing');this.style.display='none'"></div><div class="archive-item"><img src="images/festival/2024/08.jpg" alt="Minya Theatre Festival 2024 archive 8" onerror="this.parentElement.classList.add('missing');this.style.display='none'"></div><div class="archive-item"><img src="images/festival/2024/09.jpg" alt="Minya Theatre Festival 2024 archive 9" onerror="this.parentElement.classList.add('missing');this.style.display='none'"></div><div class="archive-item"><img src="images/festival/2024/10.jpg" alt="Minya Theatre Festival 2024 archive 10" onerror="this.parentElement.classList.add('missing');this.style.display='none'"></div><div class="archive-item"><img src="images/festival/2024/11.jpg" alt="Minya Theatre Festival 2024 archive 11" onerror="this.parentElement.classList.add('missing');this.style.display='none'"></div><div class="archive-item"><img src="images/festival/2024/12.jpg" alt="Minya Theatre Festival 2024 archive 12" onerror="this.parentElement.classList.add('missing');this.style.display='none'"></div>
+<div class="section-title"><div class="kicker"><span class="lang-ar">الأرشيف البصري</span><span class="lang-en">PHOTO ARCHIVE</span></div><h2 class="lang-ar">ذاكرة<br>الدورة الثانية.</h2><h2 class="lang-en">The memory<br>of the second edition.</h2><p class="lang-ar">ضع صور الدورة داخل المسار <strong>images/festival/2024/</strong> بالأسماء من 01.jpg إلى 12.jpg.</p><p class="lang-en">Place the edition photos inside <strong>images/festival/2024/</strong> using filenames 01.jpg through 12.jpg.</p></div>
+<div class="archive">
+<div class="photo"><img src="images/festival/2024/01.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
+<div class="photo"><img src="images/festival/2024/02.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
+<div class="photo"><img src="images/festival/2024/03.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
+<div class="photo"><img src="images/festival/2024/04.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
+<div class="photo"><img src="images/festival/2024/05.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
+<div class="photo"><img src="images/festival/2024/06.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
+<div class="photo"><img src="images/festival/2024/07.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
+<div class="photo"><img src="images/festival/2024/08.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
+<div class="photo"><img src="images/festival/2024/09.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
+<div class="photo"><img src="images/festival/2024/10.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
+<div class="photo"><img src="images/festival/2024/11.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
+<div class="photo"><img src="images/festival/2024/12.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
 </div>
 </div>
 </section>
