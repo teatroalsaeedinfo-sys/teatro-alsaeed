@@ -30,6 +30,21 @@
 footer{padding:55px 0 30px;background:#050606}.footer-top{display:flex;justify-content:space-between;gap:40px;padding-bottom:35px;border-bottom:1px solid var(--line)}.footer-logo{width:100px;margin-bottom:16px}.footer-brand p{color:#858c8c;max-width:400px;font-size:13px}.footer-links{display:flex;gap:18px;flex-wrap:wrap;color:#aaa;font-size:13px}.footer-links a:hover{color:var(--a)}.footer-bottom{padding-top:22px;display:flex;justify-content:space-between;color:#626969;font-size:11px}
 @media(max-width:1000px){.nav-links{display:none}.menu-btn{display:block}.intro-grid,.awards,.master,.feature{grid-template-columns:1fr;gap:0}.stats-grid{grid-template-columns:repeat(3,1fr)}.competitions,.shortlist{grid-template-columns:1fr 1fr}.workshops{grid-template-columns:repeat(2,1fr)}.jury{grid-template-columns:repeat(2,1fr)}.partners{grid-template-columns:repeat(2,1fr)}.archive{grid-template-columns:repeat(3,1fr)}.feature-image,.master-image{min-height:380px}}
 @media(max-width:600px){.container{width:calc(100% - 30px)}.nav{height:70px}.mobile-menu{top:70px}.logo{width:88px}.hero{min-height:90vh}.hero-content{padding:130px 0 70px}.hero h1{letter-spacing:-1px}.hero-copy{font-size:15px}.hero-stamp{display:none}.intro,.section{padding:80px 0}.stats-grid{grid-template-columns:1fr 1fr}.stat{padding:25px 14px}.competitions,.shortlist,.workshops,.jury,.partners{grid-template-columns:1fr}.archive{grid-template-columns:1fr 1fr}.award{grid-template-columns:1fr;gap:5px}.winner .big{font-size:70px}.feature-copy,.master-copy{padding:35px 25px}.feature-image,.master-image{min-height:300px}.footer-top,.footer-bottom{display:block}.footer-links{margin-top:25px}.footer-bottom div+div{margin-top:8px}}
+
+/* FESTIVAL EDITIONS NAVIGATION */
+.festival-editions-nav{position:sticky;top:70px;z-index:90;background:rgba(7,8,8,.94);border-bottom:1px solid rgba(43,179,177,.16);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.festival-editions-inner{max-width:1180px;margin:auto;padding:10px 24px;display:flex;align-items:stretch;justify-content:center;gap:6px;overflow-x:auto;scrollbar-width:none}
+.festival-editions-inner::-webkit-scrollbar{display:none}
+.festival-edition-link{position:relative;min-width:145px;padding:9px 15px;border:1px solid rgba(255,255,255,.08);border-radius:2px;color:#c9d0d0;text-decoration:none;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:2px;transition:.25s;background:rgba(255,255,255,.025)}
+.festival-edition-link:hover{border-color:rgba(43,179,177,.55);color:#fff;transform:translateY(-1px);background:rgba(43,179,177,.07)}
+.festival-edition-link.main-link{border-color:rgba(43,179,177,.42)}
+.festival-edition-link.current-link{border-color:rgba(43,179,177,.28)}
+.festival-edition-link .edition-year{font:800 13px/1 Inter,sans-serif;letter-spacing:1.5px;color:#2bb3b1}
+.festival-edition-link .lang-ar,.festival-edition-link .lang-en{font-size:11px;line-height:1.35}
+.edition-open{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:10px 15px;border:1px solid rgba(43,179,177,.35);color:#fff;text-decoration:none;font-size:11px;letter-spacing:.5px;background:rgba(43,179,177,.06);transition:.25s}
+.edition-open:hover{background:#2bb3b1;color:#071010}
+@media(max-width:700px){.festival-editions-nav{top:62px}.festival-editions-inner{justify-content:flex-start;padding:8px 14px}.festival-edition-link{min-width:116px;padding:8px 11px}.festival-edition-link .lang-ar,.festival-edition-link .lang-en{font-size:10px}.edition-open{width:100%;justify-content:center}}
+
 </style>
 </head>
 <body>
@@ -40,6 +55,17 @@ footer{padding:55px 0 30px;background:#050606}.footer-top{display:flex;justify-c
 </div><div class="nav-actions"><button class="lang-btn" id="langBtn">EN</button><button class="menu-btn" id="menuBtn">☰</button></div>
 <div class="mobile-menu" id="mobileMenu"><a href="index.html">الرئيسية / Home</a><a href="about.html">عنّا / About</a><a href="troupe.html">الفرقة / Troupe</a><a href="productions.html">العروض / Productions</a><a href="academy.html">الأكاديمية / Academy</a><a href="festival.html">المهرجان / Festival</a><a href="sahara.html">صحارة / Sahara</a><a href="contact.html">تواصل / Contact</a></div>
 </div></nav>
+<!-- FESTIVAL EDITIONS NAV -->
+<div class="festival-editions-nav">
+  <div class="festival-editions-inner">
+    <a href="festival.html" class="festival-edition-link main-link"><span class="lang-ar">المهرجان</span><span class="lang-en">Festival</span></a>
+    <a href="festival-2022.html" class="festival-edition-link"><span class="edition-year">2022</span><span class="lang-ar">الدورة الأولى</span><span class="lang-en">1st Edition</span></a>
+    <a href="festival-2024.html" class="festival-edition-link"><span class="edition-year">2024</span><span class="lang-ar">الدورة الثانية</span><span class="lang-en">2nd Edition</span></a>
+    <a href="festival-2025.html" class="festival-edition-link"><span class="edition-year">2025</span><span class="lang-ar">الدورة الثالثة</span><span class="lang-en">3rd Edition</span></a>
+    <a href="festival.html#current-edition" class="festival-edition-link current-link"><span class="edition-year">2027</span><span class="lang-ar">الدورة الرابعة</span><span class="lang-en">4th Edition</span></a>
+  </div>
+</div>
+
 
 <header class="hero">
 <div class="hero-grid"></div><div class="hero-orbit"></div><div class="container hero-content">
