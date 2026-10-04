@@ -207,6 +207,21 @@ footer{padding:55px 0 30px;background:#050606}
 .footer-bottom div+div{margin-top:8px}
 .route{font-size:13px}.route i{width:30px}
 }
+
+/* FESTIVAL EDITIONS NAVIGATION */
+.festival-editions-nav{position:sticky;top:70px;z-index:90;background:rgba(7,8,8,.94);border-bottom:1px solid rgba(43,179,177,.16);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
+.festival-editions-inner{max-width:1180px;margin:auto;padding:10px 24px;display:flex;align-items:stretch;justify-content:center;gap:6px;overflow-x:auto;scrollbar-width:none}
+.festival-editions-inner::-webkit-scrollbar{display:none}
+.festival-edition-link{position:relative;min-width:145px;padding:9px 15px;border:1px solid rgba(255,255,255,.08);border-radius:2px;color:#c9d0d0;text-decoration:none;text-align:center;display:flex;flex-direction:column;justify-content:center;gap:2px;transition:.25s;background:rgba(255,255,255,.025)}
+.festival-edition-link:hover{border-color:rgba(43,179,177,.55);color:#fff;transform:translateY(-1px);background:rgba(43,179,177,.07)}
+.festival-edition-link.main-link{border-color:rgba(43,179,177,.42)}
+.festival-edition-link.current-link{border-color:rgba(43,179,177,.28)}
+.festival-edition-link .edition-year{font:800 13px/1 Inter,sans-serif;letter-spacing:1.5px;color:#2bb3b1}
+.festival-edition-link .lang-ar,.festival-edition-link .lang-en{font-size:11px;line-height:1.35}
+.edition-open{display:inline-flex;align-items:center;gap:8px;margin-top:18px;padding:10px 15px;border:1px solid rgba(43,179,177,.35);color:#fff;text-decoration:none;font-size:11px;letter-spacing:.5px;background:rgba(43,179,177,.06);transition:.25s}
+.edition-open:hover{background:#2bb3b1;color:#071010}
+@media(max-width:700px){.festival-editions-nav{top:62px}.festival-editions-inner{justify-content:flex-start;padding:8px 14px}.festival-edition-link{min-width:116px;padding:8px 11px}.festival-edition-link .lang-ar,.festival-edition-link .lang-en{font-size:10px}.edition-open{width:100%;justify-content:center}}
+
 </style>
 </head>
 <body>
@@ -225,6 +240,17 @@ footer{padding:55px 0 30px;background:#050606}
 <a href="sahara.html"><span class="lang-ar">صحارة</span><span class="lang-en">Sahara</span></a>
 <a href="contact.html"><span class="lang-ar">تواصل</span><span class="lang-en">Contact</span></a>
 </nav>
+<!-- FESTIVAL EDITIONS NAV -->
+<div class="festival-editions-nav">
+  <div class="festival-editions-inner">
+    <a href="festival.html" class="festival-edition-link main-link"><span class="lang-ar">المهرجان</span><span class="lang-en">Festival</span></a>
+    <a href="festival-2022.html" class="festival-edition-link"><span class="edition-year">2022</span><span class="lang-ar">الدورة الأولى</span><span class="lang-en">1st Edition</span></a>
+    <a href="festival-2024.html" class="festival-edition-link"><span class="edition-year">2024</span><span class="lang-ar">الدورة الثانية</span><span class="lang-en">2nd Edition</span></a>
+    <a href="festival-2025.html" class="festival-edition-link"><span class="edition-year">2025</span><span class="lang-ar">الدورة الثالثة</span><span class="lang-en">3rd Edition</span></a>
+    <a href="festival.html#current-edition" class="festival-edition-link current-link"><span class="edition-year">2027</span><span class="lang-ar">الدورة الرابعة</span><span class="lang-en">4th Edition</span></a>
+  </div>
+</div>
+
 <div class="nav-actions"><button class="lang-btn" id="langBtn">EN</button><button class="menu-btn" id="menuBtn">☰</button></div>
 </div>
 <div class="mobile-menu" id="mobileMenu">
@@ -350,17 +376,17 @@ footer{padding:55px 0 30px;background:#050606}
 
 <div class="timeline">
 <article class="step step-1">
-<div class="step-content"><div class="step-year">2022</div><h3 class="lang-ar">من المنيا <span>للمنيا.</span></h3><div class="phase lang-ar">الدورة الأولى · مهرجان المنيا للعروض المسرحية</div><p class="lang-ar">انطلقت التجربة من داخل المنيا، بمشاركة فرق من المحافظة ولجان تحكيم من المنيا فقط. كانت البداية محلية، لكنها حملت فكرة أكبر: أن يكون للفنان في الصعيد منصته ومساحته وجمهوره.</p><h3 class="lang-en">From Minya <span>to Minya.</span></h3><div class="phase lang-en">1st Edition · Minya Short Theatre Festival</div><p class="lang-en">The festival began within Minya, with participating troupes and juries from the governorate. A local beginning carrying a larger idea: artists in Upper Egypt deserve their own platform, space and audience.</p></div>
+<div class="step-content"><div class="step-year">2022</div><h3 class="lang-ar">من المنيا <span>للمنيا.</span></h3><div class="phase lang-ar">الدورة الأولى · مهرجان المنيا للعروض المسرحية</div><p class="lang-ar">انطلقت التجربة من داخل المنيا، بمشاركة فرق من المحافظة ولجان تحكيم من المنيا فقط. كانت البداية محلية، لكنها حملت فكرة أكبر: أن يكون للفنان في الصعيد منصته ومساحته وجمهوره.</p><a class="edition-open" href="festival-2022.html"><span class="lang-ar">استكشف الدورة الأولى ←</span><span class="lang-en">Explore 1st Edition →</span></a><h3 class="lang-en">From Minya <span>to Minya.</span></h3><div class="phase lang-en">1st Edition · Minya Short Theatre Festival</div><p class="lang-en">The festival began within Minya, with participating troupes and juries from the governorate. A local beginning carrying a larger idea: artists in Upper Egypt deserve their own platform, space and audience.</p></div>
 <div class="step-image"></div><div class="step-dot"></div>
 </article>
 
 <article class="step step-2">
-<div class="step-content"><div class="step-year">2024</div><h3 class="lang-ar">من المنيا <span>للمسرح المصري.</span></h3><div class="phase lang-ar">الدورة الثانية</div><p class="lang-ar">في الدورة الثانية تجاوز المهرجان نطاقه المحلي، وفتح أبوابه أمام فرق من مختلف أنحاء مصر، لتتحول المنيا إلى نقطة لقاء بين تجارب مسرحية مصرية متعددة.</p><h3 class="lang-en">From Minya <span>to Egyptian Theatre.</span></h3><div class="phase lang-en">2nd Edition</div><p class="lang-en">The second edition expanded beyond the local scene, welcoming troupes from across Egypt and turning Minya into a meeting point for diverse Egyptian theatre practices.</p></div>
+<div class="step-content"><div class="step-year">2024</div><h3 class="lang-ar">من المنيا <span>للمسرح المصري.</span></h3><div class="phase lang-ar">الدورة الثانية</div><p class="lang-ar">في الدورة الثانية تجاوز المهرجان نطاقه المحلي، وفتح أبوابه أمام فرق من مختلف أنحاء مصر، لتتحول المنيا إلى نقطة لقاء بين تجارب مسرحية مصرية متعددة.</p><h3 class="lang-en">From Minya <span>to Egyptian Theatre.</span></h3><div class="phase lang-en">2nd Edition</div><p class="lang-en">The second edition expanded beyond the local scene, welcoming troupes from across Egypt and turning Minya into a meeting point for diverse Egyptian theatre practices.</p><a class="edition-open" href="festival-2024.html"><span class="lang-ar">استكشف الدورة الثانية ←</span><span class="lang-en">Explore 2nd Edition →</span></a></div>
 <div class="step-image"></div><div class="step-dot"></div>
 </article>
 
 <article class="step step-3">
-<div class="step-content"><div class="step-year">2025</div><h3 class="lang-ar">من المنيا <span>للعالم.</span></h3><div class="phase lang-ar">الدورة الثالثة · مهرجان المنيا المسرحي الدولي</div><p class="lang-ar">أصبح المهرجان دوليًا، مع مشاركة فرق ومدربين من الدول العربية، لتنتقل التجربة من التبادل داخل مصر إلى فضاء أوسع من اللقاء والتعاون الثقافي.</p><h3 class="lang-en">From Minya <span>to the World.</span></h3><div class="phase lang-en">3rd Edition · Minya International Theatre Festival</div><p class="lang-en">The festival became international, welcoming troupes and trainers from Arab countries and expanding its cultural exchange beyond Egypt.</p></div>
+<div class="step-content"><div class="step-year">2025</div><h3 class="lang-ar">من المنيا <span>للعالم.</span></h3><div class="phase lang-ar">الدورة الثالثة · مهرجان المنيا المسرحي الدولي</div><p class="lang-ar">أصبح المهرجان دوليًا، مع مشاركة فرق ومدربين من الدول العربية، لتنتقل التجربة من التبادل داخل مصر إلى فضاء أوسع من اللقاء والتعاون الثقافي.</p><h3 class="lang-en">From Minya <span>to the World.</span></h3><div class="phase lang-en">3rd Edition · Minya International Theatre Festival</div><p class="lang-en">The festival became international, welcoming troupes and trainers from Arab countries and expanding its cultural exchange beyond Egypt.</p><a class="edition-open" href="festival-2025.html"><span class="lang-ar">استكشف الدورة الثالثة ←</span><span class="lang-en">Explore 3rd Edition →</span></a></div>
 <div class="step-image"></div><div class="step-dot"></div>
 </article>
 
