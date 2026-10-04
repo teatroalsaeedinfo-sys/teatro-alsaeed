@@ -87,23 +87,17 @@ url("images/festival-hero.jpg") center/cover}
 .committee-head{display:flex;justify-content:space-between;align-items:end;gap:50px;margin-bottom:60px}
 .committee-head .section-title{margin-bottom:0}
 .committee-note{max-width:350px;color:#8f9898;font-size:14px;line-height:2}
-.committee-grid{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid var(--line);border-right:1px solid var(--line)}
-.member{min-height:290px;padding:30px 25px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;transition:.3s}
-.member:before{content:"";position:absolute;left:22px;top:22px;width:58px;height:58px;border:1px solid rgba(43,179,177,.35);border-radius:50%}
-.member:hover{background:#151919;transform:translateY(-5px)}
-.member-index{position:absolute;top:36px;left:40px;font:800 10px Inter,sans-serif;color:var(--a);letter-spacing:2px}
-.member h3{font-size:22px;line-height:1.35;font-weight:900;margin-bottom:10px}
-.member-role{color:var(--a);font-size:13px;font-weight:800;line-height:1.8}
-.member-en{display:none}
-
-@media(max-width:1000px){
-.committee-grid{grid-template-columns:repeat(2,1fr)}
-.committee-head{display:block}.committee-note{margin-top:20px}
-.vision-grid{grid-template-columns:1fr}.goals{grid-template-columns:1fr}
-}
-@media(max-width:600px){
-.committee-grid{grid-template-columns:1fr}.member{min-height:240px}.vision-card{padding:35px 25px}
-}
+.committee-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
+.member{min-height:390px;padding:34px 20px 30px;border:1px solid var(--line);position:relative;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;overflow:hidden;transition:.3s;background:#101414}
+.member:hover{background:#151919;transform:translateY(-6px);border-color:rgba(43,179,177,.45)}
+.member-photo-wrap{position:relative;margin-bottom:25px}
+.member-photo{width:170px;height:170px;border-radius:50%;object-fit:cover;object-position:center;border:2px solid rgba(43,179,177,.55);padding:5px;background:#0d1010;display:block}
+.member-photo-wrap:after{content:"";position:absolute;inset:-10px;border:1px solid rgba(43,179,177,.18);border-radius:50%;pointer-events:none}
+.member h3{font-size:21px;line-height:1.35;font-weight:900;margin:10px 0}
+.member-role{color:var(--a);font-size:13px;font-weight:800;line-height:1.9}
+@media(max-width:1200px){.committee-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:1000px){.committee-head{display:block}.committee-note{margin-top:20px}.committee-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.committee-grid{grid-template-columns:1fr}.member{min-height:350px}.member-photo{width:155px;height:155px}}
 
 /* JOURNEY */
 .journey{padding:125px 0;background:var(--bg)}
@@ -316,11 +310,36 @@ footer{padding:55px 0 30px;background:#050606}
 <p class="committee-note lang-en">The Higher Committee brings together theatre makers and cultural management professionals who help shape the festival’s artistic and institutional direction.</p>
 </div>
 <div class="committee-grid">
-<article class="member"><div class="member-index">01</div><h3>كيرو صابر</h3><div class="member-role lang-ar">المخرج والكاتب<br>مؤسس ورئيس المهرجان</div><div class="member-role lang-en">Director & Playwright<br>Founder & Festival President</div></article>
-<article class="member"><div class="member-index">02</div><h3>حمزة العيلي</h3><div class="member-role lang-ar">النجم<br>الرئيس الشرفي الدائم للمهرجان</div><div class="member-role lang-en">Actor<br>Permanent Honorary President</div></article>
-<article class="member"><div class="member-index">03</div><h3>أبو بكر الشريف</h3><div class="member-role lang-ar">السينوغرافر<br>عضو اللجنة</div><div class="member-role lang-en">Scenographer<br>Committee Member</div></article>
-<article class="member"><div class="member-index">04</div><h3>محمد ذكي</h3><div class="member-role lang-ar">المخرج والكاتب<br>عضو اللجنة</div><div class="member-role lang-en">Director & Playwright<br>Committee Member</div></article>
-<article class="member"><div class="member-index">05</div><h3>طاهرة طارق</h3><div class="member-role lang-ar">المديرة الثقافية<br>عضو اللجنة</div><div class="member-role lang-en">Cultural Director<br>Committee Member</div></article>
+<article class="member">
+<div class="member-photo-wrap"><img class="member-photo" src="images/festival/committee/kiro-saber.jpg" alt="كيرو صابر"></div>
+<div class="member-role lang-ar">المخرج والكاتب</div><div class="member-role lang-en">Director & Playwright</div>
+<h3>كيرو صابر</h3>
+<div class="member-role lang-ar">مؤسس ورئيس المهرجان</div><div class="member-role lang-en">Founder & Festival President</div>
+</article>
+<article class="member">
+<div class="member-photo-wrap"><img class="member-photo" src="images/festival/committee/hamza-elaily.jpg" alt="حمزة العيلي"></div>
+<div class="member-role lang-ar">النجم</div><div class="member-role lang-en">Actor</div>
+<h3>حمزة العيلي</h3>
+<div class="member-role lang-ar">الرئيس الشرفي الدائم للمهرجان</div><div class="member-role lang-en">Permanent Honorary President</div>
+</article>
+<article class="member">
+<div class="member-photo-wrap"><img class="member-photo" src="images/festival/committee/abu-bakr-el-sherif.jpg" alt="أبو بكر الشريف"></div>
+<div class="member-role lang-ar">السينوغرافر</div><div class="member-role lang-en">Scenographer</div>
+<h3>أبو بكر الشريف</h3>
+<div class="member-role lang-ar">عضو اللجنة</div><div class="member-role lang-en">Committee Member</div>
+</article>
+<article class="member">
+<div class="member-photo-wrap"><img class="member-photo" src="images/festival/committee/mohamed-zaki.jpg" alt="محمد ذكي"></div>
+<div class="member-role lang-ar">المخرج والكاتب</div><div class="member-role lang-en">Director & Playwright</div>
+<h3>محمد ذكي</h3>
+<div class="member-role lang-ar">عضو اللجنة</div><div class="member-role lang-en">Committee Member</div>
+</article>
+<article class="member">
+<div class="member-photo-wrap"><img class="member-photo" src="images/festival/committee/tahera-tarek.jpg" alt="طاهرة طارق"></div>
+<div class="member-role lang-ar">المديرة الثقافية</div><div class="member-role lang-en">Cultural Director</div>
+<h3>طاهرة طارق</h3>
+<div class="member-role lang-ar">عضو اللجنة</div><div class="member-role lang-en">Committee Member</div>
+</article>
 </div>
 </div>
 </section>
