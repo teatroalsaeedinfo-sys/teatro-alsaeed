@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="مهرجان المنيا المسرحي الدولي — من المنيا إلى العالم. الدورة الرابعة، أبريل 2027، أبعد من الحدود.">
+<title>مهرجان المنيا المسرحي الدولي | أبعد من الحدود</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--a:#2bb3b1;--bg:#070808;--bg2:#101313;--white:#fff;--muted:#aeb5b5;
+--line:rgba(255,255,255,.12);--light:#f4f5f5;--ink:#111414;--max:1240px
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:#fff;font-family:Cairo,sans-serif;line-height:1.8;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.lang-en{display:none!important}
+body.english .lang-ar{display:none!important}
+body.english .lang-en{display:block!important}
+.container{width:min(var(--max),calc(100% - 48px));margin:auto}
+
+/* NAV */
+.nav{position:fixed;inset:0 0 auto;height:82px;z-index:1000;background:rgba(7,8,8,.7);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{width:108px}
+.nav-links{display:flex;gap:25px;font-size:14px;font-weight:700}
+.nav-links a{opacity:.82;transition:.25s}
+.nav-links a:hover{opacity:1;color:var(--a)}
+.nav-actions{display:flex;gap:10px}
+.lang-btn,.menu-btn{height:40px;background:transparent;color:#fff;border:1px solid var(--line);border-radius:4px;cursor:pointer;font-weight:800}
+.lang-btn{min-width:42px;font-size:12px}
+.menu-btn{display:none;width:42px;font-size:20px}
+.mobile-menu{display:none;position:absolute;top:82px;left:0;right:0;background:#070808;border-bottom:1px solid var(--line)}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:14px 24px;border-bottom:1px solid var(--line);font-weight:700}
+
+/* HERO */
+.hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;background:
+linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.28) 70%,rgba(0,0,0,.55)),
+linear-gradient(0deg,rgba(0,0,0,.92),transparent 55%),
+url("images/festival-hero.jpg") center/cover}
+.hero:after{content:"2027";position:absolute;left:-30px;bottom:-90px;font:900 300px/1 Inter,sans-serif;color:rgba(255,255,255,.035);pointer-events:none}
+.hero-content{position:relative;z-index:2;padding:150px 0 100px;max-width:1000px}
+.eyebrow{font:800 12px Inter,sans-serif;letter-spacing:2px;color:var(--a);margin-bottom:24px}
+.hero h1{font-size:clamp(48px,8vw,108px);line-height:1.02;font-weight:900;letter-spacing:-3px}
+.hero h1 span{color:var(--a)}
+.hero-sub{font-size:clamp(20px,3vw,34px);font-weight:700;margin-top:25px}
+.hero-copy{max-width:680px;color:#c5cbcb;margin:22px 0 34px;font-size:17px;line-height:2}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 25px;border:1px solid rgba(255,255,255,.22);font-weight:800;font-size:14px;border-radius:2px;transition:.25s}
+.btn-primary{background:var(--a);border-color:var(--a);color:#061010}
+.btn-primary:hover{background:#fff;border-color:#fff}
+.btn-outline:hover{background:#fff;color:#111}
+.hero-stamp{position:absolute;bottom:45px;right:0;z-index:2;display:flex;align-items:center;gap:14px;color:#9aa1a1;font:700 11px Inter,sans-serif;letter-spacing:2px}
+.hero-stamp:before{content:"";width:55px;height:1px;background:var(--a)}
+
+/* INTRO */
+.intro{background:var(--light);color:var(--ink);padding:120px 0}
+.intro-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:90px;align-items:center}
+.kicker{font:800 11px Inter,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#6c7474;margin-bottom:18px}
+.intro h2{font-size:clamp(36px,5.3vw,68px);line-height:1.15;font-weight:900}
+.intro h2 span{color:#1a9b99}
+.intro-copy{font-size:18px;color:#515959;line-height:2.1}
+.intro-line{width:80px;height:3px;background:var(--a);margin-bottom:25px}
+
+/* JOURNEY */
+.journey{padding:125px 0;background:var(--bg)}
+.section-title{margin-bottom:80px;max-width:900px}
+.section-title .kicker{color:var(--a)}
+.section-title h2{font-size:clamp(40px,6vw,76px);line-height:1.08;font-weight:900}
+.section-title p{color:var(--muted);font-size:17px;line-height:2;margin-top:22px;max-width:720px}
+.timeline{position:relative}
+.timeline:before{content:"";position:absolute;top:0;bottom:0;right:50%;width:1px;background:var(--line)}
+.step{position:relative;display:grid;grid-template-columns:1fr 1fr;min-height:400px}
+.step-content{padding:45px 65px}
+.step:nth-child(odd) .step-content:first-child{grid-column:2}
+.step:nth-child(odd) .step-content:last-child{grid-column:1;grid-row:1}
+.step:nth-child(even) .step-content:first-child{grid-column:1}
+.step:nth-child(even) .step-content:last-child{grid-column:2}
+.step-dot{position:absolute;right:calc(50% - 7px);top:50px;width:14px;height:14px;border:3px solid var(--a);background:var(--bg);border-radius:50%;z-index:2}
+.step-year{font:900 clamp(54px,7vw,100px)/1 Inter,sans-serif;color:rgba(255,255,255,.08);margin-bottom:-35px}
+.step h3{font-size:clamp(28px,4vw,50px);line-height:1.15;font-weight:900}
+.step h3 span{color:var(--a)}
+.step .phase{color:var(--a);font-weight:800;margin:10px 0 16px}
+.step p{color:#9ea6a6;line-height:2;max-width:500px}
+.step-image{min-height:330px;background-position:center;background-size:cover;position:relative}
+.step-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,8,8,.1),rgba(7,8,8,.55))}
+.step-1 .step-image{background-image:url("images/festival-2022.jpg")}
+.step-2 .step-image{background-image:url("images/festival-2024.jpg")}
+.step-3 .step-image{background-image:url("images/festival-2025.jpg")}
+.step-4 .step-image{background-image:url("images/festival-2027.jpg")}
+
+/* CURRENT */
+.current{background:var(--light);color:var(--ink);padding:125px 0}
+.current-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.current h2{font-size:clamp(45px,6vw,80px);line-height:1.05;font-weight:900}
+.current h2 span{color:#169693}
+.current p{color:#586161;font-size:17px;line-height:2;margin:25px 0}
+.current-box{border-top:1px solid #d4d9d9;border-bottom:1px solid #d4d9d9;margin-top:30px}
+.current-item{display:flex;justify-content:space-between;gap:25px;padding:18px 0;border-bottom:1px solid #d4d9d9}
+.current-item:last-child{border-bottom:0}
+.current-item strong{font-size:15px}.current-item span{color:#697171;text-align:left}
+
+/* PROGRAM */
+.program{padding:115px 0;background:var(--bg2)}
+.program-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-right:1px solid var(--line)}
+.program-card{min-height:260px;padding:32px 27px;border-left:1px solid var(--line);border-bottom:1px solid var(--line);transition:.3s}
+.program-card:hover{background:#171b1b;transform:translateY(-4px)}
+.program-no{font:700 11px Inter,sans-serif;color:var(--a);letter-spacing:2px}
+.program-card h3{font-size:23px;margin:40px 0 12px;font-weight:900}
+.program-card p{font-size:13px;color:#9fa6a6;line-height:1.95}
+
+/* WORLD */
+.world{padding:130px 0;position:relative;overflow:hidden;background:
+radial-gradient(circle at 50% 45%,rgba(43,179,177,.12),transparent 25%),
+#070808}
+.world:before{content:"";position:absolute;inset:0;background:url("images/world-map.png") center/contain no-repeat;opacity:.13}
+.world-inner{position:relative;z-index:1;text-align:center}
+.world .kicker{color:var(--a)}
+.world h2{font-size:clamp(45px,7vw,100px);line-height:1;font-weight:900}
+.world h2 span{color:var(--a)}
+.world p{max-width:720px;margin:30px auto;color:#adb4b4;font-size:17px;line-height:2}
+.route{display:flex;justify-content:center;align-items:center;gap:18px;margin:45px 0;color:#dce1e1;font-weight:800}
+.route i{display:block;width:65px;height:1px;background:var(--a)}
+.route em{font-style:normal;color:var(--a)}
+
+/* NUMBERS */
+.numbers{padding:90px 0;background:#0d1010}
+.numbers-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.number{padding:35px 25px;border-left:1px solid var(--line)}
+.number:first-child{border-right:1px solid var(--line)}
+.number strong{font:900 clamp(45px,6vw,75px)/1 Inter,sans-serif}
+.number span{display:block;color:var(--a);font-weight:800;font-size:13px;margin-top:12px}
+
+/* FINAL CTA */
+.final{min-height:70vh;display:flex;align-items:center;text-align:center;position:relative;overflow:hidden;background:linear-gradient(0deg,rgba(0,0,0,.88),rgba(0,0,0,.45)),url("images/festival-final.jpg") center/cover}
+.final:after{content:"أبعد من الحدود";position:absolute;white-space:nowrap;left:50%;top:50%;transform:translate(-50%,-50%);font-size:clamp(90px,15vw,220px);font-weight:900;color:rgba(255,255,255,.035)}
+.final-inner{position:relative;z-index:1}
+.final .kicker{color:var(--a)}
+.final h2{font-size:clamp(50px,9vw,120px);line-height:1;font-weight:900}
+.final h2 span{color:var(--a)}
+.final p{max-width:650px;margin:25px auto 32px;color:#c1c7c7;font-size:18px}
+
+/* FOOTER */
+footer{padding:55px 0 30px;background:#050606}
+.footer-top{display:flex;justify-content:space-between;gap:40px;padding-bottom:35px;border-bottom:1px solid var(--line)}
+.footer-logo{width:100px;margin-bottom:16px}
+.footer-brand p{color:#858c8c;max-width:400px;font-size:13px}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;color:#aaa;font-size:13px}
+.footer-links a:hover{color:var(--a)}
+.footer-bottom{padding-top:22px;display:flex;justify-content:space-between;color:#626969;font-size:11px}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+.nav-links{display:none}.menu-btn{display:block}
+.intro-grid,.current-grid{grid-template-columns:1fr;gap:45px}
+.program-grid{grid-template-columns:repeat(2,1fr)}
+.step{grid-template-columns:1fr;min-height:0;margin-bottom:65px}
+.timeline:before{display:none}
+.step-content,.step:nth-child(odd) .step-content:first-child,.step:nth-child(odd) .step-content:last-child,.step:nth-child(even) .step-content:first-child,.step:nth-child(even) .step-content:last-child{grid-column:auto;grid-row:auto;padding:25px 0}
+.step-dot{display:none}.step-image{min-height:320px}
+.numbers-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+.container{width:calc(100% - 30px)}.nav{height:70px}.mobile-menu{top:70px}.logo{width:88px}
+.hero-content{padding:135px 0 85px}.hero h1{letter-spacing:-1px}.hero-copy{font-size:15px}.hero-stamp{display:none}
+.intro,.journey,.current,.program,.world{padding:80px 0}.section-title{margin-bottom:45px}
+.program-grid{grid-template-columns:1fr}.program-card{min-height:235px}
+.numbers-grid{grid-template-columns:1fr 1fr}.number{padding:28px 15px}
+.final{min-height:60vh}.footer-top,.footer-bottom{display:block}.footer-links{margin-top:25px}
+.footer-bottom div+div{margin-top:8px}
+.route{font-size:13px}.route i{width:30px}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+<div class="container nav-inner">
+<a href="index.html"><img class="logo" src="logo.png" alt="تياترو الصعيد"></a>
+<nav class="nav-links">
+<a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+<a href="about.html"><span class="lang-ar">عنّا</span><span class="lang-en">About</span></a>
+<a href="troupe.html"><span class="lang-ar">الفرقة</span><span class="lang-en">Troupe</span></a>
+<a href="productions.html"><span class="lang-ar">العروض</span><span class="lang-en">Productions</span></a>
+<a href="academy.html"><span class="lang-ar">الأكاديمية</span><span class="lang-en">Academy</span></a>
+<a href="festival.html"><span class="lang-ar">المهرجان</span><span class="lang-en">Festival</span></a>
+<a href="sahara.html"><span class="lang-ar">صحارة</span><span class="lang-en">Sahara</span></a>
+<a href="contact.html"><span class="lang-ar">تواصل</span><span class="lang-en">Contact</span></a>
+</nav>
+<div class="nav-actions"><button class="lang-btn" id="langBtn">EN</button><button class="menu-btn" id="menuBtn">☰</button></div>
+</div>
+<div class="mobile-menu" id="mobileMenu">
+<a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+<a href="about.html"><span class="lang-ar">عنّا</span><span class="lang-en">About</span></a>
+<a href="troupe.html"><span class="lang-ar">الفرقة</span><span class="lang-en">Troupe</span></a>
+<a href="productions.html"><span class="lang-ar">العروض</span><span class="lang-en">Productions</span></a>
+<a href="academy.html"><span class="lang-ar">الأكاديمية</span><span class="lang-en">Academy</span></a>
+<a href="festival.html"><span class="lang-ar">المهرجان</span><span class="lang-en">Festival</span></a>
+<a href="sahara.html"><span class="lang-ar">صحارة</span><span class="lang-en">Sahara</span></a>
+<a href="contact.html"><span class="lang-ar">تواصل</span><span class="lang-en">Contact</span></a>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<div class="container hero-content">
+<div class="eyebrow">MINYA INTERNATIONAL THEATRE FESTIVAL</div>
+<h1 class="lang-ar">أبعد <span>من الحدود.</span></h1>
+<h1 class="lang-en">Beyond <span>Borders.</span></h1>
+<div class="hero-sub lang-ar">مهرجان المنيا المسرحي الدولي · الدورة الرابعة</div>
+<div class="hero-sub lang-en">Minya International Theatre Festival · 4th Edition</div>
+<p class="hero-copy lang-ar">أبريل 2027 — دورة جديدة تفتح المنيا على العالم، بمشاركة فرق ومدربين من مختلف أنحاء العالم.</p>
+<p class="hero-copy lang-en">April 2027 — a new edition opening Minya to the world, bringing together theatre troupes and trainers from around the globe.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#journey"><span class="lang-ar">رحلة المهرجان</span><span class="lang-en">The festival journey</span></a>
+<a class="btn btn-outline" href="#edition"><span class="lang-ar">الدورة الرابعة</span><span class="lang-en">4th Edition</span></a>
+</div>
+</div>
+<div class="hero-stamp">MINYA · EGYPT · 2027</div>
+</section>
+
+<section class="intro">
+<div class="container intro-grid">
+<div><div class="kicker"><span class="lang-ar">رحلة تتطور كل عام</span><span class="lang-en">A FESTIVAL THAT EVOLVES</span></div><h2 class="lang-ar">ثلاث دورات صنعت الطريق.<br><span>والرابعة تتجاوز الحدود.</span></h2><h2 class="lang-en">Three editions built the road.<br><span>The fourth goes beyond borders.</span></h2></div>
+<div class="intro-copy"><div class="intro-line"></div><p class="lang-ar">بدأ المهرجان من المنيا، بصوت محلي وتجربة تجمع فناني المحافظة. ثم اتسع ليصل إلى المسرح المصري، قبل أن يعبر الحدود ويصبح مهرجانًا دوليًا. في 2027، تبدأ مرحلة جديدة من الرحلة.</p><p class="lang-en">The festival began in Minya as a local platform for artists from the governorate. It expanded to the Egyptian theatre scene, then crossed borders to become an international festival. In 2027, a new chapter begins.</p></div>
+</div>
+</section>
+
+<section class="journey" id="journey">
+<div class="container">
+<div class="section-title"><div class="kicker"><span class="lang-ar">رحلة المهرجان</span><span class="lang-en">THE JOURNEY</span></div><h2 class="lang-ar">من المنيا<br>إلى العالم.</h2><h2 class="lang-en">From Minya<br>to the world.</h2><p class="lang-ar">كل دورة لم تكن مجرد نسخة جديدة، بل خطوة نحو توسيع مساحة اللقاء المسرحي.</p><p class="lang-en">Each edition has been more than a new festival — it has been a step toward a wider theatrical encounter.</p></div>
+
+<div class="timeline">
+<article class="step step-1">
+<div class="step-content"><div class="step-year">2022</div><h3 class="lang-ar">من المنيا <span>للمنيا.</span></h3><div class="phase lang-ar">الدورة الأولى · مهرجان المنيا للعروض المسرحية</div><p class="lang-ar">انطلقت التجربة من داخل المنيا، بمشاركة فرق من المحافظة ولجان تحكيم من المنيا فقط. كانت البداية محلية، لكنها حملت فكرة أكبر: أن يكون للفنان في الصعيد منصته ومساحته وجمهوره.</p><h3 class="lang-en">From Minya <span>to Minya.</span></h3><div class="phase lang-en">1st Edition · Minya Short Theatre Festival</div><p class="lang-en">The festival began within Minya, with participating troupes and juries from the governorate. A local beginning carrying a larger idea: artists in Upper Egypt deserve their own platform, space and audience.</p></div>
+<div class="step-image"></div><div class="step-dot"></div>
+</article>
+
+<article class="step step-2">
+<div class="step-content"><div class="step-year">2024</div><h3 class="lang-ar">من المنيا <span>للمسرح المصري.</span></h3><div class="phase lang-ar">الدورة الثانية</div><p class="lang-ar">في الدورة الثانية تجاوز المهرجان نطاقه المحلي، وفتح أبوابه أمام فرق من مختلف أنحاء مصر، لتتحول المنيا إلى نقطة لقاء بين تجارب مسرحية مصرية متعددة.</p><h3 class="lang-en">From Minya <span>to Egyptian Theatre.</span></h3><div class="phase lang-en">2nd Edition</div><p class="lang-en">The second edition expanded beyond the local scene, welcoming troupes from across Egypt and turning Minya into a meeting point for diverse Egyptian theatre practices.</p></div>
+<div class="step-image"></div><div class="step-dot"></div>
+</article>
+
+<article class="step step-3">
+<div class="step-content"><div class="step-year">2025</div><h3 class="lang-ar">من المنيا <span>للعالم.</span></h3><div class="phase lang-ar">الدورة الثالثة · مهرجان المنيا المسرحي الدولي</div><p class="lang-ar">أصبح المهرجان دوليًا، مع مشاركة فرق ومدربين من الدول العربية، لتنتقل التجربة من التبادل داخل مصر إلى فضاء أوسع من اللقاء والتعاون الثقافي.</p><h3 class="lang-en">From Minya <span>to the World.</span></h3><div class="phase lang-en">3rd Edition · Minya International Theatre Festival</div><p class="lang-en">The festival became international, welcoming troupes and trainers from Arab countries and expanding its cultural exchange beyond Egypt.</p></div>
+<div class="step-image"></div><div class="step-dot"></div>
+</article>
+
+<article class="step step-4" id="edition">
+<div class="step-content"><div class="step-year">2027</div><h3 class="lang-ar">أبعد <span>من الحدود.</span></h3><div class="phase lang-ar">الدورة الرابعة · أبريل 2027</div><p class="lang-ar">المرحلة الجديدة من رحلة المهرجان: مشاركة فرق ومدربين من مختلف أنحاء العالم، وفتح مساحة أوسع للقاء والتبادل والتجارب المسرحية العابرة للحدود.</p><h3 class="lang-en">Beyond <span>Borders.</span></h3><div class="phase lang-en">4th Edition · April 2027</div><p class="lang-en">The next chapter: welcoming theatre troupes and trainers from around the world and creating a wider space for exchange, encounter and cross-border theatre practices.</p></div>
+<div class="step-image"></div><div class="step-dot"></div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="current" id="edition">
+<div class="container current-grid">
+<div><div class="kicker"><span class="lang-ar">الدورة الرابعة · 2027</span><span class="lang-en">4TH EDITION · 2027</span></div><h2 class="lang-ar">أبعد <span>من الحدود.</span></h2><h2 class="lang-en">Beyond <span>Borders.</span></h2><p class="lang-ar">ليست مجرد دورة جديدة، بل مرحلة جديدة في هوية المهرجان. من منصة انطلقت محليًا إلى مهرجان يطمح إلى جمع التجارب المسرحية من مختلف أنحاء العالم في مدينة المنيا.</p><p class="lang-en">Not simply another edition, but a new stage in the festival’s identity — from a local platform to a festival aspiring to bring theatre practices from around the world to Minya.</p></div>
+<div><div class="current-box"><div class="current-item"><strong class="lang-ar">التوقيت</strong><strong class="lang-en">When</strong><span>APRIL 2027</span></div><div class="current-item"><strong class="lang-ar">المكان</strong><strong class="lang-en">Where</strong><span>MINYA · EGYPT</span></div><div class="current-item"><strong class="lang-ar">المشاركة</strong><strong class="lang-en">Participants</strong><span class="lang-ar">فرق ومدربون من العالم</span><span class="lang-en">Troupes & trainers worldwide</span></div><div class="current-item"><strong class="lang-ar">الشعار</strong><strong class="lang-en">Theme</strong><span>BEYOND BORDERS</span></div></div></div>
+</div>
+</section>
+
+<section class="program">
+<div class="container">
+<div class="section-title"><div class="kicker"><span class="lang-ar">تجربة المهرجان</span><span class="lang-en">THE FESTIVAL EXPERIENCE</span></div><h2 class="lang-ar">المسرح كمساحة<br>للالتقاء.</h2><h2 class="lang-en">Theatre as a space<br>for encounter.</h2></div>
+<div class="program-grid">
+<article class="program-card"><div class="program-no">01 / STAGE</div><h3 class="lang-ar">عروض مسرحية</h3><h3 class="lang-en">Performances</h3><p class="lang-ar">تجارب وعروض مسرحية من مصر والعالم، تفتح مساحات للمشاهدة والتجريب والحوار.</p><p class="lang-en">Theatre practices and performances from Egypt and around the world.</p></article>
+<article class="program-card"><div class="program-no">02 / LAB</div><h3 class="lang-ar">ورش تدريبية</h3><h3 class="lang-en">Workshops</h3><p class="lang-ar">لقاء مباشر بين الفنانين والمدربين والخبرات المختلفة، ونقل المعرفة عبر الممارسة.</p><p class="lang-en">Direct exchange between artists, trainers and different theatre practices.</p></article>
+<article class="program-card"><div class="program-no">03 / DIALOGUE</div><h3 class="lang-ar">حوار وتبادل</h3><h3 class="lang-en">Dialogue & Exchange</h3><p class="lang-ar">مساحات للنقاش وتبادل الأفكار والخبرات حول المسرح ومستقبله.</p><p class="lang-en">Spaces for dialogue, ideas and exchange around theatre and its future.</p></article>
+<article class="program-card"><div class="program-no">04 / CULTURE</div><h3 class="lang-ar">تبادل ثقافي</h3><h3 class="lang-en">Cultural Exchange</h3><p class="lang-ar">الفن كوسيلة للقاء بين الثقافات، وبناء علاقات جديدة تتجاوز الجغرافيا.</p><p class="lang-en">Art as a way to connect cultures and build relationships beyond geography.</p></article>
+</div>
+</div>
+</section>
+
+<section class="world">
+<div class="container world-inner">
+<div class="kicker">MINYA × THE WORLD</div>
+<h2 class="lang-ar">هنا <span>يلتقي العالم.</span></h2>
+<h2 class="lang-en">Where the <span>world meets.</span></h2>
+<p class="lang-ar">من قلب صعيد مصر، نفتح مساحة للقاء. مهرجان يولد من المنيا، لكنه لا يتوقف عند حدودها.</p>
+<p class="lang-en">From the heart of Upper Egypt, we create a space for encounter. A festival born in Minya, with an ambition that reaches beyond its borders.</p>
+<div class="route"><span>MINYA</span><i></i><em>THE WORLD</em></div>
+</div>
+</section>
+
+<section class="numbers">
+<div class="container"><div class="numbers-grid">
+<div class="number"><strong>03</strong><span class="lang-ar">دورات مكتملة</span><span class="lang-en">Completed editions</span></div>
+<div class="number"><strong>2022</strong><span class="lang-ar">عام الانطلاق</span><span class="lang-en">Launch year</span></div>
+<div class="number"><strong>04</strong><span class="lang-ar">الدورة القادمة</span><span class="lang-en">Next edition</span></div>
+<div class="number"><strong>2027</strong><span class="lang-ar">أبريل · الدورة الرابعة</span><span class="lang-en">April · 4th edition</span></div>
+</div></div>
+</section>
+
+<section class="final">
+<div class="container final-inner">
+<div class="kicker">MINYA INTERNATIONAL THEATRE FESTIVAL · 2027</div>
+<h2 class="lang-ar">أبعد <span>من الحدود.</span></h2>
+<h2 class="lang-en">Beyond <span>Borders.</span></h2>
+<p class="lang-ar">من المنيا إلى العالم — تبدأ هنا مرحلة جديدة من رحلة المهرجان.</p>
+<p class="lang-en">From Minya to the world — a new chapter of the festival journey begins here.</p>
+<a class="btn btn-primary" href="contact.html"><span class="lang-ar">تواصل مع المهرجان</span><span class="lang-en">Contact the festival</span></a>
+</div>
+</section>
+</main>
+
+<footer><div class="container"><div class="footer-top"><div class="footer-brand"><img src="logo.png" class="footer-logo" alt="Teatro Alsaeed"><p class="lang-ar">مهرجان المنيا المسرحي الدولي — من المنيا إلى العالم.</p><p class="lang-en">Minya International Theatre Festival — From Minya to the world.</p></div><div class="footer-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="productions.html">Productions</a><a href="academy.html">Academy</a><a href="festival.html">Festival</a><a href="contact.html">Contact</a></div></div><div class="footer-bottom"><div>© <span id="year"></span> Minya International Theatre Festival</div><div class="lang-ar">تياترو الصعيد</div><div class="lang-en">Teatro Alsaeed</div></div></div></footer>
+
+<script>
+const langBtn=document.getElementById("langBtn"),menuBtn=document.getElementById("menuBtn"),mobileMenu=document.getElementById("mobileMenu");
+function setLang(lang,save=true){
+document.body.classList.toggle("english",lang==="en");
+document.documentElement.lang=lang;
+document.documentElement.dir=lang==="en"?"ltr":"rtl";
+langBtn.textContent=lang==="en"?"AR":"EN";
+if(save){try{localStorage.setItem("siteLang",lang)}catch(e){}}
+}
+let saved="ar";try{saved=localStorage.getItem("siteLang")||"ar"}catch(e){}
+setLang(saved,false);
+langBtn.onclick=()=>setLang(document.body.classList.contains("english")?"ar":"en");
+menuBtn.onclick=()=>{mobileMenu.classList.toggle("open");menuBtn.textContent=mobileMenu.classList.contains("open")?"×":"☰"};
+document.querySelectorAll(".mobile-menu a").forEach(a=>a.onclick=()=>{mobileMenu.classList.remove("open");menuBtn.textContent="☰"});
+document.getElementById("year").textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
