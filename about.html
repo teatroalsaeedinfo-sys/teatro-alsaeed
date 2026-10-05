@@ -249,9 +249,38 @@ footer p{color:#888;font-size:13px}
   .manifesto h2{font-size:43px}
 }
 </style>
+
+<style id="site-master-style">
+.site-master-nav{position:fixed;top:0;left:0;right:0;height:72px;background:rgba(10,11,11,.96);border-bottom:1px solid rgba(255,255,255,.08);z-index:99999;backdrop-filter:blur(12px);font-family:Inter,Arial,sans-serif}
+.site-master-inner{height:100%;max-width:1400px;margin:auto;padding:0 22px;display:flex;align-items:center;gap:20px}.site-brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;min-width:max-content}.site-brand img{width:42px;height:42px;object-fit:contain}.site-brand-text{display:flex;flex-direction:column;line-height:1.05}.site-brand-text b{font-size:13px}.site-brand-text small{font-size:9px;opacity:.55;letter-spacing:1px;margin-top:4px}.site-master-links{display:flex;align-items:center;justify-content:flex-end;gap:3px;flex:1}.site-master-links a{color:#ddd;text-decoration:none;padding:10px 8px;font-size:11px;white-space:nowrap;transition:.2s}.site-master-links a:hover{color:#2bb3b1}.site-lang-btn{border:1px solid rgba(43,179,177,.55);background:transparent;color:#fff;padding:7px 10px;border-radius:3px;cursor:pointer;margin-left:5px}.site-menu-btn{display:none;background:none;border:0;color:#fff;font-size:25px;cursor:pointer;margin-left:auto}.site-master-nav .en{display:none}.site-master-nav.english .ar{display:none}.site-master-nav.english .en{display:inline}.site-master-nav.english{direction:ltr}.site-master-nav.english .site-master-links{justify-content:flex-start}.site-master-nav.english .site-lang-btn{order:10}
+body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header.navbar{display:none!important}
+@media(max-width:1150px){.site-brand-text{display:none}.site-master-links a{padding:9px 6px;font-size:10px}}
+@media(max-width:900px){.site-menu-btn{display:block}.site-master-links{display:none;position:absolute;top:72px;left:0;right:0;background:#0c0d0d;padding:12px 20px 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid rgba(255,255,255,.08)}.site-master-links.open{display:flex}.site-master-links a{padding:13px 4px;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px}.site-lang-btn{margin:12px 0 0;align-self:flex-start}}
+</style>
 </head>
 
 <body>
+<!-- SITE-WIDE MASTER NAV -->
+<nav class="site-master-nav" id="siteMasterNav">
+  <div class="site-master-inner">
+    <a class="site-brand" href="index.html"><img src="logo.png" alt="Teatro Alsaeed"><span class="site-brand-text"><b>تياترو الصعيد</b><small>Teatro Alsaeed</small></span></a>
+    <button class="site-menu-btn" id="siteMenuBtn" aria-label="Open menu">☰</button>
+    <div class="site-master-links" id="siteMasterLinks">
+      <a href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
+      <a href="about.html"><span class="ar">عنّا</span><span class="en">About</span></a>
+      <a href="troupe.html"><span class="ar">الفرقة</span><span class="en">Troupe</span></a>
+      <a href="productions.html"><span class="ar">العروض</span><span class="en">Productions</span></a>
+      <a href="academy.html"><span class="ar">الأكاديمية</span><span class="en">Academy</span></a>
+      <a href="cinema-school.html"><span class="ar">مدرسة السينما</span><span class="en">Cinema School</span></a>
+      <a href="incubator.html"><span class="ar">الحاضنة</span><span class="en">Incubator</span></a>
+      <a href="festival.html"><span class="ar">المهرجان</span><span class="en">Festival</span></a>
+      <a href="sahara.html"><span class="ar">صحارة</span><span class="en">Sahara</span></a>
+      <a href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
+      <button class="site-lang-btn" id="siteLangBtn">EN</button>
+    </div>
+  </div>
+</nav>
+
 
 <header class="navbar">
   <div class="nav">
@@ -546,5 +575,19 @@ footer p{color:#888;font-size:13px}
 })();
 </script>
 
+
+<footer class="site-master-footer">
+<div class="site-footer-grid">
+<div><img src="logo.png" alt="Teatro Alsaeed" class="site-footer-logo"><p class="ar">إحياء وتطوير الفنون</p><p class="en">Reviving and Developing the Arts</p></div>
+<div><h4 class="ar">استكشف</h4><h4 class="en">Explore</h4><div class="site-footer-links"><a href="index.html">الرئيسية</a><a href="about.html">عنّا</a><a href="troupe.html">الفرقة</a><a href="productions.html">العروض</a><a href="academy.html">الأكاديمية</a><a href="cinema-school.html">مدرسة السينما</a><a href="incubator.html">الحاضنة</a><a href="festival.html">المهرجان</a><a href="sahara.html">صحارة</a><a href="contact.html">تواصل</a></div></div>
+<div><h4 class="ar">تواصل</h4><h4 class="en">Contact</h4><p>Minya, Egypt</p><p><a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a></p><div class="site-social"><a href="https://www.facebook.com/TeatroAlSaeed">Facebook</a><a href="https://www.instagram.com/teatroalsaeed/">Instagram</a><a href="https://www.youtube.com/@TeatroAlsaeed">YouTube</a><a href="https://www.tiktok.com/@teatro.alsaeed">TikTok</a></div></div>
+</div><div class="site-footer-bottom">© <span id="siteYear"></span> Teatro Alsaeed · Minya, Egypt</div>
+</footer>
+<style id="site-master-footer-style">.site-master-footer{background:#0a0b0b;color:#aaa;padding:55px 24px 22px;border-top:1px solid rgba(255,255,255,.08);font-family:Inter,Arial,sans-serif}.site-footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1.5fr 1fr;gap:45px}.site-master-footer h4{color:#fff;margin:0 0 15px}.site-master-footer p{font-size:13px;line-height:1.7;margin:7px 0}.site-master-footer a{color:#aaa;text-decoration:none}.site-master-footer a:hover{color:#2bb3b1}.site-footer-logo{width:55px;margin-bottom:12px}.site-footer-links{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;font-size:12px}.site-social{display:flex;gap:12px;flex-wrap:wrap;font-size:12px}.site-footer-bottom{max-width:1200px;margin:35px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.07);font-size:11px;text-align:center;color:#666}@media(max-width:800px){.site-footer-grid{grid-template-columns:1fr;gap:30px}.site-footer-links{grid-template-columns:1fr 1fr}}
+</style>
+<script>document.getElementById("siteYear")&&(document.getElementById("siteYear").textContent=new Date().getFullYear());</script>
+<script id="site-master-script">
+(function(){const n=document.getElementById('siteMasterNav'),m=document.getElementById('siteMenuBtn'),l=document.getElementById('siteMasterLinks'),b=document.getElementById('siteLangBtn'); if(!n)return; let lang=localStorage.getItem('teatroLang')||'ar'; function setLang(x){n.classList.toggle('english',x==='en');document.documentElement.lang=x;document.documentElement.dir=x==='en'?'ltr':'rtl';b.textContent=x==='en'?'AR':'EN';localStorage.setItem('teatroLang',x)} setLang(lang); m&&m.addEventListener('click',()=>l.classList.toggle('open')); b&&b.addEventListener('click',()=>setLang(n.classList.contains('english')?'ar':'en')); l&&l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));})();
+</script>
 </body>
 </html>
