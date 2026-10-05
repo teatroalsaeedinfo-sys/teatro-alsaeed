@@ -1,0 +1,1 @@
+ارفع cinema-school.html إلى جذر الموقع، ومحتويات images/ إلى مجلد images/.\n
