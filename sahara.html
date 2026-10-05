@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 :root{
   --accent:#2bb3b1;
   --dark:#080909;
@@ -137,8 +138,13 @@ img{
   display:flex;
   align-items:center;
   overflow:hidden;
+
   background:
-    linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.35)),
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.88),
+      rgba(0,0,0,.42)
+    ),
     url("images/sahara2/field-01.jpg") center/cover;
 }
 
@@ -146,8 +152,13 @@ img{
   content:"";
   position:absolute;
   inset:0;
+
   background:
-    linear-gradient(180deg,rgba(0,0,0,.35),var(--dark) 100%);
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.30),
+      var(--dark) 100%
+    );
 }
 
 .hero-content{
@@ -201,6 +212,24 @@ img{
   padding:8px 16px;
   border-radius:30px;
   font-size:13px;
+}
+
+.funding-note{
+  margin-top:25px;
+  color:#c7cdcd;
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.funding-note::before{
+  content:"";
+  width:7px;
+  height:7px;
+  border-radius:50%;
+  background:var(--accent);
+  flex:none;
 }
 
 /* ================= SECTIONS ================= */
@@ -347,6 +376,18 @@ section{
   margin-bottom:55px;
 }
 
+.edition-support{
+  display:inline-block;
+  margin-top:-25px;
+  margin-bottom:55px;
+  padding:10px 18px;
+  border:1px solid rgba(43,179,177,.25);
+  background:rgba(43,179,177,.05);
+  color:#c9d0d0;
+  border-radius:30px;
+  font-size:13px;
+}
+
 /* ================= STAGE ================= */
 
 .stage{
@@ -380,6 +421,8 @@ section{
   color:var(--gray);
   font-size:14px;
 }
+
+/* ================= VILLAGES ================= */
 
 .villages{
   display:grid;
@@ -435,6 +478,42 @@ section{
   font-size:14px;
 }
 
+/* ================= CAMPS ================= */
+
+.camp-card{
+  padding:0;
+  overflow:hidden;
+  background:#101313;
+}
+
+.camp-image{
+  height:250px;
+  overflow:hidden;
+}
+
+.camp-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .6s ease;
+}
+
+.camp-card:hover .camp-image img{
+  transform:scale(1.05);
+}
+
+.camp-content{
+  padding:25px;
+}
+
+.camp-content h4{
+  margin-bottom:4px;
+}
+
+.camp-content .location{
+  margin-bottom:12px;
+}
+
 /* ================= PRODUCTIONS ================= */
 
 .production-grid{
@@ -473,6 +552,47 @@ section{
 .production-body p{
   color:var(--gray);
   font-size:14px;
+}
+
+/* ================= PRODUCTION STATUS ================= */
+
+.production-status{
+  display:flex;
+  align-items:flex-start;
+  gap:20px;
+  padding:35px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(43,179,177,.10),
+      rgba(43,179,177,.02)
+    );
+
+  border:1px solid rgba(43,179,177,.28);
+}
+
+.status-icon{
+  width:18px;
+  height:18px;
+  flex:none;
+  margin-top:8px;
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 7px rgba(43,179,177,.10);
+  color:transparent;
+}
+
+.production-status strong{
+  display:block;
+  color:var(--accent);
+  font-size:22px;
+  margin-bottom:8px;
+}
+
+.production-status p{
+  color:#b9c0c0;
+  margin:0;
 }
 
 /* ================= SCENOGRAPHY ================= */
@@ -568,8 +688,12 @@ section{
   text-align:center;
   position:relative;
   overflow:hidden;
+
   background:
-    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.7)),
+    linear-gradient(
+      rgba(0,0,0,.55),
+      rgba(0,0,0,.7)
+    ),
     url("images/sahara/performance-01.jpg") center/cover;
 }
 
@@ -664,11 +788,6 @@ body.en .lang-en{
     gap:0;
   }
 
-  body.en .nav-links{
-    right:4%;
-    left:4%;
-  }
-
   .nav-links.open{
     display:flex;
   }
@@ -698,10 +817,6 @@ body.en .lang-en{
   .villages,
   .production-grid{
     grid-template-columns:1fr;
-  }
-
-  .gallery{
-    grid-template-columns:repeat(2,1fr);
   }
 
   .sceno-image{
@@ -747,6 +862,10 @@ body.en .lang-en{
     font-size:22px;
   }
 
+  .production-status{
+    padding:25px;
+  }
+
   .video-link{
     min-height:320px;
   }
@@ -755,7 +874,9 @@ body.en .lang-en{
     flex-direction:column;
     align-items:flex-start;
   }
+
 }
+
 </style>
 </head>
 
@@ -764,6 +885,7 @@ body.en .lang-en{
 <!-- ================= NAVBAR ================= -->
 
 <nav class="navbar">
+
   <div class="container nav-inner">
 
     <a href="index.html" class="logo">
@@ -820,11 +942,26 @@ body.en .lang-en{
     </div>
 
     <div style="display:flex;align-items:center;gap:8px;">
-      <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">EN</button>
-      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+      <button
+        class="lang-btn"
+        onclick="toggleLanguage()"
+        id="langBtn"
+      >
+        EN
+      </button>
+
+      <button
+        class="menu-btn"
+        onclick="toggleMenu()"
+      >
+        ☰
+      </button>
+
     </div>
 
   </div>
+
 </nav>
 
 
@@ -835,44 +972,99 @@ body.en .lang-en{
   <div class="container hero-content">
 
     <div class="eyebrow">
-      <span class="lang-ar">مشروع صحارة لإحياء التراث القروي بالفنون الأدائية</span>
-      <span class="lang-en">SAHARA · RURAL HERITAGE & PERFORMING ARTS</span>
+
+      <span class="lang-ar">
+        مشروع صحارة لإحياء التراث القروي بالفنون الأدائية
+      </span>
+
+      <span class="lang-en">
+        SAHARA · RURAL HERITAGE & PERFORMING ARTS
+      </span>
+
     </div>
+
 
     <h1>
       <span class="lang-ar">صحارة</span>
       <span class="lang-en">SAHARA</span>
     </h1>
 
+
     <div class="hero-title">
-      <span class="lang-ar">من القرية... تبدأ الحكاية.</span>
-      <span class="lang-en">From the village, the story begins.</span>
+
+      <span class="lang-ar">
+        من القرية... تبدأ الحكاية.
+      </span>
+
+      <span class="lang-en">
+        From the village, the story begins.
+      </span>
+
     </div>
+
 
     <p class="lang-ar">
       مشروع يضع التراث القروي في قلب العملية الفنية، من البحث الميداني والتدريب داخل القرى، إلى إنتاج العروض وصناعة السينوغرافيا المستوحاة من تفاصيل الحياة اليومية.
     </p>
 
+
     <p class="lang-en">
       A project that places rural heritage at the heart of artistic practice — from field research and village-based training to performance production and scenography inspired by everyday life.
     </p>
 
+
     <div class="hero-meta">
 
       <div class="meta">
-        <span class="lang-ar">الدورة الأولى · 2022</span>
-        <span class="lang-en">Edition One · 2022</span>
+
+        <span class="lang-ar">
+          الدورة الأولى · 2022
+        </span>
+
+        <span class="lang-en">
+          Edition One · 2022
+        </span>
+
       </div>
 
-      <div class="meta">
-        <span class="lang-ar">الدورة الثانية · 2025</span>
-        <span class="lang-en">Edition Two · 2025</span>
-      </div>
 
       <div class="meta">
-        <span class="lang-ar">المنيا · مصر</span>
-        <span class="lang-en">Minya · Egypt</span>
+
+        <span class="lang-ar">
+          الدورة الثانية · 2025
+        </span>
+
+        <span class="lang-en">
+          Edition Two · 2025
+        </span>
+
       </div>
+
+
+      <div class="meta">
+
+        <span class="lang-ar">
+          المنيا · مصر
+        </span>
+
+        <span class="lang-en">
+          Minya · Egypt
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <div class="funding-note">
+
+      <span class="lang-ar">
+        بدعم من الصندوق العربي للثقافة والفنون – آفاق
+      </span>
+
+      <span class="lang-en">
+        Supported by the Arab Fund for Arts and Culture – AFAC
+      </span>
 
     </div>
 
@@ -892,48 +1084,105 @@ body.en .lang-en{
       <div>
 
         <div class="section-kicker">
-          <span class="lang-ar">الفكرة</span>
-          <span class="lang-en">THE IDEA</span>
+
+          <span class="lang-ar">
+            الفكرة
+          </span>
+
+          <span class="lang-en">
+            THE IDEA
+          </span>
+
         </div>
+
 
         <div class="intro-text lang-ar">
+
           صحارة تنطلق من فكرة بسيطة:
-          <strong>أن التراث ليس شيئًا نحفظه فقط، بل مادة حية يمكن أن نصنع منها الفن.</strong>
+
+          <strong>
+            أن التراث ليس شيئًا نحفظه فقط، بل مادة حية يمكن أن نصنع منها الفن.
+          </strong>
+
           لذلك يبدأ المشروع من القرية نفسها؛ نستمع إلى أهلها، نبحث في حكاياتها وعاداتها، ثم نحول ما نكتشفه إلى تدريب وتجارب فنية وعروض وسينوغرافيا.
+
         </div>
 
+
         <div class="intro-text lang-en">
+
           Sahara starts from a simple idea:
-          <strong>heritage is not something we only preserve — it is living material for art.</strong>
+
+          <strong>
+            heritage is not something we only preserve — it is living material for art.
+          </strong>
+
           The project begins in the village itself: listening to its people, exploring its stories and traditions, then transforming what we discover into training, artistic experiments, performances and scenography.
+
         </div>
 
       </div>
 
+
       <div class="stats">
 
         <div class="stat">
+
           <strong>2</strong>
-          <span class="lang-ar">دورتان من المشروع</span>
-          <span class="lang-en">Project editions</span>
+
+          <span class="lang-ar">
+            دورتان من المشروع
+          </span>
+
+          <span class="lang-en">
+            Project editions
+          </span>
+
         </div>
 
+
         <div class="stat">
+
           <strong>2022</strong>
-          <span class="lang-ar">انطلاق صحارة</span>
-          <span class="lang-en">Sahara launched</span>
+
+          <span class="lang-ar">
+            انطلاق صحارة
+          </span>
+
+          <span class="lang-en">
+            Sahara launched
+          </span>
+
         </div>
 
+
         <div class="stat">
+
           <strong>2025</strong>
-          <span class="lang-ar">الدورة الثانية</span>
-          <span class="lang-en">Second edition</span>
+
+          <span class="lang-ar">
+            الدورة الثانية
+          </span>
+
+          <span class="lang-en">
+            Second edition
+          </span>
+
         </div>
 
+
         <div class="stat">
+
           <strong>∞</strong>
-          <span class="lang-ar">حكايات من القرى</span>
-          <span class="lang-en">Stories from villages</span>
+
+          <span class="lang-ar">
+            حكايات من القرى
+          </span>
+
+          <span class="lang-en">
+            Stories from villages
+          </span>
+
         </div>
 
       </div>
@@ -954,18 +1203,35 @@ body.en .lang-en{
     <div class="section-head">
 
       <div class="section-kicker">
-        <span class="lang-ar">رحلة صحارة</span>
-        <span class="lang-en">THE SAHARA JOURNEY</span>
+
+        <span class="lang-ar">
+          رحلة صحارة
+        </span>
+
+        <span class="lang-en">
+          THE SAHARA JOURNEY
+        </span>
+
       </div>
 
+
       <h2>
-        <span class="lang-ar">رحلة واحدة... تتجدد في كل دورة.</span>
-        <span class="lang-en">One journey, renewed with every edition.</span>
+
+        <span class="lang-ar">
+          رحلة واحدة... تتجدد في كل دورة.
+        </span>
+
+        <span class="lang-en">
+          One journey, renewed with every edition.
+        </span>
+
       </h2>
+
 
       <p class="lang-ar">
         في كل دورة، يتحرك المشروع في المسار نفسه: نذهب إلى القرى، نتعلم ونُدرّب، ننتج الفن، ثم نعود بالنتاج إلى الجمهور.
       </p>
+
 
       <p class="lang-en">
         Each edition follows the same journey: entering the villages, learning and training, creating art, then bringing the results back to the audience.
@@ -973,54 +1239,106 @@ body.en .lang-en{
 
     </div>
 
+
     <div class="journey-grid">
 
       <div class="journey-card">
-        <div class="journey-number">01</div>
-        <h3 class="lang-ar">الزيارة والبحث الميداني</h3>
-        <h3 class="lang-en">Field Research</h3>
+
+        <div class="journey-number">
+          01
+        </div>
+
+        <h3 class="lang-ar">
+          الزيارة والبحث الميداني
+        </h3>
+
+        <h3 class="lang-en">
+          Field Research
+        </h3>
+
         <p class="lang-ar">
           الاقتراب من المجتمعات المحلية، الاستماع إلى الناس، واكتشاف الحكايات والتراث والاحتياجات الفنية.
         </p>
+
         <p class="lang-en">
           Meeting local communities, listening to people, and discovering stories, heritage and artistic needs.
         </p>
+
       </div>
 
+
       <div class="journey-card">
-        <div class="journey-number">02</div>
-        <h3 class="lang-ar">التدريب داخل القرى</h3>
-        <h3 class="lang-en">Village Training</h3>
+
+        <div class="journey-number">
+          02
+        </div>
+
+        <h3 class="lang-ar">
+          التدريب داخل القرى
+        </h3>
+
+        <h3 class="lang-en">
+          Village Training
+        </h3>
+
         <p class="lang-ar">
           نقل التدريب الفني إلى القرية نفسها، وفتح مساحات جديدة للتعلم والممارسة.
         </p>
+
         <p class="lang-en">
           Bringing artistic training directly into the village and creating new spaces for learning and practice.
         </p>
+
       </div>
 
+
       <div class="journey-card">
-        <div class="journey-number">03</div>
-        <h3 class="lang-ar">إنتاج العروض</h3>
-        <h3 class="lang-en">Performance Production</h3>
+
+        <div class="journey-number">
+          03
+        </div>
+
+        <h3 class="lang-ar">
+          إنتاج العروض
+        </h3>
+
+        <h3 class="lang-en">
+          Performance Production
+        </h3>
+
         <p class="lang-ar">
           تحويل الحكايات والتجارب المحلية إلى أعمال فنية نابعة من المجتمع نفسه.
         </p>
+
         <p class="lang-en">
           Transforming local stories and experiences into artistic works created with the community.
         </p>
+
       </div>
 
+
       <div class="journey-card">
-        <div class="journey-number">04</div>
-        <h3 class="lang-ar">سينوغرافيا القرية</h3>
-        <h3 class="lang-en">Village Scenography</h3>
+
+        <div class="journey-number">
+          04
+        </div>
+
+        <h3 class="lang-ar">
+          سينوغرافيا القرية
+        </h3>
+
+        <h3 class="lang-en">
+          Village Scenography
+        </h3>
+
         <p class="lang-ar">
           تحويل تفاصيل العمارة والحياة الريفية إلى رؤى بصرية وماكيتات مستوحاة من القرى.
         </p>
+
         <p class="lang-en">
           Transforming rural architecture and everyday life into visual ideas and scenographic models inspired by the villages.
         </p>
+
       </div>
 
     </div>
@@ -1030,25 +1348,42 @@ body.en .lang-en{
 </section>
 
 
-<!-- ================= SAHARA 1 ================= -->
+<!-- ===================================================== -->
+<!-- ================= SAHARA 1 ========================== -->
+<!-- ===================================================== -->
 
 <section class="edition">
 
   <div class="container">
 
     <div class="edition-label">
-      <span class="lang-ar">صحارة 1 · 2022</span>
-      <span class="lang-en">SAHARA 1 · 2022</span>
+
+      <span class="lang-ar">
+        صحارة 1 · 2022
+      </span>
+
+      <span class="lang-en">
+        SAHARA 1 · 2022
+      </span>
+
     </div>
+
 
     <div class="section-head">
 
-      <h2 class="lang-ar">الدورة الأولى</h2>
-      <h2 class="lang-en">The First Edition</h2>
+      <h2 class="lang-ar">
+        الدورة الأولى
+      </h2>
+
+      <h2 class="lang-en">
+        The First Edition
+      </h2>
+
 
       <p class="lang-ar">
         البداية كانت من القرى؛ من البحث في تفاصيل الحياة اليومية، إلى التدريب، ثم تحويل الحكايات المحلية إلى عروض مسرحية وسينوغرافيا مستوحاة من التراث القروي.
       </p>
+
 
       <p class="lang-en">
         The journey began in the villages — from exploring everyday life to training, then transforming local stories into theatre performances and scenography inspired by rural heritage.
@@ -1063,14 +1398,28 @@ body.en .lang-en{
 
       <div class="stage-head">
 
-        <div class="stage-num">01</div>
+        <div class="stage-num">
+          01
+        </div>
 
         <div>
-          <h3 class="lang-ar">الزيارة والبحث الميداني</h3>
-          <h3 class="lang-en">Field Research</h3>
 
-          <p class="lang-ar">زيارة ميدانية إلى 10 قرى.</p>
-          <p class="lang-en">Field visits to 10 villages.</p>
+          <h3 class="lang-ar">
+            الزيارة والبحث الميداني
+          </h3>
+
+          <h3 class="lang-en">
+            Field Research
+          </h3>
+
+          <p class="lang-ar">
+            زيارة ميدانية إلى 10 قرى.
+          </p>
+
+          <p class="lang-en">
+            Field visits to 10 villages.
+          </p>
+
         </div>
 
       </div>
@@ -1084,11 +1433,19 @@ body.en .lang-en{
 
       <div class="stage-head">
 
-        <div class="stage-num">02</div>
+        <div class="stage-num">
+          02
+        </div>
 
         <div>
-          <h3 class="lang-ar">التدريب داخل القرى</h3>
-          <h3 class="lang-en">Village Training</h3>
+
+          <h3 class="lang-ar">
+            التدريب داخل القرى
+          </h3>
+
+          <h3 class="lang-en">
+            Village Training
+          </h3>
 
           <p class="lang-ar">
             مجموعة من التدريبات الفنية التي مهدت لإنتاج الأعمال.
@@ -1097,34 +1454,74 @@ body.en .lang-en{
           <p class="lang-en">
             A series of artistic training sessions leading into production.
           </p>
+
         </div>
 
       </div>
 
+
       <div class="villages">
 
         <div class="village">
-          <h4 class="lang-ar">البياضية</h4>
-          <div class="location lang-ar">ملوي</div>
+
+          <h4 class="lang-ar">
+            البياضية
+          </h4>
+
+          <div class="location lang-ar">
+            ملوي
+          </div>
+
           <p class="lang-ar">
             تدريب وتكوين مجموعة من أبناء القرية للعمل على إنتاج عرض مستوحى من حكايات المجتمع.
           </p>
+
+          <p class="lang-en">
+            Training and developing a group from the village to create a performance inspired by local stories.
+          </p>
+
         </div>
 
+
         <div class="village">
-          <h4 class="lang-ar">أبو قرقاص البلد</h4>
-          <div class="location lang-ar">أبو قرقاص</div>
+
+          <h4 class="lang-ar">
+            أبو قرقاص البلد
+          </h4>
+
+          <div class="location lang-ar">
+            أبو قرقاص
+          </div>
+
           <p class="lang-ar">
             تدريب مجموعة من أبناء القرية وتطوير تجربة فنية مرتبطة بالتراث المحلي.
           </p>
+
+          <p class="lang-en">
+            Training a group from the village and developing an artistic experience connected to local heritage.
+          </p>
+
         </div>
 
+
         <div class="village">
-          <h4 class="lang-ar">أبيوها</h4>
-          <div class="location lang-ar">أبو قرقاص</div>
+
+          <h4 class="lang-ar">
+            أبيوها
+          </h4>
+
+          <div class="location lang-ar">
+            أبو قرقاص
+          </div>
+
           <p class="lang-ar">
             تدريب أبناء القرية وتطوير حكاية مستوحاة من العادات والتقاليد والحياة الريفية.
           </p>
+
+          <p class="lang-en">
+            Training village participants and developing a story inspired by rural traditions and everyday life.
+          </p>
+
         </div>
 
       </div>
@@ -1138,11 +1535,19 @@ body.en .lang-en{
 
       <div class="stage-head">
 
-        <div class="stage-num">03</div>
+        <div class="stage-num">
+          03
+        </div>
 
         <div>
-          <h3 class="lang-ar">إنتاج العروض</h3>
-          <h3 class="lang-en">Performance Production</h3>
+
+          <h3 class="lang-ar">
+            إنتاج العروض
+          </h3>
+
+          <h3 class="lang-en">
+            Performance Production
+          </h3>
 
           <p class="lang-ar">
             ثلاث حكايات خرجت من القرى إلى خشبة المسرح.
@@ -1151,22 +1556,35 @@ body.en .lang-en{
           <p class="lang-en">
             Three stories moved from the villages to the stage.
           </p>
+
         </div>
 
       </div>
 
+
       <div class="production-grid">
+
+        <!-- BAHIGA -->
 
         <article class="production">
 
-          <img src="images/sahara/performance-bahja.jpg" alt="بهيجة">
+          <img
+            src="images/sahara/performance-bahja.jpg"
+            alt="بهيجة"
+          >
 
           <div class="production-body">
 
-            <h4>بهيجة</h4>
+            <h4>
+              بهيجة
+            </h4>
 
             <div class="group lang-ar">
               مع فرقة خلطبيطة · البياضية – ملوي
+            </div>
+
+            <div class="group lang-en">
+              With Khaltabita Troupe · Al-Bayadiya – Mallawi
             </div>
 
             <p class="lang-ar">
@@ -1182,16 +1600,27 @@ body.en .lang-en{
         </article>
 
 
+        <!-- MANDARA -->
+
         <article class="production">
 
-          <img src="images/sahara/performance-mandara.jpg" alt="المندرة">
+          <img
+            src="images/sahara/performance-mandara.jpg"
+            alt="المندرة"
+          >
 
           <div class="production-body">
 
-            <h4>المندرة</h4>
+            <h4>
+              المندرة
+            </h4>
 
             <div class="group lang-ar">
               مع كورال جمعية الصعيد · أبو قرقاص البلد
+            </div>
+
+            <div class="group lang-en">
+              With Al-Saeed Association Choir · Abu Qurqas Al-Balad
             </div>
 
             <p class="lang-ar">
@@ -1207,16 +1636,27 @@ body.en .lang-en{
         </article>
 
 
+        <!-- NAWAHINA -->
+
         <article class="production">
 
-          <img src="images/sahara/performance-nawahina.jpg" alt="نواحينا">
+          <img
+            src="images/sahara/performance-nawahina.jpg"
+            alt="نواحينا"
+          >
 
           <div class="production-body">
 
-            <h4>نواحينا</h4>
+            <h4>
+              نواحينا
+            </h4>
 
             <div class="group lang-ar">
               مع أبناء قرية أبيوها · أبو قرقاص
+            </div>
+
+            <div class="group lang-en">
+              With participants from Abiyuha · Abu Qurqas
             </div>
 
             <p class="lang-ar">
@@ -1242,11 +1682,19 @@ body.en .lang-en{
 
       <div class="stage-head">
 
-        <div class="stage-num">04</div>
+        <div class="stage-num">
+          04
+        </div>
 
         <div>
-          <h3 class="lang-ar">سينوغرافيا القرية</h3>
-          <h3 class="lang-en">Village Scenography</h3>
+
+          <h3 class="lang-ar">
+            سينوغرافيا القرية
+          </h3>
+
+          <h3 class="lang-en">
+            Village Scenography
+          </h3>
 
           <p class="lang-ar">
             تحويل تفاصيل القرى وذاكرتها البصرية إلى ماكيتات ومشروعات سينوغرافية.
@@ -1255,9 +1703,11 @@ body.en .lang-en{
           <p class="lang-en">
             Transforming village details and visual memory into scenographic models and concepts.
           </p>
+
         </div>
 
       </div>
+
 
       <div class="gallery">
 
@@ -1303,12 +1753,26 @@ body.en .lang-en{
     <div class="section-head">
 
       <div class="section-kicker">
-        <span class="lang-ar">صحارة 1 · 2022</span>
-        <span class="lang-en">SAHARA 1 · 2022</span>
+
+        <span class="lang-ar">
+          صحارة 1 · 2022
+        </span>
+
+        <span class="lang-en">
+          SAHARA 1 · 2022
+        </span>
+
       </div>
 
-      <h2 class="lang-ar">رحلة بدأت من القرية</h2>
-      <h2 class="lang-en">A Journey That Began in the Village</h2>
+
+      <h2 class="lang-ar">
+        رحلة بدأت من القرية
+      </h2>
+
+      <h2 class="lang-en">
+        A Journey That Began in the Village
+      </h2>
+
 
       <p class="lang-ar">
         شاهد ملخص فعاليات النسخة الأولى من مشروع صحارة.
@@ -1319,6 +1783,7 @@ body.en .lang-en{
       </p>
 
     </div>
+
 
     <div class="video-card">
 
@@ -1331,10 +1796,17 @@ body.en .lang-en{
 
         <div class="video-content">
 
-          <div class="play">▶</div>
+          <div class="play">
+            ▶
+          </div>
 
-          <h3 class="lang-ar">مشاهدة ملخص صحارة 1</h3>
-          <h3 class="lang-en">Watch Sahara 1 Highlights</h3>
+          <h3 class="lang-ar">
+            مشاهدة ملخص صحارة 1
+          </h3>
+
+          <h3 class="lang-en">
+            Watch Sahara 1 Highlights
+          </h3>
 
           <p class="lang-ar">
             اضغط للمشاهدة على Facebook
@@ -1355,21 +1827,37 @@ body.en .lang-en{
 </section>
 
 
-<!-- ================= SAHARA 2 ================= -->
+<!-- ===================================================== -->
+<!-- ================= SAHARA 2 ========================== -->
+<!-- ===================================================== -->
 
 <section class="edition">
 
   <div class="container">
 
     <div class="edition-label">
-      <span class="lang-ar">صحارة 2 · 2025</span>
-      <span class="lang-en">SAHARA 2 · 2025</span>
+
+      <span class="lang-ar">
+        صحارة 2 · 2025
+      </span>
+
+      <span class="lang-en">
+        SAHARA 2 · 2025
+      </span>
+
     </div>
+
 
     <div class="section-head">
 
-      <h2 class="lang-ar">الدورة الثانية</h2>
-      <h2 class="lang-en">The Second Edition</h2>
+      <h2 class="lang-ar">
+        الدورة الثانية
+      </h2>
+
+      <h2 class="lang-en">
+        The Second Edition
+      </h2>
+
 
       <p class="lang-ar">
         في الدورة الثانية، اتسع نطاق المشروع ليصل إلى أكثر من 10 قرى، مع تطوير نموذج المعسكرات التدريبية داخل القرى وربط الفنون بالتراث المحلي.
@@ -1382,17 +1870,38 @@ body.en .lang-en{
     </div>
 
 
+    <div class="edition-support">
+
+      <span class="lang-ar">
+        صحارة 2 بدعم من الصندوق العربي للثقافة والفنون – آفاق
+      </span>
+
+      <span class="lang-en">
+        Sahara 2 is supported by the Arab Fund for Arts and Culture – AFAC
+      </span>
+
+    </div>
+
+
     <!-- STAGE 1 -->
 
     <div class="stage">
 
       <div class="stage-head">
 
-        <div class="stage-num">01</div>
+        <div class="stage-num">
+          01
+        </div>
 
         <div>
-          <h3 class="lang-ar">الزيارة والبحث الميداني</h3>
-          <h3 class="lang-en">Field Research</h3>
+
+          <h3 class="lang-ar">
+            الزيارة والبحث الميداني
+          </h3>
+
+          <h3 class="lang-en">
+            Field Research
+          </h3>
 
           <p class="lang-ar">
             زيارة ميدانية إلى أكثر من 10 قرى للتعرف على المجتمعات المحلية وتحديد الاحتياجات التدريبية والفنية.
@@ -1401,6 +1910,7 @@ body.en .lang-en{
           <p class="lang-en">
             Field visits to more than 10 villages to understand local communities and identify artistic and training needs.
           </p>
+
         </div>
 
       </div>
@@ -1414,11 +1924,19 @@ body.en .lang-en{
 
       <div class="stage-head">
 
-        <div class="stage-num">02</div>
+        <div class="stage-num">
+          02
+        </div>
 
         <div>
-          <h3 class="lang-ar">معسكرات التدريب داخل القرى</h3>
-          <h3 class="lang-en">Village Training Camps</h3>
+
+          <h3 class="lang-ar">
+            معسكرات التدريب داخل القرى
+          </h3>
+
+          <h3 class="lang-en">
+            Village Training Camps
+          </h3>
 
           <p class="lang-ar">
             اعتمدت الدورة الثانية على معسكرات تدريبية داخل القرى، يقدم كل معسكر حزمة متكاملة من التدريبات الفنية.
@@ -1442,6 +1960,7 @@ body.en .lang-en{
         <p class="training-intro lang-en">
           Each camp brings participants together around different artistic disciplines, helping them discover their abilities, express their heritage and transform local stories into artistic material.
         </p>
+
 
         <div class="workshops">
 
@@ -1480,57 +1999,165 @@ body.en .lang-en{
       </div>
 
 
-      <div style="height:25px"></div>
+      <div style="height:35px"></div>
 
+
+      <!-- CAMPS -->
 
       <div class="villages">
 
-        <div class="village">
 
-          <h4 class="lang-ar">المحرص</h4>
-          <div class="location lang-ar">ملوي</div>
+        <!-- AL MAHRAS -->
 
-          <p class="lang-ar">
-            معسكر تدريبي تضمن تدريبات في الغناء من تراث القرية، الحكي، والتمثيل المسرحي.
-          </p>
+        <article class="village camp-card">
 
-          <p class="lang-en">
-            A training camp including singing from village heritage, storytelling and acting.
-          </p>
+          <div class="camp-image">
 
-        </div>
+            <img
+              src="images/sahara2/camp-01.jpg"
+              alt="معسكر صحارة 2 في المحرص"
+            >
 
-
-        <div class="village">
-
-          <h4 class="lang-ar">طوة</h4>
-          <div class="location lang-ar">المنيا</div>
-
-          <p class="lang-ar">
-            معسكر تدريبي بمجموعة من الورش المتنوعة المستندة إلى التراث القروي وحكايات أهل القرية.
-          </p>
-
-          <p class="lang-en">
-            A training camp with diverse workshops rooted in rural heritage and the stories of the village.
-          </p>
-
-        </div>
+          </div>
 
 
-        <div class="village">
+          <div class="camp-content">
 
-          <h4 class="lang-ar">بلنصورة</h4>
-          <div class="location lang-ar">أبو قرقاص</div>
+            <h4 class="lang-ar">
+              المحرص
+            </h4>
 
-          <p class="lang-ar">
-            معسكر تدريبي لتطوير المهارات الفنية وربطها بالتراث والحياة اليومية للقرية.
-          </p>
+            <h4 class="lang-en">
+              Al-Mahras
+            </h4>
 
-          <p class="lang-en">
-            A training camp developing artistic skills and connecting them with village heritage and everyday life.
-          </p>
 
-        </div>
+            <div class="location">
+
+              <span class="lang-ar">
+                ملوي
+              </span>
+
+              <span class="lang-en">
+                Mallawi
+              </span>
+
+            </div>
+
+
+            <p class="lang-ar">
+              معسكر تدريبي من قلب قرية المحرص، جمع بين الغناء من تراث القرية، الحكي، والتمثيل المسرحي.
+            </p>
+
+            <p class="lang-en">
+              A training camp in Al-Mahras combining singing from village heritage, storytelling and acting.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- TOWA -->
+
+        <article class="village camp-card">
+
+          <div class="camp-image">
+
+            <img
+              src="images/sahara2/camp-02.jpg"
+              alt="معسكر صحارة 2 في طوة"
+            >
+
+          </div>
+
+
+          <div class="camp-content">
+
+            <h4 class="lang-ar">
+              طوة
+            </h4>
+
+            <h4 class="lang-en">
+              Towa
+            </h4>
+
+
+            <div class="location">
+
+              <span class="lang-ar">
+                المنيا
+              </span>
+
+              <span class="lang-en">
+                Minya
+              </span>
+
+            </div>
+
+
+            <p class="lang-ar">
+              معسكر تدريبي داخل القرية، انطلق من البحث في التراث والحكايات المحلية، وضم مجموعة من الورش الفنية المتنوعة.
+            </p>
+
+            <p class="lang-en">
+              A village-based training camp rooted in local heritage and stories, featuring a range of artistic workshops.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <!-- BALANSOURA -->
+
+        <article class="village camp-card">
+
+          <div class="camp-image">
+
+            <img
+              src="images/sahara2/camp-03.jpg"
+              alt="معسكر صحارة 2 في بلنصورة"
+            >
+
+          </div>
+
+
+          <div class="camp-content">
+
+            <h4 class="lang-ar">
+              بلنصورة
+            </h4>
+
+            <h4 class="lang-en">
+              Balansoura
+            </h4>
+
+
+            <div class="location">
+
+              <span class="lang-ar">
+                أبو قرقاص
+              </span>
+
+              <span class="lang-en">
+                Abu Qurqas
+              </span>
+
+            </div>
+
+
+            <p class="lang-ar">
+              معسكر تدريبي لتطوير المهارات الفنية وربطها بالتراث والحياة اليومية للقرية.
+            </p>
+
+            <p class="lang-en">
+              A training camp developing artistic skills and connecting them with village heritage and everyday life.
+            </p>
+
+          </div>
+
+        </article>
 
       </div>
 
@@ -1543,19 +2170,57 @@ body.en .lang-en{
 
       <div class="stage-head">
 
-        <div class="stage-num">03</div>
+        <div class="stage-num">
+          03
+        </div>
 
         <div>
 
-          <h3 class="lang-ar">إنتاج العروض</h3>
-          <h3 class="lang-en">Performance Production</h3>
+          <h3 class="lang-ar">
+            إنتاج العروض
+          </h3>
+
+          <h3 class="lang-en">
+            Performance Production
+          </h3>
 
           <p class="lang-ar">
-            مرحلة تحويل التدريب والحكايات المحلية إلى إنتاجات فنية نابعة من القرى.
+            بعد التدريب، ينتقل المشروع إلى مرحلة إنتاج الأعمال الفنية المستوحاة من الحكايات والتراث المحلي.
           </p>
 
           <p class="lang-en">
-            Transforming training and local stories into artistic productions emerging from the villages.
+            Following the training phase, the project moves into producing artistic works inspired by local stories and heritage.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="production-status">
+
+        <div class="status-icon">
+          ●
+        </div>
+
+
+        <div>
+
+          <strong class="lang-ar">
+            العمل على الإنتاج قيد التنفيذ
+          </strong>
+
+          <strong class="lang-en">
+            Production is currently underway
+          </strong>
+
+
+          <p class="lang-ar">
+            بعد انتهاء مراحل البحث والتدريب، تعمل الفرق حاليًا على تطوير وإنتاج الأعمال الفنية المستوحاة من الحكايات والتراث المحلي للقرى المشاركة.
+          </p>
+
+          <p class="lang-en">
+            Following the research and training phases, the teams are currently developing and producing artistic works inspired by the stories and local heritage of the participating villages.
           </p>
 
         </div>
@@ -1571,12 +2236,20 @@ body.en .lang-en{
 
       <div class="stage-head">
 
-        <div class="stage-num">04</div>
+        <div class="stage-num">
+          04
+        </div>
 
         <div>
 
-          <h3 class="lang-ar">معرض سينوغرافيا القرية الثاني</h3>
-          <h3 class="lang-en">The Second Village Scenography Exhibition</h3>
+          <h3 class="lang-ar">
+            معرض سينوغرافيا القرية الثاني
+          </h3>
+
+          <h3 class="lang-en">
+            The Second Village Scenography Exhibition
+          </h3>
+
 
           <p class="lang-ar">
             على مدار يومي 17 و18 أكتوبر 2025، تحولت ماكيتات المشاهد المسرحية إلى نوافذ بصرية تطل على روح الحياة القروية.
@@ -1613,6 +2286,7 @@ body.en .lang-en{
             From Village Details to the Stage
           </h3>
 
+
           <p class="lang-ar">
             قدمت مهندستا الديكور <strong>ماريا زكريا وماري يوسف</strong> التصميم والتنفيذ الكامل للمعرض، مستلهمتين من تفاصيل العمارة الشعبية والحياة اليومية في الريف المصري.
           </p>
@@ -1621,34 +2295,472 @@ body.en .lang-en{
             Set designers <strong>Maria Zakaria and Mary Youssef</strong> created and executed the exhibition, inspired by vernacular architecture and everyday rural life in Egypt.
           </p>
 
+
           <ul class="info-list">
 
             <li>
-              <strong class="lang-ar">التاريخ:</strong>
-              <strong class="lang-en">Date:</strong>
 
-              <span class="lang-ar">17 – 18 أكتوبر 2025</span>
-              <span class="lang-en">October 17–18, 2025</span>
+              <strong class="lang-ar">
+                التاريخ:
+              </strong>
+
+              <strong class="lang-en">
+                Date:
+              </strong>
+
+              <span class="lang-ar">
+                17 – 18 أكتوبر 2025
+              </span>
+
+              <span class="lang-en">
+                October 17–18, 2025
+              </span>
+
             </li>
 
-            <li>
-              <strong class="lang-ar">المكان:</strong>
-              <strong class="lang-en">Venue:</strong>
 
-              <span class="lang-ar">تياترو الصعيد – المنيا</span>
-              <span class="lang-en">Teatro Alsaeed – Minya</span>
+            <li>
+
+              <strong class="lang-ar">
+                المكان:
+              </strong>
+
+              <strong class="lang-en">
+                Venue:
+              </strong>
+
+              <span class="lang-ar">
+                تياترو الصعيد – المنيا
+              </span>
+
+              <span class="lang-en">
+                Teatro Alsaeed – Minya
+              </span>
+
             </li>
 
-            <li>
-              <strong class="lang-ar">التصميم والتنفيذ:</strong>
-              <strong class="lang-en">Design & Execution:</strong>
 
-              <span class="lang-ar">ماريا زكريا · ماري يوسف</span>
-              <span class="lang-en">Maria Zakaria · Mary Youssef</span>
+            <li>
+
+              <strong class="lang-ar">
+                التصميم والتنفيذ:
+              </strong>
+
+              <strong class="lang-en">
+                Design & Execution:
+              </strong>
+
+              <span class="lang-ar">
+                ماريا زكريا · ماري يوسف
+              </span>
+
+              <span class="lang-en">
+                Maria Zakaria · Mary Youssef
+              </span>
+
             </li>
 
-            <li>
-              <strong class="lang-ar">بالتعاون مع:</strong>
-              <strong class="lang-en">In collaboration with:</strong>
 
-              <span class="lang-ar">AFAC · الوكالة
+            <li>
+
+              <strong class="lang-ar">
+                بدعم من:
+              </strong>
+
+              <strong class="lang-en">
+                Supported by:
+              </strong>
+
+              <span class="lang-ar">
+                الصندوق العربي للثقافة والفنون – آفاق
+              </span>
+
+              <span class="lang-en">
+                Arab Fund for Arts and Culture – AFAC
+              </span>
+
+            </li>
+
+
+            <li>
+
+              <strong class="lang-ar">
+                بالتعاون مع:
+              </strong>
+
+              <strong class="lang-en">
+                In collaboration with:
+              </strong>
+
+              <span class="lang-ar">
+                الوكالة السويسرية للتنمية والتعاون SDC
+              </span>
+
+              <span class="lang-en">
+                Swiss Agency for Development and Cooperation – SDC
+              </span>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+
+      <div style="height:35px"></div>
+
+
+      <div class="gallery">
+
+        <div class="gallery-item">
+
+          <img
+            src="images/sahara2/scenography-01.jpg"
+            alt=""
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/sahara2/scenography-02.jpg"
+            alt=""
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/sahara2/scenography-03.jpg"
+            alt=""
+          >
+
+        </div>
+
+
+        <div class="gallery-item">
+
+          <img
+            src="images/sahara2/scenography-04.jpg"
+            alt=""
+          >
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SAHARA 2 ADDITIONAL VISUALS ================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div class="section-kicker">
+
+        <span class="lang-ar">
+          صحارة 2 · 2025
+        </span>
+
+        <span class="lang-en">
+          SAHARA 2 · 2025
+        </span>
+
+      </div>
+
+
+      <h2 class="lang-ar">
+        لحظات من الرحلة
+      </h2>
+
+      <h2 class="lang-en">
+        Moments From the Journey
+      </h2>
+
+
+      <p class="lang-ar">
+        صور من الزيارات الميدانية والتدريبات والأنشطة التي صاحبت الدورة الثانية.
+      </p>
+
+      <p class="lang-en">
+        Images from the field visits, training camps and activities of the second edition.
+      </p>
+
+    </div>
+
+
+    <div class="gallery">
+
+      <div class="gallery-item">
+
+        <img
+          src="images/sahara2/field-01.jpg"
+          alt=""
+        >
+
+      </div>
+
+
+      <div class="gallery-item">
+
+        <img
+          src="images/sahara2/field-02.jpg"
+          alt=""
+        >
+
+      </div>
+
+
+      <div class="gallery-item">
+
+        <img
+          src="images/sahara2/field-03.jpg"
+          alt=""
+        >
+
+      </div>
+
+
+      <div class="gallery-item">
+
+        <img
+          src="images/sahara2/podcast-01.jpg"
+          alt=""
+        >
+
+      </div>
+
+
+      <div class="gallery-item">
+
+        <img
+          src="images/sahara2/marketing-01.jpg"
+          alt=""
+        >
+
+      </div>
+
+
+      <div class="gallery-item">
+
+        <img
+          src="images/sahara2/camp-01.jpg"
+          alt=""
+        >
+
+      </div>
+
+
+      <div class="gallery-item">
+
+        <img
+          src="images/sahara2/camp-02.jpg"
+          alt=""
+        >
+
+      </div>
+
+
+      <div class="gallery-item">
+
+        <img
+          src="images/sahara2/camp-03.jpg"
+          alt=""
+        >
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= CLOSING ================= -->
+
+<section style="background:#0d1010;">
+
+  <div class="container">
+
+    <div class="section-head" style="margin-bottom:0;">
+
+      <div class="section-kicker">
+
+        <span class="lang-ar">
+          صحارة
+        </span>
+
+        <span class="lang-en">
+          SAHARA
+        </span>
+
+      </div>
+
+
+      <h2 class="lang-ar">
+        لأن الحكاية الحقيقية... تبدأ من أصحابها.
+      </h2>
+
+      <h2 class="lang-en">
+        Because the real story begins with the people who own it.
+      </h2>
+
+
+      <p class="lang-ar">
+        صحارة ليست مجرد مشروع فني؛ إنها محاولة لخلق مساحة يكون فيها التراث مصدرًا للإبداع، وتكون القرية نفسها جزءًا من صناعة الفن.
+      </p>
+
+      <p class="lang-en">
+        Sahara is more than an artistic project. It is an attempt to create a space where heritage becomes a source of creativity, and where the village itself becomes part of the artistic process.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+    <div class="footer-brand">
+
+      <strong>
+        تياترو الصعيد
+      </strong>
+
+      <br>
+
+      <span class="lang-ar">
+        إحياء وتطوير الفنون
+      </span>
+
+      <span class="lang-en">
+        Reviving and Developing Performing Arts
+      </span>
+
+    </div>
+
+
+    <a
+      href="contact.html"
+      class="footer-link"
+    >
+
+      <span class="lang-ar">
+        تواصل معنا ←
+      </span>
+
+      <span class="lang-en">
+        Contact us →
+      </span>
+
+    </a>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+
+  document
+    .getElementById("navLinks")
+    .classList
+    .toggle("open");
+
+}
+
+
+function toggleLanguage(){
+
+  document.body.classList.toggle("en");
+
+  const isEnglish =
+    document.body.classList.contains("en");
+
+  document.documentElement.lang =
+    isEnglish ? "en" : "ar";
+
+  document.documentElement.dir =
+    isEnglish ? "ltr" : "rtl";
+
+  document.getElementById("langBtn").textContent =
+    isEnglish ? "AR" : "EN";
+
+  localStorage.setItem(
+    "teatro-language",
+    isEnglish ? "en" : "ar"
+  );
+
+}
+
+
+document.addEventListener(
+  "DOMContentLoaded",
+  function(){
+
+    const savedLanguage =
+      localStorage.getItem("teatro-language");
+
+
+    if(savedLanguage === "en"){
+
+      document.body.classList.add("en");
+
+      document.documentElement.lang = "en";
+
+      document.documentElement.dir = "ltr";
+
+      document.getElementById("langBtn").textContent =
+        "AR";
+
+    }
+
+
+    document
+      .querySelectorAll(".nav-links a")
+      .forEach(function(link){
+
+        link.addEventListener(
+          "click",
+          function(){
+
+            document
+              .getElementById("navLinks")
+              .classList
+              .remove("open");
+
+          }
+        );
+
+      });
+
+  }
+);
+
+</script>
+
+</body>
+</html>
