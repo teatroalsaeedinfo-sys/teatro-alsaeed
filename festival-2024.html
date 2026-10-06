@@ -157,28 +157,59 @@ body.site-en .lang-ar{display:none!important}body:not(.site-en) .lang-en{display
 @media(max-width:520px){.master-footer-grid{grid-template-columns:1fr}.master-footer{padding-inline:18px}}
 </style>
 
+
+<style id="teatro-site-audit-css">
+.ta-master-nav{position:fixed;top:0;left:0;right:0;z-index:99999;background:rgba(7,8,8,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.10);color:#fff;font-family:Inter,Arial,sans-serif}
+.ta-nav-inner{max-width:1450px;min-height:74px;margin:auto;padding:8px 20px;display:flex;align-items:center;gap:16px}
+.ta-brand{display:flex;align-items:center;gap:9px;color:#fff;text-decoration:none;white-space:nowrap}
+.ta-brand img{width:42px;height:42px;object-fit:contain}.ta-brand span{display:flex;flex-direction:column;line-height:1.05}.ta-brand b{font-size:14px}.ta-brand small{font-size:8px;opacity:.55;letter-spacing:.7px;margin-top:4px}
+.ta-links{display:flex;align-items:center;justify-content:flex-end;gap:2px;flex:1}
+.ta-links a{color:#ddd;text-decoration:none;font-size:11px;padding:8px 6px;border-radius:7px;white-space:nowrap}
+.ta-links a:hover,.ta-links a.active{color:#2bb3b1;background:rgba(43,179,177,.10)}
+.ta-lang,.ta-menu{border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;border-radius:8px;cursor:pointer}
+.ta-lang{padding:8px 11px;font-weight:800}.ta-menu{display:none;padding:7px 10px;font-size:21px}
+.ta-master-footer{background:#090b0b;color:#fff;border-top:1px solid rgba(255,255,255,.10);padding:52px 22px 20px;font-family:Inter,Arial,sans-serif}
+.ta-footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1.5fr 1.2fr 1fr;gap:34px}
+.ta-footer-grid h3{font-size:13px;margin:0 0 13px;color:#fff}.ta-footer-grid p{color:#b7c0c0;font-size:12px;line-height:1.8;margin:7px 0}
+.ta-footer-grid a{display:block;color:#aab3b3;text-decoration:none;font-size:11px;margin:7px 0}.ta-footer-grid a:hover{color:#2bb3b1}
+.ta-footer-logo{width:62px;height:62px;object-fit:contain;margin-bottom:10px}.ta-social{display:flex;gap:12px;flex-wrap:wrap}
+.ta-footer-bottom{max-width:1200px;margin:30px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;color:#777;font-size:10px}
+body.site-en .ta-ar,body.en .ta-ar,body.english .ta-ar{display:none!important}
+body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
+@media(max-width:1180px){.ta-links a{font-size:10px;padding:8px 4px}.ta-brand span{display:none}}
+@media(max-width:900px){.ta-nav-inner{min-height:68px}.ta-menu{display:block}.ta-links{display:none;position:absolute;top:68px;left:0;right:0;background:#090b0b;padding:14px 6%;flex-direction:column;align-items:stretch;border-bottom:1px solid rgba(255,255,255,.10);max-height:calc(100vh - 68px);overflow:auto}.ta-links.open{display:flex}.ta-links a{font-size:13px;padding:10px 0}.ta-footer-grid{grid-template-columns:1fr 1fr}.ta-footer-bottom{display:block}.ta-footer-bottom>*{display:block;margin-top:6px}}
+@media(max-width:560px){.ta-footer-grid{grid-template-columns:1fr}.ta-master-footer{padding-inline:18px}}
+</style>
+
 </head>
 <body>
-<nav class="master-nav" id="masterNav" aria-label="Main navigation">
-  <div class="master-nav-inner">
-    <a class="master-brand" href="index.html" aria-label="Teatro Alsaeed Home">
+
+<nav class="ta-master-nav" id="masterNav" aria-label="Main navigation">
+  <div class="ta-nav-inner">
+    <a class="ta-brand" href="index.html" aria-label="Teatro Alsaeed Home">
       <img src="logo.png" alt="Teatro Alsaeed">
-      <span><b class="lang-ar">تياترو الصعيد</b><b class="lang-en">Teatro Alsaeed</b><small class="lang-ar">إحياء وتطوير الفنون</small><small class="lang-en">Reviving &amp; Developing the Arts</small></span>
+      <span><b class="ta-ar">تياترو الصعيد</b><b class="ta-en">Teatro Alsaeed</b><small class="ta-ar">إحياء وتطوير الفنون</small><small class="ta-en">Reviving &amp; Developing the Arts</small></span>
     </a>
-    <button class="master-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
-    <nav class="master-links" id="navLinks">
-      <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
-      <a href="about.html"><span class="lang-ar">عنّا</span><span class="lang-en">About</span></a>
-      <a href="troupe.html"><span class="lang-ar">الفرقة</span><span class="lang-en">Troupe</span></a>
-      <a href="productions.html"><span class="lang-ar">العروض</span><span class="lang-en">Productions</span></a>
-      <a href="academy.html"><span class="lang-ar">الأكاديمية</span><span class="lang-en">Academy</span></a>
-      <a href="cinema-school.html"><span class="lang-ar">مدرسة السينما</span><span class="lang-en">Cinema School</span></a>
-      <a href="incubator.html"><span class="lang-ar">الحاضنة</span><span class="lang-en">Incubator</span></a>
-      <a href="festival.html"><span class="lang-ar">المهرجان</span><span class="lang-en">Festival</span></a>
-      <a href="sahara.html"><span class="lang-ar">صحارة</span><span class="lang-en">Sahara</span></a>
-      <a href="basement-theatre.html"><span class="lang-ar">مسرح البدروم</span><span class="lang-en">Basement Theatre</span></a>
-      <a href="contact.html"><span class="lang-ar">تواصل</span><span class="lang-en">Contact</span></a>
+    <button class="ta-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
+    <nav class="ta-links" id="navLinks">
+      <a href="index.html"><span class="ta-ar">الرئيسية</span><span class="ta-en">Home</span></a>
+      <a href="about.html"><span class="ta-ar">عنّا</span><span class="ta-en">About</span></a>
+      <a href="troupe.html"><span class="ta-ar">الفرقة</span><span class="ta-en">Troupe</span></a>
+      <a href="productions.html"><span class="ta-ar">العروض</span><span class="ta-en">Productions</span></a>
+      <a href="academy.html"><span class="ta-ar">الأكاديمية</span><span class="ta-en">Academy</span></a>
+      <a href="cinema-school.html"><span class="ta-ar">مدرسة السينما</span><span class="ta-en">Cinema School</span></a>
+      <a href="incubator.html"><span class="ta-ar">الحاضنة</span><span class="ta-en">Incubator</span></a>
+      <a href="festival.html"><span class="ta-ar">المهرجان</span><span class="ta-en">Festival</span></a>
+      <a href="sahara.html"><span class="ta-ar">صحارة</span><span class="ta-en">Sahara</span></a>
+      <a href="basement-theatre.html"><span class="ta-ar">مسرح البدروم</span><span class="ta-en">Basement Theatre</span></a>
+      <a href="partners.html"><span class="ta-ar">شركاؤنا</span><span class="ta-en">Partners</span></a>
+      <a href="contact.html"><span class="ta-ar">تواصل</span><span class="ta-en">Contact</span></a>
     </nav>
+    <button class="ta-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
+  </div>
+</nav>
+
+
     <button class="master-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
   </div>
 </nav>
@@ -196,15 +227,15 @@ linear-gradient(0deg,rgba(0,0,0,.94),transparent 55%),
 url('images/festival/2024/hero.jpg') center/cover;">
 <div class="container hero-content">
 <div class="eyebrow">MINYA THEATRE FESTIVAL · SECOND EDITION · 2024</div>
-<h1 class="lang-ar">من المنيا<br><span>للمسرح المصري.</span></h1>
-<h1 class="lang-en">From Minya<br><span>to Egyptian Theatre.</span></h1>
+<h1 class="ta-ar">من المنيا<br><span>للمسرح المصري.</span></h1>
+<h1 class="ta-en">From Minya<br><span>to Egyptian Theatre.</span></h1>
 <div class="hero-sub lang-ar">مهرجان المنيا للعروض المسرحية · الدورة الثانية</div>
 <div class="hero-sub lang-en">Minya Theatre Festival · 2nd Edition</div>
 <p class="hero-copy lang-ar">الدورة التي خرج فيها المهرجان من نطاقه المحلي وفتح أبوابه لفرق من مختلف محافظات مصر، وأضاف مسابقة المونودراما لأول مرة.</p>
 <p class="hero-copy lang-en">The edition that expanded beyond Minya, welcoming theatre makers from across Egypt and introducing the Monodrama Competition for the first time.</p>
 <div class="hero-actions">
-<a class="btn btn-primary" href="#edition"><span class="lang-ar">استكشف الدورة</span><span class="lang-en">Explore the edition</span></a>
-<a class="btn btn-outline" href="#awards"><span class="lang-ar">النتائج والجوائز</span><span class="lang-en">Results & Awards</span></a>
+<a class="btn btn-primary" href="#edition"><span class="ta-ar">استكشف الدورة</span><span class="ta-en">Explore the edition</span></a>
+<a class="btn btn-outline" href="#awards"><span class="ta-ar">النتائج والجوائز</span><span class="ta-en">Results & Awards</span></a>
 </div>
 </div>
 <div class="hero-stamp">MINYA · EGYPT · 2024</div>
@@ -212,24 +243,24 @@ url('images/festival/2024/hero.jpg') center/cover;">
 
 <section class="numbers">
 <div class="container"><div class="numbers-grid">
-<div class="number"><strong>68</strong><span class="lang-ar">طلب مشاركة</span><span class="lang-en">Applications</span></div>
-<div class="number"><strong>15</strong><span class="lang-ar">محافظة مصرية</span><span class="lang-en">Egyptian governorates</span></div>
-<div class="number"><strong>13</strong><span class="lang-ar">عرضًا قُدّم بالمهرجان</span><span class="lang-en">Festival performances</span></div>
-<div class="number"><strong>2,187</strong><span class="lang-ar">مشاهدًا للعروض</span><span class="lang-en">Audience members</span></div>
+<div class="number"><strong>68</strong><span class="ta-ar">طلب مشاركة</span><span class="ta-en">Applications</span></div>
+<div class="number"><strong>15</strong><span class="ta-ar">محافظة مصرية</span><span class="ta-en">Egyptian governorates</span></div>
+<div class="number"><strong>13</strong><span class="ta-ar">عرضًا قُدّم بالمهرجان</span><span class="ta-en">Festival performances</span></div>
+<div class="number"><strong>2,187</strong><span class="ta-ar">مشاهدًا للعروض</span><span class="ta-en">Audience members</span></div>
 </div></div>
 </section>
 
 <section class="intro" id="edition">
 <div class="container intro-grid">
 <div>
-<div class="kicker"><span class="lang-ar">الدورة الثانية · 2024</span><span class="lang-en">SECOND EDITION · 2024</span></div>
-<h2 class="lang-ar">خطوة جديدة.<br><span>من المنيا إلى مصر.</span></h2>
-<h2 class="lang-en">A new step.<br><span>From Minya to Egypt.</span></h2>
+<div class="kicker"><span class="ta-ar">الدورة الثانية · 2024</span><span class="ta-en">SECOND EDITION · 2024</span></div>
+<h2 class="ta-ar">خطوة جديدة.<br><span>من المنيا إلى مصر.</span></h2>
+<h2 class="ta-en">A new step.<br><span>From Minya to Egypt.</span></h2>
 </div>
 <div class="intro-copy">
 <div class="intro-line"></div>
-<p class="lang-ar">توسعت الدورة الثانية لتشمل جميع محافظات الجمهورية بدلًا من المنيا فقط. تلقى المهرجان 68 طلب مشاركة: 47 عرضًا في مسابقة العروض الطويلة و21 عرضًا في مسابقة المونودراما، ووصلت طلبات العروض الطويلة المستوفية للشروط إلى 36 عرضًا من 15 محافظة.</p>
-<p class="lang-en">The second edition expanded from a local Minya festival to a nationwide platform. It received 68 applications: 47 for the long-form competition and 21 for monodrama. Thirty-six eligible long-form productions came from 15 Egyptian governorates.</p>
+<p class="ta-ar">توسعت الدورة الثانية لتشمل جميع محافظات الجمهورية بدلًا من المنيا فقط. تلقى المهرجان 68 طلب مشاركة: 47 عرضًا في مسابقة العروض الطويلة و21 عرضًا في مسابقة المونودراما، ووصلت طلبات العروض الطويلة المستوفية للشروط إلى 36 عرضًا من 15 محافظة.</p>
+<p class="ta-en">The second edition expanded from a local Minya festival to a nationwide platform. It received 68 applications: 47 for the long-form competition and 21 for monodrama. Thirty-six eligible long-form productions came from 15 Egyptian governorates.</p>
 </div>
 </div>
 </section>
@@ -237,15 +268,15 @@ url('images/festival/2024/hero.jpg') center/cover;">
 <section class="journey">
 <div class="container">
 <div class="section-title">
-<div class="kicker"><span class="lang-ar">المسابقات</span><span class="lang-en">COMPETITIONS</span></div>
-<h2 class="lang-ar">مساحتان<br>للمنافسة.</h2>
-<h2 class="lang-en">Two competition<br>platforms.</h2>
-<p class="lang-ar">شهدت الدورة الثانية توسعًا في شكل البرنامج، مع استمرار مسابقة العروض الطويلة وإطلاق مسابقة المونودراما للمرة الأولى.</p>
-<p class="lang-en">The second edition expanded its programme with the long-form theatre competition and the festival's first Monodrama Competition.</p>
+<div class="kicker"><span class="ta-ar">المسابقات</span><span class="ta-en">COMPETITIONS</span></div>
+<h2 class="ta-ar">مساحتان<br>للمنافسة.</h2>
+<h2 class="ta-en">Two competition<br>platforms.</h2>
+<p class="ta-ar">شهدت الدورة الثانية توسعًا في شكل البرنامج، مع استمرار مسابقة العروض الطويلة وإطلاق مسابقة المونودراما للمرة الأولى.</p>
+<p class="ta-en">The second edition expanded its programme with the long-form theatre competition and the festival's first Monodrama Competition.</p>
 </div>
 <div class="competition-tabs">
-<article class="comp-card"><div class="comp-tag">LONG-FORM THEATRE</div><h3 class="lang-ar">مسابقة العروض الطويلة</h3><h3 class="lang-en">Long-form Theatre</h3><p class="lang-ar">تقدم 47 عرضًا، وانطبقت الشروط على 36 عرضًا من 15 محافظة. وبعد اعتذارات بعض الفرق، قُدمت 4 عروض داخل المسابقة، إلى جانب عرض افتتاح «خمسة رجال بالطابق العلوي» لتياترو الصعيد خارج المسابقة.</p><p class="lang-en">47 productions applied and 36 eligible works represented 15 governorates. Following withdrawals, four productions competed, alongside Teatro Alsaeed's opening production “Five Men Upstairs” outside the competition.</p></article>
-<article class="comp-card"><div class="comp-tag">MONODRAMA</div><h3 class="lang-ar">مسابقة المونودراما</h3><h3 class="lang-en">Monodrama Competition</h3><p class="lang-ar">أُضيفت للمهرجان لأول مرة. تقدم 21 عرضًا، واختيرت 9 عروض من القاهرة والمنيا وقنا والفيوم، وقدمت على مدار ثلاثة أيام بمساحة تياترو الصعيد.</p><p class="lang-en">Introduced for the first time. From 21 applications, nine productions from Cairo, Minya, Qena and Fayoum were selected and presented over three days at Teatro Alsaeed Space.</p></article>
+<article class="comp-card"><div class="comp-tag">LONG-FORM THEATRE</div><h3 class="ta-ar">مسابقة العروض الطويلة</h3><h3 class="ta-en">Long-form Theatre</h3><p class="ta-ar">تقدم 47 عرضًا، وانطبقت الشروط على 36 عرضًا من 15 محافظة. وبعد اعتذارات بعض الفرق، قُدمت 4 عروض داخل المسابقة، إلى جانب عرض افتتاح «خمسة رجال بالطابق العلوي» لتياترو الصعيد خارج المسابقة.</p><p class="ta-en">47 productions applied and 36 eligible works represented 15 governorates. Following withdrawals, four productions competed, alongside Teatro Alsaeed's opening production “Five Men Upstairs” outside the competition.</p></article>
+<article class="comp-card"><div class="comp-tag">MONODRAMA</div><h3 class="ta-ar">مسابقة المونودراما</h3><h3 class="ta-en">Monodrama Competition</h3><p class="ta-ar">أُضيفت للمهرجان لأول مرة. تقدم 21 عرضًا، واختيرت 9 عروض من القاهرة والمنيا وقنا والفيوم، وقدمت على مدار ثلاثة أيام بمساحة تياترو الصعيد.</p><p class="ta-en">Introduced for the first time. From 21 applications, nine productions from Cairo, Minya, Qena and Fayoum were selected and presented over three days at Teatro Alsaeed Space.</p></article>
 </div>
 </div>
 </section>
@@ -253,9 +284,9 @@ url('images/festival/2024/hero.jpg') center/cover;">
 <section class="section light" id="awards">
 <div class="container">
 <div class="section-title">
-<div class="kicker"><span class="lang-ar">النتائج والجوائز</span><span class="lang-en">RESULTS & AWARDS</span></div>
-<h2 class="lang-ar">الفائزون<br><span>في الدورة الثانية.</span></h2>
-<h2 class="lang-en">The second edition<br><span>winners.</span></h2>
+<div class="kicker"><span class="ta-ar">النتائج والجوائز</span><span class="ta-en">RESULTS & AWARDS</span></div>
+<h2 class="ta-ar">الفائزون<br><span>في الدورة الثانية.</span></h2>
+<h2 class="ta-en">The second edition<br><span>winners.</span></h2>
 </div>
 
 <div class="award-group">
@@ -291,12 +322,12 @@ url('images/festival/2024/hero.jpg') center/cover;">
 <div class="kicker">MASTER CLASS · 2024</div>
 <div class="masterclass-feature-title lang-ar">فتحي عبد الوهاب<br><span>وفن التمثيل المسرحي.</span></div>
 <div class="masterclass-feature-title lang-en">Fathy Abdel Wahab<br><span>& The Art of Acting.</span></div>
-<p class="lang-ar">ضمن فعاليات الدورة الثانية، استضاف مهرجان المنيا للعروض المسرحية النجم فتحي عبد الوهاب في ندوة مفتوحة وماستر كلاس حول فن التمثيل المسرحي، بمشاركة الفنانين من محافظات الصعيد.</p>
-<p class="lang-en">As part of the second edition, Minya Theatre Festival hosted actor Fathy Abdel Wahab for an open talk and masterclass on theatre acting, bringing together artists from Upper Egypt.</p>
+<p class="ta-ar">ضمن فعاليات الدورة الثانية، استضاف مهرجان المنيا للعروض المسرحية النجم فتحي عبد الوهاب في ندوة مفتوحة وماستر كلاس حول فن التمثيل المسرحي، بمشاركة الفنانين من محافظات الصعيد.</p>
+<p class="ta-en">As part of the second edition, Minya Theatre Festival hosted actor Fathy Abdel Wahab for an open talk and masterclass on theatre acting, bringing together artists from Upper Egypt.</p>
 <div class="masterclass-metrics">
-<div><strong>228</strong><span class="lang-ar">فنانًا وفنانة</span><span class="lang-en">Artists</span></div>
-<div><strong>MASTER<br>CLASS</strong><span class="lang-ar">في التمثيل المسرحي</span><span class="lang-en">Theatre Acting</span></div>
-<div><strong>2024</strong><span class="lang-ar">الدورة الثانية</span><span class="lang-en">Second Edition</span></div>
+<div><strong>228</strong><span class="ta-ar">فنانًا وفنانة</span><span class="ta-en">Artists</span></div>
+<div><strong>MASTER<br>CLASS</strong><span class="ta-ar">في التمثيل المسرحي</span><span class="ta-en">Theatre Acting</span></div>
+<div><strong>2024</strong><span class="ta-ar">الدورة الثانية</span><span class="ta-en">Second Edition</span></div>
 </div>
 </div>
 <div class="masterclass-feature-image">
@@ -310,19 +341,19 @@ url('images/festival/2024/hero.jpg') center/cover;">
 <section class="section dark">
 <div class="container">
 <div class="section-title">
-<div class="kicker"><span class="lang-ar">التدريب وبناء القدرات</span><span class="lang-en">TRAINING & CAPACITY BUILDING</span></div>
-<h2 class="lang-ar">المهرجان<br>مساحة للتعلّم.</h2>
-<h2 class="lang-en">A festival<br>for learning.</h2>
-<p class="lang-ar">تضمن البرنامج ست ورش تدريبية، ووصلت المشاركة الفعلية فيها إلى 143 فنانًا وفنانة بحسب جدول النتائج التفصيلي في التقرير.</p>
-<p class="lang-en">The programme included six training workshops, reaching 143 participants according to the report's detailed workshop results table.</p>
+<div class="kicker"><span class="ta-ar">التدريب وبناء القدرات</span><span class="ta-en">TRAINING & CAPACITY BUILDING</span></div>
+<h2 class="ta-ar">المهرجان<br>مساحة للتعلّم.</h2>
+<h2 class="ta-en">A festival<br>for learning.</h2>
+<p class="ta-ar">تضمن البرنامج ست ورش تدريبية، ووصلت المشاركة الفعلية فيها إلى 143 فنانًا وفنانة بحسب جدول النتائج التفصيلي في التقرير.</p>
+<p class="ta-en">The programme included six training workshops, reaching 143 participants according to the report's detailed workshop results table.</p>
 </div>
 <div class="workshop-grid">
-<article class="workshop-card"><small>PLAYWRITING</small><h3 class="lang-ar">الكتابة المسرحية</h3><h3 class="lang-en">Playwriting</h3><p>محمود جمال حديني</p></article>
-<article class="workshop-card"><small>ACTING</small><h3 class="lang-ar">التمثيل المسرحي</h3><h3 class="lang-en">Acting</h3><p>د. هايدي عبد الخالق</p></article>
-<article class="workshop-card"><small>DIRECTING</small><h3 class="lang-ar">الإخراج المسرحي</h3><h3 class="lang-en">Theatre Directing</h3><p>محمد زكي</p></article>
-<article class="workshop-card"><small>THEATRE TECH</small><h3 class="lang-ar">تقنيات دور العرض المسرحي</h3><h3 class="lang-en">Theatre Venue Techniques</h3><p>مرام عبد المقصود</p></article>
-<article class="workshop-card"><small>NETWORKING</small><h3 class="lang-ar">التشبيك وفرص المهرجانات</h3><h3 class="lang-en">Networking & Festival Opportunities</h3><p>منى سليمان</p></article>
-<article class="workshop-card"><small>CULTURAL MANAGEMENT</small><h3 class="lang-ar">الإدارة الثقافية والتخطيط وفرص الدعم</h3><h3 class="lang-en">Cultural Management & Planning</h3><p>طاهرة طارق</p></article>
+<article class="workshop-card"><small>PLAYWRITING</small><h3 class="ta-ar">الكتابة المسرحية</h3><h3 class="ta-en">Playwriting</h3><p>محمود جمال حديني</p></article>
+<article class="workshop-card"><small>ACTING</small><h3 class="ta-ar">التمثيل المسرحي</h3><h3 class="ta-en">Acting</h3><p>د. هايدي عبد الخالق</p></article>
+<article class="workshop-card"><small>DIRECTING</small><h3 class="ta-ar">الإخراج المسرحي</h3><h3 class="ta-en">Theatre Directing</h3><p>محمد زكي</p></article>
+<article class="workshop-card"><small>THEATRE TECH</small><h3 class="ta-ar">تقنيات دور العرض المسرحي</h3><h3 class="ta-en">Theatre Venue Techniques</h3><p>مرام عبد المقصود</p></article>
+<article class="workshop-card"><small>NETWORKING</small><h3 class="ta-ar">التشبيك وفرص المهرجانات</h3><h3 class="ta-en">Networking & Festival Opportunities</h3><p>منى سليمان</p></article>
+<article class="workshop-card"><small>CULTURAL MANAGEMENT</small><h3 class="ta-ar">الإدارة الثقافية والتخطيط وفرص الدعم</h3><h3 class="ta-en">Cultural Management & Planning</h3><p>طاهرة طارق</p></article>
 </div>
 </div>
 </section>
@@ -330,14 +361,14 @@ url('images/festival/2024/hero.jpg') center/cover;">
 <section class="section light">
 <div class="container">
 <div class="section-title">
-<div class="kicker"><span class="lang-ar">لجان المهرجان</span><span class="lang-en">FESTIVAL JURIES</span></div>
-<h2 class="lang-ar">خبرات مسرحية<br><span>متنوعة.</span></h2>
-<h2 class="lang-en">Diverse theatre<br><span>expertise.</span></h2>
+<div class="kicker"><span class="ta-ar">لجان المهرجان</span><span class="ta-en">FESTIVAL JURIES</span></div>
+<h2 class="ta-ar">خبرات مسرحية<br><span>متنوعة.</span></h2>
+<h2 class="ta-en">Diverse theatre<br><span>expertise.</span></h2>
 </div>
 <div class="partner-grid">
-<div class="partner-card"><strong class="lang-ar">لجنة المشاهدة</strong><strong class="lang-en">Selection Committee</strong><span>أشرف عتريس · أسامة طه · رأفت ميخائيل</span></div>
-<div class="partner-card"><strong class="lang-ar">تحكيم العروض الطويلة</strong><strong class="lang-en">Long-form Jury</strong><span>عبير لطفي · عماد الراهب · محمد نبيل منيب · هند سلامة · أبو بكر الشريف</span></div>
-<div class="partner-card"><strong class="lang-ar">تحكيم المونودراما</strong><strong class="lang-en">Monodrama Jury</strong><span>د. أسامة رؤوف · د. عبد الباقي جمال · هيثم الهواري</span></div>
+<div class="partner-card"><strong class="ta-ar">لجنة المشاهدة</strong><strong class="ta-en">Selection Committee</strong><span>أشرف عتريس · أسامة طه · رأفت ميخائيل</span></div>
+<div class="partner-card"><strong class="ta-ar">تحكيم العروض الطويلة</strong><strong class="ta-en">Long-form Jury</strong><span>عبير لطفي · عماد الراهب · محمد نبيل منيب · هند سلامة · أبو بكر الشريف</span></div>
+<div class="partner-card"><strong class="ta-ar">تحكيم المونودراما</strong><strong class="ta-en">Monodrama Jury</strong><span>د. أسامة رؤوف · د. عبد الباقي جمال · هيثم الهواري</span></div>
 </div>
 </div>
 </section>
@@ -345,21 +376,21 @@ url('images/festival/2024/hero.jpg') center/cover;">
 <section class="section dark">
 <div class="container">
 <div class="section-title">
-<div class="kicker"><span class="lang-ar">الدعم والتعاون</span><span class="lang-en">SUPPORT & COLLABORATION</span></div>
-<h2 class="lang-ar">شركاء<br>الرحلة.</h2>
-<h2 class="lang-en">Partners in<br>the journey.</h2>
+<div class="kicker"><span class="ta-ar">الدعم والتعاون</span><span class="ta-en">SUPPORT & COLLABORATION</span></div>
+<h2 class="ta-ar">شركاء<br>الرحلة.</h2>
+<h2 class="ta-en">Partners in<br>the journey.</h2>
 </div>
 <div class="partner-grid">
-<div class="partner-card"><strong>الصندوق العربي للثقافة والفنون — آفاق</strong><span class="lang-ar">دعم ضمن مشروع شمال أفريقيا الثقافي</span><span class="lang-en">Support through the North Africa Cultural Program</span></div>
-<div class="partner-card"><strong>وزارة الثقافة المصرية</strong><span class="lang-ar">رعاية الدورة الثانية وموافقة اللجنة العليا للمهرجانات</span><span class="lang-en">Patronage and festival approval</span></div>
-<div class="partner-card"><strong>مركز الجزويت للخدمات التربوية بالمنيا</strong><span class="lang-ar">استضافة العروض الطويلة والماستر كلاس</span><span class="lang-en">Host venue for long-form productions and masterclass</span></div>
+<div class="partner-card"><strong>الصندوق العربي للثقافة والفنون — آفاق</strong><span class="ta-ar">دعم ضمن مشروع شمال أفريقيا الثقافي</span><span class="ta-en">Support through the North Africa Cultural Program</span></div>
+<div class="partner-card"><strong>وزارة الثقافة المصرية</strong><span class="ta-ar">رعاية الدورة الثانية وموافقة اللجنة العليا للمهرجانات</span><span class="ta-en">Patronage and festival approval</span></div>
+<div class="partner-card"><strong>مركز الجزويت للخدمات التربوية بالمنيا</strong><span class="ta-ar">استضافة العروض الطويلة والماستر كلاس</span><span class="ta-en">Host venue for long-form productions and masterclass</span></div>
 </div>
 </div>
 </section>
 
 <section class="section dark">
 <div class="container">
-<div class="section-title"><div class="kicker"><span class="lang-ar">الأرشيف البصري</span><span class="lang-en">PHOTO ARCHIVE</span></div><h2 class="lang-ar">ذاكرة<br>الدورة الثانية.</h2><h2 class="lang-en">The memory<br>of the second edition.</h2><p class="lang-ar">ضع صور الدورة داخل المسار <strong>images/festival/2024/</strong> بالأسماء من 01.jpg إلى 12.jpg.</p><p class="lang-en">Place the edition photos inside <strong>images/festival/2024/</strong> using filenames 01.jpg through 12.jpg.</p></div>
+<div class="section-title"><div class="kicker"><span class="ta-ar">الأرشيف البصري</span><span class="ta-en">PHOTO ARCHIVE</span></div><h2 class="ta-ar">ذاكرة<br>الدورة الثانية.</h2><h2 class="ta-en">The memory<br>of the second edition.</h2><p class="ta-ar">ضع صور الدورة داخل المسار <strong>images/festival/2024/</strong> بالأسماء من 01.jpg إلى 12.jpg.</p><p class="ta-en">Place the edition photos inside <strong>images/festival/2024/</strong> using filenames 01.jpg through 12.jpg.</p></div>
 <div class="archive">
 <div class="photo"><img src="images/festival/2024/01.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
 <div class="photo"><img src="images/festival/2024/02.jpg" alt="Festival 2024 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
@@ -380,11 +411,11 @@ url('images/festival/2024/hero.jpg') center/cover;">
 <section class="final" style="background:linear-gradient(0deg,rgba(0,0,0,.9),rgba(0,0,0,.48)),url('images/festival/2024/final.jpg') center/cover">
 <div class="container final-inner">
 <div class="kicker">MINYA THEATRE FESTIVAL · 2024</div>
-<h2 class="lang-ar">من المنيا<br><span>للمسرح المصري.</span></h2>
-<h2 class="lang-en">From Minya<br><span>to Egyptian Theatre.</span></h2>
-<p class="lang-ar">الدورة الثانية كانت الخطوة التي وسّعت مساحة المهرجان من تجربة محلية إلى منصة تستقبل المسرح من مختلف محافظات مصر.</p>
-<p class="lang-en">The second edition transformed the festival from a local experience into a platform welcoming theatre from across Egypt.</p>
-<a class="btn btn-primary" href="festival.html"><span class="lang-ar">العودة إلى رحلة المهرجان</span><span class="lang-en">Back to Festival Journey</span></a>
+<h2 class="ta-ar">من المنيا<br><span>للمسرح المصري.</span></h2>
+<h2 class="ta-en">From Minya<br><span>to Egyptian Theatre.</span></h2>
+<p class="ta-ar">الدورة الثانية كانت الخطوة التي وسّعت مساحة المهرجان من تجربة محلية إلى منصة تستقبل المسرح من مختلف محافظات مصر.</p>
+<p class="ta-en">The second edition transformed the festival from a local experience into a platform welcoming theatre from across Egypt.</p>
+<a class="btn btn-primary" href="festival.html"><span class="ta-ar">العودة إلى رحلة المهرجان</span><span class="ta-en">Back to Festival Journey</span></a>
 </div>
 </section>
 </main>
@@ -416,44 +447,7 @@ document.getElementById("year").textContent=new Date().getFullYear();
 (function(){const n=document.getElementById('masterNav'),m=document.getElementById('menuBtn'),l=document.getElementById('navLinks'),b=document.getElementById('langBtn'); if(!n)return; let langBtn=localStorage.getItem('teatroLang')||'ar'; function setLang(x){n.classList.toggle('english',x==='en');document.documentElement.langBtn=x;document.documentElement.dir=x==='en'?'ltr':'rtl';b.textContent=x==='en'?'AR':'EN';localStorage.setItem('teatroLang',x)} setLang(langBtn); m&&m.addEventListener('click',()=>l.classList.toggle('open')); b&&b.addEventListener('click',()=>setLang(n.classList.contains('english')?'ar':'en')); l&&l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));})();
 </script>
 
-<footer class="master-footer">
-  <div class="master-footer-grid">
-    <div class="master-footer-brand">
-      <img src="logo.png" alt="Teatro Alsaeed">
-      <p class="lang-ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
-      <p class="lang-en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
-    </div>
-    <div>
-      <h3><span class="lang-ar">استكشف</span><span class="lang-en">Explore</span></h3>
-      <a href="index.html">الرئيسية / Home</a>
-      <a href="about.html">عنّا / About</a>
-      <a href="troupe.html">الفرقة / Troupe</a>
-      <a href="productions.html">العروض / Productions</a>
-      <a href="academy.html">الأكاديمية / Academy</a>
-      <a href="cinema-school.html">مدرسة السينما / Cinema School</a>
-    </div>
-    <div>
-      <h3><span class="lang-ar">المشروعات</span><span class="lang-en">Projects</span></h3>
-      <a href="incubator.html">الحاضنة / Incubator</a>
-      <a href="festival.html">المهرجان / Festival</a>
-      <a href="sahara.html">صحارة / Sahara</a>
-      <a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a>
-      <a href="contact.html">تواصل / Contact</a>
-    </div>
-    <div>
-      <h3><span class="lang-ar">تواصل</span><span class="lang-en">Connect</span></h3>
-      <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
-      <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://www.tiktok.com/@teatro.alsaeed" target="_blank" rel="noopener">TikTok</a>
-    </div>
-  </div>
-  <div class="master-footer-bottom">
-    <span>© <span id="year"></span> Teatro Alsaeed</span>
-    <span class="lang-ar">من المنيا إلى العالم</span><span class="lang-en">From Minya to the world</span>
-  </div>
-</footer>
+
 
 <script id="teatro-master-audit-script">
 (function(){
@@ -471,6 +465,109 @@ document.getElementById("year").textContent=new Date().getFullYear();
   if(menuBtn) menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open?'true':'false')});
   if(nav) nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
   const y=document.getElementById('year'); if(y)y.textContent=new Date().getFullYear();
+})();
+</script>
+
+
+<footer class="ta-master-footer">
+  <div class="ta-footer-grid">
+    <div>
+      <img src="logo.png" alt="Teatro Alsaeed" class="ta-footer-logo">
+      <p class="ta-ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
+      <p class="ta-en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
+    </div>
+    <div>
+      <h3><span class="ta-ar">استكشف</span><span class="ta-en">Explore</span></h3>
+      <a href="index.html">الرئيسية / Home</a>
+      <a href="about.html">عنّا / About</a>
+      <a href="troupe.html">الفرقة / Troupe</a>
+      <a href="productions.html">العروض / Productions</a>
+      <a href="academy.html">الأكاديمية / Academy</a>
+      <a href="cinema-school.html">مدرسة السينما / Cinema School</a>
+      <a href="incubator.html">الحاضنة / Incubator</a>
+      <a href="festival.html">المهرجان / Festival</a>
+      <a href="sahara.html">صحارة / Sahara</a>
+      <a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a>
+      <a href="partners.html">شركاؤنا / Partners</a>
+      <a href="contact.html">تواصل / Contact</a>
+    </div>
+    <div>
+      <h3><span class="ta-ar">أرشيف المهرجان</span><span class="ta-en">Festival Archive</span></h3>
+      <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a>
+      <a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a>
+      <a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a>
+      <a href="festival-2027.html">2027 · الدورة الرابعة / 4th Edition</a>
+      <a href="lumieres.html">Lumières / أضواء</a>
+    </div>
+    <div>
+      <h3><span class="ta-ar">تواصل</span><span class="ta-en">Connect</span></h3>
+      <p>Minya, Egypt</p>
+      <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
+      <div class="ta-social">
+        <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@teatro.alsaeed" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </div>
+  <div class="ta-footer-bottom">
+    <span>© <span id="year"></span> Teatro Alsaeed</span>
+    <span class="ta-ar">من المنيا إلى العالم</span><span class="ta-en">From Minya to the world</span>
+  </div>
+</footer>
+
+
+<script id="teatro-site-audit-script">
+(function(){
+  const body=document.body, root=document.documentElement;
+  const langBtn=document.getElementById('langBtn');
+  const menuBtn=document.getElementById('menuBtn');
+  const nav=document.getElementById('navLinks');
+  function applyLang(lang,save){
+    const en=lang==='en';
+    body.classList.toggle('site-en',en);
+    body.classList.toggle('english',en);
+    body.classList.toggle('en',en);
+    root.lang=en?'en':'ar';
+    root.dir=en?'ltr':'rtl';
+    if(langBtn) langBtn.textContent=en?'AR':'EN';
+    if(save!==false){
+      try{localStorage.setItem('siteLang',lang);localStorage.setItem('teatroLang',lang)}catch(e){}
+    }
+  }
+  let saved='ar';
+  try{saved=localStorage.getItem('siteLang')||localStorage.getItem('teatroLang')||'ar'}catch(e){}
+  applyLang(saved,false);
+
+  document.addEventListener('click',function(e){
+    const lang=e.target.closest && e.target.closest('#langBtn');
+    if(lang){
+      e.preventDefault(); e.stopImmediatePropagation();
+      applyLang(body.classList.contains('site-en')?'ar':'en',true);
+      return;
+    }
+    const menu=e.target.closest && e.target.closest('#menuBtn');
+    if(menu){
+      e.preventDefault(); e.stopImmediatePropagation();
+      if(nav){
+        const open=nav.classList.toggle('open');
+        menu.setAttribute('aria-expanded',open?'true':'false');
+      }
+      return;
+    }
+    const link=e.target.closest && e.target.closest('#navLinks a');
+    if(link && nav) nav.classList.remove('open');
+  },true);
+
+  if(nav){
+    const current=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    nav.querySelectorAll('a[href]').forEach(a=>{
+      const href=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
+      if(href===current || (current.startsWith('festival-') && href==='festival.html')) a.classList.add('active');
+    });
+  }
+  const year=document.getElementById('year'); if(year) year.textContent=new Date().getFullYear();
 })();
 </script>
 

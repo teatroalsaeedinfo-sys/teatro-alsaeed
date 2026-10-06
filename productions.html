@@ -379,29 +379,61 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
 @media(max-width:1150px){.site-brand-text{display:none}.site-master-links a{padding:9px 6px;font-size:10px}}
 @media(max-width:900px){.site-menu-btn{display:block}.site-master-links{display:none;position:absolute;top:72px;left:0;right:0;background:#0c0d0d;padding:12px 20px 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid rgba(255,255,255,.08)}.site-master-links.open{display:flex}.site-master-links a{padding:13px 4px;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px}.site-lang-btn{margin:12px 0 0;align-self:flex-start}}
 </style>
+
+<style id="teatro-site-audit-css">
+.ta-master-nav{position:fixed;top:0;left:0;right:0;z-index:99999;background:rgba(7,8,8,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.10);color:#fff;font-family:Inter,Arial,sans-serif}
+.ta-nav-inner{max-width:1450px;min-height:74px;margin:auto;padding:8px 20px;display:flex;align-items:center;gap:16px}
+.ta-brand{display:flex;align-items:center;gap:9px;color:#fff;text-decoration:none;white-space:nowrap}
+.ta-brand img{width:42px;height:42px;object-fit:contain}.ta-brand span{display:flex;flex-direction:column;line-height:1.05}.ta-brand b{font-size:14px}.ta-brand small{font-size:8px;opacity:.55;letter-spacing:.7px;margin-top:4px}
+.ta-links{display:flex;align-items:center;justify-content:flex-end;gap:2px;flex:1}
+.ta-links a{color:#ddd;text-decoration:none;font-size:11px;padding:8px 6px;border-radius:7px;white-space:nowrap}
+.ta-links a:hover,.ta-links a.active{color:#2bb3b1;background:rgba(43,179,177,.10)}
+.ta-lang,.ta-menu{border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;border-radius:8px;cursor:pointer}
+.ta-lang{padding:8px 11px;font-weight:800}.ta-menu{display:none;padding:7px 10px;font-size:21px}
+.ta-master-footer{background:#090b0b;color:#fff;border-top:1px solid rgba(255,255,255,.10);padding:52px 22px 20px;font-family:Inter,Arial,sans-serif}
+.ta-footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1.5fr 1.2fr 1fr;gap:34px}
+.ta-footer-grid h3{font-size:13px;margin:0 0 13px;color:#fff}.ta-footer-grid p{color:#b7c0c0;font-size:12px;line-height:1.8;margin:7px 0}
+.ta-footer-grid a{display:block;color:#aab3b3;text-decoration:none;font-size:11px;margin:7px 0}.ta-footer-grid a:hover{color:#2bb3b1}
+.ta-footer-logo{width:62px;height:62px;object-fit:contain;margin-bottom:10px}.ta-social{display:flex;gap:12px;flex-wrap:wrap}
+.ta-footer-bottom{max-width:1200px;margin:30px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;color:#777;font-size:10px}
+body.site-en .ta-ar,body.en .ta-ar,body.english .ta-ar{display:none!important}
+body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
+@media(max-width:1180px){.ta-links a{font-size:10px;padding:8px 4px}.ta-brand span{display:none}}
+@media(max-width:900px){.ta-nav-inner{min-height:68px}.ta-menu{display:block}.ta-links{display:none;position:absolute;top:68px;left:0;right:0;background:#090b0b;padding:14px 6%;flex-direction:column;align-items:stretch;border-bottom:1px solid rgba(255,255,255,.10);max-height:calc(100vh - 68px);overflow:auto}.ta-links.open{display:flex}.ta-links a{font-size:13px;padding:10px 0}.ta-footer-grid{grid-template-columns:1fr 1fr}.ta-footer-bottom{display:block}.ta-footer-bottom>*{display:block;margin-top:6px}}
+@media(max-width:560px){.ta-footer-grid{grid-template-columns:1fr}.ta-master-footer{padding-inline:18px}}
+</style>
+
 </head>
 
 <body>
-<!-- SITE-WIDE MASTER NAV -->
-<nav class="site-master-nav" id="siteMasterNav">
-  <div class="site-master-inner">
-    <a class="site-brand" href="index.html"><img src="logo.png" alt="Teatro Alsaeed"><span class="site-brand-text"><b>تياترو الصعيد</b><small>Teatro Alsaeed</small></span></a>
-    <button class="site-menu-btn" id="siteMenuBtn" aria-label="Open menu">☰</button>
-    <div class="site-master-links" id="siteMasterLinks">
-      <a href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
-      <a href="about.html"><span class="ar">عنّا</span><span class="en">About</span></a>
-      <a href="troupe.html"><span class="ar">الفرقة</span><span class="en">Troupe</span></a>
-      <a href="productions.html"><span class="ar">العروض</span><span class="en">Productions</span></a>
-      <a href="academy.html"><span class="ar">الأكاديمية</span><span class="en">Academy</span></a>
-      <a href="cinema-school.html"><span class="ar">مدرسة السينما</span><span class="en">Cinema School</span></a>
-      <a href="incubator.html"><span class="ar">الحاضنة</span><span class="en">Incubator</span></a>
-      <a href="festival.html"><span class="ar">المهرجان</span><span class="en">Festival</span></a>
-      <a href="sahara.html"><span class="ar">صحارة</span><span class="en">Sahara</span></a>
-      <a href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
-      <button class="site-lang-btn" id="siteLangBtn">EN</button>
-    </div>
+
+<nav class="ta-master-nav" id="masterNav" aria-label="Main navigation">
+  <div class="ta-nav-inner">
+    <a class="ta-brand" href="index.html" aria-label="Teatro Alsaeed Home">
+      <img src="logo.png" alt="Teatro Alsaeed">
+      <span><b class="ta-ar">تياترو الصعيد</b><b class="ta-en">Teatro Alsaeed</b><small class="ta-ar">إحياء وتطوير الفنون</small><small class="ta-en">Reviving &amp; Developing the Arts</small></span>
+    </a>
+    <button class="ta-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
+    <nav class="ta-links" id="navLinks">
+      <a href="index.html"><span class="ta-ar">الرئيسية</span><span class="ta-en">Home</span></a>
+      <a href="about.html"><span class="ta-ar">عنّا</span><span class="ta-en">About</span></a>
+      <a href="troupe.html"><span class="ta-ar">الفرقة</span><span class="ta-en">Troupe</span></a>
+      <a href="productions.html"><span class="ta-ar">العروض</span><span class="ta-en">Productions</span></a>
+      <a href="academy.html"><span class="ta-ar">الأكاديمية</span><span class="ta-en">Academy</span></a>
+      <a href="cinema-school.html"><span class="ta-ar">مدرسة السينما</span><span class="ta-en">Cinema School</span></a>
+      <a href="incubator.html"><span class="ta-ar">الحاضنة</span><span class="ta-en">Incubator</span></a>
+      <a href="festival.html"><span class="ta-ar">المهرجان</span><span class="ta-en">Festival</span></a>
+      <a href="sahara.html"><span class="ta-ar">صحارة</span><span class="ta-en">Sahara</span></a>
+      <a href="basement-theatre.html"><span class="ta-ar">مسرح البدروم</span><span class="ta-en">Basement Theatre</span></a>
+      <a href="partners.html"><span class="ta-ar">شركاؤنا</span><span class="ta-en">Partners</span></a>
+      <a href="contact.html"><span class="ta-ar">تواصل</span><span class="ta-en">Contact</span></a>
+    </nav>
+    <button class="ta-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
   </div>
 </nav>
+
+<!-- SITE-WIDE MASTER NAV -->
+
 
 
 <header class="navbar">
@@ -410,16 +442,7 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
       <img src="logo.png" class="logo" alt="Teatro Alsaeed">
     </a>
 
-    <nav class="links" id="navLinks">
-      <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
-      <a href="about.html"><span class="lang-ar">عنّا</span><span class="lang-en">About</span></a>
-      <a href="troupe.html"><span class="lang-ar">الفرقة</span><span class="lang-en">Troupe</span></a>
-      <a href="productions.html"><span class="lang-ar">العروض</span><span class="lang-en">Productions</span></a>
-      <a href="academy.html"><span class="lang-ar">الأكاديمية</span><span class="lang-en">Academy</span></a>
-      <a href="festival.html"><span class="lang-ar">المهرجان</span><span class="lang-en">Festival</span></a>
-      <a href="sahara.html"><span class="lang-ar">صحارة</span><span class="lang-en">Sahara</span></a>
-      <a href="contact.html"><span class="lang-ar">تواصل</span><span class="lang-en">Contact</span></a>
-    </nav>
+    
 
     <button class="lang-btn" id="langBtn" type="button">EN</button>
     <button class="menu-btn" id="menuBtn" type="button">☰</button>
@@ -432,8 +455,8 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <div class="eyebrow lang-ar">من أرشيف الفرقة</div>
     <div class="eyebrow lang-en">FROM THE TROUPE ARCHIVE</div>
 
-    <h1 class="lang-ar">عروض صنعت<br>حكاية تياترو الصعيد</h1>
-    <h1 class="lang-en">Productions that shaped<br>the Teatro Alsaeed story</h1>
+    <h1 class="ta-ar">عروض صنعت<br>حكاية تياترو الصعيد</h1>
+    <h1 class="ta-en">Productions that shaped<br>the Teatro Alsaeed story</h1>
 
     <p class="hero-description lang-ar">
       أرشيف من التجارب المسرحية التي حملت روح الفرقة، من الحكايات الإنسانية إلى التجريب والفرجة الشعبية.
@@ -445,18 +468,18 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <div class="stats">
       <div class="stat">
         <strong>31</strong>
-        <span class="lang-ar">إنتاجًا مسرحيًا</span>
-        <span class="lang-en">Productions</span>
+        <span class="ta-ar">إنتاجًا مسرحيًا</span>
+        <span class="ta-en">Productions</span>
       </div>
       <div class="stat">
         <strong>2014</strong>
-        <span class="lang-ar">بداية الأرشيف</span>
-        <span class="lang-en">Archive Begins</span>
+        <span class="ta-ar">بداية الأرشيف</span>
+        <span class="ta-en">Archive Begins</span>
       </div>
       <div class="stat">
         <strong>2026</strong>
-        <span class="lang-ar">أحدث إنتاج</span>
-        <span class="lang-en">Latest Production</span>
+        <span class="ta-ar">أحدث إنتاج</span>
+        <span class="ta-en">Latest Production</span>
       </div>
     </div>
   </div>
@@ -469,17 +492,17 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
         <div class="kicker lang-ar">أرشيف العروض</div>
         <div class="kicker lang-en">PRODUCTION ARCHIVE</div>
         <h2>
-          <span class="lang-ar">كل العروض</span>
-          <span class="lang-en">All Productions</span>
+          <span class="ta-ar">كل العروض</span>
+          <span class="ta-en">All Productions</span>
         </h2>
-        <p class="lang-ar">اضغط على أي عرض لعرض تفاصيله.</p>
-        <p class="lang-en">Click any production to explore it.</p>
+        <p class="ta-ar">اضغط على أي عرض لعرض تفاصيله.</p>
+        <p class="ta-en">Click any production to explore it.</p>
       </div>
 
       <div class="counter">
         <strong id="count">31</strong>
-        <span class="lang-ar"> عرضًا</span>
-        <span class="lang-en"> productions</span>
+        <span class="ta-ar"> عرضًا</span>
+        <span class="ta-en"> productions</span>
       </div>
     </div>
 
@@ -493,10 +516,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/الجنوب تحت.jpg" alt="الجنوب تحت" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">الجنوب تحت</h3>
-    <h3 class="lang-en">South Is Down</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">الجنوب تحت</h3>
+    <h3 class="ta-en">South Is Down</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -507,10 +530,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/الموجوعة.jpg" alt="الموجوعة" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">الموجوعة</h3>
-    <h3 class="lang-en">Al-Mawgoua</h3>
-    <p class="lang-ar">حكاية إنسانية عن الألم الذي يسكن في الداخل، وعن وجع قد لا يراه أحد لكنه يترك أثره في كل شيء.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">الموجوعة</h3>
+    <h3 class="ta-en">Al-Mawgoua</h3>
+    <p class="ta-ar">حكاية إنسانية عن الألم الذي يسكن في الداخل، وعن وجع قد لا يراه أحد لكنه يترك أثره في كل شيء.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -521,10 +544,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/ولاد تسعة.jpg" alt="ولاد تسعة" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">ولاد تسعة</h3>
-    <h3 class="lang-en">Wlad Tesaa</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">ولاد تسعة</h3>
+    <h3 class="ta-en">Wlad Tesaa</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -535,10 +558,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/قهوة زيادة.jpg" alt="قهوة زيادة" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">قهوة زيادة</h3>
-    <h3 class="lang-en">Extra Coffee</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">قهوة زيادة</h3>
+    <h3 class="ta-en">Extra Coffee</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -549,10 +572,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/خشبة.jpg" alt="خشبة" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">خشبة</h3>
-    <h3 class="lang-en">The Stage</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">خشبة</h3>
+    <h3 class="ta-en">The Stage</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -563,10 +586,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/يخلق من الشبه.jpg" alt="يخلق من الشبه" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">يخلق من الشبه</h3>
-    <h3 class="lang-en">Yokhlaq Min El-Shebh</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">يخلق من الشبه</h3>
+    <h3 class="ta-en">Yokhlaq Min El-Shebh</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -577,10 +600,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/أشتاتاً شلتوت.jpg" alt="أشتاتاً شلتوت" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">أشتاتاً شلتوت</h3>
-    <h3 class="lang-en">Ashtatan Shaltout</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">أشتاتاً شلتوت</h3>
+    <h3 class="ta-en">Ashtatan Shaltout</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -591,10 +614,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/بطن الزير.jpg" alt="بطن الزير" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">بطن الزير</h3>
-    <h3 class="lang-en">Batn El Zeer</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">بطن الزير</h3>
+    <h3 class="ta-en">Batn El Zeer</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -605,10 +628,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/عملة نادرة.jpg" alt="عملة نادرة" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">عملة نادرة</h3>
-    <h3 class="lang-en">Rare Coin</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">عملة نادرة</h3>
+    <h3 class="ta-en">Rare Coin</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -619,10 +642,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/خيبتا.jpg" alt="خيبتا" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">خيبتا</h3>
-    <h3 class="lang-en">Hepta</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">خيبتا</h3>
+    <h3 class="ta-en">Hepta</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -633,10 +656,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/ملك وكتابة.jpg" alt="ملك وكتابة" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">ملك وكتابة</h3>
-    <h3 class="lang-en">Malek w Ketaba</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">ملك وكتابة</h3>
+    <h3 class="ta-en">Malek w Ketaba</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -647,10 +670,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/فرحة.jpg" alt="فرحة" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">فرحة</h3>
-    <h3 class="lang-en">Farha</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">فرحة</h3>
+    <h3 class="ta-en">Farha</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -661,10 +684,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/فستان فرح.jpg" alt="فستان فرح" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">فستان فرح</h3>
-    <h3 class="lang-en">Wedding Dress</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">فستان فرح</h3>
+    <h3 class="ta-en">Wedding Dress</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -675,10 +698,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/الكبار.jpg" alt="الكبار" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">الكبار</h3>
-    <h3 class="lang-en">The Elders</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">الكبار</h3>
+    <h3 class="ta-en">The Elders</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -689,10 +712,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/المولد.jpg" alt="المولد" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">المولد</h3>
-    <h3 class="lang-en">Al-Mawlid</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">المولد</h3>
+    <h3 class="ta-en">Al-Mawlid</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -703,10 +726,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/حبشي بنات.jpg" alt="حبشي بنات" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">حبشي بنات</h3>
-    <h3 class="lang-en">Habshi Banat</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">حبشي بنات</h3>
+    <h3 class="ta-en">Habshi Banat</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -717,10 +740,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/جريمة في فرقة الغرابلي.jpg" alt="جريمة في فرقة الغرابلي" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">جريمة في فرقة الغرابلي</h3>
-    <h3 class="lang-en">A Crime in Al-Gharabli Troupe</h3>
-    <p class="lang-ar">إنتاج تياترو الصعيد – 2020.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">جريمة في فرقة الغرابلي</h3>
+    <h3 class="ta-en">A Crime in Al-Gharabli Troupe</h3>
+    <p class="ta-ar">إنتاج تياترو الصعيد – 2020.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -731,10 +754,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/سوق العبيد.jpg" alt="سوق العبيد" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">سوق العبيد</h3>
-    <h3 class="lang-en">The Slave Market</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">سوق العبيد</h3>
+    <h3 class="ta-en">The Slave Market</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -745,10 +768,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/ليلة عيد ميلاد.jpg" alt="ليلة عيد ميلاد" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">ليلة عيد ميلاد</h3>
-    <h3 class="lang-en">Birthday Night</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">ليلة عيد ميلاد</h3>
+    <h3 class="ta-en">Birthday Night</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -759,10 +782,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/خمسة رجال في الطابق العلوي.jpg" alt="خمسة رجال في الطابق العلوي" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">خمسة رجال في الطابق العلوي</h3>
-    <h3 class="lang-en">Five Men Upstairs</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">خمسة رجال في الطابق العلوي</h3>
+    <h3 class="ta-en">Five Men Upstairs</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -773,10 +796,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/سرير لا يصلح للنوم.jpg" alt="سرير لا يصلح للنوم" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">سرير لا يصلح للنوم</h3>
-    <h3 class="lang-en">A Bed Not Fit for Sleep</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">سرير لا يصلح للنوم</h3>
+    <h3 class="ta-en">A Bed Not Fit for Sleep</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -787,10 +810,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/قابل للنشر.jpg" alt="قابل للنشر" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">قابل للنشر</h3>
-    <h3 class="lang-en">Publishable</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">قابل للنشر</h3>
+    <h3 class="ta-en">Publishable</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -801,10 +824,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/بولي آرت.jpg" alt="بولي آرت" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">بولي آرت</h3>
-    <h3 class="lang-en">Poly Art</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">بولي آرت</h3>
+    <h3 class="ta-en">Poly Art</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -815,10 +838,10 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/الجانب المظلم.jpg" alt="الجانب المظلم" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">الجانب المظلم</h3>
-    <h3 class="lang-en">The Dark Side</h3>
-    <p class="lang-ar">مشروع تخرج أكاديمية تياترو الصعيد – الدفعة 22.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">الجانب المظلم</h3>
+    <h3 class="ta-en">The Dark Side</h3>
+    <p class="ta-ar">مشروع تخرج أكاديمية تياترو الصعيد – الدفعة 22.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
@@ -829,19 +852,19 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
     <img src="images/قبل منتصف الليل.jpg" alt="قبل منتصف الليل" loading="lazy">
   </div>
   <div class="card-body">
-    <h3 class="lang-ar">قبل منتصف الليل</h3>
-    <h3 class="lang-en">Before Midnight</h3>
-    <p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <h3 class="ta-ar">قبل منتصف الليل</h3>
+    <h3 class="ta-en">Before Midnight</h3>
+    <p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
+    <p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p>
     <small>TEATRO ALSAEED</small>
   </div>
 </article>
-<article class="card" data-title="المؤسسة" data-en="The Institution" data-year="2020" data-img="images/المؤسسة.jpg" data-desc="إنتاج تياترو الصعيد – 2020."><div class="poster"><span class="num">26</span><span class="year">2020</span><img src="images/المؤسسة.jpg" alt="المؤسسة" loading="lazy"></div><div class="card-body"><h3 class="lang-ar">المؤسسة</h3><h3 class="lang-en">The Institution</h3><p class="lang-ar">إنتاج تياترو الصعيد – 2020.</p><p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p><small>TEATRO ALSAEED</small></div></article>
-<article class="card" data-title="الآخر" data-en="The Other" data-year="2023" data-img="images/الآخر.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد."><div class="poster"><span class="num">27</span><span class="year">2023</span><img src="images/الآخر.jpg" alt="الآخر" loading="lazy"></div><div class="card-body"><h3 class="lang-ar">الآخر</h3><h3 class="lang-en">The Other</h3><p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p><p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p><small>TEATRO ALSAEED</small></div></article>
-<article class="card" data-title="أضواء" data-en="Lumiere’s" data-year="2024" data-img="images/أضواء.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد."><div class="poster"><span class="num">28</span><span class="year">2024</span><img src="images/أضواء.jpg" alt="أضواء" loading="lazy"></div><div class="card-body"><h3 class="lang-ar">أضواء</h3><h3 class="lang-en">Lumiere’s</h3><p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p><p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p><small>TEATRO ALSAEED</small></div></article>
-<article class="card" data-title="السيرك" data-en="The Circus" data-year="2024" data-img="images/السيرك.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد."><div class="poster"><span class="num">29</span><span class="year">2024</span><img src="images/السيرك.jpg" alt="السيرك" loading="lazy"></div><div class="card-body"><h3 class="lang-ar">السيرك</h3><h3 class="lang-en">The Circus</h3><p class="lang-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p><p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p><small>TEATRO ALSAEED</small></div></article>
-<article class="card" data-title="كانسر" data-en="Cancer" data-year="2018" data-img="images/cancer.jpg" data-desc="تأليف وإخراج كيرو صابر – 2018."><div class="poster"><span class="num">30</span><span class="year">2018</span><img src="images/cancer.jpg" alt="كانسر" loading="lazy"></div><div class="card-body"><h3 class="lang-ar">كانسر</h3><h3 class="lang-en">Cancer</h3><p class="lang-ar">تأليف وإخراج كيرو صابر – 2018.</p><p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p><small>TEATRO ALSAEED</small></div></article>
-<article class="card" data-title="ERROR404" data-en="ERROR404" data-year="2025" data-img="images/error404.jpg" data-desc="مشروع تخرج الدفعة 19 من أكاديمية تياترو الصعيد – 2025."><div class="poster"><span class="num">31</span><span class="year">2025</span><img src="images/error404.jpg" alt="ERROR404" loading="lazy"></div><div class="card-body"><h3 class="lang-ar">ERROR404</h3><h3 class="lang-en">ERROR404</h3><p class="lang-ar">مشروع تخرج الدفعة 19 من أكاديمية تياترو الصعيد – 2025.</p><p class="lang-en">A theatrical production from the Teatro Alsaeed archive.</p><small>TEATRO ALSAEED</small></div></article>
+<article class="card" data-title="المؤسسة" data-en="The Institution" data-year="2020" data-img="images/المؤسسة.jpg" data-desc="إنتاج تياترو الصعيد – 2020."><div class="poster"><span class="num">26</span><span class="year">2020</span><img src="images/المؤسسة.jpg" alt="المؤسسة" loading="lazy"></div><div class="card-body"><h3 class="ta-ar">المؤسسة</h3><h3 class="ta-en">The Institution</h3><p class="ta-ar">إنتاج تياترو الصعيد – 2020.</p><p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p><small>TEATRO ALSAEED</small></div></article>
+<article class="card" data-title="الآخر" data-en="The Other" data-year="2023" data-img="images/الآخر.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد."><div class="poster"><span class="num">27</span><span class="year">2023</span><img src="images/الآخر.jpg" alt="الآخر" loading="lazy"></div><div class="card-body"><h3 class="ta-ar">الآخر</h3><h3 class="ta-en">The Other</h3><p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p><p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p><small>TEATRO ALSAEED</small></div></article>
+<article class="card" data-title="أضواء" data-en="Lumiere’s" data-year="2024" data-img="images/أضواء.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد."><div class="poster"><span class="num">28</span><span class="year">2024</span><img src="images/أضواء.jpg" alt="أضواء" loading="lazy"></div><div class="card-body"><h3 class="ta-ar">أضواء</h3><h3 class="ta-en">Lumiere’s</h3><p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p><p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p><small>TEATRO ALSAEED</small></div></article>
+<article class="card" data-title="السيرك" data-en="The Circus" data-year="2024" data-img="images/السيرك.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد."><div class="poster"><span class="num">29</span><span class="year">2024</span><img src="images/السيرك.jpg" alt="السيرك" loading="lazy"></div><div class="card-body"><h3 class="ta-ar">السيرك</h3><h3 class="ta-en">The Circus</h3><p class="ta-ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p><p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p><small>TEATRO ALSAEED</small></div></article>
+<article class="card" data-title="كانسر" data-en="Cancer" data-year="2018" data-img="images/cancer.jpg" data-desc="تأليف وإخراج كيرو صابر – 2018."><div class="poster"><span class="num">30</span><span class="year">2018</span><img src="images/cancer.jpg" alt="كانسر" loading="lazy"></div><div class="card-body"><h3 class="ta-ar">كانسر</h3><h3 class="ta-en">Cancer</h3><p class="ta-ar">تأليف وإخراج كيرو صابر – 2018.</p><p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p><small>TEATRO ALSAEED</small></div></article>
+<article class="card" data-title="ERROR404" data-en="ERROR404" data-year="2025" data-img="images/error404.jpg" data-desc="مشروع تخرج الدفعة 19 من أكاديمية تياترو الصعيد – 2025."><div class="poster"><span class="num">31</span><span class="year">2025</span><img src="images/error404.jpg" alt="ERROR404" loading="lazy"></div><div class="card-body"><h3 class="ta-ar">ERROR404</h3><h3 class="ta-en">ERROR404</h3><p class="ta-ar">مشروع تخرج الدفعة 19 من أكاديمية تياترو الصعيد – 2025.</p><p class="ta-en">A theatrical production from the Teatro Alsaeed archive.</p><small>TEATRO ALSAEED</small></div></article>
     </div>
   </div>
 </section>
@@ -858,11 +881,7 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
   </div>
 </div>
 
-<footer>
-  <img src="logo.png" alt="Teatro Alsaeed">
-  <p class="lang-ar">تياترو الصعيد — إحياء وتطوير الفنون</p>
-  <p class="lang-en">Teatro Alsaeed — Reviving and Developing Performing Arts</p>
-</footer>
+
 
 <script>
 (function () {
@@ -985,18 +1004,115 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
 </script>
 
 
-<footer class="site-master-footer">
-<div class="site-footer-grid">
-<div><img src="logo.png" alt="Teatro Alsaeed" class="site-footer-logo"><p class="ar">إحياء وتطوير الفنون</p><p class="en">Reviving and Developing the Arts</p></div>
-<div><h4 class="ar">استكشف</h4><h4 class="en">Explore</h4><div class="site-footer-links"><a href="index.html">الرئيسية</a><a href="about.html">عنّا</a><a href="troupe.html">الفرقة</a><a href="productions.html">العروض</a><a href="academy.html">الأكاديمية</a><a href="cinema-school.html">مدرسة السينما</a><a href="incubator.html">الحاضنة</a><a href="festival.html">المهرجان</a><a href="sahara.html">صحارة</a><a href="contact.html">تواصل</a></div></div>
-<div><h4 class="ar">تواصل</h4><h4 class="en">Contact</h4><p>Minya, Egypt</p><p><a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a></p><div class="site-social"><a href="https://www.facebook.com/TeatroAlSaeed">Facebook</a><a href="https://www.instagram.com/teatroalsaeed/">Instagram</a><a href="https://www.youtube.com/@TeatroAlsaeed">YouTube</a><a href="https://www.tiktok.com/@teatro.alsaeed">TikTok</a></div></div>
-</div><div class="site-footer-bottom">© <span id="siteYear"></span> Teatro Alsaeed · Minya, Egypt</div>
-</footer>
+
 <style id="site-master-footer-style">.site-master-footer{background:#0a0b0b;color:#aaa;padding:55px 24px 22px;border-top:1px solid rgba(255,255,255,.08);font-family:Inter,Arial,sans-serif}.site-footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1.5fr 1fr;gap:45px}.site-master-footer h4{color:#fff;margin:0 0 15px}.site-master-footer p{font-size:13px;line-height:1.7;margin:7px 0}.site-master-footer a{color:#aaa;text-decoration:none}.site-master-footer a:hover{color:#2bb3b1}.site-footer-logo{width:55px;margin-bottom:12px}.site-footer-links{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;font-size:12px}.site-social{display:flex;gap:12px;flex-wrap:wrap;font-size:12px}.site-footer-bottom{max-width:1200px;margin:35px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.07);font-size:11px;text-align:center;color:#666}@media(max-width:800px){.site-footer-grid{grid-template-columns:1fr;gap:30px}.site-footer-links{grid-template-columns:1fr 1fr}}
 </style>
 <script>document.getElementById("siteYear")&&(document.getElementById("siteYear").textContent=new Date().getFullYear());</script>
 <script id="site-master-script">
 (function(){const n=document.getElementById('siteMasterNav'),m=document.getElementById('siteMenuBtn'),l=document.getElementById('siteMasterLinks'),b=document.getElementById('siteLangBtn'); if(!n)return; let lang=localStorage.getItem('teatroLang')||'ar'; function setLang(x){n.classList.toggle('english',x==='en');document.documentElement.lang=x;document.documentElement.dir=x==='en'?'ltr':'rtl';b.textContent=x==='en'?'AR':'EN';localStorage.setItem('teatroLang',x)} setLang(lang); m&&m.addEventListener('click',()=>l.classList.toggle('open')); b&&b.addEventListener('click',()=>setLang(n.classList.contains('english')?'ar':'en')); l&&l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));})();
 </script>
+
+<footer class="ta-master-footer">
+  <div class="ta-footer-grid">
+    <div>
+      <img src="logo.png" alt="Teatro Alsaeed" class="ta-footer-logo">
+      <p class="ta-ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
+      <p class="ta-en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
+    </div>
+    <div>
+      <h3><span class="ta-ar">استكشف</span><span class="ta-en">Explore</span></h3>
+      <a href="index.html">الرئيسية / Home</a>
+      <a href="about.html">عنّا / About</a>
+      <a href="troupe.html">الفرقة / Troupe</a>
+      <a href="productions.html">العروض / Productions</a>
+      <a href="academy.html">الأكاديمية / Academy</a>
+      <a href="cinema-school.html">مدرسة السينما / Cinema School</a>
+      <a href="incubator.html">الحاضنة / Incubator</a>
+      <a href="festival.html">المهرجان / Festival</a>
+      <a href="sahara.html">صحارة / Sahara</a>
+      <a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a>
+      <a href="partners.html">شركاؤنا / Partners</a>
+      <a href="contact.html">تواصل / Contact</a>
+    </div>
+    <div>
+      <h3><span class="ta-ar">أرشيف المهرجان</span><span class="ta-en">Festival Archive</span></h3>
+      <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a>
+      <a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a>
+      <a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a>
+      <a href="festival-2027.html">2027 · الدورة الرابعة / 4th Edition</a>
+      <a href="lumieres.html">Lumières / أضواء</a>
+    </div>
+    <div>
+      <h3><span class="ta-ar">تواصل</span><span class="ta-en">Connect</span></h3>
+      <p>Minya, Egypt</p>
+      <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
+      <div class="ta-social">
+        <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@teatro.alsaeed" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </div>
+  <div class="ta-footer-bottom">
+    <span>© <span id="year"></span> Teatro Alsaeed</span>
+    <span class="ta-ar">من المنيا إلى العالم</span><span class="ta-en">From Minya to the world</span>
+  </div>
+</footer>
+
+
+<script id="teatro-site-audit-script">
+(function(){
+  const body=document.body, root=document.documentElement;
+  const langBtn=document.getElementById('langBtn');
+  const menuBtn=document.getElementById('menuBtn');
+  const nav=document.getElementById('navLinks');
+  function applyLang(lang,save){
+    const en=lang==='en';
+    body.classList.toggle('site-en',en);
+    body.classList.toggle('english',en);
+    body.classList.toggle('en',en);
+    root.lang=en?'en':'ar';
+    root.dir=en?'ltr':'rtl';
+    if(langBtn) langBtn.textContent=en?'AR':'EN';
+    if(save!==false){
+      try{localStorage.setItem('siteLang',lang);localStorage.setItem('teatroLang',lang)}catch(e){}
+    }
+  }
+  let saved='ar';
+  try{saved=localStorage.getItem('siteLang')||localStorage.getItem('teatroLang')||'ar'}catch(e){}
+  applyLang(saved,false);
+
+  document.addEventListener('click',function(e){
+    const lang=e.target.closest && e.target.closest('#langBtn');
+    if(lang){
+      e.preventDefault(); e.stopImmediatePropagation();
+      applyLang(body.classList.contains('site-en')?'ar':'en',true);
+      return;
+    }
+    const menu=e.target.closest && e.target.closest('#menuBtn');
+    if(menu){
+      e.preventDefault(); e.stopImmediatePropagation();
+      if(nav){
+        const open=nav.classList.toggle('open');
+        menu.setAttribute('aria-expanded',open?'true':'false');
+      }
+      return;
+    }
+    const link=e.target.closest && e.target.closest('#navLinks a');
+    if(link && nav) nav.classList.remove('open');
+  },true);
+
+  if(nav){
+    const current=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    nav.querySelectorAll('a[href]').forEach(a=>{
+      const href=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
+      if(href===current || (current.startsWith('festival-') && href==='festival.html')) a.classList.add('active');
+    });
+  }
+  const year=document.getElementById('year'); if(year) year.textContent=new Date().getFullYear();
+})();
+</script>
+
 </body>
 </html>

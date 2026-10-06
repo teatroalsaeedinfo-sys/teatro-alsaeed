@@ -246,28 +246,59 @@ body.site-en .lang-ar{display:none!important}body:not(.site-en) .lang-en{display
 @media(max-width:520px){.master-footer-grid{grid-template-columns:1fr}.master-footer{padding-inline:18px}}
 </style>
 
+
+<style id="teatro-site-audit-css">
+.ta-master-nav{position:fixed;top:0;left:0;right:0;z-index:99999;background:rgba(7,8,8,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.10);color:#fff;font-family:Inter,Arial,sans-serif}
+.ta-nav-inner{max-width:1450px;min-height:74px;margin:auto;padding:8px 20px;display:flex;align-items:center;gap:16px}
+.ta-brand{display:flex;align-items:center;gap:9px;color:#fff;text-decoration:none;white-space:nowrap}
+.ta-brand img{width:42px;height:42px;object-fit:contain}.ta-brand span{display:flex;flex-direction:column;line-height:1.05}.ta-brand b{font-size:14px}.ta-brand small{font-size:8px;opacity:.55;letter-spacing:.7px;margin-top:4px}
+.ta-links{display:flex;align-items:center;justify-content:flex-end;gap:2px;flex:1}
+.ta-links a{color:#ddd;text-decoration:none;font-size:11px;padding:8px 6px;border-radius:7px;white-space:nowrap}
+.ta-links a:hover,.ta-links a.active{color:#2bb3b1;background:rgba(43,179,177,.10)}
+.ta-lang,.ta-menu{border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;border-radius:8px;cursor:pointer}
+.ta-lang{padding:8px 11px;font-weight:800}.ta-menu{display:none;padding:7px 10px;font-size:21px}
+.ta-master-footer{background:#090b0b;color:#fff;border-top:1px solid rgba(255,255,255,.10);padding:52px 22px 20px;font-family:Inter,Arial,sans-serif}
+.ta-footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1.5fr 1.2fr 1fr;gap:34px}
+.ta-footer-grid h3{font-size:13px;margin:0 0 13px;color:#fff}.ta-footer-grid p{color:#b7c0c0;font-size:12px;line-height:1.8;margin:7px 0}
+.ta-footer-grid a{display:block;color:#aab3b3;text-decoration:none;font-size:11px;margin:7px 0}.ta-footer-grid a:hover{color:#2bb3b1}
+.ta-footer-logo{width:62px;height:62px;object-fit:contain;margin-bottom:10px}.ta-social{display:flex;gap:12px;flex-wrap:wrap}
+.ta-footer-bottom{max-width:1200px;margin:30px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;color:#777;font-size:10px}
+body.site-en .ta-ar,body.en .ta-ar,body.english .ta-ar{display:none!important}
+body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
+@media(max-width:1180px){.ta-links a{font-size:10px;padding:8px 4px}.ta-brand span{display:none}}
+@media(max-width:900px){.ta-nav-inner{min-height:68px}.ta-menu{display:block}.ta-links{display:none;position:absolute;top:68px;left:0;right:0;background:#090b0b;padding:14px 6%;flex-direction:column;align-items:stretch;border-bottom:1px solid rgba(255,255,255,.10);max-height:calc(100vh - 68px);overflow:auto}.ta-links.open{display:flex}.ta-links a{font-size:13px;padding:10px 0}.ta-footer-grid{grid-template-columns:1fr 1fr}.ta-footer-bottom{display:block}.ta-footer-bottom>*{display:block;margin-top:6px}}
+@media(max-width:560px){.ta-footer-grid{grid-template-columns:1fr}.ta-master-footer{padding-inline:18px}}
+</style>
+
 </head>
 <body>
-<nav class="master-nav" id="masterNav" aria-label="Main navigation">
-  <div class="master-nav-inner">
-    <a class="master-brand" href="index.html" aria-label="Teatro Alsaeed Home">
+
+<nav class="ta-master-nav" id="masterNav" aria-label="Main navigation">
+  <div class="ta-nav-inner">
+    <a class="ta-brand" href="index.html" aria-label="Teatro Alsaeed Home">
       <img src="logo.png" alt="Teatro Alsaeed">
-      <span><b class="lang-ar">تياترو الصعيد</b><b class="lang-en">Teatro Alsaeed</b><small class="lang-ar">إحياء وتطوير الفنون</small><small class="lang-en">Reviving &amp; Developing the Arts</small></span>
+      <span><b class="ta-ar">تياترو الصعيد</b><b class="ta-en">Teatro Alsaeed</b><small class="ta-ar">إحياء وتطوير الفنون</small><small class="ta-en">Reviving &amp; Developing the Arts</small></span>
     </a>
-    <button class="master-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
-    <nav class="master-links" id="navLinks">
-      <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
-      <a href="about.html"><span class="lang-ar">عنّا</span><span class="lang-en">About</span></a>
-      <a href="troupe.html"><span class="lang-ar">الفرقة</span><span class="lang-en">Troupe</span></a>
-      <a href="productions.html"><span class="lang-ar">العروض</span><span class="lang-en">Productions</span></a>
-      <a href="academy.html"><span class="lang-ar">الأكاديمية</span><span class="lang-en">Academy</span></a>
-      <a href="cinema-school.html"><span class="lang-ar">مدرسة السينما</span><span class="lang-en">Cinema School</span></a>
-      <a href="incubator.html"><span class="lang-ar">الحاضنة</span><span class="lang-en">Incubator</span></a>
-      <a href="festival.html"><span class="lang-ar">المهرجان</span><span class="lang-en">Festival</span></a>
-      <a href="sahara.html"><span class="lang-ar">صحارة</span><span class="lang-en">Sahara</span></a>
-      <a href="basement-theatre.html"><span class="lang-ar">مسرح البدروم</span><span class="lang-en">Basement Theatre</span></a>
-      <a href="contact.html"><span class="lang-ar">تواصل</span><span class="lang-en">Contact</span></a>
+    <button class="ta-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
+    <nav class="ta-links" id="navLinks">
+      <a href="index.html"><span class="ta-ar">الرئيسية</span><span class="ta-en">Home</span></a>
+      <a href="about.html"><span class="ta-ar">عنّا</span><span class="ta-en">About</span></a>
+      <a href="troupe.html"><span class="ta-ar">الفرقة</span><span class="ta-en">Troupe</span></a>
+      <a href="productions.html"><span class="ta-ar">العروض</span><span class="ta-en">Productions</span></a>
+      <a href="academy.html"><span class="ta-ar">الأكاديمية</span><span class="ta-en">Academy</span></a>
+      <a href="cinema-school.html"><span class="ta-ar">مدرسة السينما</span><span class="ta-en">Cinema School</span></a>
+      <a href="incubator.html"><span class="ta-ar">الحاضنة</span><span class="ta-en">Incubator</span></a>
+      <a href="festival.html"><span class="ta-ar">المهرجان</span><span class="ta-en">Festival</span></a>
+      <a href="sahara.html"><span class="ta-ar">صحارة</span><span class="ta-en">Sahara</span></a>
+      <a href="basement-theatre.html"><span class="ta-ar">مسرح البدروم</span><span class="ta-en">Basement Theatre</span></a>
+      <a href="partners.html"><span class="ta-ar">شركاؤنا</span><span class="ta-en">Partners</span></a>
+      <a href="contact.html"><span class="ta-ar">تواصل</span><span class="ta-en">Contact</span></a>
     </nav>
+    <button class="ta-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
+  </div>
+</nav>
+
+
     <button class="master-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
   </div>
 </nav>
@@ -283,15 +314,15 @@ body.site-en .lang-ar{display:none!important}body:not(.site-en) .lang-en{display
 <section class="hero">
 <div class="container hero-content">
 <div class="eyebrow">MINYA INTERNATIONAL THEATRE FESTIVAL</div>
-<h1 class="lang-ar">أبعد <span>من الحدود.</span></h1>
-<h1 class="lang-en">Beyond <span>Borders.</span></h1>
+<h1 class="ta-ar">أبعد <span>من الحدود.</span></h1>
+<h1 class="ta-en">Beyond <span>Borders.</span></h1>
 <div class="hero-sub lang-ar">مهرجان المنيا المسرحي الدولي · الدورة الرابعة</div>
 <div class="hero-sub lang-en">Minya International Theatre Festival · 4th Edition</div>
 <p class="hero-copy lang-ar">أبريل 2027 — دورة جديدة تفتح المنيا على العالم، بمشاركة فرق ومدربين من مختلف أنحاء العالم.</p>
 <p class="hero-copy lang-en">April 2027 — a new edition opening Minya to the world, bringing together theatre troupes and trainers from around the globe.</p>
 <div class="hero-actions">
-<a class="btn btn-primary" href="#journey"><span class="lang-ar">رحلة المهرجان</span><span class="lang-en">The festival journey</span></a>
-<a class="btn btn-outline" href="#vision"><span class="lang-ar">رؤية المهرجان</span><span class="lang-en">Festival Vision</span></a>
+<a class="btn btn-primary" href="#journey"><span class="ta-ar">رحلة المهرجان</span><span class="ta-en">The festival journey</span></a>
+<a class="btn btn-outline" href="#vision"><span class="ta-ar">رؤية المهرجان</span><span class="ta-en">Festival Vision</span></a>
 </div>
 </div>
 <div class="hero-stamp">MINYA · EGYPT · 2027</div>
@@ -299,40 +330,40 @@ body.site-en .lang-ar{display:none!important}body:not(.site-en) .lang-en{display
 
 <section class="intro">
 <div class="container intro-grid">
-<div><div class="kicker"><span class="lang-ar">رحلة تتطور كل عام</span><span class="lang-en">A FESTIVAL THAT EVOLVES</span></div><h2 class="lang-ar">ثلاث دورات صنعت الطريق.<br><span>والرابعة تتجاوز الحدود.</span></h2><h2 class="lang-en">Three editions built the road.<br><span>The fourth goes beyond borders.</span></h2></div>
-<div class="intro-copy"><div class="intro-line"></div><p class="lang-ar">بدأ المهرجان من المنيا، بصوت محلي وتجربة تجمع فناني المحافظة. ثم اتسع ليصل إلى المسرح المصري، قبل أن يعبر الحدود ويصبح مهرجانًا دوليًا. في 2027، تبدأ مرحلة جديدة من الرحلة.</p><p class="lang-en">The festival began in Minya as a local platform for artists from the governorate. It expanded to the Egyptian theatre scene, then crossed borders to become an international festival. In 2027, a new chapter begins.</p></div>
+<div><div class="kicker"><span class="ta-ar">رحلة تتطور كل عام</span><span class="ta-en">A FESTIVAL THAT EVOLVES</span></div><h2 class="ta-ar">ثلاث دورات صنعت الطريق.<br><span>والرابعة تتجاوز الحدود.</span></h2><h2 class="ta-en">Three editions built the road.<br><span>The fourth goes beyond borders.</span></h2></div>
+<div class="intro-copy"><div class="intro-line"></div><p class="ta-ar">بدأ المهرجان من المنيا، بصوت محلي وتجربة تجمع فناني المحافظة. ثم اتسع ليصل إلى المسرح المصري، قبل أن يعبر الحدود ويصبح مهرجانًا دوليًا. في 2027، تبدأ مرحلة جديدة من الرحلة.</p><p class="ta-en">The festival began in Minya as a local platform for artists from the governorate. It expanded to the Egyptian theatre scene, then crossed borders to become an international festival. In 2027, a new chapter begins.</p></div>
 </div>
 </section>
 
 <section class="vision-section" id="vision">
 <div class="container">
 <div class="section-title">
-<div class="kicker"><span class="lang-ar">هوية المهرجان</span><span class="lang-en">FESTIVAL IDENTITY</span></div>
-<h2 class="lang-ar">رؤية واضحة.<br><span>وهدف يتجاوز الحدود.</span></h2>
-<h2 class="lang-en">A clear vision.<br><span>A purpose beyond borders.</span></h2>
-<p class="lang-ar">المهرجان لا يكتفي بتقديم عروض مسرحية؛ بل يسعى إلى بناء مساحة مستدامة للقاء والتعلم والتبادل، تنطلق من صعيد مصر وتصل إلى العالم.</p>
-<p class="lang-en">The festival is more than a programme of performances. It aims to build a sustainable space for encounter, learning and exchange — rooted in Upper Egypt and connected to the world.</p>
+<div class="kicker"><span class="ta-ar">هوية المهرجان</span><span class="ta-en">FESTIVAL IDENTITY</span></div>
+<h2 class="ta-ar">رؤية واضحة.<br><span>وهدف يتجاوز الحدود.</span></h2>
+<h2 class="ta-en">A clear vision.<br><span>A purpose beyond borders.</span></h2>
+<p class="ta-ar">المهرجان لا يكتفي بتقديم عروض مسرحية؛ بل يسعى إلى بناء مساحة مستدامة للقاء والتعلم والتبادل، تنطلق من صعيد مصر وتصل إلى العالم.</p>
+<p class="ta-en">The festival is more than a programme of performances. It aims to build a sustainable space for encounter, learning and exchange — rooted in Upper Egypt and connected to the world.</p>
 </div>
 <div class="vision-grid">
 <article class="vision-card">
 <div class="vision-no">01 / VISION</div>
-<h3 class="lang-ar">رؤية المهرجان</h3>
-<h3 class="lang-en">Our Vision</h3>
-<p class="lang-ar">أن تصبح المنيا مركزًا فاعلًا للقاء المسرحي، وأن يكون المهرجان منصة دولية تربط فناني صعيد مصر بالتجارب المسرحية في مصر والعالم.</p>
-<p class="lang-en">To position Minya as an active hub for theatrical encounter, and the festival as an international platform connecting Upper Egypt’s artists with theatre practices from Egypt and the world.</p>
+<h3 class="ta-ar">رؤية المهرجان</h3>
+<h3 class="ta-en">Our Vision</h3>
+<p class="ta-ar">أن تصبح المنيا مركزًا فاعلًا للقاء المسرحي، وأن يكون المهرجان منصة دولية تربط فناني صعيد مصر بالتجارب المسرحية في مصر والعالم.</p>
+<p class="ta-en">To position Minya as an active hub for theatrical encounter, and the festival as an international platform connecting Upper Egypt’s artists with theatre practices from Egypt and the world.</p>
 </article>
 <article class="vision-card">
 <div class="vision-no">02 / MISSION</div>
-<h3 class="lang-ar">رسالة المهرجان</h3>
-<h3 class="lang-en">Our Mission</h3>
-<p class="lang-ar">خلق مساحة حقيقية للعروض والتدريب والحوار والتبادل الثقافي، وإتاحة فرص للفنانين والفرق المسرحية للقاء والتطور وصناعة تجارب جديدة.</p>
-<p class="lang-en">To create a real space for performances, training, dialogue and cultural exchange, giving artists and theatre troupes opportunities to meet, grow and create new work.</p>
+<h3 class="ta-ar">رسالة المهرجان</h3>
+<h3 class="ta-en">Our Mission</h3>
+<p class="ta-ar">خلق مساحة حقيقية للعروض والتدريب والحوار والتبادل الثقافي، وإتاحة فرص للفنانين والفرق المسرحية للقاء والتطور وصناعة تجارب جديدة.</p>
+<p class="ta-en">To create a real space for performances, training, dialogue and cultural exchange, giving artists and theatre troupes opportunities to meet, grow and create new work.</p>
 </article>
 </div>
 <div class="goals">
-<article class="goal"><strong>01</strong><h4 class="lang-ar">دعم الفنان</h4><h4 class="lang-en">Support Artists</h4><p class="lang-ar">إتاحة فرص للعرض والتدريب والتواصل أمام الفنانين والفرق.</p><p class="lang-en">Create opportunities for artists and troupes to perform, train and connect.</p></article>
-<article class="goal"><strong>02</strong><h4 class="lang-ar">التبادل الثقافي</h4><h4 class="lang-en">Cultural Exchange</h4><p class="lang-ar">ربط التجارب المسرحية المحلية والمصرية والدولية في مساحة واحدة.</p><p class="lang-en">Connect local, Egyptian and international theatre practices in one space.</p></article>
-<article class="goal"><strong>03</strong><h4 class="lang-ar">توسيع الأثر</h4><h4 class="lang-en">Expand Impact</h4><p class="lang-ar">توسيع حضور المسرح في المنيا وصعيد مصر وفتح مسارات جديدة للتعاون.</p><p class="lang-en">Expand theatre’s presence in Minya and Upper Egypt and open new paths for collaboration.</p></article>
+<article class="goal"><strong>01</strong><h4 class="ta-ar">دعم الفنان</h4><h4 class="ta-en">Support Artists</h4><p class="ta-ar">إتاحة فرص للعرض والتدريب والتواصل أمام الفنانين والفرق.</p><p class="ta-en">Create opportunities for artists and troupes to perform, train and connect.</p></article>
+<article class="goal"><strong>02</strong><h4 class="ta-ar">التبادل الثقافي</h4><h4 class="ta-en">Cultural Exchange</h4><p class="ta-ar">ربط التجارب المسرحية المحلية والمصرية والدولية في مساحة واحدة.</p><p class="ta-en">Connect local, Egyptian and international theatre practices in one space.</p></article>
+<article class="goal"><strong>03</strong><h4 class="ta-ar">توسيع الأثر</h4><h4 class="ta-en">Expand Impact</h4><p class="ta-ar">توسيع حضور المسرح في المنيا وصعيد مصر وفتح مسارات جديدة للتعاون.</p><p class="ta-en">Expand theatre’s presence in Minya and Upper Egypt and open new paths for collaboration.</p></article>
 </div>
 </div>
 </section>
@@ -341,9 +372,9 @@ body.site-en .lang-ar{display:none!important}body:not(.site-en) .lang-en{display
 <div class="container">
 <div class="committee-head">
 <div class="section-title">
-<div class="kicker"><span class="lang-ar">إدارة المهرجان</span><span class="lang-en">FESTIVAL LEADERSHIP</span></div>
-<h2 class="lang-ar">اللجنة العليا<br><span>للمهرجان.</span></h2>
-<h2 class="lang-en">The Festival<br><span>Higher Committee.</span></h2>
+<div class="kicker"><span class="ta-ar">إدارة المهرجان</span><span class="ta-en">FESTIVAL LEADERSHIP</span></div>
+<h2 class="ta-ar">اللجنة العليا<br><span>للمهرجان.</span></h2>
+<h2 class="ta-en">The Festival<br><span>Higher Committee.</span></h2>
 </div>
 <p class="committee-note lang-ar">تضم اللجنة العليا للمهرجان نخبة من صناع المسرح والإدارة الثقافية، وتعمل على رسم توجهات المهرجان ودعم مساره الفني والمؤسسي.</p>
 <p class="committee-note lang-en">The Higher Committee brings together theatre makers and cultural management professionals who help shape the festival’s artistic and institutional direction.</p>
@@ -385,26 +416,26 @@ body.site-en .lang-ar{display:none!important}body:not(.site-en) .lang-en{display
 
 <section class="journey" id="journey">
 <div class="container">
-<div class="section-title"><div class="kicker"><span class="lang-ar">رحلة المهرجان</span><span class="lang-en">THE JOURNEY</span></div><h2 class="lang-ar">من المنيا<br>إلى العالم.</h2><h2 class="lang-en">From Minya<br>to the world.</h2><p class="lang-ar">كل دورة لم تكن مجرد نسخة جديدة، بل خطوة نحو توسيع مساحة اللقاء المسرحي.</p><p class="lang-en">Each edition has been more than a new festival — it has been a step toward a wider theatrical encounter.</p></div>
+<div class="section-title"><div class="kicker"><span class="ta-ar">رحلة المهرجان</span><span class="ta-en">THE JOURNEY</span></div><h2 class="ta-ar">من المنيا<br>إلى العالم.</h2><h2 class="ta-en">From Minya<br>to the world.</h2><p class="ta-ar">كل دورة لم تكن مجرد نسخة جديدة، بل خطوة نحو توسيع مساحة اللقاء المسرحي.</p><p class="ta-en">Each edition has been more than a new festival — it has been a step toward a wider theatrical encounter.</p></div>
 
 <div class="timeline">
 <article class="step step-1">
-<div class="step-content"><div class="step-year">2022</div><h3 class="lang-ar">من المنيا <span>للمنيا.</span></h3><div class="phase lang-ar">الدورة الأولى · مهرجان المنيا للعروض المسرحية</div><p class="lang-ar">انطلقت التجربة من داخل المنيا، بمشاركة فرق من المحافظة ولجان تحكيم من المنيا فقط. كانت البداية محلية، لكنها حملت فكرة أكبر: أن يكون للفنان في الصعيد منصته ومساحته وجمهوره.</p><a class="edition-open" href="festival-2022.html"><span class="lang-ar">استكشف الدورة الأولى ←</span><span class="lang-en">Explore 1st Edition →</span></a><h3 class="lang-en">From Minya <span>to Minya.</span></h3><div class="phase lang-en">1st Edition · Minya Short Theatre Festival</div><p class="lang-en">The festival began within Minya, with participating troupes and juries from the governorate. A local beginning carrying a larger idea: artists in Upper Egypt deserve their own platform, space and audience.</p></div>
+<div class="step-content"><div class="step-year">2022</div><h3 class="ta-ar">من المنيا <span>للمنيا.</span></h3><div class="phase lang-ar">الدورة الأولى · مهرجان المنيا للعروض المسرحية</div><p class="ta-ar">انطلقت التجربة من داخل المنيا، بمشاركة فرق من المحافظة ولجان تحكيم من المنيا فقط. كانت البداية محلية، لكنها حملت فكرة أكبر: أن يكون للفنان في الصعيد منصته ومساحته وجمهوره.</p><a class="edition-open" href="festival-2022.html"><span class="ta-ar">استكشف الدورة الأولى ←</span><span class="ta-en">Explore 1st Edition →</span></a><h3 class="ta-en">From Minya <span>to Minya.</span></h3><div class="phase lang-en">1st Edition · Minya Short Theatre Festival</div><p class="ta-en">The festival began within Minya, with participating troupes and juries from the governorate. A local beginning carrying a larger idea: artists in Upper Egypt deserve their own platform, space and audience.</p></div>
 <div class="step-image"></div><div class="step-dot"></div>
 </article>
 
 <article class="step step-2">
-<div class="step-content"><div class="step-year">2024</div><h3 class="lang-ar">من المنيا <span>للمسرح المصري.</span></h3><div class="phase lang-ar">الدورة الثانية</div><p class="lang-ar">في الدورة الثانية تجاوز المهرجان نطاقه المحلي، وفتح أبوابه أمام فرق من مختلف أنحاء مصر، لتتحول المنيا إلى نقطة لقاء بين تجارب مسرحية مصرية متعددة.</p><h3 class="lang-en">From Minya <span>to Egyptian Theatre.</span></h3><div class="phase lang-en">2nd Edition</div><p class="lang-en">The second edition expanded beyond the local scene, welcoming troupes from across Egypt and turning Minya into a meeting point for diverse Egyptian theatre practices.</p><a class="edition-open" href="festival-2024.html"><span class="lang-ar">استكشف الدورة الثانية ←</span><span class="lang-en">Explore 2nd Edition →</span></a></div>
+<div class="step-content"><div class="step-year">2024</div><h3 class="ta-ar">من المنيا <span>للمسرح المصري.</span></h3><div class="phase lang-ar">الدورة الثانية</div><p class="ta-ar">في الدورة الثانية تجاوز المهرجان نطاقه المحلي، وفتح أبوابه أمام فرق من مختلف أنحاء مصر، لتتحول المنيا إلى نقطة لقاء بين تجارب مسرحية مصرية متعددة.</p><h3 class="ta-en">From Minya <span>to Egyptian Theatre.</span></h3><div class="phase lang-en">2nd Edition</div><p class="ta-en">The second edition expanded beyond the local scene, welcoming troupes from across Egypt and turning Minya into a meeting point for diverse Egyptian theatre practices.</p><a class="edition-open" href="festival-2024.html"><span class="ta-ar">استكشف الدورة الثانية ←</span><span class="ta-en">Explore 2nd Edition →</span></a></div>
 <div class="step-image"></div><div class="step-dot"></div>
 </article>
 
 <article class="step step-3">
-<div class="step-content"><div class="step-year">2025</div><h3 class="lang-ar">من المنيا <span>للعالم.</span></h3><div class="phase lang-ar">الدورة الثالثة · مهرجان المنيا المسرحي الدولي</div><p class="lang-ar">أصبح المهرجان دوليًا، مع مشاركة فرق ومدربين من الدول العربية، لتنتقل التجربة من التبادل داخل مصر إلى فضاء أوسع من اللقاء والتعاون الثقافي.</p><h3 class="lang-en">From Minya <span>to the World.</span></h3><div class="phase lang-en">3rd Edition · Minya International Theatre Festival</div><p class="lang-en">The festival became international, welcoming troupes and trainers from Arab countries and expanding its cultural exchange beyond Egypt.</p><a class="edition-open" href="festival-2025.html"><span class="lang-ar">استكشف الدورة الثالثة ←</span><span class="lang-en">Explore 3rd Edition →</span></a></div>
+<div class="step-content"><div class="step-year">2025</div><h3 class="ta-ar">من المنيا <span>للعالم.</span></h3><div class="phase lang-ar">الدورة الثالثة · مهرجان المنيا المسرحي الدولي</div><p class="ta-ar">أصبح المهرجان دوليًا، مع مشاركة فرق ومدربين من الدول العربية، لتنتقل التجربة من التبادل داخل مصر إلى فضاء أوسع من اللقاء والتعاون الثقافي.</p><h3 class="ta-en">From Minya <span>to the World.</span></h3><div class="phase lang-en">3rd Edition · Minya International Theatre Festival</div><p class="ta-en">The festival became international, welcoming troupes and trainers from Arab countries and expanding its cultural exchange beyond Egypt.</p><a class="edition-open" href="festival-2025.html"><span class="ta-ar">استكشف الدورة الثالثة ←</span><span class="ta-en">Explore 3rd Edition →</span></a></div>
 <div class="step-image"></div><div class="step-dot"></div>
 </article>
 
 <article class="step step-4" id="edition">
-<div class="step-content"><div class="step-year">2027</div><h3 class="lang-ar">أبعد <span>من الحدود.</span></h3><div class="phase lang-ar">الدورة الرابعة · أبريل 2027</div><p class="lang-ar">المرحلة الجديدة من رحلة المهرجان: مشاركة فرق ومدربين من مختلف أنحاء العالم، وفتح مساحة أوسع للقاء والتبادل والتجارب المسرحية العابرة للحدود.</p><h3 class="lang-en">Beyond <span>Borders.</span></h3><div class="phase lang-en">4th Edition · April 2027</div><p class="lang-en">The next chapter: welcoming theatre troupes and trainers from around the world and creating a wider space for exchange, encounter and cross-border theatre practices.</p></div>
+<div class="step-content"><div class="step-year">2027</div><h3 class="ta-ar">أبعد <span>من الحدود.</span></h3><div class="phase lang-ar">الدورة الرابعة · أبريل 2027</div><p class="ta-ar">المرحلة الجديدة من رحلة المهرجان: مشاركة فرق ومدربين من مختلف أنحاء العالم، وفتح مساحة أوسع للقاء والتبادل والتجارب المسرحية العابرة للحدود.</p><h3 class="ta-en">Beyond <span>Borders.</span></h3><div class="phase lang-en">4th Edition · April 2027</div><p class="ta-en">The next chapter: welcoming theatre troupes and trainers from around the world and creating a wider space for exchange, encounter and cross-border theatre practices.</p></div>
 <div class="step-image"></div><div class="step-dot"></div>
 </article>
 </div>
@@ -413,19 +444,19 @@ body.site-en .lang-ar{display:none!important}body:not(.site-en) .lang-en{display
 
 <section class="current" id="current-edition">
 <div class="container current-grid">
-<div><div class="kicker"><span class="lang-ar">الدورة الرابعة · 2027</span><span class="lang-en">4TH EDITION · 2027</span></div><h2 class="lang-ar">أبعد <span>من الحدود.</span></h2><h2 class="lang-en">Beyond <span>Borders.</span></h2><p class="lang-ar">ليست مجرد دورة جديدة، بل مرحلة جديدة في هوية المهرجان. من منصة انطلقت محليًا إلى مهرجان يطمح إلى جمع التجارب المسرحية من مختلف أنحاء العالم في مدينة المنيا.</p><p class="lang-en">Not simply another edition, but a new stage in the festival’s identity — from a local platform to a festival aspiring to bring theatre practices from around the world to Minya.</p></div>
-<div><div class="current-box"><div class="current-item"><strong class="lang-ar">التوقيت</strong><strong class="lang-en">When</strong><span>APRIL 2027</span></div><div class="current-item"><strong class="lang-ar">المكان</strong><strong class="lang-en">Where</strong><span>MINYA · EGYPT</span></div><div class="current-item"><strong class="lang-ar">المشاركة</strong><strong class="lang-en">Participants</strong><span class="lang-ar">فرق ومدربون من العالم</span><span class="lang-en">Troupes & trainers worldwide</span></div><div class="current-item"><strong class="lang-ar">الشعار</strong><strong class="lang-en">Theme</strong><span>BEYOND BORDERS</span></div></div></div>
+<div><div class="kicker"><span class="ta-ar">الدورة الرابعة · 2027</span><span class="ta-en">4TH EDITION · 2027</span></div><h2 class="ta-ar">أبعد <span>من الحدود.</span></h2><h2 class="ta-en">Beyond <span>Borders.</span></h2><p class="ta-ar">ليست مجرد دورة جديدة، بل مرحلة جديدة في هوية المهرجان. من منصة انطلقت محليًا إلى مهرجان يطمح إلى جمع التجارب المسرحية من مختلف أنحاء العالم في مدينة المنيا.</p><p class="ta-en">Not simply another edition, but a new stage in the festival’s identity — from a local platform to a festival aspiring to bring theatre practices from around the world to Minya.</p></div>
+<div><div class="current-box"><div class="current-item"><strong class="ta-ar">التوقيت</strong><strong class="ta-en">When</strong><span>APRIL 2027</span></div><div class="current-item"><strong class="ta-ar">المكان</strong><strong class="ta-en">Where</strong><span>MINYA · EGYPT</span></div><div class="current-item"><strong class="ta-ar">المشاركة</strong><strong class="ta-en">Participants</strong><span class="ta-ar">فرق ومدربون من العالم</span><span class="ta-en">Troupes & trainers worldwide</span></div><div class="current-item"><strong class="ta-ar">الشعار</strong><strong class="ta-en">Theme</strong><span>BEYOND BORDERS</span></div></div></div>
 </div>
 </section>
 
 <section class="program">
 <div class="container">
-<div class="section-title"><div class="kicker"><span class="lang-ar">تجربة المهرجان</span><span class="lang-en">THE FESTIVAL EXPERIENCE</span></div><h2 class="lang-ar">المسرح كمساحة<br>للالتقاء.</h2><h2 class="lang-en">Theatre as a space<br>for encounter.</h2></div>
+<div class="section-title"><div class="kicker"><span class="ta-ar">تجربة المهرجان</span><span class="ta-en">THE FESTIVAL EXPERIENCE</span></div><h2 class="ta-ar">المسرح كمساحة<br>للالتقاء.</h2><h2 class="ta-en">Theatre as a space<br>for encounter.</h2></div>
 <div class="program-grid">
-<article class="program-card"><div class="program-no">01 / STAGE</div><h3 class="lang-ar">عروض مسرحية</h3><h3 class="lang-en">Performances</h3><p class="lang-ar">تجارب وعروض مسرحية من مصر والعالم، تفتح مساحات للمشاهدة والتجريب والحوار.</p><p class="lang-en">Theatre practices and performances from Egypt and around the world.</p></article>
-<article class="program-card"><div class="program-no">02 / LAB</div><h3 class="lang-ar">ورش تدريبية</h3><h3 class="lang-en">Workshops</h3><p class="lang-ar">لقاء مباشر بين الفنانين والمدربين والخبرات المختلفة، ونقل المعرفة عبر الممارسة.</p><p class="lang-en">Direct exchange between artists, trainers and different theatre practices.</p></article>
-<article class="program-card"><div class="program-no">03 / DIALOGUE</div><h3 class="lang-ar">حوار وتبادل</h3><h3 class="lang-en">Dialogue & Exchange</h3><p class="lang-ar">مساحات للنقاش وتبادل الأفكار والخبرات حول المسرح ومستقبله.</p><p class="lang-en">Spaces for dialogue, ideas and exchange around theatre and its future.</p></article>
-<article class="program-card"><div class="program-no">04 / CULTURE</div><h3 class="lang-ar">تبادل ثقافي</h3><h3 class="lang-en">Cultural Exchange</h3><p class="lang-ar">الفن كوسيلة للقاء بين الثقافات، وبناء علاقات جديدة تتجاوز الجغرافيا.</p><p class="lang-en">Art as a way to connect cultures and build relationships beyond geography.</p></article>
+<article class="program-card"><div class="program-no">01 / STAGE</div><h3 class="ta-ar">عروض مسرحية</h3><h3 class="ta-en">Performances</h3><p class="ta-ar">تجارب وعروض مسرحية من مصر والعالم، تفتح مساحات للمشاهدة والتجريب والحوار.</p><p class="ta-en">Theatre practices and performances from Egypt and around the world.</p></article>
+<article class="program-card"><div class="program-no">02 / LAB</div><h3 class="ta-ar">ورش تدريبية</h3><h3 class="ta-en">Workshops</h3><p class="ta-ar">لقاء مباشر بين الفنانين والمدربين والخبرات المختلفة، ونقل المعرفة عبر الممارسة.</p><p class="ta-en">Direct exchange between artists, trainers and different theatre practices.</p></article>
+<article class="program-card"><div class="program-no">03 / DIALOGUE</div><h3 class="ta-ar">حوار وتبادل</h3><h3 class="ta-en">Dialogue & Exchange</h3><p class="ta-ar">مساحات للنقاش وتبادل الأفكار والخبرات حول المسرح ومستقبله.</p><p class="ta-en">Spaces for dialogue, ideas and exchange around theatre and its future.</p></article>
+<article class="program-card"><div class="program-no">04 / CULTURE</div><h3 class="ta-ar">تبادل ثقافي</h3><h3 class="ta-en">Cultural Exchange</h3><p class="ta-ar">الفن كوسيلة للقاء بين الثقافات، وبناء علاقات جديدة تتجاوز الجغرافيا.</p><p class="ta-en">Art as a way to connect cultures and build relationships beyond geography.</p></article>
 </div>
 </div>
 </section>
@@ -433,31 +464,31 @@ body.site-en .lang-ar{display:none!important}body:not(.site-en) .lang-en{display
 <section class="world">
 <div class="container world-inner">
 <div class="kicker">MINYA × THE WORLD</div>
-<h2 class="lang-ar">هنا <span>يلتقي العالم.</span></h2>
-<h2 class="lang-en">Where the <span>world meets.</span></h2>
-<p class="lang-ar">من قلب صعيد مصر، نفتح مساحة للقاء. مهرجان يولد من المنيا، لكنه لا يتوقف عند حدودها.</p>
-<p class="lang-en">From the heart of Upper Egypt, we create a space for encounter. A festival born in Minya, with an ambition that reaches beyond its borders.</p>
+<h2 class="ta-ar">هنا <span>يلتقي العالم.</span></h2>
+<h2 class="ta-en">Where the <span>world meets.</span></h2>
+<p class="ta-ar">من قلب صعيد مصر، نفتح مساحة للقاء. مهرجان يولد من المنيا، لكنه لا يتوقف عند حدودها.</p>
+<p class="ta-en">From the heart of Upper Egypt, we create a space for encounter. A festival born in Minya, with an ambition that reaches beyond its borders.</p>
 <div class="route"><span>MINYA</span><i></i><em>THE WORLD</em></div>
 </div>
 </section>
 
 <section class="numbers">
 <div class="container"><div class="numbers-grid">
-<div class="number"><strong>03</strong><span class="lang-ar">دورات مكتملة</span><span class="lang-en">Completed editions</span></div>
-<div class="number"><strong>2022</strong><span class="lang-ar">عام الانطلاق</span><span class="lang-en">Launch year</span></div>
-<div class="number"><strong>04</strong><span class="lang-ar">الدورة القادمة</span><span class="lang-en">Next edition</span></div>
-<div class="number"><strong>2027</strong><span class="lang-ar">أبريل · الدورة الرابعة</span><span class="lang-en">April · 4th edition</span></div>
+<div class="number"><strong>03</strong><span class="ta-ar">دورات مكتملة</span><span class="ta-en">Completed editions</span></div>
+<div class="number"><strong>2022</strong><span class="ta-ar">عام الانطلاق</span><span class="ta-en">Launch year</span></div>
+<div class="number"><strong>04</strong><span class="ta-ar">الدورة القادمة</span><span class="ta-en">Next edition</span></div>
+<div class="number"><strong>2027</strong><span class="ta-ar">أبريل · الدورة الرابعة</span><span class="ta-en">April · 4th edition</span></div>
 </div></div>
 </section>
 
 <section class="final">
 <div class="container final-inner">
 <div class="kicker">MINYA INTERNATIONAL THEATRE FESTIVAL · 2027</div>
-<h2 class="lang-ar">أبعد <span>من الحدود.</span></h2>
-<h2 class="lang-en">Beyond <span>Borders.</span></h2>
-<p class="lang-ar">من المنيا إلى العالم — تبدأ هنا مرحلة جديدة من رحلة المهرجان.</p>
-<p class="lang-en">From Minya to the world — a new chapter of the festival journey begins here.</p>
-<a class="btn btn-primary" href="contact.html"><span class="lang-ar">تواصل مع المهرجان</span><span class="lang-en">Contact the festival</span></a>
+<h2 class="ta-ar">أبعد <span>من الحدود.</span></h2>
+<h2 class="ta-en">Beyond <span>Borders.</span></h2>
+<p class="ta-ar">من المنيا إلى العالم — تبدأ هنا مرحلة جديدة من رحلة المهرجان.</p>
+<p class="ta-en">From Minya to the world — a new chapter of the festival journey begins here.</p>
+<a class="btn btn-primary" href="contact.html"><span class="ta-ar">تواصل مع المهرجان</span><span class="ta-en">Contact the festival</span></a>
 </div>
 </section>
 </main>
@@ -489,44 +520,7 @@ document.getElementById("year").textContent=new Date().getFullYear();
 (function(){const n=document.getElementById('masterNav'),m=document.getElementById('menuBtn'),l=document.getElementById('navLinks'),b=document.getElementById('langBtn'); if(!n)return; let langBtn=localStorage.getItem('teatroLang')||'ar'; function setLang(x){n.classList.toggle('english',x==='en');document.documentElement.langBtn=x;document.documentElement.dir=x==='en'?'ltr':'rtl';b.textContent=x==='en'?'AR':'EN';localStorage.setItem('teatroLang',x)} setLang(langBtn); m&&m.addEventListener('click',()=>l.classList.toggle('open')); b&&b.addEventListener('click',()=>setLang(n.classList.contains('english')?'ar':'en')); l&&l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));})();
 </script>
 
-<footer class="master-footer">
-  <div class="master-footer-grid">
-    <div class="master-footer-brand">
-      <img src="logo.png" alt="Teatro Alsaeed">
-      <p class="lang-ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
-      <p class="lang-en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
-    </div>
-    <div>
-      <h3><span class="lang-ar">استكشف</span><span class="lang-en">Explore</span></h3>
-      <a href="index.html">الرئيسية / Home</a>
-      <a href="about.html">عنّا / About</a>
-      <a href="troupe.html">الفرقة / Troupe</a>
-      <a href="productions.html">العروض / Productions</a>
-      <a href="academy.html">الأكاديمية / Academy</a>
-      <a href="cinema-school.html">مدرسة السينما / Cinema School</a>
-    </div>
-    <div>
-      <h3><span class="lang-ar">المشروعات</span><span class="lang-en">Projects</span></h3>
-      <a href="incubator.html">الحاضنة / Incubator</a>
-      <a href="festival.html">المهرجان / Festival</a>
-      <a href="sahara.html">صحارة / Sahara</a>
-      <a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a>
-      <a href="contact.html">تواصل / Contact</a>
-    </div>
-    <div>
-      <h3><span class="lang-ar">تواصل</span><span class="lang-en">Connect</span></h3>
-      <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
-      <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
-      <a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a>
-      <a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank" rel="noopener">YouTube</a>
-      <a href="https://www.tiktok.com/@teatro.alsaeed" target="_blank" rel="noopener">TikTok</a>
-    </div>
-  </div>
-  <div class="master-footer-bottom">
-    <span>© <span id="year"></span> Teatro Alsaeed</span>
-    <span class="lang-ar">من المنيا إلى العالم</span><span class="lang-en">From Minya to the world</span>
-  </div>
-</footer>
+
 
 <script id="teatro-master-audit-script">
 (function(){
@@ -544,6 +538,109 @@ document.getElementById("year").textContent=new Date().getFullYear();
   if(menuBtn) menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open?'true':'false')});
   if(nav) nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
   const y=document.getElementById('year'); if(y)y.textContent=new Date().getFullYear();
+})();
+</script>
+
+
+<footer class="ta-master-footer">
+  <div class="ta-footer-grid">
+    <div>
+      <img src="logo.png" alt="Teatro Alsaeed" class="ta-footer-logo">
+      <p class="ta-ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
+      <p class="ta-en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
+    </div>
+    <div>
+      <h3><span class="ta-ar">استكشف</span><span class="ta-en">Explore</span></h3>
+      <a href="index.html">الرئيسية / Home</a>
+      <a href="about.html">عنّا / About</a>
+      <a href="troupe.html">الفرقة / Troupe</a>
+      <a href="productions.html">العروض / Productions</a>
+      <a href="academy.html">الأكاديمية / Academy</a>
+      <a href="cinema-school.html">مدرسة السينما / Cinema School</a>
+      <a href="incubator.html">الحاضنة / Incubator</a>
+      <a href="festival.html">المهرجان / Festival</a>
+      <a href="sahara.html">صحارة / Sahara</a>
+      <a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a>
+      <a href="partners.html">شركاؤنا / Partners</a>
+      <a href="contact.html">تواصل / Contact</a>
+    </div>
+    <div>
+      <h3><span class="ta-ar">أرشيف المهرجان</span><span class="ta-en">Festival Archive</span></h3>
+      <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a>
+      <a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a>
+      <a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a>
+      <a href="festival-2027.html">2027 · الدورة الرابعة / 4th Edition</a>
+      <a href="lumieres.html">Lumières / أضواء</a>
+    </div>
+    <div>
+      <h3><span class="ta-ar">تواصل</span><span class="ta-en">Connect</span></h3>
+      <p>Minya, Egypt</p>
+      <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
+      <div class="ta-social">
+        <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@teatro.alsaeed" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </div>
+  <div class="ta-footer-bottom">
+    <span>© <span id="year"></span> Teatro Alsaeed</span>
+    <span class="ta-ar">من المنيا إلى العالم</span><span class="ta-en">From Minya to the world</span>
+  </div>
+</footer>
+
+
+<script id="teatro-site-audit-script">
+(function(){
+  const body=document.body, root=document.documentElement;
+  const langBtn=document.getElementById('langBtn');
+  const menuBtn=document.getElementById('menuBtn');
+  const nav=document.getElementById('navLinks');
+  function applyLang(lang,save){
+    const en=lang==='en';
+    body.classList.toggle('site-en',en);
+    body.classList.toggle('english',en);
+    body.classList.toggle('en',en);
+    root.lang=en?'en':'ar';
+    root.dir=en?'ltr':'rtl';
+    if(langBtn) langBtn.textContent=en?'AR':'EN';
+    if(save!==false){
+      try{localStorage.setItem('siteLang',lang);localStorage.setItem('teatroLang',lang)}catch(e){}
+    }
+  }
+  let saved='ar';
+  try{saved=localStorage.getItem('siteLang')||localStorage.getItem('teatroLang')||'ar'}catch(e){}
+  applyLang(saved,false);
+
+  document.addEventListener('click',function(e){
+    const lang=e.target.closest && e.target.closest('#langBtn');
+    if(lang){
+      e.preventDefault(); e.stopImmediatePropagation();
+      applyLang(body.classList.contains('site-en')?'ar':'en',true);
+      return;
+    }
+    const menu=e.target.closest && e.target.closest('#menuBtn');
+    if(menu){
+      e.preventDefault(); e.stopImmediatePropagation();
+      if(nav){
+        const open=nav.classList.toggle('open');
+        menu.setAttribute('aria-expanded',open?'true':'false');
+      }
+      return;
+    }
+    const link=e.target.closest && e.target.closest('#navLinks a');
+    if(link && nav) nav.classList.remove('open');
+  },true);
+
+  if(nav){
+    const current=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    nav.querySelectorAll('a[href]').forEach(a=>{
+      const href=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
+      if(href===current || (current.startsWith('festival-') && href==='festival.html')) a.classList.add('active');
+    });
+  }
+  const year=document.getElementById('year'); if(year) year.textContent=new Date().getFullYear();
 })();
 </script>
 
