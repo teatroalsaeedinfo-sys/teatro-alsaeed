@@ -24,37 +24,8 @@ footer{padding:45px 0;border-top:1px solid var(--line);color:#777}.foot{display:
 @media(max-width:950px){.links{display:none;position:absolute;top:72px;right:0;left:0;background:#090b0b;padding:18px;flex-direction:column}.links.open{display:flex}.menu{display:block}.four{grid-template-columns:1fr 1fr}.story,.apply{grid-template-columns:1fr}.badge{width:150px;height:150px}}
 @media(max-width:650px){section{padding:75px 0}.hero h1{font-size:62px}.four{grid-template-columns:1fr}.row{grid-template-columns:1fr;gap:4px}.note{display:none}.openin{display:block}.badge{margin-top:25px}.foot{display:block}.social{margin-top:12px}.editions .wrap{justify-content:flex-start}}
 </style>
-
-<style id="site-master-style">
-.site-master-nav{position:fixed;top:0;left:0;right:0;height:72px;background:rgba(10,11,11,.96);border-bottom:1px solid rgba(255,255,255,.08);z-index:99999;backdrop-filter:blur(12px);font-family:Inter,Arial,sans-serif}
-.site-master-inner{height:100%;max-width:1400px;margin:auto;padding:0 22px;display:flex;align-items:center;gap:20px}.site-brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;min-width:max-content}.site-brand img{width:42px;height:42px;object-fit:contain}.site-brand-text{display:flex;flex-direction:column;line-height:1.05}.site-brand-text b{font-size:13px}.site-brand-text small{font-size:9px;opacity:.55;letter-spacing:1px;margin-top:4px}.site-master-links{display:flex;align-items:center;justify-content:flex-end;gap:3px;flex:1}.site-master-links a{color:#ddd;text-decoration:none;padding:10px 8px;font-size:11px;white-space:nowrap;transition:.2s}.site-master-links a:hover{color:#2bb3b1}.site-lang-btn{border:1px solid rgba(43,179,177,.55);background:transparent;color:#fff;padding:7px 10px;border-radius:3px;cursor:pointer;margin-left:5px}.site-menu-btn{display:none;background:none;border:0;color:#fff;font-size:25px;cursor:pointer;margin-left:auto}.site-master-nav .en{display:none}.site-master-nav.english .ar{display:none}.site-master-nav.english .en{display:inline}.site-master-nav.english{direction:ltr}.site-master-nav.english .site-master-links{justify-content:flex-start}.site-master-nav.english .site-lang-btn{order:10}
-body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header.navbar{display:none!important}
-@media(max-width:1150px){.site-brand-text{display:none}.site-master-links a{padding:9px 6px;font-size:10px}}
-@media(max-width:900px){.site-menu-btn{display:block}.site-master-links{display:none;position:absolute;top:72px;left:0;right:0;background:#0c0d0d;padding:12px 20px 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid rgba(255,255,255,.08)}.site-master-links.open{display:flex}.site-master-links a{padding:13px 4px;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px}.site-lang-btn{margin:12px 0 0;align-self:flex-start}}
-</style>
 </head>
 <body>
-<!-- SITE-WIDE MASTER NAV -->
-<nav class="site-master-nav" id="siteMasterNav">
-  <div class="site-master-inner">
-    <a class="site-brand" href="index.html"><img src="logo.png" alt="Teatro Alsaeed"><span class="site-brand-text"><b>تياترو الصعيد</b><small>Teatro Alsaeed</small></span></a>
-    <button class="site-menu-btn" id="siteMenuBtn" aria-label="Open menu">☰</button>
-    <div class="site-master-links" id="siteMasterLinks">
-      <a href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
-      <a href="about.html"><span class="ar">عنّا</span><span class="en">About</span></a>
-      <a href="troupe.html"><span class="ar">الفرقة</span><span class="en">Troupe</span></a>
-      <a href="productions.html"><span class="ar">العروض</span><span class="en">Productions</span></a>
-      <a href="academy.html"><span class="ar">الأكاديمية</span><span class="en">Academy</span></a>
-      <a href="cinema-school.html"><span class="ar">مدرسة السينما</span><span class="en">Cinema School</span></a>
-      <a href="incubator.html"><span class="ar">الحاضنة</span><span class="en">Incubator</span></a>
-      <a href="festival.html"><span class="ar">المهرجان</span><span class="en">Festival</span></a>
-      <a href="sahara.html"><span class="ar">صحارة</span><span class="en">Sahara</span></a>
-      <a href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
-      <button class="site-lang-btn" id="siteLangBtn">EN</button>
-    </div>
-  </div>
-</nav>
-
 <header class="nav"><div class="wrap navin">
 <a class="logo" href="index.html"><img src="logo.png"><span class="ar">تياترو الصعيد</span><span class="en">Teatro Alsaeed</span></a>
 <nav class="links" id="links">
@@ -90,7 +61,7 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
 
 <section id="apply"><div class="wrap"><div class="head"><div class="kicker">OPEN CALLS</div><h3>المشاركة تبدأ من هنا.</h3><p>بوابة المشاركة الرسمية للفرق والمتطوعين في الدورة الرابعة.</p></div>
 <div class="apply">
-<article class="applycard"><div class="applytxt"><small>CALL FOR THEATRE COMPANIES</small><h4>قدّم عرضك المسرحي</h4><p>سيتم نشر شروط المشاركة، الفئات، المواعيد، المستندات المطلوبة وطريقة التقديم فور فتح باب التقديم.</p><a class="btn primary" href="#application">استمارة الفرق قريبًا</a></div></article>
+<article class="applycard"><div class="applytxt"><small>CALL FOR THEATRE COMPANIES</small><h4>قدّم عرضك المسرحي</h4><p>سيتم نشر شروط المشاركة، الفئات، المواعيد، المستندات المطلوبة وطريقة التقديم فور فتح باب التقديم.</p><a class="btn primary" href="#application">ابدأ / استكمل طلب المشاركة</a></div></article>
 <article class="applycard" id="volunteer"><div class="applytxt"><small>VOLUNTEER PROGRAM</small><h4>كن جزءًا من الفريق</h4><p>فرصة للشباب للمشاركة في التنظيم، استقبال الضيوف، الإعلام، الإنتاج، التوثيق والدعم اللوجستي.</p><a class="btn secondary" href="#volunteer-info">استمارة التطوع قريبًا</a></div></article>
 </div></div></section>
 
@@ -143,7 +114,9 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
 <div class="row"><div class="date">12 APR 2027</div><strong>حفل الختام وإعلان النتائج</strong><span class="note">قريبًا</span></div>
 </div></div></section>
 
-<section class="open" id="application"><div class="wrap openin"><div><div class="kicker">CALL FOR PARTICIPATION</div><h3>هل أنت مستعد<br>لتتجاوز الحدود؟</h3><p>ستظهر هنا استمارة التقديم الرسمية للفرق فور فتح باب المشاركة، مع شروط المشاركة والـ Technical Rider وموعد غلق التقديم.</p><div class="buttons"><a class="btn primary" href="#programme">تابع البرنامج</a><a class="btn secondary" href="#volunteer">التطوع</a></div></div><div class="badge"><b>أبعد<br>من<br>الحدود</b></div></div></section>
+<section class="open" id="application"><div class="wrap openin"><div><div class="kicker">CALL FOR PARTICIPATION · 2027</div><h3>قدّم عرضك<br>وتجاوز الحدود.</h3><p>استمارة التقديم الرسمية للفرق المسرحية الراغبة في المشاركة في الدورة الرابعة من مهرجان المنيا المسرحي الدولي «أبعد من الحدود».</p><div class="buttons"><a class="btn primary" href="#application-form">ابدأ / استكمل طلب المشاركة</a><a class="btn secondary" href="#programme">تابع البرنامج</a></div></div><div class="badge"><b>أبعد<br>من<br>الحدود</b></div></div></section>
+
+<section id="application-form" class="dark" style="padding-top:70px"><div class="wrap"><div class="head"><div class="kicker">OFFICIAL APPLICATION FORM</div><h3>استمارة التقديم</h3><p>يمكنك بدء الطلب الآن، والعودة لاستكماله لاحقًا من خلال Google Forms. يُرجى استخدام نفس حساب Google عند العودة إلى المسودة المحفوظة.</p></div><div style="background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 20px 60px #0008"><iframe src="https://docs.google.com/forms/d/1WHq-YByTpt_RqlB-A1UUjuhMX5mCI8jG-AlaciUKpZU/viewform?embedded=true" width="100%" height="1200" frameborder="0" marginheight="0" marginwidth="0" title="استمارة التقديم لمهرجان المنيا المسرحي الدولي 2027">جارٍ تحميل الاستمارة…</iframe></div><div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px"><a class="btn primary" href="https://docs.google.com/forms/d/1WHq-YByTpt_RqlB-A1UUjuhMX5mCI8jG-AlaciUKpZU/previewResponse" target="_blank" rel="noopener">فتح الاستمارة في صفحة مستقلة</a></div></div></section>
 
 <section id="news"><div class="wrap"><div class="head"><div class="kicker">NEWS & UPDATES</div><h3>آخر أخبار الدورة</h3><p>مساحة مخصصة للإعلانات، فتح باب التقديم، النتائج والبرنامج أولًا بأول.</p></div>
 <div class="grid four">
@@ -175,19 +148,5 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
 const b=document.body,l=document.getElementById('lang'),m=document.getElementById('menu'),n=document.getElementById('links');
 function setLang(x){b.classList.toggle('en',x==='en');document.documentElement.lang=x;document.documentElement.dir=x==='en'?'ltr':'rtl';l.textContent=x==='en'?'AR':'EN';localStorage.setItem('teatroLang',x)}
 setLang(localStorage.getItem('teatroLang')||'ar');l.onclick=()=>setLang(b.classList.contains('en')?'ar':'en');m.onclick=()=>n.classList.toggle('open');
-</script>
-
-<footer class="site-master-footer">
-<div class="site-footer-grid">
-<div><img src="logo.png" alt="Teatro Alsaeed" class="site-footer-logo"><p class="ar">إحياء وتطوير الفنون</p><p class="en">Reviving and Developing the Arts</p></div>
-<div><h4 class="ar">استكشف</h4><h4 class="en">Explore</h4><div class="site-footer-links"><a href="index.html">الرئيسية</a><a href="about.html">عنّا</a><a href="troupe.html">الفرقة</a><a href="productions.html">العروض</a><a href="academy.html">الأكاديمية</a><a href="cinema-school.html">مدرسة السينما</a><a href="incubator.html">الحاضنة</a><a href="festival.html">المهرجان</a><a href="sahara.html">صحارة</a><a href="contact.html">تواصل</a></div></div>
-<div><h4 class="ar">تواصل</h4><h4 class="en">Contact</h4><p>Minya, Egypt</p><p><a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a></p><div class="site-social"><a href="https://www.facebook.com/TeatroAlSaeed">Facebook</a><a href="https://www.instagram.com/teatroalsaeed/">Instagram</a><a href="https://www.youtube.com/@TeatroAlsaeed">YouTube</a><a href="https://www.tiktok.com/@teatro.alsaeed">TikTok</a></div></div>
-</div><div class="site-footer-bottom">© <span id="siteYear"></span> Teatro Alsaeed · Minya, Egypt</div>
-</footer>
-<style id="site-master-footer-style">.site-master-footer{background:#0a0b0b;color:#aaa;padding:55px 24px 22px;border-top:1px solid rgba(255,255,255,.08);font-family:Inter,Arial,sans-serif}.site-footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1.5fr 1fr;gap:45px}.site-master-footer h4{color:#fff;margin:0 0 15px}.site-master-footer p{font-size:13px;line-height:1.7;margin:7px 0}.site-master-footer a{color:#aaa;text-decoration:none}.site-master-footer a:hover{color:#2bb3b1}.site-footer-logo{width:55px;margin-bottom:12px}.site-footer-links{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;font-size:12px}.site-social{display:flex;gap:12px;flex-wrap:wrap;font-size:12px}.site-footer-bottom{max-width:1200px;margin:35px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.07);font-size:11px;text-align:center;color:#666}@media(max-width:800px){.site-footer-grid{grid-template-columns:1fr;gap:30px}.site-footer-links{grid-template-columns:1fr 1fr}}
-</style>
-<script>document.getElementById("siteYear")&&(document.getElementById("siteYear").textContent=new Date().getFullYear());</script>
-<script id="site-master-script">
-(function(){const n=document.getElementById('siteMasterNav'),m=document.getElementById('siteMenuBtn'),l=document.getElementById('siteMasterLinks'),b=document.getElementById('siteLangBtn'); if(!n)return; let lang=localStorage.getItem('teatroLang')||'ar'; function setLang(x){n.classList.toggle('english',x==='en');document.documentElement.lang=x;document.documentElement.dir=x==='en'?'ltr':'rtl';b.textContent=x==='en'?'AR':'EN';localStorage.setItem('teatroLang',x)} setLang(lang); m&&m.addEventListener('click',()=>l.classList.toggle('open')); b&&b.addEventListener('click',()=>setLang(n.classList.contains('english')?'ar':'en')); l&&l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));})();
 </script>
 </body></html>
