@@ -1,0 +1,5 @@
+title: أنقاض
+english: Anqad
+troupe: فرقة كواليس
+director: غير مثبت في المصدر
+images_confirmed: 8 صور Gallery مؤكدة في Project Source، لكن ملفاتها الخام ليست متاحة في الـruntime الحالي.

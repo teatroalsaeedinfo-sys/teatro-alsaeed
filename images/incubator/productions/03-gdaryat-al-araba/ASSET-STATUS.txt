@@ -1,0 +1,5 @@
+title: جداريات العرابة المدفونة
+english: Murals of the Buried Al-Araba
+troupe: فرقة حمدي طلبة «الهاية»
+director: محمود الشوكي
+images_confirmed: 9 صور Gallery مؤكدة في Project Source، لكن ملفاتها الخام ليست متاحة في الـruntime الحالي.

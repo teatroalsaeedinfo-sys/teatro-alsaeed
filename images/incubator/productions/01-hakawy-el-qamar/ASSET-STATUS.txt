@@ -1,0 +1,5 @@
+title: حكاوي القمر
+english: Moon Tales
+troupe: فرقة كامبوشة
+director: إبراهيم ناصر / أبرام ناصر (Project Source contains both spellings across notes)
+images_confirmed: صور العرض موجودة في Project Source، لكن ملفاتها الخام ليست متاحة في الـruntime الحالي.
