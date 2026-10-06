@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html langBtn="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -257,48 +257,53 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
 @media(max-width:1150px){.site-brand-text{display:none}.site-master-links a{padding:9px 6px;font-size:10px}}
 @media(max-width:900px){.site-menu-btn{display:block}.site-master-links{display:none;position:absolute;top:72px;left:0;right:0;background:#0c0d0d;padding:12px 20px 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid rgba(255,255,255,.08)}.site-master-links.open{display:flex}.site-master-links a{padding:13px 4px;border-bottom:1px solid rgba(255,255,255,.07);font-size:13px}.site-lang-btn{margin:12px 0 0;align-self:flex-start}}
 </style>
+
+<style id="teatro-master-audit">
+:root{--ta-accent:#2bb3b1;--ta-dark:#0b0d0d;--ta-border:rgba(255,255,255,.10)}
+.master-nav{position:relative;z-index:9999;background:rgba(8,10,10,.97);border-bottom:1px solid var(--ta-border);color:#fff;font-family:Inter,Arial,sans-serif}
+.master-nav-inner{max-width:1400px;margin:auto;min-height:74px;padding:10px 24px;display:flex;align-items:center;gap:18px}
+.master-brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;white-space:nowrap;margin-inline-end:8px}.master-brand img{width:42px;height:42px;object-fit:contain}.master-brand span{display:flex;flex-direction:column;line-height:1.05}.master-brand b{font-size:15px}.master-brand small{font-size:9px;opacity:.62;margin-top:4px}
+.master-links{display:flex;align-items:center;justify-content:flex-end;gap:3px;flex:1}.master-links a{color:#fff;text-decoration:none;font-size:12px;padding:9px 7px;border-radius:8px;transition:.2s}.master-links a:hover,.master-links a:focus-visible{background:rgba(43,179,177,.13);color:var(--ta-accent)}
+.master-lang,.master-menu{border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;border-radius:8px;cursor:pointer}.master-lang{padding:8px 11px;font-weight:700}.master-menu{display:none;padding:8px 11px;font-size:20px}
+.master-footer{background:#090b0b;color:#fff;border-top:1px solid var(--ta-border);padding:55px 24px 20px;font-family:Inter,Arial,sans-serif}.master-footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:35px}.master-footer-brand img{width:70px;height:70px;object-fit:contain;margin-bottom:12px}.master-footer p{color:#bfc6c6;line-height:1.8}.master-footer h3{font-size:14px;margin:0 0 13px}.master-footer-grid>div:not(:first-child) a{display:block;color:#aeb6b6;text-decoration:none;font-size:12px;margin:9px 0}.master-footer-grid>div:not(:first-child) a:hover{color:var(--ta-accent)}.master-footer-bottom{max-width:1200px;margin:38px auto 0;padding-top:17px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:15px;color:#7f8989;font-size:11px}
+body.site-en .lang-ar{display:none!important}body:not(.site-en) .lang-en{display:none!important}
+@media(max-width:1050px){.master-links a{font-size:11px;padding:8px 5px}.master-brand{margin-inline-end:0}.master-brand img{width:38px;height:38px}}
+@media(max-width:850px){.master-nav-inner{min-height:66px;padding:9px 16px}.master-menu{display:block;order:2}.master-lang{order:3}.master-links{display:none;position:absolute;left:12px;right:12px;top:100%;padding:10px;background:#0b0d0d;border:1px solid rgba(255,255,255,.12);border-radius:0 0 12px 12px;flex-direction:column;align-items:stretch;box-shadow:0 18px 35px rgba(0,0,0,.35)}.master-links.open{display:flex}.master-links a{font-size:13px;padding:12px 14px}.master-brand{flex:1}.master-footer-grid{grid-template-columns:1fr 1fr}.master-footer-bottom{flex-direction:column}}
+@media(max-width:520px){.master-footer-grid{grid-template-columns:1fr}.master-footer{padding-inline:18px}}
+</style>
+
 </head>
 
 <body>
-<!-- SITE-WIDE MASTER NAV -->
-<nav class="site-master-nav" id="siteMasterNav">
-  <div class="site-master-inner">
-    <a class="site-brand" href="index.html"><img src="logo.png" alt="Teatro Alsaeed"><span class="site-brand-text"><b>تياترو الصعيد</b><small>Teatro Alsaeed</small></span></a>
-    <button class="site-menu-btn" id="siteMenuBtn" aria-label="Open menu">☰</button>
-    <div class="site-master-links" id="siteMasterLinks">
-      <a href="index.html"><span class="ar">الرئيسية</span><span class="en">Home</span></a>
-      <a href="about.html"><span class="ar">عنّا</span><span class="en">About</span></a>
-      <a href="troupe.html"><span class="ar">الفرقة</span><span class="en">Troupe</span></a>
-      <a href="productions.html"><span class="ar">العروض</span><span class="en">Productions</span></a>
-      <a href="academy.html"><span class="ar">الأكاديمية</span><span class="en">Academy</span></a>
-      <a href="cinema-school.html"><span class="ar">مدرسة السينما</span><span class="en">Cinema School</span></a>
-      <a href="incubator.html"><span class="ar">الحاضنة</span><span class="en">Incubator</span></a>
-      <a href="festival.html"><span class="ar">المهرجان</span><span class="en">Festival</span></a>
-      <a href="sahara.html"><span class="ar">صحارة</span><span class="en">Sahara</span></a>
-      <a href="contact.html"><span class="ar">تواصل</span><span class="en">Contact</span></a>
-      <button class="site-lang-btn" id="siteLangBtn">EN</button>
-    </div>
-  </div>
-</nav>
-
-
-<header class="navbar">
-  <div class="nav">
-    <a href="index.html"><img src="logo.png" class="logo" alt="Teatro Alsaeed"></a>
-    <nav class="nav-links" id="navLinks">
+<nav class="master-nav" id="masterNav" aria-label="Main navigation">
+  <div class="master-nav-inner">
+    <a class="master-brand" href="index.html" aria-label="Teatro Alsaeed Home">
+      <img src="logo.png" alt="Teatro Alsaeed">
+      <span><b class="lang-ar">تياترو الصعيد</b><b class="lang-en">Teatro Alsaeed</b><small class="lang-ar">إحياء وتطوير الفنون</small><small class="lang-en">Reviving &amp; Developing the Arts</small></span>
+    </a>
+    <button class="master-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
+    <nav class="master-links" id="navLinks">
       <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
       <a href="about.html"><span class="lang-ar">عنّا</span><span class="lang-en">About</span></a>
       <a href="troupe.html"><span class="lang-ar">الفرقة</span><span class="lang-en">Troupe</span></a>
       <a href="productions.html"><span class="lang-ar">العروض</span><span class="lang-en">Productions</span></a>
       <a href="academy.html"><span class="lang-ar">الأكاديمية</span><span class="lang-en">Academy</span></a>
+      <a href="cinema-school.html"><span class="lang-ar">مدرسة السينما</span><span class="lang-en">Cinema School</span></a>
+      <a href="incubator.html"><span class="lang-ar">الحاضنة</span><span class="lang-en">Incubator</span></a>
       <a href="festival.html"><span class="lang-ar">المهرجان</span><span class="lang-en">Festival</span></a>
       <a href="sahara.html"><span class="lang-ar">صحارة</span><span class="lang-en">Sahara</span></a>
+      <a href="basement-theatre.html"><span class="lang-ar">مسرح البدروم</span><span class="lang-en">Basement Theatre</span></a>
       <a href="contact.html"><span class="lang-ar">تواصل</span><span class="lang-en">Contact</span></a>
-      <button class="lang-btn" id="langBtn">EN</button>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+    <button class="master-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
   </div>
-</header>
+</nav>
+
+<!-- SITE-WIDE MASTER NAV -->
+
+
+
+
 
 <section class="hero">
   <div class="hero-bg"></div>
@@ -535,11 +540,7 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
   </div>
 </section>
 
-<footer>
-  <img src="logo.png" alt="Teatro Alsaeed">
-  <p class="lang-ar">تياترو الصعيد — إحياء وتطوير الفنون</p>
-  <p class="lang-en">Teatro Alsaeed — Reviving and Developing Performing Arts</p>
-</footer>
+
 
 <script>
 (function(){
@@ -547,13 +548,13 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
   const menuBtn=document.getElementById("menuBtn");
   const nav=document.getElementById("navLinks");
 
-  function setLang(lang,save=true){
-    document.body.classList.toggle("english",lang==="en");
-    document.documentElement.lang=lang;
-    document.documentElement.dir=lang==="en"?"ltr":"rtl";
-    langBtn.textContent=lang==="en"?"AR":"EN";
+  function setLang(langBtn,save=true){
+    document.body.classList.toggle("english",langBtn==="en");
+    document.documentElement.langBtn=langBtn;
+    document.documentElement.dir=langBtn==="en"?"ltr":"rtl";
+    langBtn.textContent=langBtn==="en"?"AR":"EN";
     if(save){
-      try{localStorage.setItem("siteLang",lang)}catch(e){}
+      try{localStorage.setItem("siteLang",langBtn)}catch(e){}
     }
   }
 
@@ -576,18 +577,71 @@ body{padding-top:72px!important}.navbar,body>header.nav,body>nav.nav,body>header
 </script>
 
 
-<footer class="site-master-footer">
-<div class="site-footer-grid">
-<div><img src="logo.png" alt="Teatro Alsaeed" class="site-footer-logo"><p class="ar">إحياء وتطوير الفنون</p><p class="en">Reviving and Developing the Arts</p></div>
-<div><h4 class="ar">استكشف</h4><h4 class="en">Explore</h4><div class="site-footer-links"><a href="index.html">الرئيسية</a><a href="about.html">عنّا</a><a href="troupe.html">الفرقة</a><a href="productions.html">العروض</a><a href="academy.html">الأكاديمية</a><a href="cinema-school.html">مدرسة السينما</a><a href="incubator.html">الحاضنة</a><a href="festival.html">المهرجان</a><a href="sahara.html">صحارة</a><a href="contact.html">تواصل</a></div></div>
-<div><h4 class="ar">تواصل</h4><h4 class="en">Contact</h4><p>Minya, Egypt</p><p><a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a></p><div class="site-social"><a href="https://www.facebook.com/TeatroAlSaeed">Facebook</a><a href="https://www.instagram.com/teatroalsaeed/">Instagram</a><a href="https://www.youtube.com/@TeatroAlsaeed">YouTube</a><a href="https://www.tiktok.com/@teatro.alsaeed">TikTok</a></div></div>
-</div><div class="site-footer-bottom">© <span id="siteYear"></span> Teatro Alsaeed · Minya, Egypt</div>
-</footer>
+
 <style id="site-master-footer-style">.site-master-footer{background:#0a0b0b;color:#aaa;padding:55px 24px 22px;border-top:1px solid rgba(255,255,255,.08);font-family:Inter,Arial,sans-serif}.site-footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1.5fr 1fr;gap:45px}.site-master-footer h4{color:#fff;margin:0 0 15px}.site-master-footer p{font-size:13px;line-height:1.7;margin:7px 0}.site-master-footer a{color:#aaa;text-decoration:none}.site-master-footer a:hover{color:#2bb3b1}.site-footer-logo{width:55px;margin-bottom:12px}.site-footer-links{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;font-size:12px}.site-social{display:flex;gap:12px;flex-wrap:wrap;font-size:12px}.site-footer-bottom{max-width:1200px;margin:35px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.07);font-size:11px;text-align:center;color:#666}@media(max-width:800px){.site-footer-grid{grid-template-columns:1fr;gap:30px}.site-footer-links{grid-template-columns:1fr 1fr}}
 </style>
-<script>document.getElementById("siteYear")&&(document.getElementById("siteYear").textContent=new Date().getFullYear());</script>
+<script>document.getElementById("year")&&(document.getElementById("year").textContent=new Date().getFullYear());</script>
 <script id="site-master-script">
-(function(){const n=document.getElementById('siteMasterNav'),m=document.getElementById('siteMenuBtn'),l=document.getElementById('siteMasterLinks'),b=document.getElementById('siteLangBtn'); if(!n)return; let lang=localStorage.getItem('teatroLang')||'ar'; function setLang(x){n.classList.toggle('english',x==='en');document.documentElement.lang=x;document.documentElement.dir=x==='en'?'ltr':'rtl';b.textContent=x==='en'?'AR':'EN';localStorage.setItem('teatroLang',x)} setLang(lang); m&&m.addEventListener('click',()=>l.classList.toggle('open')); b&&b.addEventListener('click',()=>setLang(n.classList.contains('english')?'ar':'en')); l&&l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));})();
+(function(){const n=document.getElementById('masterNav'),m=document.getElementById('menuBtn'),l=document.getElementById('navLinks'),b=document.getElementById('langBtn'); if(!n)return; let langBtn=localStorage.getItem('teatroLang')||'ar'; function setLang(x){n.classList.toggle('english',x==='en');document.documentElement.langBtn=x;document.documentElement.dir=x==='en'?'ltr':'rtl';b.textContent=x==='en'?'AR':'EN';localStorage.setItem('teatroLang',x)} setLang(langBtn); m&&m.addEventListener('click',()=>l.classList.toggle('open')); b&&b.addEventListener('click',()=>setLang(n.classList.contains('english')?'ar':'en')); l&&l.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>l.classList.remove('open')));})();
 </script>
+
+<footer class="master-footer">
+  <div class="master-footer-grid">
+    <div class="master-footer-brand">
+      <img src="logo.png" alt="Teatro Alsaeed">
+      <p class="lang-ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
+      <p class="lang-en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
+    </div>
+    <div>
+      <h3><span class="lang-ar">استكشف</span><span class="lang-en">Explore</span></h3>
+      <a href="index.html">الرئيسية / Home</a>
+      <a href="about.html">عنّا / About</a>
+      <a href="troupe.html">الفرقة / Troupe</a>
+      <a href="productions.html">العروض / Productions</a>
+      <a href="academy.html">الأكاديمية / Academy</a>
+      <a href="cinema-school.html">مدرسة السينما / Cinema School</a>
+    </div>
+    <div>
+      <h3><span class="lang-ar">المشروعات</span><span class="lang-en">Projects</span></h3>
+      <a href="incubator.html">الحاضنة / Incubator</a>
+      <a href="festival.html">المهرجان / Festival</a>
+      <a href="sahara.html">صحارة / Sahara</a>
+      <a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a>
+      <a href="contact.html">تواصل / Contact</a>
+    </div>
+    <div>
+      <h3><span class="lang-ar">تواصل</span><span class="lang-en">Connect</span></h3>
+      <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
+      <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.tiktok.com/@teatro.alsaeed" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+  <div class="master-footer-bottom">
+    <span>© <span id="year"></span> Teatro Alsaeed</span>
+    <span class="lang-ar">من المنيا إلى العالم</span><span class="lang-en">From Minya to the world</span>
+  </div>
+</footer>
+
+<script id="teatro-master-audit-script">
+(function(){
+  const body=document.body, langBtn=document.getElementById('langBtn'), menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('navLinks');
+  function setLang(lang,save=true){
+    body.classList.toggle('site-en',lang==='en');
+    document.documentElement.lang=lang;
+    document.documentElement.dir=lang==='en'?'ltr':'rtl';
+    if(langBtn) langBtn.textContent=lang==='en'?'AR':'EN';
+    if(save){try{localStorage.setItem('siteLang',lang)}catch(e){}}
+  }
+  let saved='ar'; try{saved=localStorage.getItem('siteLang')||'ar'}catch(e){}
+  setLang(saved,false);
+  if(langBtn) langBtn.addEventListener('click',()=>setLang(body.classList.contains('site-en')?'ar':'en'));
+  if(menuBtn) menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open?'true':'false')});
+  if(nav) nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  const y=document.getElementById('year'); if(y)y.textContent=new Date().getFullYear();
+})();
+</script>
+
 </body>
 </html>

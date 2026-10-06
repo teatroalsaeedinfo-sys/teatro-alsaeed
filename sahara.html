@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html dir="rtl" lang="ar">
+<html dir="rtl" langBtn="ar">
 <head>
 <meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>صحارة | تياترو الصعيد</title>
@@ -10,7 +10,7 @@
 <style>
 :root{--ink:#101210;--paper:#f5efe3;--cream:#eadfc9;--sand:#d6c09a;--rust:#963c2d;--orange:#d56a32;--yellow:#e7bd66;--teal:#197d7a;--muted:#6e695f;--white:#fffaf1;--line:rgba(16,18,16,.14)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Cairo,Arial,sans-serif}a{text-decoration:none;color:inherit}.lang-en{display:none;font-family:Inter,Arial,sans-serif;direction:ltr}.container{width:min(1200px,92%);margin:auto}.kicker{font:800 11px/1.2 Inter,Arial;letter-spacing:.17em;text-transform:uppercase;color:var(--rust)}
-.nav{position:fixed;z-index:100;top:0;left:0;right:0;height:74px;background:rgba(14,16,14,.96);color:#fff}.navin{height:100%;width:min(1260px,94%);margin:auto;display:flex;align-items:center;gap:28px}.logo{font-weight:800;font-size:19px;line-height:1}.logo small{display:block;font:500 8px Inter;letter-spacing:.18em;opacity:.5;margin-top:5px}.links{margin-right:auto;display:flex;gap:19px;align-items:center;font-size:12px}.links a{opacity:.7;transition:.2s}.links a:hover,.links a.active{opacity:1;color:#e7bd66}.lang-btn{border:1px solid rgba(255,255,255,.3);background:none;color:#fff;border-radius:999px;padding:7px 11px;font:700 10px Inter;cursor:pointer}.hamb{display:none;background:none;border:0;color:#fff;font-size:28px}
+.nav{position:fixed;z-index:100;top:0;left:0;right:0;height:74px;background:rgba(14,16,14,.96);color:#fff}.navin{height:100%;width:min(1260px,94%);margin:auto;display:flex;align-items:center;gap:28px}.logo{font-weight:800;font-size:19px;line-height:1}.logo small{display:block;font:500 8px Inter;letter-spacing:.18em;opacity:.5;margin-top:5px}.navLinks{margin-right:auto;display:flex;gap:19px;align-items:center;font-size:12px}.navLinks a{opacity:.7;transition:.2s}.navLinks a:hover,.navLinks a.active{opacity:1;color:#e7bd66}.lang-btn{border:1px solid rgba(255,255,255,.3);background:none;color:#fff;border-radius:999px;padding:7px 11px;font:700 10px Inter;cursor:pointer}.hamb{display:none;background:none;border:0;color:#fff;font-size:28px}
 .hero{min-height:100vh;background:linear-gradient(90deg,rgba(7,9,8,.94),rgba(7,9,8,.58) 54%,rgba(7,9,8,.12)),url('images/sahara2/camp-01.jpg') center/cover;position:relative;color:#fff;display:flex;align-items:flex-end;overflow:hidden}.hero:after{content:"";position:absolute;inset:auto 0 0;height:45%;background:linear-gradient(transparent,rgba(0,0,0,.78))}.hero .container{position:relative;z-index:2;padding:150px 0 75px}.hero .kicker{color:#e7bd66}.hero h1{font-size:clamp(85px,14vw,185px);line-height:.76;letter-spacing:-.06em;margin:16px 0 30px;font-weight:800}.hero h1 small{display:block;font:700 clamp(24px,3.6vw,48px)/1.2 Cairo;letter-spacing:0;margin-top:25px;color:#f5ead8}.hero p{max-width:790px;font-size:clamp(17px,2vw,22px);line-height:1.95;color:#eee}.hero-meta{display:flex;flex-wrap:wrap;margin-top:38px;border-top:1px solid rgba(255,255,255,.24);padding-top:20px}.hero-meta div{min-width:145px;padding-left:26px;margin-left:26px;border-left:1px solid rgba(255,255,255,.2)}.hero-meta div:last-child{border-left:0}.hero-meta b{display:block;font:800 31px Inter;color:#e7bd66}.hero-meta span{font-size:12px;color:#d6d1c7}.scroll{position:absolute;bottom:28px;left:4%;z-index:4;font:700 9px Inter;letter-spacing:.2em;writing-mode:vertical-rl;opacity:.6}
 .ednav{position:sticky;top:74px;z-index:80;background:#171917;color:#fff;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.12)}.ednav-in{width:min(1200px,92%);margin:auto;display:flex;align-items:center;justify-content:center}.ednav a{padding:18px 34px;font-weight:800;font-size:14px;opacity:.68;border-bottom:3px solid transparent}.ednav a:hover,.ednav a.active{opacity:1;color:#e7bd66;border-color:#e7bd66}
 .section{padding:105px 0}.section.dark{background:var(--ink);color:var(--white)}.section.soft{background:#eee5d5}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center}.section h2{font-size:clamp(38px,5.2vw,70px);line-height:1.12;margin:14px 0 24px;letter-spacing:-.035em}.section h2 span{color:var(--rust)}.dark h2 span{color:#e7bd66}.lead{font-size:18px;line-height:2.02;color:#514d46}.dark .lead{color:#c9c3b8}.quote{border-right:3px solid var(--rust);padding:7px 19px;color:#625d54;line-height:2}.dark .quote{color:#c9c3b8}
@@ -25,16 +25,51 @@
 .credits{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:35px}.credit-card{padding:22px;border:1px solid var(--line);background:#fff9ef}.credit-card strong{display:block;font-size:17px;margin-bottom:7px}.credit-card p{margin:0;color:var(--muted);line-height:1.8;font-size:13px}
 .cta{background:linear-gradient(120deg,var(--rust),#5c2923);color:#fff;padding:78px 0}.cta-in{display:flex;align-items:center;justify-content:space-between;gap:40px}.cta h2{font-size:clamp(38px,5vw,68px);margin:0 0 12px}.cta p{font-size:17px;line-height:1.9;color:#f1dcd5;max-width:720px}.btn{display:inline-flex;border:1px solid rgba(255,255,255,.6);padding:14px 23px;color:#fff;font-weight:800;white-space:nowrap}.btn:hover{background:#fff;color:var(--rust)}
 .footer{background:#090a09;color:#aaa;padding:45px 0}.footer-in{display:flex;justify-content:space-between;gap:20px;font-size:11px}.footer strong{color:#fff}.back{color:#e7bd66}
-@media(max-width:950px){.links{display:none;position:absolute;top:74px;right:0;left:0;background:#111;padding:20px 5%;flex-direction:column;align-items:flex-start}.links.open{display:flex}.hamb{display:block}.navin{justify-content:space-between}.grid2,.exhibit,.photo-band{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.villages{grid-template-columns:repeat(2,1fr)}.workshops{grid-template-columns:repeat(2,1fr)}.productions{grid-template-columns:1fr 1fr}.masonry{grid-template-columns:repeat(2,1fr)}.era-head{align-items:start;flex-direction:column}.ednav{top:74px}.ednav a{padding:15px 20px}.credits{grid-template-columns:1fr}}
+@media(max-width:950px){.navLinks{display:none;position:absolute;top:74px;right:0;left:0;background:#111;padding:20px 5%;flex-direction:column;align-items:flex-start}.navLinks.open{display:flex}.hamb{display:block}.navin{justify-content:space-between}.grid2,.exhibit,.photo-band{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.villages{grid-template-columns:repeat(2,1fr)}.workshops{grid-template-columns:repeat(2,1fr)}.productions{grid-template-columns:1fr 1fr}.masonry{grid-template-columns:repeat(2,1fr)}.era-head{align-items:start;flex-direction:column}.ednav{top:74px}.ednav a{padding:15px 20px}.credits{grid-template-columns:1fr}}
 @media(max-width:560px){.hero h1{font-size:82px}.hero .container{padding-bottom:65px}.hero-meta div{min-width:50%;padding-left:12px;margin-left:0;margin-bottom:10px}.section{padding:76px 0}.stats{grid-template-columns:1fr 1fr}.workshops,.productions{grid-template-columns:1fr}.villages{grid-template-columns:1fr 1fr}.photo-band figure{min-height:300px}.cta-in,.footer-in{flex-direction:column;align-items:flex-start}.ednav a{padding:13px 12px;font-size:12px}}
 </style>
+
+<style id="teatro-master-audit">
+:root{--ta-accent:#2bb3b1;--ta-dark:#0b0d0d;--ta-border:rgba(255,255,255,.10)}
+.master-nav{position:relative;z-index:9999;background:rgba(8,10,10,.97);border-bottom:1px solid var(--ta-border);color:#fff;font-family:Inter,Arial,sans-serif}
+.master-nav-inner{max-width:1400px;margin:auto;min-height:74px;padding:10px 24px;display:flex;align-items:center;gap:18px}
+.master-brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;white-space:nowrap;margin-inline-end:8px}.master-brand img{width:42px;height:42px;object-fit:contain}.master-brand span{display:flex;flex-direction:column;line-height:1.05}.master-brand b{font-size:15px}.master-brand small{font-size:9px;opacity:.62;margin-top:4px}
+.master-links{display:flex;align-items:center;justify-content:flex-end;gap:3px;flex:1}.master-links a{color:#fff;text-decoration:none;font-size:12px;padding:9px 7px;border-radius:8px;transition:.2s}.master-links a:hover,.master-links a:focus-visible{background:rgba(43,179,177,.13);color:var(--ta-accent)}
+.master-lang,.master-menu{border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;border-radius:8px;cursor:pointer}.master-lang{padding:8px 11px;font-weight:700}.master-menu{display:none;padding:8px 11px;font-size:20px}
+.master-footer{background:#090b0b;color:#fff;border-top:1px solid var(--ta-border);padding:55px 24px 20px;font-family:Inter,Arial,sans-serif}.master-footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:35px}.master-footer-brand img{width:70px;height:70px;object-fit:contain;margin-bottom:12px}.master-footer p{color:#bfc6c6;line-height:1.8}.master-footer h3{font-size:14px;margin:0 0 13px}.master-footer-grid>div:not(:first-child) a{display:block;color:#aeb6b6;text-decoration:none;font-size:12px;margin:9px 0}.master-footer-grid>div:not(:first-child) a:hover{color:var(--ta-accent)}.master-footer-bottom{max-width:1200px;margin:38px auto 0;padding-top:17px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:15px;color:#7f8989;font-size:11px}
+body.site-en .lang-ar{display:none!important}body:not(.site-en) .lang-en{display:none!important}
+@media(max-width:1050px){.master-links a{font-size:11px;padding:8px 5px}.master-brand{margin-inline-end:0}.master-brand img{width:38px;height:38px}}
+@media(max-width:850px){.master-nav-inner{min-height:66px;padding:9px 16px}.master-menu{display:block;order:2}.master-lang{order:3}.master-links{display:none;position:absolute;left:12px;right:12px;top:100%;padding:10px;background:#0b0d0d;border:1px solid rgba(255,255,255,.12);border-radius:0 0 12px 12px;flex-direction:column;align-items:stretch;box-shadow:0 18px 35px rgba(0,0,0,.35)}.master-links.open{display:flex}.master-links a{font-size:13px;padding:12px 14px}.master-brand{flex:1}.master-footer-grid{grid-template-columns:1fr 1fr}.master-footer-bottom{flex-direction:column}}
+@media(max-width:520px){.master-footer-grid{grid-template-columns:1fr}.master-footer{padding-inline:18px}}
+</style>
+
 </head>
 <body>
-<nav class="nav"><div class="navin">
-<a class="logo" href="index.html">تياترو الصعيد<small>TEATRO ALSAEED</small></a>
-<button aria-label="Menu" class="hamb" onclick="document.querySelector('.links').classList.toggle('open')">☰</button>
-<div class="links"><a href="index.html">الرئيسية</a><a href="about.html">عنّا</a><a href="troupe.html">الفرقة</a><a href="productions.html">العروض</a><a href="academy.html">الأكاديمية</a><a href="cinema-school.html">مدرسة السينما</a><a href="festival.html">المهرجان</a><a class="active" href="sahara.html">صحارة</a><a href="contact.html">تواصل</a></div>
-<button class="lang-btn" onclick="toggleLang()">EN / AR</button></div></nav>
+<nav class="master-nav" id="masterNav" aria-label="Main navigation">
+  <div class="master-nav-inner">
+    <a class="master-brand" href="index.html" aria-label="Teatro Alsaeed Home">
+      <img src="logo.png" alt="Teatro Alsaeed">
+      <span><b class="lang-ar">تياترو الصعيد</b><b class="lang-en">Teatro Alsaeed</b><small class="lang-ar">إحياء وتطوير الفنون</small><small class="lang-en">Reviving &amp; Developing the Arts</small></span>
+    </a>
+    <button class="master-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
+    <nav class="master-links" id="navLinks">
+      <a href="index.html"><span class="lang-ar">الرئيسية</span><span class="lang-en">Home</span></a>
+      <a href="about.html"><span class="lang-ar">عنّا</span><span class="lang-en">About</span></a>
+      <a href="troupe.html"><span class="lang-ar">الفرقة</span><span class="lang-en">Troupe</span></a>
+      <a href="productions.html"><span class="lang-ar">العروض</span><span class="lang-en">Productions</span></a>
+      <a href="academy.html"><span class="lang-ar">الأكاديمية</span><span class="lang-en">Academy</span></a>
+      <a href="cinema-school.html"><span class="lang-ar">مدرسة السينما</span><span class="lang-en">Cinema School</span></a>
+      <a href="incubator.html"><span class="lang-ar">الحاضنة</span><span class="lang-en">Incubator</span></a>
+      <a href="festival.html"><span class="lang-ar">المهرجان</span><span class="lang-en">Festival</span></a>
+      <a href="sahara.html"><span class="lang-ar">صحارة</span><span class="lang-en">Sahara</span></a>
+      <a href="basement-theatre.html"><span class="lang-ar">مسرح البدروم</span><span class="lang-en">Basement Theatre</span></a>
+      <a href="contact.html"><span class="lang-ar">تواصل</span><span class="lang-en">Contact</span></a>
+    </nav>
+    <button class="master-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
+  </div>
+</nav>
+
+
 <main>
 <section class="hero"><div class="container">
 <div class="kicker"><span class="lang-ar">مشروع تياترو الصعيد · فن من قلب القرى</span><span class="lang-en">TEATRO ALSAEED · ART FROM THE HEART OF THE VILLAGES</span></div>
@@ -147,9 +182,68 @@
 </div></section>
 <section class="cta"><div class="container cta-in"><div><div class="kicker" style="color:#f2d58e">SAHARA · ARCHIVE</div><h2><span class="lang-ar">من القرى... إلى الخشبة.</span><span class="lang-en">From villages to the stage.</span></h2><p><span class="lang-ar">دورتان، تجارب مختلفة، لكن الفكرة واحدة: أن يكون الفن أقرب إلى الناس، وأن تصبح القرية شريكًا في صناعة الفن لا مجرد متلقٍ له.</span><span class="lang-en">Two editions, different experiences, one idea: make art closer to people, and make the village a partner in creating art—not merely receiving it.</span></p></div></div></section>
 </main>
-<footer class="footer"><div class="container footer-in"><div><strong>تياترو الصعيد</strong><br/><span class="lang-ar">إحياء وتطوير الفنون</span><span class="lang-en">Reviving &amp; developing the arts</span></div><div><span class="lang-ar">صحارة · فن من قلب القرى</span><span class="lang-en">Sahara · Art from the heart of the villages</span></div><a class="back" href="index.html">↩ <span class="lang-ar">العودة للموقع</span><span class="lang-en">Back to website</span></a></div></footer>
+
 <script>
-function applyLang(l){document.documentElement.lang=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';document.querySelectorAll('.lang-ar').forEach(e=>e.style.display=l==='ar'?'':'none');document.querySelectorAll('.lang-en').forEach(e=>e.style.display=l==='en'?'':'none');localStorage.setItem('siteLang',l)}
+function applyLang(l){document.documentElement.langBtn=l;document.documentElement.dir=l==='ar'?'rtl':'ltr';document.querySelectorAll('.lang-ar').forEach(e=>e.style.display=l==='ar'?'':'none');document.querySelectorAll('.lang-en').forEach(e=>e.style.display=l==='en'?'':'none');localStorage.setItem('siteLang',l)}
 function toggleLang(){applyLang((localStorage.getItem('siteLang')||'ar')==='ar'?'en':'ar')}applyLang(localStorage.getItem('siteLang')||'ar');
 </script>
+
+<footer class="master-footer">
+  <div class="master-footer-grid">
+    <div class="master-footer-brand">
+      <img src="logo.png" alt="Teatro Alsaeed">
+      <p class="lang-ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
+      <p class="lang-en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
+    </div>
+    <div>
+      <h3><span class="lang-ar">استكشف</span><span class="lang-en">Explore</span></h3>
+      <a href="index.html">الرئيسية / Home</a>
+      <a href="about.html">عنّا / About</a>
+      <a href="troupe.html">الفرقة / Troupe</a>
+      <a href="productions.html">العروض / Productions</a>
+      <a href="academy.html">الأكاديمية / Academy</a>
+      <a href="cinema-school.html">مدرسة السينما / Cinema School</a>
+    </div>
+    <div>
+      <h3><span class="lang-ar">المشروعات</span><span class="lang-en">Projects</span></h3>
+      <a href="incubator.html">الحاضنة / Incubator</a>
+      <a href="festival.html">المهرجان / Festival</a>
+      <a href="sahara.html">صحارة / Sahara</a>
+      <a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a>
+      <a href="contact.html">تواصل / Contact</a>
+    </div>
+    <div>
+      <h3><span class="lang-ar">تواصل</span><span class="lang-en">Connect</span></h3>
+      <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
+      <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.tiktok.com/@teatro.alsaeed" target="_blank" rel="noopener">TikTok</a>
+    </div>
+  </div>
+  <div class="master-footer-bottom">
+    <span>© <span id="year"></span> Teatro Alsaeed</span>
+    <span class="lang-ar">من المنيا إلى العالم</span><span class="lang-en">From Minya to the world</span>
+  </div>
+</footer>
+
+<script id="teatro-master-audit-script">
+(function(){
+  const body=document.body, langBtn=document.getElementById('langBtn'), menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('navLinks');
+  function setLang(lang,save=true){
+    body.classList.toggle('site-en',lang==='en');
+    document.documentElement.lang=lang;
+    document.documentElement.dir=lang==='en'?'ltr':'rtl';
+    if(langBtn) langBtn.textContent=lang==='en'?'AR':'EN';
+    if(save){try{localStorage.setItem('siteLang',lang)}catch(e){}}
+  }
+  let saved='ar'; try{saved=localStorage.getItem('siteLang')||'ar'}catch(e){}
+  setLang(saved,false);
+  if(langBtn) langBtn.addEventListener('click',()=>setLang(body.classList.contains('site-en')?'ar':'en'));
+  if(menuBtn) menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open?'true':'false')});
+  if(nav) nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+  const y=document.getElementById('year'); if(y)y.textContent=new Date().getFullYear();
+})();
+</script>
+
 </body></html>
