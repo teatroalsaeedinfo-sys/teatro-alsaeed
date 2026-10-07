@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://teatroalsaeed.org/sitemap.xml

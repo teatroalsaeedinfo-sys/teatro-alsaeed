@@ -1,0 +1,41 @@
+/* TEATRO ALSAEED — VISUAL SYSTEM v2 */
+:root{--ta-teal:#2bb3b1;--ta-ink:#0b0d0d;--ta-paper:#f4f5f3;--ta-white:#fff;--ta-gray:#6e7676;--ta-line:rgba(11,13,13,.11);--ta-dark:#090b0b;--ta-dark2:#111515;--ta-red:#b51f2a;--ta-max:1240px;--ta-radius:2px;--ta-shadow:0 24px 70px rgba(0,0,0,.12)}
+body.site-v2{overflow-x:hidden;background:var(--ta-paper);color:var(--ta-ink)}
+body.site-v2 h1,body.site-v2 h2,body.site-v2 h3,body.site-v2 h4{letter-spacing:-.02em}
+body.site-v2 section{position:relative}
+body.site-v2 img{image-rendering:auto}
+body.site-v2 a{transition:color .25s ease,background .25s ease,border-color .25s ease,transform .25s ease,opacity .25s ease}
+body.site-v2 .container,body.site-v2 .wrap{max-width:var(--ta-max)}
+/* institutional pages */
+body.site-v2:not(.festival-v2) header{position:relative;z-index:50;background:rgba(255,255,255,.94)!important;border-bottom:1px solid var(--ta-line)!important;backdrop-filter:blur(14px)}
+body.site-v2:not(.festival-v2) header a:hover{color:var(--ta-teal)!important}
+body.site-v2:not(.festival-v2) .hero{position:relative;overflow:hidden}
+body.site-v2:not(.festival-v2) .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,8,8,.82),rgba(7,8,8,.30) 65%,rgba(7,8,8,.08));z-index:0;pointer-events:none}
+body.site-v2:not(.festival-v2) .hero>*{position:relative;z-index:1}
+body.site-v2:not(.festival-v2) .hero h1{font-weight:900;line-height:1.05}
+body.site-v2:not(.festival-v2) .hero .eyebrow,body.site-v2:not(.festival-v2) .kicker{color:var(--ta-teal)!important;font-weight:800;letter-spacing:1.8px}
+body.site-v2:not(.festival-v2) .btn,body.site-v2:not(.festival-v2) button{border-radius:2px!important}
+body.site-v2:not(.festival-v2) .btn-primary,body.site-v2:not(.festival-v2) .primary{background:var(--ta-teal)!important;color:#061010!important;border-color:var(--ta-teal)!important}
+body.site-v2:not(.festival-v2) .card,body.site-v2:not(.festival-v2) .feature,body.site-v2:not(.festival-v2) .box{border-radius:2px!important;box-shadow:none!important;border:1px solid var(--ta-line)!important}
+body.site-v2:not(.festival-v2) .card:hover,body.site-v2:not(.festival-v2) .feature:hover{transform:translateY(-5px);box-shadow:var(--ta-shadow)!important}
+body.site-v2:not(.festival-v2) section:nth-of-type(even){background:#fff}
+body.site-v2:not(.festival-v2) section:nth-of-type(odd){background:var(--ta-paper)}
+body.site-v2:not(.festival-v2) footer{background:#080a0a!important;color:#9aa2a2!important;border-top:0!important}
+/* editorial image treatment */
+body.site-v2:not(.festival-v2) .hero img,body.site-v2:not(.festival-v2) section img{transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .4s ease}
+body.site-v2:not(.festival-v2) .hero img:hover,body.site-v2:not(.festival-v2) section img:hover{transform:scale(1.025)}
+body.site-v2:not(.festival-v2) .section-title{position:relative}
+body.site-v2:not(.festival-v2) .section-title:after{content:"";display:block;width:42px;height:2px;background:var(--ta-teal);margin-top:14px}
+/* festival system */
+body.festival-v2{background:var(--ta-dark)!important;color:#f7f8f8!important}
+body.festival-v2 section{background:var(--ta-dark)!important}
+body.festival-v2 section.dark,body.festival-v2 .dark-soft{background:var(--ta-dark2)!important}
+body.festival-v2 .hero:before{background:linear-gradient(90deg,#070808f5 0%,#0708089c 52%,#07080828 100%)}
+body.festival-v2 .btn{border-radius:2px!important}
+body.festival-v2 .card,body.festival-v2 .news-card,body.festival-v2 .info-card{border-radius:2px!important}
+body.festival-v2 .card:hover,body.festival-v2 .news-card:hover{transform:translateY(-4px);border-color:#2bb3b160!important}
+body.festival-v2 .editions{box-shadow:0 10px 35px #0005}
+/* shared micro-elements */
+body.site-v2 .tag,body.site-v2 .pill,body.site-v2 .badge{font-variant-numeric:tabular-nums}
+body.site-v2 ::selection{background:var(--ta-teal);color:#061010}
+@media(max-width:700px){body.site-v2 .container,body.site-v2 .wrap{width:min(94%,var(--ta-max))}body.site-v2 .hero h1{letter-spacing:-.03em}}

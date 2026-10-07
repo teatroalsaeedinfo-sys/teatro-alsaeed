@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>عنّا | تياترو الصعيد</title>
+<meta name="theme-color" content="#080909">
+<link rel="canonical" href="https://teatroalsaeed.org/about.html">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="تياترو الصعيد | Teatro Alsaeed">
+<meta property="og:title" content="عنّا | تياترو الصعيد">
+<meta property="og:description" content="تياترو الصعيد — مؤسسة ثقافية مستقلة تعمل على إحياء وتطوير الفنون وتمكين الفنانين في صعيد مصر.">
+<meta property="og:url" content="https://teatroalsaeed.org/about.html">
+<meta property="og:image" content="https://teatroalsaeed.org/logo.png">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="عنّا | تياترو الصعيد">
+<meta name="twitter:description" content="تياترو الصعيد — مؤسسة ثقافية مستقلة تعمل على إحياء وتطوير الفنون وتمكين الفنانين في صعيد مصر.">
+<meta name="twitter:image" content="https://teatroalsaeed.org/logo.png">
+<meta name="description" content="تياترو الصعيد — مؤسسة ثقافية مستقلة تعمل على إحياء وتطوير الفنون وتمكين الفنانين في صعيد مصر.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --accent:#2bb3b1;
+  --black:#070808;
+  --dark:#101212;
+  --white:#f7f7f5;
+  --muted:#969c9d;
+  --line:rgba(255,255,255,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);
+  color:var(--white);
+  font-family:Cairo,sans-serif;
+  line-height:1.8;
+  overflow-x:hidden;
+}
+body.english{font-family:Inter,sans-serif;direction:ltr}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.lang-en{display:none!important}
+body.english .lang-ar{display:none!important}
+body.english .lang-en{display:block!important}
+
+.navbar{
+  height:78px;position:fixed;inset:0 0 auto;z-index:1000;
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid #ddd;
+}
+.nav{
+  height:100%;max-width:1300px;margin:auto;padding:0 25px;
+  display:flex;align-items:center;gap:25px;
+}
+.logo{width:58px;height:58px;object-fit:contain}
+.nav-links{margin-inline-start:auto;display:flex;align-items:center;gap:22px}
+.nav-links a{color:#111;font-size:13px;font-weight:700;white-space:nowrap}
+.nav-links a:hover{color:var(--accent)}
+.lang-btn{
+  border:1px solid #ccc;background:#fff;border-radius:50px;
+  padding:7px 15px;font-weight:800;cursor:pointer;color:#111
+}
+.menu-btn{display:none;border:0;background:none;font-size:28px;cursor:pointer;color:#111}
+
+.hero{
+  margin-top:78px;min-height:88vh;position:relative;
+  display:flex;align-items:flex-end;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.28)),
+    linear-gradient(0deg,rgba(0,0,0,.96),transparent 65%),
+    url("images/about.jpg") center/cover no-repeat;
+  transform:scale(1.025);
+}
+.hero-content{
+  position:relative;z-index:2;width:100%;max-width:1300px;
+  margin:auto;padding:100px 35px 75px;
+}
+.eyebrow{
+  color:var(--accent);font:800 11px Inter,sans-serif;
+  letter-spacing:3px;text-transform:uppercase;margin-bottom:18px
+}
+.hero h1{
+  max-width:900px;font-size:clamp(48px,7vw,92px);
+  line-height:1.08;font-weight:900;letter-spacing:-2px;
+}
+.hero h1 span{display:block}
+.hero h1 .accent{color:var(--accent)}
+.hero-copy{
+  max-width:720px;color:#d5d8d8;font-size:18px;line-height:2;
+  margin-top:28px
+}
+.hero-bottom{
+  display:flex;align-items:flex-end;justify-content:space-between;
+  gap:40px;margin-top:55px
+}
+.hero-note{
+  border-inline-start:2px solid var(--accent);
+  padding-inline-start:18px;color:#ddd;font-size:14px
+}
+.scroll{
+  color:#aaa;font:700 10px Inter;letter-spacing:2px;white-space:nowrap
+}
+
+.section{padding:110px 25px}
+.container{max-width:1200px;margin:auto}
+.section.dark{background:#0d0f0f}
+.section.light{background:#f3f4f3;color:#111}
+.kicker{
+  color:var(--accent);font:800 11px Inter,sans-serif;
+  letter-spacing:2.5px;text-transform:uppercase;margin-bottom:15px
+}
+.section-title{
+  font-size:clamp(38px,5vw,66px);line-height:1.15;
+  font-weight:900;letter-spacing:-1.5px
+}
+.section-lead{
+  color:#aeb4b4;max-width:760px;font-size:17px;line-height:2;margin-top:20px
+}
+.light .section-lead{color:#555}
+
+.story{
+  display:grid;grid-template-columns:1.05fr .95fr;gap:80px;align-items:center
+}
+.story-image{position:relative;min-height:590px;overflow:hidden}
+.story-image img{width:100%;height:100%;min-height:590px;object-fit:cover}
+.story-image:after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.6))
+}
+.story-year{
+  position:absolute;z-index:2;bottom:28px;inset-inline-start:28px;
+  font:900 72px/1 Inter;color:#fff;opacity:.95
+}
+.story-copy h2{font-size:clamp(36px,4vw,58px);line-height:1.2;margin-bottom:24px}
+.story-copy p{color:#b8bebe;font-size:16px;line-height:2.1;margin-bottom:18px}
+.story-quote{
+  margin-top:35px;padding:25px 28px;
+  border:1px solid var(--line);background:rgba(255,255,255,.025);
+  font-size:20px;font-weight:700;line-height:1.8
+}
+.story-quote strong{color:var(--accent)}
+
+.numbers{background:#f3f4f3;color:#111}
+.numbers-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:55px}
+.numbers-head .section-lead{max-width:520px}
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid #d3d5d5;border-bottom:1px solid #d3d5d5
+}
+.stat{padding:42px 25px;border-inline-start:1px solid #d3d5d5}
+.stat:first-child{border-inline-start:0}
+.stat strong{display:block;font:900 clamp(46px,6vw,78px)/1 Inter;color:#111}
+.stat span{display:block;margin-top:15px;font-size:14px;font-weight:700;color:#555}
+
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:55px}
+.pillar{
+  min-height:330px;padding:35px;position:relative;
+  border:1px solid var(--line);background:#111414;
+  display:flex;flex-direction:column;justify-content:space-between;
+  transition:.3s
+}
+.pillar:hover{transform:translateY(-6px);border-color:rgba(43,179,177,.7)}
+.pillar-num{font:800 11px Inter;color:var(--accent);letter-spacing:2px}
+.pillar h3{font-size:30px;line-height:1.2;margin-bottom:12px}
+.pillar p{color:#aeb4b4;font-size:14px;line-height:2}
+
+.manifesto{
+  min-height:650px;display:flex;align-items:center;
+  background:
+    linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.55)),
+    url("images/قبل منتصف الليل.jpg") center/cover fixed no-repeat;
+}
+.manifesto-inner{max-width:1100px}
+.manifesto h2{
+  font-size:clamp(42px,6vw,82px);line-height:1.1;
+  font-weight:900;max-width:1000px;letter-spacing:-2px
+}
+.manifesto h2 span{color:var(--accent)}
+.manifesto p{max-width:680px;margin-top:30px;color:#d0d4d4;font-size:18px;line-height:2}
+
+.timeline-wrap{margin-top:65px}
+.timeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.timeline:before{
+  content:"";position:absolute;top:17px;left:4%;right:4%;
+  height:1px;background:#333
+}
+.milestone{position:relative;padding-top:55px;padding-inline-end:30px}
+.dot{
+  position:absolute;top:0;inset-inline-start:0;
+  width:35px;height:35px;border:1px solid var(--accent);
+  border-radius:50%;display:grid;place-items:center;
+  background:var(--black);color:var(--accent);font:800 10px Inter
+}
+.milestone strong{display:block;font-size:24px}
+.milestone span{display:block;color:#888;margin-top:5px;font:700 11px Inter;letter-spacing:1px}
+
+.cta{
+  padding:110px 25px;text-align:center;background:var(--accent);color:#061111
+}
+.cta h2{font-size:clamp(40px,6vw,76px);line-height:1.1;font-weight:900}
+.cta p{margin:20px auto 32px;max-width:650px;font-size:16px}
+.cta-links{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.cta a{
+  display:inline-flex;padding:12px 23px;border:1px solid rgba(0,0,0,.35);
+  font-weight:800;font-size:13px;transition:.25s
+}
+.cta a:hover{background:#061111;color:#fff}
+
+footer{background:#111;padding:45px 20px 25px;text-align:center}
+footer img{width:70px;margin:0 auto 15px}
+footer p{color:#888;font-size:13px}
+
+@media(max-width:900px){
+  .nav-links{gap:13px}
+  .story{grid-template-columns:1fr;gap:45px}
+  .story-image,.story-image img{min-height:480px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3){border-top:1px solid #d3d5d5}
+  .pillars{grid-template-columns:1fr}
+  .timeline{grid-template-columns:repeat(2,1fr);gap:35px}
+  .timeline:before{display:none}
+}
+@media(max-width:800px){
+  .navbar{height:70px}
+  .nav{padding:0 18px}
+  .logo{width:50px;height:50px}
+  .menu-btn{display:block}
+  .nav-links{
+    display:none;position:absolute;top:70px;right:0;left:0;
+    background:#fff;padding:15px 25px 25px;
+    flex-direction:column;align-items:stretch;gap:0
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:12px 0;border-bottom:1px solid #eee}
+  .lang-btn{margin-top:15px}
+  .hero{margin-top:70px;min-height:78vh}
+  .hero-content{padding:75px 20px 55px}
+  .hero h1{letter-spacing:-1px}
+  .hero-copy{font-size:16px}
+  .hero-bottom{align-items:flex-start;flex-direction:column}
+  .section{padding:80px 20px}
+  .numbers-head{align-items:flex-start;flex-direction:column}
+  .manifesto{min-height:560px;background-attachment:scroll}
+}
+@media(max-width:520px){
+  .story-image,.story-image img{min-height:390px}
+  .story-year{font-size:54px}
+  .stats{grid-template-columns:1fr}
+  .stat{border-inline-start:0;border-top:1px solid #d3d5d5}
+  .stat:first-child{border-top:0}
+  .timeline{grid-template-columns:1fr}
+  .pillar{min-height:260px}
+  .manifesto h2{font-size:43px}
+}
+</style>
+
+
+<style id="teatro-site-audit-css">
+.ta-master-nav{position:fixed;top:0;left:0;right:0;z-index:99999;background:rgba(7,8,8,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.10);color:#fff;font-family:Inter,Arial,sans-serif}
+.ta-nav-inner{max-width:1450px;min-height:74px;margin:auto;padding:8px 20px;display:flex;align-items:center;gap:16px}
+.ta-brand{display:flex;align-items:center;gap:9px;color:#fff;text-decoration:none;white-space:nowrap}
+.ta-brand img{width:42px;height:42px;object-fit:contain}.ta-brand span{display:flex;flex-direction:column;line-height:1.05}.ta-brand b{font-size:14px}.ta-brand small{font-size:8px;opacity:.55;letter-spacing:.7px;margin-top:4px}
+.ta-links{display:flex;align-items:center;justify-content:flex-end;gap:2px;flex:1}
+.ta-links a{color:#ddd;text-decoration:none;font-size:11px;padding:8px 6px;border-radius:7px;white-space:nowrap}
+.ta-links a:hover,.ta-links a.active{color:#2bb3b1;background:rgba(43,179,177,.10)}
+.ta-lang,.ta-menu{border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;border-radius:8px;cursor:pointer}
+.ta-lang{padding:8px 11px;font-weight:800}.ta-menu{display:none;padding:7px 10px;font-size:21px}
+.ta-master-footer{background:#090b0b;color:#fff;border-top:1px solid rgba(255,255,255,.10);padding:52px 22px 20px;font-family:Inter,Arial,sans-serif}
+.ta-footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1.5fr 1.2fr 1fr;gap:34px}
+.ta-footer-grid h3{font-size:13px;margin:0 0 13px;color:#fff}.ta-footer-grid p{color:#b7c0c0;font-size:12px;line-height:1.8;margin:7px 0}
+.ta-footer-grid a{display:block;color:#aab3b3;text-decoration:none;font-size:11px;margin:7px 0}.ta-footer-grid a:hover{color:#2bb3b1}
+.ta-footer-logo{width:62px;height:62px;object-fit:contain;margin-bottom:10px}.ta-social{display:flex;gap:12px;flex-wrap:wrap}
+.ta-footer-bottom{max-width:1200px;margin:30px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;color:#777;font-size:10px}
+body.site-en .ta-ar,body.site-en .ta-ar,body.english .ta-ar{display:none!important}
+body.site-en .ta-en,body.site-en .ta-en,body.english .ta-en{display:inline!important}
+@media(max-width:1180px){.ta-links a{font-size:10px;padding:8px 4px}.ta-brand span{display:none}}
+@media(max-width:900px){.ta-nav-inner{min-height:68px}.ta-menu{display:block}.ta-links{display:none;position:absolute;top:68px;left:0;right:0;background:#090b0b;padding:14px 6%;flex-direction:column;align-items:stretch;border-bottom:1px solid rgba(255,255,255,.10);max-height:calc(100vh - 68px);overflow:auto}.ta-links.open{display:flex}.ta-links a{font-size:13px;padding:10px 0}.ta-footer-grid{grid-template-columns:1fr 1fr}.ta-footer-bottom{display:block}.ta-footer-bottom>*{display:block;margin-top:6px}}
+@media(max-width:560px){.ta-footer-grid{grid-template-columns:1fr}.ta-master-footer{padding-inline:18px}}
+
+body{padding-top:var(--ta-nav-h,74px);overflow-x:clip}
+img{max-width:100%;height:auto}
+.ta-links a:focus-visible,.ta-lang:focus-visible,.ta-menu:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
+.ta-links a.active{color:#2bb3b1}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+.ta-dd{position:relative}
+.ta-dd-btn{background:none;border:0;color:#ddd;font:inherit;font-size:13px;padding:8px 10px;cursor:pointer;border-radius:7px;white-space:nowrap}
+.ta-dd-btn:after{content:"\25BE";margin-inline-start:5px;font-size:10px;opacity:.7}
+.ta-dd-btn:hover,.ta-dd.has-active>.ta-dd-btn,.ta-dd.open>.ta-dd-btn{color:#2bb3b1;background:rgba(43,179,177,.10)}
+.ta-dd-btn:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
+.ta-dd-menu{display:none;position:absolute;top:100%;inset-inline-start:0;min-width:220px;background:#0b0d0d;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:6px;flex-direction:column;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.ta-dd:hover>.ta-dd-menu,.ta-dd.open>.ta-dd-menu,.ta-dd:focus-within>.ta-dd-menu{display:flex}
+.ta-links a,.ta-dd-menu a{font-size:13px;padding:9px 12px}
+@media(min-width:901px) and (max-width:1180px){.ta-brand span{display:flex!important}}
+@media(max-width:900px){
+ .ta-dd{width:100%}
+ .ta-dd-btn{width:100%;text-align:start;padding:12px 0;font-size:13px;color:#fff;border-bottom:1px solid rgba(255,255,255,.08);border-radius:0}
+ .ta-dd-btn:after{display:none}
+ .ta-dd-menu{display:flex;position:static;border:0;background:transparent;box-shadow:none;padding:0 14px;min-width:0}
+ .ta-dd-menu a{padding:10px 0}
+}
+</style>
+
+</head>
+
+<body>
+
+<nav class="ta-master-nav" id="masterNav" aria-label="Main navigation">
+  <div class="ta-nav-inner">
+    <a class="ta-brand" href="index.html" aria-label="Teatro Alsaeed Home">
+      <img src="logo.png" alt="Teatro Alsaeed">
+      <span><b class="ta-ar" lang="ar">تياترو الصعيد</b><b class="ta-en" lang="en">Teatro Alsaeed</b><small class="ta-ar" lang="ar">إحياء وتطوير الفنون</small><small class="ta-en" lang="en">Reviving &amp; Developing the Arts</small></span>
+    </a>
+    <button class="ta-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
+    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
+    <button class="ta-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
+  </div>
+</nav>
+
+<!-- SITE-WIDE MASTER NAV -->
+
+
+
+
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="eyebrow">TEATRO ALSAEED · ABOUT</div>
+
+    <h1 class="ta-ar" lang="ar">
+      من قلب الصعيد<br>
+      <span class="accent">نصنع مساحة للفن.</span>
+    </h1>
+    <h1 class="ta-en" lang="en">
+      From Upper Egypt,<br>
+      <span class="accent">we create space for art.</span>
+    </h1>
+
+    <p class="hero-copy lang-ar" lang="ar">
+      تياترو الصعيد مؤسسة ثقافية مستقلة تعمل على إحياء وتطوير الفنون،
+      وتمكين الفنانين، وصناعة فرص حقيقية للفنون الأدائية في صعيد مصر.
+    </p>
+    <p class="hero-copy lang-en" lang="en">
+      Teatro Alsaeed is an independent cultural institution working to revive and develop the arts,
+      empower artists, and create meaningful opportunities for performing arts in Upper Egypt.
+    </p>
+
+    <div class="hero-bottom">
+      <div class="hero-note lang-ar" lang="ar">بدأت الحكاية عام 2014 — وما زالت الخشبة مفتوحة.</div>
+      <div class="hero-note lang-en" lang="en">The story began in 2014 — and the stage is still open.</div>
+      <div class="scroll">SCROLL TO EXPLORE ↓</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container story">
+    <div class="story-image">
+      <img src="images/قبل منتصف الليل.jpg" alt="Teatro Alsaeed production">
+      <div class="story-year">2014</div>
+    </div>
+
+    <div class="story-copy">
+      <div class="kicker lang-ar" lang="ar">الحكاية</div>
+      <div class="kicker lang-en" lang="en">THE STORY</div>
+
+      <h2 class="ta-ar" lang="ar">من فرقة مسرحية<br>إلى مؤسسة ثقافية.</h2>
+      <h2 class="ta-en" lang="en">From a theatre troupe<br>to a cultural institution.</h2>
+
+      <p class="ta-ar" lang="ar">
+        نشأت تياترو الصعيد من فرقة مسرحية تأسست عام 2014، وقدمت أكثر من
+        600 ليلة عرض مسرحي. ومع الوقت، توسعت التجربة لتصبح مؤسسة تعمل
+        على الإنتاج المسرحي، والتدريب، والعمل المجتمعي، وخلق مساحات جديدة
+        للفنون الأدائية في صعيد مصر.
+      </p>
+
+      <p class="ta-en" lang="en">
+        Teatro Alsaeed grew from a theatre troupe founded in 2014 and has presented
+        more than 600 performance nights. Over time, the experience evolved into an
+        institution working across theatre production, training, community engagement,
+        and the creation of new spaces for performing arts in Upper Egypt.
+      </p>
+
+      <div class="story-quote lang-ar" lang="ar">
+        <strong>إحياء وتطوير الفنون</strong><br>
+        ليس فقط شعارًا، بل طريقة نعمل بها ونبني من خلالها فرصًا جديدة للفنان.
+      </div>
+      <div class="story-quote lang-en" lang="en">
+        <strong>Reviving and Developing Performing Arts</strong><br>
+        Not just a slogan, but a way of working and creating new opportunities for artists.
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section numbers">
+  <div class="container">
+    <div class="numbers-head">
+      <div>
+        <div class="kicker lang-ar" lang="ar">بالأرقام</div>
+        <div class="kicker lang-en" lang="en">BY THE NUMBERS</div>
+        <h2 class="section-title lang-ar" lang="ar">سنوات من الفن<br>والتجربة.</h2>
+        <h2 class="section-title lang-en" lang="en">Years of art<br>and experience.</h2>
+      </div>
+      <p class="section-lead lang-ar" lang="ar">
+        الأرقام هنا ليست مجرد إحصائيات؛ إنها أثر رحلة بدأت من المسرح
+        واستمرت عبر الإنتاج والتدريب والمهرجانات والعمل مع المجتمع.
+      </p>
+      <p class="section-lead lang-en" lang="en">
+        These numbers are more than statistics; they reflect a journey that began
+        on stage and grew through production, training, festivals, and community work.
+      </p>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><strong>2014</strong><span class="ta-ar" lang="ar">بداية الحكاية</span><span class="ta-en" lang="en">The beginning</span></div>
+      <div class="stat"><strong>600+</strong><span class="ta-ar" lang="ar">ليلة عرض مسرحي</span><span class="ta-en" lang="en">Performance nights</span></div>
+      <div class="stat"><strong>23</strong><span class="ta-ar" lang="ar">دفعة أكاديمية تخرجت</span><span class="ta-en" lang="en">Graduated Academy groups</span></div>
+      <div class="stat"><strong>25</strong><span class="ta-ar" lang="ar">إنتاجًا مسرحيًا في الأرشيف</span><span class="ta-en" lang="en">Archived productions</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark">
+  <div class="container">
+    <div class="kicker lang-ar" lang="ar">ماذا نفعل؟</div>
+    <div class="kicker lang-en" lang="en">WHAT WE DO</div>
+
+    <h2 class="section-title lang-ar" lang="ar">أربع مساحات.<br>هدف واحد.</h2>
+    <h2 class="section-title lang-en" lang="en">Four spaces.<br>One purpose.</h2>
+
+    <p class="section-lead lang-ar" lang="ar">
+      نعمل عبر مسارات متكاملة تجعل الفن ممارسة مستمرة، من الفكرة والتدريب
+      إلى الخشبة والجمهور.
+    </p>
+    <p class="section-lead lang-en" lang="en">
+      We work across connected paths that turn art into a continuous practice —
+      from ideas and training to the stage and the audience.
+    </p>
+
+    <div class="pillars">
+      <article class="pillar">
+        <span class="pillar-num">01 · PRODUCE</span>
+        <div>
+          <h3 class="ta-ar" lang="ar">الإنتاج</h3><h3 class="ta-en" lang="en">Produce</h3>
+          <p class="ta-ar" lang="ar">إنتاج وتقديم عروض مسرحية معاصرة، وفتح المجال للتجريب وصناعة أعمال جديدة.</p>
+          <p class="ta-en" lang="en">Producing contemporary theatre and creating room for experimentation and new work.</p>
+        </div>
+      </article>
+
+      <article class="pillar">
+        <span class="pillar-num">02 · TRAIN</span>
+        <div>
+          <h3 class="ta-ar" lang="ar">التدريب</h3><h3 class="ta-en" lang="en">Train</h3>
+          <p class="ta-ar" lang="ar">توفير برامج تدريبية تطور مهارات الشباب وتربط المعرفة بالممارسة الفنية.</p>
+          <p class="ta-en" lang="en">Training programs that develop young artists and connect knowledge with practice.</p>
+        </div>
+      </article>
+
+      <article class="pillar">
+        <span class="pillar-num">03 · CONNECT</span>
+        <div>
+          <h3 class="ta-ar" lang="ar">التبادل</h3><h3 class="ta-en" lang="en">Connect</h3>
+          <p class="ta-ar" lang="ar">بناء جسور مع الفنانين والمؤسسات والجمهور من داخل الصعيد وخارجه.</p>
+          <p class="ta-en" lang="en">Building bridges with artists, institutions, and audiences from Upper Egypt and beyond.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="manifesto">
+  <div class="container manifesto-inner">
+    <div class="kicker lang-ar" lang="ar">لماذا نعمل؟</div>
+    <div class="kicker lang-en" lang="en">WHY WE EXIST</div>
+
+    <h2 class="ta-ar" lang="ar">
+      لأن الفن<br>
+      <span>ليس حكرًا على المركز.</span>
+    </h2>
+    <h2 class="ta-en" lang="en">
+      Because art<br>
+      <span>should not belong to the center alone.</span>
+    </h2>
+
+    <p class="ta-ar" lang="ar">
+      نؤمن أن الفنان في صعيد مصر يستحق الوصول إلى المعرفة والتدريب والإنتاج
+      والجمهور والفرص، وأن المدن والمجتمعات خارج المركز يمكن أن تكون نقطة
+      انطلاق لصناعة فن يصل إلى العالم.
+    </p>
+    <p class="ta-en" lang="en">
+      We believe artists in Upper Egypt deserve access to knowledge, training,
+      production, audiences, and opportunity — and that communities beyond the
+      center can become starting points for art that reaches the world.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="kicker lang-ar" lang="ar">محطات في الرحلة</div>
+    <div class="kicker lang-en" lang="en">MILESTONES</div>
+
+    <h2 class="section-title lang-ar" lang="ar">الحكاية مستمرة.</h2>
+    <h2 class="section-title lang-en" lang="en">The story continues.</h2>
+
+    <div class="timeline-wrap">
+      <div class="timeline">
+        <div class="milestone">
+          <div class="dot">14</div>
+          <strong class="ta-ar" lang="ar">2014</strong><strong class="ta-en" lang="en">2014</strong>
+          <span class="ta-ar" lang="ar">تأسيس الفرقة</span><span class="ta-en" lang="en">Troupe founded</span>
+        </div>
+        <div class="milestone">
+          <div class="dot">22</div>
+          <strong class="ta-ar" lang="ar">2022</strong><strong class="ta-en" lang="en">2022</strong>
+          <span class="ta-ar" lang="ar">انطلاق مهرجان المنيا للعروض المسرحية القصيرة</span>
+          <span class="ta-en" lang="en">Minya Short Theatre Festival</span>
+        </div>
+        <div class="milestone">
+          <div class="dot">24</div>
+          <strong class="ta-ar" lang="ar">2024</strong><strong class="ta-en" lang="en">2024</strong>
+          <span class="ta-ar" lang="ar">مهرجان المنيا للعروض المسرحية</span>
+          <span class="ta-en" lang="en">Minya Theatre Festival</span>
+        </div>
+        <div class="milestone">
+          <div class="dot">25</div>
+          <strong class="ta-ar" lang="ar">2025</strong><strong class="ta-en" lang="en">2025</strong>
+          <span class="ta-ar" lang="ar">مهرجان المنيا الدولي للمسرح</span>
+          <span class="ta-en" lang="en">Minya International Theatre Festival</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2 class="ta-ar" lang="ar">شوف إحنا بنعمل إيه.</h2>
+    <h2 class="ta-en" lang="en">See what we create.</h2>
+
+    <p class="ta-ar" lang="ar">
+      من العروض المسرحية إلى الأكاديمية والمهرجان والمشروعات الثقافية —
+      اكتشف مسارات تياترو الصعيد.
+    </p>
+    <p class="ta-en" lang="en">
+      From theatre productions to the Academy, Festival, and cultural projects —
+      explore the work of Teatro Alsaeed.
+    </p>
+
+    <div class="cta-links">
+      <a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a>
+      <a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a>
+      <a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a>
+      <a href="contact.html"><span class="ta-ar" lang="ar">تواصل معنا</span><span class="ta-en" lang="en">Contact us</span></a>
+    </div>
+  </div>
+</section>
+
+
+<footer class="ta-master-footer">
+  <div class="ta-footer-grid">
+    <div>
+      <img src="logo.png" alt="Teatro Alsaeed" class="ta-footer-logo">
+      <p class="ta-ar" lang="ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
+      <p class="ta-en" lang="en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
+    </div>
+    <div>
+      <h3><span class="ta-ar" lang="ar">استكشف</span><span class="ta-en" lang="en">Explore</span></h3>
+      <a href="index.html">الرئيسية / Home</a>
+      <a href="about.html">عنّا / About</a>
+      <a href="troupe.html">الفرقة / Troupe</a>
+      <a href="productions.html">العروض / Productions</a>
+      <a href="academy.html">الأكاديمية / Academy</a>
+      <a href="cinema-school.html">مدرسة السينما / Cinema School</a>
+      <a href="incubator.html">الحاضنة / Incubator</a>
+      <a href="festival.html">المهرجان / Festival</a>
+      <a href="sahara.html">صحارة / Sahara</a>
+      <a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a>
+      <a href="partners.html">شركاؤنا / Partners</a>
+      <a href="contact.html">تواصل / Contact</a>
+    </div>
+    <div>
+      <h3><span class="ta-ar" lang="ar">أرشيف المهرجان</span><span class="ta-en" lang="en">Festival Archive</span></h3>
+      <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a>
+      <a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a>
+      <a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a>
+      <a href="festival-2027.html">2027 · الدورة الرابعة (قادمة) / 4th Edition (Upcoming)</a>
+      <a href="lumieres.html">Lumières / أضواء</a>
+    </div>
+    <div>
+      <h3><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Connect</span></h3>
+      <p>Minya, Egypt</p>
+      <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
+      <div class="ta-social">
+        <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.tiktok.com/@teatro.alsaeed" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </div>
+  <div class="ta-footer-bottom">
+    <span>© <span id="year"></span> Teatro Alsaeed</span>
+    <span class="ta-ar" lang="ar">من المنيا إلى العالم</span><span class="ta-en" lang="en">From Minya to the world</span>
+  </div>
+</footer>
+
+
+<script id="teatro-unified-script">
+(function(){
+  var d=document,b=d.body,root=d.documentElement,KEYS=['siteLang','teatroLang'];
+  var CLASSES=['english','site-en'];
+  if(b.hasAttribute('data-eng-class'))CLASSES.push('eng');
+  function stored(){
+    try{var q=new URLSearchParams(location.search).get('lang');if(q==='en'||q==='ar')return q;}catch(e){}
+    try{for(var i=0;i<KEYS.length;i++){var v=localStorage.getItem(KEYS[i]);if(v==='en'||v==='ar')return v;}}catch(e){}
+    return 'ar';
+  }
+  function apply(lang,save){
+    var en=lang==='en';
+    CLASSES.forEach(function(c){b.classList.toggle(c,en);});
+    root.lang=en?'en':'ar';root.dir=en?'ltr':'rtl';
+    var btn=d.getElementById('langBtn');
+    if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'التبديل إلى العربية':'Switch to English');}
+    if(save){try{KEYS.forEach(function(k){localStorage.setItem(k,lang);});}catch(e){}}
+    d.dispatchEvent(new CustomEvent('teatro:lang',{detail:{lang:lang}}));
+  }
+  window.TeatroLang={get:function(){return b.classList.contains('site-en')?'en':'ar';},set:function(l){apply(l==='en'?'en':'ar',true);}};
+
+  var nav=d.getElementById('navLinks'),menu=d.getElementById('menuBtn'),bar=d.getElementById('masterNav');
+  function closeMenu(){if(!nav)return;nav.classList.remove('open');if(menu){menu.setAttribute('aria-expanded','false');menu.textContent='\u2630';}}
+  d.addEventListener('click',function(e){
+    var t=e.target;if(!t.closest)return;
+    if(t.closest('#langBtn')){e.preventDefault();apply(b.classList.contains('site-en')?'ar':'en',true);return;}
+    if(t.closest('#menuBtn')&&nav){e.preventDefault();var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o?'true':'false');menu.textContent=o?'\u00d7':'\u2630';return;}
+    var dd=t.closest('.ta-dd-btn');
+    if(dd){e.preventDefault();var p=dd.parentNode,wasOpen=p.classList.contains('open');
+      d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');x.firstChild.setAttribute('aria-expanded','false');});
+      if(!wasOpen){p.classList.add('open');dd.setAttribute('aria-expanded','true');}return;}
+    if(t.closest('#navLinks a')){closeMenu();return;}
+    d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');});
+    if(nav&&nav.classList.contains('open')&&!t.closest('#masterNav'))closeMenu();
+  });
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');});}});
+
+  if(nav){
+    var cur=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    if(cur==='')cur='index.html';
+    nav.querySelectorAll('a[href]').forEach(function(a){
+      var h=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
+      if(h===cur||((cur.indexOf('festival-')===0||cur==='lumieres.html')&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
+    });
+  }
+  function navH(){if(bar)root.style.setProperty('--ta-nav-h',bar.offsetHeight+'px');}
+  navH();addEventListener('resize',navH);addEventListener('load',navH);
+  ['year','siteYear'].forEach(function(id){var y=d.getElementById(id);if(y)y.textContent=new Date().getFullYear();});
+  apply(stored(),false);
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تواصل معنا | Contact — Teatro Alsaeed</title>
+<meta name="description" content="تواصل مع تياترو الصعيد للتعاون والاستفسار عن البرامج والعروض والفعاليات والحجز.">
+<meta name="theme-color" content="#080909">
+<link rel="canonical" href="https://teatroalsaeed.org/contact.html">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="تياترو الصعيد | Teatro Alsaeed">
+<meta property="og:title" content="تواصل معنا | Contact — Teatro Alsaeed">
+<meta property="og:description" content="تواصل مع تياترو الصعيد للتعاون والاستفسار عن البرامج والعروض والفعاليات والحجز.">
+<meta property="og:url" content="https://teatroalsaeed.org/contact.html">
+<meta property="og:image" content="https://teatroalsaeed.org/logo.png">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="تواصل معنا | Contact — Teatro Alsaeed">
+<meta name="twitter:description" content="تواصل مع تياترو الصعيد للتعاون والاستفسار عن البرامج والعروض والفعاليات والحجز.">
+<meta name="twitter:image" content="https://teatroalsaeed.org/logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --accent:#2bb3b1;
+  --accent-2:#78e0d5;
+  --ink:#101313;
+  --muted:#707878;
+  --line:#e7ecec;
+  --paper:#f5f7f7;
+  --white:#fff;
+  --dark:#080b0b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Cairo,Arial,sans-serif;background:var(--paper);color:var(--ink);padding-top:74px;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+button,input,textarea{font:inherit}
+
+/* ===== GLOBAL NAV ===== */
+.ta-master-nav{position:fixed;top:0;left:0;right:0;z-index:99999;background:rgba(7,8,8,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.10);color:#fff;font-family:Inter,Cairo,Arial,sans-serif}
+.ta-nav-inner{max-width:1450px;min-height:74px;margin:auto;padding:8px 20px;display:flex;align-items:center;gap:16px}
+.ta-brand{display:flex;align-items:center;gap:9px;color:#fff;white-space:nowrap}
+.ta-brand img{width:42px;height:42px;object-fit:contain}
+.ta-brand span{display:flex;flex-direction:column;line-height:1.05}
+.ta-brand b{font-size:14px}.ta-brand small{font-size:8px;opacity:.55;letter-spacing:.7px;margin-top:4px}
+.ta-links{display:flex;align-items:center;justify-content:flex-end;gap:2px;flex:1}
+.ta-links a{color:#ddd;font-size:11px;padding:8px 6px;border-radius:7px;white-space:nowrap;transition:.25s}
+.ta-links a:hover,.ta-links a.active{color:var(--accent);background:rgba(43,179,177,.10)}
+.ta-lang,.ta-menu{border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;border-radius:8px;cursor:pointer}
+.ta-lang{padding:8px 11px;font-weight:800}.ta-menu{display:none;padding:7px 10px;font-size:21px}
+
+/* ===== HERO ===== */
+.contact-hero{position:relative;min-height:470px;display:flex;align-items:flex-end;overflow:hidden;background:#080b0b url('images/contact.jpg') center/cover no-repeat}
+.contact-hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(5,8,8,.20) 0%,rgba(5,8,8,.56) 52%,rgba(5,8,8,.94) 100%)}
+.contact-hero::after{content:"";position:absolute;width:420px;height:420px;border-radius:50%;border:1px solid rgba(120,224,213,.18);right:-130px;top:-160px;box-shadow:0 0 0 70px rgba(120,224,213,.025),0 0 0 140px rgba(120,224,213,.018)}
+.hero-content{position:relative;z-index:1;width:min(1180px,92%);margin:0 auto;padding:70px 0 62px;color:#fff}
+.hero-kicker{display:inline-flex;align-items:center;gap:9px;color:var(--accent-2);font:700 11px Inter,Cairo,sans-serif;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
+.hero-kicker::before{content:"";width:34px;height:2px;background:var(--accent)}
+.hero-title{font-size:clamp(42px,6vw,78px);line-height:1.02;font-weight:800;letter-spacing:-1.5px;margin-bottom:18px}
+.hero-title em{font-style:normal;color:var(--accent-2)}
+.hero-copy{max-width:650px;color:rgba(255,255,255,.76);font-size:16px;line-height:2}
+.hero-copy.en{font-family:Inter,Arial,sans-serif;line-height:1.8}
+
+/* ===== CONTACT AREA ===== */
+.contact-wrap{width:min(1180px,92%);margin:-28px auto 0;position:relative;z-index:2;padding-bottom:75px}
+.contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch}
+.card{background:rgba(255,255,255,.97);border:1px solid rgba(12,30,30,.08);border-radius:24px;box-shadow:0 24px 60px rgba(8,16,16,.10);overflow:hidden}
+.form-card{padding:34px}
+.card-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;margin-bottom:25px}
+.card-heading h2{font-size:25px;line-height:1.35;font-weight:800}
+.card-heading p{color:var(--muted);font-size:12px;line-height:1.8;margin-top:5px}
+.heading-mark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:#e8f8f6;color:#178b85;flex:none}
+.heading-mark svg{width:21px;height:21px}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:12px;font-weight:700;margin:0 0 7px;color:#404747}
+.field input,.field textarea{width:100%;border:1px solid #dfe6e6;background:#fbfcfc;border-radius:13px;padding:13px 15px;outline:none;transition:.2s;color:var(--ink)}
+.field input:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(43,179,177,.10);background:#fff}
+.field textarea{min-height:145px;resize:vertical}
+.send-btn{width:100%;border:0;border-radius:14px;padding:14px 18px;background:var(--dark);color:#fff;font-weight:800;cursor:pointer;transition:.25s;display:flex;justify-content:center;align-items:center;gap:10px}
+.send-btn:hover{background:#18302f;transform:translateY(-1px)}
+.send-btn span:last-child{color:var(--accent-2);font-size:12px;font-family:Inter,Arial,sans-serif}
+
+.info-card{padding:0;display:flex;flex-direction:column}
+.info-top{padding:34px 34px 22px}
+.info-list{display:grid;gap:12px;margin-top:18px}
+.info-item{display:grid;grid-template-columns:44px 1fr;gap:13px;align-items:center;padding:12px;border:1px solid var(--line);border-radius:15px;background:#fcfdfd}
+.info-icon{width:44px;height:44px;border-radius:13px;background:#edf9f7;color:#168e87;display:grid;place-items:center}
+.info-icon svg{width:20px;height:20px}
+.info-item small{display:block;color:#899191;font-size:10px;margin-bottom:2px}
+.info-item strong{display:block;font-size:13px;line-height:1.7;direction:ltr;text-align:right}
+.info-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:18px}
+.action{padding:10px 14px;border-radius:12px;font-size:12px;font-weight:800;transition:.2s}
+.action.map{background:#151a1a;color:#fff}.action.call{background:var(--accent);color:#fff}.action.whatsapp{background:#e9faf0;color:#168d54}.action:hover{transform:translateY(-2px)}
+.social-block{padding:23px 34px 30px;border-top:1px solid var(--line);margin-top:auto}
+.social-title{font-size:12px;font-weight:800;margin-bottom:12px}
+.socials{display:flex;gap:8px;flex-wrap:wrap}
+.socials a{padding:8px 12px;border:1px solid var(--line);border-radius:10px;color:#4b5353;font:600 11px Inter,Cairo,sans-serif;transition:.2s}
+.socials a:hover{border-color:var(--accent);color:#168e87;background:#f0fbfa}
+
+/* ===== MAP ===== */
+.map-section{margin-top:22px;background:#fff;border:1px solid rgba(12,30,30,.08);border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(8,16,16,.07)}
+.map-head{padding:22px 28px;display:flex;justify-content:space-between;align-items:center;gap:15px}
+.map-head h2{font-size:19px;font-weight:800}.map-head p{color:var(--muted);font-size:11px;margin-top:3px}
+.map-head .pin{color:#168e87;font-size:12px;font-weight:800}
+.map-frame{height:360px;background:#dfe6e5}.map-frame iframe{width:100%;height:100%;border:0;display:block;filter:saturate(.85)}
+
+/* ===== FOOTER ===== */
+.ta-master-footer{background:#090b0b;color:#fff;border-top:1px solid rgba(255,255,255,.10);padding:52px 22px 20px;font-family:Inter,Cairo,Arial,sans-serif}
+.ta-footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:1.2fr 1.5fr 1.2fr 1fr;gap:34px}
+.ta-footer-grid h3{font-size:13px;margin:0 0 13px}.ta-footer-grid p{color:#b7c0c0;font-size:12px;line-height:1.8;margin:7px 0}.ta-footer-grid a{display:block;color:#aab3b3;font-size:11px;margin:7px 0}.ta-footer-grid a:hover{color:var(--accent)}
+.ta-footer-logo{width:62px;height:62px;object-fit:contain;margin-bottom:10px}.ta-social{display:flex;gap:12px;flex-wrap:wrap}.ta-social a{display:inline-block!important}
+.ta-footer-bottom{max-width:1200px;margin:30px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;color:#777;font-size:10px}
+
+/* ===== LANGUAGE ===== */
+.ta-ar{display:inline}.ta-en{display:none;font-family:Inter,Cairo,Arial,sans-serif}
+body.site-en .ta-ar,body.english .ta-ar,body.site-en .ta-ar{display:none!important}
+body.site-en .ta-en,body.english .ta-en,body.site-en .ta-en{display:inline!important}
+.hero-content .ta-en{display:none}.hero-content .ta-ar{display:block}
+body.site-en .hero-content .ta-ar{display:none!important}body.site-en .hero-content .ta-en{display:block!important}
+body.site-en .hero-content{direction:ltr;text-align:left}.hero-content{direction:rtl;text-align:right}
+body.site-en .info-item strong{direction:ltr;text-align:left}
+
+@media(max-width:1050px){
+  .ta-links a{font-size:10px;padding:8px 4px}.ta-brand span{display:none}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  .ta-nav-inner{min-height:68px}.ta-menu{display:block}.ta-links{display:none;position:absolute;top:68px;left:0;right:0;background:#090b0b;padding:14px 6%;flex-direction:column;align-items:stretch;border-bottom:1px solid rgba(255,255,255,.10);max-height:calc(100vh - 68px);overflow:auto}.ta-links.open{display:flex}.ta-links a{font-size:13px;padding:10px 0}
+  .ta-footer-grid{grid-template-columns:1fr 1fr}.ta-footer-bottom{display:block}.ta-footer-bottom>*{display:block;margin-top:6px}
+}
+@media(max-width:600px){
+  body{padding-top:68px}.contact-hero{min-height:410px}.hero-content{padding:55px 0 50px}.hero-title{font-size:46px}.hero-copy{font-size:14px}
+  .contact-wrap{width:94%;margin-top:-20px}.form-card,.info-top{padding:25px}.social-block{padding:20px 25px 25px}.map-head{padding:18px 20px}.map-frame{height:300px}
+  .ta-footer-grid{grid-template-columns:1fr}.ta-master-footer{padding-inline:18px}
+}
+</style>
+<style id="teatro-extra-css">
+body{padding-top:var(--ta-nav-h,74px);overflow-x:clip}
+img{max-width:100%;height:auto}
+.ta-links a:focus-visible,.ta-lang:focus-visible,.ta-menu:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
+.ta-links a.active{color:#2bb3b1}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+.ta-dd{position:relative}
+.ta-dd-btn{background:none;border:0;color:#ddd;font:inherit;font-size:13px;padding:8px 10px;cursor:pointer;border-radius:7px;white-space:nowrap}
+.ta-dd-btn:after{content:"\25BE";margin-inline-start:5px;font-size:10px;opacity:.7}
+.ta-dd-btn:hover,.ta-dd.has-active>.ta-dd-btn,.ta-dd.open>.ta-dd-btn{color:#2bb3b1;background:rgba(43,179,177,.10)}
+.ta-dd-btn:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
+.ta-dd-menu{display:none;position:absolute;top:100%;inset-inline-start:0;min-width:220px;background:#0b0d0d;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:6px;flex-direction:column;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.ta-dd:hover>.ta-dd-menu,.ta-dd.open>.ta-dd-menu,.ta-dd:focus-within>.ta-dd-menu{display:flex}
+.ta-links a,.ta-dd-menu a{font-size:13px;padding:9px 12px}
+@media(min-width:901px) and (max-width:1180px){.ta-brand span{display:flex!important}}
+@media(max-width:900px){
+ .ta-dd{width:100%}
+ .ta-dd-btn{width:100%;text-align:start;padding:12px 0;font-size:13px;color:#fff;border-bottom:1px solid rgba(255,255,255,.08);border-radius:0}
+ .ta-dd-btn:after{display:none}
+ .ta-dd-menu{display:flex;position:static;border:0;background:transparent;box-shadow:none;padding:0 14px;min-width:0}
+ .ta-dd-menu a{padding:10px 0}
+}
+</style>
+</head>
+<body>
+
+<nav class="ta-master-nav" id="masterNav" aria-label="Main navigation">
+  <div class="ta-nav-inner">
+    <a class="ta-brand" href="index.html" aria-label="Teatro Alsaeed Home">
+      <img src="logo.png" alt="Teatro Alsaeed">
+      <span><b class="ta-ar" lang="ar">تياترو الصعيد</b><b class="ta-en" lang="en">Teatro Alsaeed</b><small class="ta-ar" lang="ar">إحياء وتطوير الفنون</small><small class="ta-en" lang="en">Reviving &amp; Developing the Arts</small></span>
+    </a>
+    <button class="ta-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
+    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
+    <button class="ta-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
+  </div>
+</nav>
+
+<header class="contact-hero">
+  <div class="hero-content">
+    <div class="hero-kicker">TEATRO ALSAEED · CONTACT</div>
+    <h1 class="hero-title ta-ar" lang="ar">خلّينا <em>نتواصل.</em></h1>
+    <h1 class="hero-title ta-en" lang="en">Let's <em>Connect.</em></h1>
+    <p class="hero-copy ta-ar" lang="ar">تواصل مع تياترو الصعيد للاستفسارات، الشراكات، البرامج الفنية، العروض، أو أي فكرة تحب تشاركنا بيها.</p>
+    <p class="hero-copy en ta-en" lang="en">Get in touch with Teatro Alsaeed for inquiries, partnerships, artistic programs, performances, or an idea you'd like to share.</p>
+  </div>
+</header>
+
+<main class="contact-wrap">
+  <section class="contact-grid">
+    <article class="card form-card">
+      <div class="card-heading">
+        <div>
+          <h2 class="ta-ar" lang="ar">أرسل لنا رسالة</h2>
+          <h2 class="ta-en" lang="en">Send us a message</h2>
+          <p class="ta-ar" lang="ar">سنكون سعداء بسماعك.</p>
+          <p class="ta-en" lang="en">We'd love to hear from you.</p>
+        </div>
+        <div class="heading-mark" aria-hidden="true">✦</div>
+      </div>
+      <form action="https://formspree.io/f/mdalwvzk" method="POST">
+        <div class="field">
+          <label class="ta-ar" for="name" lang="ar">الاسم</label><label class="ta-en" for="name" lang="en">Name</label>
+          <input id="name" type="text" name="name" placeholder="اكتب اسمك" required>
+        </div>
+        <div class="field">
+          <label class="ta-ar" for="email" lang="ar">البريد الإلكتروني</label><label class="ta-en" for="email" lang="en">Email</label>
+          <input id="email" type="email" name="email" placeholder="name@example.com" required>
+        </div>
+        <div class="field">
+          <label class="ta-ar" for="message" lang="ar">رسالتك</label><label class="ta-en" for="message" lang="en">Message</label>
+          <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+        </div>
+        <button class="send-btn" type="submit">
+          <span class="ta-ar" lang="ar">إرسال الرسالة</span><span class="ta-en" lang="en">Send Message</span>
+          <span>↗</span>
+        </button>
+      </form>
+    </article>
+
+    <article class="card info-card">
+      <div class="info-top">
+        <div class="card-heading">
+          <div>
+            <h2 class="ta-ar" lang="ar">بيانات التواصل</h2>
+            <h2 class="ta-en" lang="en">Contact Details</h2>
+            <p class="ta-ar" lang="ar">كل الطرق مفتوحة للوصول إلينا.</p>
+            <p class="ta-en" lang="en">Choose the way that works best for you.</p>
+          </div>
+          <div class="heading-mark" aria-hidden="true">⌖</div>
+        </div>
+
+        <div class="info-list">
+          <div class="info-item">
+            <div class="info-icon">⌖</div>
+            <div><small class="ta-ar" lang="ar">العنوان</small><small class="ta-en" lang="en">Address</small><strong class="ta-ar" lang="ar">128 عبد العال الجارحي، شارع الحسيني، المنيا، مصر</strong><strong class="ta-en" lang="en">128 Abdel Aal El Garhy, Al Hussiny St, Minya, Egypt</strong></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">☎</div>
+            <div><small class="ta-ar" lang="ar">الهاتف</small><small class="ta-en" lang="en">Phone</small><strong>+20 86 2094602</strong><strong>+20 10 68023167</strong><strong>+20 12 76156566</strong></div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">@</div>
+            <div><small class="ta-ar" lang="ar">البريد الإلكتروني</small><small class="ta-en" lang="en">Email</small><strong>teatroalsaeed.info@gmail.com</strong></div>
+          </div>
+        </div>
+
+        <div class="info-actions">
+          <a class="action map" href="https://maps.app.goo.gl/bDPLgYxHNR6SxohA9" target="_blank" rel="noopener"><span class="ta-ar" lang="ar">📍 الموقع</span><span class="ta-en" lang="en">📍 View Location</span></a>
+          <a class="action call" href="tel:+201068023167"><span class="ta-ar" lang="ar">📞 اتصال</span><span class="ta-en" lang="en">📞 Call Now</span></a>
+          <a class="action whatsapp" href="https://wa.me/201068023167" target="_blank" rel="noopener"><span class="ta-ar" lang="ar">💬 واتساب</span><span class="ta-en" lang="en">💬 WhatsApp</span></a>
+        </div>
+      </div>
+
+      <div class="social-block">
+        <div class="social-title ta-ar" lang="ar">تابع تياترو الصعيد</div>
+        <div class="social-title ta-en" lang="en">Follow Teatro Alsaeed</div>
+        <div class="socials">
+          <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://www.tiktok.com/@teatro.alsaeed" target="_blank" rel="noopener">TikTok</a>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="map-section">
+    <div class="map-head">
+      <div>
+        <h2 class="ta-ar" lang="ar">موقع تياترو الصعيد</h2><h2 class="ta-en" lang="en">Find Teatro Alsaeed</h2>
+        <p class="ta-ar" lang="ar">128 عبد العال الجارحي، شارع الحسيني، المنيا، مصر</p><p class="ta-en" lang="en">128 Abdel Aal El Garhy, Al Hussiny St, Minya, Egypt</p>
+      </div>
+      <span class="pin">MINYA · EGYPT</span>
+    </div>
+    <div class="map-frame"><iframe src="https://www.google.com/maps?q=Minya&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Teatro Alsaeed location map"></iframe></div>
+  </section>
+</main>
+
+<footer class="ta-master-footer">
+  <div class="ta-footer-grid">
+    <div>
+      <img src="logo.png" alt="Teatro Alsaeed" class="ta-footer-logo">
+      <p class="ta-ar" lang="ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
+      <p class="ta-en" lang="en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
+    </div>
+    <div>
+      <h3><span class="ta-ar" lang="ar">استكشف</span><span class="ta-en" lang="en">Explore</span></h3>
+      <a href="index.html">الرئيسية / Home</a><a href="about.html">عنّا / About</a><a href="troupe.html">الفرقة / Troupe</a><a href="productions.html">العروض / Productions</a><a href="academy.html">الأكاديمية / Academy</a><a href="cinema-school.html">مدرسة السينما / Cinema School</a><a href="incubator.html">الحاضنة / Incubator</a><a href="festival.html">المهرجان / Festival</a><a href="sahara.html">صحارة / Sahara</a><a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a><a href="partners.html">شركاؤنا / Partners</a><a href="contact.html">تواصل / Contact</a>
+    </div>
+    <div>
+      <h3><span class="ta-ar" lang="ar">أرشيف المهرجان</span><span class="ta-en" lang="en">Festival Archive</span></h3>
+      <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a><a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a><a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a><a href="festival-2027.html">2027 · الدورة الرابعة (قادمة) / 4th Edition (Upcoming)</a><a href="lumieres.html">Lumières / أضواء</a>
+    </div>
+    <div>
+      <h3><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Connect</span></h3>
+      <p>Minya, Egypt</p><a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
+      <div class="ta-social"><a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@teatro.alsaeed" target="_blank" rel="noopener">TikTok</a></div>
+    </div>
+  </div>
+  <div class="ta-footer-bottom"><span>© <span id="year"></span> Teatro Alsaeed</span><span class="ta-ar" lang="ar">من المنيا إلى العالم</span><span class="ta-en" lang="en">From Minya to the world</span></div>
+</footer>
+
+<script id="teatro-unified-script">
+(function(){
+  var d=document,b=d.body,root=d.documentElement,KEYS=['siteLang','teatroLang'];
+  var CLASSES=['english','site-en'];
+  if(b.hasAttribute('data-eng-class'))CLASSES.push('eng');
+  function stored(){
+    try{var q=new URLSearchParams(location.search).get('lang');if(q==='en'||q==='ar')return q;}catch(e){}
+    try{for(var i=0;i<KEYS.length;i++){var v=localStorage.getItem(KEYS[i]);if(v==='en'||v==='ar')return v;}}catch(e){}
+    return 'ar';
+  }
+  function apply(lang,save){
+    var en=lang==='en';
+    CLASSES.forEach(function(c){b.classList.toggle(c,en);});
+    root.lang=en?'en':'ar';root.dir=en?'ltr':'rtl';
+    var btn=d.getElementById('langBtn');
+    if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'التبديل إلى العربية':'Switch to English');}
+    if(save){try{KEYS.forEach(function(k){localStorage.setItem(k,lang);});}catch(e){}}
+    d.dispatchEvent(new CustomEvent('teatro:lang',{detail:{lang:lang}}));
+  }
+  window.TeatroLang={get:function(){return b.classList.contains('site-en')?'en':'ar';},set:function(l){apply(l==='en'?'en':'ar',true);}};
+
+  var nav=d.getElementById('navLinks'),menu=d.getElementById('menuBtn'),bar=d.getElementById('masterNav');
+  function closeMenu(){if(!nav)return;nav.classList.remove('open');if(menu){menu.setAttribute('aria-expanded','false');menu.textContent='\u2630';}}
+  d.addEventListener('click',function(e){
+    var t=e.target;if(!t.closest)return;
+    if(t.closest('#langBtn')){e.preventDefault();apply(b.classList.contains('site-en')?'ar':'en',true);return;}
+    if(t.closest('#menuBtn')&&nav){e.preventDefault();var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o?'true':'false');menu.textContent=o?'\u00d7':'\u2630';return;}
+    var dd=t.closest('.ta-dd-btn');
+    if(dd){e.preventDefault();var p=dd.parentNode,wasOpen=p.classList.contains('open');
+      d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');x.firstChild.setAttribute('aria-expanded','false');});
+      if(!wasOpen){p.classList.add('open');dd.setAttribute('aria-expanded','true');}return;}
+    if(t.closest('#navLinks a')){closeMenu();return;}
+    d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');});
+    if(nav&&nav.classList.contains('open')&&!t.closest('#masterNav'))closeMenu();
+  });
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');});}});
+
+  if(nav){
+    var cur=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    if(cur==='')cur='index.html';
+    nav.querySelectorAll('a[href]').forEach(function(a){
+      var h=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
+      if(h===cur||((cur.indexOf('festival-')===0||cur==='lumieres.html')&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
+    });
+  }
+  function navH(){if(bar)root.style.setProperty('--ta-nav-h',bar.offsetHeight+'px');}
+  navH();addEventListener('resize',navH);addEventListener('load',navH);
+  ['year','siteYear'].forEach(function(id){var y=d.getElementById(id);if(y)y.textContent=new Date().getFullYear();});
+  apply(stored(),false);
+})();
+</script>
+
+</body>
+</html>
