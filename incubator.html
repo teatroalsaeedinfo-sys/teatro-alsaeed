@@ -4,6 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>حاضنة تياترو الصعيد للفنون الأدائية | Teatro AlSaeed Performing Arts Incubator</title>
+<meta name="theme-color" content="#080909">
+<link rel="canonical" href="https://teatroalsaeed.org/incubator.html">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="تياترو الصعيد | Teatro Alsaeed">
+<meta property="og:title" content="حاضنة تياترو الصعيد للفنون الأدائية | Teatro AlSaeed Performing Arts Incubator">
+<meta property="og:description" content="حاضنة تياترو الصعيد للفنون الأدائية — برنامج لبناء قدرات الفنانين والفرق المسرحية في صعيد مصر.">
+<meta property="og:url" content="https://teatroalsaeed.org/incubator.html">
+<meta property="og:image" content="https://teatroalsaeed.org/logo.png">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="حاضنة تياترو الصعيد للفنون الأدائية | Teatro AlSaeed Performing Arts Incubator">
+<meta name="twitter:description" content="حاضنة تياترو الصعيد للفنون الأدائية — برنامج لبناء قدرات الفنانين والفرق المسرحية في صعيد مصر.">
+<meta name="twitter:image" content="https://teatroalsaeed.org/logo.png">
 <meta name="description" content="حاضنة تياترو الصعيد للفنون الأدائية — برنامج لبناء قدرات الفنانين والفرق المسرحية في صعيد مصر.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +29,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:#fff;color:var(--dark);font-family:Cairo,Inter,sans-serif}
-body.en{font-family:Inter,Cairo,sans-serif}
+body.site-en{font-family:Inter,Cairo,sans-serif}
 a{color:inherit;text-decoration:none}
 .container{width:min(1180px,92%);margin:auto}
 .topbar{position:sticky;top:0;z-index:100;background:rgba(8,9,9,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.08)}
@@ -63,10 +79,10 @@ h1{font-size:clamp(38px,6vw,72px);line-height:1.1;margin:0 0 20px;font-weight:80
 .footer b{color:#fff}
 .mobile{display:none}
 .en{display:none}
-body.en .ar{display:none!important}
-body.en .en{display:inline!important}
-body.en .hero-copy{order:1}
-body.en .hero-logo{order:2}
+body.site-en .ar{display:none!important}
+body.site-en .en{display:inline!important}
+body.site-en .hero-copy{order:1}
+body.site-en .hero-logo{order:2}
 @media(max-width:900px){
   .nav{min-height:64px}
   .navlinks{display:none;position:absolute;top:64px;left:0;right:0;background:#080909;padding:18px 4%;flex-direction:column;align-items:stretch}
@@ -105,11 +121,34 @@ body.en .hero-logo{order:2}
 .ta-footer-grid a{display:block;color:#aab3b3;text-decoration:none;font-size:11px;margin:7px 0}.ta-footer-grid a:hover{color:#2bb3b1}
 .ta-footer-logo{width:62px;height:62px;object-fit:contain;margin-bottom:10px}.ta-social{display:flex;gap:12px;flex-wrap:wrap}
 .ta-footer-bottom{max-width:1200px;margin:30px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;color:#777;font-size:10px}
-body.site-en .ta-ar,body.en .ta-ar,body.english .ta-ar{display:none!important}
-body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
+body.site-en .ta-ar,body.site-en .ta-ar,body.english .ta-ar{display:none!important}
+body.site-en .ta-en,body.site-en .ta-en,body.english .ta-en{display:inline!important}
 @media(max-width:1180px){.ta-links a{font-size:10px;padding:8px 4px}.ta-brand span{display:none}}
 @media(max-width:900px){.ta-nav-inner{min-height:68px}.ta-menu{display:block}.ta-links{display:none;position:absolute;top:68px;left:0;right:0;background:#090b0b;padding:14px 6%;flex-direction:column;align-items:stretch;border-bottom:1px solid rgba(255,255,255,.10);max-height:calc(100vh - 68px);overflow:auto}.ta-links.open{display:flex}.ta-links a{font-size:13px;padding:10px 0}.ta-footer-grid{grid-template-columns:1fr 1fr}.ta-footer-bottom{display:block}.ta-footer-bottom>*{display:block;margin-top:6px}}
 @media(max-width:560px){.ta-footer-grid{grid-template-columns:1fr}.ta-master-footer{padding-inline:18px}}
+
+body{padding-top:var(--ta-nav-h,74px);overflow-x:clip}
+img{max-width:100%;height:auto}
+.ta-links a:focus-visible,.ta-lang:focus-visible,.ta-menu:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
+.ta-links a.active{color:#2bb3b1}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+.ta-dd{position:relative}
+.ta-dd-btn{background:none;border:0;color:#ddd;font:inherit;font-size:13px;padding:8px 10px;cursor:pointer;border-radius:7px;white-space:nowrap}
+.ta-dd-btn:after{content:"\25BE";margin-inline-start:5px;font-size:10px;opacity:.7}
+.ta-dd-btn:hover,.ta-dd.has-active>.ta-dd-btn,.ta-dd.open>.ta-dd-btn{color:#2bb3b1;background:rgba(43,179,177,.10)}
+.ta-dd-btn:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
+.ta-dd-menu{display:none;position:absolute;top:100%;inset-inline-start:0;min-width:220px;background:#0b0d0d;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:6px;flex-direction:column;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.ta-dd:hover>.ta-dd-menu,.ta-dd.open>.ta-dd-menu,.ta-dd:focus-within>.ta-dd-menu{display:flex}
+.ta-links a,.ta-dd-menu a{font-size:13px;padding:9px 12px}
+@media(min-width:901px) and (max-width:1180px){.ta-brand span{display:flex!important}}
+@media(max-width:900px){
+ .ta-dd{width:100%}
+ .ta-dd-btn{width:100%;text-align:start;padding:12px 0;font-size:13px;color:#fff;border-bottom:1px solid rgba(255,255,255,.08);border-radius:0}
+ .ta-dd-btn:after{display:none}
+ .ta-dd-menu{display:flex;position:static;border:0;background:transparent;box-shadow:none;padding:0 14px;min-width:0}
+ .ta-dd-menu a{padding:10px 0}
+}
 </style>
 
 </head>
@@ -119,35 +158,13 @@ body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
   <div class="ta-nav-inner">
     <a class="ta-brand" href="index.html" aria-label="Teatro Alsaeed Home">
       <img src="logo.png" alt="Teatro Alsaeed">
-      <span><b class="ta-ar">تياترو الصعيد</b><b class="ta-en">Teatro Alsaeed</b><small class="ta-ar">إحياء وتطوير الفنون</small><small class="ta-en">Reviving &amp; Developing the Arts</small></span>
+      <span><b class="ta-ar" lang="ar">تياترو الصعيد</b><b class="ta-en" lang="en">Teatro Alsaeed</b><small class="ta-ar" lang="ar">إحياء وتطوير الفنون</small><small class="ta-en" lang="en">Reviving &amp; Developing the Arts</small></span>
     </a>
     <button class="ta-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
-    <nav class="ta-links" id="navLinks">
-      <a href="index.html"><span class="ta-ar">الرئيسية</span><span class="ta-en">Home</span></a>
-      <a href="about.html"><span class="ta-ar">عنّا</span><span class="ta-en">About</span></a>
-      <a href="troupe.html"><span class="ta-ar">الفرقة</span><span class="ta-en">Troupe</span></a>
-      <a href="productions.html"><span class="ta-ar">العروض</span><span class="ta-en">Productions</span></a>
-      <a href="academy.html"><span class="ta-ar">الأكاديمية</span><span class="ta-en">Academy</span></a>
-      <a href="cinema-school.html"><span class="ta-ar">مدرسة السينما</span><span class="ta-en">Cinema School</span></a>
-      <a href="incubator.html"><span class="ta-ar">الحاضنة</span><span class="ta-en">Incubator</span></a>
-      <a href="festival.html"><span class="ta-ar">المهرجان</span><span class="ta-en">Festival</span></a>
-      <a href="sahara.html"><span class="ta-ar">صحارة</span><span class="ta-en">Sahara</span></a>
-      <a href="basement-theatre.html"><span class="ta-ar">مسرح البدروم</span><span class="ta-en">Basement Theatre</span></a>
-      <a href="partners.html"><span class="ta-ar">شركاؤنا</span><span class="ta-en">Partners</span></a>
-      <a href="contact.html"><span class="ta-ar">تواصل</span><span class="ta-en">Contact</span></a>
-    </nav>
+    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
     <button class="ta-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
   </div>
 </nav>
-
-<header class="topbar">
-  <div class="container nav">
-    <a class="brand" href="index.html">Teatro <span>AlSaeed</span></a>
-    <button class="mobile" id="menuBtn" aria-label="Menu">☰</button>
-    
-    <button class="lang" id="langBtn">EN</button>
-  </div>
-</header>
 
 <main>
 <section class="hero">
@@ -155,9 +172,9 @@ body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
     <div class="hero-grid">
       <div class="hero-copy">
         <span class="eyebrow">TEATRO ALSAEED · PERFORMING ARTS INCUBATOR</span>
-        <h1><span class="ar">حاضنة تياترو الصعيد للفنون الأدائية</span><span class="en">Teatro AlSaeed Performing Arts Incubator</span></h1>
-        <p class="ar">مساحة لبناء قدرات الفنانين والفرق المسرحية، وتحويل التدريب إلى تجارب ومشروعات فنية قابلة للحياة.</p>
-        <p class="en">A space for building the capacities of artists and theatre teams, turning training into sustainable artistic experiences and projects.</p>
+        <h1><span class="ar" lang="ar">حاضنة تياترو الصعيد للفنون الأدائية</span><span class="en" lang="en">Teatro AlSaeed Performing Arts Incubator</span></h1>
+        <p class="ar" lang="ar">مساحة لبناء قدرات الفنانين والفرق المسرحية، وتحويل التدريب إلى تجارب ومشروعات فنية قابلة للحياة.</p>
+        <p class="en" lang="en">A space for building the capacities of artists and theatre teams, turning training into sustainable artistic experiences and projects.</p>
       </div>
       <div class="hero-logo"><img src="images/incubator/logo.webp" alt="شعار حاضنة تياترو الصعيد"></div>
     </div>
@@ -169,16 +186,16 @@ body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
   <div class="container">
     <div class="intro-grid">
       <div class="info">
-        <h3 class="ar">من التدريب إلى الإنتاج</h3>
-        <h3 class="en">From Training to Production</h3>
-        <p class="ar">تجمع الحاضنة بين التدريب المتخصص والعمل الجماعي والتطبيق العملي، بما يفتح الطريق أمام الفرق والمشاركين لإنتاج أعمال مسرحية.</p>
-        <p class="en">The incubator connects specialized training, collaboration and practice, creating a pathway from learning to theatre production.</p>
+        <h3 class="ar" lang="ar">من التدريب إلى الإنتاج</h3>
+        <h3 class="en" lang="en">From Training to Production</h3>
+        <p class="ar" lang="ar">تجمع الحاضنة بين التدريب المتخصص والعمل الجماعي والتطبيق العملي، بما يفتح الطريق أمام الفرق والمشاركين لإنتاج أعمال مسرحية.</p>
+        <p class="en" lang="en">The incubator connects specialized training, collaboration and practice, creating a pathway from learning to theatre production.</p>
       </div>
       <div class="info">
-        <h3 class="ar">رحلة الحاضنة</h3>
-        <h3 class="en">The Incubator Journey</h3>
-        <p class="ar">الإدارة الثقافية ← الإخراج ← السينوغرافيا ← جمع التمويلات ← الكتابة المسرحية ← التمثيل ← نتاج الحاضنة.</p>
-        <p class="en">Cultural Management → Directing → Scenography → Fundraising → Playwriting → Acting → Incubator Productions.</p>
+        <h3 class="ar" lang="ar">رحلة الحاضنة</h3>
+        <h3 class="en" lang="en">The Incubator Journey</h3>
+        <p class="ar" lang="ar">الإدارة الثقافية ← الإخراج ← السينوغرافيا ← جمع التمويلات ← الكتابة المسرحية ← التمثيل ← نتاج الحاضنة.</p>
+        <p class="en" lang="en">Cultural Management → Directing → Scenography → Fundraising → Playwriting → Acting → Incubator Productions.</p>
       </div>
     </div>
   </div>
@@ -189,168 +206,168 @@ body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
   <div class="section-head">
     <div>
       <span class="eyebrow">WORKSHOP 01</span>
-      <h2><span class="ar">الإدارة الثقافية</span><span class="en">Cultural Management</span></h2>
+      <h2><span class="ar" lang="ar">الإدارة الثقافية</span><span class="en" lang="en">Cultural Management</span></h2>
     </div>
-    <div class="count">27 <span class="ar">صورة</span><span class="en">photos</span></div>
+    <div class="count">27 <span class="ar" lang="ar">صورة</span><span class="en" lang="en">photos</span></div>
   </div>
-  <p class="lead ar">ورشة متخصصة في إدارة الفرق والمشروعات المسرحية، وشارك فيها مديرو وأعضاء الفرق المسرحية.</p>
-  <p class="lead en">A focused workshop on managing theatre teams and cultural projects, with theatre practitioners and team leaders.</p>
+  <p class="lead ar" lang="ar">ورشة متخصصة في إدارة الفرق والمشروعات المسرحية، وشارك فيها مديرو وأعضاء الفرق المسرحية.</p>
+  <p class="lead en" lang="en">A focused workshop on managing theatre teams and cultural projects, with theatre practitioners and team leaders.</p>
   <div class="meta"><span>المدربة الظاهرة في التوثيق: طاهرة طارق.</span></div>
-  <div class="gallery-label"><span class="ar">أرشيف الورشة</span><span class="en">Workshop archive</span></div>
-  <div class="gallery"><a class="photo" href="images/incubator/administration/administration-01.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-01.webp" alt="الإدارة الثقافية — 1"></a>
-<a class="photo" href="images/incubator/administration/administration-02.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-02.webp" alt="الإدارة الثقافية — 2"></a>
-<a class="photo" href="images/incubator/administration/administration-03.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-03.webp" alt="الإدارة الثقافية — 3"></a>
-<a class="photo" href="images/incubator/administration/administration-04.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-04.webp" alt="الإدارة الثقافية — 4"></a>
-<a class="photo" href="images/incubator/administration/administration-05.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-05.webp" alt="الإدارة الثقافية — 5"></a>
-<a class="photo" href="images/incubator/administration/administration-06.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-06.webp" alt="الإدارة الثقافية — 6"></a>
-<a class="photo" href="images/incubator/administration/administration-07.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-07.webp" alt="الإدارة الثقافية — 7"></a>
-<a class="photo" href="images/incubator/administration/administration-08.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-08.webp" alt="الإدارة الثقافية — 8"></a>
-<a class="photo" href="images/incubator/administration/administration-09.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-09.webp" alt="الإدارة الثقافية — 9"></a>
-<a class="photo" href="images/incubator/administration/administration-10.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-10.webp" alt="الإدارة الثقافية — 10"></a>
-<a class="photo" href="images/incubator/administration/administration-11.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-11.webp" alt="الإدارة الثقافية — 11"></a>
-<a class="photo" href="images/incubator/administration/administration-12.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-12.webp" alt="الإدارة الثقافية — 12"></a>
-<a class="photo" href="images/incubator/administration/administration-13.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-13.webp" alt="الإدارة الثقافية — 13"></a>
-<a class="photo" href="images/incubator/administration/administration-14.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-14.webp" alt="الإدارة الثقافية — 14"></a>
-<a class="photo" href="images/incubator/administration/administration-15.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-15.webp" alt="الإدارة الثقافية — 15"></a>
-<a class="photo" href="images/incubator/administration/administration-16.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-16.webp" alt="الإدارة الثقافية — 16"></a>
-<a class="photo" href="images/incubator/administration/administration-17.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-17.webp" alt="الإدارة الثقافية — 17"></a>
-<a class="photo" href="images/incubator/administration/administration-18.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-18.webp" alt="الإدارة الثقافية — 18"></a>
-<a class="photo" href="images/incubator/administration/administration-19.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-19.webp" alt="الإدارة الثقافية — 19"></a>
-<a class="photo" href="images/incubator/administration/administration-20.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-20.webp" alt="الإدارة الثقافية — 20"></a>
-<a class="photo" href="images/incubator/administration/administration-21.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-21.webp" alt="الإدارة الثقافية — 21"></a>
-<a class="photo" href="images/incubator/administration/administration-22.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-22.webp" alt="الإدارة الثقافية — 22"></a>
-<a class="photo" href="images/incubator/administration/administration-23.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-23.webp" alt="الإدارة الثقافية — 23"></a>
-<a class="photo" href="images/incubator/administration/administration-24.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-24.webp" alt="الإدارة الثقافية — 24"></a>
-<a class="photo" href="images/incubator/administration/administration-25.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-25.webp" alt="الإدارة الثقافية — 25"></a>
-<a class="photo" href="images/incubator/administration/administration-26.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-26.webp" alt="الإدارة الثقافية — 26"></a>
-<a class="photo" href="images/incubator/administration/administration-27.webp" target="_blank"><img loading="lazy" src="images/incubator/administration/administration-27.webp" alt="الإدارة الثقافية — 27"></a></div>
+  <div class="gallery-label"><span class="ar" lang="ar">أرشيف الورشة</span><span class="en" lang="en">Workshop archive</span></div>
+  <div class="gallery"><a class="photo" href="images/incubator/administration/administration-01.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-01.webp" alt="الإدارة الثقافية — 1"></a>
+<a class="photo" href="images/incubator/administration/administration-02.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-02.webp" alt="الإدارة الثقافية — 2"></a>
+<a class="photo" href="images/incubator/administration/administration-03.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-03.webp" alt="الإدارة الثقافية — 3"></a>
+<a class="photo" href="images/incubator/administration/administration-04.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-04.webp" alt="الإدارة الثقافية — 4"></a>
+<a class="photo" href="images/incubator/administration/administration-05.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-05.webp" alt="الإدارة الثقافية — 5"></a>
+<a class="photo" href="images/incubator/administration/administration-06.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-06.webp" alt="الإدارة الثقافية — 6"></a>
+<a class="photo" href="images/incubator/administration/administration-07.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-07.webp" alt="الإدارة الثقافية — 7"></a>
+<a class="photo" href="images/incubator/administration/administration-08.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-08.webp" alt="الإدارة الثقافية — 8"></a>
+<a class="photo" href="images/incubator/administration/administration-09.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-09.webp" alt="الإدارة الثقافية — 9"></a>
+<a class="photo" href="images/incubator/administration/administration-10.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-10.webp" alt="الإدارة الثقافية — 10"></a>
+<a class="photo" href="images/incubator/administration/administration-11.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-11.webp" alt="الإدارة الثقافية — 11"></a>
+<a class="photo" href="images/incubator/administration/administration-12.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-12.webp" alt="الإدارة الثقافية — 12"></a>
+<a class="photo" href="images/incubator/administration/administration-13.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-13.webp" alt="الإدارة الثقافية — 13"></a>
+<a class="photo" href="images/incubator/administration/administration-14.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-14.webp" alt="الإدارة الثقافية — 14"></a>
+<a class="photo" href="images/incubator/administration/administration-15.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-15.webp" alt="الإدارة الثقافية — 15"></a>
+<a class="photo" href="images/incubator/administration/administration-16.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-16.webp" alt="الإدارة الثقافية — 16"></a>
+<a class="photo" href="images/incubator/administration/administration-17.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-17.webp" alt="الإدارة الثقافية — 17"></a>
+<a class="photo" href="images/incubator/administration/administration-18.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-18.webp" alt="الإدارة الثقافية — 18"></a>
+<a class="photo" href="images/incubator/administration/administration-19.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-19.webp" alt="الإدارة الثقافية — 19"></a>
+<a class="photo" href="images/incubator/administration/administration-20.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-20.webp" alt="الإدارة الثقافية — 20"></a>
+<a class="photo" href="images/incubator/administration/administration-21.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-21.webp" alt="الإدارة الثقافية — 21"></a>
+<a class="photo" href="images/incubator/administration/administration-22.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-22.webp" alt="الإدارة الثقافية — 22"></a>
+<a class="photo" href="images/incubator/administration/administration-23.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-23.webp" alt="الإدارة الثقافية — 23"></a>
+<a class="photo" href="images/incubator/administration/administration-24.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-24.webp" alt="الإدارة الثقافية — 24"></a>
+<a class="photo" href="images/incubator/administration/administration-25.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-25.webp" alt="الإدارة الثقافية — 25"></a>
+<a class="photo" href="images/incubator/administration/administration-26.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-26.webp" alt="الإدارة الثقافية — 26"></a>
+<a class="photo" href="images/incubator/administration/administration-27.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/administration/administration-27.webp" alt="الإدارة الثقافية — 27"></a></div>
 </section>
 
 <section class="workshop" id="directing">
   <div class="section-head">
     <div>
       <span class="eyebrow">WORKSHOP 02</span>
-      <h2><span class="ar">الإخراج المسرحي</span><span class="en">Theatre Directing</span></h2>
+      <h2><span class="ar" lang="ar">الإخراج المسرحي</span><span class="en" lang="en">Theatre Directing</span></h2>
     </div>
-    <div class="count">20 <span class="ar">صورة</span><span class="en">photos</span></div>
+    <div class="count">20 <span class="ar" lang="ar">صورة</span><span class="en" lang="en">photos</span></div>
   </div>
-  <p class="lead ar">سلسلة جلسات عملية حول الرؤية الإخراجية وإدارة الممثلين وبناء المشهد والعمل الجماعي.</p>
-  <p class="lead en">A practical series exploring directing vision, actor direction, scene building and collaborative rehearsal.</p>
+  <p class="lead ar" lang="ar">سلسلة جلسات عملية حول الرؤية الإخراجية وإدارة الممثلين وبناء المشهد والعمل الجماعي.</p>
+  <p class="lead en" lang="en">A practical series exploring directing vision, actor direction, scene building and collaborative rehearsal.</p>
   <div class="meta"><span>يتضمن التوثيق جلسات مع الفنانة عبير لطفي.</span></div>
-  <div class="gallery-label"><span class="ar">أرشيف الورشة</span><span class="en">Workshop archive</span></div>
-  <div class="gallery"><a class="photo" href="images/incubator/directing/directing-01.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-01.webp" alt="الإخراج المسرحي — 1"></a>
-<a class="photo" href="images/incubator/directing/directing-02.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-02.webp" alt="الإخراج المسرحي — 2"></a>
-<a class="photo" href="images/incubator/directing/directing-03.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-03.webp" alt="الإخراج المسرحي — 3"></a>
-<a class="photo" href="images/incubator/directing/directing-04.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-04.webp" alt="الإخراج المسرحي — 4"></a>
-<a class="photo" href="images/incubator/directing/directing-05.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-05.webp" alt="الإخراج المسرحي — 5"></a>
-<a class="photo" href="images/incubator/directing/directing-06.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-06.webp" alt="الإخراج المسرحي — 6"></a>
-<a class="photo" href="images/incubator/directing/directing-07.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-07.webp" alt="الإخراج المسرحي — 7"></a>
-<a class="photo" href="images/incubator/directing/directing-08.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-08.webp" alt="الإخراج المسرحي — 8"></a>
-<a class="photo" href="images/incubator/directing/directing-09.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-09.webp" alt="الإخراج المسرحي — 9"></a>
-<a class="photo" href="images/incubator/directing/directing-10.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-10.webp" alt="الإخراج المسرحي — 10"></a>
-<a class="photo" href="images/incubator/directing/directing-11.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-11.webp" alt="الإخراج المسرحي — 11"></a>
-<a class="photo" href="images/incubator/directing/directing-12.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-12.webp" alt="الإخراج المسرحي — 12"></a>
-<a class="photo" href="images/incubator/directing/directing-13.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-13.webp" alt="الإخراج المسرحي — 13"></a>
-<a class="photo" href="images/incubator/directing/directing-14.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-14.webp" alt="الإخراج المسرحي — 14"></a>
-<a class="photo" href="images/incubator/directing/directing-15.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-15.webp" alt="الإخراج المسرحي — 15"></a>
-<a class="photo" href="images/incubator/directing/directing-16.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-16.webp" alt="الإخراج المسرحي — 16"></a>
-<a class="photo" href="images/incubator/directing/directing-17.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-17.webp" alt="الإخراج المسرحي — 17"></a>
-<a class="photo" href="images/incubator/directing/directing-18.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-18.webp" alt="الإخراج المسرحي — 18"></a>
-<a class="photo" href="images/incubator/directing/directing-19.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-19.webp" alt="الإخراج المسرحي — 19"></a>
-<a class="photo" href="images/incubator/directing/directing-20.webp" target="_blank"><img loading="lazy" src="images/incubator/directing/directing-20.webp" alt="الإخراج المسرحي — 20"></a></div>
+  <div class="gallery-label"><span class="ar" lang="ar">أرشيف الورشة</span><span class="en" lang="en">Workshop archive</span></div>
+  <div class="gallery"><a class="photo" href="images/incubator/directing/directing-01.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-01.webp" alt="الإخراج المسرحي — 1"></a>
+<a class="photo" href="images/incubator/directing/directing-02.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-02.webp" alt="الإخراج المسرحي — 2"></a>
+<a class="photo" href="images/incubator/directing/directing-03.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-03.webp" alt="الإخراج المسرحي — 3"></a>
+<a class="photo" href="images/incubator/directing/directing-04.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-04.webp" alt="الإخراج المسرحي — 4"></a>
+<a class="photo" href="images/incubator/directing/directing-05.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-05.webp" alt="الإخراج المسرحي — 5"></a>
+<a class="photo" href="images/incubator/directing/directing-06.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-06.webp" alt="الإخراج المسرحي — 6"></a>
+<a class="photo" href="images/incubator/directing/directing-07.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-07.webp" alt="الإخراج المسرحي — 7"></a>
+<a class="photo" href="images/incubator/directing/directing-08.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-08.webp" alt="الإخراج المسرحي — 8"></a>
+<a class="photo" href="images/incubator/directing/directing-09.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-09.webp" alt="الإخراج المسرحي — 9"></a>
+<a class="photo" href="images/incubator/directing/directing-10.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-10.webp" alt="الإخراج المسرحي — 10"></a>
+<a class="photo" href="images/incubator/directing/directing-11.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-11.webp" alt="الإخراج المسرحي — 11"></a>
+<a class="photo" href="images/incubator/directing/directing-12.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-12.webp" alt="الإخراج المسرحي — 12"></a>
+<a class="photo" href="images/incubator/directing/directing-13.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-13.webp" alt="الإخراج المسرحي — 13"></a>
+<a class="photo" href="images/incubator/directing/directing-14.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-14.webp" alt="الإخراج المسرحي — 14"></a>
+<a class="photo" href="images/incubator/directing/directing-15.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-15.webp" alt="الإخراج المسرحي — 15"></a>
+<a class="photo" href="images/incubator/directing/directing-16.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-16.webp" alt="الإخراج المسرحي — 16"></a>
+<a class="photo" href="images/incubator/directing/directing-17.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-17.webp" alt="الإخراج المسرحي — 17"></a>
+<a class="photo" href="images/incubator/directing/directing-18.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-18.webp" alt="الإخراج المسرحي — 18"></a>
+<a class="photo" href="images/incubator/directing/directing-19.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-19.webp" alt="الإخراج المسرحي — 19"></a>
+<a class="photo" href="images/incubator/directing/directing-20.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/directing/directing-20.webp" alt="الإخراج المسرحي — 20"></a></div>
 </section>
 
 <section class="workshop" id="scenography">
   <div class="section-head">
     <div>
       <span class="eyebrow">WORKSHOP 03</span>
-      <h2><span class="ar">السينوغرافيا</span><span class="en">Scenography</span></h2>
+      <h2><span class="ar" lang="ar">السينوغرافيا</span><span class="en" lang="en">Scenography</span></h2>
     </div>
-    <div class="count">8 <span class="ar">صورة</span><span class="en">photos</span></div>
+    <div class="count">8 <span class="ar" lang="ar">صورة</span><span class="en" lang="en">photos</span></div>
   </div>
-  <p class="lead ar">ورشة تهتم بتكوين الصورة المسرحية، والفضاء، والعناصر البصرية، وكيف تتحول الفكرة إلى لغة على الخشبة.</p>
-  <p class="lead en">A workshop focused on theatrical image-making, space, visual elements and translating ideas into stage language.</p>
+  <p class="lead ar" lang="ar">ورشة تهتم بتكوين الصورة المسرحية، والفضاء، والعناصر البصرية، وكيف تتحول الفكرة إلى لغة على الخشبة.</p>
+  <p class="lead en" lang="en">A workshop focused on theatrical image-making, space, visual elements and translating ideas into stage language.</p>
   <div class="meta"><span>يتضمن التوثيق جلسات مع الفنان أبو بكر الشريف.</span></div>
-  <div class="gallery-label"><span class="ar">أرشيف الورشة</span><span class="en">Workshop archive</span></div>
-  <div class="gallery"><a class="photo" href="images/incubator/scenography/scenography-01.webp" target="_blank"><img loading="lazy" src="images/incubator/scenography/scenography-01.webp" alt="السينوغرافيا — 1"></a>
-<a class="photo" href="images/incubator/scenography/scenography-02.webp" target="_blank"><img loading="lazy" src="images/incubator/scenography/scenography-02.webp" alt="السينوغرافيا — 2"></a>
-<a class="photo" href="images/incubator/scenography/scenography-03.webp" target="_blank"><img loading="lazy" src="images/incubator/scenography/scenography-03.webp" alt="السينوغرافيا — 3"></a>
-<a class="photo" href="images/incubator/scenography/scenography-04.webp" target="_blank"><img loading="lazy" src="images/incubator/scenography/scenography-04.webp" alt="السينوغرافيا — 4"></a>
-<a class="photo" href="images/incubator/scenography/scenography-05.webp" target="_blank"><img loading="lazy" src="images/incubator/scenography/scenography-05.webp" alt="السينوغرافيا — 5"></a>
-<a class="photo" href="images/incubator/scenography/scenography-06.webp" target="_blank"><img loading="lazy" src="images/incubator/scenography/scenography-06.webp" alt="السينوغرافيا — 6"></a>
-<a class="photo" href="images/incubator/scenography/scenography-07.webp" target="_blank"><img loading="lazy" src="images/incubator/scenography/scenography-07.webp" alt="السينوغرافيا — 7"></a>
-<a class="photo" href="images/incubator/scenography/scenography-08.webp" target="_blank"><img loading="lazy" src="images/incubator/scenography/scenography-08.webp" alt="السينوغرافيا — 8"></a></div>
+  <div class="gallery-label"><span class="ar" lang="ar">أرشيف الورشة</span><span class="en" lang="en">Workshop archive</span></div>
+  <div class="gallery"><a class="photo" href="images/incubator/scenography/scenography-01.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/scenography/scenography-01.webp" alt="السينوغرافيا — 1"></a>
+<a class="photo" href="images/incubator/scenography/scenography-02.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/scenography/scenography-02.webp" alt="السينوغرافيا — 2"></a>
+<a class="photo" href="images/incubator/scenography/scenography-03.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/scenography/scenography-03.webp" alt="السينوغرافيا — 3"></a>
+<a class="photo" href="images/incubator/scenography/scenography-04.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/scenography/scenography-04.webp" alt="السينوغرافيا — 4"></a>
+<a class="photo" href="images/incubator/scenography/scenography-05.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/scenography/scenography-05.webp" alt="السينوغرافيا — 5"></a>
+<a class="photo" href="images/incubator/scenography/scenography-06.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/scenography/scenography-06.webp" alt="السينوغرافيا — 6"></a>
+<a class="photo" href="images/incubator/scenography/scenography-07.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/scenography/scenography-07.webp" alt="السينوغرافيا — 7"></a>
+<a class="photo" href="images/incubator/scenography/scenography-08.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/scenography/scenography-08.webp" alt="السينوغرافيا — 8"></a></div>
 </section>
 
 <section class="workshop" id="fundraising">
   <div class="section-head">
     <div>
       <span class="eyebrow">WORKSHOP 04</span>
-      <h2><span class="ar">جمع التمويلات</span><span class="en">Fundraising</span></h2>
+      <h2><span class="ar" lang="ar">جمع التمويلات</span><span class="en" lang="en">Fundraising</span></h2>
     </div>
-    <div class="count">7 <span class="ar">صورة</span><span class="en">photos</span></div>
+    <div class="count">7 <span class="ar" lang="ar">صورة</span><span class="en" lang="en">photos</span></div>
   </div>
-  <p class="lead ar">ورشة تركز على فهم فرص التمويل، إعداد الأفكار والتقديم، وبناء القدرة على تطوير المشروعات الثقافية.</p>
-  <p class="lead en">A workshop focused on funding opportunities, proposal thinking, applications and strengthening cultural project development.</p>
+  <p class="lead ar" lang="ar">ورشة تركز على فهم فرص التمويل، إعداد الأفكار والتقديم، وبناء القدرة على تطوير المشروعات الثقافية.</p>
+  <p class="lead en" lang="en">A workshop focused on funding opportunities, proposal thinking, applications and strengthening cultural project development.</p>
   <div class="meta"><span>المدرب الظاهر في التوثيق: مصطفى محمد.</span></div>
-  <div class="gallery-label"><span class="ar">أرشيف الورشة</span><span class="en">Workshop archive</span></div>
-  <div class="gallery"><a class="photo" href="images/incubator/fundraising/fundraising-01.webp" target="_blank"><img loading="lazy" src="images/incubator/fundraising/fundraising-01.webp" alt="جمع التمويلات — 1"></a>
-<a class="photo" href="images/incubator/fundraising/fundraising-02.webp" target="_blank"><img loading="lazy" src="images/incubator/fundraising/fundraising-02.webp" alt="جمع التمويلات — 2"></a>
-<a class="photo" href="images/incubator/fundraising/fundraising-03.webp" target="_blank"><img loading="lazy" src="images/incubator/fundraising/fundraising-03.webp" alt="جمع التمويلات — 3"></a>
-<a class="photo" href="images/incubator/fundraising/fundraising-04.webp" target="_blank"><img loading="lazy" src="images/incubator/fundraising/fundraising-04.webp" alt="جمع التمويلات — 4"></a>
-<a class="photo" href="images/incubator/fundraising/fundraising-05.webp" target="_blank"><img loading="lazy" src="images/incubator/fundraising/fundraising-05.webp" alt="جمع التمويلات — 5"></a>
-<a class="photo" href="images/incubator/fundraising/fundraising-06.webp" target="_blank"><img loading="lazy" src="images/incubator/fundraising/fundraising-06.webp" alt="جمع التمويلات — 6"></a>
-<a class="photo" href="images/incubator/fundraising/fundraising-07.webp" target="_blank"><img loading="lazy" src="images/incubator/fundraising/fundraising-07.webp" alt="جمع التمويلات — 7"></a></div>
+  <div class="gallery-label"><span class="ar" lang="ar">أرشيف الورشة</span><span class="en" lang="en">Workshop archive</span></div>
+  <div class="gallery"><a class="photo" href="images/incubator/fundraising/fundraising-01.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/fundraising/fundraising-01.webp" alt="جمع التمويلات — 1"></a>
+<a class="photo" href="images/incubator/fundraising/fundraising-02.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/fundraising/fundraising-02.webp" alt="جمع التمويلات — 2"></a>
+<a class="photo" href="images/incubator/fundraising/fundraising-03.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/fundraising/fundraising-03.webp" alt="جمع التمويلات — 3"></a>
+<a class="photo" href="images/incubator/fundraising/fundraising-04.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/fundraising/fundraising-04.webp" alt="جمع التمويلات — 4"></a>
+<a class="photo" href="images/incubator/fundraising/fundraising-05.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/fundraising/fundraising-05.webp" alt="جمع التمويلات — 5"></a>
+<a class="photo" href="images/incubator/fundraising/fundraising-06.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/fundraising/fundraising-06.webp" alt="جمع التمويلات — 6"></a>
+<a class="photo" href="images/incubator/fundraising/fundraising-07.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/fundraising/fundraising-07.webp" alt="جمع التمويلات — 7"></a></div>
 </section>
 
 <section class="workshop" id="writing">
   <div class="section-head">
     <div>
       <span class="eyebrow">WORKSHOP 05</span>
-      <h2><span class="ar">الكتابة المسرحية</span><span class="en">Playwriting</span></h2>
+      <h2><span class="ar" lang="ar">الكتابة المسرحية</span><span class="en" lang="en">Playwriting</span></h2>
     </div>
-    <div class="count">2 <span class="ar">صورة</span><span class="en">photos</span></div>
+    <div class="count">2 <span class="ar" lang="ar">صورة</span><span class="en" lang="en">photos</span></div>
   </div>
-  <p class="lead ar">ورشة للكتابة المسرحية وتطوير الأفكار والنصوص من خلال التدريب والنقاش والتطبيق.</p>
-  <p class="lead en">A playwriting workshop focused on developing ideas and theatrical texts through training, discussion and practice.</p>
+  <p class="lead ar" lang="ar">ورشة للكتابة المسرحية وتطوير الأفكار والنصوص من خلال التدريب والنقاش والتطبيق.</p>
+  <p class="lead en" lang="en">A playwriting workshop focused on developing ideas and theatrical texts through training, discussion and practice.</p>
   <div class="meta"><span>المدرب الظاهر في التوثيق: الفنان محمود جمال حبيبي.</span></div>
-  <div class="gallery-label"><span class="ar">أرشيف الورشة</span><span class="en">Workshop archive</span></div>
-  <div class="gallery"><a class="photo" href="images/incubator/writing/writing-01.webp" target="_blank"><img loading="lazy" src="images/incubator/writing/writing-01.webp" alt="الكتابة المسرحية — 1"></a>
-<a class="photo" href="images/incubator/writing/writing-02.webp" target="_blank"><img loading="lazy" src="images/incubator/writing/writing-02.webp" alt="الكتابة المسرحية — 2"></a></div>
+  <div class="gallery-label"><span class="ar" lang="ar">أرشيف الورشة</span><span class="en" lang="en">Workshop archive</span></div>
+  <div class="gallery"><a class="photo" href="images/incubator/writing/writing-01.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/writing/writing-01.webp" alt="الكتابة المسرحية — 1"></a>
+<a class="photo" href="images/incubator/writing/writing-02.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/writing/writing-02.webp" alt="الكتابة المسرحية — 2"></a></div>
 </section>
 
 <section class="workshop" id="acting">
   <div class="section-head">
     <div>
       <span class="eyebrow">WORKSHOP 06</span>
-      <h2><span class="ar">التمثيل</span><span class="en">Acting</span></h2>
+      <h2><span class="ar" lang="ar">التمثيل</span><span class="en" lang="en">Acting</span></h2>
     </div>
-    <div class="count">20 <span class="ar">صورة</span><span class="en">photos</span></div>
+    <div class="count">20 <span class="ar" lang="ar">صورة</span><span class="en" lang="en">photos</span></div>
   </div>
-  <p class="lead ar">ورشة عملية في إعداد الممثل، الحضور، الحركة، التفاعل، والارتجال، مع تطبيقات داخل مساحة المسرح.</p>
-  <p class="lead en">A practical acting workshop covering presence, movement, interaction, improvisation and rehearsal work in the theatre space.</p>
+  <p class="lead ar" lang="ar">ورشة عملية في إعداد الممثل، الحضور، الحركة، التفاعل، والارتجال، مع تطبيقات داخل مساحة المسرح.</p>
+  <p class="lead en" lang="en">A practical acting workshop covering presence, movement, interaction, improvisation and rehearsal work in the theatre space.</p>
   <div class="meta"><span>المدرب الظاهر في التوثيق: الفنان كيرو طابر.</span></div>
-  <div class="gallery-label"><span class="ar">أرشيف الورشة</span><span class="en">Workshop archive</span></div>
-  <div class="gallery"><a class="photo" href="images/incubator/acting/acting-01.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-01.webp" alt="التمثيل — 1"></a>
-<a class="photo" href="images/incubator/acting/acting-02.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-02.webp" alt="التمثيل — 2"></a>
-<a class="photo" href="images/incubator/acting/acting-03.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-03.webp" alt="التمثيل — 3"></a>
-<a class="photo" href="images/incubator/acting/acting-04.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-04.webp" alt="التمثيل — 4"></a>
-<a class="photo" href="images/incubator/acting/acting-05.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-05.webp" alt="التمثيل — 5"></a>
-<a class="photo" href="images/incubator/acting/acting-06.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-06.webp" alt="التمثيل — 6"></a>
-<a class="photo" href="images/incubator/acting/acting-07.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-07.webp" alt="التمثيل — 7"></a>
-<a class="photo" href="images/incubator/acting/acting-08.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-08.webp" alt="التمثيل — 8"></a>
-<a class="photo" href="images/incubator/acting/acting-09.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-09.webp" alt="التمثيل — 9"></a>
-<a class="photo" href="images/incubator/acting/acting-10.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-10.webp" alt="التمثيل — 10"></a>
-<a class="photo" href="images/incubator/acting/acting-11.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-11.webp" alt="التمثيل — 11"></a>
-<a class="photo" href="images/incubator/acting/acting-12.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-12.webp" alt="التمثيل — 12"></a>
-<a class="photo" href="images/incubator/acting/acting-13.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-13.webp" alt="التمثيل — 13"></a>
-<a class="photo" href="images/incubator/acting/acting-14.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-14.webp" alt="التمثيل — 14"></a>
-<a class="photo" href="images/incubator/acting/acting-15.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-15.webp" alt="التمثيل — 15"></a>
-<a class="photo" href="images/incubator/acting/acting-16.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-16.webp" alt="التمثيل — 16"></a>
-<a class="photo" href="images/incubator/acting/acting-17.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-17.webp" alt="التمثيل — 17"></a>
-<a class="photo" href="images/incubator/acting/acting-18.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-18.webp" alt="التمثيل — 18"></a>
-<a class="photo" href="images/incubator/acting/acting-19.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-19.webp" alt="التمثيل — 19"></a>
-<a class="photo" href="images/incubator/acting/acting-20.webp" target="_blank"><img loading="lazy" src="images/incubator/acting/acting-20.webp" alt="التمثيل — 20"></a></div>
+  <div class="gallery-label"><span class="ar" lang="ar">أرشيف الورشة</span><span class="en" lang="en">Workshop archive</span></div>
+  <div class="gallery"><a class="photo" href="images/incubator/acting/acting-01.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-01.webp" alt="التمثيل — 1"></a>
+<a class="photo" href="images/incubator/acting/acting-02.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-02.webp" alt="التمثيل — 2"></a>
+<a class="photo" href="images/incubator/acting/acting-03.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-03.webp" alt="التمثيل — 3"></a>
+<a class="photo" href="images/incubator/acting/acting-04.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-04.webp" alt="التمثيل — 4"></a>
+<a class="photo" href="images/incubator/acting/acting-05.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-05.webp" alt="التمثيل — 5"></a>
+<a class="photo" href="images/incubator/acting/acting-06.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-06.webp" alt="التمثيل — 6"></a>
+<a class="photo" href="images/incubator/acting/acting-07.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-07.webp" alt="التمثيل — 7"></a>
+<a class="photo" href="images/incubator/acting/acting-08.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-08.webp" alt="التمثيل — 8"></a>
+<a class="photo" href="images/incubator/acting/acting-09.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-09.webp" alt="التمثيل — 9"></a>
+<a class="photo" href="images/incubator/acting/acting-10.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-10.webp" alt="التمثيل — 10"></a>
+<a class="photo" href="images/incubator/acting/acting-11.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-11.webp" alt="التمثيل — 11"></a>
+<a class="photo" href="images/incubator/acting/acting-12.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-12.webp" alt="التمثيل — 12"></a>
+<a class="photo" href="images/incubator/acting/acting-13.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-13.webp" alt="التمثيل — 13"></a>
+<a class="photo" href="images/incubator/acting/acting-14.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-14.webp" alt="التمثيل — 14"></a>
+<a class="photo" href="images/incubator/acting/acting-15.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-15.webp" alt="التمثيل — 15"></a>
+<a class="photo" href="images/incubator/acting/acting-16.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-16.webp" alt="التمثيل — 16"></a>
+<a class="photo" href="images/incubator/acting/acting-17.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-17.webp" alt="التمثيل — 17"></a>
+<a class="photo" href="images/incubator/acting/acting-18.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-18.webp" alt="التمثيل — 18"></a>
+<a class="photo" href="images/incubator/acting/acting-19.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-19.webp" alt="التمثيل — 19"></a>
+<a class="photo" href="images/incubator/acting/acting-20.webp" target="_blank"><img decoding="async" loading="lazy" src="images/incubator/acting/acting-20.webp" alt="التمثيل — 20"></a></div>
 </section>
 
 
@@ -358,11 +375,11 @@ body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
   <div class="container">
     <span class="eyebrow">INCUBATOR PRODUCTIONS</span>
     <h2 style="font-size:clamp(34px,5vw,58px);margin:0 0 12px">
-      <span class="ar">نتاج الحاضنة</span><span class="en">Incubator Productions</span>
+      <span class="ar" lang="ar">نتاج الحاضنة</span><span class="en" lang="en">Incubator Productions</span>
     </h2>
     <p class="lead" style="color:#c2cbcb">
-      <span class="ar">مساحة مخصصة للأعمال التي خرجت من تجربة الحاضنة. سنضيف التوثيق البصري والتفاصيل الكاملة لكل عرض تباعًا.</span>
-      <span class="en">A dedicated space for productions emerging from the incubator. Full visual documentation and details will be added for each production.</span>
+      <span class="ar" lang="ar">مساحة مخصصة للأعمال التي خرجت من تجربة الحاضنة. سنضيف التوثيق البصري والتفاصيل الكاملة لكل عرض تباعًا.</span>
+      <span class="en" lang="en">A dedicated space for productions emerging from the incubator. Full visual documentation and details will be added for each production.</span>
     </p>
     <div class="prod-grid">
       <article class="prod"><span class="num">01</span><h3>حكاوي القمر</h3><p>فرقة كامبوشة</p></article>
@@ -373,29 +390,15 @@ body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
 </section>
 </main>
 
-
-
-<script>
-const body=document.body;
-const langBtn=document.getElementById('langBtn');
-langBtn.addEventListener('click',()=>{
-  body.classList.toggle('en');
-  document.documentElement.lang=body.classList.contains('en')?'en':'ar';
-  document.documentElement.dir=body.classList.contains('en')?'ltr':'rtl';
-  langBtn.textContent=body.classList.contains('en')?'AR':'EN';
-});
-document.getElementById('menuBtn').addEventListener('click',()=>document.getElementById('navLinks').classList.toggle('open'));
-</script>
-
 <footer class="ta-master-footer">
   <div class="ta-footer-grid">
     <div>
       <img src="logo.png" alt="Teatro Alsaeed" class="ta-footer-logo">
-      <p class="ta-ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
-      <p class="ta-en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
+      <p class="ta-ar" lang="ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
+      <p class="ta-en" lang="en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
     </div>
     <div>
-      <h3><span class="ta-ar">استكشف</span><span class="ta-en">Explore</span></h3>
+      <h3><span class="ta-ar" lang="ar">استكشف</span><span class="ta-en" lang="en">Explore</span></h3>
       <a href="index.html">الرئيسية / Home</a>
       <a href="about.html">عنّا / About</a>
       <a href="troupe.html">الفرقة / Troupe</a>
@@ -410,15 +413,15 @@ document.getElementById('menuBtn').addEventListener('click',()=>document.getElem
       <a href="contact.html">تواصل / Contact</a>
     </div>
     <div>
-      <h3><span class="ta-ar">أرشيف المهرجان</span><span class="ta-en">Festival Archive</span></h3>
+      <h3><span class="ta-ar" lang="ar">أرشيف المهرجان</span><span class="ta-en" lang="en">Festival Archive</span></h3>
       <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a>
       <a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a>
       <a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a>
-      <a href="festival-2027.html">2027 · الدورة الرابعة / 4th Edition</a>
+      <a href="festival-2027.html">2027 · الدورة الرابعة (قادمة) / 4th Edition (Upcoming)</a>
       <a href="lumieres.html">Lumières / أضواء</a>
     </div>
     <div>
-      <h3><span class="ta-ar">تواصل</span><span class="ta-en">Connect</span></h3>
+      <h3><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Connect</span></h3>
       <p>Minya, Egypt</p>
       <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
       <div class="ta-social">
@@ -431,61 +434,60 @@ document.getElementById('menuBtn').addEventListener('click',()=>document.getElem
   </div>
   <div class="ta-footer-bottom">
     <span>© <span id="year"></span> Teatro Alsaeed</span>
-    <span class="ta-ar">من المنيا إلى العالم</span><span class="ta-en">From Minya to the world</span>
+    <span class="ta-ar" lang="ar">من المنيا إلى العالم</span><span class="ta-en" lang="en">From Minya to the world</span>
   </div>
 </footer>
 
 
-<script id="teatro-site-audit-script">
+<script id="teatro-unified-script">
 (function(){
-  const body=document.body, root=document.documentElement;
-  const langBtn=document.getElementById('langBtn');
-  const menuBtn=document.getElementById('menuBtn');
-  const nav=document.getElementById('navLinks');
-  function applyLang(lang,save){
-    const en=lang==='en';
-    body.classList.toggle('site-en',en);
-    body.classList.toggle('english',en);
-    body.classList.toggle('en',en);
-    root.lang=en?'en':'ar';
-    root.dir=en?'ltr':'rtl';
-    if(langBtn) langBtn.textContent=en?'AR':'EN';
-    if(save!==false){
-      try{localStorage.setItem('siteLang',lang);localStorage.setItem('teatroLang',lang)}catch(e){}
-    }
+  var d=document,b=d.body,root=d.documentElement,KEYS=['siteLang','teatroLang'];
+  var CLASSES=['english','site-en'];
+  if(b.hasAttribute('data-eng-class'))CLASSES.push('eng');
+  function stored(){
+    try{var q=new URLSearchParams(location.search).get('lang');if(q==='en'||q==='ar')return q;}catch(e){}
+    try{for(var i=0;i<KEYS.length;i++){var v=localStorage.getItem(KEYS[i]);if(v==='en'||v==='ar')return v;}}catch(e){}
+    return 'ar';
   }
-  let saved='ar';
-  try{saved=localStorage.getItem('siteLang')||localStorage.getItem('teatroLang')||'ar'}catch(e){}
-  applyLang(saved,false);
+  function apply(lang,save){
+    var en=lang==='en';
+    CLASSES.forEach(function(c){b.classList.toggle(c,en);});
+    root.lang=en?'en':'ar';root.dir=en?'ltr':'rtl';
+    var btn=d.getElementById('langBtn');
+    if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'التبديل إلى العربية':'Switch to English');}
+    if(save){try{KEYS.forEach(function(k){localStorage.setItem(k,lang);});}catch(e){}}
+    d.dispatchEvent(new CustomEvent('teatro:lang',{detail:{lang:lang}}));
+  }
+  window.TeatroLang={get:function(){return b.classList.contains('site-en')?'en':'ar';},set:function(l){apply(l==='en'?'en':'ar',true);}};
 
-  document.addEventListener('click',function(e){
-    const lang=e.target.closest && e.target.closest('#langBtn');
-    if(lang){
-      e.preventDefault(); e.stopImmediatePropagation();
-      applyLang(body.classList.contains('site-en')?'ar':'en',true);
-      return;
-    }
-    const menu=e.target.closest && e.target.closest('#menuBtn');
-    if(menu){
-      e.preventDefault(); e.stopImmediatePropagation();
-      if(nav){
-        const open=nav.classList.toggle('open');
-        menu.setAttribute('aria-expanded',open?'true':'false');
-      }
-      return;
-    }
-    const link=e.target.closest && e.target.closest('#navLinks a');
-    if(link && nav) nav.classList.remove('open');
-  },true);
+  var nav=d.getElementById('navLinks'),menu=d.getElementById('menuBtn'),bar=d.getElementById('masterNav');
+  function closeMenu(){if(!nav)return;nav.classList.remove('open');if(menu){menu.setAttribute('aria-expanded','false');menu.textContent='\u2630';}}
+  d.addEventListener('click',function(e){
+    var t=e.target;if(!t.closest)return;
+    if(t.closest('#langBtn')){e.preventDefault();apply(b.classList.contains('site-en')?'ar':'en',true);return;}
+    if(t.closest('#menuBtn')&&nav){e.preventDefault();var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o?'true':'false');menu.textContent=o?'\u00d7':'\u2630';return;}
+    var dd=t.closest('.ta-dd-btn');
+    if(dd){e.preventDefault();var p=dd.parentNode,wasOpen=p.classList.contains('open');
+      d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');x.firstChild.setAttribute('aria-expanded','false');});
+      if(!wasOpen){p.classList.add('open');dd.setAttribute('aria-expanded','true');}return;}
+    if(t.closest('#navLinks a')){closeMenu();return;}
+    d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');});
+    if(nav&&nav.classList.contains('open')&&!t.closest('#masterNav'))closeMenu();
+  });
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');});}});
 
   if(nav){
-    const current=(location.pathname.split('/').pop()||'index.html').toLowerCase();
-    nav.querySelectorAll('a[href]').forEach(a=>{
-      const href=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
-      if(href===current || (current.startsWith('festival-') && href==='festival.html')) a.classList.add('active');
+    var cur=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    if(cur==='')cur='index.html';
+    nav.querySelectorAll('a[href]').forEach(function(a){
+      var h=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
+      if(h===cur||((cur.indexOf('festival-')===0||cur==='lumieres.html')&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
     });
   }
-  const year=document.getElementById('year'); if(year) year.textContent=new Date().getFullYear();
+  function navH(){if(bar)root.style.setProperty('--ta-nav-h',bar.offsetHeight+'px');}
+  navH();addEventListener('resize',navH);addEventListener('load',navH);
+  ['year','siteYear'].forEach(function(id){var y=d.getElementById(id);if(y)y.textContent=new Date().getFullYear();});
+  apply(stored(),false);
 })();
 </script>
 

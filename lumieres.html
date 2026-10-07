@@ -4,6 +4,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Lumières | أضواء — تياترو الصعيد</title>
+<meta name="theme-color" content="#080909">
+<link rel="canonical" href="https://teatroalsaeed.org/lumieres.html">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="تياترو الصعيد | Teatro Alsaeed">
+<meta property="og:title" content="Lumières | أضواء — تياترو الصعيد">
+<meta property="og:description" content="مشروع أضواء Lumières — مشروع مسرحي باللغة الفرنسية من تياترو الصعيد بدعم من المعهد الفرنسي بمصر.">
+<meta property="og:url" content="https://teatroalsaeed.org/lumieres.html">
+<meta property="og:image" content="https://teatroalsaeed.org/logo.png">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lumières | أضواء — تياترو الصعيد">
+<meta name="twitter:description" content="مشروع أضواء Lumières — مشروع مسرحي باللغة الفرنسية من تياترو الصعيد بدعم من المعهد الفرنسي بمصر.">
+<meta name="twitter:image" content="https://teatroalsaeed.org/logo.png">
 <meta name="description" content="مشروع أضواء Lumières — مشروع مسرحي باللغة الفرنسية من تياترو الصعيد بدعم من المعهد الفرنسي بمصر.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,11 +58,34 @@ footer{background:#0a0b0b;color:#aaa;padding:55px 24px 22px;border-top:1px solid
 .ta-footer-grid a{display:block;color:#aab3b3;text-decoration:none;font-size:11px;margin:7px 0}.ta-footer-grid a:hover{color:#2bb3b1}
 .ta-footer-logo{width:62px;height:62px;object-fit:contain;margin-bottom:10px}.ta-social{display:flex;gap:12px;flex-wrap:wrap}
 .ta-footer-bottom{max-width:1200px;margin:30px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;color:#777;font-size:10px}
-body.site-en .ta-ar,body.en .ta-ar,body.english .ta-ar{display:none!important}
-body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
+body.site-en .ta-ar,body.site-en .ta-ar,body.english .ta-ar{display:none!important}
+body.site-en .ta-en,body.site-en .ta-en,body.english .ta-en{display:inline!important}
 @media(max-width:1180px){.ta-links a{font-size:10px;padding:8px 4px}.ta-brand span{display:none}}
 @media(max-width:900px){.ta-nav-inner{min-height:68px}.ta-menu{display:block}.ta-links{display:none;position:absolute;top:68px;left:0;right:0;background:#090b0b;padding:14px 6%;flex-direction:column;align-items:stretch;border-bottom:1px solid rgba(255,255,255,.10);max-height:calc(100vh - 68px);overflow:auto}.ta-links.open{display:flex}.ta-links a{font-size:13px;padding:10px 0}.ta-footer-grid{grid-template-columns:1fr 1fr}.ta-footer-bottom{display:block}.ta-footer-bottom>*{display:block;margin-top:6px}}
 @media(max-width:560px){.ta-footer-grid{grid-template-columns:1fr}.ta-master-footer{padding-inline:18px}}
+
+body{padding-top:var(--ta-nav-h,74px);overflow-x:clip}
+img{max-width:100%;height:auto}
+.ta-links a:focus-visible,.ta-lang:focus-visible,.ta-menu:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
+.ta-links a.active{color:#2bb3b1}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+.ta-dd{position:relative}
+.ta-dd-btn{background:none;border:0;color:#ddd;font:inherit;font-size:13px;padding:8px 10px;cursor:pointer;border-radius:7px;white-space:nowrap}
+.ta-dd-btn:after{content:"\25BE";margin-inline-start:5px;font-size:10px;opacity:.7}
+.ta-dd-btn:hover,.ta-dd.has-active>.ta-dd-btn,.ta-dd.open>.ta-dd-btn{color:#2bb3b1;background:rgba(43,179,177,.10)}
+.ta-dd-btn:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
+.ta-dd-menu{display:none;position:absolute;top:100%;inset-inline-start:0;min-width:220px;background:#0b0d0d;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:6px;flex-direction:column;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.ta-dd:hover>.ta-dd-menu,.ta-dd.open>.ta-dd-menu,.ta-dd:focus-within>.ta-dd-menu{display:flex}
+.ta-links a,.ta-dd-menu a{font-size:13px;padding:9px 12px}
+@media(min-width:901px) and (max-width:1180px){.ta-brand span{display:flex!important}}
+@media(max-width:900px){
+ .ta-dd{width:100%}
+ .ta-dd-btn{width:100%;text-align:start;padding:12px 0;font-size:13px;color:#fff;border-bottom:1px solid rgba(255,255,255,.08);border-radius:0}
+ .ta-dd-btn:after{display:none}
+ .ta-dd-menu{display:flex;position:static;border:0;background:transparent;box-shadow:none;padding:0 14px;min-width:0}
+ .ta-dd-menu a{padding:10px 0}
+}
 </style>
 
 </head>
@@ -56,23 +95,10 @@ body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
   <div class="ta-nav-inner">
     <a class="ta-brand" href="index.html" aria-label="Teatro Alsaeed Home">
       <img src="logo.png" alt="Teatro Alsaeed">
-      <span><b class="ta-ar">تياترو الصعيد</b><b class="ta-en">Teatro Alsaeed</b><small class="ta-ar">إحياء وتطوير الفنون</small><small class="ta-en">Reviving &amp; Developing the Arts</small></span>
+      <span><b class="ta-ar" lang="ar">تياترو الصعيد</b><b class="ta-en" lang="en">Teatro Alsaeed</b><small class="ta-ar" lang="ar">إحياء وتطوير الفنون</small><small class="ta-en" lang="en">Reviving &amp; Developing the Arts</small></span>
     </a>
     <button class="ta-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
-    <nav class="ta-links" id="navLinks">
-      <a href="index.html"><span class="ta-ar">الرئيسية</span><span class="ta-en">Home</span></a>
-      <a href="about.html"><span class="ta-ar">عنّا</span><span class="ta-en">About</span></a>
-      <a href="troupe.html"><span class="ta-ar">الفرقة</span><span class="ta-en">Troupe</span></a>
-      <a href="productions.html"><span class="ta-ar">العروض</span><span class="ta-en">Productions</span></a>
-      <a href="academy.html"><span class="ta-ar">الأكاديمية</span><span class="ta-en">Academy</span></a>
-      <a href="cinema-school.html"><span class="ta-ar">مدرسة السينما</span><span class="ta-en">Cinema School</span></a>
-      <a href="incubator.html"><span class="ta-ar">الحاضنة</span><span class="ta-en">Incubator</span></a>
-      <a href="festival.html"><span class="ta-ar">المهرجان</span><span class="ta-en">Festival</span></a>
-      <a href="sahara.html"><span class="ta-ar">صحارة</span><span class="ta-en">Sahara</span></a>
-      <a href="basement-theatre.html"><span class="ta-ar">مسرح البدروم</span><span class="ta-en">Basement Theatre</span></a>
-      <a href="partners.html"><span class="ta-ar">شركاؤنا</span><span class="ta-en">Partners</span></a>
-      <a href="contact.html"><span class="ta-ar">تواصل</span><span class="ta-en">Contact</span></a>
-    </nav>
+    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
     <button class="ta-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
   </div>
 </nav>
@@ -81,71 +107,62 @@ body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
 
 <main>
 <section class="hero"><div class="hero-bg"></div><div class="hero-copy">
-<div class="eyebrow ar">Teatro Alsaeed · Project Archive</div><div class="eyebrow en">Teatro Alsaeed · Project Archive</div>
-<h1 class="ar">أضواء<br><em>Lumières</em></h1><h1 class="en">Lumières<br><em>أضواء</em></h1>
-<p class="hero-sub ar">مشروع مسرحي باللغة الفرنسية يهدف إلى بناء قدرات الشباب الجامعيين والخريجين من الكليات المتخصصة في اللغة الفرنسية بمحافظة المنيا، من خلال التدريب وإنتاج عرض مسرحي باللغة الفرنسية بدعم من المعهد الفرنسي بمصر.</p>
-<p class="hero-sub en">A French-language theatre project focused on building the acting capacities of university students and graduates from French-language specialized faculties in Minya, through training and the production of a French-language performance supported by the Institut français d'Égypte.</p>
-<div class="hero-meta"><span class="pill">LUMIÈRES</span><span class="pill ar">المنيا · مصر</span><span class="pill en">Minya · Egypt</span><span class="pill">2023–2024</span></div></div><div class="scroll">SCROLL TO EXPLORE</div></section>
+<div class="eyebrow ar" lang="ar">Teatro Alsaeed · Project Archive</div><div class="eyebrow en" lang="en">Teatro Alsaeed · Project Archive</div>
+<h1 class="ar" lang="ar">أضواء<br><em>Lumières</em></h1><h1 class="en" lang="en">Lumières<br><em>أضواء</em></h1>
+<p class="hero-sub ar" lang="ar">مشروع مسرحي باللغة الفرنسية يهدف إلى بناء قدرات الشباب الجامعيين والخريجين من الكليات المتخصصة في اللغة الفرنسية بمحافظة المنيا، من خلال التدريب وإنتاج عرض مسرحي باللغة الفرنسية بدعم من المعهد الفرنسي بمصر.</p>
+<p class="hero-sub en" lang="en">A French-language theatre project focused on building the acting capacities of university students and graduates from French-language specialized faculties in Minya, through training and the production of a French-language performance supported by the Institut français d'Égypte.</p>
+<div class="hero-meta"><span class="pill">LUMIÈRES</span><span class="pill ar" lang="ar">المنيا · مصر</span><span class="pill en" lang="en">Minya · Egypt</span><span class="pill">2023–2024</span></div></div><div class="scroll">SCROLL TO EXPLORE</div></section>
 
 <section class="section"><div class="container"><div class="intro-grid">
-<div><div class="section-head"><div class="kicker ar">عن المشروع</div><div class="kicker en">ABOUT THE PROJECT</div><h2 class="section-title ar">تجربة مسرحية<br>بلغة جديدة</h2><h2 class="section-title en">A theatre experience<br>in another language</h2><p class="lead ar">مشروع «أضواء Lumières» يهدف إلى بناء قدرات الشباب الجامعيين والخريجين من الكليات المتخصصة في اللغة الفرنسية في محافظة المنيا في التمثيل المسرحي، عن طريق تقديم ورش فنية لإعداد الممثل وإنتاج عرض مسرحي باللغة الفرنسية بدعم من المعهد الفرنسي بمصر.</p><p class="lead en">“Lumières” aims to build the theatrical acting capacities of university students and graduates from French-language specialized faculties in Minya through acting workshops and the production of a French-language theatre performance supported by the Institut français d'Égypte.</p></div></div>
-<div><div class="quote"><strong class="ar">أول إنتاج مسرحي يتم إنتاجه باللغة الفرنسية في محافظة المنيا.</strong><strong class="en">The first theatrical production in French produced in Minya Governorate.</strong><span class="ar">كما ورد في المواد التعريفية للمشروع.</span><span class="en">As stated in the project's documentation.</span></div><div class="facts" style="margin-top:20px"><div class="fact"><b class="ar">المشاركون</b><b class="en">Participants</b><span class="ar">طلاب كليتي الألسن والتربية – قسم اللغة الفرنسية بجامعة المنيا.</span><span class="en">Students from the French departments of the Faculties of Al-Alsun and Education at Minya University.</span></div><div class="fact"><b class="ar">الدعم</b><b class="en">Support</b><span class="ar">المعهد الفرنسي بمصر</span><span class="en">Institut français d'Égypte</span></div></div></div>
+<div><div class="section-head"><div class="kicker ar" lang="ar">عن المشروع</div><div class="kicker en" lang="en">ABOUT THE PROJECT</div><h2 class="section-title ar" lang="ar">تجربة مسرحية<br>بلغة جديدة</h2><h2 class="section-title en" lang="en">A theatre experience<br>in another language</h2><p class="lead ar" lang="ar">مشروع «أضواء Lumières» يهدف إلى بناء قدرات الشباب الجامعيين والخريجين من الكليات المتخصصة في اللغة الفرنسية في محافظة المنيا في التمثيل المسرحي، عن طريق تقديم ورش فنية لإعداد الممثل وإنتاج عرض مسرحي باللغة الفرنسية بدعم من المعهد الفرنسي بمصر.</p><p class="lead en" lang="en">“Lumières” aims to build the theatrical acting capacities of university students and graduates from French-language specialized faculties in Minya through acting workshops and the production of a French-language theatre performance supported by the Institut français d'Égypte.</p></div></div>
+<div><div class="quote"><strong class="ar" lang="ar">أول إنتاج مسرحي يتم إنتاجه باللغة الفرنسية في محافظة المنيا.</strong><strong class="en" lang="en">The first theatrical production in French produced in Minya Governorate.</strong><span class="ar" lang="ar">كما ورد في المواد التعريفية للمشروع.</span><span class="en" lang="en">As stated in the project's documentation.</span></div><div class="facts" style="margin-top:20px"><div class="fact"><b class="ar" lang="ar">المشاركون</b><b class="en" lang="en">Participants</b><span class="ar" lang="ar">طلاب كليتي الألسن والتربية – قسم اللغة الفرنسية بجامعة المنيا.</span><span class="en" lang="en">Students from the French departments of the Faculties of Al-Alsun and Education at Minya University.</span></div><div class="fact"><b class="ar" lang="ar">الدعم</b><b class="en" lang="en">Support</b><span class="ar" lang="ar">المعهد الفرنسي بمصر</span><span class="en" lang="en">Institut français d'Égypte</span></div></div></div>
 </div></div></section>
 
-<section class="section" style="background:#0a0c0c"><div class="container"><div class="section-head"><div class="kicker ar">رحلة المشروع</div><div class="kicker en">PROJECT JOURNEY</div><h2 class="section-title ar">من الفكرة إلى الخشبة</h2><h2 class="section-title en">From the idea to the stage</h2></div><div class="timeline">
-<div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-copy"><div class="date ar">10 نوفمبر 2023</div><div class="date en">10 NOVEMBER 2023</div><h3 class="ar">إطلاق المشروع</h3><h3 class="en">Project Launch</h3><p class="ar">جلسة تعريفية وإطلاق مشروع «أضواء» في مقر تياترو الصعيد بالمنيا، بالتعاون مع المعهد الفرنسي بمصر.</p><p class="en">An introductory session and the launch of “Lumières” at Teatro Alsaeed in Minya, in collaboration with the Institut français d'Égypte.</p></div></div>
-<div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-copy"><div class="date ar">حتى 30 نوفمبر 2023</div><div class="date en">UNTIL 30 NOVEMBER 2023</div><h3 class="ar">التقديم واختيار المشاركين</h3><h3 class="en">Applications & Selection</h3><p class="ar">فتح باب المشاركة واختيار المنضمين من طلبة كليتي الألسن والتربية – قسم اللغة الفرنسية بجامعة المنيا.</p><p class="en">Applications opened and participants were selected from the French departments of the Faculties of Al-Alsun and Education at Minya University.</p></div></div>
-<div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-copy"><div class="date">LUMIÈRES</div><h3 class="ar">الجلسة التعريفية</h3><h3 class="en">Introduction Session</h3><p class="ar">تعريف المشاركين بفكرة المشروع ومساره، وبداية العمل الجماعي داخل تياترو الصعيد.</p><p class="en">Participants were introduced to the project's concept and process, beginning the collective work at Teatro Alsaeed.</p></div></div>
-<div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-copy"><div class="date">LUMIÈRES · REHEARSALS</div><h3 class="ar">التدريبات والبروفات</h3><h3 class="en">Training & Rehearsals</h3><p class="ar">ورش فنية لإعداد الممثل، وقراءة النص والعمل على المشاهد والبروفات الجماعية استعدادًا لإنتاج العرض.</p><p class="en">Acting workshops, text work, scene development and group rehearsals leading to the production.</p></div></div>
-<div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-copy"><div class="date">FIRST PERFORMANCE</div><h3 class="ar">العرض الأول</h3><h3 class="en">The First Performance</h3><p class="ar">تم تقديم عرض «أضواء» باللغة الفرنسية على خشبة مسرح مدرسة التميز بملوي، عن قصة «الجميلة والوحش» من الأدب الفرنسي للكاتب جان ماري لوبرين.</p><p class="en">“Lumières” was presented in French at the Excellence School Theatre in Mallawi, adapted from “Beauty and the Beast” from French literature by Jean-Marie Leprince.</p></div></div>
+<section class="section" style="background:#0a0c0c"><div class="container"><div class="section-head"><div class="kicker ar" lang="ar">رحلة المشروع</div><div class="kicker en" lang="en">PROJECT JOURNEY</div><h2 class="section-title ar" lang="ar">من الفكرة إلى الخشبة</h2><h2 class="section-title en" lang="en">From the idea to the stage</h2></div><div class="timeline">
+<div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-copy"><div class="date ar" lang="ar">10 نوفمبر 2023</div><div class="date en" lang="en">10 NOVEMBER 2023</div><h3 class="ar" lang="ar">إطلاق المشروع</h3><h3 class="en" lang="en">Project Launch</h3><p class="ar" lang="ar">جلسة تعريفية وإطلاق مشروع «أضواء» في مقر تياترو الصعيد بالمنيا، بالتعاون مع المعهد الفرنسي بمصر.</p><p class="en" lang="en">An introductory session and the launch of “Lumières” at Teatro Alsaeed in Minya, in collaboration with the Institut français d'Égypte.</p></div></div>
+<div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-copy"><div class="date ar" lang="ar">حتى 30 نوفمبر 2023</div><div class="date en" lang="en">UNTIL 30 NOVEMBER 2023</div><h3 class="ar" lang="ar">التقديم واختيار المشاركين</h3><h3 class="en" lang="en">Applications & Selection</h3><p class="ar" lang="ar">فتح باب المشاركة واختيار المنضمين من طلبة كليتي الألسن والتربية – قسم اللغة الفرنسية بجامعة المنيا.</p><p class="en" lang="en">Applications opened and participants were selected from the French departments of the Faculties of Al-Alsun and Education at Minya University.</p></div></div>
+<div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-copy"><div class="date">LUMIÈRES</div><h3 class="ar" lang="ar">الجلسة التعريفية</h3><h3 class="en" lang="en">Introduction Session</h3><p class="ar" lang="ar">تعريف المشاركين بفكرة المشروع ومساره، وبداية العمل الجماعي داخل تياترو الصعيد.</p><p class="en" lang="en">Participants were introduced to the project's concept and process, beginning the collective work at Teatro Alsaeed.</p></div></div>
+<div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-copy"><div class="date">LUMIÈRES · REHEARSALS</div><h3 class="ar" lang="ar">التدريبات والبروفات</h3><h3 class="en" lang="en">Training & Rehearsals</h3><p class="ar" lang="ar">ورش فنية لإعداد الممثل، وقراءة النص والعمل على المشاهد والبروفات الجماعية استعدادًا لإنتاج العرض.</p><p class="en" lang="en">Acting workshops, text work, scene development and group rehearsals leading to the production.</p></div></div>
+<div class="timeline-item"><span class="timeline-dot"></span><div class="timeline-copy"><div class="date">FIRST PERFORMANCE</div><h3 class="ar" lang="ar">العرض الأول</h3><h3 class="en" lang="en">The First Performance</h3><p class="ar" lang="ar">تم تقديم عرض «أضواء» باللغة الفرنسية على خشبة مسرح مدرسة التميز بملوي، عن قصة «الجميلة والوحش» من الأدب الفرنسي للكاتب جان ماري لوبرين.</p><p class="en" lang="en">“Lumières” was presented in French at the Excellence School Theatre in Mallawi, adapted from “Beauty and the Beast” from French literature by Jean-Marie Leprince.</p></div></div>
 </div></div></section>
 
-<section class="section"><div class="container"><div class="section-head"><div class="kicker ar">فريق العمل</div><div class="kicker en">CREATIVE TEAM</div><h2 class="section-title ar">صُنّاع العرض</h2><h2 class="section-title en">The Creative Team</h2></div><div class="team">
-<div class="member"><small>DIRECTING</small><h3>كيرو صابر</h3><p class="ar">المعالجة الدرامية والإخراج</p><p class="en">Dramaturgy & Direction</p></div>
-<div class="member"><small>LIGHTING</small><h3>كيرو عماد</h3><p class="ar">تصميم الإضاءة</p><p class="en">Lighting Design</p></div>
-<div class="member"><small>SCENOGRAPHY</small><h3>إنجي الحارتي</h3><p class="ar">السينوغرافيا</p><p class="en">Scenography</p></div>
-<div class="member"><small>SET DESIGN</small><h3>منة الحارتي</h3><p class="ar">الديكور</p><p class="en">Set Design</p></div>
-<div class="member"><small>COSTUME</small><h3>ماريا زكريا</h3><p class="ar">تصميم الملابس</p><p class="en">Costume Design</p></div>
-<div class="member"><small>SET EXECUTION</small><h3>مازن الحارتي · حسام مصطفى · ياسين محمد</h3><p class="ar">تنفيذ الديكور</p><p class="en">Set Execution</p></div>
+<section class="section"><div class="container"><div class="section-head"><div class="kicker ar" lang="ar">فريق العمل</div><div class="kicker en" lang="en">CREATIVE TEAM</div><h2 class="section-title ar" lang="ar">صُنّاع العرض</h2><h2 class="section-title en" lang="en">The Creative Team</h2></div><div class="team">
+<div class="member"><small>DIRECTING</small><h3>كيرو صابر</h3><p class="ar" lang="ar">المعالجة الدرامية والإخراج</p><p class="en" lang="en">Dramaturgy & Direction</p></div>
+<div class="member"><small>LIGHTING</small><h3>كيرو عماد</h3><p class="ar" lang="ar">تصميم الإضاءة</p><p class="en" lang="en">Lighting Design</p></div>
+<div class="member"><small>SCENOGRAPHY</small><h3>إنجي الحارتي</h3><p class="ar" lang="ar">السينوغرافيا</p><p class="en" lang="en">Scenography</p></div>
+<div class="member"><small>SET DESIGN</small><h3>منة الحارتي</h3><p class="ar" lang="ar">الديكور</p><p class="en" lang="en">Set Design</p></div>
+<div class="member"><small>COSTUME</small><h3>ماريا زكريا</h3><p class="ar" lang="ar">تصميم الملابس</p><p class="en" lang="en">Costume Design</p></div>
+<div class="member"><small>SET EXECUTION</small><h3>مازن الحارتي · حسام مصطفى · ياسين محمد</h3><p class="ar" lang="ar">تنفيذ الديكور</p><p class="en" lang="en">Set Execution</p></div>
 </div></div></section>
 
-<section class="section" style="background:#0a0c0c"><div class="container"><div class="section-head"><div class="kicker ar">المشاركون</div><div class="kicker en">PARTICIPANTS</div><h2 class="section-title ar">شباب المشروع</h2><h2 class="section-title en">Project Participants</h2><p class="lead ar">تم اختيار المشاركين من طلبة كليتي الألسن والتربية – قسم اللغة الفرنسية بجامعة المنيا.</p><p class="lead en">Participants were selected from students in the French departments of the Faculties of Al-Alsun and Education at Minya University.</p></div><div class="gallery"><figure><img src="images/lumieres-participants-1.png" alt="Lumières participants"></figure><figure><img src="images/lumieres-participants-2.png" alt="Lumières participants"></figure><figure><img src="images/lumieres-participants-3.png" alt="Lumières participants"></figure><figure><img src="images/lumieres-participants-4.png" alt="Lumières participants"></figure></div></div></section>
+<section class="section" style="background:#0a0c0c"><div class="container"><div class="section-head"><div class="kicker ar" lang="ar">المشاركون</div><div class="kicker en" lang="en">PARTICIPANTS</div><h2 class="section-title ar" lang="ar">شباب المشروع</h2><h2 class="section-title en" lang="en">Project Participants</h2><p class="lead ar" lang="ar">تم اختيار المشاركين من طلبة كليتي الألسن والتربية – قسم اللغة الفرنسية بجامعة المنيا.</p><p class="lead en" lang="en">Participants were selected from students in the French departments of the Faculties of Al-Alsun and Education at Minya University.</p></div><div class="gallery"><figure><img src="images/lumieres-participants-1.png" alt="Lumières participants"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-participants-2.png" alt="Lumières participants"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-participants-3.png" alt="Lumières participants"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-participants-4.png" alt="Lumières participants"></figure></div></div></section>
 
-<section class="section"><div class="container"><div class="section-head"><div class="kicker ar">التدريب والبروفات</div><div class="kicker en">TRAINING & REHEARSALS</div><h2 class="section-title ar">من التدريب إلى الخشبة</h2><h2 class="section-title en">From Training to Stage</h2></div><div class="gallery"><figure class="wide"><img src="images/lumieres-training-1.png" alt="Lumières training"></figure><figure><img src="images/lumieres-training-2.png" alt="Lumières training"></figure><figure><img src="images/lumieres-training-3.png" alt="Lumières training"></figure><figure><img src="images/lumieres-training-4.png" alt="Lumières rehearsal"></figure><figure><img src="images/lumieres-training-5.png" alt="Lumières rehearsal"></figure><figure><img src="images/lumieres-training-6.png" alt="Lumières rehearsal"></figure><figure><img src="images/lumieres-training-7.png" alt="Lumières rehearsal"></figure></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div class="kicker ar" lang="ar">التدريب والبروفات</div><div class="kicker en" lang="en">TRAINING & REHEARSALS</div><h2 class="section-title ar" lang="ar">من التدريب إلى الخشبة</h2><h2 class="section-title en" lang="en">From Training to Stage</h2></div><div class="gallery"><figure class="wide"><img decoding="async" loading="lazy" src="images/lumieres-training-1.png" alt="Lumières training"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-training-2.png" alt="Lumières training"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-training-3.png" alt="Lumières training"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-training-4.png" alt="Lumières rehearsal"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-training-5.png" alt="Lumières rehearsal"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-training-6.png" alt="Lumières rehearsal"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-training-7.png" alt="Lumières rehearsal"></figure></div></div></section>
 
-<section class="section" style="background:#0a0c0c"><div class="container"><div class="section-head"><div class="kicker ar">الليلة الأولى</div><div class="kicker en">THE FIRST NIGHT</div><h2 class="section-title ar">أضواء على الخشبة</h2><h2 class="section-title en">Lumières on Stage</h2><p class="lead ar">الليلة الأولى من العرض المسرحي «أضواء» باللغة الفرنسية، على خشبة مسرح مدرسة التميز بملوي.</p><p class="lead en">The first night of “Lumières”, presented in French at the Excellence School Theatre in Mallawi.</p></div><div class="gallery"><figure class="wide"><img src="images/lumieres-first-night-1.png" alt="Lumières first night"></figure><figure><img src="images/lumieres-first-night-2.png" alt="Lumières first night"></figure><figure><img src="images/lumieres-first-night-3.png" alt="Lumières first night"></figure><figure><img src="images/lumieres-first-night-4.png" alt="Lumières first night"></figure><figure><img src="images/lumieres-first-night-5.png" alt="Lumières first night"></figure><figure><img src="images/lumieres-first-night-6.png" alt="Lumières first night"></figure></div></div></section>
+<section class="section" style="background:#0a0c0c"><div class="container"><div class="section-head"><div class="kicker ar" lang="ar">الليلة الأولى</div><div class="kicker en" lang="en">THE FIRST NIGHT</div><h2 class="section-title ar" lang="ar">أضواء على الخشبة</h2><h2 class="section-title en" lang="en">Lumières on Stage</h2><p class="lead ar" lang="ar">الليلة الأولى من العرض المسرحي «أضواء» باللغة الفرنسية، على خشبة مسرح مدرسة التميز بملوي.</p><p class="lead en" lang="en">The first night of “Lumières”, presented in French at the Excellence School Theatre in Mallawi.</p></div><div class="gallery"><figure class="wide"><img decoding="async" loading="lazy" src="images/lumieres-first-night-1.png" alt="Lumières first night"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-first-night-2.png" alt="Lumières first night"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-first-night-3.png" alt="Lumières first night"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-first-night-4.png" alt="Lumières first night"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-first-night-5.png" alt="Lumières first night"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-first-night-6.png" alt="Lumières first night"></figure></div></div></section>
 
-<section class="section"><div class="container"><div class="section-head"><div class="kicker ar">ردود الأفعال</div><div class="kicker en">AUDIENCE REACTIONS</div><h2 class="section-title ar">أصوات من الليلة الأولى</h2><h2 class="section-title en">Voices from the First Night</h2></div><div class="video-grid"><article class="video-card"><div class="video-mark">01</div><h3 class="ar">آراء حضور الليلة الأولى</h3><h3 class="en">Audience Voices</h3><p class="ar">مادة توثق آراء الحضور بعد تقديم «أضواء» باللغة الفرنسية لأول مرة في المنيا.</p><p class="en">A video documenting audience reactions after “Lumières” was presented in French for the first time in Minya.</p><a class="video-btn" href="https://www.facebook.com/share/v/1Ny7xJmy7Q/" target="_blank" rel="noopener"><span class="ar">شاهد الفيديو →</span><span class="en">Watch video →</span></a></article><article class="video-card"><div class="video-mark">02</div><h3 class="ar">ردود أفعال العرض الأول</h3><h3 class="en">First Performance Reactions</h3><p class="ar">مادة مرئية من ردود أفعال العرض الأول لمسرحية «أضواء» باللغة الفرنسية.</p><p class="en">Video material documenting reactions to the first French-language performance.</p><a class="video-btn" href="https://www.facebook.com/share/r/1DR4ZBqmvg/" target="_blank" rel="noopener"><span class="ar">شاهد الفيديو →</span><span class="en">Watch video →</span></a></article></div><div style="margin-top:18px" class="quote"><strong class="ar">الأخ إكزافييه سوبتيل</strong><strong class="en">Brother Xavier Souptil</strong><span class="ar">من آراء حضور الليلة الأولى.</span><span class="en">A voice from the first-night audience.</span></div></div></section>
+<section class="section"><div class="container"><div class="section-head"><div class="kicker ar" lang="ar">ردود الأفعال</div><div class="kicker en" lang="en">AUDIENCE REACTIONS</div><h2 class="section-title ar" lang="ar">أصوات من الليلة الأولى</h2><h2 class="section-title en" lang="en">Voices from the First Night</h2></div><div class="video-grid"><article class="video-card"><div class="video-mark">01</div><h3 class="ar" lang="ar">آراء حضور الليلة الأولى</h3><h3 class="en" lang="en">Audience Voices</h3><p class="ar" lang="ar">مادة توثق آراء الحضور بعد تقديم «أضواء» باللغة الفرنسية لأول مرة في المنيا.</p><p class="en" lang="en">A video documenting audience reactions after “Lumières” was presented in French for the first time in Minya.</p><a class="video-btn" href="https://www.facebook.com/share/v/1Ny7xJmy7Q/" target="_blank" rel="noopener"><span class="ar" lang="ar">شاهد الفيديو →</span><span class="en" lang="en">Watch video →</span></a></article><article class="video-card"><div class="video-mark">02</div><h3 class="ar" lang="ar">ردود أفعال العرض الأول</h3><h3 class="en" lang="en">First Performance Reactions</h3><p class="ar" lang="ar">مادة مرئية من ردود أفعال العرض الأول لمسرحية «أضواء» باللغة الفرنسية.</p><p class="en" lang="en">Video material documenting reactions to the first French-language performance.</p><a class="video-btn" href="https://www.facebook.com/share/r/1DR4ZBqmvg/" target="_blank" rel="noopener"><span class="ar" lang="ar">شاهد الفيديو →</span><span class="en" lang="en">Watch video →</span></a></article></div><div style="margin-top:18px" class="quote"><strong class="ar" lang="ar">الأخ إكزافييه سوبتيل</strong><strong class="en" lang="en">Brother Xavier Souptil</strong><span class="ar" lang="ar">من آراء حضور الليلة الأولى.</span><span class="en" lang="en">A voice from the first-night audience.</span></div></div></section>
 
-<section class="section" style="background:#0a0c0c"><div class="container"><div class="section-head"><div class="kicker ar">الأرشيف البصري</div><div class="kicker en">VISUAL ARCHIVE</div><h2 class="section-title ar">من إطلاق المشروع إلى العرض</h2><h2 class="section-title en">From Launch to Performance</h2></div><div class="gallery"><figure><img src="images/lumieres-launch.png" alt="Lumières project launch"></figure><figure><img src="images/lumieres-session-1.png" alt="Lumières introduction session"></figure><figure><img src="images/lumieres-session-2.png" alt="Lumières introduction session"></figure><figure><img src="images/lumieres-session-3.png" alt="Lumières introduction session"></figure><figure class="wide"><img src="images/lumieres-session-4.png" alt="Lumières introduction session"></figure><figure><img src="images/lumieres-stage-team.png" alt="Lumières stage team"></figure><figure><img src="images/lumieres-set-team.png" alt="Lumières set team"></figure></div></div></section>
+<section class="section" style="background:#0a0c0c"><div class="container"><div class="section-head"><div class="kicker ar" lang="ar">الأرشيف البصري</div><div class="kicker en" lang="en">VISUAL ARCHIVE</div><h2 class="section-title ar" lang="ar">من إطلاق المشروع إلى العرض</h2><h2 class="section-title en" lang="en">From Launch to Performance</h2></div><div class="gallery"><figure><img decoding="async" loading="lazy" src="images/lumieres-launch.png" alt="Lumières project launch"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-session-1.png" alt="Lumières introduction session"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-session-2.png" alt="Lumières introduction session"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-session-3.png" alt="Lumières introduction session"></figure><figure class="wide"><img decoding="async" loading="lazy" src="images/lumieres-session-4.png" alt="Lumières introduction session"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-stage-team.png" alt="Lumières stage team"></figure><figure><img decoding="async" loading="lazy" src="images/lumieres-set-team.png" alt="Lumières set team"></figure></div></div></section>
 
-<section class="section"><div class="container"><div class="poster-wrap"><div><div class="kicker ar">البوستر الرسمي</div><div class="kicker en">OFFICIAL POSTER</div><h2 class="section-title ar">Lumières — أضواء</h2><h2 class="section-title en">Lumières — أضواء</h2><p class="poster-note ar">عرض مسرحي مستوحى من الأدب الفرنسي وقصة «الجميلة والوحش – La Belle et la Bête».</p><p class="poster-note en">A theatre production inspired by French literature and “La Belle et la Bête” — Beauty and the Beast.</p></div><img src="images/lumieres-poster.png" alt="Lumières official poster"></div></div></section>
+<section class="section"><div class="container"><div class="poster-wrap"><div><div class="kicker ar" lang="ar">البوستر الرسمي</div><div class="kicker en" lang="en">OFFICIAL POSTER</div><h2 class="section-title ar" lang="ar">Lumières — أضواء</h2><h2 class="section-title en" lang="en">Lumières — أضواء</h2><p class="poster-note ar" lang="ar">عرض مسرحي مستوحى من الأدب الفرنسي وقصة «الجميلة والوحش – La Belle et la Bête».</p><p class="poster-note en" lang="en">A theatre production inspired by French literature and “La Belle et la Bête” — Beauty and the Beast.</p></div><img decoding="async" loading="lazy" src="images/lumieres-poster.png" alt="Lumières official poster"></div></div></section>
 
-<section class="cta"><div class="container"><h2 class="ar">اكتشف تجربة أضواء</h2><h2 class="en">Explore the Lumières Experience</h2><p class="ar">رحلة مشروع مسرحي بدأ بالتدريب وانتهى إلى الخشبة باللغة الفرنسية.</p><p class="en">A theatre project journey from training to the stage in French.</p><a href="productions.html"><span class="ar">العودة إلى العروض →</span><span class="en">Back to Productions →</span></a></div></section>
+<section class="cta"><div class="container"><h2 class="ar" lang="ar">اكتشف تجربة أضواء</h2><h2 class="en" lang="en">Explore the Lumières Experience</h2><p class="ar" lang="ar">رحلة مشروع مسرحي بدأ بالتدريب وانتهى إلى الخشبة باللغة الفرنسية.</p><p class="en" lang="en">A theatre project journey from training to the stage in French.</p><a href="productions.html"><span class="ar" lang="ar">العودة إلى العروض →</span><span class="en" lang="en">Back to Productions →</span></a></div></section>
 </main>
 
 
 
-<div class="lightbox" id="lightbox"><button class="lb-close" id="lbClose">×</button><img id="lbImg" alt=""></div>
-<script>
-(function(){
- const nav=document.getElementById('masterNav'),menu=document.getElementById('menuBtn'),links=document.getElementById('navLinks'),lang=document.getElementById('langBtn');
- function setLang(x){const en=x==='en';document.body.classList.toggle('english',en);nav.classList.toggle('english',en);document.documentElement.lang=en?'en':'ar';document.documentElement.dir=en?'ltr':'rtl';lang.textContent=en?'AR':'EN';localStorage.setItem('teatroLang',x)}
- setLang(localStorage.getItem('teatroLang')||'ar'); menu.onclick=()=>links.classList.toggle('open'); lang.onclick=()=>setLang(nav.classList.contains('english')?'ar':'en'); links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
- document.getElementById('year').textContent=new Date().getFullYear();
- const lb=document.getElementById('lightbox'), img=document.getElementById('lbImg'); document.querySelectorAll('.gallery img').forEach(i=>i.onclick=()=>{img.src=i.src;img.alt=i.alt;lb.classList.add('show');document.body.style.overflow='hidden'}); document.getElementById('lbClose').onclick=()=>{lb.classList.remove('show');document.body.style.overflow=''}; lb.onclick=e=>{if(e.target===lb){lb.classList.remove('show');document.body.style.overflow=''}}; document.addEventListener('keydown',e=>{if(e.key==='Escape'){lb.classList.remove('show');document.body.style.overflow=''}});
-})();
-</script>
+<div class="lightbox" id="lightbox"><button class="lb-close" id="lbClose">×</button><img decoding="async" loading="lazy" id="lbImg" alt=""></div>
 
 <footer class="ta-master-footer">
   <div class="ta-footer-grid">
     <div>
       <img src="logo.png" alt="Teatro Alsaeed" class="ta-footer-logo">
-      <p class="ta-ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
-      <p class="ta-en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
+      <p class="ta-ar" lang="ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
+      <p class="ta-en" lang="en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
     </div>
     <div>
-      <h3><span class="ta-ar">استكشف</span><span class="ta-en">Explore</span></h3>
+      <h3><span class="ta-ar" lang="ar">استكشف</span><span class="ta-en" lang="en">Explore</span></h3>
       <a href="index.html">الرئيسية / Home</a>
       <a href="about.html">عنّا / About</a>
       <a href="troupe.html">الفرقة / Troupe</a>
@@ -160,15 +177,15 @@ body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
       <a href="contact.html">تواصل / Contact</a>
     </div>
     <div>
-      <h3><span class="ta-ar">أرشيف المهرجان</span><span class="ta-en">Festival Archive</span></h3>
+      <h3><span class="ta-ar" lang="ar">أرشيف المهرجان</span><span class="ta-en" lang="en">Festival Archive</span></h3>
       <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a>
       <a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a>
       <a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a>
-      <a href="festival-2027.html">2027 · الدورة الرابعة / 4th Edition</a>
+      <a href="festival-2027.html">2027 · الدورة الرابعة (قادمة) / 4th Edition (Upcoming)</a>
       <a href="lumieres.html">Lumières / أضواء</a>
     </div>
     <div>
-      <h3><span class="ta-ar">تواصل</span><span class="ta-en">Connect</span></h3>
+      <h3><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Connect</span></h3>
       <p>Minya, Egypt</p>
       <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
       <div class="ta-social">
@@ -181,61 +198,72 @@ body.site-en .ta-en,body.en .ta-en,body.english .ta-en{display:inline!important}
   </div>
   <div class="ta-footer-bottom">
     <span>© <span id="year"></span> Teatro Alsaeed</span>
-    <span class="ta-ar">من المنيا إلى العالم</span><span class="ta-en">From Minya to the world</span>
+    <span class="ta-ar" lang="ar">من المنيا إلى العالم</span><span class="ta-en" lang="en">From Minya to the world</span>
   </div>
 </footer>
 
 
-<script id="teatro-site-audit-script">
+<script id="lumieres-script">
 (function(){
-  const body=document.body, root=document.documentElement;
-  const langBtn=document.getElementById('langBtn');
-  const menuBtn=document.getElementById('menuBtn');
-  const nav=document.getElementById('navLinks');
-  function applyLang(lang,save){
-    const en=lang==='en';
-    body.classList.toggle('site-en',en);
-    body.classList.toggle('english',en);
-    body.classList.toggle('en',en);
-    root.lang=en?'en':'ar';
-    root.dir=en?'ltr':'rtl';
-    if(langBtn) langBtn.textContent=en?'AR':'EN';
-    if(save!==false){
-      try{localStorage.setItem('siteLang',lang);localStorage.setItem('teatroLang',lang)}catch(e){}
-    }
-  }
-  let saved='ar';
-  try{saved=localStorage.getItem('siteLang')||localStorage.getItem('teatroLang')||'ar'}catch(e){}
-  applyLang(saved,false);
+  var lb=document.getElementById('lightbox'),img=document.getElementById('lbImg'),cl=document.getElementById('lbClose');
+  if(!lb||!img)return;
+  function close(){lb.classList.remove('show');document.body.style.overflow='';}
+  document.querySelectorAll('.gallery img').forEach(function(i){i.addEventListener('click',function(){img.src=i.src;img.alt=i.alt;lb.classList.add('show');document.body.style.overflow='hidden';});});
+  if(cl)cl.addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
 
-  document.addEventListener('click',function(e){
-    const lang=e.target.closest && e.target.closest('#langBtn');
-    if(lang){
-      e.preventDefault(); e.stopImmediatePropagation();
-      applyLang(body.classList.contains('site-en')?'ar':'en',true);
-      return;
-    }
-    const menu=e.target.closest && e.target.closest('#menuBtn');
-    if(menu){
-      e.preventDefault(); e.stopImmediatePropagation();
-      if(nav){
-        const open=nav.classList.toggle('open');
-        menu.setAttribute('aria-expanded',open?'true':'false');
-      }
-      return;
-    }
-    const link=e.target.closest && e.target.closest('#navLinks a');
-    if(link && nav) nav.classList.remove('open');
-  },true);
+<script id="teatro-unified-script">
+(function(){
+  var d=document,b=d.body,root=d.documentElement,KEYS=['siteLang','teatroLang'];
+  var CLASSES=['english','site-en'];
+  if(b.hasAttribute('data-eng-class'))CLASSES.push('eng');
+  function stored(){
+    try{var q=new URLSearchParams(location.search).get('lang');if(q==='en'||q==='ar')return q;}catch(e){}
+    try{for(var i=0;i<KEYS.length;i++){var v=localStorage.getItem(KEYS[i]);if(v==='en'||v==='ar')return v;}}catch(e){}
+    return 'ar';
+  }
+  function apply(lang,save){
+    var en=lang==='en';
+    CLASSES.forEach(function(c){b.classList.toggle(c,en);});
+    root.lang=en?'en':'ar';root.dir=en?'ltr':'rtl';
+    var btn=d.getElementById('langBtn');
+    if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'التبديل إلى العربية':'Switch to English');}
+    if(save){try{KEYS.forEach(function(k){localStorage.setItem(k,lang);});}catch(e){}}
+    d.dispatchEvent(new CustomEvent('teatro:lang',{detail:{lang:lang}}));
+  }
+  window.TeatroLang={get:function(){return b.classList.contains('site-en')?'en':'ar';},set:function(l){apply(l==='en'?'en':'ar',true);}};
+
+  var nav=d.getElementById('navLinks'),menu=d.getElementById('menuBtn'),bar=d.getElementById('masterNav');
+  function closeMenu(){if(!nav)return;nav.classList.remove('open');if(menu){menu.setAttribute('aria-expanded','false');menu.textContent='\u2630';}}
+  d.addEventListener('click',function(e){
+    var t=e.target;if(!t.closest)return;
+    if(t.closest('#langBtn')){e.preventDefault();apply(b.classList.contains('site-en')?'ar':'en',true);return;}
+    if(t.closest('#menuBtn')&&nav){e.preventDefault();var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o?'true':'false');menu.textContent=o?'\u00d7':'\u2630';return;}
+    var dd=t.closest('.ta-dd-btn');
+    if(dd){e.preventDefault();var p=dd.parentNode,wasOpen=p.classList.contains('open');
+      d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');x.firstChild.setAttribute('aria-expanded','false');});
+      if(!wasOpen){p.classList.add('open');dd.setAttribute('aria-expanded','true');}return;}
+    if(t.closest('#navLinks a')){closeMenu();return;}
+    d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');});
+    if(nav&&nav.classList.contains('open')&&!t.closest('#masterNav'))closeMenu();
+  });
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');});}});
 
   if(nav){
-    const current=(location.pathname.split('/').pop()||'index.html').toLowerCase();
-    nav.querySelectorAll('a[href]').forEach(a=>{
-      const href=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
-      if(href===current || (current.startsWith('festival-') && href==='festival.html')) a.classList.add('active');
+    var cur=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    if(cur==='')cur='index.html';
+    nav.querySelectorAll('a[href]').forEach(function(a){
+      var h=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
+      if(h===cur||((cur.indexOf('festival-')===0||cur==='lumieres.html')&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
     });
   }
-  const year=document.getElementById('year'); if(year) year.textContent=new Date().getFullYear();
+  function navH(){if(bar)root.style.setProperty('--ta-nav-h',bar.offsetHeight+'px');}
+  navH();addEventListener('resize',navH);addEventListener('load',navH);
+  ['year','siteYear'].forEach(function(id){var y=d.getElementById(id);if(y)y.textContent=new Date().getFullYear();});
+  apply(stored(),false);
 })();
 </script>
 

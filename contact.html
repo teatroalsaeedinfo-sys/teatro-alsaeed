@@ -4,6 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>تواصل معنا | Contact — Teatro Alsaeed</title>
+<meta name="description" content="تواصل مع تياترو الصعيد للتعاون والاستفسار عن البرامج والعروض والفعاليات والحجز.">
+<meta name="theme-color" content="#080909">
+<link rel="canonical" href="https://teatroalsaeed.org/contact.html">
+<link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="تياترو الصعيد | Teatro Alsaeed">
+<meta property="og:title" content="تواصل معنا | Contact — Teatro Alsaeed">
+<meta property="og:description" content="تواصل مع تياترو الصعيد للتعاون والاستفسار عن البرامج والعروض والفعاليات والحجز.">
+<meta property="og:url" content="https://teatroalsaeed.org/contact.html">
+<meta property="og:image" content="https://teatroalsaeed.org/logo.png">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="تواصل معنا | Contact — Teatro Alsaeed">
+<meta name="twitter:description" content="تواصل مع تياترو الصعيد للتعاون والاستفسار عن البرامج والعروض والفعاليات والحجز.">
+<meta name="twitter:image" content="https://teatroalsaeed.org/logo.png">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -99,8 +116,8 @@ button,input,textarea{font:inherit}
 
 /* ===== LANGUAGE ===== */
 .ta-ar{display:inline}.ta-en{display:none;font-family:Inter,Cairo,Arial,sans-serif}
-body.site-en .ta-ar,body.english .ta-ar,body.en .ta-ar{display:none!important}
-body.site-en .ta-en,body.english .ta-en,body.en .ta-en{display:inline!important}
+body.site-en .ta-ar,body.english .ta-ar,body.site-en .ta-ar{display:none!important}
+body.site-en .ta-en,body.english .ta-en,body.site-en .ta-en{display:inline!important}
 .hero-content .ta-en{display:none}.hero-content .ta-ar{display:block}
 body.site-en .hero-content .ta-ar{display:none!important}body.site-en .hero-content .ta-en{display:block!important}
 body.site-en .hero-content{direction:ltr;text-align:left}.hero-content{direction:rtl;text-align:right}
@@ -120,6 +137,30 @@ body.site-en .info-item strong{direction:ltr;text-align:left}
   .ta-footer-grid{grid-template-columns:1fr}.ta-master-footer{padding-inline:18px}
 }
 </style>
+<style id="teatro-extra-css">
+body{padding-top:var(--ta-nav-h,74px);overflow-x:clip}
+img{max-width:100%;height:auto}
+.ta-links a:focus-visible,.ta-lang:focus-visible,.ta-menu:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
+.ta-links a.active{color:#2bb3b1}
+@media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+.ta-dd{position:relative}
+.ta-dd-btn{background:none;border:0;color:#ddd;font:inherit;font-size:13px;padding:8px 10px;cursor:pointer;border-radius:7px;white-space:nowrap}
+.ta-dd-btn:after{content:"\25BE";margin-inline-start:5px;font-size:10px;opacity:.7}
+.ta-dd-btn:hover,.ta-dd.has-active>.ta-dd-btn,.ta-dd.open>.ta-dd-btn{color:#2bb3b1;background:rgba(43,179,177,.10)}
+.ta-dd-btn:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
+.ta-dd-menu{display:none;position:absolute;top:100%;inset-inline-start:0;min-width:220px;background:#0b0d0d;border:1px solid rgba(255,255,255,.12);border-radius:10px;padding:6px;flex-direction:column;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.ta-dd:hover>.ta-dd-menu,.ta-dd.open>.ta-dd-menu,.ta-dd:focus-within>.ta-dd-menu{display:flex}
+.ta-links a,.ta-dd-menu a{font-size:13px;padding:9px 12px}
+@media(min-width:901px) and (max-width:1180px){.ta-brand span{display:flex!important}}
+@media(max-width:900px){
+ .ta-dd{width:100%}
+ .ta-dd-btn{width:100%;text-align:start;padding:12px 0;font-size:13px;color:#fff;border-bottom:1px solid rgba(255,255,255,.08);border-radius:0}
+ .ta-dd-btn:after{display:none}
+ .ta-dd-menu{display:flex;position:static;border:0;background:transparent;box-shadow:none;padding:0 14px;min-width:0}
+ .ta-dd-menu a{padding:10px 0}
+}
+</style>
 </head>
 <body>
 
@@ -127,23 +168,10 @@ body.site-en .info-item strong{direction:ltr;text-align:left}
   <div class="ta-nav-inner">
     <a class="ta-brand" href="index.html" aria-label="Teatro Alsaeed Home">
       <img src="logo.png" alt="Teatro Alsaeed">
-      <span><b class="ta-ar">تياترو الصعيد</b><b class="ta-en">Teatro Alsaeed</b><small class="ta-ar">إحياء وتطوير الفنون</small><small class="ta-en">Reviving &amp; Developing the Arts</small></span>
+      <span><b class="ta-ar" lang="ar">تياترو الصعيد</b><b class="ta-en" lang="en">Teatro Alsaeed</b><small class="ta-ar" lang="ar">إحياء وتطوير الفنون</small><small class="ta-en" lang="en">Reviving &amp; Developing the Arts</small></span>
     </a>
     <button class="ta-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
-    <nav class="ta-links" id="navLinks">
-      <a href="index.html"><span class="ta-ar">الرئيسية</span><span class="ta-en">Home</span></a>
-      <a href="about.html"><span class="ta-ar">عنّا</span><span class="ta-en">About</span></a>
-      <a href="troupe.html"><span class="ta-ar">الفرقة</span><span class="ta-en">Troupe</span></a>
-      <a href="productions.html"><span class="ta-ar">العروض</span><span class="ta-en">Productions</span></a>
-      <a href="academy.html"><span class="ta-ar">الأكاديمية</span><span class="ta-en">Academy</span></a>
-      <a href="cinema-school.html"><span class="ta-ar">مدرسة السينما</span><span class="ta-en">Cinema School</span></a>
-      <a href="incubator.html"><span class="ta-ar">الحاضنة</span><span class="ta-en">Incubator</span></a>
-      <a href="festival.html"><span class="ta-ar">المهرجان</span><span class="ta-en">Festival</span></a>
-      <a href="sahara.html"><span class="ta-ar">صحارة</span><span class="ta-en">Sahara</span></a>
-      <a href="basement-theatre.html"><span class="ta-ar">مسرح البدروم</span><span class="ta-en">Basement Theatre</span></a>
-      <a href="partners.html"><span class="ta-ar">شركاؤنا</span><span class="ta-en">Partners</span></a>
-      <a href="contact.html"><span class="ta-ar">تواصل</span><span class="ta-en">Contact</span></a>
-    </nav>
+    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
     <button class="ta-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
   </div>
 </nav>
@@ -151,10 +179,10 @@ body.site-en .info-item strong{direction:ltr;text-align:left}
 <header class="contact-hero">
   <div class="hero-content">
     <div class="hero-kicker">TEATRO ALSAEED · CONTACT</div>
-    <h1 class="hero-title ta-ar">خلّينا <em>نتواصل.</em></h1>
-    <h1 class="hero-title ta-en">Let's <em>Connect.</em></h1>
-    <p class="hero-copy ta-ar">تواصل مع تياترو الصعيد للاستفسارات، الشراكات، البرامج الفنية، العروض، أو أي فكرة تحب تشاركنا بيها.</p>
-    <p class="hero-copy en ta-en">Get in touch with Teatro Alsaeed for inquiries, partnerships, artistic programs, performances, or an idea you'd like to share.</p>
+    <h1 class="hero-title ta-ar" lang="ar">خلّينا <em>نتواصل.</em></h1>
+    <h1 class="hero-title ta-en" lang="en">Let's <em>Connect.</em></h1>
+    <p class="hero-copy ta-ar" lang="ar">تواصل مع تياترو الصعيد للاستفسارات، الشراكات، البرامج الفنية، العروض، أو أي فكرة تحب تشاركنا بيها.</p>
+    <p class="hero-copy en ta-en" lang="en">Get in touch with Teatro Alsaeed for inquiries, partnerships, artistic programs, performances, or an idea you'd like to share.</p>
   </div>
 </header>
 
@@ -163,28 +191,28 @@ body.site-en .info-item strong{direction:ltr;text-align:left}
     <article class="card form-card">
       <div class="card-heading">
         <div>
-          <h2 class="ta-ar">أرسل لنا رسالة</h2>
-          <h2 class="ta-en">Send us a message</h2>
-          <p class="ta-ar">سنكون سعداء بسماعك.</p>
-          <p class="ta-en">We'd love to hear from you.</p>
+          <h2 class="ta-ar" lang="ar">أرسل لنا رسالة</h2>
+          <h2 class="ta-en" lang="en">Send us a message</h2>
+          <p class="ta-ar" lang="ar">سنكون سعداء بسماعك.</p>
+          <p class="ta-en" lang="en">We'd love to hear from you.</p>
         </div>
         <div class="heading-mark" aria-hidden="true">✦</div>
       </div>
       <form action="https://formspree.io/f/mdalwvzk" method="POST">
         <div class="field">
-          <label class="ta-ar" for="name">الاسم</label><label class="ta-en" for="name">Name</label>
+          <label class="ta-ar" for="name" lang="ar">الاسم</label><label class="ta-en" for="name" lang="en">Name</label>
           <input id="name" type="text" name="name" placeholder="اكتب اسمك" required>
         </div>
         <div class="field">
-          <label class="ta-ar" for="email">البريد الإلكتروني</label><label class="ta-en" for="email">Email</label>
+          <label class="ta-ar" for="email" lang="ar">البريد الإلكتروني</label><label class="ta-en" for="email" lang="en">Email</label>
           <input id="email" type="email" name="email" placeholder="name@example.com" required>
         </div>
         <div class="field">
-          <label class="ta-ar" for="message">رسالتك</label><label class="ta-en" for="message">Message</label>
+          <label class="ta-ar" for="message" lang="ar">رسالتك</label><label class="ta-en" for="message" lang="en">Message</label>
           <textarea id="message" name="message" placeholder="اكتب رسالتك هنا..." required></textarea>
         </div>
         <button class="send-btn" type="submit">
-          <span class="ta-ar">إرسال الرسالة</span><span class="ta-en">Send Message</span>
+          <span class="ta-ar" lang="ar">إرسال الرسالة</span><span class="ta-en" lang="en">Send Message</span>
           <span>↗</span>
         </button>
       </form>
@@ -194,10 +222,10 @@ body.site-en .info-item strong{direction:ltr;text-align:left}
       <div class="info-top">
         <div class="card-heading">
           <div>
-            <h2 class="ta-ar">بيانات التواصل</h2>
-            <h2 class="ta-en">Contact Details</h2>
-            <p class="ta-ar">كل الطرق مفتوحة للوصول إلينا.</p>
-            <p class="ta-en">Choose the way that works best for you.</p>
+            <h2 class="ta-ar" lang="ar">بيانات التواصل</h2>
+            <h2 class="ta-en" lang="en">Contact Details</h2>
+            <p class="ta-ar" lang="ar">كل الطرق مفتوحة للوصول إلينا.</p>
+            <p class="ta-en" lang="en">Choose the way that works best for you.</p>
           </div>
           <div class="heading-mark" aria-hidden="true">⌖</div>
         </div>
@@ -205,28 +233,28 @@ body.site-en .info-item strong{direction:ltr;text-align:left}
         <div class="info-list">
           <div class="info-item">
             <div class="info-icon">⌖</div>
-            <div><small class="ta-ar">العنوان</small><small class="ta-en">Address</small><strong class="ta-ar">128 عبد العال الجارحي، شارع الحسيني، المنيا، مصر</strong><strong class="ta-en">128 Abdel Aal El Garhy, Al Hussiny St, Minya, Egypt</strong></div>
+            <div><small class="ta-ar" lang="ar">العنوان</small><small class="ta-en" lang="en">Address</small><strong class="ta-ar" lang="ar">128 عبد العال الجارحي، شارع الحسيني، المنيا، مصر</strong><strong class="ta-en" lang="en">128 Abdel Aal El Garhy, Al Hussiny St, Minya, Egypt</strong></div>
           </div>
           <div class="info-item">
             <div class="info-icon">☎</div>
-            <div><small class="ta-ar">الهاتف</small><small class="ta-en">Phone</small><strong>+20 86 2094602</strong><strong>+20 10 68023167</strong><strong>+20 12 76156566</strong></div>
+            <div><small class="ta-ar" lang="ar">الهاتف</small><small class="ta-en" lang="en">Phone</small><strong>+20 86 2094602</strong><strong>+20 10 68023167</strong><strong>+20 12 76156566</strong></div>
           </div>
           <div class="info-item">
             <div class="info-icon">@</div>
-            <div><small class="ta-ar">البريد الإلكتروني</small><small class="ta-en">Email</small><strong>teatroalsaeed.info@gmail.com</strong></div>
+            <div><small class="ta-ar" lang="ar">البريد الإلكتروني</small><small class="ta-en" lang="en">Email</small><strong>teatroalsaeed.info@gmail.com</strong></div>
           </div>
         </div>
 
         <div class="info-actions">
-          <a class="action map" href="https://maps.app.goo.gl/bDPLgYxHNR6SxohA9" target="_blank" rel="noopener"><span class="ta-ar">📍 الموقع</span><span class="ta-en">📍 View Location</span></a>
-          <a class="action call" href="tel:+201068023167"><span class="ta-ar">📞 اتصال</span><span class="ta-en">📞 Call Now</span></a>
-          <a class="action whatsapp" href="https://wa.me/201068023167" target="_blank" rel="noopener"><span class="ta-ar">💬 واتساب</span><span class="ta-en">💬 WhatsApp</span></a>
+          <a class="action map" href="https://maps.app.goo.gl/bDPLgYxHNR6SxohA9" target="_blank" rel="noopener"><span class="ta-ar" lang="ar">📍 الموقع</span><span class="ta-en" lang="en">📍 View Location</span></a>
+          <a class="action call" href="tel:+201068023167"><span class="ta-ar" lang="ar">📞 اتصال</span><span class="ta-en" lang="en">📞 Call Now</span></a>
+          <a class="action whatsapp" href="https://wa.me/201068023167" target="_blank" rel="noopener"><span class="ta-ar" lang="ar">💬 واتساب</span><span class="ta-en" lang="en">💬 WhatsApp</span></a>
         </div>
       </div>
 
       <div class="social-block">
-        <div class="social-title ta-ar">تابع تياترو الصعيد</div>
-        <div class="social-title ta-en">Follow Teatro Alsaeed</div>
+        <div class="social-title ta-ar" lang="ar">تابع تياترو الصعيد</div>
+        <div class="social-title ta-en" lang="en">Follow Teatro Alsaeed</div>
         <div class="socials">
           <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
           <a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a>
@@ -240,8 +268,8 @@ body.site-en .info-item strong{direction:ltr;text-align:left}
   <section class="map-section">
     <div class="map-head">
       <div>
-        <h2 class="ta-ar">موقع تياترو الصعيد</h2><h2 class="ta-en">Find Teatro Alsaeed</h2>
-        <p class="ta-ar">128 عبد العال الجارحي، شارع الحسيني، المنيا، مصر</p><p class="ta-en">128 Abdel Aal El Garhy, Al Hussiny St, Minya, Egypt</p>
+        <h2 class="ta-ar" lang="ar">موقع تياترو الصعيد</h2><h2 class="ta-en" lang="en">Find Teatro Alsaeed</h2>
+        <p class="ta-ar" lang="ar">128 عبد العال الجارحي، شارع الحسيني، المنيا، مصر</p><p class="ta-en" lang="en">128 Abdel Aal El Garhy, Al Hussiny St, Minya, Egypt</p>
       </div>
       <span class="pin">MINYA · EGYPT</span>
     </div>
@@ -253,43 +281,77 @@ body.site-en .info-item strong{direction:ltr;text-align:left}
   <div class="ta-footer-grid">
     <div>
       <img src="logo.png" alt="Teatro Alsaeed" class="ta-footer-logo">
-      <p class="ta-ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
-      <p class="ta-en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
+      <p class="ta-ar" lang="ar">تياترو الصعيد — إحياء وتطوير الفنون في صعيد مصر.</p>
+      <p class="ta-en" lang="en">Teatro Alsaeed — Reviving and developing the arts in Upper Egypt.</p>
     </div>
     <div>
-      <h3><span class="ta-ar">استكشف</span><span class="ta-en">Explore</span></h3>
+      <h3><span class="ta-ar" lang="ar">استكشف</span><span class="ta-en" lang="en">Explore</span></h3>
       <a href="index.html">الرئيسية / Home</a><a href="about.html">عنّا / About</a><a href="troupe.html">الفرقة / Troupe</a><a href="productions.html">العروض / Productions</a><a href="academy.html">الأكاديمية / Academy</a><a href="cinema-school.html">مدرسة السينما / Cinema School</a><a href="incubator.html">الحاضنة / Incubator</a><a href="festival.html">المهرجان / Festival</a><a href="sahara.html">صحارة / Sahara</a><a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a><a href="partners.html">شركاؤنا / Partners</a><a href="contact.html">تواصل / Contact</a>
     </div>
     <div>
-      <h3><span class="ta-ar">أرشيف المهرجان</span><span class="ta-en">Festival Archive</span></h3>
-      <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a><a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a><a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a><a href="festival-2027.html">2027 · الدورة الرابعة / 4th Edition</a><a href="lumieres.html">Lumières / أضواء</a>
+      <h3><span class="ta-ar" lang="ar">أرشيف المهرجان</span><span class="ta-en" lang="en">Festival Archive</span></h3>
+      <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a><a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a><a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a><a href="festival-2027.html">2027 · الدورة الرابعة (قادمة) / 4th Edition (Upcoming)</a><a href="lumieres.html">Lumières / أضواء</a>
     </div>
     <div>
-      <h3><span class="ta-ar">تواصل</span><span class="ta-en">Connect</span></h3>
+      <h3><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Connect</span></h3>
       <p>Minya, Egypt</p><a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
       <div class="ta-social"><a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@teatro.alsaeed" target="_blank" rel="noopener">TikTok</a></div>
     </div>
   </div>
-  <div class="ta-footer-bottom"><span>© <span id="year"></span> Teatro Alsaeed</span><span class="ta-ar">من المنيا إلى العالم</span><span class="ta-en">From Minya to the world</span></div>
+  <div class="ta-footer-bottom"><span>© <span id="year"></span> Teatro Alsaeed</span><span class="ta-ar" lang="ar">من المنيا إلى العالم</span><span class="ta-en" lang="en">From Minya to the world</span></div>
 </footer>
 
-<script>
+<script id="teatro-unified-script">
 (function(){
-  const body=document.body, root=document.documentElement, langBtn=document.getElementById('langBtn'), menuBtn=document.getElementById('menuBtn'), nav=document.getElementById('navLinks');
-  function applyLang(lang,save=true){
-    const en=lang==='en'; body.classList.toggle('site-en',en); body.classList.toggle('english',en); body.classList.toggle('en',en);
-    root.lang=en?'en':'ar'; root.dir=en?'ltr':'rtl'; if(langBtn) langBtn.textContent=en?'AR':'EN';
-    if(save){try{localStorage.setItem('siteLang',lang);localStorage.setItem('teatroLang',lang)}catch(e){}}
+  var d=document,b=d.body,root=d.documentElement,KEYS=['siteLang','teatroLang'];
+  var CLASSES=['english','site-en'];
+  if(b.hasAttribute('data-eng-class'))CLASSES.push('eng');
+  function stored(){
+    try{var q=new URLSearchParams(location.search).get('lang');if(q==='en'||q==='ar')return q;}catch(e){}
+    try{for(var i=0;i<KEYS.length;i++){var v=localStorage.getItem(KEYS[i]);if(v==='en'||v==='ar')return v;}}catch(e){}
+    return 'ar';
   }
-  let saved='ar'; try{saved=localStorage.getItem('siteLang')||localStorage.getItem('teatroLang')||'ar'}catch(e){}
-  applyLang(saved,false);
-  langBtn?.addEventListener('click',()=>applyLang(body.classList.contains('site-en')?'ar':'en',true));
-  menuBtn?.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open?'true':'false');menuBtn.textContent=open?'×':'☰'});
-  nav?.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.textContent='☰';menuBtn.setAttribute('aria-expanded','false')}));
-  const current=(location.pathname.split('/').pop()||'index.html').toLowerCase();
-  nav?.querySelectorAll('a[href]').forEach(a=>{const href=(a.getAttribute('href')||'').split('#')[0].toLowerCase();if(href===current)a.classList.add('active')});
-  const year=document.getElementById('year'); if(year)year.textContent=new Date().getFullYear();
+  function apply(lang,save){
+    var en=lang==='en';
+    CLASSES.forEach(function(c){b.classList.toggle(c,en);});
+    root.lang=en?'en':'ar';root.dir=en?'ltr':'rtl';
+    var btn=d.getElementById('langBtn');
+    if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'التبديل إلى العربية':'Switch to English');}
+    if(save){try{KEYS.forEach(function(k){localStorage.setItem(k,lang);});}catch(e){}}
+    d.dispatchEvent(new CustomEvent('teatro:lang',{detail:{lang:lang}}));
+  }
+  window.TeatroLang={get:function(){return b.classList.contains('site-en')?'en':'ar';},set:function(l){apply(l==='en'?'en':'ar',true);}};
+
+  var nav=d.getElementById('navLinks'),menu=d.getElementById('menuBtn'),bar=d.getElementById('masterNav');
+  function closeMenu(){if(!nav)return;nav.classList.remove('open');if(menu){menu.setAttribute('aria-expanded','false');menu.textContent='\u2630';}}
+  d.addEventListener('click',function(e){
+    var t=e.target;if(!t.closest)return;
+    if(t.closest('#langBtn')){e.preventDefault();apply(b.classList.contains('site-en')?'ar':'en',true);return;}
+    if(t.closest('#menuBtn')&&nav){e.preventDefault();var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o?'true':'false');menu.textContent=o?'\u00d7':'\u2630';return;}
+    var dd=t.closest('.ta-dd-btn');
+    if(dd){e.preventDefault();var p=dd.parentNode,wasOpen=p.classList.contains('open');
+      d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');x.firstChild.setAttribute('aria-expanded','false');});
+      if(!wasOpen){p.classList.add('open');dd.setAttribute('aria-expanded','true');}return;}
+    if(t.closest('#navLinks a')){closeMenu();return;}
+    d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');});
+    if(nav&&nav.classList.contains('open')&&!t.closest('#masterNav'))closeMenu();
+  });
+  d.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');});}});
+
+  if(nav){
+    var cur=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+    if(cur==='')cur='index.html';
+    nav.querySelectorAll('a[href]').forEach(function(a){
+      var h=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
+      if(h===cur||((cur.indexOf('festival-')===0||cur==='lumieres.html')&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
+    });
+  }
+  function navH(){if(bar)root.style.setProperty('--ta-nav-h',bar.offsetHeight+'px');}
+  navH();addEventListener('resize',navH);addEventListener('load',navH);
+  ['year','siteYear'].forEach(function(id){var y=d.getElementById(id);if(y)y.textContent=new Date().getFullYear();});
+  apply(stored(),false);
 })();
 </script>
+
 </body>
 </html>
