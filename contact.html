@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>تواصل معنا | Contact — Teatro Alsaeed</title>
+<title>تواصل معنا | تياترو الصعيد</title>
 <meta name="description" content="تواصل مع تياترو الصعيد للتعاون والاستفسار عن البرامج والعروض والفعاليات والحجز.">
 <meta name="theme-color" content="#080909">
 <link rel="canonical" href="https://teatroalsaeed.org/contact.html">
@@ -11,16 +11,17 @@
 <link rel="apple-touch-icon" href="logo.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="تياترو الصعيد | Teatro Alsaeed">
-<meta property="og:title" content="تواصل معنا | Contact — Teatro Alsaeed">
+<meta property="og:title" content="تواصل معنا | تياترو الصعيد">
 <meta property="og:description" content="تواصل مع تياترو الصعيد للتعاون والاستفسار عن البرامج والعروض والفعاليات والحجز.">
 <meta property="og:url" content="https://teatroalsaeed.org/contact.html">
 <meta property="og:image" content="https://teatroalsaeed.org/logo.png">
 <meta property="og:locale" content="ar_AR">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="تواصل معنا | Contact — Teatro Alsaeed">
+<meta name="twitter:title" content="تواصل معنا | تياترو الصعيد">
 <meta name="twitter:description" content="تواصل مع تياترو الصعيد للتعاون والاستفسار عن البرامج والعروض والفعاليات والحجز.">
 <meta name="twitter:image" content="https://teatroalsaeed.org/logo.png">
+<meta name="x-title-en" content="Contact | Teatro Alsaeed">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -117,7 +118,7 @@ button,input,textarea{font:inherit}
 /* ===== LANGUAGE ===== */
 .ta-ar{display:inline}.ta-en{display:none;font-family:Inter,Cairo,Arial,sans-serif}
 body.site-en .ta-ar,body.english .ta-ar,body.site-en .ta-ar{display:none!important}
-body.site-en .ta-en,body.english .ta-en,body.site-en .ta-en{display:inline!important}
+
 .hero-content .ta-en{display:none}.hero-content .ta-ar{display:block}
 body.site-en .hero-content .ta-ar{display:none!important}body.site-en .hero-content .ta-en{display:block!important}
 body.site-en .hero-content{direction:ltr;text-align:left}.hero-content{direction:rtl;text-align:right}
@@ -143,6 +144,10 @@ img{max-width:100%;height:auto}
 .ta-links a:focus-visible,.ta-lang:focus-visible,.ta-menu:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
 .ta-links a.active{color:#2bb3b1}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* one language at a time */
+body:not(.site-en) :is(.ta-en,.lang-en,.en){display:none!important}
+body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 
 .ta-dd{position:relative}
 .ta-dd-btn{background:none;border:0;color:#ddd;font:inherit;font-size:13px;padding:8px 10px;cursor:pointer;border-radius:7px;white-space:nowrap}
@@ -171,14 +176,14 @@ img{max-width:100%;height:auto}
       <span><b class="ta-ar" lang="ar">تياترو الصعيد</b><b class="ta-en" lang="en">Teatro Alsaeed</b><small class="ta-ar" lang="ar">إحياء وتطوير الفنون</small><small class="ta-en" lang="en">Reviving &amp; Developing the Arts</small></span>
     </a>
     <button class="ta-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
-    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
+    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="lumieres.html"><span class="ta-ar" lang="ar">أضواء</span><span class="ta-en" lang="en">Lumières</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
     <button class="ta-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
   </div>
 </nav>
 
 <header class="contact-hero">
   <div class="hero-content">
-    <div class="hero-kicker">TEATRO ALSAEED · CONTACT</div>
+    <div class="hero-kicker"><span class="ta-ar" lang="ar">تياترو الصعيد · تواصل</span><span class="ta-en" lang="en">TEATRO ALSAEED · CONTACT</span></div>
     <h1 class="hero-title ta-ar" lang="ar">خلّينا <em>نتواصل.</em></h1>
     <h1 class="hero-title ta-en" lang="en">Let's <em>Connect.</em></h1>
     <p class="hero-copy ta-ar" lang="ar">تواصل مع تياترو الصعيد للاستفسارات، الشراكات، البرامج الفنية، العروض، أو أي فكرة تحب تشاركنا بيها.</p>
@@ -271,7 +276,7 @@ img{max-width:100%;height:auto}
         <h2 class="ta-ar" lang="ar">موقع تياترو الصعيد</h2><h2 class="ta-en" lang="en">Find Teatro Alsaeed</h2>
         <p class="ta-ar" lang="ar">128 عبد العال الجارحي، شارع الحسيني، المنيا، مصر</p><p class="ta-en" lang="en">128 Abdel Aal El Garhy, Al Hussiny St, Minya, Egypt</p>
       </div>
-      <span class="pin">MINYA · EGYPT</span>
+      <span class="pin"><span class="ta-ar" lang="ar">المنيا · مصر</span><span class="ta-en" lang="en">MINYA · EGYPT</span></span>
     </div>
     <div class="map-frame"><iframe src="https://www.google.com/maps?q=Minya&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Teatro Alsaeed location map"></iframe></div>
   </section>
@@ -286,19 +291,19 @@ img{max-width:100%;height:auto}
     </div>
     <div>
       <h3><span class="ta-ar" lang="ar">استكشف</span><span class="ta-en" lang="en">Explore</span></h3>
-      <a href="index.html">الرئيسية / Home</a><a href="about.html">عنّا / About</a><a href="troupe.html">الفرقة / Troupe</a><a href="productions.html">العروض / Productions</a><a href="academy.html">الأكاديمية / Academy</a><a href="cinema-school.html">مدرسة السينما / Cinema School</a><a href="incubator.html">الحاضنة / Incubator</a><a href="festival.html">المهرجان / Festival</a><a href="sahara.html">صحارة / Sahara</a><a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a><a href="partners.html">شركاؤنا / Partners</a><a href="contact.html">تواصل / Contact</a>
+      <a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a>
+<a href="lumieres.html"><span class="ta-ar" lang="ar">أضواء</span><span class="ta-en" lang="en">Lumières</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a>
     </div>
     <div>
       <h3><span class="ta-ar" lang="ar">أرشيف المهرجان</span><span class="ta-en" lang="en">Festival Archive</span></h3>
-      <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a><a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a><a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a><a href="festival-2027.html">2027 · الدورة الرابعة (قادمة) / 4th Edition (Upcoming)</a><a href="lumieres.html">Lumières / أضواء</a>
-    </div>
+      <a href="festival-2022.html"><span class="ta-ar" lang="ar">2022 · الدورة الأولى</span><span class="ta-en" lang="en">1st Edition</span></a><a href="festival-2024.html"><span class="ta-ar" lang="ar">2024 · الدورة الثانية</span><span class="ta-en" lang="en">2nd Edition</span></a><a href="festival-2025.html"><span class="ta-ar" lang="ar">2025 · الدورة الثالثة</span><span class="ta-en" lang="en">3rd Edition</span></a><a href="festival-2027.html"><span class="ta-ar" lang="ar">2027 · الدورة الرابعة (قادمة)</span><span class="ta-en" lang="en">4th Edition (Upcoming)</span></a></div>
     <div>
       <h3><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Connect</span></h3>
-      <p>Minya, Egypt</p><a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
+      <p><span class="ta-ar" lang="ar">المنيا، مصر</span><span class="ta-en" lang="en">Minya, Egypt</span></p><a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
       <div class="ta-social"><a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/teatroalsaeed/" target="_blank" rel="noopener">Instagram</a><a href="https://www.youtube.com/@TeatroAlsaeed" target="_blank" rel="noopener">YouTube</a><a href="https://www.tiktok.com/@teatro.alsaeed" target="_blank" rel="noopener">TikTok</a></div>
     </div>
   </div>
-  <div class="ta-footer-bottom"><span>© <span id="year"></span> Teatro Alsaeed</span><span class="ta-ar" lang="ar">من المنيا إلى العالم</span><span class="ta-en" lang="en">From Minya to the world</span></div>
+  <div class="ta-footer-bottom"><span>© <span id="year"></span> <span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">Teatro Alsaeed</span></span><span class="ta-ar" lang="ar">من المنيا إلى العالم</span><span class="ta-en" lang="en">From Minya to the world</span></div>
 </footer>
 
 <script id="teatro-unified-script">
@@ -318,6 +323,8 @@ img{max-width:100%;height:auto}
     var btn=d.getElementById('langBtn');
     if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'التبديل إلى العربية':'Switch to English');}
     if(save){try{KEYS.forEach(function(k){localStorage.setItem(k,lang);});}catch(e){}}
+    var tm=d.querySelector('meta[name="x-title-en"]');
+    if(tm){if(!window.__arTitle)window.__arTitle=d.title;d.title=en?tm.content:window.__arTitle;}
     d.dispatchEvent(new CustomEvent('teatro:lang',{detail:{lang:lang}}));
   }
   window.TeatroLang={get:function(){return b.classList.contains('site-en')?'en':'ar';},set:function(l){apply(l==='en'?'en':'ar',true);}};
@@ -343,7 +350,7 @@ img{max-width:100%;height:auto}
     if(cur==='')cur='index.html';
     nav.querySelectorAll('a[href]').forEach(function(a){
       var h=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
-      if(h===cur||((cur.indexOf('festival-')===0||cur==='lumieres.html')&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
+      if(h===cur||(cur.indexOf('festival-')===0&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
     });
   }
   function navH(){if(bar)root.style.setProperty('--ta-nav-h',bar.offsetHeight+'px');}

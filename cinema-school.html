@@ -1,5 +1,5 @@
 <!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>مدرسة تياترو الصعيد للسينما | Teatro Alsaeed Cinema School</title>
+<title>مدرسة تياترو الصعيد للسينما</title>
 <meta name="description" content="مدرسة تياترو الصعيد للسينما — برنامج تدريبي عملي للدفعة الأولى 2026، من الفكرة إلى أول لقطة.">
 <meta name="theme-color" content="#080909">
 <link rel="canonical" href="https://teatroalsaeed.org/cinema-school.html">
@@ -7,16 +7,17 @@
 <link rel="apple-touch-icon" href="logo.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="تياترو الصعيد | Teatro Alsaeed">
-<meta property="og:title" content="مدرسة تياترو الصعيد للسينما | Teatro Alsaeed Cinema School">
+<meta property="og:title" content="مدرسة تياترو الصعيد للسينما">
 <meta property="og:description" content="مدرسة تياترو الصعيد للسينما — برنامج تدريبي عملي للدفعة الأولى 2026، من الفكرة إلى أول لقطة.">
 <meta property="og:url" content="https://teatroalsaeed.org/cinema-school.html">
 <meta property="og:image" content="https://teatroalsaeed.org/logo.png">
 <meta property="og:locale" content="ar_AR">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="مدرسة تياترو الصعيد للسينما | Teatro Alsaeed Cinema School">
+<meta name="twitter:title" content="مدرسة تياترو الصعيد للسينما">
 <meta name="twitter:description" content="مدرسة تياترو الصعيد للسينما — برنامج تدريبي عملي للدفعة الأولى 2026، من الفكرة إلى أول لقطة.">
 <meta name="twitter:image" content="https://teatroalsaeed.org/logo.png">
+<meta name="x-title-en" content="Teatro Alsaeed Cinema School">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@500;700;800;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#080909;--panel:#111313;--muted:#a2a8a9;--white:#f5f5f5;--accent:#2bb3b1;--line:#272b2b}*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:var(--bg);color:var(--white);font-family:Cairo,sans-serif;line-height:1.8}a{color:inherit;text-decoration:none}.en{display:none!important}body.eng .ar{display:none!important}body.eng .en{display:block!important}
@@ -51,7 +52,7 @@ section{padding:90px 5%}.container{max-width:1320px;margin:auto}h2{font-size:cla
 .ta-footer-logo{width:62px;height:62px;object-fit:contain;margin-bottom:10px}.ta-social{display:flex;gap:12px;flex-wrap:wrap}
 .ta-footer-bottom{max-width:1200px;margin:30px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;color:#777;font-size:10px}
 body.site-en .ta-ar,body.site-en .ta-ar,body.english .ta-ar{display:none!important}
-body.site-en .ta-en,body.site-en .ta-en,body.english .ta-en{display:inline!important}
+
 @media(max-width:1180px){.ta-links a{font-size:10px;padding:8px 4px}.ta-brand span{display:none}}
 @media(max-width:900px){.ta-nav-inner{min-height:68px}.ta-menu{display:block}.ta-links{display:none;position:absolute;top:68px;left:0;right:0;background:#090b0b;padding:14px 6%;flex-direction:column;align-items:stretch;border-bottom:1px solid rgba(255,255,255,.10);max-height:calc(100vh - 68px);overflow:auto}.ta-links.open{display:flex}.ta-links a{font-size:13px;padding:10px 0}.ta-footer-grid{grid-template-columns:1fr 1fr}.ta-footer-bottom{display:block}.ta-footer-bottom>*{display:block;margin-top:6px}}
 @media(max-width:560px){.ta-footer-grid{grid-template-columns:1fr}.ta-master-footer{padding-inline:18px}}
@@ -61,6 +62,10 @@ img{max-width:100%;height:auto}
 .ta-links a:focus-visible,.ta-lang:focus-visible,.ta-menu:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
 .ta-links a.active{color:#2bb3b1}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* one language at a time */
+body:not(.site-en) :is(.ta-en,.lang-en,.en){display:none!important}
+body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 
 .ta-dd{position:relative}
 .ta-dd-btn{background:none;border:0;color:#ddd;font:inherit;font-size:13px;padding:8px 10px;cursor:pointer;border-radius:7px;white-space:nowrap}
@@ -93,20 +98,20 @@ img{max-width:100%;height:auto}
       <span><b class="ta-ar" lang="ar">تياترو الصعيد</b><b class="ta-en" lang="en">Teatro Alsaeed</b><small class="ta-ar" lang="ar">إحياء وتطوير الفنون</small><small class="ta-en" lang="en">Reviving &amp; Developing the Arts</small></span>
     </a>
     <button class="ta-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
-    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
+    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="lumieres.html"><span class="ta-ar" lang="ar">أضواء</span><span class="ta-en" lang="en">Lumières</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
     <button class="ta-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
   </div>
 </nav>
 
 
 <header class="hero"><div class="hero-content"><div class="eyebrow ar" lang="ar">مدرسة تياترو الصعيد للسينما · الدفعة الأولى · 2026</div><div class="eyebrow en" lang="en">TEATRO ALSAEED CINEMA SCHOOL · FIRST COHORT · 2026</div><h1 class="ar" lang="ar">من الفكرة...<br>إلى أول لقطة.</h1><h1 class="en" lang="en">From the idea...<br>to the first shot.</h1><p class="ar" lang="ar">مدرسة متخصصة في صناعة الأفلام القصيرة، بدأت أولى خطواتها في 2026، والدفعة الأولى الآن في مرحلة تصوير وإنتاج أفلامها.</p><p class="en" lang="en">A school dedicated to short-film production. Launched in 2026, its first cohort is now in filming and production.</p><div class="stats"><div class="stat"><strong>01</strong><small class="ar" lang="ar">الدفعة الأولى</small><small class="en" lang="en">First Cohort</small></div><div class="stat"><strong>04</strong><small class="ar" lang="ar">أفلام نتاج قسم الكتابة</small><small class="en" lang="en">Writing Films</small></div><div class="stat"><strong>2026</strong><small class="ar" lang="ar">عام الانطلاق</small><small class="en" lang="en">Launch Year</small></div></div></div></header>
-<section class="manifesto"><div class="container manifesto-grid"><blockquote class="ar" lang="ar">مش بنتعلم صناعة الفيلم فقط...<br>بنصنعه.</blockquote><blockquote class="en" lang="en">We don't just learn filmmaking.<br>We make films.</blockquote><div><div class="kicker">THE SCHOOL</div><h2 class="ar" lang="ar">مسار سينمائي مستقل داخل تياترو الصعيد</h2><h2 class="en" lang="en">An independent cinematic path within Teatro Alsaeed</h2><p class="ar" lang="ar">أُطلقت الدفعة الأولى بهدف بناء كوادر جديدة من صُنّاع الأفلام القصيرة في المنيا وصعيد مصر. الدراسة في الدفعة الأولى كانت مدعومة بنسبة 100% من تياترو الصعيد ومجانية بالكامل.</p><p class="en" lang="en">The first cohort was launched to build a new generation of short-film makers in Minya and Upper Egypt. The first cohort was fully supported by Teatro Alsaeed and free of charge.</p></div></div></section>
-<section><div class="container"><div class="kicker ar" lang="ar">منهج التجربة</div><div class="kicker en" lang="en">THE PROCESS</div><h2 class="ar" lang="ar">من التدريب إلى الفيلم</h2><h2 class="en" lang="en">From Training to Film</h2><p class="lead ar" lang="ar">رحلة عملية عبر الكتابة والتمثيل والإخراج، تنتقل من التدريب إلى موقع التصوير وإنتاج الأفلام.</p><p class="lead en" lang="en">A hands-on journey through writing, acting and directing, moving from training into real film production.</p><div class="stations"><div class="station"><i>01</i><h3>الكتابة</h3><p>تطوير الأفكار وكتابة النصوص والسيناريوهات.</p></div><div class="station"><i>02</i><h3>التمثيل</h3><p>تدريبات الأداء والعمل أمام الكاميرا.</p></div><div class="station"><i>03</i><h3>الإخراج</h3><p>تخطيط المشهد، إدارة الممثلين، الكاميرا والإضاءة والتنفيذ.</p></div><div class="station"><i>04</i><h3>الإنتاج</h3><p>تحويل التدريب والمشروعات إلى أفلام قصيرة.</p></div></div></div></section>
+<section class="manifesto"><div class="container manifesto-grid"><blockquote class="ar" lang="ar">مش بنتعلم صناعة الفيلم فقط...<br>بنصنعه.</blockquote><blockquote class="en" lang="en">We don't just learn filmmaking.<br>We make films.</blockquote><div><div class="kicker"><span class="ta-ar" lang="ar">المدرسة</span><span class="ta-en" lang="en">THE SCHOOL</span></div><h2 class="ar" lang="ar">مسار سينمائي مستقل داخل تياترو الصعيد</h2><h2 class="en" lang="en">An independent cinematic path within Teatro Alsaeed</h2><p class="ar" lang="ar">أُطلقت الدفعة الأولى بهدف بناء كوادر جديدة من صُنّاع الأفلام القصيرة في المنيا وصعيد مصر. الدراسة في الدفعة الأولى كانت مدعومة بنسبة 100% من تياترو الصعيد ومجانية بالكامل.</p><p class="en" lang="en">The first cohort was launched to build a new generation of short-film makers in Minya and Upper Egypt. The first cohort was fully supported by Teatro Alsaeed and free of charge.</p></div></div></section>
+<section><div class="container"><div class="kicker ar" lang="ar">منهج التجربة</div><div class="kicker en" lang="en">THE PROCESS</div><h2 class="ar" lang="ar">من التدريب إلى الفيلم</h2><h2 class="en" lang="en">From Training to Film</h2><p class="lead ar" lang="ar">رحلة عملية عبر الكتابة والتمثيل والإخراج، تنتقل من التدريب إلى موقع التصوير وإنتاج الأفلام.</p><p class="lead en" lang="en">A hands-on journey through writing, acting and directing, moving from training into real film production.</p><div class="stations"><div class="station"><i>01</i><h3><span class="ta-ar" lang="ar">الكتابة</span><span class="ta-en" lang="en">Writing</span></h3><p><span class="ta-ar" lang="ar">تطوير الأفكار وكتابة النصوص والسيناريوهات.</span><span class="ta-en" lang="en">Developing ideas and writing texts and screenplays.</span></p></div><div class="station"><i>02</i><h3><span class="ta-ar" lang="ar">التمثيل</span><span class="ta-en" lang="en">Acting</span></h3><p><span class="ta-ar" lang="ar">تدريبات الأداء والعمل أمام الكاميرا.</span><span class="ta-en" lang="en">Performance training and working in front of the camera.</span></p></div><div class="station"><i>03</i><h3><span class="ta-ar" lang="ar">الإخراج</span><span class="ta-en" lang="en">Directing</span></h3><p><span class="ta-ar" lang="ar">تخطيط المشهد، إدارة الممثلين، الكاميرا والإضاءة والتنفيذ.</span><span class="ta-en" lang="en">Scene planning, directing actors, camera, lighting and execution.</span></p></div><div class="station"><i>04</i><h3><span class="ta-ar" lang="ar">الإنتاج</span><span class="ta-en" lang="en">Production</span></h3><p><span class="ta-ar" lang="ar">تحويل التدريب والمشروعات إلى أفلام قصيرة.</span><span class="ta-en" lang="en">Turning training and projects into short films.</span></p></div></div></div></section>
 <section style="padding-top:20px"><div class="container"><div class="kicker ar" lang="ar">التدريب العملي</div><div class="kicker en" lang="en">PRACTICAL TRAINING</div><h2 class="ar" lang="ar">السينما تُتعلم خلف الكاميرا أيضًا.</h2><h2 class="en" lang="en">Cinema is learned behind the camera too.</h2><div class="visual"><div class="big"><img alt="ورشة الإخراج — مدرسة السينما" src="images/direction-05.jpg"><div class="caption"><h3 class="ar" lang="ar">قسم الإخراج</h3><h3 class="en" lang="en">Directing Department</h3><p class="ar" lang="ar">الـStoryboard، إدارة الممثلين، الكاميرا والإضاءة والتنفيذ.</p></div></div><div class="visual-side"><div class="small"><img decoding="async" loading="lazy" alt="ورشة التمثيل — مدرسة السينما" src="images/acting-02.jpg"><div class="caption"><h3 class="ar" lang="ar">قسم التمثيل</h3><h3 class="en" lang="en">Acting Department</h3></div></div><div class="small"><img decoding="async" loading="lazy" alt="ورشة الكتابة — مدرسة السينما" src="images/writing-03.jpg"><div class="caption"><h3 class="ar" lang="ar">قسم الكتابة</h3><h3 class="en" lang="en">Writing Department</h3></div></div></div></div></div></section>
-<section id="films"><div class="container"><div class="kicker ar" lang="ar">إنتاج المحطة الأولى</div><div class="kicker en" lang="en">FIRST STATION · WRITING</div><h2 class="ar" lang="ar">أربعة أفلام من نتاج قسم الكتابة</h2><h2 class="en" lang="en">Four Films from the Writing Department</h2><p class="lead ar" lang="ar">أربعة مشروعات خرجت من قسم الكتابة وتتحول الآن إلى أعمال سينمائية.</p><div class="films"><article class="film"><span>01</span><h3>خارج السيستم</h3><b>Outside the System</b><p>فكرة كيرو صابر · تأليف محمد وائل · إخراج مصطفى الأمير</p></article>
-<article class="film"><span>02</span><h3>قطرة ندى</h3><b>Qatra Nada</b><p>فكرة كيرو صابر · تأليف نور الهدى طاهر · إخراج مينا زغلول</p></article>
-<article class="film"><span>03</span><h3>روشتة للإيجار</h3><b>Prescription for Rent</b><p>تأليف وإخراج كيرو صابر</p></article>
-<article class="film"><span>04</span><h3>Recording</h3><b>Recording</b><p>فكرة كيرو صابر · تأليف مايكل رأفت – أبانوب رضي</p></article></div></div></section>
+<section id="films"><div class="container"><div class="kicker ar" lang="ar">إنتاج المحطة الأولى</div><div class="kicker en" lang="en">FIRST STATION · WRITING</div><h2 class="ar" lang="ar">أربعة أفلام من نتاج قسم الكتابة</h2><h2 class="en" lang="en">Four Films from the Writing Department</h2><p class="lead ar" lang="ar">أربعة مشروعات خرجت من قسم الكتابة وتتحول الآن إلى أعمال سينمائية.</p><div class="films"><article class="film"><span>01</span><h3><span class="ta-ar" lang="ar">خارج السيستم</span><span class="ta-en" lang="en">Outside the System</span></h3><p><span class="ta-ar" lang="ar">فكرة كيرو صابر · تأليف محمد وائل · إخراج مصطفى الأمير</span><span class="ta-en" lang="en">An idea by Kiro Saber · Written by Mohamed Wael · Directed by Mostafa El-Amir</span></p></article>
+<article class="film"><span>02</span><h3><span class="ta-ar" lang="ar">قطرة ندى</span><span class="ta-en" lang="en">Qatra Nada</span></h3><p><span class="ta-ar" lang="ar">فكرة كيرو صابر · تأليف نور الهدى طاهر · إخراج مينا زغلول</span><span class="ta-en" lang="en">An idea by Kiro Saber · Written by Nour El-Hoda Taher · Directed by Mina Zaghloul</span></p></article>
+<article class="film"><span>03</span><h3><span class="ta-ar" lang="ar">روشتة للإيجار</span><span class="ta-en" lang="en">Prescription for Rent</span></h3><p><span class="ta-ar" lang="ar">تأليف وإخراج كيرو صابر</span><span class="ta-en" lang="en">Written and directed by Kiro Saber</span></p></article>
+<article class="film"><span>04</span><h3><span class="ta-ar" lang="ar">Recording</span><span class="ta-en" lang="en">Recording</span></h3><p><span class="ta-ar" lang="ar">فكرة كيرو صابر · تأليف مايكل رأفت – أبانوب رضي</span><span class="ta-en" lang="en">An idea by Kiro Saber · Written by Michael Raafat – Abanoub Radi</span></p></article></div></div></section>
 <section class="cohort"><div class="container"><div class="kicker ar" lang="ar">الدفعة الأولى</div><div class="kicker en" lang="en">FIRST COHORT</div><div class="cohort-grid"><div class="cohort-photo"><img decoding="async" loading="lazy" alt="الدفعة الأولى — مدرسة تياترو الصعيد للسينما" src="images/cohort-01.jpg"></div><div class="cohort-copy"><strong>01</strong><h2 class="ar" lang="ar">الدفعة الأولى · 2026</h2><h2 class="en" lang="en">First Cohort · 2026</h2><p class="ar" lang="ar">الدفعة التي بدأت معها تجربة مدرسة تياترو الصعيد للسينما، وتخوض الآن تجربة إنتاج أفلامها القصيرة.</p><p class="en" lang="en">The cohort that launched Teatro Alsaeed Cinema School, now taking its short-film projects into production.</p></div></div></div></section>
 <section><div class="container"><div class="kicker ar" lang="ar">خلف الكاميرا</div><div class="kicker en" lang="en">BEHIND THE CAMERA</div><h2 class="ar" lang="ar">كواليس تصوير «خارج السيستم»</h2><h2 class="en" lang="en">Behind the Scenes — Outside the System</h2><p class="lead ar" lang="ar">توثيق لأول خطوات تحويل أحد مشروعات المدرسة إلى فيلم.</p><div class="gallery"><figure><img decoding="async" loading="lazy" src="images/bts-outside-system-01.jpg" alt="كواليس تصوير خارج السيستم"></figure><figure><img decoding="async" loading="lazy" src="images/bts-outside-system-02.jpg" alt="كواليس تصوير خارج السيستم"></figure><figure><img decoding="async" loading="lazy" src="images/bts-outside-system-03.jpg" alt="كواليس تصوير خارج السيستم"></figure><figure><img decoding="async" loading="lazy" src="images/bts-outside-system-04.jpg" alt="كواليس تصوير خارج السيستم"></figure><figure><img decoding="async" loading="lazy" src="images/bts-outside-system-05.jpg" alt="كواليس تصوير خارج السيستم"></figure><figure><img decoding="async" loading="lazy" src="images/bts-outside-system-06.jpg" alt="كواليس تصوير خارج السيستم"></figure><figure><img decoding="async" loading="lazy" src="images/bts-outside-system-07.jpg" alt="كواليس تصوير خارج السيستم"></figure><figure><img decoding="async" loading="lazy" src="images/bts-outside-system-08.jpg" alt="كواليس تصوير خارج السيستم"></figure><figure><img decoding="async" loading="lazy" src="images/bts-outside-system-09.jpg" alt="كواليس تصوير خارج السيستم"></figure></div></div></section>
 <section class="next"><div class="container"><div class="kicker ar" lang="ar">القادم</div><div class="kicker en" lang="en">WHAT'S NEXT</div><h2 class="ar" lang="ar">الكاميرا بدأت تدور.</h2><h2 class="en" lang="en">The camera is rolling.</h2><p class="lead ar" style="margin:15px auto" lang="ar">الدفعة الأولى انتقلت من التدريب إلى مرحلة التصوير والإنتاج.</p></div></section>
@@ -121,30 +126,30 @@ img{max-width:100%;height:auto}
     </div>
     <div>
       <h3><span class="ta-ar" lang="ar">استكشف</span><span class="ta-en" lang="en">Explore</span></h3>
-      <a href="index.html">الرئيسية / Home</a>
-      <a href="about.html">عنّا / About</a>
-      <a href="troupe.html">الفرقة / Troupe</a>
-      <a href="productions.html">العروض / Productions</a>
-      <a href="academy.html">الأكاديمية / Academy</a>
-      <a href="cinema-school.html">مدرسة السينما / Cinema School</a>
-      <a href="incubator.html">الحاضنة / Incubator</a>
-      <a href="festival.html">المهرجان / Festival</a>
-      <a href="sahara.html">صحارة / Sahara</a>
-      <a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a>
-      <a href="partners.html">شركاؤنا / Partners</a>
-      <a href="contact.html">تواصل / Contact</a>
+      <a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a>
+      <a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a>
+      <a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a>
+      <a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a>
+      <a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a>
+      <a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a>
+      <a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a>
+      <a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a>
+      <a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a>
+<a href="lumieres.html"><span class="ta-ar" lang="ar">أضواء</span><span class="ta-en" lang="en">Lumières</span></a>
+      <a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a>
+      <a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a>
+      <a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a>
     </div>
     <div>
       <h3><span class="ta-ar" lang="ar">أرشيف المهرجان</span><span class="ta-en" lang="en">Festival Archive</span></h3>
-      <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a>
-      <a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a>
-      <a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a>
-      <a href="festival-2027.html">2027 · الدورة الرابعة (قادمة) / 4th Edition (Upcoming)</a>
-      <a href="lumieres.html">Lumières / أضواء</a>
-    </div>
+      <a href="festival-2022.html"><span class="ta-ar" lang="ar">2022 · الدورة الأولى</span><span class="ta-en" lang="en">1st Edition</span></a>
+      <a href="festival-2024.html"><span class="ta-ar" lang="ar">2024 · الدورة الثانية</span><span class="ta-en" lang="en">2nd Edition</span></a>
+      <a href="festival-2025.html"><span class="ta-ar" lang="ar">2025 · الدورة الثالثة</span><span class="ta-en" lang="en">3rd Edition</span></a>
+      <a href="festival-2027.html"><span class="ta-ar" lang="ar">2027 · الدورة الرابعة (قادمة)</span><span class="ta-en" lang="en">4th Edition (Upcoming)</span></a>
+      </div>
     <div>
       <h3><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Connect</span></h3>
-      <p>Minya, Egypt</p>
+      <p><span class="ta-ar" lang="ar">المنيا، مصر</span><span class="ta-en" lang="en">Minya, Egypt</span></p>
       <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
       <div class="ta-social">
         <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
@@ -155,7 +160,7 @@ img{max-width:100%;height:auto}
     </div>
   </div>
   <div class="ta-footer-bottom">
-    <span>© <span id="year"></span> Teatro Alsaeed</span>
+    <span>© <span id="year"></span> <span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">Teatro Alsaeed</span></span>
     <span class="ta-ar" lang="ar">من المنيا إلى العالم</span><span class="ta-en" lang="en">From Minya to the world</span>
   </div>
 </footer>
@@ -178,6 +183,8 @@ img{max-width:100%;height:auto}
     var btn=d.getElementById('langBtn');
     if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'التبديل إلى العربية':'Switch to English');}
     if(save){try{KEYS.forEach(function(k){localStorage.setItem(k,lang);});}catch(e){}}
+    var tm=d.querySelector('meta[name="x-title-en"]');
+    if(tm){if(!window.__arTitle)window.__arTitle=d.title;d.title=en?tm.content:window.__arTitle;}
     d.dispatchEvent(new CustomEvent('teatro:lang',{detail:{lang:lang}}));
   }
   window.TeatroLang={get:function(){return b.classList.contains('site-en')?'en':'ar';},set:function(l){apply(l==='en'?'en':'ar',true);}};
@@ -203,7 +210,7 @@ img{max-width:100%;height:auto}
     if(cur==='')cur='index.html';
     nav.querySelectorAll('a[href]').forEach(function(a){
       var h=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
-      if(h===cur||((cur.indexOf('festival-')===0||cur==='lumieres.html')&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
+      if(h===cur||(cur.indexOf('festival-')===0&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
     });
   }
   function navH(){if(bar)root.style.setProperty('--ta-nav-h',bar.offsetHeight+'px');}

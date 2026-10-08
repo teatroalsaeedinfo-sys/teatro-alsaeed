@@ -21,6 +21,7 @@
 <meta name="twitter:title" content="الدورة الأولى 2022 | مهرجان المنيا المسرحي">
 <meta name="twitter:description" content="الدورة الأولى من مهرجان المنيا للعروض المسرحية القصيرة — 2022. من المنيا للمنيا.">
 <meta name="twitter:image" content="https://teatroalsaeed.org/logo.png">
+<meta name="x-title-en" content="1st Edition 2022 | Minya Theatre Festival">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -128,7 +129,7 @@ footer{padding:55px 0 30px;background:#050606}.footer-top{display:flex;justify-c
 .ta-footer-logo{width:62px;height:62px;object-fit:contain;margin-bottom:10px}.ta-social{display:flex;gap:12px;flex-wrap:wrap}
 .ta-footer-bottom{max-width:1200px;margin:30px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;color:#777;font-size:10px}
 body.site-en .ta-ar,body.site-en .ta-ar,body.english .ta-ar{display:none!important}
-body.site-en .ta-en,body.site-en .ta-en,body.english .ta-en{display:inline!important}
+
 @media(max-width:1180px){.ta-links a{font-size:10px;padding:8px 4px}.ta-brand span{display:none}}
 @media(max-width:900px){.ta-nav-inner{min-height:68px}.ta-menu{display:block}.ta-links{display:none;position:absolute;top:68px;left:0;right:0;background:#090b0b;padding:14px 6%;flex-direction:column;align-items:stretch;border-bottom:1px solid rgba(255,255,255,.10);max-height:calc(100vh - 68px);overflow:auto}.ta-links.open{display:flex}.ta-links a{font-size:13px;padding:10px 0}.ta-footer-grid{grid-template-columns:1fr 1fr}.ta-footer-bottom{display:block}.ta-footer-bottom>*{display:block;margin-top:6px}}
 @media(max-width:560px){.ta-footer-grid{grid-template-columns:1fr}.ta-master-footer{padding-inline:18px}}
@@ -138,6 +139,10 @@ img{max-width:100%;height:auto}
 .ta-links a:focus-visible,.ta-lang:focus-visible,.ta-menu:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
 .ta-links a.active{color:#2bb3b1}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* one language at a time */
+body:not(.site-en) :is(.ta-en,.lang-en,.en){display:none!important}
+body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 
 .ta-dd{position:relative}
 .ta-dd-btn{background:none;border:0;color:#ddd;font:inherit;font-size:13px;padding:8px 10px;cursor:pointer;border-radius:7px;white-space:nowrap}
@@ -167,7 +172,7 @@ img{max-width:100%;height:auto}
       <span><b class="ta-ar" lang="ar">تياترو الصعيد</b><b class="ta-en" lang="en">Teatro Alsaeed</b><small class="ta-ar" lang="ar">إحياء وتطوير الفنون</small><small class="ta-en" lang="en">Reviving &amp; Developing the Arts</small></span>
     </a>
     <button class="ta-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
-    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
+    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="lumieres.html"><span class="ta-ar" lang="ar">أضواء</span><span class="ta-en" lang="en">Lumières</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
     <button class="ta-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
   </div>
 </nav>
@@ -180,9 +185,9 @@ img{max-width:100%;height:auto}
 
 <main>
 <section class="hero">
-<div class="hero-grid"></div><div class="hero-orbit"></div><div class="hero-edition">FIRST EDITION · 2022</div>
+<div class="hero-grid"></div><div class="hero-orbit"></div><div class="hero-edition"><span class="ta-ar" lang="ar">الدورة الأولى · 2022</span><span class="ta-en" lang="en">FIRST EDITION · 2022</span></div>
 <div class="container hero-content">
-<div class="eyebrow">MINYA THEATRE FESTIVAL · 1ST EDITION</div>
+<div class="eyebrow"><span class="ta-ar" lang="ar">مهرجان المنيا المسرحي · الدورة الأولى</span><span class="ta-en" lang="en">MINYA THEATRE FESTIVAL · 1ST EDITION</span></div>
 <h1 class="ta-ar" lang="ar">من المنيا<br><span>للمنيا.</span></h1>
 <h1 class="ta-en" lang="en">From Minya<br><span>to Minya.</span></h1>
 <div class="hero-sub lang-ar" lang="ar">مهرجان المنيا للعروض المسرحية القصيرة · 2022</div>
@@ -195,7 +200,7 @@ img{max-width:100%;height:auto}
 <div><strong>05</strong><small class="ta-ar" lang="ar">عروض في المرحلة النهائية</small><small class="ta-en" lang="en">Finalists</small></div>
 </div>
 </div>
-<div class="hero-stamp">MINYA · EGYPT · 2022</div>
+<div class="hero-stamp"><span class="ta-ar" lang="ar">المنيا · مصر · 2022</span><span class="ta-en" lang="en">MINYA · EGYPT · 2022</span></div>
 </section>
 
 <section class="intro">
@@ -218,11 +223,11 @@ img{max-width:100%;height:auto}
 <div class="container">
 <div class="section-title"><div class="kicker"><span class="ta-ar" lang="ar">العروض النهائية</span><span class="ta-en" lang="en">FINALISTS</span></div><h2 class="ta-ar" lang="ar">خمسة عروض<br>في أول خطوة.</h2><h2 class="ta-en" lang="en">Five shows<br>at the first step.</h2><p class="ta-ar" lang="ar">اختارت لجنة المشاهدات خمسة عروض للمرحلة النهائية من بين العروض التسعة التي خضعت للمشاهدة.</p><p class="ta-en" lang="en">The viewing committee selected five productions for the final stage from the nine shows presented during the selection phase.</p></div>
 <div class="finalists">
-<article class="finalist"><div class="finalist-image f1"></div><div class="finalist-content"><div class="team">الهاية</div><h3>فستان فرح</h3><small>Best Production</small></div></article>
-<article class="finalist"><div class="finalist-image f2"></div><div class="finalist-content"><div class="team">شطرنج</div><h3>اللعبة</h3><small>Second Place</small></div></article>
-<article class="finalist"><div class="finalist-image f3"></div><div class="finalist-content"><div class="team">خيوط روح</div><h3>جبل الكف</h3><small>Finalist</small></div></article>
-<article class="finalist"><div class="finalist-image f4"></div><div class="finalist-content"><div class="team">سلوموشن</div><h3>حلم أعمى</h3><small>Finalist</small></div></article>
-<article class="finalist"><div class="finalist-image f5"></div><div class="finalist-content"><div class="team">ملك وكتابة</div><h3>رحلة البحث</h3><small>Finalist</small></div></article>
+<article class="finalist"><div class="finalist-image f1"></div><div class="finalist-content"><div class="team"><span class="ta-ar" lang="ar">الهاية</span><span class="ta-en" lang="en">El-Haya Troupe</span></div><h3><span class="ta-ar" lang="ar">فستان فرح</span><span class="ta-en" lang="en">Wedding Dress</span></h3><small><span class="ta-ar" lang="ar">أفضل عرض</span><span class="ta-en" lang="en">Best Production</span></small></div></article>
+<article class="finalist"><div class="finalist-image f2"></div><div class="finalist-content"><div class="team"><span class="ta-ar" lang="ar">شطرنج</span><span class="ta-en" lang="en">Chess</span></div><h3><span class="ta-ar" lang="ar">اللعبة</span><span class="ta-en" lang="en">The Game</span></h3><small><span class="ta-ar" lang="ar">المركز الثاني</span><span class="ta-en" lang="en">Second Place</span></small></div></article>
+<article class="finalist"><div class="finalist-image f3"></div><div class="finalist-content"><div class="team"><span class="ta-ar" lang="ar">خيوط روح</span><span class="ta-en" lang="en">Threads of the Soul</span></div><h3><span class="ta-ar" lang="ar">جبل الكف</span><span class="ta-en" lang="en">Gabal El-Kaf</span></h3><small><span class="ta-ar" lang="ar">متأهل للنهائي</span><span class="ta-en" lang="en">Finalist</span></small></div></article>
+<article class="finalist"><div class="finalist-image f4"></div><div class="finalist-content"><div class="team"><span class="ta-ar" lang="ar">سلوموشن</span><span class="ta-en" lang="en">Slow Motion</span></div><h3><span class="ta-ar" lang="ar">حلم أعمى</span><span class="ta-en" lang="en">Blind Dream</span></h3><small><span class="ta-ar" lang="ar">متأهل للنهائي</span><span class="ta-en" lang="en">Finalist</span></small></div></article>
+<article class="finalist"><div class="finalist-image f5"></div><div class="finalist-content"><div class="team"><span class="ta-ar" lang="ar">ملك وكتابة</span><span class="ta-en" lang="en">Malak and Writing</span></div><h3><span class="ta-ar" lang="ar">رحلة البحث</span><span class="ta-en" lang="en">The Search Journey</span></h3><small><span class="ta-ar" lang="ar">متأهل للنهائي</span><span class="ta-en" lang="en">Finalist</span></small></div></article>
 </div>
 </div>
 </section>
@@ -232,13 +237,13 @@ img{max-width:100%;height:auto}
 <div class="section-title"><div class="kicker"><span class="ta-ar" lang="ar">النتائج والجوائز</span><span class="ta-en" lang="en">RESULTS & AWARDS</span></div><h2 class="ta-ar" lang="ar">أول لحظة<br>للتكريم.</h2><h2 class="ta-en" lang="en">The first<br>honours.</h2></div>
 <div class="awards">
 <div class="award-list">
-<div class="award"><div class="label lang-ar" lang="ar">أفضل عرض</div><div class="label lang-en" lang="en">Best Production</div><div><strong>فستان فرح — فرقة الهاية</strong><small>Festival Award</small></div></div>
-<div class="award"><div class="label lang-ar" lang="ar">المركز الثاني</div><div class="label lang-en" lang="en">Second Place</div><div><strong>اللعبة — فرقة شطرنج</strong><small>Festival Award</small></div></div>
-<div class="award"><div class="label lang-ar" lang="ar">أفضل مخرج</div><div class="label lang-en" lang="en">Best Director</div><div><strong>إبرام ناصر — فستان فرح</strong><small>Best Director Award</small></div></div>
-<div class="award"><div class="label lang-ar" lang="ar">جائزة العمل الجماعي</div><div class="label lang-en" lang="en">Collective Work Award</div><div><strong>رحلة البحث — فرقة ملك وكتابة</strong><small>Collective Work Award</small></div></div>
-<div class="award"><div class="label lang-ar" lang="ar">جوائز أخرى</div><div class="label lang-en" lang="en">Additional Awards</div><div><strong>أفضل ممثل — أفضل ممثلة — أفضل سينوغرافيا — جوائز لجنة التحكيم الخاصة</strong><small class="ta-ar" lang="ar">موثقة ضمن تقرير الدورة الأولى</small><small class="ta-en" lang="en">Documented in the official first-edition report</small></div></div>
+<div class="award"><div class="label lang-ar" lang="ar">أفضل عرض</div><div class="label lang-en" lang="en">Best Production</div><div><strong><span class="ta-ar" lang="ar">فستان فرح — فرقة الهاية</span><span class="ta-en" lang="en">Wedding Dress — El-Haya Troupe</span></strong><small><span class="ta-ar" lang="ar">جائزة المهرجان</span><span class="ta-en" lang="en">Festival Award</span></small></div></div>
+<div class="award"><div class="label lang-ar" lang="ar">المركز الثاني</div><div class="label lang-en" lang="en">Second Place</div><div><strong><span class="ta-ar" lang="ar">اللعبة — فرقة شطرنج</span><span class="ta-en" lang="en">The Game — Chess Troupe</span></strong><small><span class="ta-ar" lang="ar">جائزة المهرجان</span><span class="ta-en" lang="en">Festival Award</span></small></div></div>
+<div class="award"><div class="label lang-ar" lang="ar">أفضل مخرج</div><div class="label lang-en" lang="en">Best Director</div><div><strong><span class="ta-ar" lang="ar">إبرام ناصر — فستان فرح</span><span class="ta-en" lang="en">Ibram Nasser — Wedding Dress</span></strong><small><span class="ta-ar" lang="ar">جائزة أفضل مخرج</span><span class="ta-en" lang="en">Best Director Award</span></small></div></div>
+<div class="award"><div class="label lang-ar" lang="ar">جائزة العمل الجماعي</div><div class="label lang-en" lang="en">Collective Work Award</div><div><strong><span class="ta-ar" lang="ar">رحلة البحث — فرقة ملك وكتابة</span><span class="ta-en" lang="en">The Search Journey — Malak and Writing Troupe</span></strong><small><span class="ta-ar" lang="ar">جائزة العمل الجماعي</span><span class="ta-en" lang="en">Collective Work Award</span></small></div></div>
+<div class="award"><div class="label lang-ar" lang="ar">جوائز أخرى</div><div class="label lang-en" lang="en">Additional Awards</div><div><strong><span class="ta-ar" lang="ar">أفضل ممثل — أفضل ممثلة — أفضل سينوغرافيا — جوائز لجنة التحكيم الخاصة</span><span class="ta-en" lang="en">Best Actor — Best Actress — Best Scenography — Special Jury Awards</span></strong><small class="ta-ar" lang="ar">موثقة ضمن تقرير الدورة الأولى</small><small class="ta-en" lang="en">Documented in the official first-edition report</small></div></div>
 </div>
-<div class="winner"><div class="big">01</div><div class="kicker"><span class="ta-ar" lang="ar">الجائزة الأهم</span><span class="ta-en" lang="en">TOP AWARD</span></div><h3>فستان فرح</h3><p class="ta-ar" lang="ar">حصل عرض «فستان فرح» لفرقة الهاية على جائزة أفضل عرض في الدورة الأولى، بينما حصل عرض «اللعبة» لفرقة شطرنج على المركز الثاني.</p><p class="ta-en" lang="en">“Wedding Dress” by Al-Haya Theatre Company received the Best Production award, while “The Game” by Shatranj Theatre Company received second place.</p></div>
+<div class="winner"><div class="big">01</div><div class="kicker"><span class="ta-ar" lang="ar">الجائزة الأهم</span><span class="ta-en" lang="en">TOP AWARD</span></div><h3><span class="ta-ar" lang="ar">فستان فرح</span><span class="ta-en" lang="en">Wedding Dress</span></h3><p class="ta-ar" lang="ar">حصل عرض «فستان فرح» لفرقة الهاية على جائزة أفضل عرض في الدورة الأولى، بينما حصل عرض «اللعبة» لفرقة شطرنج على المركز الثاني.</p><p class="ta-en" lang="en">“Wedding Dress” by Al-Haya Theatre Company received the Best Production award, while “The Game” by Shatranj Theatre Company received second place.</p></div>
 </div>
 </div>
 </section>
@@ -247,14 +252,14 @@ img{max-width:100%;height:auto}
 <div class="container">
 <div class="section-title"><div class="kicker"><span class="ta-ar" lang="ar">التدريب وبناء القدرات</span><span class="ta-en" lang="en">TRAINING & CAPACITY BUILDING</span></div><h2 class="ta-ar" lang="ar">المهرجان لم يكن<br>عروضًا فقط.</h2><h2 class="ta-en" lang="en">More than<br>performances.</h2><p class="ta-ar" lang="ar">تضمن البرنامج مجموعة من الورش التدريبية في مجالات فنية وإدارية، إلى جانب تبادل الخبرات بين الفنانين والمدربين.</p><p class="ta-en" lang="en">The programme included artistic and management workshops, creating opportunities for learning and exchange between artists and trainers.</p></div>
 <div class="workshops">
-<div class="workshop"><div class="workshop-no">01 / ACTING</div><h3 class="ta-ar" lang="ar">التمثيل</h3><h3 class="ta-en" lang="en">Acting</h3><p class="ta-ar" lang="ar">ورشة لتطوير أداء الفنانين وبناء أدوات الممثل.</p><p class="ta-en" lang="en">A workshop focused on developing actors’ performance tools.</p></div>
-<div class="workshop"><div class="workshop-no">02 / DIRECTING</div><h3 class="ta-ar" lang="ar">الإخراج المسرحي</h3><h3 class="ta-en" lang="en">Theatre Directing</h3><p class="ta-ar" lang="ar">ورشة حول مدارس الإخراج والرؤية الإخراجية وتبادل الخبرات.</p><p class="ta-en" lang="en">Exploring directing approaches, artistic vision and practice.</p></div>
-<div class="workshop"><div class="workshop-no">03 / MAKEUP</div><h3 class="ta-ar" lang="ar">المكياج المسرحي</h3><h3 class="ta-en" lang="en">Stage Makeup</h3><p class="ta-ar" lang="ar">التعرف على الخامات ومدارس المكياج المسرحي وأشكاله التاريخية.</p><p class="ta-en" lang="en">Materials, approaches and historical forms of stage makeup.</p></div>
-<div class="workshop"><div class="workshop-no">04 / WRITING</div><h3 class="ta-ar" lang="ar">الكتابة المسرحية</h3><h3 class="ta-en" lang="en">Playwriting</h3><p class="ta-ar" lang="ar">ورشة للكتابة المسرحية وتطوير الأفكار والنصوص.</p><p class="ta-en" lang="en">Developing theatrical writing, ideas and scripts.</p></div>
-<div class="workshop"><div class="workshop-no">05 / PROJECTS</div><h3 class="ta-ar" lang="ar">كتابة المشروعات</h3><h3 class="ta-en" lang="en">Project Writing</h3><p class="ta-ar" lang="ar">أساسيات كتابة المقترحات والتعرف على فرص التمويل وكتابة مشروع عملي.</p><p class="ta-en" lang="en">Proposal writing, funding opportunities and practical project development.</p></div>
-<div class="workshop"><div class="workshop-no">06 / DIGITAL</div><h3 class="ta-ar" lang="ar">التسويق الرقمي</h3><h3 class="ta-en" lang="en">Digital Marketing</h3><p class="ta-ar" lang="ar">تطوير أدوات التسويق والتواصل الرقمي للمشروعات الفنية.</p><p class="ta-en" lang="en">Digital marketing and communication tools for artistic projects.</p></div>
-<div class="workshop"><div class="workshop-no">07 / STORY</div><h3 class="ta-ar" lang="ar">الحكي</h3><h3 class="ta-en" lang="en">Storytelling</h3><p class="ta-ar" lang="ar">التعرف على مدارس الحكي والتدريب العملي على أدوات الراوي.</p><p class="ta-en" lang="en">Storytelling approaches and practical storyteller training.</p></div>
-<div class="workshop"><div class="workshop-no">08 / MOVEMENT</div><h3 class="ta-ar" lang="ar">الرقص المعاصر</h3><h3 class="ta-en" lang="en">Contemporary Dance</h3><p class="ta-ar" lang="ar">مساحة للتعرف على تقنيات الحركة والرقص المعاصر.</p><p class="ta-en" lang="en">An introduction to contemporary movement and dance techniques.</p></div>
+<div class="workshop"><div class="workshop-no"><span class="ta-ar" lang="ar">01 / التمثيل</span><span class="ta-en" lang="en">01 / ACTING</span></div><h3 class="ta-ar" lang="ar">التمثيل</h3><h3 class="ta-en" lang="en">Acting</h3><p class="ta-ar" lang="ar">ورشة لتطوير أداء الفنانين وبناء أدوات الممثل.</p><p class="ta-en" lang="en">A workshop focused on developing actors’ performance tools.</p></div>
+<div class="workshop"><div class="workshop-no"><span class="ta-ar" lang="ar">02 / الإخراج</span><span class="ta-en" lang="en">02 / DIRECTING</span></div><h3 class="ta-ar" lang="ar">الإخراج المسرحي</h3><h3 class="ta-en" lang="en">Theatre Directing</h3><p class="ta-ar" lang="ar">ورشة حول مدارس الإخراج والرؤية الإخراجية وتبادل الخبرات.</p><p class="ta-en" lang="en">Exploring directing approaches, artistic vision and practice.</p></div>
+<div class="workshop"><div class="workshop-no"><span class="ta-ar" lang="ar">03 / المكياج</span><span class="ta-en" lang="en">03 / MAKEUP</span></div><h3 class="ta-ar" lang="ar">المكياج المسرحي</h3><h3 class="ta-en" lang="en">Stage Makeup</h3><p class="ta-ar" lang="ar">التعرف على الخامات ومدارس المكياج المسرحي وأشكاله التاريخية.</p><p class="ta-en" lang="en">Materials, approaches and historical forms of stage makeup.</p></div>
+<div class="workshop"><div class="workshop-no"><span class="ta-ar" lang="ar">04 / الكتابة</span><span class="ta-en" lang="en">04 / WRITING</span></div><h3 class="ta-ar" lang="ar">الكتابة المسرحية</h3><h3 class="ta-en" lang="en">Playwriting</h3><p class="ta-ar" lang="ar">ورشة للكتابة المسرحية وتطوير الأفكار والنصوص.</p><p class="ta-en" lang="en">Developing theatrical writing, ideas and scripts.</p></div>
+<div class="workshop"><div class="workshop-no"><span class="ta-ar" lang="ar">05 / المشروعات</span><span class="ta-en" lang="en">05 / PROJECTS</span></div><h3 class="ta-ar" lang="ar">كتابة المشروعات</h3><h3 class="ta-en" lang="en">Project Writing</h3><p class="ta-ar" lang="ar">أساسيات كتابة المقترحات والتعرف على فرص التمويل وكتابة مشروع عملي.</p><p class="ta-en" lang="en">Proposal writing, funding opportunities and practical project development.</p></div>
+<div class="workshop"><div class="workshop-no"><span class="ta-ar" lang="ar">06 / الرقمي</span><span class="ta-en" lang="en">06 / DIGITAL</span></div><h3 class="ta-ar" lang="ar">التسويق الرقمي</h3><h3 class="ta-en" lang="en">Digital Marketing</h3><p class="ta-ar" lang="ar">تطوير أدوات التسويق والتواصل الرقمي للمشروعات الفنية.</p><p class="ta-en" lang="en">Digital marketing and communication tools for artistic projects.</p></div>
+<div class="workshop"><div class="workshop-no"><span class="ta-ar" lang="ar">07 / الحكي</span><span class="ta-en" lang="en">07 / STORY</span></div><h3 class="ta-ar" lang="ar">الحكي</h3><h3 class="ta-en" lang="en">Storytelling</h3><p class="ta-ar" lang="ar">التعرف على مدارس الحكي والتدريب العملي على أدوات الراوي.</p><p class="ta-en" lang="en">Storytelling approaches and practical storyteller training.</p></div>
+<div class="workshop"><div class="workshop-no"><span class="ta-ar" lang="ar">08 / الحركة</span><span class="ta-en" lang="en">08 / MOVEMENT</span></div><h3 class="ta-ar" lang="ar">الرقص المعاصر</h3><h3 class="ta-en" lang="en">Contemporary Dance</h3><p class="ta-ar" lang="ar">مساحة للتعرف على تقنيات الحركة والرقص المعاصر.</p><p class="ta-en" lang="en">An introduction to contemporary movement and dance techniques.</p></div>
 </div>
 </div>
 </section>
@@ -263,21 +268,21 @@ img{max-width:100%;height:auto}
 <div class="container">
 <div class="section-title"><div class="kicker"><span class="ta-ar" lang="ar">الشركاء</span><span class="ta-en" lang="en">PARTNERS</span></div><h2 class="ta-ar" lang="ar">بُنيت البداية<br>بالتعاون.</h2><h2 class="ta-en" lang="en">The beginning<br>was collaborative.</h2><p class="ta-ar" lang="ar">وثق التقرير شراكات لاستضافة الفعاليات والورش، إلى جانب تعاونات مع مؤسسات ومدربين وضيوف من المشهد الثقافي.</p><p class="ta-en" lang="en">The report documents partnerships for hosting activities and workshops, alongside collaborations with cultural organisations, trainers and guests.</p></div>
 <div class="partners">
-<div class="partner"><div>مركز الجزويت التربوي<span>شريك استضافة وتنفيذ</span></div></div>
-<div class="partner"><div>مؤسسة مجراية<span>شريك استضافة وتنفيذ</span></div></div>
-<div class="partner"><div>مركز مراية<span>شريك استضافة وتنفيذ</span></div></div>
-<div class="partner"><div>مركز الدوار للفنون<span>شريك استضافة وتنفيذ</span></div></div>
-<div class="partner"><div>معهد جوته<span>تعاون وبرامج تدريبية</span></div></div>
-<div class="partner"><div>جمعية نهضة المحروسة<span>تعاون وبرامج تدريبية</span></div></div>
-<div class="partner"><div>مركز مدحت فوزي لفنون العصا<span>مشاركة في حفل الختام</span></div></div>
-<div class="partner"><div>تياترو مترو<span>مشاركة في حفل الختام</span></div></div>
+<div class="partner"><div><span class="ta-ar" lang="ar">مركز الجزويت التربوي</span><span class="ta-en" lang="en">Jesuit Educational Center</span><span><span class="ta-ar" lang="ar">شريك استضافة وتنفيذ</span><span class="ta-en" lang="en">Hosting and implementation partner</span></span></div></div>
+<div class="partner"><div><span class="ta-ar" lang="ar">مؤسسة مجراية</span><span class="ta-en" lang="en">Magraya Foundation</span><span><span class="ta-ar" lang="ar">شريك استضافة وتنفيذ</span><span class="ta-en" lang="en">Hosting and implementation partner</span></span></div></div>
+<div class="partner"><div><span class="ta-ar" lang="ar">مركز مراية</span><span class="ta-en" lang="en">Maraya Center</span><span><span class="ta-ar" lang="ar">شريك استضافة وتنفيذ</span><span class="ta-en" lang="en">Hosting and implementation partner</span></span></div></div>
+<div class="partner"><div><span class="ta-ar" lang="ar">مركز الدوار للفنون</span><span class="ta-en" lang="en">Al-Dawar Arts Center</span><span><span class="ta-ar" lang="ar">شريك استضافة وتنفيذ</span><span class="ta-en" lang="en">Hosting and implementation partner</span></span></div></div>
+<div class="partner"><div><span class="ta-ar" lang="ar">معهد جوته</span><span class="ta-en" lang="en">Goethe-Institut</span><span><span class="ta-ar" lang="ar">تعاون وبرامج تدريبية</span><span class="ta-en" lang="en">Collaboration and training programs</span></span></div></div>
+<div class="partner"><div><span class="ta-ar" lang="ar">جمعية نهضة المحروسة</span><span class="ta-en" lang="en">Nahdet El-Mahrousa Association</span><span><span class="ta-ar" lang="ar">تعاون وبرامج تدريبية</span><span class="ta-en" lang="en">Collaboration and training programs</span></span></div></div>
+<div class="partner"><div><span class="ta-ar" lang="ar">مركز مدحت فوزي لفنون العصا</span><span class="ta-en" lang="en">Medhat Fawzy Center for Stick Arts</span><span><span class="ta-ar" lang="ar">مشاركة في حفل الختام</span><span class="ta-en" lang="en">Participation in the closing ceremony</span></span></div></div>
+<div class="partner"><div><span class="ta-ar" lang="ar">تياترو مترو</span><span class="ta-en" lang="en">Teatro Metro</span><span><span class="ta-ar" lang="ar">مشاركة في حفل الختام</span><span class="ta-en" lang="en">Participation in the closing ceremony</span></span></div></div>
 </div>
 </div>
 </section>
 
 <section class="section dark">
 <div class="container">
-<div class="section-title"><div class="kicker"><span class="ta-ar" lang="ar">الأرشيف البصري</span><span class="ta-en" lang="en">PHOTO ARCHIVE</span></div><h2 class="ta-ar" lang="ar">ذاكرة<br>الدورة الأولى.</h2><h2 class="ta-en" lang="en">The memory<br>of the first edition.</h2><p class="ta-ar" lang="ar">ضع صور الدورة داخل المسار <strong>images/festival/2022/</strong> بالأسماء المحددة في الكود أو استبدل المسارات بصور الأرشيف الأصلية.</p><p class="ta-en" lang="en">Place the edition photos inside <strong>images/festival/2022/</strong> using the filenames defined in the code, or replace the paths with your original archive images.</p></div>
+<div class="section-title"><div class="kicker"><span class="ta-ar" lang="ar">الأرشيف البصري</span><span class="ta-en" lang="en">PHOTO ARCHIVE</span></div><h2 class="ta-ar" lang="ar">ذاكرة<br>الدورة الأولى.</h2><h2 class="ta-en" lang="en">The memory<br>of the first edition.</h2></div>
 <div class="archive">
 <div class="photo"><img src="images/festival/2022/01.jpg" alt="Festival 2022 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
 <div class="photo"><img decoding="async" loading="lazy" src="images/festival/2022/02.jpg" alt="Festival 2022 archive" onerror="this.parentElement.classList.add('placeholder');this.remove()"></div>
@@ -293,7 +298,7 @@ img{max-width:100%;height:auto}
 
 <section class="cta">
 <div class="container">
-<div class="kicker" style="color:#061010">MINYA THEATRE FESTIVAL · 2022</div>
+<div class="kicker" style="color:#061010"><span class="ta-ar" lang="ar">مهرجان المنيا المسرحي · 2022</span><span class="ta-en" lang="en">MINYA THEATRE FESTIVAL · 2022</span></div>
 <h2 class="ta-ar" lang="ar">من المنيا<br>للمنيا.</h2>
 <h2 class="ta-en" lang="en">From Minya<br>to Minya.</h2>
 <p class="ta-ar" lang="ar">كانت البداية محلية. ومنها بدأت الرحلة التي ستقود المهرجان إلى المسرح المصري، ثم إلى العالم.</p>
@@ -313,30 +318,30 @@ img{max-width:100%;height:auto}
     </div>
     <div>
       <h3><span class="ta-ar" lang="ar">استكشف</span><span class="ta-en" lang="en">Explore</span></h3>
-      <a href="index.html">الرئيسية / Home</a>
-      <a href="about.html">عنّا / About</a>
-      <a href="troupe.html">الفرقة / Troupe</a>
-      <a href="productions.html">العروض / Productions</a>
-      <a href="academy.html">الأكاديمية / Academy</a>
-      <a href="cinema-school.html">مدرسة السينما / Cinema School</a>
-      <a href="incubator.html">الحاضنة / Incubator</a>
-      <a href="festival.html">المهرجان / Festival</a>
-      <a href="sahara.html">صحارة / Sahara</a>
-      <a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a>
-      <a href="partners.html">شركاؤنا / Partners</a>
-      <a href="contact.html">تواصل / Contact</a>
+      <a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a>
+      <a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a>
+      <a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a>
+      <a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a>
+      <a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a>
+      <a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a>
+      <a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a>
+      <a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a>
+      <a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a>
+<a href="lumieres.html"><span class="ta-ar" lang="ar">أضواء</span><span class="ta-en" lang="en">Lumières</span></a>
+      <a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a>
+      <a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a>
+      <a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a>
     </div>
     <div>
       <h3><span class="ta-ar" lang="ar">أرشيف المهرجان</span><span class="ta-en" lang="en">Festival Archive</span></h3>
-      <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a>
-      <a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a>
-      <a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a>
-      <a href="festival-2027.html">2027 · الدورة الرابعة (قادمة) / 4th Edition (Upcoming)</a>
-      <a href="lumieres.html">Lumières / أضواء</a>
-    </div>
+      <a href="festival-2022.html"><span class="ta-ar" lang="ar">2022 · الدورة الأولى</span><span class="ta-en" lang="en">1st Edition</span></a>
+      <a href="festival-2024.html"><span class="ta-ar" lang="ar">2024 · الدورة الثانية</span><span class="ta-en" lang="en">2nd Edition</span></a>
+      <a href="festival-2025.html"><span class="ta-ar" lang="ar">2025 · الدورة الثالثة</span><span class="ta-en" lang="en">3rd Edition</span></a>
+      <a href="festival-2027.html"><span class="ta-ar" lang="ar">2027 · الدورة الرابعة (قادمة)</span><span class="ta-en" lang="en">4th Edition (Upcoming)</span></a>
+      </div>
     <div>
       <h3><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Connect</span></h3>
-      <p>Minya, Egypt</p>
+      <p><span class="ta-ar" lang="ar">المنيا، مصر</span><span class="ta-en" lang="en">Minya, Egypt</span></p>
       <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
       <div class="ta-social">
         <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
@@ -347,7 +352,7 @@ img{max-width:100%;height:auto}
     </div>
   </div>
   <div class="ta-footer-bottom">
-    <span>© <span id="year"></span> Teatro Alsaeed</span>
+    <span>© <span id="year"></span> <span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">Teatro Alsaeed</span></span>
     <span class="ta-ar" lang="ar">من المنيا إلى العالم</span><span class="ta-en" lang="en">From Minya to the world</span>
   </div>
 </footer>
@@ -370,6 +375,8 @@ img{max-width:100%;height:auto}
     var btn=d.getElementById('langBtn');
     if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'التبديل إلى العربية':'Switch to English');}
     if(save){try{KEYS.forEach(function(k){localStorage.setItem(k,lang);});}catch(e){}}
+    var tm=d.querySelector('meta[name="x-title-en"]');
+    if(tm){if(!window.__arTitle)window.__arTitle=d.title;d.title=en?tm.content:window.__arTitle;}
     d.dispatchEvent(new CustomEvent('teatro:lang',{detail:{lang:lang}}));
   }
   window.TeatroLang={get:function(){return b.classList.contains('site-en')?'en':'ar';},set:function(l){apply(l==='en'?'en':'ar',true);}};
@@ -395,7 +402,7 @@ img{max-width:100%;height:auto}
     if(cur==='')cur='index.html';
     nav.querySelectorAll('a[href]').forEach(function(a){
       var h=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
-      if(h===cur||((cur.indexOf('festival-')===0||cur==='lumieres.html')&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
+      if(h===cur||(cur.indexOf('festival-')===0&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
     });
   }
   function navH(){if(bar)root.style.setProperty('--ta-nav-h',bar.offsetHeight+'px');}

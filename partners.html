@@ -4,23 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="شركاء تياترو الصعيد — شركاء دوليون ومؤسسات شريكة محلية تدعم العمل الثقافي والفني.">
-<title>شركاؤنا | Teatro AlSaeed</title>
+<title>شركاؤنا | تياترو الصعيد</title>
 <meta name="theme-color" content="#080909">
 <link rel="canonical" href="https://teatroalsaeed.org/partners.html">
 <link rel="icon" type="image/png" href="logo.png">
 <link rel="apple-touch-icon" href="logo.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="تياترو الصعيد | Teatro Alsaeed">
-<meta property="og:title" content="شركاؤنا | Teatro AlSaeed">
+<meta property="og:title" content="شركاؤنا | تياترو الصعيد">
 <meta property="og:description" content="شركاء تياترو الصعيد — شركاء دوليون ومؤسسات شريكة محلية تدعم العمل الثقافي والفني.">
 <meta property="og:url" content="https://teatroalsaeed.org/partners.html">
 <meta property="og:image" content="https://teatroalsaeed.org/logo.png">
 <meta property="og:locale" content="ar_AR">
 <meta property="og:locale:alternate" content="en_US">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="شركاؤنا | Teatro AlSaeed">
+<meta name="twitter:title" content="شركاؤنا | تياترو الصعيد">
 <meta name="twitter:description" content="شركاء تياترو الصعيد — شركاء دوليون ومؤسسات شريكة محلية تدعم العمل الثقافي والفني.">
 <meta name="twitter:image" content="https://teatroalsaeed.org/logo.png">
+<meta name="x-title-en" content="Our Partners | Teatro Alsaeed">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -57,7 +58,7 @@ footer{background:#080a0b;color:#8f999a;padding:32px 0}.footer-inner{display:fle
 .ta-footer-logo{width:62px;height:62px;object-fit:contain;margin-bottom:10px}.ta-social{display:flex;gap:12px;flex-wrap:wrap}
 .ta-footer-bottom{max-width:1200px;margin:30px auto 0;padding-top:16px;border-top:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;gap:16px;color:#777;font-size:10px}
 body.site-en .ta-ar,body.site-en .ta-ar,body.english .ta-ar{display:none!important}
-body.site-en .ta-en,body.site-en .ta-en,body.english .ta-en{display:inline!important}
+
 @media(max-width:1180px){.ta-links a{font-size:10px;padding:8px 4px}.ta-brand span{display:none}}
 @media(max-width:900px){.ta-nav-inner{min-height:68px}.ta-menu{display:block}.ta-links{display:none;position:absolute;top:68px;left:0;right:0;background:#090b0b;padding:14px 6%;flex-direction:column;align-items:stretch;border-bottom:1px solid rgba(255,255,255,.10);max-height:calc(100vh - 68px);overflow:auto}.ta-links.open{display:flex}.ta-links a{font-size:13px;padding:10px 0}.ta-footer-grid{grid-template-columns:1fr 1fr}.ta-footer-bottom{display:block}.ta-footer-bottom>*{display:block;margin-top:6px}}
 @media(max-width:560px){.ta-footer-grid{grid-template-columns:1fr}.ta-master-footer{padding-inline:18px}}
@@ -67,6 +68,10 @@ img{max-width:100%;height:auto}
 .ta-links a:focus-visible,.ta-lang:focus-visible,.ta-menu:focus-visible{outline:2px solid #2bb3b1;outline-offset:2px}
 .ta-links a.active{color:#2bb3b1}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* one language at a time */
+body:not(.site-en) :is(.ta-en,.lang-en,.en){display:none!important}
+body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 
 .ta-dd{position:relative}
 .ta-dd-btn{background:none;border:0;color:#ddd;font:inherit;font-size:13px;padding:8px 10px;cursor:pointer;border-radius:7px;white-space:nowrap}
@@ -84,7 +89,7 @@ img{max-width:100%;height:auto}
  .ta-dd-menu{display:flex;position:static;border:0;background:transparent;box-shadow:none;padding:0 14px;min-width:0}
  .ta-dd-menu a{padding:10px 0}
 }
-</style>
+[data-ar]>span,[data-ar]>small{display:none!important}</style>
 
 </head>
 <body>
@@ -96,7 +101,7 @@ img{max-width:100%;height:auto}
       <span><b class="ta-ar" lang="ar">تياترو الصعيد</b><b class="ta-en" lang="en">Teatro Alsaeed</b><small class="ta-ar" lang="ar">إحياء وتطوير الفنون</small><small class="ta-en" lang="en">Reviving &amp; Developing the Arts</small></span>
     </a>
     <button class="ta-menu" id="menuBtn" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">☰</button>
-    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
+    <nav class="ta-links" id="navLinks" aria-label="Main navigation"><a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">من نحن</span><span class="ta-en" lang="en">About Us</span></button><div class="ta-dd-menu"><a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a><a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a><a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a></div></div><div class="ta-dd"><button class="ta-dd-btn" type="button" aria-expanded="false"><span class="ta-ar" lang="ar">ما نقدمه</span><span class="ta-en" lang="en">What We Do</span></button><div class="ta-dd-menu"><a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a><a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a><a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a><a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a><a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a><a href="lumieres.html"><span class="ta-ar" lang="ar">أضواء</span><span class="ta-en" lang="en">Lumières</span></a><a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a></div></div><a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a><a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a></nav>
     <button class="ta-lang" id="langBtn" type="button" aria-label="Switch language">EN</button>
   </div>
 </nav>
@@ -110,36 +115,36 @@ img{max-width:100%;height:auto}
 <section class="intro"><div class="container"><h2 data-ar="معًا نصنع مساحة أوسع للفن" data-en="Together, We Create More Space for Art">معًا نصنع مساحة أوسع للفن<span>TOGETHER, WE CREATE MORE SPACE FOR ART</span></h2><p data-ar="تضم شبكة شركاء تياترو الصعيد جهات دولية ومؤسسات شريكة محلية ساهمت في مسارات مختلفة من العمل الفني والثقافي." data-en="Teatro AlSaeed’s partner network includes international partners and local partner organizations that have contributed to different areas of our artistic and cultural work.">تضم شبكة شركاء تياترو الصعيد جهات دولية ومؤسسات شريكة محلية ساهمت في مسارات مختلفة من العمل الفني والثقافي.</p></div></section>
 
 <section class="section"><div class="container"><div class="section-head"><div class="section-title"><h2 data-ar="شركاء دوليون" data-en="International Partners">شركاء دوليون<span>INTERNATIONAL PARTNERS</span></h2></div><div class="section-note" data-ar="8 شركاء دوليين" data-en="8 international partners">8 شركاء دوليين</div></div><div class="logo-grid">
-<article class="logo-card"><img src="images/partners/creact.webp" alt="CREACT-MED"><div class="name">CREACT-MED<small>CREATIVE MEDITERRANEAN</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/eu.webp" alt="European Union"><div class="name">الاتحاد الأوروبي<small>EUROPEAN UNION</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/eunic.webp" alt="EUNIC"><div class="name">EUNIC<small>EU NATIONAL INSTITUTES FOR CULTURE</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/afac.webp" alt="AFAC"><div class="name">الصندوق العربي للثقافة والفنون<small>AFAC — ARAB FUND FOR ARTS AND CULTURE</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/emea.webp" alt="EMEA"><div class="name">EMEA<small>EURO-MEDITERRANEAN ECONOMISTS ASSOCIATION</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/sdc.webp" alt="Swiss Agency for Development and Cooperation SDC"><div class="name">الوكالة السويسرية للتنمية والتعاون<small>SWISS AGENCY FOR DEVELOPMENT AND COOPERATION — SDC</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/french.webp" alt="Institut Français d’Égypte"><div class="name">المعهد الفرنسي بمصر<small>INSTITUT FRANÇAIS D’ÉGYPTE</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/goethe.webp" alt="Goethe-Institut"><div class="name">معهد جوته<small>GOETHE-INSTITUT</small></div></article>
+<article class="logo-card"><img src="images/partners/creact.webp" alt="CREACT-MED"><div class="name"><span class="ta-ar" lang="ar">CREACT-MED<small>البحر المتوسط الإبداعي</small></span><span class="ta-en" lang="en">CREACT-MED<small>Creative Mediterranean</small></span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/eu.webp" alt="European Union"><div class="name"><span class="ta-ar" lang="ar">الاتحاد الأوروبي</span><span class="ta-en" lang="en">European Union</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/eunic.webp" alt="EUNIC"><div class="name"><span class="ta-ar" lang="ar">EUNIC<small>المعاهد الوطنية الأوروبية للثقافة</small></span><span class="ta-en" lang="en">EUNIC<small>EU National Institutes for Culture</small></span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/afac.webp" alt="AFAC"><div class="name"><span class="ta-ar" lang="ar">الصندوق العربي للثقافة والفنون</span><span class="ta-en" lang="en">AFAC — Arab Fund for Arts and Culture</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/emea.webp" alt="EMEA"><div class="name"><span class="ta-ar" lang="ar">EMEA<small>الجمعية الأورومتوسطية للاقتصاديين</small></span><span class="ta-en" lang="en">EMEA<small>Euro-Mediterranean Economists Association</small></span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/sdc.webp" alt="Swiss Agency for Development and Cooperation SDC"><div class="name"><span class="ta-ar" lang="ar">الوكالة السويسرية للتنمية والتعاون</span><span class="ta-en" lang="en">Swiss Agency for Development and Cooperation — SDC</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/french.webp" alt="Institut Français d’Égypte"><div class="name"><span class="ta-ar" lang="ar">المعهد الفرنسي بمصر</span><span class="ta-en" lang="en">Institut français d’Égypte</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/goethe.webp" alt="Goethe-Institut"><div class="name"><span class="ta-ar" lang="ar">معهد جوته</span><span class="ta-en" lang="en">Goethe-Institut</span></div></article>
 </div></div></section>
 
 <section class="section" style="padding-top:0"><div class="container"><div class="section-head"><div class="section-title"><h2 data-ar="مؤسسات شريكة محلية" data-en="Local Partner Organizations">مؤسسات شريكة محلية<span>LOCAL PARTNER ORGANIZATIONS</span></h2></div><div class="section-note" data-ar="19 جهة شريكة محلية" data-en="19 local partner organizations">19 جهة شريكة محلية</div></div><div class="logo-grid">
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/youth.webp" alt="وزارة الشباب والرياضة"><div class="name">وزارة الشباب والرياضة<small>MINISTRY OF YOUTH AND SPORTS</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/minya.webp" alt="محافظة المنيا"><div class="name">محافظة المنيا<small>MINYA GOVERNORATE</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/culture.webp" alt="وزارة الثقافة المصرية"><div class="name">وزارة الثقافة المصرية<small>THE MINISTRY OF CULTURE OF EGYPT</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/ceoss.webp" alt="CEOSS"><div class="name">CEOSS<small>CEOSS</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/minya_sport.webp" alt="نادي المنيا الرياضي"><div class="name">نادي المنيا الرياضي<small>EL MINYA SPORT CLUB</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/gemini.webp" alt="Gemini Africa"><div class="name">Gemini Africa<small>GEMINI AFRICA</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/nahdet.webp" alt="Nahdet El Mahrousa"><div class="name">نهضة المحروسة<small>NAHDET EL MAHROUSA</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/ibtikar.webp" alt="Ibtikar Khana"><div class="name">ابتكار خانة<small>IBTIKAR KHANA</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/masr_elkheir.webp" alt="مؤسسة مصر الخير"><div class="name">مؤسسة مصر الخير<small>MISR EL KHEIR FOUNDATION</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/basita.webp" alt="Basita"><div class="name">Basita<small>BASITA</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/misr_public_library.webp" alt="مكتبة مصر العامة"><div class="name">مكتبة مصر العامة<small>MISR PUBLIC LIBRARY</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/maraya.webp" alt="مرايا"><div class="name">مرايا<small>MARAYA</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/sudoku.webp" alt="Sudoku for Arts"><div class="name">Sudoku for Arts<small>SUDOKU FOR ARTS</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/supreme_culture.webp" alt="المجلس الأعلى للثقافة"><div class="name">المجلس الأعلى للثقافة<small>SUPREME COUNCIL OF CULTURE</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/culture_palaces.webp" alt="الهيئة العامة لقصور الثقافة"><div class="name">الهيئة العامة لقصور الثقافة<small>GENERAL AUTHORITY FOR CULTURAL PALACES</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/jetp.webp" alt="JETP"><div class="name">JETP<small>JETP</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/directions.webp" alt="Directions"><div class="name">Directions<small>DIRECTIONS</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/pukka.webp" alt="PUKKA Marketing Agency"><div class="name">PUKKA Marketing Agency<small>PUKKA MARKETING AGENCY</small></div></article>
-<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/agora.webp" alt="AGORA Cultural Development"><div class="name">AGORA<small>CULTURAL DEVELOPMENT</small></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/youth.webp" alt="وزارة الشباب والرياضة"><div class="name"><span class="ta-ar" lang="ar">وزارة الشباب والرياضة</span><span class="ta-en" lang="en">Ministry of Youth and Sports</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/minya.webp" alt="محافظة المنيا"><div class="name"><span class="ta-ar" lang="ar">محافظة المنيا</span><span class="ta-en" lang="en">Minya Governorate</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/culture.webp" alt="وزارة الثقافة المصرية"><div class="name"><span class="ta-ar" lang="ar">وزارة الثقافة المصرية</span><span class="ta-en" lang="en">Ministry of Culture of Egypt</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/ceoss.webp" alt="CEOSS"><div class="name"><span class="ta-ar" lang="ar">CEOSS</span><span class="ta-en" lang="en">CEOSS</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/minya_sport.webp" alt="نادي المنيا الرياضي"><div class="name"><span class="ta-ar" lang="ar">نادي المنيا الرياضي</span><span class="ta-en" lang="en">El Minya Sport Club</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/gemini.webp" alt="Gemini Africa"><div class="name"><span class="ta-ar" lang="ar">Gemini Africa</span><span class="ta-en" lang="en">Gemini Africa</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/nahdet.webp" alt="Nahdet El Mahrousa"><div class="name"><span class="ta-ar" lang="ar">نهضة المحروسة</span><span class="ta-en" lang="en">Nahdet El Mahrousa</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/ibtikar.webp" alt="Ibtikar Khana"><div class="name"><span class="ta-ar" lang="ar">ابتكار خانة</span><span class="ta-en" lang="en">Ibtikar Khana</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/masr_elkheir.webp" alt="مؤسسة مصر الخير"><div class="name"><span class="ta-ar" lang="ar">مؤسسة مصر الخير</span><span class="ta-en" lang="en">Misr El Kheir Foundation</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/basita.webp" alt="Basita"><div class="name"><span class="ta-ar" lang="ar">Basita</span><span class="ta-en" lang="en">Basita</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/misr_public_library.webp" alt="مكتبة مصر العامة"><div class="name"><span class="ta-ar" lang="ar">مكتبة مصر العامة</span><span class="ta-en" lang="en">Misr Public Library</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/maraya.webp" alt="مرايا"><div class="name"><span class="ta-ar" lang="ar">مرايا</span><span class="ta-en" lang="en">Maraya</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/sudoku.webp" alt="Sudoku for Arts"><div class="name"><span class="ta-ar" lang="ar">Sudoku for Arts</span><span class="ta-en" lang="en">Sudoku for Arts</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/supreme_culture.webp" alt="المجلس الأعلى للثقافة"><div class="name"><span class="ta-ar" lang="ar">المجلس الأعلى للثقافة</span><span class="ta-en" lang="en">Supreme Council of Culture</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/culture_palaces.webp" alt="الهيئة العامة لقصور الثقافة"><div class="name"><span class="ta-ar" lang="ar">الهيئة العامة لقصور الثقافة</span><span class="ta-en" lang="en">General Authority for Cultural Palaces</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/jetp.webp" alt="JETP"><div class="name"><span class="ta-ar" lang="ar">JETP</span><span class="ta-en" lang="en">JETP</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/directions.webp" alt="Directions"><div class="name"><span class="ta-ar" lang="ar">Directions</span><span class="ta-en" lang="en">Directions</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/pukka.webp" alt="PUKKA Marketing Agency"><div class="name"><span class="ta-ar" lang="ar">PUKKA Marketing Agency</span><span class="ta-en" lang="en">PUKKA Marketing Agency</span></div></article>
+<article class="logo-card"><img decoding="async" loading="lazy" src="images/partners/agora.webp" alt="AGORA Cultural Development"><div class="name"><span class="ta-ar" lang="ar">AGORA<small>للتنمية الثقافية</small></span><span class="ta-en" lang="en">AGORA<small>Cultural Development</small></span></div></article>
 </div></div></section>
 
 <section class="container"><div class="cta"><h2 data-ar="هل ترغب في أن تصبح شريكًا؟" data-en="Would you like to become a partner?">هل ترغب في أن تصبح شريكًا؟<span>WOULD YOU LIKE TO BECOME A PARTNER?</span></h2><p data-ar="نرحب بالمؤسسات والجهات التي تشاركنا الإيمان بدور الفن والثقافة في خلق الفرص وبناء مشهد ثقافي أكثر استدامة في صعيد مصر." data-en="We welcome institutions and organizations that share our belief in the role of arts and culture in creating opportunities and building a more sustainable cultural scene in Upper Egypt.">نرحب بالمؤسسات والجهات التي تشاركنا الإيمان بدور الفن والثقافة في خلق الفرص وبناء مشهد ثقافي أكثر استدامة في صعيد مصر.</p><a href="contact.html" data-ar="تواصل معنا" data-en="Get in touch">تواصل معنا</a></div></section>
@@ -153,30 +158,30 @@ img{max-width:100%;height:auto}
     </div>
     <div>
       <h3><span class="ta-ar" lang="ar">استكشف</span><span class="ta-en" lang="en">Explore</span></h3>
-      <a href="index.html">الرئيسية / Home</a>
-      <a href="about.html">عنّا / About</a>
-      <a href="troupe.html">الفرقة / Troupe</a>
-      <a href="productions.html">العروض / Productions</a>
-      <a href="academy.html">الأكاديمية / Academy</a>
-      <a href="cinema-school.html">مدرسة السينما / Cinema School</a>
-      <a href="incubator.html">الحاضنة / Incubator</a>
-      <a href="festival.html">المهرجان / Festival</a>
-      <a href="sahara.html">صحارة / Sahara</a>
-      <a href="basement-theatre.html">مسرح البدروم / Basement Theatre</a>
-      <a href="partners.html">شركاؤنا / Partners</a>
-      <a href="contact.html">تواصل / Contact</a>
+      <a href="index.html"><span class="ta-ar" lang="ar">الرئيسية</span><span class="ta-en" lang="en">Home</span></a>
+      <a href="about.html"><span class="ta-ar" lang="ar">عنّا</span><span class="ta-en" lang="en">About</span></a>
+      <a href="troupe.html"><span class="ta-ar" lang="ar">الفرقة</span><span class="ta-en" lang="en">Troupe</span></a>
+      <a href="productions.html"><span class="ta-ar" lang="ar">العروض</span><span class="ta-en" lang="en">Productions</span></a>
+      <a href="academy.html"><span class="ta-ar" lang="ar">الأكاديمية</span><span class="ta-en" lang="en">Academy</span></a>
+      <a href="cinema-school.html"><span class="ta-ar" lang="ar">مدرسة السينما</span><span class="ta-en" lang="en">Cinema School</span></a>
+      <a href="incubator.html"><span class="ta-ar" lang="ar">الحاضنة</span><span class="ta-en" lang="en">Incubator</span></a>
+      <a href="festival.html"><span class="ta-ar" lang="ar">المهرجان</span><span class="ta-en" lang="en">Festival</span></a>
+      <a href="sahara.html"><span class="ta-ar" lang="ar">صحارة</span><span class="ta-en" lang="en">Sahara</span></a>
+<a href="lumieres.html"><span class="ta-ar" lang="ar">أضواء</span><span class="ta-en" lang="en">Lumières</span></a>
+      <a href="basement-theatre.html"><span class="ta-ar" lang="ar">مسرح البدروم</span><span class="ta-en" lang="en">Basement Theatre</span></a>
+      <a href="partners.html"><span class="ta-ar" lang="ar">شركاؤنا</span><span class="ta-en" lang="en">Partners</span></a>
+      <a href="contact.html"><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Contact</span></a>
     </div>
     <div>
       <h3><span class="ta-ar" lang="ar">أرشيف المهرجان</span><span class="ta-en" lang="en">Festival Archive</span></h3>
-      <a href="festival-2022.html">2022 · الدورة الأولى / 1st Edition</a>
-      <a href="festival-2024.html">2024 · الدورة الثانية / 2nd Edition</a>
-      <a href="festival-2025.html">2025 · الدورة الثالثة / 3rd Edition</a>
-      <a href="festival-2027.html">2027 · الدورة الرابعة (قادمة) / 4th Edition (Upcoming)</a>
-      <a href="lumieres.html">Lumières / أضواء</a>
-    </div>
+      <a href="festival-2022.html"><span class="ta-ar" lang="ar">2022 · الدورة الأولى</span><span class="ta-en" lang="en">1st Edition</span></a>
+      <a href="festival-2024.html"><span class="ta-ar" lang="ar">2024 · الدورة الثانية</span><span class="ta-en" lang="en">2nd Edition</span></a>
+      <a href="festival-2025.html"><span class="ta-ar" lang="ar">2025 · الدورة الثالثة</span><span class="ta-en" lang="en">3rd Edition</span></a>
+      <a href="festival-2027.html"><span class="ta-ar" lang="ar">2027 · الدورة الرابعة (قادمة)</span><span class="ta-en" lang="en">4th Edition (Upcoming)</span></a>
+      </div>
     <div>
       <h3><span class="ta-ar" lang="ar">تواصل</span><span class="ta-en" lang="en">Connect</span></h3>
-      <p>Minya, Egypt</p>
+      <p><span class="ta-ar" lang="ar">المنيا، مصر</span><span class="ta-en" lang="en">Minya, Egypt</span></p>
       <a href="mailto:teatroalsaeed.info@gmail.com">teatroalsaeed.info@gmail.com</a>
       <div class="ta-social">
         <a href="https://www.facebook.com/TeatroAlSaeed" target="_blank" rel="noopener">Facebook</a>
@@ -187,7 +192,7 @@ img{max-width:100%;height:auto}
     </div>
   </div>
   <div class="ta-footer-bottom">
-    <span>© <span id="year"></span> Teatro Alsaeed</span>
+    <span>© <span id="year"></span> <span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">Teatro Alsaeed</span></span>
     <span class="ta-ar" lang="ar">من المنيا إلى العالم</span><span class="ta-en" lang="en">From Minya to the world</span>
   </div>
 </footer>
@@ -220,6 +225,8 @@ document.addEventListener('teatro:lang',function(e){
     var btn=d.getElementById('langBtn');
     if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'التبديل إلى العربية':'Switch to English');}
     if(save){try{KEYS.forEach(function(k){localStorage.setItem(k,lang);});}catch(e){}}
+    var tm=d.querySelector('meta[name="x-title-en"]');
+    if(tm){if(!window.__arTitle)window.__arTitle=d.title;d.title=en?tm.content:window.__arTitle;}
     d.dispatchEvent(new CustomEvent('teatro:lang',{detail:{lang:lang}}));
   }
   window.TeatroLang={get:function(){return b.classList.contains('site-en')?'en':'ar';},set:function(l){apply(l==='en'?'en':'ar',true);}};
@@ -245,7 +252,7 @@ document.addEventListener('teatro:lang',function(e){
     if(cur==='')cur='index.html';
     nav.querySelectorAll('a[href]').forEach(function(a){
       var h=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
-      if(h===cur||((cur.indexOf('festival-')===0||cur==='lumieres.html')&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
+      if(h===cur||(cur.indexOf('festival-')===0&&h==='festival.html')){a.classList.add('active');a.setAttribute('aria-current','page');var g=a.closest('.ta-dd');if(g)g.classList.add('has-active');}
     });
   }
   function navH(){if(bar)root.style.setProperty('--ta-nav-h',bar.offsetHeight+'px');}
