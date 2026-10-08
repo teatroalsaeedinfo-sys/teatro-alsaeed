@@ -23,3 +23,9 @@ lang بدل langBtn، سكربت واحد للغة والقائمة، حذف ا�
 
 ## للنشر
 انسخ كل الملفات فوق ملفات الريبو (HTML + sitemap.xml + robots.txt)، وفولدر images وlogo.png يفضلوا زي ما هم.
+
+## روابط نضيفة (URLs)
+- كل الروابط من غير `.html`: `/about` بدل `about.html`، و`/` للرئيسية.
+- صفحات المهرجان: `/mitf` + `/mitf-2022` `/mitf-2024` `/mitf-2025` `/mitf-2027` (أسماء الملفات اتغيرت: festival*.html → mitf*.html).
+- canonical وog:url وsitemap.xml اتحدّثوا. أُضيف `_redirects` (Netlify / Cloudflare Pages) لتحويل الروابط القديمة 301.
+- مهم: الاستضافة لازم تدعم الروابط من غير امتداد (GitHub Pages / Netlify / Cloudflare Pages بيدعموها تلقائيًا).

@@ -1,0 +1,23 @@
+# Netlify / Cloudflare Pages: 301 from old URLs to the new clean ones
+/festival.html        /mitf        301
+/festival-2022.html   /mitf-2022   301
+/festival-2024.html   /mitf-2024   301
+/festival-2025.html   /mitf-2025   301
+/festival-2027.html   /mitf-2027   301
+/festival             /mitf        301
+/festival-2022        /mitf-2022   301
+/festival-2024        /mitf-2024   301
+/festival-2025        /mitf-2025   301
+/festival-2027        /mitf-2027   301
+/index.html           /            301
+/about.html           /about       301
+/academy.html         /academy     301
+/basement-theatre.html /basement-theatre 301
+/cinema-school.html   /cinema-school 301
+/contact.html         /contact     301
+/incubator.html       /incubator   301
+/lumieres.html        /lumieres    301
+/partners.html        /partners    301
+/productions.html     /productions 301
+/sahara.html          /sahara      301
+/troupe.html          /troupe      301
