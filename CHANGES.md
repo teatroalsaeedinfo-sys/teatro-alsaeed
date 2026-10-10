@@ -29,3 +29,11 @@ lang بدل langBtn، سكربت واحد للغة والقائمة، حذف ا�
 - صفحات المهرجان: `/mitf` + `/mitf-2022` `/mitf-2024` `/mitf-2025` `/mitf-2027` (أسماء الملفات اتغيرت: festival*.html → mitf*.html).
 - canonical وog:url وsitemap.xml اتحدّثوا. أُضيف `_redirects` (Netlify / Cloudflare Pages) لتحويل الروابط القديمة 301.
 - مهم: الاستضافة لازم تدعم الروابط من غير امتداد (GitHub Pages / Netlify / Cloudflare Pages بيدعموها تلقائيًا).
+
+## مراجعة شاملة (أكتوبر 2026)
+- إضافة `troupe.html` (كانت 404) و`404.html`.
+- اللوجو: `images/logo.png` + `favicon.png` + `apple-touch-icon.png` + `images/og-default.jpg`.
+- صور العروض: أسماء إنجليزي في `images/productions/` (راجع تقرير الصور).
+- تحسين الصور: PNG→WebP، تصغير الكبير، تصحيح صيغ خاطئة؛ إضافة width/height وlazy loading.
+- توحيد نافبار/فوتر mitf-2025، إضافة SEO ناقص، إصلاح سكرول أفقي بالموبايل، إزالة فراغ زيادة تحت النافبار.
+- روابط خارجية: rel="noopener".
