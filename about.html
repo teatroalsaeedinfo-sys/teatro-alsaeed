@@ -81,7 +81,7 @@ body.english .lang-en{display:block!important}
   background:
     linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.28)),
     linear-gradient(0deg,rgba(0,0,0,.96),transparent 65%),
-    url("images/about.jpg") center/cover no-repeat;
+    url("/images/about.jpg") center/cover no-repeat;
   transform:scale(1.025);
 }
 .hero-content{
@@ -181,7 +181,7 @@ body.english .lang-en{display:block!important}
   min-height:650px;display:flex;align-items:center;
   background:
     linear-gradient(90deg,rgba(0,0,0,.92),rgba(0,0,0,.55)),
-    url("images/productions/before-midnight.jpg") center/cover fixed no-repeat;
+    url("/images/productions/before-midnight.jpg") center/cover fixed no-repeat;
 }
 .manifesto-inner{max-width:1100px}
 .manifesto h2{
@@ -192,12 +192,12 @@ body.english .lang-en{display:block!important}
 .manifesto p{max-width:680px;margin-top:30px;color:#d0d4d4;font-size:18px;line-height:2}
 
 .timeline-wrap{margin-top:65px}
-.timeline{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.timeline{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px 22px}
 .timeline:before{
   content:"";position:absolute;top:17px;left:4%;right:4%;
   height:1px;background:#333
 }
-.milestone{position:relative;padding-top:55px;padding-inline-end:30px}
+.milestone{position:relative;padding-top:55px;padding-inline-end:18px;min-width:0}
 .dot{
   position:absolute;top:0;inset-inline-start:0;
   width:35px;height:35px;border:1px solid var(--accent);
@@ -230,7 +230,7 @@ footer p{color:#888;font-size:13px}
   .stats{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(3){border-top:1px solid #d3d5d5}
   .pillars{grid-template-columns:1fr}
-  .timeline{grid-template-columns:repeat(2,1fr);gap:35px}
+  .timeline{grid-template-columns:repeat(2,minmax(0,1fr));gap:35px 22px}
   .timeline:before{display:none}
 }
 @media(max-width:800px){
@@ -257,11 +257,12 @@ footer p{color:#888;font-size:13px}
 }
 @media(max-width:520px){
   .story-image,.story-image img{min-height:390px}
+  .milestone{padding-inline-end:0}
   .story-year{font-size:54px}
   .stats{grid-template-columns:1fr}
   .stat{border-inline-start:0;border-top:1px solid #d3d5d5}
   .stat:first-child{border-top:0}
-  .timeline{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr;gap:28px}
   .pillar{min-height:260px}
   .manifesto h2{font-size:43px}
 }
@@ -375,7 +376,7 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 <section class="section">
   <div class="container story">
     <div class="story-image">
-      <img width="1086" height="1495" loading="lazy" decoding="async" src="images/productions/before-midnight.jpg" alt="Teatro Alsaeed production">
+      <img width="1086" height="1495" loading="lazy" decoding="async" src="/images/basement/basement-before-01.jpg" alt="المساحة التي سبقت تأسيس مسرح البدروم">
       <div class="story-year">2014</div>
     </div>
 
@@ -435,7 +436,7 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
       <div class="stat"><strong>2014</strong><span class="ta-ar" lang="ar">بداية الحكاية</span><span class="ta-en" lang="en">The beginning</span></div>
       <div class="stat"><strong>600+</strong><span class="ta-ar" lang="ar">ليلة عرض مسرحي</span><span class="ta-en" lang="en">Performance nights</span></div>
       <div class="stat"><strong>23</strong><span class="ta-ar" lang="ar">دفعة أكاديمية تخرجت</span><span class="ta-en" lang="en">Graduated Academy groups</span></div>
-      <div class="stat"><strong>25</strong><span class="ta-ar" lang="ar">إنتاجًا مسرحيًا في الأرشيف</span><span class="ta-en" lang="en">Archived productions</span></div>
+      <div class="stat"><strong>30+</strong><span class="ta-ar" lang="ar">إنتاجًا مسرحيًا في الأرشيف</span><span class="ta-en" lang="en">Archived productions</span></div>
     </div>
   </div>
 </section>
@@ -445,8 +446,8 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
     <div class="kicker lang-ar" lang="ar">ماذا نفعل؟</div>
     <div class="kicker lang-en" lang="en">WHAT WE DO</div>
 
-    <h2 class="section-title lang-ar" lang="ar">أربع مساحات.<br>هدف واحد.</h2>
-    <h2 class="section-title lang-en" lang="en">Four spaces.<br>One purpose.</h2>
+    <h2 class="section-title lang-ar" lang="ar">ثلاث مساحات.<br>هدف واحد.</h2>
+    <h2 class="section-title lang-en" lang="en">Three spaces.<br>One purpose.</h2>
 
     <p class="section-lead lang-ar" lang="ar">
       نعمل عبر مسارات متكاملة تجعل الفن ممارسة مستمرة، من الفكرة والتدريب
@@ -528,25 +529,47 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
         <div class="milestone">
           <div class="dot">14</div>
           <strong class="ta-ar" lang="ar">2014</strong><strong class="ta-en" lang="en">2014</strong>
-          <span class="ta-ar" lang="ar">تأسيس الفرقة</span><span class="ta-en" lang="en">Troupe founded</span>
+          <span class="ta-ar" lang="ar">تأسيس فرقة تياترو الصعيد المستقلة</span><span class="ta-en" lang="en">Independent Teatro Alsaeed troupe founded</span>
+        </div>
+        <div class="milestone">
+          <div class="dot">16</div>
+          <strong class="ta-ar" lang="ar">2016</strong><strong class="ta-en" lang="en">2016</strong>
+          <span class="ta-ar" lang="ar">تأسيس أكاديمية تياترو الصعيد</span><span class="ta-en" lang="en">Teatro Alsaeed Academy founded</span>
+        </div>
+        <div class="milestone">
+          <div class="dot">17</div>
+          <strong class="ta-ar" lang="ar">2017</strong><strong class="ta-en" lang="en">2017</strong>
+          <span class="ta-ar" lang="ar">تأسيس أول مساحة مسرحية لتياترو الصعيد</span><span class="ta-en" lang="en">First Teatro Alsaeed theatre space established</span>
+        </div>
+        <div class="milestone">
+          <div class="dot">20</div>
+          <strong class="ta-ar" lang="ar">2020</strong><strong class="ta-en" lang="en">2020</strong>
+          <span class="ta-ar" lang="ar">مأسسة تياترو الصعيد</span><span class="ta-en" lang="en">Teatro Alsaeed institutionalized</span>
         </div>
         <div class="milestone">
           <div class="dot">22</div>
           <strong class="ta-ar" lang="ar">2022</strong><strong class="ta-en" lang="en">2022</strong>
-          <span class="ta-ar" lang="ar">انطلاق مهرجان المنيا للعروض المسرحية القصيرة</span>
-          <span class="ta-en" lang="en">Minya Short Theatre Festival</span>
+          <span class="ta-ar" lang="ar">تأسيس مساحة مسرح تياترو الصعيد «مسرح البدروم»</span><span class="ta-en" lang="en">Teatro Alsaeed's theatre space, Basement Theatre, established</span>
+        </div>
+        <div class="milestone">
+          <div class="dot">22</div>
+          <strong class="ta-ar" lang="ar">2022</strong><strong class="ta-en" lang="en">2022</strong>
+          <span class="ta-ar" lang="ar">تأسيس وإطلاق مهرجان المنيا للعروض المسرحية القصيرة</span><span class="ta-en" lang="en">Minya Short Theatre Festival founded and launched</span>
+        </div>
+        <div class="milestone">
+          <div class="dot">23</div>
+          <strong class="ta-ar" lang="ar">2023</strong><strong class="ta-en" lang="en">2023</strong>
+          <span class="ta-ar" lang="ar">إطلاق حاضنة تياترو الصعيد للفنون الأدائية</span><span class="ta-en" lang="en">Teatro Alsaeed Performing Arts Incubator launched</span>
         </div>
         <div class="milestone">
           <div class="dot">24</div>
           <strong class="ta-ar" lang="ar">2024</strong><strong class="ta-en" lang="en">2024</strong>
-          <span class="ta-ar" lang="ar">مهرجان المنيا للعروض المسرحية</span>
-          <span class="ta-en" lang="en">Minya Theatre Festival</span>
+          <span class="ta-ar" lang="ar">مهرجان المنيا للعروض المسرحية</span><span class="ta-en" lang="en">Minya Theatre Festival</span>
         </div>
         <div class="milestone">
           <div class="dot">25</div>
           <strong class="ta-ar" lang="ar">2025</strong><strong class="ta-en" lang="en">2025</strong>
-          <span class="ta-ar" lang="ar">مهرجان المنيا الدولي للمسرح</span>
-          <span class="ta-en" lang="en">Minya International Theatre Festival</span>
+          <span class="ta-ar" lang="ar">مهرجان المنيا المسرحي الدولي</span><span class="ta-en" lang="en">Minya International Theatre Festival</span>
         </div>
       </div>
     </div>
