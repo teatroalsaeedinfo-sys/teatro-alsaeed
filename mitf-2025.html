@@ -98,6 +98,22 @@ footer{padding:55px 0 30px;background:#050606}.footer-top{display:flex;justify-c
 .shortlist .show .country,.shortlist .show h4,.shortlist .show p{margin-left:22px;margin-right:22px;}
 @media(max-width:600px){.shortlist{grid-template-columns:1fr 1fr}.shortlist .show .show-photo{aspect-ratio:3/4;}}
 
+
+
+/* Selected show cards: square frame, show the complete image without cropping */
+.shortlist .show { min-width:0; overflow:hidden; }
+.shortlist .show-photo {
+  display:block;
+  width:100%;
+  aspect-ratio:1 / 1;
+  height:auto;
+  object-fit:contain;
+  object-position:center;
+  background:#e9eeee;
+  margin:0 0 16px;
+  border-radius:4px;
+}
+
 </style>
 
 <style id="img-dims">:where(img[width][height]){height:auto}</style>
@@ -200,20 +216,19 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 
 <section class="section light"><div class="container"><div class="section-title"><div class="kicker">OFFICIAL COMPETITION</div><h2 class="lang-ar">ثلاث مساحات<br><span>لثلاثة أشكال من المسرح.</span></h2><h2 class="lang-en">Three spaces.<br><span>Three theatre forms.</span></h2><p class="lang-ar">قسّمت الإدارة المسابقة الرسمية إلى ثلاثة مسارات متخصصة: مسرح العلبة الإيطالية، المونودراما، والفضاءات غير التقليدية.</p><p class="lang-en">The official competition was divided into three specialized tracks: Proscenium Theatre, Monodrama and Non-Traditional Theatre Spaces.</p></div><div class="competitions"><article class="competition"><div class="num">01</div><div class="tag">PROSCENIUM</div><h3 class="lang-ar">مسرح العلبة الإيطالية</h3><h3 class="lang-en">Proscenium Theatre</h3><p class="lang-ar">مسار للعروض التي تقدم داخل الشكل المسرحي التقليدي، واستضاف مسرح المحافظة ومسرح الجزويت عددًا من المنافسات.</p><p class="lang-en">The traditional stage track, hosted across the Governorate Theatre and Jesuit Theatre.</p><strong>8 <span class="lang-ar">عروض</span><span class="lang-en">shows</span></strong></article><article class="competition"><div class="num">02</div><div class="tag">MONODRAMA</div><h3 class="lang-ar">المونودراما</h3><h3 class="lang-en">Monodrama</h3><p class="lang-ar">مسار متخصص في عروض الممثل الواحد، بما يتيح تركيزًا أكبر على الأداء والحضور الفردي.</p><p class="lang-en">A dedicated track for solo performances, emphasizing the actor and individual stage presence.</p><strong>8 <span class="lang-ar">عروض</span><span class="lang-en">shows</span></strong></article><article class="competition"><div class="num">03</div><div class="tag">OPEN SPACES</div><h3 class="lang-ar">الفضاءات غير التقليدية</h3><h3 class="lang-en">Non-Traditional Spaces</h3><p class="lang-ar">مسابقة جديدة تشجع الفرق على التفكير خارج شكل المسرح التقليدي واستثمار الأماكن البديلة.</p><p class="lang-en">A new competition encouraging theatre companies to explore alternative spaces beyond the classical stage.</p><strong>5 <span class="lang-ar">عروض</span><span class="lang-en">shows</span></strong></article></div></div></section>
 
-<section class="section dark"><div class="container"><div class="section-title"><div class="kicker">SELECTED PERFORMANCES</div><h2 class="lang-ar">21 عرضًا<br><span style="color:var(--a)">في المسابقة الرسمية.</span></h2><h2 class="lang-en">21 productions<br><span style="color:var(--a)">in official competition.</span></h2><p class="lang-ar">من بين 171 عرضًا متقدمًا من 11 دولة عربية، اختارت الإدارة 21 عرضًا للمسابقة الرسمية.</p><p class="lang-en">From 171 submissions from 11 Arab countries, 21 productions were selected for the official competition.</p></div><div class="shortlist">
+<section class="section dark"><div class="container"><div class="section-title"><div class="kicker">SELECTED PERFORMANCES</div><h2 class="lang-ar">20 عرضًا<br><span style="color:var(--a)">في المسابقة الرسمية.</span></h2><h2 class="lang-en">20 productions<br><span style="color:var(--a)">in official competition.</span></h2><p class="lang-ar">من بين 171 عرضًا متقدمًا من 11 دولة عربية، اختارت الإدارة 20 عرضًا للمسابقة الرسمية.</p><p class="lang-en">From 171 submissions from 11 Arab countries, 20 productions were selected for the official competition.</p></div><div class="shortlist">
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/ekos.jpg" alt="إيكوس" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">OMAN · PROSCENIUM</div><h4>إيكوس</h4><p>Ecos</p></div>
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/hikayat-al-mahatat.jpg" alt="حكايات المحطات" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">OMAN · PROSCENIUM</div><h4>حكايات المحطات</h4><p>Tales of the Stations</p></div>
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/al-wahsh.jpg" alt="الوحش" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">EGYPT · PROSCENIUM</div><h4>الوحش</h4><p>The Beast</p></div>
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/al-shak.jpg" alt="الشك" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">EGYPT · PROSCENIUM</div><h4>الشك</h4><p>Doubt</p></div>
-<div class="show"><div class="country">EGYPT · PROSCENIUM</div><h4>تريفوجا</h4><p>Trifoga</p></div>
-<div class="show"><div class="country">EGYPT · PROSCENIUM</div><h4>ظلال</h4><p>Shadows</p></div>
+<div class="show"><img class="show-photo" src="/images/festival/2025/shows/trifoga.jpg" alt="تريفوجا" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">EGYPT · PROSCENIUM</div><h4>تريفوجا</h4><p>Trifoga</p></div>
+<div class="show"><img class="show-photo" src="/images/festival/2025/shows/delal.jpg" alt="ظلال" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">EGYPT · PROSCENIUM</div><h4>ظلال</h4><p>Shadows</p></div>
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/yameen-fi-awel-shmal.jpg" alt="يمين في أول شمال" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">EGYPT · PROSCENIUM</div><h4>يمين في أول شمال</h4><p>Yameen Fe Awel Shmal</p></div>
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/raghba-taht-shagar-al-dardar.jpg" alt="رغبة تحت شجر الدردار" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">EGYPT · PROSCENIUM</div><h4>رغبة تحت شجر الدردار</h4><p>Desire Under the Elm Tree</p></div>
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/manajat-al-qorban.jpg" alt="مناجاة القربان" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">JORDAN · MONODRAMA</div><h4>مناجاة القربان</h4><p>The Sacrificial Prayer</p></div>
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/al-tariqa-al-madmoona.jpg" alt="الطريقة المضمونة للتخلص من البقع" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">EGYPT · MONODRAMA</div><h4>الطريقة المضمونة للتخلص من البقع</h4><p>The Sure Way to Get Rid of Stains</p></div>
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/ya-khof-akka.jpg" alt="يا خوف عكا من هديرك يا بحر" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">PALESTINE · MONODRAMA</div><h4>يا خوف عكا من هديرك يا بحر</h4><p>Acre, Fear the Roar of Your Sea</p></div>
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/yago.jpg" alt="ياغو" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">EGYPT · MONODRAMA</div><h4>ياغو</h4><p>Iago</p></div>
-<div class="show"><div class="country">IRAQ · MONODRAMA</div><h4>قوبيا</h4><p>Qoubia</p></div>
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/al-waseed.jpg" alt="الوصيد" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">LIBYA · MONODRAMA</div><h4>الوصيد</h4><p>Al-Waseed</p></div>
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/ebnet-al-sayeda-hania.jpg" alt="ابنة السيدة هانيا" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">EGYPT · MONODRAMA</div><h4>ابنة السيدة هانيا</h4><p>Mrs. Hania’s Daughter</p></div>
 <div class="show"><img class="show-photo" src="/images/festival/2025/shows/al-khayata.jpg" alt="الخياطة" loading="lazy" decoding="async" onerror="this.style.display='none'"><div class="country">MOROCCO · MONODRAMA</div><h4>الخياطة</h4><p>The Tailor</p></div>
