@@ -584,6 +584,22 @@ top:70px;
 }
 
 }
+
+/* ACADEMY ORIGIN STORY */
+.origin-story{background:#0b0c0c;color:#fff}
+.origin-story .text{color:#b8c0c0;line-height:1.95}
+.origin-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin:42px 0}
+.origin-card{margin:0;background:#151818;border:1px solid rgba(255,255,255,.1);overflow:hidden}
+.origin-card img{width:100%;height:clamp(260px,34vw,440px);object-fit:cover}
+.origin-card figcaption{padding:22px 24px 26px;display:flex;flex-direction:column;gap:7px}
+.origin-card figcaption strong{font-size:20px;color:#fff}
+.origin-card figcaption span{font-size:14px;color:#b8c0c0}
+.origin-card .origin-date{color:#2bb3b1;font:800 22px Inter,sans-serif}
+.origin-copy{max-width:900px;margin:12px auto 0}
+.origin-copy h3{font-size:clamp(24px,3vw,34px);line-height:1.45;margin-bottom:18px}
+.origin-copy p+p{margin-top:15px}
+@media(max-width:700px){.origin-grid{grid-template-columns:1fr;gap:18px}.origin-card img{height:auto;max-height:420px;object-fit:cover}.origin-card figcaption{padding:18px}}
+
 </style>
 
 
@@ -753,11 +769,7 @@ From the earliest groups to the latest graduating groups.
 <span class="ta-en" lang="en">Graduated Groups</span>
 </div>
 
-<div class="stat">
-<strong>A–W</strong>
-<span class="ta-ar" lang="ar">نظام تسمية المجموعات</span>
-<span class="ta-en" lang="en">Group Naming System</span>
-</div>
+
 
 <div class="stat">
 <strong>2014</strong>
@@ -778,66 +790,40 @@ From the earliest groups to the latest graduating groups.
 </section>
 
 
-<section class="section dark">
-
+<section class="section dark origin-story" id="origin-story">
 <div class="container">
-
-<div class="kicker ar" lang="ar">رحلة المجموعات</div>
-<div class="kicker en" lang="en">THE GROUP JOURNEY</div>
-
-<h2 class="title ar" lang="ar">من A إلى W</h2>
-<h2 class="title en" lang="en">From A to W</h2>
-
-<p class="text ar" lang="ar">
-في بداية رحلة الأكاديمية كانت المجموعات تحمل أسماء الحروف الإنجليزية، ثم استمر الترقيم بالأرقام؛ فالمجموعة C هي المجموعة الثالثة، وصولًا إلى المجموعة 23.
-</p>
-
-<p class="text en" lang="en">
-The Academy's early groups were identified by English letters before continuing with numerical group numbers.
-</p>
-
-<div class="timeline">
-
-<div class="milestone">
-<div class="dot">A</div>
-<strong class="ta-ar" lang="ar">المجموعة 1</strong>
-<strong class="ta-en" lang="en">Group 1</strong>
+  <div class="kicker ar" lang="ar">حكاية البداية</div>
+  <div class="kicker en" lang="en">THE BEGINNING</div>
+  <h2 class="title ta-ar" lang="ar">من الوصول إلى الناس… إلى تأسيس بيت للتدريب المسرحي</h2>
+  <h2 class="title ta-en" lang="en">From reaching people to building a home for theatre training</h2>
+  <p class="text ta-ar" lang="ar">في بداياتنا، لم يكن لدى تياترو الصعيد مقر ثابت للتدريب، لذلك كنا نتحرك إلى مراكز المتدربين لنصل إلى الشباب الشغوف بالمسرح في أماكنهم. كانت الفكرة أن تكون فرصة التعلّم أقرب إلى الناس، حتى قبل أن يتوفر لنا مكان يجمعهم.</p>
+  <p class="text ta-en" lang="en">In the early days, Teatro Alsaeed did not have a permanent training venue. We travelled to trainees in their own centres, reaching young people who were passionate about theatre where they lived. The idea was to bring learning closer to people, even before we had a place of our own.</p>
+  <div class="origin-grid">
+    <figure class="origin-card">
+      <img src="/images/academy-origin-outreach.jpg" alt="تدريب مسرحي للشغوفين بالفن في مراكزهم قبل وجود مقر ثابت للأكاديمية" loading="lazy">
+      <figcaption>
+        <strong class="ta-ar" lang="ar">قبل وجود المقر</strong><strong class="ta-en" lang="en">Before the first venue</strong>
+        <span class="ta-ar" lang="ar">كنا نذهب إلى المتدربين ونبدأ من الأماكن المتاحة.</span><span class="ta-en" lang="en">We went to the trainees and began wherever space was available.</span>
+      </figcaption>
+    </figure>
+    <figure class="origin-card">
+      <img src="/images/academy-first-group-2016.jpg" alt="أول يوم لمجموعة أكاديمية تياترو الصعيد في أول مقر بالمنيا، 29 أغسطس 2016" loading="lazy">
+      <figcaption>
+        <strong class="origin-date">29.08.2016</strong>
+        <strong class="ta-ar" lang="ar">أول مجموعة في أول مقر</strong><strong class="ta-en" lang="en">The first group at the first venue</strong>
+        <span class="ta-ar" lang="ar">في المنيا، بدأت مرحلة جديدة من رحلة الأكاديمية.</span><span class="ta-en" lang="en">In Minya, a new chapter in the Academy’s journey began.</span>
+      </figcaption>
+    </figure>
+  </div>
+  <div class="origin-copy">
+    <h3 class="ta-ar" lang="ar">لم نرد أن تكون مجرد ورشة تنتهي بعد أيام</h3>
+    <h3 class="ta-en" lang="en">We wanted more than a workshop that ended after a few days</h3>
+    <p class="text ta-ar" lang="ar">من خلال اختبارات التقدم للفرقة، لاحظنا أن كثيرًا من الشغوفين بالفن يمتلكون الرغبة، لكنهم يحتاجون إلى فرص تدريب وممارسة أكثر انتظامًا. لذلك قررنا في عام 2016 أن يكون التدريب رحلة تمتد لشهور، تمنح المتدرب وقتًا للتعلّم والتجريب وتطوير أدواته، لا مجرد ورشة قصيرة.</p>
+    <p class="text ta-en" lang="en">During auditions for the troupe, we noticed that many people had a genuine passion for the arts but lacked experience and access to regular training. In 2016, we decided to make training a journey lasting several months—giving participants time to learn, experiment and develop their skills, rather than attend a short workshop.</p>
+    <p class="text ta-ar" lang="ar">وتُختتم الرحلة بمشروع تخرج: عرض مسرحي يُقدَّم لأكثر من ليلة، ليعيش المتدرب تجربة العرض الحقيقية بما تتطلبه من التزام وعمل جماعي ومسؤولية فنية. أما المتميزون، فتُتاح لهم فرصة الانضمام إلى فرقة تياترو الصعيد ومواصلة رحلتهم على خشبة المسرح.</p>
+    <p class="text ta-en" lang="en">The journey concludes with a graduation project: a theatre production presented for more than one night, allowing trainees to experience the commitment, collaboration and artistic responsibility of a real production. Outstanding graduates have the opportunity to join Teatro Alsaeed’s troupe and continue their journey on stage.</p>
+  </div>
 </div>
-
-<div class="milestone">
-<div class="dot">C</div>
-<strong class="ta-ar" lang="ar">المجموعة 3</strong>
-<strong class="ta-en" lang="en">Group 3</strong>
-</div>
-
-<div class="milestone">
-<div class="dot">F</div>
-<strong class="ta-ar" lang="ar">المجموعة 6</strong>
-<strong class="ta-en" lang="en">Group 6</strong>
-</div>
-
-<div class="milestone">
-<div class="dot">J</div>
-<strong class="ta-ar" lang="ar">المجموعة 10</strong>
-<strong class="ta-en" lang="en">Group 10</strong>
-</div>
-
-<div class="milestone">
-<div class="dot">N</div>
-<strong class="ta-ar" lang="ar">المجموعة 14</strong>
-<strong class="ta-en" lang="en">Group 14</strong>
-</div>
-
-<div class="milestone">
-<div class="dot">23</div>
-<strong class="ta-ar" lang="ar">المجموعة 23</strong>
-<strong class="ta-en" lang="en">Group 23</strong>
-</div>
-
-</div>
-
-</div>
-
 </section>
 
 
