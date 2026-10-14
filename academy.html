@@ -654,6 +654,138 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 </style>
 
 <style id="img-dims">:where(img[width][height]){height:auto}</style>
+
+<style id="academy-redesign">
+:root{--academy-ink:#090b0c;--academy-panel:#111617;--academy-line:rgba(255,255,255,.13);--academy-paper:#f4f2ed;--academy-muted:#b7c0bf;--academy-accent:#2bb3b1;--academy-accent-light:#91e0d9}
+body{background:var(--academy-paper)}
+.academy-wrap{width:min(1200px,90%);margin-inline:auto}
+.academy-hero{min-height:min(790px,calc(100svh - 74px));position:relative;isolation:isolate;display:flex;align-items:center;overflow:hidden;background:#080a0a;color:#fff}
+.academy-hero-image,.academy-hero-shade{position:absolute;inset:0;z-index:-2}
+.academy-hero-image{background-image:url('/images/academy-hero.jpg');background-size:cover;background-position:center 38%;transform:scale(1.015)}
+.academy-hero-shade{z-index:-1;background:linear-gradient(90deg,rgba(4,7,7,.94) 0%,rgba(4,7,7,.76) 42%,rgba(4,7,7,.18) 100%),linear-gradient(0deg,rgba(4,7,7,.72),transparent 42%);border-bottom:1px solid rgba(255,255,255,.1)}
+.academy-hero-content{width:min(1200px,90%);margin:0 auto;padding:100px 0 70px;position:relative}
+.academy-label,.academy-overline{display:inline-block;color:var(--academy-accent-light);font-size:11px;font-weight:900;letter-spacing:2.4px;text-transform:uppercase}
+.academy-hero h1{font-size:clamp(48px,7vw,94px);font-weight:900;line-height:1.12;letter-spacing:-2px;margin:22px 0 24px;max-width:920px}
+.academy-hero h1 em,.academy-intro-heading h2 em,.academy-section-head h2 em,.academy-story-banner h2 em,.academy-final-cta h2 em{font-style:normal;color:var(--academy-accent-light)}
+.academy-hero-content>p{font-size:clamp(16px,1.7vw,20px);line-height:1.95;color:#e0e4e3;max-width:650px}
+.academy-hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+.academy-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:4px;font-weight:900;font-size:13px;transition:transform .2s,background .2s,border-color .2s}
+.academy-btn:hover{transform:translateY(-2px)}
+.academy-btn-primary{background:var(--academy-accent);color:#061010}
+.academy-btn-primary:hover{background:#80d9d2}
+.academy-btn-ghost{border:1px solid rgba(255,255,255,.42);color:#fff;background:rgba(0,0,0,.14)}
+.academy-btn-ghost:hover{border-color:var(--academy-accent-light)}
+.academy-hero-foot{display:flex;gap:28px;flex-wrap:wrap;margin-top:70px;padding-top:20px;border-top:1px solid rgba(255,255,255,.22);max-width:510px;font:800 10px Inter,sans-serif;letter-spacing:1.3px;color:#d1d8d7}
+.academy-hero-side{position:absolute;inset-inline-end:4%;bottom:14%;writing-mode:vertical-rl;color:rgba(255,255,255,.62);font-size:11px;font-weight:800;letter-spacing:2px;line-height:1.8}
+body:not(.site-en) .academy-hero-side{writing-mode:vertical-rl}
+.academy-intro-section{background:var(--academy-paper);padding:110px 0 0;color:#111716}
+.academy-intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:10%;align-items:center}
+.academy-intro-heading h2,.academy-section-head h2,.academy-story-banner h2,.academy-final-cta h2{font-size:clamp(35px,4.6vw,61px);line-height:1.24;letter-spacing:-1.2px;font-weight:900;margin-top:16px}
+.academy-intro-heading h2 em{color:#168e8b}
+.academy-intro-copy p{font-size:16px;line-height:2.05;color:#535d5a}
+.academy-text-link{display:inline-flex;gap:8px;align-items:center;margin-top:23px;font-size:13px;font-weight:900;color:#087f7b;border-bottom:1px solid rgba(8,127,123,.35);padding-bottom:5px}
+.academy-proof-row{display:grid;grid-template-columns:repeat(3,1fr);margin-top:85px;border-top:1px solid #d4d5ce;border-bottom:1px solid #d4d5ce}
+.academy-proof{padding:28px 24px;display:flex;flex-direction:column;gap:8px;border-inline-start:1px solid #d4d5ce}
+.academy-proof:first-child{border-inline-start:0}
+.academy-proof strong{font:900 clamp(32px,4vw,49px)/1 Inter,sans-serif;letter-spacing:-1.7px;color:#078985}
+.academy-proof .proof-word{font:900 clamp(23px,3vw,34px)/1.35 Cairo,Inter,sans-serif;letter-spacing:0}
+.academy-proof span{font-size:12px;color:#626a67;line-height:1.8}
+.academy-skills-section{background:var(--academy-ink);color:#fff;padding:110px 0}
+.academy-section-head{display:grid;grid-template-columns:1.1fr .75fr;gap:8%;align-items:end;margin-bottom:42px}
+.academy-section-head h2{margin-bottom:0}
+.academy-section-head h2 em{color:var(--academy-accent-light)}
+.academy-section-head>p{color:var(--academy-muted);font-size:15px;line-height:2;margin:0 0 4px}
+.academy-skill-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.academy-skill-card{position:relative;min-height:300px;padding:32px 28px 30px;background:linear-gradient(145deg,#171d1d,#101414);border:1px solid var(--academy-line);overflow:hidden;transition:transform .25s,border-color .25s}
+.academy-skill-card:hover{transform:translateY(-5px);border-color:rgba(43,179,177,.7)}
+.academy-skill-num{font:800 12px Inter,sans-serif;color:var(--academy-accent-light);letter-spacing:1px}
+.academy-skill-symbol{font-size:37px;color:var(--academy-accent);margin:35px 0 17px}
+.academy-skill-card h3,.academy-journey-card h3{font-size:23px;line-height:1.4;font-weight:900;margin-bottom:10px}
+.academy-skill-card p,.academy-journey-card p{color:#b8c1c0;font-size:13px;line-height:2;margin:0}
+.academy-path-section{background:#e8e7e0;padding:105px 0;color:#111716}
+.academy-path-head{margin-bottom:45px}
+.academy-path-head>p{color:#606965}
+.academy-path-head h2 em{color:#078985}
+.academy-journey-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;align-items:stretch}
+.academy-journey-card{position:relative;background:#fff;padding:30px 27px 32px;min-height:285px;border:1px solid #d8dad4;display:flex;flex-direction:column;justify-content:space-between;gap:34px;overflow:hidden}
+.academy-journey-index{font:800 12px Inter,sans-serif;color:#078985;letter-spacing:1px}
+.academy-journey-tag{display:inline-block;font-size:10px;font-weight:900;letter-spacing:1.8px;color:#078985;margin-bottom:8px}
+.academy-journey-card h3{color:#111716}
+.academy-journey-card p{color:#5d6562}
+.academy-journey-card.journey-featured{background:#0c1212;color:#fff;border-color:#0c1212}
+.journey-featured h3{color:#fff}
+.journey-featured p{color:#c0c9c8}
+.journey-featured .academy-journey-index,.journey-featured .academy-journey-tag{color:var(--academy-accent-light)}
+.journey-stage-mark{position:absolute;inset-inline-end:20px;top:17px;font-size:66px;color:rgba(43,179,177,.13);line-height:1}
+.academy-journey-note{display:flex;align-items:flex-start;gap:16px;margin-top:22px;padding:22px 25px;background:rgba(255,255,255,.48);border:1px solid #d5d8d1}
+.academy-note-mark{color:#078985;font-size:23px;line-height:1.4}
+.academy-journey-note p{font-size:13px;line-height:1.9;color:#4d5753;margin:0}
+.academy-story-banner{position:relative;overflow:hidden;background:#111716;color:#fff;padding:85px 0}
+.academy-story-banner:before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 10% 50%,rgba(43,179,177,.16),transparent 45%),linear-gradient(90deg,rgba(9,11,11,.3),transparent)}
+.academy-story-banner-inner{position:relative;z-index:1}
+.academy-story-banner h2{max-width:850px;margin-bottom:22px}
+.academy-story-banner p{max-width:790px;color:#c2cbca;font-size:15px;line-height:2}
+.academy-story-banner .academy-text-link{color:var(--academy-accent-light);border-color:rgba(145,224,217,.4)}
+.origin-story{background:#090c0c!important;padding:100px 0!important}
+.origin-story .container{max-width:1200px}
+.origin-story .kicker{color:var(--academy-accent-light)}
+.origin-story .title{max-width:850px;font-size:clamp(33px,4.2vw,53px);line-height:1.3}
+.origin-story .origin-copy{max-width:860px;margin:0}
+.origin-story .origin-copy p{font-size:14px;line-height:2}
+.origin-story .origin-grid{gap:18px;margin:35px 0}
+.origin-story .origin-card{background:#121818;border-color:rgba(255,255,255,.12)}
+.origin-story .origin-card img{height:clamp(250px,33vw,420px);filter:saturate(.83)}
+.origin-story .origin-card figcaption{padding:20px 22px}
+.origin-story .origin-card figcaption strong{font-size:17px}
+.origin-story .origin-card figcaption .origin-date{font-size:22px;color:var(--academy-accent-light)}
+.origin-copy-last{padding-top:10px}
+.origin-copy-last h3{font-size:clamp(23px,3vw,32px);margin-bottom:15px}
+.academy-final-cta{position:relative;overflow:hidden;text-align:center;padding:100px 0;background:#050707;color:#fff}
+.academy-final-cta-glow{position:absolute;width:500px;height:500px;top:-280px;left:50%;transform:translateX(-50%);border-radius:50%;background:rgba(43,179,177,.16);filter:blur(65px);pointer-events:none}
+.academy-final-cta-content{position:relative}
+.academy-final-cta h2{margin:16px auto 18px}
+.academy-final-cta h2 em{color:var(--academy-accent-light)}
+.academy-final-cta p{color:#b7c0bf;font-size:14px;line-height:2;max-width:650px;margin:0 auto}
+.academy-final-cta .academy-btn{margin-top:26px}
+@media(max-width:850px){
+ .academy-hero{min-height:700px;min-height:min(790px,calc(100svh - 68px));}
+ .academy-hero-content{padding:80px 0 55px}
+ .academy-hero h1{font-size:clamp(44px,8vw,70px)}
+ .academy-hero-side{display:none}
+ .academy-intro-grid{grid-template-columns:1fr;gap:25px}
+ .academy-proof-row{margin-top:55px}
+ .academy-section-head{grid-template-columns:1fr;gap:18px}
+ .academy-skill-grid,.academy-journey-grid{grid-template-columns:1fr}
+ .academy-skill-card{min-height:0}
+ .academy-skill-symbol{margin:23px 0 12px}
+ .academy-journey-card{min-height:0;gap:28px}
+ .academy-intro-section,.academy-skills-section,.academy-path-section{padding:78px 0}
+ .academy-story-banner{padding:70px 0}
+}
+@media(max-width:560px){
+ .academy-wrap,.academy-hero-content{width:calc(100% - 40px)}
+ .academy-hero{min-height:640px;min-height:calc(100svh - 68px)}
+ .academy-hero-image{background-position:58% center}
+ .academy-hero-shade{background:linear-gradient(90deg,rgba(4,7,7,.9),rgba(4,7,7,.55)),linear-gradient(0deg,rgba(4,7,7,.8),transparent 75%)}
+ .academy-hero h1{font-size:clamp(39px,11vw,55px);letter-spacing:-1.5px}
+ .academy-hero-content>p{font-size:15px}
+ .academy-hero-foot{margin-top:48px;gap:15px;font-size:9px}
+ .academy-proof-row{grid-template-columns:1fr}
+ .academy-proof{border-inline-start:0;border-top:1px solid #d4d5ce;padding:20px 5px}
+ .academy-proof:first-child{border-top:0}
+ .academy-proof strong{font-size:36px}
+ .academy-proof .proof-word{font-size:25px}
+ .academy-intro-heading h2,.academy-section-head h2,.academy-story-banner h2,.academy-final-cta h2{font-size:37px}
+ .academy-skill-card,.academy-journey-card{padding:25px 22px}
+ .academy-journey-note{padding:18px}
+ .origin-story{padding:75px 0!important}
+ .origin-story .origin-grid{grid-template-columns:1fr}
+ .origin-story .origin-card img{height:auto;max-height:380px}
+ .academy-final-cta{padding:78px 0}
+}
+@media(prefers-reduced-motion:reduce){.academy-btn,.academy-skill-card{transition:none}}
+</style>
+
 </head>
 
 <body>
@@ -677,118 +809,86 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 
 
 
-<section class="hero">
-
-<div class="hero-content">
-
-<div class="eyebrow ar" lang="ar">أكاديمية تياترو الصعيد</div>
-<div class="eyebrow en" lang="en">TEATRO ALSAEED ACADEMY</div>
-
-<h1>
-<span class="ta-ar" lang="ar">الأكاديمية</span>
-<span class="ta-en" lang="en">The Academy</span>
-</h1>
-
-<p class="ta-ar" lang="ar">
-رحلة مستمرة لصناعة الفنان وبناء جيل جديد من المبدعين في صعيد مصر.
-</p>
-
-<p class="ta-en" lang="en">
-A continuous journey of artistic training and empowering a new generation of creators in Upper Egypt.
-</p>
-
-</div>
-
+<section class="academy-hero">
+  <div class="academy-hero-image" aria-hidden="true"></div>
+  <div class="academy-hero-shade" aria-hidden="true"></div>
+  <div class="academy-hero-content">
+    <span class="academy-label ta-ar" lang="ar">أكاديمية تياترو الصعيد · المنيا</span>
+    <span class="academy-label ta-en" lang="en">TEATRO ALSAEED ACADEMY · MINYA</span>
+    <h1 class="ta-ar" lang="ar">مش بس هتتعلّم المسرح.<br><em>هتعيش التجربة.</em></h1>
+    <h1 class="ta-en" lang="en">Don’t just learn theatre.<br><em>Live the experience.</em></h1>
+    <p class="ta-ar" lang="ar">رحلة تبدأ بالشغف، وتبني أدواتك كممثل، وتمنحك فرصة للظهور أمام الجمهور على خشبة مسرح تياترو الصعيد.</p>
+    <p class="ta-en" lang="en">A journey that begins with passion, builds your acting skills, and gives you the chance to perform for audiences on Teatro Alsaeed’s stage.</p>
+    <div class="academy-hero-actions">
+      <a href="#academy-journey" class="academy-btn academy-btn-primary"><span class="ta-ar" lang="ar">اكتشف الرحلة <span aria-hidden="true">↓</span></span><span class="ta-en" lang="en">Explore the journey <span aria-hidden="true">↓</span></span></a>
+      <a href="#origin-story" class="academy-btn academy-btn-ghost"><span class="ta-ar" lang="ar">حكاية الأكاديمية</span><span class="ta-en" lang="en">Our story</span></a>
+    </div>
+    <div class="academy-hero-foot"><span>01 / <span class="ta-ar" lang="ar">تعلّم</span><span class="ta-en" lang="en">LEARN</span></span><span>02 / <span class="ta-ar" lang="ar">تطوّر</span><span class="ta-en" lang="en">GROW</span></span><span>03 / <span class="ta-ar" lang="ar">اعرض</span><span class="ta-en" lang="en">PERFORM</span></span></div>
+  </div>
+  <div class="academy-hero-side"><span class="ta-ar" lang="ar">من المنيا<br>إلى خشبة المسرح</span><span class="ta-en" lang="en">FROM MINYA<br>TO THE STAGE</span></div>
 </section>
 
-
-<section class="section">
-
-<div class="container intro">
-
-<div>
-
-<div class="kicker ar" lang="ar">عن الأكاديمية</div>
-<div class="kicker en" lang="en">ABOUT THE ACADEMY</div>
-
-<h2 class="ta-ar" lang="ar">
-من التدريب إلى <span>خشبة المسرح</span>
-</h2>
-
-<h2 class="ta-en" lang="en">
-From training to the <span>stage</span>
-</h2>
-
-<p class="ta-ar" lang="ar">
-أكاديمية تياترو الصعيد مساحة للتعلم والتجريب واكتشاف الإمكانات الفنية، تهدف إلى تطوير مهارات الشباب في الفنون الأدائية وربط المعرفة بالممارسة.
-</p>
-
-<p class="ta-en" lang="en">
-Teatro Alsaeed Academy is a space for learning, experimentation and artistic discovery, developing young people's performing arts skills and connecting knowledge with practice.
-</p>
-
-</div>
-
-<div class="number-box">
-
-<strong>23</strong>
-
-<h3 class="ta-ar" lang="ar">دفعة تخرجت</h3>
-<h3 class="ta-en" lang="en">Graduated Groups</h3>
-
-<p class="ta-ar" lang="ar">
-من المجموعات الأولى وحتى أحدث دفعات الأكاديمية.
-</p>
-
-<p class="ta-en" lang="en">
-From the earliest groups to the latest graduating groups.
-</p>
-
-</div>
-
-</div>
-
+<section class="academy-intro-section">
+  <div class="academy-wrap academy-intro-grid">
+    <div class="academy-intro-heading">
+      <span class="academy-overline ta-ar" lang="ar">فكرتنا ببساطة</span><span class="academy-overline ta-en" lang="en">THE IDEA</span>
+      <h2 class="ta-ar" lang="ar">الموهبة بداية.<br><em>لكنها مش النهاية.</em></h2>
+      <h2 class="ta-en" lang="en">Talent is the beginning.<br><em>Not the finish line.</em></h2>
+    </div>
+    <div class="academy-intro-copy">
+      <p class="ta-ar" lang="ar">في صعيد مصر، لاحظنا إن فيه شباب عندهم شغف حقيقي بالمسرح، لكن فرص التدريب المستمر والممارسة الفعلية كانت محدودة. علشان كده أسّسنا تجربة مختلفة: تدريب يمتد لشهور، ويتحوّل في نهايته إلى عرض مسرحي حقيقي أمام الجمهور.</p>
+      <p class="ta-en" lang="en">Across Upper Egypt, we met young people with a genuine passion for theatre but limited access to sustained training and real performance opportunities. So we built a different experience: months of learning that culminate in a real theatre production for an audience.</p>
+      <a href="#origin-story" class="academy-text-link"><span class="ta-ar" lang="ar">اقرأ حكاية البداية</span><span class="ta-en" lang="en">Read how it began</span><span aria-hidden="true"> ↗</span></a>
+    </div>
+  </div>
+  <div class="academy-wrap academy-proof-row">
+    <div class="academy-proof"><strong>2016</strong><span class="ta-ar" lang="ar">انطلاق أول مجموعة في مقر الأكاديمية بالمنيا</span><span class="ta-en" lang="en">The first group began at our Minya venue</span></div>
+    <div class="academy-proof"><strong>23</strong><span class="ta-ar" lang="ar">مجموعة تخرّجت من رحلة الأكاديمية</span><span class="ta-en" lang="en">Graduated Academy groups</span></div>
+    <div class="academy-proof"><strong class="proof-word ta-ar" lang="ar">موسم كامل</strong><strong class="proof-word ta-en" lang="en">A full season</strong><span class="ta-ar" lang="ar">للعرض المسرحي على خشبة تياترو الصعيد</span><span class="ta-en" lang="en">For the production on Teatro Alsaeed’s stage</span></div>
+  </div>
 </section>
 
-
-<section class="section stats">
-
-<div class="container">
-
-<div class="kicker ar" lang="ar">بالأرقام</div>
-<div class="kicker en" lang="en">BY THE NUMBERS</div>
-
-<h2 class="title ar" lang="ar">رحلة من الخبرة والتجربة</h2>
-<h2 class="title en" lang="en">A journey built on experience</h2>
-
-<div class="stats-grid">
-
-<div class="stat">
-<strong>23</strong>
-<span class="ta-ar" lang="ar">مجموعة تخرجت</span>
-<span class="ta-en" lang="en">Graduated Groups</span>
-</div>
-
-
-
-<div class="stat">
-<strong>2014</strong>
-<span class="ta-ar" lang="ar">بداية رحلة تياترو الصعيد</span>
-<span class="ta-en" lang="en">Beginning of the Journey</span>
-</div>
-
-<div class="stat">
-<strong>∞</strong>
-<span class="ta-ar" lang="ar">مساحة للتجريب</span>
-<span class="ta-en" lang="en">Space for Experimentation</span>
-</div>
-
-</div>
-
-</div>
-
+<section class="academy-skills-section" id="academy-journey">
+  <div class="academy-wrap">
+    <div class="academy-section-head">
+      <div><span class="academy-overline ta-ar" lang="ar">ماذا سيتعلّم المتدرب؟</span><span class="academy-overline ta-en" lang="en">WHAT YOU WILL LEARN</span>
+      <h2 class="ta-ar" lang="ar">أدوات الممثل، <em>من الداخل للخارج.</em></h2><h2 class="ta-en" lang="en">The actor’s toolkit,<br><em>from the inside out.</em></h2></div>
+      <p class="ta-ar" lang="ar">تدريب عملي يطوّر حضورك، ويقوّي خيالك، ويساعدك تبني شخصية قابلة للحياة على خشبة المسرح.</p>
+      <p class="ta-en" lang="en">Practical training to strengthen your presence, expand your imagination, and build believable characters for the stage.</p>
+    </div>
+    <div class="academy-skill-grid">
+      <article class="academy-skill-card"><div class="academy-skill-num">01</div><div class="academy-skill-symbol" aria-hidden="true">◉</div><h3 class="ta-ar" lang="ar">التمثيل المسرحي</h3><h3 class="ta-en" lang="en">Stage Acting</h3><p class="ta-ar" lang="ar">تطوير الأداء والحضور على الخشبة، والتعامل مع الجسد والصوت والانفعال داخل المشهد.</p><p class="ta-en" lang="en">Develop stage presence and performance, working with body, voice and emotion within a scene.</p></article>
+      <article class="academy-skill-card"><div class="academy-skill-num">02</div><div class="academy-skill-symbol" aria-hidden="true">✳</div><h3 class="ta-ar" lang="ar">الارتجال</h3><h3 class="ta-en" lang="en">Improvisation</h3><p class="ta-ar" lang="ar">تنمية الخيال وسرعة الاستجابة، وبناء مواقف وشخصيات بالتفاعل مع الآخرين.</p><p class="ta-en" lang="en">Build imagination and responsiveness while creating situations and characters with others.</p></article>
+      <article class="academy-skill-card"><div class="academy-skill-num">03</div><div class="academy-skill-symbol" aria-hidden="true">✺</div><h3 class="ta-ar" lang="ar">بناء الشخصية</h3><h3 class="ta-en" lang="en">Character Building</h3><p class="ta-ar" lang="ar">اكتشاف دوافع الشخصية وطريقتها في الحركة والكلام، وتحويل التحليل إلى أداء مقنع.</p><p class="ta-en" lang="en">Explore a character’s motivations, movement and voice, turning analysis into a convincing performance.</p></article>
+    </div>
+  </div>
 </section>
 
+<section class="academy-path-section">
+  <div class="academy-wrap">
+    <div class="academy-section-head academy-path-head">
+      <div><span class="academy-overline ta-ar" lang="ar">من التدريب إلى الجمهور</span><span class="academy-overline ta-en" lang="en">FROM TRAINING TO AUDIENCE</span><h2 class="ta-ar" lang="ar">التجربة مش بتنتهي<br><em>بانتهاء التدريب.</em></h2><h2 class="ta-en" lang="en">The experience doesn’t end<br><em>when training ends.</em></h2></div>
+      <p class="ta-ar" lang="ar">الأكاديمية بتفتح للمتدرب مسارًا عمليًا يساعده ينتقل من قاعة التدريب إلى تجربة الإنتاج المسرحي والتواصل مع الجمهور.</p>
+      <p class="ta-en" lang="en">The Academy offers a practical path from the training room to theatre production and audience engagement.</p>
+    </div>
+    <div class="academy-journey-grid">
+      <article class="academy-journey-card"><span class="academy-journey-index">01</span><div><span class="academy-journey-tag ta-ar" lang="ar">تعلّم</span><span class="academy-journey-tag ta-en" lang="en">LEARN</span><h3 class="ta-ar" lang="ar">تدريب وممارسة</h3><h3 class="ta-en" lang="en">Train &amp; Practise</h3><p class="ta-ar" lang="ar">يتدرّب المتدرب على التمثيل المسرحي والارتجال وبناء الشخصية عبر رحلة تدريبية ممتدة.</p><p class="ta-en" lang="en">Trainees develop stage acting, improvisation and character-building skills through sustained practice.</p></div></article>
+      <article class="academy-journey-card"><span class="academy-journey-index">02</span><div><span class="academy-journey-tag ta-ar" lang="ar">ظهور</span><span class="academy-journey-tag ta-en" lang="en">BE SEEN</span><h3 class="ta-ar" lang="ar">تسويق وتواصل</h3><h3 class="ta-en" lang="en">Promotion &amp; Reach</h3><p class="ta-ar" lang="ar">تُسلّط قنوات التواصل الخاصة بتياترو الصعيد الضوء على المتدربين وتجربتهم الفنية، وتساعد في تقديمهم للجمهور.</p><p class="ta-en" lang="en">Teatro Alsaeed’s communication channels spotlight trainees and their artistic journey, helping introduce their work to audiences.</p></div></article>
+      <article class="academy-journey-card journey-featured"><span class="academy-journey-index">03</span><div><span class="academy-journey-tag ta-ar" lang="ar">خشبة المسرح</span><span class="academy-journey-tag ta-en" lang="en">THE STAGE</span><h3 class="ta-ar" lang="ar">عرض لموسم كامل</h3><h3 class="ta-en" lang="en">A Full-Season Production</h3><p class="ta-ar" lang="ar">يشارك المتدرب في تقديم عرض مسرحي على مسرح تياترو الصعيد طوال موسم كامل، ليختبر تجربة العرض الحي أمام الجمهور.</p><p class="ta-en" lang="en">Trainees take part in a theatre production staged at Teatro Alsaeed for a full season, experiencing live performance in front of audiences.</p></div><span class="journey-stage-mark" aria-hidden="true">✳</span></article>
+    </div>
+    <div class="academy-journey-note"><span class="academy-note-mark">✳</span><p class="ta-ar" lang="ar">ولأننا بنؤمن إن التدريب بداية الطريق مش نهايته، قد تتاح للمتميزين فرصة الانضمام إلى فرقة تياترو الصعيد.</p><p class="ta-en" lang="en">Because training is a beginning, not an endpoint, outstanding trainees may have the opportunity to join Teatro Alsaeed’s troupe.</p></div>
+  </div>
+</section>
+
+<section class="academy-story-banner">
+  <div class="academy-wrap academy-story-banner-inner">
+    <span class="academy-overline ta-ar" lang="ar">حكاية بدأت من احتياج حقيقي</span><span class="academy-overline ta-en" lang="en">A STORY BORN FROM A REAL NEED</span>
+    <h2 class="ta-ar" lang="ar">لما الشغف احتاج فرصة…<br><em>قررنا نبني الطريق.</em></h2><h2 class="ta-en" lang="en">When passion needed an opportunity,<br><em>we built the path.</em></h2>
+    <p class="ta-ar" lang="ar">من التدريب في مراكز المتدربين قبل وجود مقر، إلى أول مجموعة في المنيا يوم 29 أغسطس 2016؛ بدأت حكاية أكاديمية اختارت أن تمنح التدريب وقتًا، والممارسة مساحة، والمتدرب فرصة حقيقية للوقوف على الخشبة.</p>
+    <p class="ta-en" lang="en">From travelling to trainees’ centres before we had a venue, to welcoming our first group in Minya on 29 August 2016, the Academy grew from a simple belief: training needs time, practice needs space, and trainees deserve a real chance to stand on stage.</p>
+    <a href="#origin-story" class="academy-text-link"><span class="ta-ar" lang="ar">شاهد الصور واحكِ البداية</span><span class="ta-en" lang="en">See the photographs and story</span><span aria-hidden="true"> ↗</span></a>
+  </div>
+</section>
 
 <section class="section dark origin-story" id="origin-story">
 <div class="container">
@@ -796,36 +896,27 @@ From the earliest groups to the latest graduating groups.
   <div class="kicker en" lang="en">THE BEGINNING</div>
   <h2 class="title ta-ar" lang="ar">من الوصول إلى الناس… إلى تأسيس بيت للتدريب المسرحي</h2>
   <h2 class="title ta-en" lang="en">From reaching people to building a home for theatre training</h2>
-  <p class="text ta-ar" lang="ar">في بداياتنا، لم يكن لدى تياترو الصعيد مقر ثابت للتدريب، لذلك كنا نتحرك إلى مراكز المتدربين لنصل إلى الشباب الشغوف بالمسرح في أماكنهم. كانت الفكرة أن تكون فرصة التعلّم أقرب إلى الناس، حتى قبل أن يتوفر لنا مكان يجمعهم.</p>
-  <p class="text ta-en" lang="en">In the early days, Teatro Alsaeed did not have a permanent training venue. We travelled to trainees in their own centres, reaching young people who were passionate about theatre where they lived. The idea was to bring learning closer to people, even before we had a place of our own.</p>
+  <div class="origin-copy">
+    <p class="text ta-ar" lang="ar">في صعيد مصر، كانت الورش المسرحية غالبًا قصيرة، بينما كان الشباب الشغوفون يحتاجون إلى تدريب وممارسة مستمرين. ومن خلال اختبارات الانضمام للفرقة، لاحظنا أن الشغف وحده لا يكفي من دون فرص حقيقية للتعلّم.</p>
+    <p class="text ta-en" lang="en">In Upper Egypt, theatre workshops were often brief, while passionate young people needed sustained training and practice. Through troupe auditions, we saw that passion alone was not enough without real opportunities to learn.</p>
+  </div>
   <div class="origin-grid">
     <figure class="origin-card">
       <img src="/images/academy-origin-outreach.jpg" alt="تدريب مسرحي للشغوفين بالفن في مراكزهم قبل وجود مقر ثابت للأكاديمية" loading="lazy">
-      <figcaption>
-        <strong class="ta-ar" lang="ar">قبل وجود المقر</strong><strong class="ta-en" lang="en">Before the first venue</strong>
-        <span class="ta-ar" lang="ar">كنا نذهب إلى المتدربين ونبدأ من الأماكن المتاحة.</span><span class="ta-en" lang="en">We went to the trainees and began wherever space was available.</span>
-      </figcaption>
+      <figcaption><strong class="ta-ar" lang="ar">قبل وجود المقر</strong><strong class="ta-en" lang="en">Before the first venue</strong><span class="ta-ar" lang="ar">كنا نذهب إلى المتدربين ونبدأ من الأماكن المتاحة.</span><span class="ta-en" lang="en">We went to trainees and began wherever space was available.</span></figcaption>
     </figure>
     <figure class="origin-card">
       <img src="/images/academy-first-group-2016.jpg" alt="أول يوم لمجموعة أكاديمية تياترو الصعيد في أول مقر بالمنيا، 29 أغسطس 2016" loading="lazy">
-      <figcaption>
-        <strong class="origin-date">29.08.2016</strong>
-        <strong class="ta-ar" lang="ar">أول مجموعة في أول مقر</strong><strong class="ta-en" lang="en">The first group at the first venue</strong>
-        <span class="ta-ar" lang="ar">في المنيا، بدأت مرحلة جديدة من رحلة الأكاديمية.</span><span class="ta-en" lang="en">In Minya, a new chapter in the Academy’s journey began.</span>
-      </figcaption>
+      <figcaption><strong class="origin-date">29.08.2016</strong><strong class="ta-ar" lang="ar">أول مجموعة في أول مقر</strong><strong class="ta-en" lang="en">The first group at the first venue</strong><span class="ta-ar" lang="ar">في المنيا، بدأت مرحلة جديدة من رحلة الأكاديمية.</span><span class="ta-en" lang="en">In Minya, a new chapter in the Academy’s journey began.</span></figcaption>
     </figure>
   </div>
-  <div class="origin-copy">
-    <h3 class="ta-ar" lang="ar">لم نرد أن تكون مجرد ورشة تنتهي بعد أيام</h3>
-    <h3 class="ta-en" lang="en">We wanted more than a workshop that ended after a few days</h3>
-    <p class="text ta-ar" lang="ar">من خلال اختبارات التقدم للفرقة، لاحظنا أن كثيرًا من الشغوفين بالفن يمتلكون الرغبة، لكنهم يحتاجون إلى فرص تدريب وممارسة أكثر انتظامًا. لذلك قررنا في عام 2016 أن يكون التدريب رحلة تمتد لشهور، تمنح المتدرب وقتًا للتعلّم والتجريب وتطوير أدواته، لا مجرد ورشة قصيرة.</p>
-    <p class="text ta-en" lang="en">During auditions for the troupe, we noticed that many people had a genuine passion for the arts but lacked experience and access to regular training. In 2016, we decided to make training a journey lasting several months—giving participants time to learn, experiment and develop their skills, rather than attend a short workshop.</p>
-    <p class="text ta-ar" lang="ar">وتُختتم الرحلة بمشروع تخرج: عرض مسرحي يُقدَّم لأكثر من ليلة، ليعيش المتدرب تجربة العرض الحقيقية بما تتطلبه من التزام وعمل جماعي ومسؤولية فنية. أما المتميزون، فتُتاح لهم فرصة الانضمام إلى فرقة تياترو الصعيد ومواصلة رحلتهم على خشبة المسرح.</p>
-    <p class="text ta-en" lang="en">The journey concludes with a graduation project: a theatre production presented for more than one night, allowing trainees to experience the commitment, collaboration and artistic responsibility of a real production. Outstanding graduates have the opportunity to join Teatro Alsaeed’s troupe and continue their journey on stage.</p>
+  <div class="origin-copy origin-copy-last">
+    <h3 class="ta-ar" lang="ar">من ورشة قصيرة إلى رحلة حقيقية</h3><h3 class="ta-en" lang="en">From a short workshop to a real journey</h3>
+    <p class="text ta-ar" lang="ar">في عام 2016، قررنا أن يمتد التدريب لشهور، وأن ينتهي بمشروع تخرج هو عرض مسرحي يُقدَّم لأكثر من ليلة. وبعدها تطورت التجربة لتمنح المتدرب اليوم مسارًا يشمل التدريب، والتعريف به عبر قنوات تياترو الصعيد، والمشاركة في عرض مسرحي يُقدَّم على مسرحنا طوال موسم كامل.</p>
+    <p class="text ta-en" lang="en">In 2016, we decided training should last for months and culminate in a graduation production presented for more than one night. The experience has since grown into a path that combines training, visibility through Teatro Alsaeed’s channels, and participation in a production staged at our theatre for a full season.</p>
   </div>
 </div>
 </section>
-
 
 <section class="section archive">
 
@@ -1033,28 +1124,14 @@ Art is not only talent. It is a space where we learn, experiment and discover ou
 </section>
 
 
-<section class="cta">
-
-<div class="container">
-
-<h2 class="title ar" lang="ar">رحلتنا مستمرة</h2>
-<h2 class="title en" lang="en">The journey continues</h2>
-
-<p class="text ar" lang="ar">
-من أول مجموعة إلى المجموعة 23، تستمر الأكاديمية في صناعة مساحات جديدة للتعلم والتجريب والإبداع.
-</p>
-
-<p class="text en" lang="en">
-From the first group to Group 23, the Academy continues to create spaces for learning, experimentation and creativity.
-</p>
-
-<a href="/contact" class="btn">
-<span class="ta-ar" lang="ar">تواصل معنا</span>
-<span class="ta-en" lang="en">Get in Touch</span>
-</a>
-
-</div>
-
+<section class="academy-final-cta">
+  <div class="academy-final-cta-glow" aria-hidden="true"></div>
+  <div class="academy-wrap academy-final-cta-content">
+    <span class="academy-overline ta-ar" lang="ar">الخطوة الجاية ممكن تبدأ هنا</span><span class="academy-overline ta-en" lang="en">YOUR NEXT STEP COULD START HERE</span>
+    <h2 class="ta-ar" lang="ar">عندك شغف بالمسرح؟<br><em>خلّيه ياخد فرصته.</em></h2><h2 class="ta-en" lang="en">Passionate about theatre?<br><em>Give it a chance.</em></h2>
+    <p class="ta-ar" lang="ar">تواصل مع تياترو الصعيد لمعرفة المزيد عن أنشطة الأكاديمية وفرص المشاركة القادمة.</p><p class="ta-en" lang="en">Contact Teatro Alsaeed to learn more about the Academy and upcoming opportunities to take part.</p>
+    <a href="/contact" class="academy-btn academy-btn-primary"><span class="ta-ar" lang="ar">تواصل معنا</span><span class="ta-en" lang="en">Get in touch</span><span aria-hidden="true"> ↗</span></a>
+  </div>
 </section>
 
 
