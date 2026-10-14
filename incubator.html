@@ -157,6 +157,79 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 </style>
 
 <style id="img-dims">:where(img[width][height]){height:auto}</style>
+
+<style id="incubator-visual-refresh">
+/* Visual refresh — preserve all workshop text and archival photographs */
+:root{--inc-accent:#2bb3b1;--inc-ink:#101515;--inc-muted:#5c6869;--inc-paper:#f5f7f6}
+body{background:var(--inc-paper);color:#111717}
+.container{width:min(1240px,91%)}
+.topbar{box-shadow:0 8px 28px rgba(0,0,0,.12)}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 15% 15%,rgba(43,179,177,.18),transparent 38%),linear-gradient(135deg,#070909 0%,#121a1a 55%,#080a0a 100%);padding:82px 0 70px}
+.hero:after{content:"";position:absolute;z-index:-1;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(90deg,#000,transparent 85%)}
+.hero-grid{gap:clamp(28px,5vw,72px)}
+.eyebrow{letter-spacing:1.5px;font-size:12px}
+h1{letter-spacing:-1.4px;text-wrap:balance}
+.hero p{font-size:clamp(16px,1.5vw,19px);line-height:1.95}
+.hero-logo img{max-height:245px;object-fit:contain}
+.hero-image{position:relative;margin-top:48px;border-radius:24px;overflow:hidden;border:1px solid rgba(99,227,221,.45);box-shadow:0 32px 80px rgba(0,0,0,.45)}
+.hero-image:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.02) 50%,rgba(0,0,0,.25))}
+.hero-image img{height:clamp(260px,47vw,600px);object-fit:cover;transition:transform .7s ease}
+.hero-image:hover img{transform:scale(1.015)}
+.intro{padding:78px 0 42px}
+.intro-grid{gap:20px}
+.info{position:relative;overflow:hidden;background:#fff;border:1px solid #e4ebea;border-radius:20px;padding:clamp(24px,3vw,36px);box-shadow:0 12px 34px rgba(13,33,33,.045);transition:transform .25s ease,box-shadow .25s ease}
+.info:before{content:"";position:absolute;top:0;right:0;left:0;height:3px;background:linear-gradient(90deg,#2bb3b1,rgba(43,179,177,.08))}
+.info:hover{transform:translateY(-4px);box-shadow:0 20px 45px rgba(13,33,33,.09)}
+.info h3{font-size:clamp(20px,2vw,24px);line-height:1.45}
+.info p{font-size:15px;line-height:2}
+.workshop{position:relative;padding:clamp(60px,7vw,94px) 0;border-top:1px solid #e1e8e7;scroll-margin-top:90px}
+.workshop:nth-of-type(odd){background:linear-gradient(180deg,#fff 0%,#f6f8f7 100%)}
+.section-head{max-width:1240px;width:91%;margin:0 auto 22px;padding-bottom:18px;border-bottom:1px solid #e2e8e7;align-items:center}
+.section-head h2{font-size:clamp(29px,4.3vw,50px);letter-spacing:-.6px}
+.count{background:#e7f7f6;border:1px solid #c9eeeb;color:#187e7b;padding:7px 12px;border-radius:999px;font-weight:800;font-size:12px}
+.lead{font-size:clamp(15px,1.5vw,17px);line-height:2;max-width:900px;margin:0 auto 14px;width:91%}
+.meta{width:91%;margin:18px auto 28px;padding:12px 16px;border-right:3px solid var(--inc-accent);border-radius:8px;background:#edf7f6;color:#273535;font-size:14px;line-height:1.9}
+.gallery-label{width:91%;margin:0 auto 14px;font-size:11px;letter-spacing:1px;text-transform:uppercase}
+.gallery-label:before{height:2px;width:34px}
+.gallery{width:91%;margin:0 auto;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.photo{aspect-ratio:4/3;border-radius:12px;background:#e2e7e6;box-shadow:0 5px 18px rgba(8,20,20,.08);outline:1px solid rgba(15,40,40,.06);outline-offset:-1px}
+.photo img{transition:transform .55s cubic-bezier(.2,.7,.2,1),filter .35s ease}
+.photo:hover img{transform:scale(1.045);filter:saturate(1.05)}
+.productions{position:relative;overflow:hidden;padding:clamp(70px,8vw,110px) 0;background:radial-gradient(ellipse at 90% 10%,rgba(43,179,177,.15),transparent 32%),linear-gradient(145deg,#070909,#111919 65%,#080a0a)}
+.productions:before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(43,179,177,.7),transparent)}
+.productions .container>h2{letter-spacing:-.8px}
+.productions .lead{width:auto;margin:0;max-width:820px}
+.prod-grid{gap:18px;margin-top:36px}
+.prod{position:relative;overflow:hidden;min-height:220px;border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:30px;background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));transition:transform .25s ease,border-color .25s ease,background .25s ease}
+.prod:after{content:"";position:absolute;width:130px;height:130px;border:1px solid rgba(43,179,177,.2);border-radius:50%;left:-45px;bottom:-65px;transition:transform .4s ease}
+.prod:hover{transform:translateY(-5px);border-color:rgba(43,179,177,.65);background:linear-gradient(145deg,rgba(43,179,177,.12),rgba(255,255,255,.025))}
+.prod:hover:after{transform:scale(1.25)}
+.prod .num{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:30px;border:1px solid rgba(43,179,177,.35);border-radius:999px;color:#6ce0db;font-size:11px}
+.prod h3{font-size:clamp(22px,2.3vw,29px);line-height:1.5;margin:25px 0 8px}
+.prod p{font-size:14px}
+.footer{padding:34px 0}
+@media(max-width:900px){
+ .hero{padding:56px 0 48px}
+ .hero-image{margin-top:28px;border-radius:17px}
+ .intro{padding:52px 0 22px}
+ .workshop{padding:62px 0}
+ .gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .prod{min-height:180px}
+}
+@media(max-width:520px){
+ .container{width:90%}
+ .hero{padding-top:42px}
+ .hero-logo img{width:150px}
+ .hero-image img{height:250px}
+ .section-head{align-items:flex-start}
+ .count{font-size:11px;padding:6px 9px}
+ .gallery{gap:7px}
+ .photo{border-radius:9px}
+ .meta{font-size:13px;padding:10px 12px}
+}
+@media(prefers-reduced-motion:reduce){.info,.photo img,.prod,.hero-image img{transition:none!important}}
+</style>
+
 </head>
 <body>
 
@@ -218,7 +291,7 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
   </div>
   <p class="lead ar" lang="ar">ورشة متخصصة في إدارة الفرق والمشروعات المسرحية، وشارك فيها مديرو وأعضاء الفرق المسرحية.</p>
   <p class="lead en" lang="en">A focused workshop on managing theatre teams and cultural projects, with theatre practitioners and team leaders.</p>
-  <div class="meta"><span><span class="ta-ar" lang="ar">المدربة الظاهرة في التوثيق: طاهرة طارق.</span><span class="ta-en" lang="en">Trainer featured in the documentation: Tahera Tarek.</span></span></div>
+  <div class="meta"><span><span class="ta-ar" lang="ar">قدّم ورشة الإدارة الثقافية: طاهرة طارق، إيمان ذكي، وسامي داود.</span><span class="ta-en" lang="en">Workshop facilitators: Tahera Tarek, Eman Zaki, and Sami Dawoud.</span></span></div>
   <div class="gallery-label"><span class="ar" lang="ar">أرشيف الورشة</span><span class="en" lang="en">Workshop archive</span></div>
   <div class="gallery"><a class="photo" href="images/incubator/administration/administration-01.webp" target="_blank" rel="noopener"><img width="1600" height="1067" decoding="async" loading="lazy" src="images/incubator/administration/administration-01.webp" alt="الإدارة الثقافية — 1"></a>
 <a class="photo" href="images/incubator/administration/administration-02.webp" target="_blank" rel="noopener"><img width="1600" height="1067" decoding="async" loading="lazy" src="images/incubator/administration/administration-02.webp" alt="الإدارة الثقافية — 2"></a>
