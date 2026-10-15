@@ -67,6 +67,22 @@
 .donor-call .donor-label{font:800 10px Inter;letter-spacing:.15em;color:#f2d58e;margin-bottom:12px}
 @media(max-width:900px){.continuity-intro{grid-template-columns:1fr;gap:20px}.continuity-timeline{grid-template-columns:repeat(2,1fr)}.impact-band{grid-template-columns:1fr}.donor-call{align-items:flex-start;flex-direction:column}}
 @media(max-width:560px){.continuity-timeline{grid-template-columns:1fr}.continuity-step{min-height:0}.donor-call{padding:25px 20px}}
+
+/* Sahara 2: village-responsive training and workshop photo galleries */
+.sahara-workshop-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+.sahara-workshop-card{background:#fff9ef;border:1px solid var(--line);padding:22px;min-width:0}
+.sahara-workshop-heading{display:flex;align-items:flex-start;gap:14px;margin-bottom:18px}
+.sahara-workshop-icon{display:grid;place-items:center;flex:0 0 48px;height:48px;background:#eee5d5;font-size:25px}
+.sahara-workshop-heading h3{font-size:23px;line-height:1.4;margin:0 0 5px}
+.sahara-workshop-heading p{font-size:12px;line-height:1.8;color:var(--muted);margin:0}
+.sahara-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.sahara-photo{position:relative;aspect-ratio:1.35;overflow:hidden;background:#e7ddcc;margin:0}
+.sahara-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.sahara-photo:hover img{transform:scale(1.04)}
+.sahara-photo.awaiting-photo{display:grid;place-items:center;background:repeating-linear-gradient(135deg,#e9dfcf,#e9dfcf 12px,#f3ecdf 12px,#f3ecdf 24px);border:1px dashed #b7a78d}
+.sahara-photo.awaiting-photo:after{content:attr(data-placeholder);font-size:12px;color:#786d5b;text-align:center;padding:12px}
+.sahara-photo-note{font-size:12px;color:var(--muted);line-height:1.9;margin:20px 0 0}
+@media(max-width:760px){.sahara-workshop-gallery{grid-template-columns:1fr}.sahara-workshop-card{padding:17px}.sahara-workshop-heading h3{font-size:20px}}
 </style>
 
 
@@ -184,7 +200,7 @@ body.site-en .lang-en{display:block!important}</style>
 </div>
 <div class="container">
 <div class="era-head"><div><div class="era-tag"><span class="ta-ar" lang="ar">صحارة · النسخة 02 · 2025</span><span class="ta-en" lang="en">SAHARA · EDITION 02 · 2025</span></div><h2><span class="ta-ar" lang="ar">صحارة 2</span><span class="ta-en" lang="en">Sahara 2</span></h2></div><div class="lead" style="max-width:520px"><span class="ta-ar" lang="ar">في صحارة 2، انتقل المشروع إلى نموذج يعتمد على المعسكرات والبحث والتدريب داخل القرى، ويعمل حاليًا مع أربع قرى: المحرص، طوة، بلنصورة، وبني أحمد الشرقية.</span><span class="ta-en" lang="en">In Sahara 2, the project moved to a village-based model of field research, camps and training, currently working with four villages: Al-Mahras, Towa, Balansoura and Beni Ahmed El-Sharqia.</span></div></div>
-<div class="stats"><div class="stat"><b>11–13</b><span class="ta-ar" lang="ar">أغسطس 2025 · المعسكر</span><span class="ta-en" lang="en">August 2025 · Camp</span></div><div class="stat"><b>05</b><span class="ta-ar" lang="ar">مسارات تدريبية</span><span class="ta-en" lang="en">Training tracks</span></div><div class="stat"><b>17–18</b><span class="ta-ar" lang="ar">أكتوبر 2025 · المعرض</span><span class="ta-en" lang="en">October 2025 · Exhibition</span></div><div class="stat"><b>02</b><span class="ta-ar" lang="ar">سينوغرافيا القرية</span><span class="ta-en" lang="en">Village scenography</span></div></div>
+<div class="stats"><div class="stat"><b>04</b><span class="ta-ar" lang="ar">معسكرات في أربع قرى</span><span class="ta-en" lang="en">Camps in four villages</span></div><div class="stat"><b>06</b><span class="ta-ar" lang="ar">مسارات تدريبية موثقة هنا</span><span class="ta-en" lang="en">Training pathways featured here</span></div><div class="stat"><b>02</b><span class="ta-ar" lang="ar">دورة صحارة</span><span class="ta-en" lang="en">Sahara editions</span></div><div class="stat"><b>∞</b><span class="ta-ar" lang="ar">تدريب يتشكل حسب الاحتياج</span><span class="ta-en" lang="en">Training shaped by needs</span></div></div>
 
 <div class="section" style="padding:70px 0 25px">
 <div class="section">
@@ -202,7 +218,7 @@ body.site-en .lang-en{display:block!important}</style>
 <article class="village">
 <img width="1536" height="1024" decoding="async" loading="lazy" alt="معسكر صحارة 2 في المحرص – ملوي" src="images/sahara2/camp-01.jpg"/>
 <div class="body">
-<div class="num"><span class="ta-ar" lang="ar">01 · المهراس</span><span class="ta-en" lang="en">01 · AL-MAHRAS</span></div>
+<div class="num"><span class="ta-ar" lang="ar">01 · المحرص</span><span class="ta-en" lang="en">01 · AL-MAHRAS</span></div>
 <h3><span class="ta-ar" lang="ar">المحرص</span><span class="ta-en" lang="en">Al-Mahras</span></h3>
 <p><span class="ta-ar" lang="ar">ملوي · معسكر صحارة 2</span><span class="ta-en" lang="en">Mallawi · Sahara 2 camp</span></p>
 </div>
@@ -210,41 +226,71 @@ body.site-en .lang-en{display:block!important}</style>
 <article class="village">
 <img width="1536" height="1024" decoding="async" loading="lazy" alt="معسكر صحارة 2 في طوة – المنيا" src="images/sahara2/camp-02.jpg"/>
 <div class="body">
-<div class="num"><span class="ta-ar" lang="ar">02 · طوه</span><span class="ta-en" lang="en">02 · TOWA</span></div>
-<h3><span class="ta-ar" lang="ar">طوة</span><span class="ta-en" lang="en">Towa</span></h3>
-<p><span class="ta-ar" lang="ar">المنيا · معسكر صحارة 2</span><span class="ta-en" lang="en">Minya · Sahara 2 camp</span></p>
+<div class="num"><span 
+<div class="section" style="padding:70px 0 35px">
+  <div class="kicker"><span class="ta-ar" lang="ar">طريقة العمل · صحارة 2</span><span class="ta-en" lang="en">OUR APPROACH · SAHARA 2</span></div>
+  <h2><span class="ta-ar" lang="ar">التدريب حسب احتياج كل قرية.</span><span class="ta-en" lang="en">Training shaped by each village’s needs.</span></h2>
+  <p class="lead"><span class="ta-ar" lang="ar">لا تعتمد صحارة على برنامج تدريبي ثابت يُطبَّق بالطريقة نفسها في كل مكان؛ بل تتشكل التدريبات وفق احتياجات كل قرية وسياقها واهتمامات المشاركين فيها. نعمل من خلال المعسكرات والتواصل المستمر على إتاحة مسارات متنوعة في الفنون الأدائية والتعبير والإنتاج، بما يناسب طبيعة كل مجموعة.</span><span class="ta-en" lang="en">Sahara does not apply one fixed training programme identically everywhere. Training is shaped around each village’s needs, context and participants’ interests. Through camps and continued engagement, the project offers different paths in performing arts, expression and production suited to each group.</span></p>
 </div>
-</article>
-<article class="village">
-<img width="1536" height="1024" decoding="async" loading="lazy" alt="معسكر صحارة 2 في بلنصورة – أبو قرقاص" src="images/sahara2/camp-03.jpg"/>
-<div class="body">
-<div class="num"><span class="ta-ar" lang="ar">03 · بلانصورة</span><span class="ta-en" lang="en">03 · BALANSOURA</span></div>
-<h3><span class="ta-ar" lang="ar">بلنصورة</span><span class="ta-en" lang="en">Balansoura</span></h3>
-<p><span class="ta-ar" lang="ar">أبو قرقاص · معسكر صحارة 2</span><span class="ta-en" lang="en">Abu Qurqas · Sahara 2 camp</span></p>
+<div class="section" style="padding:10px 0 55px">
+  <div class="kicker"><span class="ta-ar" lang="ar">مسارات التدريب · صحارة 2</span><span class="ta-en" lang="en">TRAINING PATHWAYS · SAHARA 2</span></div>
+  <h2><span class="ta-ar" lang="ar">مسارات متعددة، وحكايات من القرى.</span><span class="ta-en" lang="en">Different practices. Stories from the villages.</span></h2>
+  <p class="lead"><span class="ta-ar" lang="ar">تعرّفوا على المسارات التدريبية التي شملتها تجربة صحارة 2 من خلال صور الورش. الصور موزعة بحسب نوع الورشة، وليست بحسب المعسكر أو القرية.</span><span class="ta-en" lang="en">Explore the training pathways featured in Sahara 2 through workshop photographs. Images are grouped by workshop type, not by camp or village.</span></p>
+  <div class="sahara-workshop-gallery">
+    <article class="sahara-workshop-card">
+      <div class="sahara-workshop-heading"><span class="sahara-workshop-icon">🎭</span><div><h3><span class="ta-ar" lang="ar">ورشة التمثيل</span><span class="ta-en" lang="en">Acting Workshop</span></h3><p><span class="ta-ar" lang="ar">الأداء، التعبير، وبناء المشهد.</span><span class="ta-en" lang="en">Performance, expression and scene building.</span></p></div></div>
+      <div class="sahara-photo-grid">
+        <figure class="sahara-photo awaiting-photo" data-placeholder="صور ورشة التمثيل · 01"><img loading="lazy" decoding="async" src="images/sahara2/acting-01.jpg" alt="صور من ورشة التمثيل في صحارة 2" onerror="this.style.display='none';this.parentElement.classList.add('awaiting-photo')"/></figure>
+        <figure class="sahara-photo awaiting-photo" data-placeholder="صور ورشة التمثيل · 02"><img loading="lazy" decoding="async" src="images/sahara2/acting-02.jpg" alt="صور من ورشة التمثيل في صحارة 2" onerror="this.style.display='none';this.parentElement.classList.add('awaiting-photo')"/></figure>
+        <figure class="sahara-photo awaiting-photo" data-placeholder="صور ورشة التمثيل · 03"><img loading="lazy" decoding="async" src="images/sahara2/acting-03.jpg" alt="صور من ورشة التمثيل في صحارة 2" onerror="this.style.display='none';this.parentElement.classList.add('awaiting-photo')"/></figure>
+      </div>
+    </article>
+    <article class="sahara-workshop-card">
+      <div class="sahara-workshop-heading"><span class="sahara-workshop-icon">📖</span><div><h3><span class="ta-ar" lang="ar">ورشة الحكي</span><span class="ta-en" lang="en">Storytelling Workshop</span></h3><p><span class="ta-ar" lang="ar">الحكايات المحلية والذاكرة والتعبير.</span><span class="ta-en" lang="en">Local stories, memory and expression.</span></p></div></div>
+      <div class="sahara-photo-grid">
+        <figure class="sahara-photo awaiting-photo" data-placeholder="صور ورشة الحكي · 01"><img loading="lazy" decoding="async" src="images/sahara2/storytelling-01.jpg" alt="صور من ورشة الحكي في صحارة 2" onerror="this.style.display='none';this.parentElement.classList.add('awaiting-photo')"/></figure>
+        <figure class="sahara-photo awaiting-photo" data-placeholder="صور ورشة الحكي · 02"><img loading="lazy" decoding="async" src="images/sahara2/storytelling-02.jpg" alt="صور من ورشة الحكي في صحارة 2" onerror="this.style.display='none';this.parentElement.classList.add('awaiting-photo')"/></figure>
+        <figure class="sahara-photo awaiting-photo" data-placeholder="صور ورشة الحكي · 03"><img loading="lazy" decoding="async" src="images/sahara2/storytelling-03.jpg" alt="صور من ورشة الحكي في صحارة 2" onerror="this.style.display='none';this.parentElement.classList.add('awaiting-photo')"/></figure>
+      </div>
+    </article>
+    <article class="sahara-workshop-card">
+      <div class="sahara-workshop-heading"><span class="sahara-workshop-icon">🎨</span><div><h3><span class="ta-ar" lang="ar">ورشة السينوغرافيا</span><span class="ta-en" lang="en">Scenography Workshop</span></h3><p><span class="ta-ar" lang="ar">تحويل المكان والخامات إلى صور ومشاهد.</span><span class="ta-en" lang="en">Turning place and materials into visual scenes.</span></p></div></div>
+      <div class="sahara-photo-grid">
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/scenography-01.jpg" alt="صور من ورشة السينوغرافيا في صحارة 2"/></figure>
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/scenography-02.jpg" alt="صور من ورشة السينوغرافيا في صحارة 2"/></figure>
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/scenography-03.jpg" alt="صور من ورشة السينوغرافيا في صحارة 2"/></figure>
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/scenography-04.jpg" alt="صور من ورشة السينوغرافيا في صحارة 2"/></figure>
+      </div>
+    </article>
+    <article class="sahara-workshop-card">
+      <div class="sahara-workshop-heading"><span class="sahara-workshop-icon">🎙️</span><div><h3><span class="ta-ar" lang="ar">ورشة البودكاست</span><span class="ta-en" lang="en">Podcast Workshop</span></h3><p><span class="ta-ar" lang="ar">الصوت، الإلقاء، وصناعة الحكاية المسموعة.</span><span class="ta-en" lang="en">Audio, delivery and crafting stories for listening.</span></p></div></div>
+      <div class="sahara-photo-grid">
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/podcast-01.jpg" alt="صور من ورشة البودكاست في صحارة 2"/></figure>
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/podcast-02.jpg" alt="صور من ورشة البودكاست في صحارة 2"/></figure>
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/podcast-03.jpg" alt="صور من ورشة البودكاست في صحارة 2"/></figure>
+      </div>
+    </article>
+    <article class="sahara-workshop-card">
+      <div class="sahara-workshop-heading"><span class="sahara-workshop-icon">🎶</span><div><h3><span class="ta-ar" lang="ar">ورشة الغناء</span><span class="ta-en" lang="en">Singing Workshop</span></h3><p><span class="ta-ar" lang="ar">الصوت والغناء بوصفهما جزءًا من الذاكرة الشعبية.</span><span class="ta-en" lang="en">Voice and singing as part of popular memory.</span></p></div></div>
+      <div class="sahara-photo-grid">
+        <figure class="sahara-photo awaiting-photo" data-placeholder="صور ورشة الغناء · 01"><img loading="lazy" decoding="async" src="images/sahara2/singing-01.jpg" alt="صور من ورشة الغناء في صحارة 2" onerror="this.style.display='none';this.parentElement.classList.add('awaiting-photo')"/></figure>
+        <figure class="sahara-photo awaiting-photo" data-placeholder="صور ورشة الغناء · 02"><img loading="lazy" decoding="async" src="images/sahara2/singing-02.jpg" alt="صور من ورشة الغناء في صحارة 2" onerror="this.style.display='none';this.parentElement.classList.add('awaiting-photo')"/></figure>
+        <figure class="sahara-photo awaiting-photo" data-placeholder="صور ورشة الغناء · 03"><img loading="lazy" decoding="async" src="images/sahara2/singing-03.jpg" alt="صور من ورشة الغناء في صحارة 2" onerror="this.style.display='none';this.parentElement.classList.add('awaiting-photo')"/></figure>
+      </div>
+    </article>
+    <article class="sahara-workshop-card">
+      <div class="sahara-workshop-heading"><span class="sahara-workshop-icon">🎯</span><div><h3><span class="ta-ar" lang="ar">ورشة التسويق الإلكتروني</span><span class="ta-en" lang="en">Digital Marketing Workshop</span></h3><p><span class="ta-ar" lang="ar">الوصول للجمهور، المحتوى، وبناء الهوية.</span><span class="ta-en" lang="en">Audience reach, content and brand identity.</span></p></div></div>
+      <div class="sahara-photo-grid">
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/marketing-01.jpg" alt="صور من ورشة التسويق الإلكتروني في صحارة 2"/></figure>
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/marketing-02.jpg" alt="صور من ورشة التسويق الإلكتروني في صحارة 2"/></figure>
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/marketing-03.jpg" alt="صور من ورشة التسويق الإلكتروني في صحارة 2"/></figure>
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/marketing-04.jpg" alt="صور من ورشة التسويق الإلكتروني في صحارة 2"/></figure>
+      </div>
+    </article>
+  </div>
+  <p class="sahara-photo-note"><span class="ta-ar" lang="ar">بعض مسارات الصور جاهزة، ومسارات الصور غير المتاحة حاليًا محددة لاستقبال الصور الأصلية لاحقًا.</span><span class="ta-en" lang="en">Some image paths are already available; missing photo paths are prepared for the original images to be added later.</span></p>
 </div>
-</article>
-<article class="village">
-<img width="1536" height="1024" decoding="async" loading="lazy" alt="معسكر صحارة 2 في بني أحمد الشرقية – المنيا" src="images/sahara2/camp-04.jpg"/>
-<div class="body">
-<div class="num"><span class="ta-ar" lang="ar">04 · بني أحمد الشرقية</span><span class="ta-en" lang="en">04 · BENI AHMED EL-SHARQIA</span></div>
-<h3><span class="ta-ar" lang="ar">بني أحمد الشرقية</span><span class="ta-en" lang="en">Beni Ahmed El-Sharqia</span></h3>
-<p><span class="ta-ar" lang="ar">المنيا · معسكر صحارة 2</span><span class="ta-en" lang="en">Minya · Sahara 2 camp</span></p>
-</div>
-</article>
-</div>
-</div>
-<div class="photo-band" style="margin-top:45px"><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="معسكر صحارة 2 في بني أحمد الشرقية" src="images/sahara2/camp-02.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="من تدريبات صحارة 2" src="images/sahara2/camp-03.jpg"/></figure></div>
-<div class="section" style="padding:80px 0 25px"><div class="kicker"><span class="ta-ar" lang="ar">بني أحمد الشرقية · 11–13 أغسطس 2025</span><span class="ta-en" lang="en">BENI AHMED EL-SHARQIA · 11–13 AUGUST 2025</span></div><h2><span class="ta-ar" lang="ar">ثلاثة أيام من التدريب داخل القرية.</span><span class="ta-en" lang="en">Three days of training inside the village.</span></h2><p class="lead"><span class="ta-ar" lang="ar">شهدت قرية بني أحمد الشرقية بمحافظة المنيا معسكرًا تدريبيًا ضمن صحارة 2، اجتمع خلاله الشباب والفتيات لاكتساب مهارات إبداعية وفنية، بالتعاون مع جمعية طريق الأمل للتنمية ببني أحمد.</span><span class="ta-en" lang="en">Beni Ahmed El-Sharqia hosted a three-day training camp within Sahara 2, where young people gathered to develop creative and artistic skills, in cooperation with the Tareeq Al-Amal Association for Development.</span></p><div class="workshops">
-<div class="workshop"><div class="icon">🎭</div><b><span class="ta-ar" lang="ar">التمثيل المسرحي</span><span class="ta-en" lang="en">Theatre acting</span></b><p><span class="ta-ar" lang="ar">تدريب على الأداء والتعبير والعمل الجماعي.</span><span class="ta-en" lang="en">Training in performance, expression and teamwork.</span></p></div>
-<div class="workshop"><div class="icon">📖</div><b><span class="ta-ar" lang="ar">الحكي</span><span class="ta-en" lang="en">Storytelling</span></b><p><span class="ta-ar" lang="ar">استخدام الحكاية كمساحة للتعبير والذاكرة.</span><span class="ta-en" lang="en">Using the story as a space for expression and memory.</span></p></div>
-<div class="workshop"><div class="icon">🎨</div><b><span class="ta-ar" lang="ar">السينوغرافيا</span><span class="ta-en" lang="en">Scenography</span></b><p><span class="ta-ar" lang="ar">قراءة البيئة الريفية بصريًا وتحويلها إلى مشاهد.</span><span class="ta-en" lang="en">Reading the rural environment visually and turning it into scenes.</span></p></div>
-<div class="workshop"><div class="icon">🎙</div><b><span class="ta-ar" lang="ar">البودكاست والتسجيل الصوتي</span><span class="ta-en" lang="en">Podcasting and audio recording</span></b><p><span class="ta-ar" lang="ar">الكتابة، الإلقاء، تلوين الصوت والنشر الرقمي.</span><span class="ta-en" lang="en">Writing, delivery, voice colouring and digital publishing.</span></p></div>
-<div class="workshop"><div class="icon">🎯</div><b><span class="ta-ar" lang="ar">التسويق وبناء العلامات التجارية</span><span class="ta-en" lang="en">Marketing and brand building</span></b><p><span class="ta-ar" lang="ar">الاستراتيجية، الهوية، الجمهور وقياس النتائج.</span><span class="ta-en" lang="en">Strategy, identity, audience and measuring results.</span></p></div>
-</div></div>
-<div class="masonry"><figure class="tall"><img width="1536" height="1024" decoding="async" loading="lazy" alt="عمل ميداني — صحارة" src="images/sahara2/field-01.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="عمل ميداني — صحارة" src="images/sahara2/field-02.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="عمل ميداني — صحارة" src="images/sahara2/field-03.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="عمل ميداني — صحارة" src="images/sahara2/field-04.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="عمل ميداني — صحارة" src="images/sahara2/field-05.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="عمل ميداني — صحارة" src="images/sahara2/field-06.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="عمل ميداني — صحارة" src="images/sahara2/field-07.jpg"/></figure></div>
-<div class="section dark" style="padding:75px 0;margin-top:70px"><div class="grid2"><div><div class="kicker"><span class="ta-ar" lang="ar">البودكاست والصوتيات</span><span class="ta-en" lang="en">PODCAST &amp; AUDIO</span></div><h2><span class="ta-ar" lang="ar">الصوت يحفظ الحكاية.</span><span class="ta-en" lang="en">Sound carries the story.</span></h2><p class="lead"><span class="ta-ar" lang="ar">في ورشة البودكاست والتسجيل الصوتي مع كارولين حنا، تعلّم المشاركون أسس كتابة نصوص البودكاست، تقنيات الإلقاء وتلوين الصوت، وطرق نشر البودكاست والترويج له عبر المنصات الرقمية.</span><span class="ta-en" lang="en">In Caroline Hanna's podcast and audio workshop, participants learned podcast writing, vocal delivery, voice colouring, publishing and digital promotion.</span></p></div><div class="masonry" style="margin-top:0"><figure class="tall"><img width="1024" height="1536" decoding="async" loading="lazy" alt="ستوديو البودكاست — صحارة" src="images/sahara2/podcast-01.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="ستوديو البودكاست — صحارة" src="images/sahara2/podcast-02.jpg"/></figure><figure><img width="1024" height="1536" decoding="async" loading="lazy" alt="ستوديو البودكاست — صحارة" src="images/sahara2/podcast-03.jpg"/></figure></div></div></div>
-<div class="section" style="padding:75px 0 25px"><div class="grid2"><div><div class="kicker"><span class="ta-ar" lang="ar">التسويق الرقمي والهوية البصرية</span><span class="ta-en" lang="en">DIGITAL MARKETING &amp; BRANDING</span></div><h2><span class="ta-ar" lang="ar">من الفكرة إلى الجمهور.</span><span class="ta-en" lang="en">From idea to audience.</span></h2><p class="lead"><span class="ta-ar" lang="ar">قدّم د. بيشوي صابر ورشة التسويق الإلكتروني وبناء العلامات التجارية، وتناول خلالها وضع استراتيجية تسويق، صناعة هوية بصرية، الترويج للمشروعات والمبادرات، وتحليل الجمهور وقياس النتائج.</span><span class="ta-en" lang="en">Dr Bishoy Saber led the digital marketing and branding workshop, covering strategy, visual identity, promotion, audience analysis and measuring results.</span></p></div><div class="masonry" style="margin-top:0"><figure class="tall"><img width="1536" height="1024" decoding="async" loading="lazy" alt="التسويق والمحتوى — صحارة" src="images/sahara2/marketing-01.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="التسويق والمحتوى — صحارة" src="images/sahara2/marketing-02.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="التسويق والمحتوى — صحارة" src="images/sahara2/marketing-03.jpg"/></figure></div></div></div>
-<div class="section soft" style="padding:75px 0"><div class="exhibit"><div><div class="kicker"><span class="ta-ar" lang="ar">سينوغرافيا القرى · 17–18 أكتوبر 2025</span><span class="ta-en" lang="en">VILLAGE SCENOGRAPHY · 17–18 OCTOBER 2025</span></div><h2><span class="ta-ar" lang="ar">سينوغرافيا القرية 2.</span><span class="ta-en" lang="en">Village Scenography 2.</span></h2><p class="lead"><span class="ta-ar" lang="ar">على مدار يومين، تحولت الماكيتات المسرحية إلى نوافذ تطل على روح الحياة القروية، بملامحها البسيطة ودفئها الإنساني، في معرض أقيم بمقر تياترو الصعيد في المنيا.</span><span class="ta-en" lang="en">Over two days, theatrical maquettes became windows into rural life in an exhibition at Teatro Alsaeed in Minya.</span></p><div class="credit"><strong><span class="ta-ar" lang="ar">التصميم والتنفيذ</span><span class="ta-en" lang="en">Design &amp; execution</span></strong><br/><span class="ta-ar" lang="ar">ماريا زكريا · ماري يوسف</span><span class="ta-en" lang="en">Maria Zakaria · Mary Youssef</span></div></div><div class="poster"><img width="1536" height="1536" decoding="async" loading="lazy" alt="معرض سينوغرافيا القرية الثاني" src="images/sahara2/poster.jpg"/></div></div></div>
+e Scenography 2.</span></h2><p class="lead"><span class="ta-ar" lang="ar">على مدار يومين، تحولت الماكيتات المسرحية إلى نوافذ تطل على روح الحياة القروية، بملامحها البسيطة ودفئها الإنساني، في معرض أقيم بمقر تياترو الصعيد في المنيا.</span><span class="ta-en" lang="en">Over two days, theatrical maquettes became windows into rural life in an exhibition at Teatro Alsaeed in Minya.</span></p><div class="credit"><strong><span class="ta-ar" lang="ar">التصميم والتنفيذ</span><span class="ta-en" lang="en">Design &amp; execution</span></strong><br/><span class="ta-ar" lang="ar">ماريا زكريا · ماري يوسف</span><span class="ta-en" lang="en">Maria Zakaria · Mary Youssef</span></div></div><div class="poster"><img width="1536" height="1536" decoding="async" loading="lazy" alt="معرض سينوغرافيا القرية الثاني" src="images/sahara2/poster.jpg"/></div></div></div>
 <div class="masonry"><figure class="tall"><img width="1536" height="1024" decoding="async" loading="lazy" alt="سينوغرافيا القرية — صحارة" src="images/sahara2/scenography-01.jpg"/></figure><figure><img width="1024" height="1536" decoding="async" loading="lazy" alt="سينوغرافيا القرية — صحارة" src="images/sahara2/scenography-02.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="سينوغرافيا القرية — صحارة" src="images/sahara2/scenography-03.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="سينوغرافيا القرية — صحارة" src="images/sahara2/scenography-04.jpg"/></figure></div>
 </div></section>
 
