@@ -44,6 +44,29 @@
 .footer{background:#090a09;color:#aaa;padding:45px 0}.footer-in{display:flex;justify-content:space-between;gap:20px;font-size:11px}.footer strong{color:#fff}.back{color:#e7bd66}
 @media(max-width:950px){.navLinks{display:none;position:absolute;top:74px;right:0;left:0;background:#111;padding:20px 5%;flex-direction:column;align-items:flex-start}.navLinks.open{display:flex}.hamb{display:block}.navin{justify-content:space-between}.grid2,.exhibit,.photo-band{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}.villages{grid-template-columns:repeat(2,1fr)}.workshops{grid-template-columns:repeat(2,1fr)}.productions{grid-template-columns:1fr 1fr}.masonry{grid-template-columns:repeat(2,1fr)}.era-head{align-items:start;flex-direction:column}.ednav{top:74px}.ednav a{padding:15px 20px}.credits{grid-template-columns:1fr}}
 @media(max-width:560px){.hero h1{font-size:82px}.hero .container{padding-bottom:65px}.hero-meta div{min-width:50%;padding-left:12px;margin-left:0;margin-bottom:10px}.section{padding:76px 0}.stats{grid-template-columns:1fr 1fr}.workshops,.productions{grid-template-columns:1fr}.villages{grid-template-columns:1fr 1fr}.photo-band figure{min-height:300px}.cta-in,.footer-in{flex-direction:column;align-items:flex-start}.ednav a{padding:13px 12px;font-size:12px}}
+
+/* Sahara continuity & impact section */
+.sahara-continuity{background:#111411;color:var(--white);position:relative;overflow:hidden}
+.sahara-continuity:before{content:"";position:absolute;inset:0 auto 0 0;width:34%;background:linear-gradient(135deg,rgba(213,106,50,.14),transparent 70%);pointer-events:none}
+.sahara-continuity .container{position:relative}
+.continuity-intro{display:grid;grid-template-columns:1.1fr .9fr;gap:50px;align-items:end}
+.continuity-intro .lead{max-width:680px}
+.continuity-note{border-right:2px solid var(--yellow);padding:5px 20px;color:#d9d2c5;line-height:2}
+.continuity-timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:48px;counter-reset:sahara-step}
+.continuity-step{position:relative;min-height:220px;padding:25px 20px;background:#1a1d1a;border:1px solid rgba(255,255,255,.11);border-top:3px solid var(--yellow)}
+.continuity-step:before{counter-increment:sahara-step;content:"0" counter(sahara-step);display:block;font:800 12px Inter;color:var(--yellow);letter-spacing:.14em;margin-bottom:27px}
+.continuity-step h3{font-size:19px;line-height:1.5;margin:0 0 10px}
+.continuity-step p{font-size:13px;line-height:1.9;color:#c2bdb2;margin:0}
+.impact-band{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.12);margin-top:36px;border:1px solid rgba(255,255,255,.12)}
+.impact-band>div{background:#111411;padding:24px}
+.impact-band b{display:block;font-size:17px;margin-bottom:8px;color:#f0cf86}
+.impact-band p{margin:0;color:#c2bdb2;font-size:13px;line-height:1.9}
+.donor-call{margin-top:42px;padding:35px;background:linear-gradient(115deg,#87372b,#57251f);display:flex;justify-content:space-between;align-items:center;gap:30px}
+.donor-call h3{font-size:clamp(25px,3vw,38px);margin:0 0 8px;line-height:1.35}
+.donor-call p{color:#f1dcd5;line-height:1.9;margin:0;max-width:760px}
+.donor-call .donor-label{font:800 10px Inter;letter-spacing:.15em;color:#f2d58e;margin-bottom:12px}
+@media(max-width:900px){.continuity-intro{grid-template-columns:1fr;gap:20px}.continuity-timeline{grid-template-columns:repeat(2,1fr)}.impact-band{grid-template-columns:1fr}.donor-call{align-items:flex-start;flex-direction:column}}
+@media(max-width:560px){.continuity-timeline{grid-template-columns:1fr}.continuity-step{min-height:0}.donor-call{padding:25px 20px}}
 </style>
 
 
@@ -155,7 +178,7 @@ body.site-en .lang-en{display:block!important}</style>
 <div class="container">
 <div class="kicker"><span class="ta-ar" lang="ar">الوضع الحالي · صحارة 2</span><span class="ta-en" lang="en">CURRENT STATUS · SAHARA 2</span></div>
 <h2><span class="ta-ar" lang="ar">الإنتاج قيد التنفيذ.</span><span class="ta-en" lang="en">Production is underway.</span></h2>
-<p class="lead"><span class="ta-ar" lang="ar">تستمر أعمال صحارة 2 في تطوير التجارب والمواد الناتجة من المعسكرات تمهيدًا للمرحلة الإنتاجية.</span><span class="ta-en" lang="en">Sahara 2 continues developing the experiences and materials generated through the camps as it moves toward the production phase.</span></p>
+<p class="lead"><span class="ta-ar" lang="ar">تتواصل التدريبات والعمل الفني مع القرى المشاركة، بالتوازي مع تطوير وإنتاج العروض، وتقديم الاستشارات والمتابعة عن بُعد ومن خلال الزيارات الميدانية على امتداد المشروع.</span><span class="ta-en" lang="en">Training and artistic work continue with participating villages alongside performance development and production, with remote consultations and field visits throughout the project.</span></p>
 <p style="margin-top:22px;font-weight:700"><span class="ta-ar" lang="ar">مشروع صحارة بدعم من الصندوق العربي للثقافة والفنون – آفاق.</span><span class="ta-en" lang="en">Sahara is supported by the Arab Fund for Arts and Culture – AFAC.</span></p>
 </div>
 </div>
@@ -224,6 +247,39 @@ body.site-en .lang-en{display:block!important}</style>
 <div class="section soft" style="padding:75px 0"><div class="exhibit"><div><div class="kicker"><span class="ta-ar" lang="ar">سينوغرافيا القرى · 17–18 أكتوبر 2025</span><span class="ta-en" lang="en">VILLAGE SCENOGRAPHY · 17–18 OCTOBER 2025</span></div><h2><span class="ta-ar" lang="ar">سينوغرافيا القرية 2.</span><span class="ta-en" lang="en">Village Scenography 2.</span></h2><p class="lead"><span class="ta-ar" lang="ar">على مدار يومين، تحولت الماكيتات المسرحية إلى نوافذ تطل على روح الحياة القروية، بملامحها البسيطة ودفئها الإنساني، في معرض أقيم بمقر تياترو الصعيد في المنيا.</span><span class="ta-en" lang="en">Over two days, theatrical maquettes became windows into rural life in an exhibition at Teatro Alsaeed in Minya.</span></p><div class="credit"><strong><span class="ta-ar" lang="ar">التصميم والتنفيذ</span><span class="ta-en" lang="en">Design &amp; execution</span></strong><br/><span class="ta-ar" lang="ar">ماريا زكريا · ماري يوسف</span><span class="ta-en" lang="en">Maria Zakaria · Mary Youssef</span></div></div><div class="poster"><img width="1536" height="1536" decoding="async" loading="lazy" alt="معرض سينوغرافيا القرية الثاني" src="images/sahara2/poster.jpg"/></div></div></div>
 <div class="masonry"><figure class="tall"><img width="1536" height="1024" decoding="async" loading="lazy" alt="سينوغرافيا القرية — صحارة" src="images/sahara2/scenography-01.jpg"/></figure><figure><img width="1024" height="1536" decoding="async" loading="lazy" alt="سينوغرافيا القرية — صحارة" src="images/sahara2/scenography-02.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="سينوغرافيا القرية — صحارة" src="images/sahara2/scenography-03.jpg"/></figure><figure><img width="1536" height="1024" decoding="async" loading="lazy" alt="سينوغرافيا القرية — صحارة" src="images/sahara2/scenography-04.jpg"/></figure></div>
 </div></section>
+
+<section class="section sahara-continuity" id="continuity">
+  <div class="container">
+    <div class="continuity-intro">
+      <div>
+        <div class="kicker" style="color:#e7bd66"><span class="ta-ar" lang="ar">ما بعد المعسكر · استمرارية الأثر</span><span class="ta-en" lang="en">BEYOND THE CAMP · SUSTAINING IMPACT</span></div>
+        <h2><span class="ta-ar" lang="ar">المعسكر بداية الطريق، <span>مش نهايته.</span></span><span class="ta-en" lang="en">The camp is the beginning, <span>not the end.</span></span></h2>
+        <p class="lead"><span class="ta-ar" lang="ar">صحارة لا يتوقف عند أيام التدريب. يمتد المشروع على مدار عامين، ليواصل العمل مع المشاركين والفرق المحلية من خلال الاستشارات الفنية والتواصل عن بُعد والزيارات الميدانية، بالتوازي مع تطوير التدريبات وإنتاج العروض.</span><span class="ta-en" lang="en">Sahara does not end with the training camp. Across a two-year project period, it continues working with participants and local groups through artistic consultations, remote communication and field visits, alongside ongoing training and performance development.</span></p>
+      </div>
+      <div class="continuity-note"><span class="ta-ar" lang="ar">الفكرة الأساسية هي بناء علاقة طويلة المدى مع الفرق المحلية، تساعدها على تطوير أدواتها الفنية وتحويل ما تتعلمه إلى ممارسة وإنتاج مستمرين.</span><span class="ta-en" lang="en">The core idea is to build a long-term relationship with local groups, helping them strengthen their artistic tools and turn learning into ongoing practice and production.</span></div>
+    </div>
+    <div class="continuity-timeline">
+      <article class="continuity-step"><h3><span class="ta-ar" lang="ar">الوصول والاستماع</span><span class="ta-en" lang="en">Reach &amp; listen</span></h3><p><span class="ta-ar" lang="ar">التعرف على سياق القرية، حكاياتها، مواردها واحتياجات المشاركين.</span><span class="ta-en" lang="en">Understand each village’s context, stories, resources and participants’ needs.</span></p></article>
+      <article class="continuity-step"><h3><span class="ta-ar" lang="ar">التدريب وبناء القدرات</span><span class="ta-en" lang="en">Training &amp; capacity</span></h3><p><span class="ta-ar" lang="ar">تطوير المهارات في الفنون الأدائية وأدوات التعبير والإنتاج.</span><span class="ta-en" lang="en">Develop skills in performing arts, expression and production tools.</span></p></article>
+      <article class="continuity-step"><h3><span class="ta-ar" lang="ar">التطبيق والإنتاج</span><span class="ta-en" lang="en">Practice &amp; production</span></h3><p><span class="ta-ar" lang="ar">مواصلة العمل على الأفكار والمواد الفنية وصولًا إلى عروض وتجارب منبثقة من المكان.</span><span class="ta-en" lang="en">Continue developing artistic ideas and material into performances and experiences rooted in place.</span></p></article>
+      <article class="continuity-step"><h3><span class="ta-ar" lang="ar">استشارات ومتابعة</span><span class="ta-en" lang="en">Consultation &amp; follow-up</span></h3><p><span class="ta-ar" lang="ar">تواصل فني عن بُعد وزيارات ميدانية لدعم الفرق ومناقشة التحديات والخطوات التالية.</span><span class="ta-en" lang="en">Remote artistic consultations and field visits to support groups, discuss challenges and plan next steps.</span></p></article>
+      <article class="continuity-step"><h3><span class="ta-ar" lang="ar">استمرارية محلية</span><span class="ta-en" lang="en">Local continuity</span></h3><p><span class="ta-ar" lang="ar">تعزيز قدرة المشاركين على مواصلة الممارسة وصناعة مبادرات فنية داخل مجتمعاتهم.</span><span class="ta-en" lang="en">Strengthen participants’ ability to sustain artistic practice and create initiatives within their communities.</span></p></article>
+    </div>
+    <div class="impact-band">
+      <div><b><span class="ta-ar" lang="ar">لامركزية ثقافية</span><span class="ta-en" lang="en">Cultural decentralisation</span></b><p><span class="ta-ar" lang="ar">إتاحة فرص التدريب والإنتاج الفني خارج المراكز الثقافية التقليدية.</span><span class="ta-en" lang="en">Make artistic training and production accessible beyond traditional cultural centres.</span></p></div>
+      <div><b><span class="ta-ar" lang="ar">معرفة من داخل المكان</span><span class="ta-en" lang="en">Knowledge rooted in place</span></b><p><span class="ta-ar" lang="ar">الانطلاق من الذاكرة المحلية والحكايات والمهارات الموجودة في القرى.</span><span class="ta-en" lang="en">Build on local memory, stories and skills already present in villages.</span></p></div>
+      <div><b><span class="ta-ar" lang="ar">دعم يتجاوز التدريب</span><span class="ta-en" lang="en">Support beyond training</span></b><p><span class="ta-ar" lang="ar">ربط التعلم بالتطبيق، ثم بالاستشارات والمتابعة الميدانية وعن بُعد.</span><span class="ta-en" lang="en">Connect learning to practice, then to remote consultation and field follow-up.</span></p></div>
+    </div>
+    <div class="donor-call">
+      <div>
+        <div class="donor-label"><span class="ta-ar" lang="ar">شراكات · دعم · استمرارية</span><span class="ta-en" lang="en">PARTNERSHIPS · SUPPORT · CONTINUITY</span></div>
+        <h3><span class="ta-ar" lang="ar">الأثر الحقيقي هو ما يستمر بعد انتهاء التدريب.</span><span class="ta-en" lang="en">The real impact is what continues after training.</span></h3>
+        <p><span class="ta-ar" lang="ar">يمنح نموذج صحارة الشركاء والجهات الداعمة فرصة للمساهمة في مسار ثقافي طويل المدى: تنمية قدرات محلية، ودعم إنتاج فني نابع من القرى، ومتابعة تساعد على تحويل التجربة إلى ممارسة مستمرة.</span><span class="ta-en" lang="en">Sahara offers partners and supporters a way to contribute to a long-term cultural process: growing local capacity, supporting village-rooted artistic production and providing follow-up that helps turn an experience into sustained practice.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="cta"><div class="container cta-in"><div><div class="kicker" style="color:#f2d58e"><span class="ta-ar" lang="ar">صحارة · الأرشيف</span><span class="ta-en" lang="en">SAHARA · ARCHIVE</span></div><h2><span class="ta-ar" lang="ar">من القرى... إلى الخشبة.</span><span class="ta-en" lang="en">From villages to the stage.</span></h2><p><span class="ta-ar" lang="ar">دورتان، تجارب مختلفة، لكن الفكرة واحدة: أن يكون الفن أقرب إلى الناس، وأن تصبح القرية شريكًا في صناعة الفن لا مجرد متلقٍ له.</span><span class="ta-en" lang="en">Two editions, different experiences, one idea: make art closer to people, and make the village a partner in creating art—not merely receiving it.</span></p></div></div></section>
 </main>
 
