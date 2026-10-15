@@ -199,15 +199,16 @@ h2 { font-size:38px; line-height:1.2; }
   gap:24px;
 }
 .card {
-  background:var(--card);
+  background:linear-gradient(180deg,#141717 0%,var(--card) 100%);
   border:1px solid #252829;
   cursor:pointer;
   overflow:hidden;
-  transition:.3s;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
 }
 .card:hover {
   transform:translateY(-7px);
-  border-color:rgba(43,179,177,.5);
+  border-color:rgba(43,179,177,.65);
+  box-shadow:0 14px 34px rgba(0,0,0,.28);
 }
 .poster {
   position:relative;
@@ -253,7 +254,10 @@ h2 { font-size:38px; line-height:1.2; }
   color:#061010;
   padding:3px 8px;
 }
-.card-body { padding:16px; }
+.card-body { padding:18px; }
+.card:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.empty-state { display:none; margin:26px 0 0; padding:24px; border:1px dashed #3b4545; color:#b9c2c2; text-align:center; border-radius:8px; }
+.empty-state.show { display:block; }
 .card h3 { font-size:18px; font-weight:800; }
 .card p {
   font-size:11px;
@@ -523,23 +527,23 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
     <input id="search" class="search" type="search" placeholder="ابحث عن عرض..." aria-label="Search">
     <div class="grid" id="grid">
 
-<article class="card" data-title="الجنوب تحت" data-en="South Is Down" data-year="2014" data-img="images/productions/south-is-down.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="الجنوب تحت" data-en="South Is Down" data-year="2014" data-img="images/productions/south-is-down.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">01</span>
+    <span class="num">1</span>
     <span class="year">2014</span>
     <img width="960" height="387" decoding="async" src="images/productions/south-is-down.jpg" alt="الجنوب تحت" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">الجنوب تحت</h3>
     <h3 class="ta-en" lang="en">South Is Down</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="الموجوعة" data-en="Al-Mawgoua" data-year="2014" data-img="images/productions/al-mawgoua.jpg" data-desc="حكاية إنسانية عن الألم الذي يسكن في الداخل، وعن وجع قد لا يراه أحد لكنه يترك أثره في كل شيء.">
+<article class="card" data-title="الموجوعة" data-en="Al-Mawgoua" data-year="2014" data-img="images/productions/al-mawgoua.jpg" data-desc="حكاية إنسانية عن الألم الذي يسكن في الداخل، وعن وجع قد لا يراه أحد لكنه يترك أثره في كل شيء." data-desc-en="A human story about inner pain that may go unseen, yet leaves its mark on everything.">
   <div class="poster">
-    <span class="num">02</span>
+    <span class="num">2</span>
     <span class="year">2014</span>
     <img width="2048" height="1448" decoding="async" src="images/productions/al-mawgoua.jpg" alt="الموجوعة" loading="lazy">
   </div>
@@ -547,109 +551,109 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
     <h3 class="ta-ar" lang="ar">الموجوعة</h3>
     <h3 class="ta-en" lang="en">Al-Mawgoua</h3>
     <p class="ta-ar" lang="ar">حكاية إنسانية عن الألم الذي يسكن في الداخل، وعن وجع قد لا يراه أحد لكنه يترك أثره في كل شيء.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-en" lang="en">A human story about inner pain that may go unseen, yet leaves its mark on everything.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="ولاد تسعة" data-en="Wlad Tesaa" data-year="2016" data-img="images/productions/wlad-tesaa.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="ولاد تسعة" data-en="Wlad Tesaa" data-year="2016" data-img="images/productions/wlad-tesaa.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">03</span>
+    <span class="num">3</span>
     <span class="year">2016</span>
     <img width="1024" height="495" decoding="async" src="images/productions/wlad-tesaa.jpg" alt="ولاد تسعة" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">ولاد تسعة</h3>
     <h3 class="ta-en" lang="en">Wlad Tesaa</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="قهوة زيادة" data-en="Extra Coffee" data-year="2017" data-img="images/productions/extra-coffee.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="قهوة زيادة" data-en="Extra Coffee" data-year="2017" data-img="images/productions/extra-coffee.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">04</span>
+    <span class="num">4</span>
     <span class="year">2017</span>
     <img width="1714" height="869" decoding="async" src="images/productions/extra-coffee.jpg" alt="قهوة زيادة" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">قهوة زيادة</h3>
     <h3 class="ta-en" lang="en">Extra Coffee</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="خشبة" data-en="The Stage" data-year="2017" data-img="images/productions/the-stage.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="خشبة" data-en="The Stage" data-year="2017" data-img="images/productions/the-stage.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">05</span>
+    <span class="num">5</span>
     <span class="year">2017</span>
     <img width="1932" height="2048" decoding="async" src="images/productions/the-stage.jpg" alt="خشبة" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">خشبة</h3>
     <h3 class="ta-en" lang="en">The Stage</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="يخلق من الشبه" data-en="Yokhlaq Min El-Shebh" data-year="2017" data-img="images/productions/yokhlaq-min-el-shebh.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="يخلق من الشبه" data-en="Yokhlaq Min El-Shebh" data-year="2017" data-img="images/productions/yokhlaq-min-el-shebh.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">06</span>
+    <span class="num">6</span>
     <span class="year">2017</span>
     <img width="691" height="960" decoding="async" src="images/productions/yokhlaq-min-el-shebh.jpg" alt="يخلق من الشبه" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">يخلق من الشبه</h3>
     <h3 class="ta-en" lang="en">Yokhlaq Min El-Shebh</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="أشتاتاً شلتوت" data-en="Ashtatan Shaltout" data-year="2018" data-img="images/productions/ashtatan-shaltout.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="أشتاتاً شلتوت" data-en="Ashtatan Shaltout" data-year="2018" data-img="images/productions/ashtatan-shaltout.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">07</span>
+    <span class="num">7</span>
     <span class="year">2018</span>
     <img width="417" height="364" decoding="async" src="images/productions/ashtatan-shaltout.jpg" alt="أشتاتاً شلتوت" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">أشتاتاً شلتوت</h3>
     <h3 class="ta-en" lang="en">Ashtatan Shaltout</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="بطن الزير" data-en="Batn El Zeer" data-year="2018" data-img="images/productions/batn-el-zeer.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="بطن الزير" data-en="Batn El Zeer" data-year="2018" data-img="images/productions/batn-el-zeer.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">08</span>
+    <span class="num">8</span>
     <span class="year">2018</span>
     <img width="1270" height="1877" decoding="async" src="images/productions/batn-el-zeer.jpg" alt="بطن الزير" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">بطن الزير</h3>
     <h3 class="ta-en" lang="en">Batn El Zeer</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="عملة نادرة" data-en="Rare Coin" data-year="2018" data-img="images/productions/rare-coin.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="عملة نادرة" data-en="Rare Coin" data-year="2018" data-img="images/productions/rare-coin.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">09</span>
+    <span class="num">9</span>
     <span class="year">2018</span>
     <img width="356" height="414" decoding="async" src="images/productions/rare-coin.jpg" alt="عملة نادرة" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">عملة نادرة</h3>
     <h3 class="ta-en" lang="en">Rare Coin</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="خيبتا" data-en="Hepta" data-year="2018" data-img="images/productions/hepta.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="خيبتا" data-en="Hepta" data-year="2018" data-img="images/productions/hepta.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
     <span class="num">10</span>
     <span class="year">2018</span>
@@ -658,98 +662,98 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">خيبتا</h3>
     <h3 class="ta-en" lang="en">Hepta</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="ملك وكتابة" data-en="Malek w Ketaba" data-year="2019" data-img="images/productions/malek-w-ketaba.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="ملك وكتابة" data-en="Malek w Ketaba" data-year="2019" data-img="images/productions/malek-w-ketaba.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">11</span>
+    <span class="num">12</span>
     <span class="year">2019</span>
     <img width="417" height="182" decoding="async" src="images/productions/malek-w-ketaba.jpg" alt="ملك وكتابة" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">ملك وكتابة</h3>
     <h3 class="ta-en" lang="en">Malek w Ketaba</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="فرحة" data-en="Farha" data-year="2019" data-img="images/productions/farha.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="فرحة" data-en="Farha" data-year="2019" data-img="images/productions/farha.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">12</span>
+    <span class="num">13</span>
     <span class="year">2019</span>
     <img width="302" height="414" decoding="async" src="images/productions/farha.jpg" alt="فرحة" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">فرحة</h3>
     <h3 class="ta-en" lang="en">Farha</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="فستان فرح" data-en="Wedding Dress" data-year="2019" data-img="images/productions/wedding-dress.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="فستان فرح" data-en="Wedding Dress" data-year="2019" data-img="images/productions/wedding-dress.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">13</span>
+    <span class="num">14</span>
     <span class="year">2019</span>
     <img width="590" height="501" decoding="async" src="images/productions/wedding-dress.jpg" alt="فستان فرح" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">فستان فرح</h3>
     <h3 class="ta-en" lang="en">Wedding Dress</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="الكبار" data-en="The Elders" data-year="2019" data-img="images/productions/the-elders.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="الكبار" data-en="The Elders" data-year="2019" data-img="images/productions/the-elders.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">14</span>
+    <span class="num">15</span>
     <span class="year">2019</span>
     <img width="1365" height="2048" decoding="async" src="images/productions/the-elders.jpg" alt="الكبار" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">الكبار</h3>
     <h3 class="ta-en" lang="en">The Elders</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="المولد" data-en="Al-Mawlid" data-year="2019" data-img="images/productions/al-mawlid.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="المولد" data-en="Al-Mawlid" data-year="2019" data-img="images/productions/al-mawlid.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">15</span>
+    <span class="num">16</span>
     <span class="year">2019</span>
     <img width="302" height="414" decoding="async" src="images/productions/al-mawlid.jpg" alt="المولد" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">المولد</h3>
     <h3 class="ta-en" lang="en">Al-Mawlid</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="حبشي بنات" data-en="Habshi Banat" data-year="2020" data-img="images/productions/habshi-banat.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="حبشي بنات" data-en="Habshi Banat" data-year="2020" data-img="images/productions/habshi-banat.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">16</span>
+    <span class="num">17</span>
     <span class="year">2020</span>
     <img width="1121" height="1908" decoding="async" src="images/productions/habshi-banat.jpg" alt="حبشي بنات" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">حبشي بنات</h3>
     <h3 class="ta-en" lang="en">Habshi Banat</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="جريمة في فرقة الغرابلي" data-en="A Crime in Al-Gharabli Troupe" data-year="2020" data-img="images/productions/a-crime-in-al-gharabli-troupe.jpg" data-desc="إنتاج تياترو الصعيد – 2020.">
+<article class="card" data-title="جريمة في فرقة الغرابلي" data-en="A Crime in Al-Gharabli Troupe" data-year="2020" data-img="images/productions/a-crime-in-al-gharabli-troupe.jpg" data-desc="إنتاج تياترو الصعيد – 2020." data-desc-en="A Teatro Alsaeed production (2020).">
   <div class="poster">
-    <span class="num">17</span>
+    <span class="num">18</span>
     <span class="year">2020</span>
     <img width="1079" height="720" decoding="async" src="images/productions/a-crime-in-al-gharabli-troupe.jpg" alt="جريمة في فرقة الغرابلي" loading="lazy">
   </div>
@@ -757,97 +761,97 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
     <h3 class="ta-ar" lang="ar">جريمة في فرقة الغرابلي</h3>
     <h3 class="ta-en" lang="en">A Crime in Al-Gharabli Troupe</h3>
     <p class="ta-ar" lang="ar">إنتاج تياترو الصعيد – 2020.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-en" lang="en">A Teatro Alsaeed production (2020).</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="سوق العبيد" data-en="The Slave Market" data-year="2021" data-img="images/productions/the-slave-market.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="سوق العبيد" data-en="The Slave Market" data-year="2021" data-img="images/productions/the-slave-market.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">18</span>
+    <span class="num">20</span>
     <span class="year">2021</span>
     <img width="1356" height="1738" decoding="async" src="images/productions/the-slave-market.jpg" alt="سوق العبيد" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">سوق العبيد</h3>
     <h3 class="ta-en" lang="en">The Slave Market</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="ليلة عيد ميلاد" data-en="Birthday Night" data-year="2024" data-img="images/productions/birthday-night.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="ليلة عيد ميلاد" data-en="Birthday Night" data-year="2024" data-img="images/productions/birthday-night.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">19</span>
+    <span class="num">22</span>
     <span class="year">2024</span>
     <img width="526" height="528" decoding="async" src="images/productions/birthday-night.jpg" alt="ليلة عيد ميلاد" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">ليلة عيد ميلاد</h3>
     <h3 class="ta-en" lang="en">Birthday Night</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="خمسة رجال في الطابق العلوي" data-en="Five Men Upstairs" data-year="2024" data-img="images/productions/five-men-upstairs.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="خمسة رجال في الطابق العلوي" data-en="Five Men Upstairs" data-year="2024" data-img="images/productions/five-men-upstairs.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">20</span>
+    <span class="num">23</span>
     <span class="year">2024</span>
     <img width="1448" height="2048" decoding="async" src="images/productions/five-men-upstairs.jpg" alt="خمسة رجال في الطابق العلوي" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">خمسة رجال في الطابق العلوي</h3>
     <h3 class="ta-en" lang="en">Five Men Upstairs</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="سرير لا يصلح للنوم" data-en="A Bed Not Fit for Sleep" data-year="2025" data-img="images/productions/a-bed-not-fit-for-sleep.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="سرير لا يصلح للنوم" data-en="A Bed Not Fit for Sleep" data-year="2025" data-img="images/productions/a-bed-not-fit-for-sleep.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">21</span>
+    <span class="num">26</span>
     <span class="year">2025</span>
     <img width="1338" height="1673" decoding="async" src="images/productions/a-bed-not-fit-for-sleep.jpg" alt="سرير لا يصلح للنوم" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">سرير لا يصلح للنوم</h3>
     <h3 class="ta-en" lang="en">A Bed Not Fit for Sleep</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="قابل للنشر" data-en="Publishable" data-year="2025" data-img="images/productions/publishable.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="قابل للنشر" data-en="Publishable" data-year="2025" data-img="images/productions/publishable.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">22</span>
+    <span class="num">27</span>
     <span class="year">2025</span>
     <img width="509" height="640" decoding="async" src="images/productions/publishable.jpg" alt="قابل للنشر" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">قابل للنشر</h3>
     <h3 class="ta-en" lang="en">Publishable</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="بولي آرت" data-en="Poly Art" data-year="2025" data-img="images/productions/poly-art.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="بولي آرت" data-en="Poly Art" data-year="2025" data-img="images/productions/poly-art.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">23</span>
+    <span class="num">28</span>
     <span class="year">2025</span>
     <img width="720" height="1089" decoding="async" src="images/productions/poly-art.jpg" alt="بولي آرت" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">بولي آرت</h3>
     <h3 class="ta-en" lang="en">Poly Art</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="الجانب المظلم" data-en="The Dark Side" data-year="2026" data-img="images/productions/the-dark-side.jpg" data-desc="مشروع تخرج أكاديمية تياترو الصعيد – الدفعة 22.">
+<article class="card" data-title="الجانب المظلم" data-en="The Dark Side" data-year="2026" data-img="images/productions/the-dark-side.jpg" data-desc="مشروع تخرج أكاديمية تياترو الصعيد – الدفعة 22." data-desc-en="Graduation project of Teatro Alsaeed Academy, Class 22.">
   <div class="poster">
-    <span class="num">24</span>
+    <span class="num">30</span>
     <span class="year">2026</span>
     <img width="1086" height="1448" decoding="async" src="images/productions/the-dark-side.jpg" alt="الجانب المظلم" loading="lazy">
   </div>
@@ -855,31 +859,32 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
     <h3 class="ta-ar" lang="ar">الجانب المظلم</h3>
     <h3 class="ta-en" lang="en">The Dark Side</h3>
     <p class="ta-ar" lang="ar">مشروع تخرج أكاديمية تياترو الصعيد – الدفعة 22.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-en" lang="en">Graduation project of Teatro Alsaeed Academy, Class 22.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="قبل منتصف الليل" data-en="Before Midnight" data-year="2026" data-img="images/productions/before-midnight.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد.">
+<article class="card" data-title="قبل منتصف الليل" data-en="Before Midnight" data-year="2026" data-img="images/productions/before-midnight.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive.">
   <div class="poster">
-    <span class="num">25</span>
+    <span class="num">31</span>
     <span class="year">2026</span>
     <img width="1086" height="1495" decoding="async" src="images/productions/before-midnight.jpg" alt="قبل منتصف الليل" loading="lazy">
   </div>
   <div class="card-body">
     <h3 class="ta-ar" lang="ar">قبل منتصف الليل</h3>
     <h3 class="ta-en" lang="en">Before Midnight</h3>
-    <p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p>
-    <p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p>
+    <p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p>
+    <p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p>
     <small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small>
   </div>
 </article>
-<article class="card" data-title="المؤسسة" data-en="The Institution" data-year="2020" data-img="images/productions/the-institution.jpg" data-desc="إنتاج تياترو الصعيد – 2020."><div class="poster"><span class="num">26</span><span class="year">2020</span><img width="686" height="960" decoding="async" src="images/productions/the-institution.jpg" alt="المؤسسة" loading="lazy"></div><div class="card-body"><h3 class="ta-ar" lang="ar">المؤسسة</h3><h3 class="ta-en" lang="en">The Institution</h3><p class="ta-ar" lang="ar">إنتاج تياترو الصعيد – 2020.</p><p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p><small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small></div></article>
-<article class="card" data-title="الآخر" data-en="The Other" data-year="2023" data-img="images/productions/the-other.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد."><div class="poster"><span class="num">27</span><span class="year">2023</span><img width="810" height="540" decoding="async" src="images/productions/the-other.jpg" alt="الآخر" loading="lazy"></div><div class="card-body"><h3 class="ta-ar" lang="ar">الآخر</h3><h3 class="ta-en" lang="en">The Other</h3><p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p><p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p><small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small></div></article>
-<article class="card" data-link="lumieres" data-desc-en="A theatre performance and the outcome of the Lumières project, which builds young actors’ skills through workshops and a French-language production with the support of the Institut français d’Égypte." data-title="أضواء" data-en="Lumiere’s" data-year="2024" data-img="images/productions/lumiere-s.jpg" data-desc="عرض «أضواء» ثمرة مشروع «أضواء Lumières» لبناء قدرات الشباب في التمثيل المسرحي، بإنتاج عرض باللغة الفرنسية بدعم من المعهد الفرنسي بمصر."><div class="poster"><span class="num">28</span><span class="year">2024</span><img width="1422" height="2048" decoding="async" src="images/productions/lumiere-s.jpg" alt="أضواء" loading="lazy"></div><div class="card-body"><h3 class="ta-ar" lang="ar">أضواء</h3><h3 class="ta-en" lang="en">Lumiere’s</h3><p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p><p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p><small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small><a class="card-link" href="/lumieres"><span class="ta-ar" lang="ar">اكتشف مشروع أضواء ←</span><span class="ta-en" lang="en">Discover the Lumières project →</span></a></div></article>
-<article class="card" data-title="السيرك" data-en="The Circus" data-year="2024" data-img="images/productions/the-circus.jpg" data-desc="عرض مسرحي من أرشيف فرقة تياترو الصعيد."><div class="poster"><span class="num">29</span><span class="year">2024</span><img width="499" height="600" decoding="async" src="images/productions/the-circus.jpg" alt="السيرك" loading="lazy"></div><div class="card-body"><h3 class="ta-ar" lang="ar">السيرك</h3><h3 class="ta-en" lang="en">The Circus</h3><p class="ta-ar" lang="ar">عرض مسرحي من أرشيف فرقة تياترو الصعيد.</p><p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p><small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small></div></article>
-<article class="card" data-title="كانسر" data-en="Cancer" data-year="2018" data-img="images/cancer.jpg" data-desc="تأليف وإخراج كيرو صابر – 2018."><div class="poster"><span class="num">30</span><span class="year">2018</span><img width="1536" height="1160" decoding="async" src="images/cancer.jpg" alt="كانسر" loading="lazy"></div><div class="card-body"><h3 class="ta-ar" lang="ar">كانسر</h3><h3 class="ta-en" lang="en">Cancer</h3><p class="ta-ar" lang="ar">تأليف وإخراج كيرو صابر – 2018.</p><p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p><small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small></div></article>
-<article class="card" data-title="ERROR404" data-en="ERROR404" data-year="2025" data-img="images/error404.jpg" data-desc="مشروع تخرج الدفعة 19 من أكاديمية تياترو الصعيد – 2025."><div class="poster"><span class="num">31</span><span class="year">2025</span><img width="1086" height="1536" decoding="async" src="images/error404.jpg" alt="ERROR404" loading="lazy"></div><div class="card-body"><h3 class="ta-ar" lang="ar">ERROR404</h3><h3 class="ta-en" lang="en">ERROR404</h3><p class="ta-ar" lang="ar">مشروع تخرج الدفعة 19 من أكاديمية تياترو الصعيد – 2025.</p><p class="ta-en" lang="en">A theatrical production from the Teatro Alsaeed archive.</p><small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small></div></article>
+<article class="card" data-title="المؤسسة" data-en="The Institution" data-year="2020" data-img="images/productions/the-institution.jpg" data-desc="إنتاج تياترو الصعيد – 2020." data-desc-en="A Teatro Alsaeed production (2020)."><div class="poster"><span class="num">19</span><span class="year">2020</span><img width="686" height="960" decoding="async" src="images/productions/the-institution.jpg" alt="المؤسسة" loading="lazy"></div><div class="card-body"><h3 class="ta-ar" lang="ar">المؤسسة</h3><h3 class="ta-en" lang="en">The Institution</h3><p class="ta-ar" lang="ar">إنتاج تياترو الصعيد – 2020.</p><p class="ta-en" lang="en">A Teatro Alsaeed production (2020).</p><small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small></div></article>
+<article class="card" data-title="الآخر" data-en="The Other" data-year="2023" data-img="images/productions/the-other.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive."><div class="poster"><span class="num">21</span><span class="year">2023</span><img width="810" height="540" decoding="async" src="images/productions/the-other.jpg" alt="الآخر" loading="lazy"></div><div class="card-body"><h3 class="ta-ar" lang="ar">الآخر</h3><h3 class="ta-en" lang="en">The Other</h3><p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p><p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p><small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small></div></article>
+<article class="card" data-link="lumieres" data-desc-en="The production “Lumières” grew out of a project that develops young people’s theatre skills through workshops and a French-language performance, with support from the Institut français d’Égypte." data-title="أضواء" data-en="Lumiere’s" data-year="2024" data-img="images/productions/lumiere-s.jpg" data-desc="عرض «أضواء» ثمرة مشروع «أضواء Lumières» لبناء قدرات الشباب في التمثيل المسرحي، بإنتاج عرض باللغة الفرنسية بدعم من المعهد الفرنسي بمصر."><div class="poster"><span class="num">24</span><span class="year">2024</span><img width="1422" height="2048" decoding="async" src="images/productions/lumiere-s.jpg" alt="أضواء" loading="lazy"></div><div class="card-body"><h3 class="ta-ar" lang="ar">أضواء</h3><h3 class="ta-en" lang="en">Lumiere’s</h3><p class="ta-ar" lang="ar">عرض «أضواء» ثمرة مشروع «أضواء Lumières» لبناء قدرات الشباب في التمثيل المسرحي، بإنتاج عرض باللغة الفرنسية بدعم من المعهد الفرنسي بمصر.</p><p class="ta-en" lang="en">The production “Lumières” grew out of a project that develops young people’s theatre skills through workshops and a French-language performance, with support from the Institut français d’Égypte.</p><small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small><a class="card-link" href="/lumieres"><span class="ta-ar" lang="ar">اكتشف مشروع أضواء ←</span><span class="ta-en" lang="en">Discover the Lumières project →</span></a></div></article>
+<article class="card" data-title="السيرك" data-en="The Circus" data-year="2024" data-img="images/productions/the-circus.jpg" data-desc="عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة." data-desc-en="A theatrical production listed in the Teatro Alsaeed archive."><div class="poster"><span class="num">25</span><span class="year">2024</span><img width="499" height="600" decoding="async" src="images/productions/the-circus.jpg" alt="السيرك" loading="lazy"></div><div class="card-body"><h3 class="ta-ar" lang="ar">السيرك</h3><h3 class="ta-en" lang="en">The Circus</h3><p class="ta-ar" lang="ar">عرض مُدرج ضمن أرشيف تياترو الصعيد، مع سنة الإنتاج والصورة المتاحة.</p><p class="ta-en" lang="en">A theatrical production listed in the Teatro Alsaeed archive.</p><small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small></div></article>
+<article class="card" data-title="كانسر" data-en="Cancer" data-year="2018" data-img="images/cancer.jpg" data-desc="تأليف وإخراج كيرو صابر – 2018." data-desc-en="Written and directed by Kero Saber (2018)."><div class="poster"><span class="num">11</span><span class="year">2018</span><img width="1536" height="1160" decoding="async" src="images/cancer.jpg" alt="كانسر" loading="lazy"></div><div class="card-body"><h3 class="ta-ar" lang="ar">كانسر</h3><h3 class="ta-en" lang="en">Cancer</h3><p class="ta-ar" lang="ar">تأليف وإخراج كيرو صابر – 2018.</p><p class="ta-en" lang="en">Written and directed by Kero Saber (2018).</p><small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small></div></article>
+<article class="card" data-title="ERROR404" data-en="ERROR404" data-year="2025" data-img="images/error404.jpg" data-desc="مشروع تخرج الدفعة 19 من أكاديمية تياترو الصعيد – 2025." data-desc-en="Graduation project of Teatro Alsaeed Academy, Class 19 (2025)."><div class="poster"><span class="num">29</span><span class="year">2025</span><img width="1086" height="1536" decoding="async" src="images/error404.jpg" alt="ERROR404" loading="lazy"></div><div class="card-body"><h3 class="ta-ar" lang="ar">ERROR404</h3><h3 class="ta-en" lang="en">ERROR404</h3><p class="ta-ar" lang="ar">مشروع تخرج الدفعة 19 من أكاديمية تياترو الصعيد – 2025.</p><p class="ta-en" lang="en">Graduation project of Teatro Alsaeed Academy, Class 19 (2025).</p><small><span class="ta-ar" lang="ar">تياترو الصعيد</span><span class="ta-en" lang="en">TEATRO ALSAEED</span></small></div></article>
     </div>
+    <p id="emptyState" class="empty-state" role="status"><span class="ta-ar" lang="ar">مفيش عروض مطابقة لبحثك. جرّب اسمًا أو سنة مختلفة.</span><span class="ta-en" lang="en">No productions match your search. Try another title or year.</span></p>
   </div>
 </section>
 
@@ -950,7 +955,7 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
   "use strict";
   function init(){
     var body=document.body;
-    var search=document.getElementById("search"),count=document.getElementById("count");
+    var search=document.getElementById("search"),count=document.getElementById("count"),emptyState=document.getElementById("emptyState");
     var cards=Array.prototype.slice.call(document.querySelectorAll(".card"));
     var modal=document.getElementById("modal"),closeBtn=document.getElementById("close");
     var modalImg=document.getElementById("modalImg"),modalTitle=document.getElementById("modalTitle");
@@ -966,6 +971,7 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
         var show=text.indexOf(q)!==-1;card.style.display=show?"":"none";if(show)visible++;
       });
       count.textContent=visible;
+      if(emptyState)emptyState.classList.toggle("show",visible===0);
     });
     cards.forEach(function(card){
       card.addEventListener("click",function(){
