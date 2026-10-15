@@ -104,6 +104,16 @@ body.site-en .hero-logo{order:2}
   .hero{padding-top:48px}
   .hero p{font-size:16px}
 }
+
+/* Incubator productions photo galleries */
+.prod-grid{align-items:start}
+.prod{min-width:0}
+.prod-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:18px}
+.prod-photo{display:block;aspect-ratio:4/3;overflow:hidden;border-radius:9px;background:#171b1b}
+.prod-photo img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.prod-photo:hover img{transform:scale(1.045)}
+@media(max-width:900px){.prod-grid{grid-template-columns:1fr}.prod-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:520px){.prod-gallery{gap:6px}.prod-photo{border-radius:7px}}
 </style>
 
 <style id="teatro-site-audit-css">
@@ -456,13 +466,49 @@ h1{letter-spacing:-1.4px;text-wrap:balance}
       <span class="ar" lang="ar">نتاج الحاضنة</span><span class="en" lang="en">Incubator Productions</span>
     </h2>
     <p class="lead" style="color:#c2cbcb">
-      <span class="ar" lang="ar">مساحة مخصصة للأعمال التي خرجت من تجربة الحاضنة. سنضيف التوثيق البصري والتفاصيل الكاملة لكل عرض تباعًا.</span>
-      <span class="en" lang="en">A dedicated space for productions emerging from the incubator. Full visual documentation and details will be added for each production.</span>
+      <span class="ar" lang="ar">ثلاث تجارب مسرحية خرجت من الحاضنة، توثّقها الصور وتحفظ أثرها على خشبة المسرح.</span>
+      <span class="en" lang="en">Three productions emerging from the incubator, documented through photographs that preserve their work on stage.</span>
     </p>
     <div class="prod-grid">
-      <article class="prod"><span class="num">01</span><h3><span class="ta-ar" lang="ar">حكاوي القمر</span><span class="ta-en" lang="en">Moon Tales</span></h3><p><span class="ta-ar" lang="ar">فرقة كامبوشة</span><span class="ta-en" lang="en">Kambousha Troupe</span></p></article>
-      <article class="prod"><span class="num">02</span><h3><span class="ta-ar" lang="ar">أنقاض</span><span class="ta-en" lang="en">Ruins</span></h3><p><span class="ta-ar" lang="ar">فرقة كواليس</span><span class="ta-en" lang="en">Kawalis Troupe</span></p></article>
-      <article class="prod"><span class="num">03</span><h3><span class="ta-ar" lang="ar">جداريات العرابة المدفونة</span><span class="ta-en" lang="en">Murals of the Buried Arabah</span></h3><p><span class="ta-ar" lang="ar">فرقة الهاية</span><span class="ta-en" lang="en">El-Haya Troupe</span></p></article>
+      <article class="prod">
+        <span class="num">01</span>
+        <h3><span class="ta-ar" lang="ar">حكاوي القمر</span><span class="ta-en" lang="en">Moon Tales</span></h3>
+        <p><span class="ta-ar" lang="ar">فرقة كامبوشة</span><span class="ta-en" lang="en">Kambousha Troupe</span></p>
+        <div class="prod-gallery" aria-label="حكاوي القمر — صور العرض">
+          <a class="prod-photo" href="/images/incubator/productions/01-hakawy-el-qamar/hakawy-alqamar-01.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/01-hakawy-el-qamar/hakawy-alqamar-01.jpg" alt="حكاوي القمر — صورة 1" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/01-hakawy-el-qamar/hakawy-alqamar-02.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/01-hakawy-el-qamar/hakawy-alqamar-02.jpg" alt="حكاوي القمر — صورة 2" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/01-hakawy-el-qamar/hakawy-alqamar-03.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/01-hakawy-el-qamar/hakawy-alqamar-03.jpg" alt="حكاوي القمر — صورة 3" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/01-hakawy-el-qamar/hakawy-alqamar-04.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/01-hakawy-el-qamar/hakawy-alqamar-04.jpg" alt="حكاوي القمر — صورة 4" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/01-hakawy-el-qamar/hakawy-alqamar-05.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/01-hakawy-el-qamar/hakawy-alqamar-05.jpg" alt="حكاوي القمر — صورة 5" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/01-hakawy-el-qamar/hakawy-alqamar-06.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/01-hakawy-el-qamar/hakawy-alqamar-06.jpg" alt="حكاوي القمر — صورة 6" loading="lazy" decoding="async"></a>
+        </div>
+      </article>
+      <article class="prod">
+        <span class="num">02</span>
+        <h3><span class="ta-ar" lang="ar">أنقاض</span><span class="ta-en" lang="en">Ruins</span></h3>
+        <p><span class="ta-ar" lang="ar">فرقة كواليس</span><span class="ta-en" lang="en">Kawalis Troupe</span></p>
+        <div class="prod-gallery" aria-label="أنقاض — صور العرض">
+          <a class="prod-photo" href="/images/incubator/productions/02-anqad/anqad-01.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/02-anqad/anqad-01.jpg" alt="أنقاض — صورة 1" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/02-anqad/anqad-02.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/02-anqad/anqad-02.jpg" alt="أنقاض — صورة 2" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/02-anqad/anqad-03.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/02-anqad/anqad-03.jpg" alt="أنقاض — صورة 3" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/02-anqad/anqad-04.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/02-anqad/anqad-04.jpg" alt="أنقاض — صورة 4" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/02-anqad/anqad-05.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/02-anqad/anqad-05.jpg" alt="أنقاض — صورة 5" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/02-anqad/anqad-06.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/02-anqad/anqad-06.jpg" alt="أنقاض — صورة 6" loading="lazy" decoding="async"></a>
+        </div>
+      </article>
+      <article class="prod">
+        <span class="num">03</span>
+        <h3><span class="ta-ar" lang="ar">جداريات العرابة المدفونة</span><span class="ta-en" lang="en">Murals of the Buried Arabah</span></h3>
+        <p><span class="ta-ar" lang="ar">فرقة الهاية</span><span class="ta-en" lang="en">El-Haya Troupe</span></p>
+        <div class="prod-gallery" aria-label="جداريات العرابة المدفونة — صور العرض">
+          <a class="prod-photo" href="/images/incubator/productions/03-gdaryat-al-araba/gedariyat-al-araba-al-madfouna-01.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/03-gdaryat-al-araba/gedariyat-al-araba-al-madfouna-01.jpg" alt="جداريات العرابة المدفونة — صورة 1" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/03-gdaryat-al-araba/gedariyat-al-araba-al-madfouna-02.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/03-gdaryat-al-araba/gedariyat-al-araba-al-madfouna-02.jpg" alt="جداريات العرابة المدفونة — صورة 2" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/03-gdaryat-al-araba/gedariyat-al-araba-al-madfouna-03.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/03-gdaryat-al-araba/gedariyat-al-araba-al-madfouna-03.jpg" alt="جداريات العرابة المدفونة — صورة 3" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/03-gdaryat-al-araba/gedariyat-al-araba-al-madfouna-04.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/03-gdaryat-al-araba/gedariyat-al-araba-al-madfouna-04.jpg" alt="جداريات العرابة المدفونة — صورة 4" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/03-gdaryat-al-araba/gedariyat-al-araba-al-madfouna-05.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/03-gdaryat-al-araba/gedariyat-al-araba-al-madfouna-05.jpg" alt="جداريات العرابة المدفونة — صورة 5" loading="lazy" decoding="async"></a>
+          <a class="prod-photo" href="/images/incubator/productions/03-gdaryat-al-araba/gedariyat-al-araba-al-madfouna-06.jpg" target="_blank" rel="noopener"><img src="/images/incubator/productions/03-gdaryat-al-araba/gedariyat-al-araba-al-madfouna-06.jpg" alt="جداريات العرابة المدفونة — صورة 6" loading="lazy" decoding="async"></a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
