@@ -70,6 +70,16 @@
 
 /* Sahara 2: village-responsive training and workshop photo galleries */
 
+.sahara-exhibition-section{margin-top:82px;padding-top:58px;border-top:1px solid var(--line)}
+.sahara-exhibition-intro{max-width:900px;margin-bottom:28px}
+.sahara-exhibition-intro h2{margin:12px 0 16px}
+.sahara-exhibition-card{max-width:860px}
+.sahara-exhibition-card .sahara-workshop-card{background:#f5efe3;border-color:#d9cbb4}
+.sahara-exhibition-card .sahara-workshop-heading{margin-bottom:22px}
+.sahara-exhibition-card .sahara-photo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:760px){.sahara-exhibition-section{margin-top:54px;padding-top:38px}.sahara-exhibition-card{max-width:none}}
+
+
 .sahara2-section{padding-top:78px;padding-bottom:88px}
 .sahara2-status{background:#151815;color:var(--white);padding:58px 0;margin:0 0 58px}
 .sahara2-status .kicker{color:var(--yellow)}
@@ -284,12 +294,7 @@ body.site-en .lang-en{display:block!important}</style>
         <figure class="sahara-photo awaiting-photo" data-placeholder="صور ورشة الحكي · 02"><img loading="lazy" decoding="async" src="images/sahara2/storytelling-02.jpg" alt="صور من ورشة الحكي في صحارة 2" onerror="this.style.display='none';this.parentElement.classList.add('awaiting-photo')"/></figure>
         <figure class="sahara-photo awaiting-photo" data-placeholder="صور ورشة الحكي · 03"><img loading="lazy" decoding="async" src="images/sahara2/storytelling-03.jpg" alt="صور من ورشة الحكي في صحارة 2" onerror="this.style.display='none';this.parentElement.classList.add('awaiting-photo')"/></figure>
       </div></article>
-      <article class="sahara-workshop-card"><div class="sahara-workshop-heading"><span class="sahara-workshop-icon">🎨</span><div><h3><span class="ta-ar" lang="ar">معرض سينوغرافيا القرية</span><span class="ta-en" lang="en">Village Scenography Exhibition</span></h3><p><span class="ta-ar" lang="ar">من مخرجات صحارة 2: تحويل ملامح القرية وذاكرتها إلى تصورات ومشاهد بصرية.</span><span class="ta-en" lang="en">A Sahara 2 outcome: translating the village’s character and memory into visual concepts and scenes.</span></p></div></div><div class="sahara-photo-grid">
-        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/scenography-01.jpg" alt="من معرض سينوغرافيا القرية في النسخة الثانية من صحارة"/></figure>
-        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/scenography-02.jpg" alt="من معرض سينوغرافيا القرية في النسخة الثانية من صحارة"/></figure>
-        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/scenography-03.jpg" alt="من معرض سينوغرافيا القرية في النسخة الثانية من صحارة"/></figure>
-        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/scenography-04.jpg" alt="من معرض سينوغرافيا القرية في النسخة الثانية من صحارة"/></figure>
-      </div><p class="sahara-photo-note"><span class="ta-ar" lang="ar">يُقام معرض سينوغرافيا القرية مع كل نسخة من صحارة، بوصفه مساحة لعرض المخرجات البصرية المستلهمة من القرية.</span><span class="ta-en" lang="en">A Village Scenography Exhibition accompanies each edition of Sahara, presenting visual outcomes inspired by the village.</span></p></article>
+      
       <article class="sahara-workshop-card"><div class="sahara-workshop-heading"><span class="sahara-workshop-icon">🎙️</span><div><h3><span class="ta-ar" lang="ar">ورشة البودكاست</span><span class="ta-en" lang="en">Podcast Workshop</span></h3><p><span class="ta-ar" lang="ar">الصوت، الإلقاء، وصناعة الحكاية المسموعة.</span><span class="ta-en" lang="en">Audio, delivery and crafting stories for listening.</span></p></div></div><div class="sahara-photo-grid">
         <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/podcast-01.jpg" alt="صور من ورشة البودكاست في صحارة 2"/></figure>
         <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/podcast-02.jpg" alt="صور من ورشة البودكاست في صحارة 2"/></figure>
@@ -308,6 +313,22 @@ body.site-en .lang-en{display:block!important}</style>
       </div></article>
     </div>
     <p class="sahara-photo-note"><span class="ta-ar" lang="ar">مساحات الصور غير المتاحة حاليًا محددة لاستقبال الصور الأصلية لاحقًا.</span><span class="ta-en" lang="en">Missing photo slots are prepared for the original images to be added later.</span></p>
+
+    <div class="sahara-exhibition-section">
+      <div class="sahara-exhibition-intro">
+        <div class="kicker"><span class="ta-ar" lang="ar">مخرجات صحارة 2 · معرض مستقل</span><span class="ta-en" lang="en">SAHARA 2 OUTCOME · SEPARATE EXHIBITION</span></div>
+        <h2><span class="ta-ar" lang="ar">معرض سينوغرافيا القرية</span><span class="ta-en" lang="en">Village Scenography Exhibition</span></h2>
+        <p class="lead"><span class="ta-ar" lang="ar">مع كل نسخة من صحارة، يأتي معرض سينوغرافيا القرية كمساحة مستقلة لعرض المخرجات البصرية المستلهمة من المكان وذاكرته. وهو أحد مخرجات المشروع، وليس ورشة من ورش التدريب.</span><span class="ta-en" lang="en">Each edition of Sahara includes a separate Village Scenography Exhibition showcasing visual outcomes inspired by the place and its memory. It is a project outcome, not a training workshop.</span></p>
+      </div>
+      <div class="sahara-exhibition-card">
+        <article class="sahara-workshop-card"><div class="sahara-workshop-heading"><span class="sahara-workshop-icon">🎨</span><div><h3><span class="ta-ar" lang="ar">معرض سينوغرافيا القرية</span><span class="ta-en" lang="en">Village Scenography Exhibition</span></h3><p><span class="ta-ar" lang="ar">من مخرجات صحارة 2: تحويل ملامح القرية وذاكرتها إلى تصورات ومشاهد بصرية.</span><span class="ta-en" lang="en">A Sahara 2 outcome: translating the village’s character and memory into visual concepts and scenes.</span></p></div></div><div class="sahara-photo-grid">
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/scenography-01.jpg" alt="من معرض سينوغرافيا القرية في النسخة الثانية من صحارة"/></figure>
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/scenography-02.jpg" alt="من معرض سينوغرافيا القرية في النسخة الثانية من صحارة"/></figure>
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/scenography-03.jpg" alt="من معرض سينوغرافيا القرية في النسخة الثانية من صحارة"/></figure>
+        <figure class="sahara-photo"><img loading="lazy" decoding="async" src="images/sahara2/scenography-04.jpg" alt="من معرض سينوغرافيا القرية في النسخة الثانية من صحارة"/></figure>
+      </div><p class="sahara-photo-note"><span class="ta-ar" lang="ar">يُقام معرض سينوغرافيا القرية مع كل نسخة من صحارة، بوصفه مساحة لعرض المخرجات البصرية المستلهمة من القرية.</span><span class="ta-en" lang="en">A Village Scenography Exhibition accompanies each edition of Sahara, presenting visual outcomes inspired by the village.</span></p></article>
+      </div>
+    </div>
   </div>
 </section>
 
