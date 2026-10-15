@@ -147,6 +147,22 @@
 .sahara-photo-grid .sahara-photo{aspect-ratio:4/3;background:#e7ddcc;display:flex;align-items:center;justify-content:center;overflow:hidden}
 .sahara-photo-grid .sahara-photo img{width:100%;height:100%;object-fit:contain;object-position:center;transform:none!important}
 .sahara-photo-grid .sahara-photo:hover img{transform:none!important}
+
+/* Strong, edition-specific funding credits */
+.sahara-support-section{padding:72px 0;background:#080a09;color:#f5ead8;border-top:1px solid rgba(231,189,102,.3);border-bottom:1px solid rgba(231,189,102,.3)}
+.sahara-support-intro{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:28px}
+.sahara-support-intro h2{font-size:clamp(32px,5vw,62px);line-height:1.12;margin:10px 0 0}
+.sahara-support-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.sahara-support-card{position:relative;min-height:260px;padding:30px;border:1px solid rgba(231,189,102,.38);background:linear-gradient(145deg,#191c19,#0e100f);display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.sahara-support-card:after{content:"";position:absolute;width:180px;height:180px;border:1px solid rgba(231,189,102,.15);border-radius:50%;inset:auto -45px -85px auto;box-shadow:0 0 0 22px rgba(231,189,102,.025),0 0 0 44px rgba(231,189,102,.02);pointer-events:none}
+.sahara-support-edition{font:800 11px Inter,sans-serif;letter-spacing:.18em;color:#e7bd66;text-transform:uppercase}
+.sahara-support-card h3{font-size:clamp(24px,3vw,36px);line-height:1.35;margin:24px 0 12px;max-width:520px}
+.sahara-support-card p{font-size:15px;line-height:1.8;color:#c9c2b5;margin:0;max-width:520px}
+.sahara-support-logos{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+.sahara-support-wordmark{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:9px 14px;border:1px solid rgba(245,234,216,.28);font:800 17px Inter,sans-serif;letter-spacing:.06em;color:#fff}
+.sahara-support-wordmark small{font:500 9px Inter,sans-serif;letter-spacing:.08em;display:block}
+.sahara-support-tag{font-size:11px;color:#e7bd66;letter-spacing:.04em}
+@media(max-width:650px){.sahara-support-section{padding:48px 0}.sahara-support-intro{display:block}.sahara-support-grid{grid-template-columns:1fr}.sahara-support-card{min-height:230px;padding:23px}}
 </style>
 
 
@@ -250,6 +266,24 @@ body.site-en .lang-en{display:block!important}</style>
 <div class="stats"><div class="stat"><b>3</b><span><span class="ta-ar" lang="ar">عروض مسرحية</span><span class="ta-en" lang="en">Theatre performances</span></span></div><div class="stat"><b>10</b><span><span class="ta-ar" lang="ar">مرات عرض إجمالًا</span><span class="ta-en" lang="en">Total performances</span></span></div><div class="stat"><b>64</b><span><span class="ta-ar" lang="ar">فنانًا مشاركًا</span><span class="ta-en" lang="en">Participating artists</span></span></div><div class="stat"><b>555</b><span><span class="ta-ar" lang="ar">متفرجًا</span><span class="ta-en" lang="en">Audience members</span></span></div></div></div>
 <div class="section" style="padding:55px 0 20px"><div class="kicker"><span class="ta-ar" lang="ar">السينوغرافيا</span><span class="ta-en" lang="en">SCENOGRAPHY</span></div><h2><span class="ta-ar" lang="ar">القرية دخلت المعرض.</span><span class="ta-en" lang="en">The village entered the exhibition.</span></h2><p class="lead"><span class="ta-ar" lang="ar">أنتجت مرحلة السينوغرافيا والفن التشكيلي ثلاثة معارض. تحولت أكثر من 80% من المنتجات النهائية إلى ماكيتات لمشاهد مسرحية مستوحاة من القرى، لتصبح المعارض مفيدة للفرق مستقبلًا في إنتاج عروضها.</span><span class="ta-en" lang="en">More than 80% of the final training products became theatrical maquettes inspired by the villages, turning the exhibitions into practical resources for future productions.</span></p><div class="masonry"><figure class="tall"><img width="512" height="341" decoding="async" loading="lazy" alt="معرض سينوغرافيا صحارة" src="images/sahara/exhibition-01.jpg"/></figure><figure><img width="528" height="351" decoding="async" loading="lazy" alt="معرض صحارة" src="images/sahara/exhibition-02.jpg"/></figure><figure><img width="476" height="317" decoding="async" loading="lazy" alt="معرض صحارة" src="images/sahara/exhibition-04.jpg"/></figure><figure><img width="399" height="266" decoding="async" loading="lazy" alt="سينوغرافيا القرية — صحارة" src="images/sahara/scenography-01.jpg"/></figure><figure><img width="399" height="266" decoding="async" loading="lazy" alt="سينوغرافيا القرية — صحارة" src="images/sahara/scenography-03.jpg"/></figure></div><div class="stats"><div class="stat"><b>3</b><span><span class="ta-ar" lang="ar">معارض سينوغرافيا</span><span class="ta-en" lang="en">Scenography exhibitions</span></span></div><div class="stat"><b>36</b><span><span class="ta-ar" lang="ar">ماكيتًا</span><span class="ta-en" lang="en">Models</span></span></div><div class="stat"><b>18</b><span><span class="ta-ar" lang="ar">لوحة</span><span class="ta-en" lang="en">Paintings</span></span></div><div class="stat"><b>78</b><span><span class="ta-ar" lang="ar">جمهور المعارض</span><span class="ta-en" lang="en">Exhibition audience</span></span></div></div></div>
 </div>
+</section>
+<section class="sahara-support-section" aria-label="Funding and support">
+  <div class="container">
+    <div class="sahara-support-intro">
+      <div><div class="kicker"><span class="ta-ar" lang="ar">الشركاء والدعم</span><span class="ta-en" lang="en">PARTNERS & SUPPORT</span></div><h2><span class="ta-ar" lang="ar">الفن يكبر بالشراكة.</span><span class="ta-en" lang="en">Art grows through partnership.</span></h2></div>
+      <p class="sahara-support-tag"><span class="ta-ar" lang="ar">دعم يتيح للفكرة أن تصل إلى القرى وتتحول إلى ممارسة فنية.</span><span class="ta-en" lang="en">Support that helps ideas reach villages and become artistic practice.</span></p>
+    </div>
+    <div class="sahara-support-grid">
+      <article class="sahara-support-card">
+        <div><div class="sahara-support-edition">SAHARA · EDITION 01</div><h3><span class="ta-ar" lang="ar">صحارة 1</span><span class="ta-en" lang="en">Sahara 1</span></h3><p><span class="ta-ar" lang="ar">بدعم من الصندوق العربي للثقافة والفنون – آفاق.</span><span class="ta-en" lang="en">Supported by the Arab Fund for Arts and Culture – AFAC.</span></p></div>
+        <div class="sahara-support-logos"><div class="sahara-support-wordmark">AFAC</div><div class="sahara-support-tag"><span class="ta-ar" lang="ar">الصندوق العربي للثقافة والفنون – آفاق</span><span class="ta-en" lang="en">Arab Fund for Arts and Culture</span></div></div>
+      </article>
+      <article class="sahara-support-card">
+        <div><div class="sahara-support-edition">SAHARA · EDITION 02</div><h3><span class="ta-ar" lang="ar">صحارة 2</span><span class="ta-en" lang="en">Sahara 2</span></h3><p><span class="ta-ar" lang="ar">بدعم من السفارة السويسرية والصندوق العربي للثقافة والفنون – آفاق، ضمن مشروع شمال إفريقيا الثقافي.</span><span class="ta-en" lang="en">Supported by the Embassy of Switzerland and the Arab Fund for Arts and Culture – AFAC, within the North Africa Cultural Programme.</span></p></div>
+        <div class="sahara-support-logos"><div class="sahara-support-wordmark">SWISS<br/><small>EMBASSY</small></div><div class="sahara-support-wordmark">AFAC</div><div class="sahara-support-tag"><span class="ta-ar" lang="ar">ضمن مشروع شمال إفريقيا الثقافي</span><span class="ta-en" lang="en">Within the North Africa Cultural Programme</span></div></div>
+      </article>
+    </div>
+  </div>
 </section>
 <section class="section era sahara2-section" id="sahara2">
   <div class="sahara2-status">
