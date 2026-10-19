@@ -34,7 +34,7 @@ h1 em{font-style:normal;color:var(--a)}
 .launch-btn:hover{transform:translateY(-2px);box-shadow:0 16px 45px #2bb3b155}
 .launch-btn:focus-visible{outline:3px solid #fff;outline-offset:5px}
 .hint{font-size:12px;color:#879393;margin-top:18px}
-.footer{position:absolute;bottom:3%;left:0;right:0;text-align:center;color:#596565;font-size:11px;letter-spacing:.12em;z-index:5}
+.supporters{position:absolute;z-index:5;left:50%;bottom:7%;transform:translateX(-50%);width:min(760px,92vw);display:flex;align-items:center;justify-content:center;gap:clamp(18px,4vw,54px)}.supporter{display:flex;align-items:center;justify-content:center;gap:12px;min-width:0}.supporter img{display:block;max-width:clamp(95px,17vw,180px);max-height:clamp(42px,7vh,70px);width:auto;height:auto;object-fit:contain;background:#fff;border-radius:3px;padding:5px 8px}.supporter.afac img{max-width:clamp(62px,9vw,105px);max-height:clamp(48px,7vh,72px)}.supporter-copy{font-size:clamp(9px,1vw,12px);line-height:1.7;color:#d0d8d8;text-align:right;max-width:180px}.supporter-copy strong{display:block;color:#fff;font-size:clamp(10px,1.2vw,14px)}.supporter-copy span{display:block;color:#a9b7b7}.footer{position:absolute;bottom:1.8%;left:0;right:0;text-align:center;color:#596565;font-size:10px;letter-spacing:.12em;z-index:5}
 .curtain{position:absolute;z-index:2;top:0;bottom:0;width:52%;background:repeating-linear-gradient(90deg,#560f1c 0,#8e1d2d 12%,#64111f 24%,#a12a3a 32%,#5c0d1a 44%);box-shadow:inset 0 0 55px #0009;transition:transform 1.6s cubic-bezier(.7,0,.2,1);pointer-events:none}
 .curtain.left{left:0;border-right:2px solid #d7b87855}
 .curtain.right{right:0;border-left:2px solid #d7b87855}
@@ -52,7 +52,7 @@ body.launched .scissors{opacity:0;transform:scale(.7)}
 body.launched .content{opacity:0;transform:translateY(-12px);transition:opacity .5s,transform .5s}
 body.show-reveal .reveal{opacity:1}
 body.show-reveal .footer,body.show-reveal .brand{opacity:0}
-@media(max-width:600px){.brand{top:3%;gap:8px}.brand img{width:48px;height:48px}.content{padding-top:80px}.subtitle{margin:16px auto 20px}.ribbon-wrap{height:70px;margin:18px auto 24px}.ribbon{height:34px}.scissors{width:58px;height:58px}.scissors svg{width:29px;height:29px}.launch-btn{min-height:58px;padding:0 24px}.footer{bottom:2%}}
+@media(max-width:600px){.brand{top:3%;gap:8px}.brand img{width:48px;height:48px}.content{padding-top:80px}.subtitle{margin:16px auto 20px}.ribbon-wrap{height:70px;margin:18px auto 24px}.ribbon{height:34px}.scissors{width:58px;height:58px}.scissors svg{width:29px;height:29px}.launch-btn{min-height:58px;padding:0 24px}.supporters{bottom:5%;gap:10px;width:96vw}.supporter{flex-direction:column;gap:5px;flex:1}.supporter img{max-width:90px;max-height:42px}.supporter.afac img{max-width:58px;max-height:42px}.supporter-copy{text-align:center;font-size:8px;line-height:1.45}.supporter-copy strong{font-size:9px}.footer{display:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
 </style>
 </head>
@@ -72,7 +72,7 @@ body.show-reveal .footer,body.show-reveal .brand{opacity:0}
     <button class="launch-btn" id="launch" type="button"><span>إطلاق الموقع الرسمي</span><span aria-hidden="true">↗</span></button>
     <div class="hint">اضغط الزر مع العدّ التنازلي أمام الحضور</div>
   </section>
-  <div class="footer">TEATRO ALSAEED FOR PERFORMING ARTS · MINYA, EGYPT</div>
+  <div class="supporters" aria-label="الجهات الداعمة"><div class="supporter afac"><img src="/images/partners/afac.webp" alt="الصندوق العربي للثقافة والفنون آفاق"><div class="supporter-copy"><strong>بدعم من</strong><span>الصندوق العربي للثقافة والفنون — آفاق</span></div></div><div class="supporter"><img src="/images/partners/swiss-cooperation-office.jpg" alt="الوكالة السويسرية للتنمية والتعاون"><div class="supporter-copy"><strong>الوكالة السويسرية للتنمية والتعاون</strong><span>ضمن مشروع شمال أفريقيا الثقافي</span></div></div></div><div class="footer">TEATRO ALSAEED FOR PERFORMING ARTS · MINYA, EGYPT</div>
 </main>
 <div class="countdown" id="countdown" aria-live="assertive"></div>
 <div class="reveal" id="reveal"><div><img src="/images/logo.png" alt="تياترو الصعيد"><h2>الموقع الرسمي الآن</h2><p>TEATROALSAEED.ORG</p></div></div>
