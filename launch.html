@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080a0b">
+<title>إطلاق الموقع الرسمي | تياترو الصعيد</title>
+<style>
+:root{--a:#2bb3b1;--gold:#e9c77b;--ink:#080a0b}
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--ink);color:#fff;font-family:Tahoma,Arial,sans-serif}
+body{display:grid;place-items:center}
+.scene{position:relative;width:100%;height:100%;min-height:420px;display:grid;place-items:center;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#1b272a 0%,#0b1012 48%,#030405 100%)}
+.grain{position:absolute;inset:0;opacity:.1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E")}
+.spot{position:absolute;top:-22%;left:50%;width:min(70vw,900px);height:100%;transform:translateX(-50%);background:linear-gradient(180deg,rgba(255,255,255,.13),rgba(43,179,177,.045) 45%,transparent 82%);clip-path:polygon(43% 0,57% 0,100% 100%,0 100%);filter:blur(15px);opacity:.8}
+.brand{position:absolute;top:5%;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;z-index:5;text-align:right}
+.brand img{width:64px;height:64px;object-fit:contain;filter:drop-shadow(0 0 12px #000)}
+.brand b{display:block;font-size:clamp(12px,1.7vw,18px);letter-spacing:.02em}
+.brand span{display:block;margin-top:5px;color:#9ba8a8;font-size:clamp(9px,1vw,12px);letter-spacing:.12em;direction:ltr}
+.content{position:relative;z-index:4;width:min(900px,90vw);text-align:center;padding:100px 0 40px}
+.kicker{color:var(--a);font-size:clamp(10px,1.4vw,14px);letter-spacing:.18em;font-weight:800;margin-bottom:18px}
+h1{font-size:clamp(34px,7vw,78px);line-height:1.16;margin:0;font-weight:900;text-wrap:balance}
+h1 em{font-style:normal;color:var(--a)}
+.subtitle{color:#c2cccc;font-size:clamp(14px,2vw,20px);line-height:1.9;margin:22px auto 30px;max-width:660px}
+.ribbon-wrap{position:relative;width:min(760px,90%);height:88px;margin:24px auto 30px;display:flex;align-items:center;justify-content:center;perspective:700px}
+.ribbon{position:absolute;left:-8vw;right:-8vw;height:44px;background:linear-gradient(180deg,#e65a61 0%,#b61f31 45%,#7e1021 100%);box-shadow:0 10px 25px #0008,inset 0 3px 2px #ffffff45,inset 0 -4px 3px #0005;transition:transform 1s cubic-bezier(.2,.8,.2,1),opacity .7s}
+.ribbon:before,.ribbon:after{content:"";position:absolute;top:0;width:28px;height:100%;background:linear-gradient(90deg,#8f1526,#ed6870,#a8192a)}
+.ribbon:before{left:22%}.ribbon:after{right:22%}
+.ribbon.left{transform-origin:left center}
+.ribbon.right{transform-origin:right center}
+.scissors{position:relative;z-index:2;width:70px;height:70px;display:grid;place-items:center;border-radius:50%;background:#111a1b;border:1px solid #ffffff4d;box-shadow:0 0 0 8px #ffffff0b,0 0 30px #0009;transition:opacity .4s,transform .4s}
+.scissors svg{width:36px;height:36px;stroke:#f7e7c0;stroke-width:1.7;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.launch-btn{position:relative;z-index:3;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:66px;padding:0 38px;border:1px solid #75dcda;border-radius:4px;background:linear-gradient(135deg,#37c4c1,#219d9b);color:#061112;font-size:clamp(16px,2vw,21px);font-weight:900;cursor:pointer;box-shadow:0 12px 35px #2bb3b137;transition:transform .2s,box-shadow .2s}
+.launch-btn:hover{transform:translateY(-2px);box-shadow:0 16px 45px #2bb3b155}
+.launch-btn:focus-visible{outline:3px solid #fff;outline-offset:5px}
+.hint{font-size:12px;color:#879393;margin-top:18px}
+.footer{position:absolute;bottom:3%;left:0;right:0;text-align:center;color:#596565;font-size:11px;letter-spacing:.12em;z-index:5}
+.curtain{position:absolute;z-index:2;top:0;bottom:0;width:52%;background:repeating-linear-gradient(90deg,#560f1c 0,#8e1d2d 12%,#64111f 24%,#a12a3a 32%,#5c0d1a 44%);box-shadow:inset 0 0 55px #0009;transition:transform 1.6s cubic-bezier(.7,0,.2,1);pointer-events:none}
+.curtain.left{left:0;border-right:2px solid #d7b87855}
+.curtain.right{right:0;border-left:2px solid #d7b87855}
+.countdown{position:fixed;z-index:10;inset:0;display:grid;place-items:center;background:#050708eF;font-size:clamp(100px,28vw,260px);font-weight:900;color:#fff;opacity:0;pointer-events:none;transition:opacity .2s;text-shadow:0 0 50px #2bb3b188}
+.countdown.show{opacity:1}
+.reveal{position:fixed;z-index:9;inset:0;display:grid;place-items:center;background:#080a0b;opacity:0;pointer-events:none;transition:opacity .7s}
+.reveal img{width:min(240px,38vw);max-height:38vh;object-fit:contain;filter:drop-shadow(0 0 35px #2bb3b133)}
+.reveal h2{font-size:clamp(30px,6vw,72px);text-align:center;margin:20px 0 8px}
+.reveal p{color:var(--a);text-align:center;font-weight:800;letter-spacing:.12em}
+body.launched .curtain.left{transform:translateX(-105%)}
+body.launched .curtain.right{transform:translateX(105%)}
+body.launched .ribbon.left{transform:translate(-35px,-70px) rotate(-15deg);opacity:0}
+body.launched .ribbon.right{transform:translate(35px,70px) rotate(15deg);opacity:0}
+body.launched .scissors{opacity:0;transform:scale(.7)}
+body.launched .content{opacity:0;transform:translateY(-12px);transition:opacity .5s,transform .5s}
+body.show-reveal .reveal{opacity:1}
+body.show-reveal .footer,body.show-reveal .brand{opacity:0}
+@media(max-width:600px){.brand{top:3%;gap:8px}.brand img{width:48px;height:48px}.content{padding-top:80px}.subtitle{margin:16px auto 20px}.ribbon-wrap{height:70px;margin:18px auto 24px}.ribbon{height:34px}.scissors{width:58px;height:58px}.scissors svg{width:29px;height:29px}.launch-btn{min-height:58px;padding:0 24px}.footer{bottom:2%}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{transition-duration:.01ms!important;animation-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<main class="scene">
+  <div class="spot"></div><div class="grain"></div>
+  <div class="brand"><img src="/images/logo.png" alt="تياترو الصعيد"><div><b>تياترو الصعيد للفنون الأدائية</b><span>TEATRO ALSAEED · OFFICIAL WEBSITE</span></div></div>
+  <div class="curtain left"></div><div class="curtain right"></div>
+  <section class="content" aria-live="polite">
+    <div class="kicker">لحظة إطلاق رسمية</div>
+    <h1>من قلب الصعيد…<br><em>نفتح نافذة للعالم</em></h1>
+    <p class="subtitle">حلمك مشروع — الموقع الرسمي لتياترو الصعيد أصبح الآن بين أيديكم.</p>
+    <div class="ribbon-wrap" aria-hidden="true">
+      <div class="ribbon left"></div><div class="ribbon right"></div>
+      <div class="scissors"><svg viewBox="0 0 48 48"><circle cx="10" cy="12" r="5"/><circle cx="10" cy="36" r="5"/><path d="M14 15l25 22M14 33L39 10M20 24l-6-6"/></svg></div>
+    </div>
+    <button class="launch-btn" id="launch" type="button"><span>إطلاق الموقع الرسمي</span><span aria-hidden="true">↗</span></button>
+    <div class="hint">اضغط الزر مع العدّ التنازلي أمام الحضور</div>
+  </section>
+  <div class="footer">TEATRO ALSAEED FOR PERFORMING ARTS · MINYA, EGYPT</div>
+</main>
+<div class="countdown" id="countdown" aria-live="assertive"></div>
+<div class="reveal" id="reveal"><div><img src="/images/logo.png" alt="تياترو الصعيد"><h2>الموقع الرسمي الآن</h2><p>TEATROALSAEED.ORG</p></div></div>
+<script>
+(function(){
+  const btn=document.getElementById('launch'), count=document.getElementById('countdown');
+  let busy=false;
+  function chime(){
+    try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const ctx=new C();[660,880].forEach((f,i)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,ctx.currentTime+i*.12);g.gain.exponentialRampToValueAtTime(.12,ctx.currentTime+i*.12+.03);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+i*.12+.32);o.connect(g);g.connect(ctx.destination);o.start(ctx.currentTime+i*.12);o.stop(ctx.currentTime+i*.12+.34)});setTimeout(()=>ctx.close(),1200)}catch(e){}
+  }
+  btn.addEventListener('click',()=>{
+    if(busy)return;busy=true;btn.disabled=true;chime();let n=3;
+    count.textContent=n;count.classList.add('show');
+    const tick=()=>{if(n>1){setTimeout(()=>{n--;count.textContent=n;tick()},850)}else{setTimeout(()=>{count.textContent='1';setTimeout(()=>{count.classList.remove('show');document.body.classList.add('launched');setTimeout(()=>{document.body.classList.add('show-reveal');setTimeout(()=>{window.location.href='/';},2400)},1050)},500)},850)}};
+    tick();
+  });
+  document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&document.activeElement!==btn&&!busy){e.preventDefault();btn.click()}});
+})();
+</script>
+</body>
+</html>
