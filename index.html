@@ -149,14 +149,14 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 .studio-card{background:#121616;border:1px solid rgba(255,255,255,.1);min-width:0}
 .studio-gallery{display:grid;grid-template-columns:1.5fr 1fr;grid-template-rows:150px 150px;gap:5px;background:#080a0a;overflow:hidden}
 .studio-gallery img{width:100%;height:100%;object-fit:cover}
-.studio-gallery img:first-child{grid-row:1/3}
+.studio-gallery img:first-child{grid-row:1/3}.studio-gallery.visual-gallery{grid-template-columns:1fr 1fr;grid-template-rows:305px}.studio-gallery.visual-gallery img:first-child{grid-row:auto}
 .studio-copy{padding:28px 30px 32px}
 .studio-label{color:var(--a);font:700 11px Inter,sans-serif;letter-spacing:1.8px;text-transform:uppercase}
 .studio-copy h3{font-size:clamp(23px,2.5vw,31px);font-weight:900;line-height:1.35;margin:10px 0 12px}
 .studio-copy p{font-size:14px;line-height:2;color:#b5bdbd;margin-bottom:22px}
 .studio-link{display:inline-flex;align-items:center;gap:10px;color:var(--a);font-weight:800;font-size:13px;border-bottom:1px solid rgba(43,179,177,.45);padding-bottom:5px}
 .studio-link:hover{color:#fff;border-color:#fff}
-@media(max-width:760px){.studios-section{padding:78px 0}.studios-section .studios-heading{display:block}.studios-section .studios-heading p{margin-top:18px}.studios-grid{grid-template-columns:1fr}.studio-gallery{grid-template-rows:125px 125px}.studio-copy{padding:24px 22px}}
+@media(max-width:760px){.studios-section{padding:78px 0}.studios-section .studios-heading{display:block}.studios-section .studios-heading p{margin-top:18px}.studios-grid{grid-template-columns:1fr}.studio-gallery{grid-template-rows:125px 125px}.studio-gallery.visual-gallery{grid-template-rows:190px}.studio-copy{padding:24px 22px}}
 </style>
 <section class="studios-section" id="studios">
   <div class="container">
@@ -186,10 +186,9 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
         </div>
       </article>
       <article class="studio-card">
-        <div class="studio-gallery">
+        <div class="studio-gallery visual-gallery">
           <img src="/images/studios/visual/visual-studio-set.jpg" alt="لوكيشن تصوير المحتوى المرئي" loading="lazy">
           <img src="/images/studios/visual/visual-green-screen.png" alt="التصوير أمام الخلفية الخضراء" loading="lazy">
-          <img src="/images/studios/sound/sound-recording-session.jpg" alt="جلسة عمل داخل مساحة تياترو الصعيد" loading="lazy">
         </div>
         <div class="studio-copy">
           <div class="studio-label">02 / VISUAL</div>
