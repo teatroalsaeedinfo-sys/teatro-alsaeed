@@ -40,8 +40,9 @@ h1 em{font-style:normal;color:var(--a)}
 .curtain.right{right:0;border-left:2px solid #d7b87855}
 .countdown{position:fixed;z-index:10;inset:0;display:grid;place-items:center;background:#050708eF;font-size:clamp(100px,28vw,260px);font-weight:900;color:#fff;opacity:0;pointer-events:none;transition:opacity .2s;text-shadow:0 0 50px #2bb3b188}
 .countdown.show{opacity:1}
-.reveal{position:fixed;z-index:9;inset:0;display:grid;place-items:center;background:#080a0b;opacity:0;pointer-events:none;transition:opacity .7s}
-.reveal img{width:min(240px,38vw);max-height:38vh;object-fit:contain;filter:drop-shadow(0 0 35px #2bb3b133)}
+.reveal{position:fixed;z-index:9;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;background:#080a0b;opacity:0;pointer-events:none;transition:opacity .7s;padding:24px}
+.reveal>div{display:flex;flex-direction:column;align-items:center;justify-content:center;width:100%;text-align:center}
+.reveal img{display:block;width:min(280px,42vw);max-height:42vh;object-fit:contain;margin:0 auto;filter:drop-shadow(0 0 35px #2bb3b133)}
 .reveal h2{font-size:clamp(30px,6vw,72px);text-align:center;margin:20px 0 8px}
 .reveal p{color:var(--a);text-align:center;font-weight:800;letter-spacing:.12em}
 body.launched .curtain.left{transform:translateX(-105%)}
@@ -84,9 +85,9 @@ body.show-reveal .footer,body.show-reveal .brand{opacity:0}
     try{const C=window.AudioContext||window.webkitAudioContext;if(!C)return;const ctx=new C();[660,880].forEach((f,i)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,ctx.currentTime+i*.12);g.gain.exponentialRampToValueAtTime(.12,ctx.currentTime+i*.12+.03);g.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+i*.12+.32);o.connect(g);g.connect(ctx.destination);o.start(ctx.currentTime+i*.12);o.stop(ctx.currentTime+i*.12+.34)});setTimeout(()=>ctx.close(),1200)}catch(e){}
   }
   btn.addEventListener('click',()=>{
-    if(busy)return;busy=true;btn.disabled=true;chime();let n=3;
+    if(busy)return;busy=true;btn.disabled=true;chime();let n=10;
     count.textContent=n;count.classList.add('show');
-    const tick=()=>{if(n>1){setTimeout(()=>{n--;count.textContent=n;tick()},850)}else{setTimeout(()=>{count.textContent='1';setTimeout(()=>{count.classList.remove('show');document.body.classList.add('launched');setTimeout(()=>{document.body.classList.add('show-reveal');setTimeout(()=>{window.location.href='/';},2400)},1050)},500)},850)}};
+    const tick=()=>{if(n>1){setTimeout(()=>{n--;count.textContent=n;tick()},1000)}else{setTimeout(()=>{count.textContent='0';setTimeout(()=>{count.classList.remove('show');document.body.classList.add('launched');setTimeout(()=>{document.body.classList.add('show-reveal');setTimeout(()=>{window.location.href='/';},2400)},1050)},700)},1000)}};
     tick();
   });
   document.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&document.activeElement!==btn&&!busy){e.preventDefault();btn.click()}});
