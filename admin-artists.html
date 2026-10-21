@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>إدارة منصة فنون الصعيد | تياترو الصعيد</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#080909;--panel:#111414;--line:rgba(255,255,255,.13);--teal:#2bb3b1;--muted:#a8aeae}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#fff;font-family:Cairo,sans-serif;line-height:1.7}.wrap{width:min(1100px,calc(100% - 28px));margin:32px auto}.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:24px}h1{font-size:clamp(25px,4vw,38px);margin:0}h2{margin:0 0 14px}.muted{color:var(--muted);font-size:14px}.panel{background:var(--panel);border:1px solid var(--line);padding:22px;border-radius:8px;margin:18px 0}.field{display:block;width:100%;padding:12px;background:#090b0b;color:#fff;border:1px solid var(--line);border-radius:4px;font:inherit;margin:7px 0 14px}.btn{border:1px solid var(--line);background:transparent;color:#fff;border-radius:4px;padding:10px 16px;font:inherit;font-weight:700;cursor:pointer}.btn.primary{background:var(--teal);border-color:var(--teal);color:#061010}.btn:disabled{opacity:.5;cursor:wait}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.hidden{display:none!important}.message{padding:12px;background:rgba(43,179,177,.1);border-right:3px solid var(--teal);margin:12px 0;font-size:14px;white-space:pre-wrap}.cards{display:grid;gap:14px}.item{border:1px solid var(--line);padding:18px;border-radius:6px}.item h3{margin:0 0 5px}.meta{color:var(--muted);font-size:13px}.tags{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0}.tag{border:1px solid var(--line);padding:2px 8px;font-size:12px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.approve{border-color:#4ba783;color:#81e2b8}.reject{border-color:#d86c6c;color:#ff9b9b}.pending{color:#f3d28a}.empty{text-align:center;color:var(--muted);padding:28px;border:1px dashed var(--line)}a{color:var(--teal)}textarea.field{min-height:72px}
+</style>
+</head>
+<body><main class="wrap">
+<header class="top"><div><div class="muted">تياترو الصعيد · Arts of Upper Egypt</div><h1>لوحة إدارة الفنانين</h1></div><div class="row"><a href="/artists">عرض الدليل</a><button id="logout" class="btn hidden">تسجيل الخروج</button></div></header>
+<section id="loginPanel" class="panel"><h2>دخول الإدارة</h2><p class="muted">الدخول متاح لحسابات الإدارة المعتمدة فقط.</p><form id="loginForm"><label for="email">البريد الإلكتروني</label><input class="field" id="email" type="email" autocomplete="username" required value="teatroalsaeed.info@gmail.com"><label for="password">كلمة المرور</label><input class="field" id="password" type="password" autocomplete="current-password" required><button class="btn primary" type="submit">تسجيل الدخول</button></form><div id="loginMsg" class="message hidden"></div></section>
+<section id="dashboard" class="hidden"><div class="panel"><div class="top"><div><h2>طلبات الفنانين</h2><div class="muted">راجع البيانات قبل الموافقة على نشرها.</div></div><div class="row"><select id="statusFilter" class="field" style="width:auto;margin:0"><option value="pending">قيد المراجعة</option><option value="approved">مقبولة</option><option value="rejected">مرفوضة</option><option value="all">كل الطلبات</option></select><button id="refresh" class="btn">تحديث</button></div></div><div id="dashMsg" class="message hidden"></div><div id="requests" class="cards"><div class="empty">جارٍ تحميل الطلبات…</div></div></div></section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+(function(){
+ const client=window.supabase.createClient('https://rwnxofwchajpnatvzzwe.supabase.co','sb_publishable_TaeGmT2KO8I8iG0SbV1Q2A_L1t4sldQ');
+ const $=id=>document.getElementById(id);
+ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+ function msg(id,text){$(id).textContent=text;$(id).classList.remove('hidden')}
+ async function checkSession(){
+  const {data:{session}}=await client.auth.getSession();
+  if(!session){$('loginPanel').classList.remove('hidden');$('dashboard').classList.add('hidden');$('logout').classList.add('hidden');return}
+  const {data:admin,error}=await client.from('artist_directory_admins').select('user_id').eq('user_id',session.user.id).maybeSingle();
+  if(error||!admin){await client.auth.signOut();$('loginPanel').classList.remove('hidden');$('dashboard').classList.add('hidden');msg('loginMsg','هذا الحساب ليس ضمن حسابات الإدارة المعتمدة.');return}
+  $('loginPanel').classList.add('hidden');$('dashboard').classList.remove('hidden');$('logout').classList.remove('hidden');await loadRequests();
+ }
+ $('loginForm').addEventListener('submit',async e=>{e.preventDefault();const b=e.submitter;b.disabled=true;$('loginMsg').classList.add('hidden');const {error}=await client.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});b.disabled=false;if(error){msg('loginMsg','تعذر تسجيل الدخول. تأكد من كلمة المرور وأن حسابك مفعّل في Supabase Authentication.');return}await checkSession()});
+ $('logout').addEventListener('click',async()=>{await client.auth.signOut();await checkSession()});
+ $('refresh').addEventListener('click',loadRequests);$('statusFilter').addEventListener('change',loadRequests);
+ async function loadRequests(){
+  $('requests').innerHTML='<div class="empty">جارٍ تحميل الطلبات…</div>';$('dashMsg').classList.add('hidden');
+  let q=client.from('artist_submissions').select('id,created_at,status,full_name,artist_name,email,governorate,disciplines,bio,portfolio_url,social_url,work_links,admin_notes').order('created_at',{ascending:false}).limit(200);
+  const filter=$('statusFilter').value;if(filter!=='all')q=q.eq('status',filter);
+  const {data,error}=await q;if(error){msg('dashMsg','تعذر تحميل الطلبات. تأكد من تسجيل الدخول وصلاحيات الإدارة.');$('requests').innerHTML='';return}
+  if(!data||!data.length){$('requests').innerHTML='<div class="empty">لا توجد طلبات في هذه القائمة.</div>';return}
+  $('requests').innerHTML=data.map(a=>'<article class="item"><div class="row" style="justify-content:space-between"><h3>'+esc(a.artist_name||a.full_name)+'</h3><span class="pending">'+esc(a.status)+'</span></div><div class="meta">'+esc(a.full_name)+' · '+esc(a.email)+' · '+esc(a.governorate)+' · '+esc(new Date(a.created_at).toLocaleString('ar-EG'))+'</div><div class="tags">'+(a.disciplines||[]).map(d=>'<span class="tag">'+esc(d)+'</span>').join('')+'</div><p>'+esc(a.bio)+'</p>'+(a.portfolio_url?'<p><a href="'+esc(a.portfolio_url)+'" target="_blank" rel="noopener noreferrer">رابط الأعمال ↗</a></p>':'')+(a.social_url?'<p><a href="'+esc(a.social_url)+'" target="_blank" rel="noopener noreferrer">الرابط المهني ↗</a></p>':'')+((a.work_links||[]).length?'<p>'+(a.work_links||[]).map((u,i)=>'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">عمل '+(i+1)+' ↗</a>').join(' · ')+'</p>':'')+'<label>ملاحظات الإدارة<textarea class="field notes" data-id="'+esc(a.id)+'">'+esc(a.admin_notes||'')+'</textarea></label><div class="actions">'+(a.status!=='approved'?'<button class="btn approve" data-action="approved" data-id="'+esc(a.id)+'">موافقة ونشر</button>':'')+(a.status!=='rejected'?'<button class="btn reject" data-action="rejected" data-id="'+esc(a.id)+'">رفض الطلب</button>':'')+(a.status!=='pending'?'<button class="btn" data-action="pending" data-id="'+esc(a.id)+'">إعادة للمراجعة</button>':'')+'<button class="btn" data-action="notes" data-id="'+esc(a.id)+'">حفظ الملاحظات</button></div></article>').join('');
+ }
+ $('requests').addEventListener('click',async e=>{const b=e.target.closest('button[data-action]');if(!b)return;const id=b.dataset.id,action=b.dataset.action;b.disabled=true;
+  const {data:{user}}=await client.auth.getUser();if(!user){b.disabled=false;await checkSession();return}
+  const payload=action==='notes'?{admin_notes:document.querySelector('.notes[data-id="'+CSS.escape(id)+'"]').value.trim()||null,updated_at:new Date().toISOString()}:{status:action,updated_at:new Date().toISOString(),admin_notes:document.querySelector('.notes[data-id="'+CSS.escape(id)+'"]').value.trim()||null};
+  const {error}=await client.from('artist_submissions').update(payload).eq('id',id);b.disabled=false;
+  if(error){msg('dashMsg','لم يتم حفظ التعديل. راجع صلاحيات قاعدة البيانات وحاول مرة أخرى.');return}
+  msg('dashMsg',action==='approved'?'تم اعتماد الملف. حدّث دليل الفنانين للتحقق من ظهوره.':action==='rejected'?'تم تحديث حالة الطلب إلى مرفوض.':action==='pending'?'أُعيد الطلب إلى قائمة المراجعة.':'تم حفظ الملاحظات.');
+  await loadRequests();
+ });
+ client.auth.onAuthStateChange(()=>{});
+ checkSession();
+})();
+</script></body></html>
