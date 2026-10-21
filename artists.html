@@ -44,7 +44,7 @@
 <script>
 (function(){
 const SUPABASE_URL='https://rwnxofwchajpnatvzzwe.supabase.co';
-const SUPABASE_KEY='sb_publishable_TaeGmT2KO8I8I8G0SbV1Q2A_L1t4sldQ';
+const SUPABASE_KEY='sb_publishable_TaeGmT2KO8I8iG0SbV1Q2A_L1t4sldQ';
 const client=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
 const b=document.getElementById('langBtn');
 b.addEventListener('click',function(){const en=!document.body.classList.contains('english');document.body.classList.toggle('english',en);document.documentElement.lang=en?'en':'ar';document.documentElement.dir=en?'ltr':'rtl';b.textContent=en?'عربي':'EN';document.getElementById('search').placeholder=en?'Search by name or skill':'ابحث بالاسم أو المهارة';});
