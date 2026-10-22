@@ -35,7 +35,7 @@
  $('refresh').addEventListener('click',loadRequests);$('statusFilter').addEventListener('change',loadRequests);
  async function loadRequests(){
   $('requests').innerHTML='<div class="empty">جارٍ تحميل الطلبات…</div>';$('dashMsg').classList.add('hidden');
-  let q=client.from('artist_submissions').select('id,created_at,status,full_name,artist_name,email,governorate,disciplines,bio,portfolio_url,social_url,work_links,cv_path,portrait_path,portrait_public_path,admin_notes').order('created_at',{ascending:false}).limit(200);
+  let q=client.from('artist_submissions').select('id,created_at,status,full_name,artist_name,email,governorate,disciplines,bio,portfolio_url,social_url,work_links,cv_path,portrait_path,portrait_public_path,portrait_publication_accepted_at,admin_notes').order('created_at',{ascending:false}).limit(200);
   const filter=$('statusFilter').value;if(filter!=='all')q=q.eq('status',filter);
   const {data,error}=await q;if(error){msg('dashMsg','تعذر تحميل الطلبات. تأكد من تسجيل الدخول وصلاحيات الإدارة.');$('requests').innerHTML='';return}
   if(!data||!data.length){$('requests').innerHTML='<div class="empty">لا توجد طلبات في هذه القائمة.</div>';return}
@@ -54,10 +54,10 @@
   try{
    let portraitPublicPath;
    if(action==='approved'){
-    const {data:record,error:readError}=await client.from('artist_submissions').select('portrait_path,portrait_public_path').eq('id',id).single();
+    const {data:record,error:readError}=await client.from('artist_submissions').select('portrait_path,portrait_public_path,portrait_publication_accepted_at').eq('id',id).single();
     if(readError)throw readError;
     portraitPublicPath=record.portrait_public_path||null;
-    if(record.portrait_path){
+    if(record.portrait_path && record.portrait_publication_accepted_at){
      const ext=(record.portrait_path.split('.').pop()||'jpg').toLowerCase();
      const safeExt=['jpg','jpeg','png','webp'].includes(ext)?ext:'jpg';
      const publicPath='approved/'+id+'.'+safeExt;
