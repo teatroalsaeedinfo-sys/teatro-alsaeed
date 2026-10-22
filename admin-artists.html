@@ -35,7 +35,7 @@
  $('refresh').addEventListener('click',loadRequests);$('statusFilter').addEventListener('change',loadRequests);
  async function loadRequests(){
   $('requests').innerHTML='<div class="empty">جارٍ تحميل الطلبات…</div>';$('dashMsg').classList.add('hidden');
-  let q=client.from('artist_submissions').select('id,created_at,status,full_name,artist_name,email,governorate,disciplines,bio,portfolio_url,social_url,work_links,cv_path,portrait_path,admin_notes').order('created_at',{ascending:false}).limit(200);
+  let q=client.from('artist_submissions').select('id,created_at,status,full_name,artist_name,email,governorate,disciplines,bio,portfolio_url,social_url,work_links,cv_path,portrait_path,portrait_public_path,admin_notes').order('created_at',{ascending:false}).limit(200);
   const filter=$('statusFilter').value;if(filter!=='all')q=q.eq('status',filter);
   const {data,error}=await q;if(error){msg('dashMsg','تعذر تحميل الطلبات. تأكد من تسجيل الدخول وصلاحيات الإدارة.');$('requests').innerHTML='';return}
   if(!data||!data.length){$('requests').innerHTML='<div class="empty">لا توجد طلبات في هذه القائمة.</div>';return}
@@ -50,11 +50,41 @@
  }
  $('requests').addEventListener('click',async e=>{const b=e.target.closest('button[data-action]');if(!b)return;const id=b.dataset.id,action=b.dataset.action;b.disabled=true;
   const {data:{user}}=await client.auth.getUser();if(!user){b.disabled=false;await checkSession();return}
-  const payload=action==='notes'?{admin_notes:document.querySelector('.notes[data-id="'+CSS.escape(id)+'"]').value.trim()||null,updated_at:new Date().toISOString()}:{status:action,updated_at:new Date().toISOString(),admin_notes:document.querySelector('.notes[data-id="'+CSS.escape(id)+'"]').value.trim()||null};
-  const {error}=await client.from('artist_submissions').update(payload).eq('id',id);b.disabled=false;
-  if(error){msg('dashMsg','لم يتم حفظ التعديل. راجع صلاحيات قاعدة البيانات وحاول مرة أخرى.');return}
-  msg('dashMsg',action==='approved'?'تم اعتماد الملف. حدّث دليل الفنانين للتحقق من ظهوره.':action==='rejected'?'تم تحديث حالة الطلب إلى مرفوض.':action==='pending'?'أُعيد الطلب إلى قائمة المراجعة.':'تم حفظ الملاحظات.');
-  await loadRequests();
+  const notes=document.querySelector('.notes[data-id="'+CSS.escape(id)+'"]').value.trim()||null;
+  try{
+   let portraitPublicPath;
+   if(action==='approved'){
+    const {data:record,error:readError}=await client.from('artist_submissions').select('portrait_path,portrait_public_path').eq('id',id).single();
+    if(readError)throw readError;
+    portraitPublicPath=record.portrait_public_path||null;
+    if(record.portrait_path){
+     const ext=(record.portrait_path.split('.').pop()||'jpg').toLowerCase();
+     const safeExt=['jpg','jpeg','png','webp'].includes(ext)?ext:'jpg';
+     const publicPath='approved/'+id+'.'+safeExt;
+     const {data:signed,error:signedError}=await client.storage.from('artist-submissions').createSignedUrl(record.portrait_path,600);
+     if(signedError||!signed?.signedUrl)throw signedError||new Error('تعذر إنشاء رابط الصورة الخاصة');
+     const imageResponse=await fetch(signed.signedUrl);
+     if(!imageResponse.ok)throw new Error('تعذر قراءة الصورة المرفقة');
+     const blob=await imageResponse.blob();
+     const {error:uploadError}=await client.storage.from('artist-portraits-public').upload(publicPath,blob,{upsert:true,contentType:blob.type||('image/'+(safeExt==='jpg'?'jpeg':safeExt)),cacheControl:'3600'});
+     if(uploadError)throw uploadError;
+     portraitPublicPath=publicPath;
+    }
+   }
+   const payload=action==='notes'?{admin_notes:notes,updated_at:new Date().toISOString()}:{status:action,updated_at:new Date().toISOString(),admin_notes:notes,...(action==='approved'?{portrait_public_path:portraitPublicPath||null}:{})};
+   const {error}=await client.from('artist_submissions').update(payload).eq('id',id);if(error)throw error;
+   if(action==='rejected'||action==='pending'){
+    const {data:record}=await client.from('artist_submissions').select('portrait_public_path').eq('id',id).single();
+    if(record?.portrait_public_path){
+     const {error:removeError}=await client.storage.from('artist-portraits-public').remove([record.portrait_public_path]);
+     if(removeError)console.warn('Could not remove public portrait:',removeError.message);
+     await client.from('artist_submissions').update({portrait_public_path:null}).eq('id',id);
+    }
+   }
+   msg('dashMsg',action==='approved'?'تم اعتماد الملف ونشر الصورة الشخصية في الدليل العام إن وُجدت.':action==='rejected'?'تم تحديث حالة الطلب إلى مرفوض.':action==='pending'?'أُعيد الطلب إلى المراجعة وأُخفيت الصورة العامة.':'تم حفظ الملاحظات.');
+   await loadRequests();
+  }catch(error){msg('dashMsg','لم يتم إكمال العملية: '+(error.message||'خطأ غير معروف')+'. لم يتم تأكيد اعتماد الملف.');}
+  finally{b.disabled=false;}
  });
  client.auth.onAuthStateChange(()=>{});
  checkSession();
