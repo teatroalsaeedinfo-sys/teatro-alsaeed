@@ -20,7 +20,8 @@
  const client=window.supabase.createClient('https://rwnxofwchajpnatvzzwe.supabase.co','sb_publishable_TaeGmT2KO8I8iG0SbV1Q2A_L1t4sldQ');
  const $=id=>document.getElementById(id);
  const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
- function msg(id,text){$(id).textContent=text;$(id).classList.remove('hidden')}\n function statusLabel(s){return ({pending:'قيد المراجعة',approved:'مقبول',rejected:'مرفوض'})[s]||s;}
+ function msg(id,text){$(id).textContent=text;$(id).classList.remove('hidden')}
+ function statusLabel(s){return ({pending:'قيد المراجعة',approved:'مقبول',rejected:'مرفوض'})[s]||s;}
  async function checkSession(){
   const {data:{session}}=await client.auth.getSession();
   if(!session){$('loginPanel').classList.remove('hidden');$('dashboard').classList.add('hidden');$('logout').classList.add('hidden');return}
