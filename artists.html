@@ -94,7 +94,9 @@ document.getElementById('artistForm').addEventListener('submit',async function(e
    status.textContent=en?'Your application and selected files were received and are pending review.':'تم استلام طلبك والملفات المرفقة بنجاح، والطلب في انتظار المراجعة.';
    this.reset();
  }catch(error){
-   status.textContent=en?'Could not submit the application or upload files. Please try again later.':'تعذر إرسال الطلب أو رفع الملفات. حاول مرة أخرى لاحقًا.';
+   console.error('Artist application submission failed:',error);
+   const detail=(error&&error.message)?String(error.message).slice(0,220):'';
+   status.textContent=en?'Could not submit the application or upload files'+(detail?': '+detail:'')+'. Please check the file type/size and try again.':'تعذر إرسال الطلب أو رفع الملفات'+(detail?' — سبب الخطأ: '+detail:'')+'. راجع نوع وحجم الملف وحاول مرة أخرى.';
  }finally{btn.disabled=false;}
 });
 renderArtists();
