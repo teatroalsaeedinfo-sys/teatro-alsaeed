@@ -55,14 +55,14 @@ async function renderArtists(){
  const search=document.getElementById('search').value.trim().toLowerCase();
  const discipline=document.getElementById('discipline').value;
  const governorate=document.getElementById('governorate').value;
- let q=client.from('artist_submissions').select('id,full_name,artist_name,governorate,disciplines,bio,portfolio_url,social_url').eq('status','approved').order('created_at',{ascending:false}).limit(200);
+ let q=client.from('artist_submissions').select('id,full_name,artist_name,governorate,disciplines,bio,portfolio_url,social_url,portrait_public_path').eq('status','approved').order('created_at',{ascending:false}).limit(200);
  if(governorate) q=q.eq('governorate',governorate);
  if(discipline) q=q.contains('disciplines',[discipline]);
  const {data,error}=await q;
  if(error){grid.innerHTML='<div class="empty">تعذر تحميل الدليل مؤقتًا. / Directory temporarily unavailable.</div>';return;}
  const rows=(data||[]).filter(a=>!search||[a.full_name,a.artist_name,a.bio,...(a.disciplines||[])].some(v=>String(v||'').toLowerCase().includes(search)));
  if(!rows.length){grid.innerHTML='<div class="empty"><span class="ta-ar">لا توجد ملفات فنية معتمدة تطابق البحث حتى الآن.</span><span class="ta-en">No approved artist profiles match this search yet.</span></div>';return;}
- grid.innerHTML=rows.map(a=>'<article class="artist-card"><div class="avatar">'+esc((a.artist_name||a.full_name||'ف').trim().charAt(0))+'</div><h3>'+esc(a.artist_name||a.full_name)+'</h3><p>'+esc(a.governorate)+'</p><p>'+esc(a.bio)+'</p><div class="tags">'+(a.disciplines||[]).map(d=>'<span class="tag">'+esc(d)+'</span>').join('')+'</div>'+(a.portfolio_url?'<p><a href="'+esc(a.portfolio_url)+'" target="_blank" rel="noopener noreferrer">Portfolio ↗</a></p>':'')+(a.social_url?'<p><a href="'+esc(a.social_url)+'" target="_blank" rel="noopener noreferrer">Professional link ↗</a></p>':'')+'</article>').join('');
+ grid.innerHTML=rows.map(a=>'<article class="artist-card">'+(a.portrait_public_path?'<img src="'+esc(client.storage.from(\'artist-portraits-public\').getPublicUrl(a.portrait_public_path).data.publicUrl)+'" alt="صورة '+esc(a.artist_name||a.full_name)+'" loading="lazy" style="width:96px;height:96px;object-fit:cover;border-radius:50%;margin-bottom:14px">':'<div class="avatar">'+esc((a.artist_name||a.full_name||'ف').trim().charAt(0))+'</div>')<h3>'+esc(a.artist_name||a.full_name)+'</h3><p>'+esc(a.governorate)+'</p><p>'+esc(a.bio)+'</p><div class="tags">'+(a.disciplines||[]).map(d=>'<span class="tag">'+esc(d)+'</span>').join('')+'</div>'+(a.portfolio_url?'<p><a href="'+esc(a.portfolio_url)+'" target="_blank" rel="noopener noreferrer">Portfolio ↗</a></p>':'')+(a.social_url?'<p><a href="'+esc(a.social_url)+'" target="_blank" rel="noopener noreferrer">Professional link ↗</a></p>':'')+'</article>').join('');
 }
 ['search','discipline','governorate'].forEach(id=>document.getElementById(id).addEventListener(id==='search'?'input':'change',renderArtists));
 document.getElementById('artistForm').addEventListener('submit',async function(e){
