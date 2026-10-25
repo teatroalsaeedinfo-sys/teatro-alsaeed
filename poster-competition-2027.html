@@ -51,12 +51,35 @@
 <label class="check"><input type="checkbox" required><span class="arblock">أوافق على التواصل معي بشأن مشاركتي ونتيجة المسابقة.</span><span class="enblock">I agree to be contacted about my entry and the competition result.</span></label>
 </div></div>
 <div class="notice"><strong class="arblock">حالة الاستمارة:</strong><span class="arblock"> تصميم الاستمارة جاهز للمعاينة، لكن استقبال المشاركات الفعلي لن يُفعّل قبل ربط قاعدة البيانات والتخزين الآمن للملفات واعتماد نص الشروط النهائي.</span><strong class="enblock">Form status:</strong><span class="enblock"> This is the form design preview. Live submissions will be enabled only after connecting the database, secure file storage and final approved terms.</span></div>
-<button class="send" type="button" id="submitBtn"><span class="arblock">إرسال المشاركة</span><span class="enblock">Submit entry</span></button><p class="hint arblock">لن يتم إرسال أي بيانات من هذه النسخة التجريبية.</p><p class="hint enblock">No data will be submitted from this prototype.</p>
+<div style="position:absolute;left:-10000px" aria-hidden="true"><label for="website">Leave this field empty</label><input id="website" name="website" tabindex="-1" autocomplete="off"></div><button class="send" type="submit" id="submitBtn"><span class="arblock">إرسال المشاركة</span><span class="enblock">Submit entry</span></button><p class="hint arblock" id="formStatus" role="status" aria-live="polite">سيتم رفع نسخة المعاينة وإرسال البيانات بأمان.</p><p class="hint enblock" id="formStatusEn" role="status" aria-live="polite">Your preview will be uploaded and your entry submitted securely.</p>
 </form></div></div></section>
 </main><footer class="foot"><div class="wrap"><span class="arblock">تياترو الصعيد للفنون الأدائية · مهرجان المنيا المسرحي الدولي · الدورة الرابعة 2027 · أبعد من الحدود</span><span class="enblock">Teatro Alsaeed · Minya International Theatre Festival · 4th Edition 2027 · Beyond Borders</span></div></footer>
 <script>
 const btn=document.getElementById('lang');btn.addEventListener('click',()=>{const en=!document.body.classList.contains('english');document.body.classList.toggle('english',en);document.documentElement.lang=en?'en':'ar';document.documentElement.dir=en?'ltr':'rtl';btn.textContent=en?'عربي':'EN';});
-document.getElementById('submitBtn').addEventListener('click',()=>alert(document.body.classList.contains('english')?'This is a design preview. Secure submission is not enabled yet.':'دي معاينة للتصميم فقط. إرسال المشاركات الفعلي لم يتم تفعيله بعد.'));
-document.getElementById('entryForm').addEventListener('submit',e=>e.preventDefault());
+const SUPABASE_URL='https://rwnxofwchajpnatvzzwe.supabase.co';
+const SUPABASE_KEY='sb_publishable_TaeGmT2KO8I8iG0SbV1Q2A_L1t4sldQ';
+const form=document.getElementById('entryForm'),submitBtn=document.getElementById('submitBtn');
+function status(msg,english){document.getElementById('formStatus').textContent=english?'':msg;document.getElementById('formStatusEn').textContent=english?msg:'';}
+form.addEventListener('submit',async e=>{
+ e.preventDefault();
+ if(!form.reportValidity())return;
+ if(document.getElementById('website').value)return;
+ const file=document.getElementById('preview').files[0];
+ const english=document.body.classList.contains('english');
+ if(!file){status(english?'Please select a JPG or PNG preview file.':'من فضلك اختر ملف معاينة JPG أو PNG.',english);return;}
+ if(!['image/jpeg','image/png'].includes(file.type)||file.size>10*1024*1024){status(english?'Please upload a JPG or PNG file up to 10 MB.':'ارفع ملف JPG أو PNG لا يتجاوز 10 ميجابايت.',english);return;}
+ const fd=new FormData(form),id=crypto.randomUUID(),ext=file.type==='image/png'?'png':'jpg',path=id+'/'+Date.now()+'.'+ext;
+ submitBtn.disabled=true;submitBtn.style.opacity='.6';status(english?'Uploading your entry securely…':'جارٍ رفع مشاركتك بأمان…',english);
+ const headers={'apikey':SUPABASE_KEY,'Authorization':'Bearer '+SUPABASE_KEY};
+ try{
+  const upload=await fetch(SUPABASE_URL+'/storage/v1/object/poster-competition-previews/'+path,{method:'POST',headers:{...headers,'Content-Type':file.type,'x-upsert':'false'},body:file});
+  if(!upload.ok)throw new Error('upload');
+  const row={full_name:fd.get('name').trim(),email:fd.get('email').trim(),phone:fd.get('phone').trim(),location:fd.get('location').trim(),portfolio_url:fd.get('portfolio')||null,design_title:fd.get('designTitle').trim(),concept:fd.get('concept').trim(),software:fd.get('software')||null,preview_format:ext==='png'?'PNG':'JPG',preview_path:path,status:'new'};
+  const insert=await fetch(SUPABASE_URL+'/rest/v1/poster_competition_submissions',{method:'POST',headers:{...headers,'Content-Type':'application/json','Prefer':'return=minimal'},body:JSON.stringify(row)});
+  if(!insert.ok)throw new Error('database');
+  form.reset();status(english?'Your entry has been received successfully. Keep an eye on your email for any follow-up.':'تم استلام مشاركتك بنجاح. تابع بريدك الإلكتروني لأي مراسلات لاحقة.',english);
+ }catch(err){status(english?'We could not complete the submission. Your file may have uploaded, but the entry was not confirmed. Please try again or contact the festival.':'لم نتمكن من تأكيد إرسال المشاركة. ربما تم رفع الملف لكن لم يتم حفظ البيانات. حاول مرة أخرى أو تواصل مع المهرجان.',english);}
+ finally{submitBtn.disabled=false;submitBtn.style.opacity='1';}
+});
 </script>
 </body></html>
