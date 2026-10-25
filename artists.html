@@ -73,7 +73,7 @@ async function renderArtists(){
  const search=document.getElementById('search').value.trim().toLowerCase();
  const discipline=document.getElementById('discipline').value;
  const governorate=document.getElementById('governorate').value;
- let q=client.from('artist_submissions').select('id,full_name,artist_name,governorate,disciplines,bio,portfolio_url,social_url,portrait_public_path').eq('status','approved').order('created_at',{ascending:false}).limit(200);
+ let q=client.from('public_artist_directory').select('id,full_name,artist_name,governorate,disciplines,bio,portfolio_url,social_url,portrait_public_path').order('full_name',{ascending:true}).limit(200);
  if(governorate) q=q.eq('governorate',governorate);
  if(discipline) q=q.contains('disciplines',[discipline]);
  const {data,error}=await q;
