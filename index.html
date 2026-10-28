@@ -100,6 +100,53 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 
 <style id="img-dims">:where(img[width][height]){height:auto}</style>
   <!-- GitHub Pages redeploy trigger: studio section included -->
+
+<style id="latest-news-home-styles">
+.latest-news-home{--news-accent:#2bb3b1;position:relative;isolation:isolate;overflow:hidden;padding:clamp(78px,9vw,132px) 0;background:#f4f5f5;color:#101717}
+.latest-news-home:before{content:"";position:absolute;z-index:-1;width:440px;height:440px;right:-210px;top:60px;border:1px solid rgba(43,179,177,.18);border-radius:50%;box-shadow:0 0 0 45px rgba(43,179,177,.025),0 0 0 90px rgba(43,179,177,.02);animation:news-orbit 24s linear infinite}
+.news-topline{display:flex;align-items:center;gap:14px;margin-bottom:28px;color:#637171;font:700 10px/1.4 Inter,sans-serif;letter-spacing:2px}
+.news-topline>span:first-child,.news-topline>span:last-child{height:1px;background:rgba(16,23,23,.18);flex:1}
+.news-topline>span:first-child{max-width:70px;background:var(--news-accent)}
+.news-heading{display:grid;grid-template-columns:1fr minmax(260px,.65fr);align-items:end;gap:42px;margin-bottom:44px}
+.news-heading .kicker{color:#667373;margin-bottom:12px}
+.news-heading h2{font-size:clamp(42px,6vw,76px);line-height:1.08;letter-spacing:-1.8px;font-weight:900}
+.news-heading h2 em{font-style:normal;color:#159e9c;position:relative}
+.news-heading h2 em:after{content:"";position:absolute;right:0;bottom:-8px;width:42%;height:4px;background:#159e9c;transform-origin:right;animation:news-underline 1s .25s both}
+.news-heading>p{max-width:480px;color:#5b6565;font-size:15px;line-height:2;margin:0 0 4px}
+.news-grid{display:grid;grid-template-columns:1.18fr 1fr 1fr;gap:18px;align-items:stretch}
+.news-card{min-width:0;background:#fff;border:1px solid rgba(16,23,23,.09);box-shadow:0 10px 35px rgba(10,25,25,.045);display:flex;flex-direction:column;overflow:hidden;transition:transform .45s cubic-bezier(.2,.8,.2,1),box-shadow .45s,border-color .3s}
+.news-card:hover{transform:translateY(-8px);box-shadow:0 24px 55px rgba(10,25,25,.13);border-color:rgba(43,179,177,.48)}
+.news-card-image{position:relative;display:block;overflow:hidden;aspect-ratio:1.48;background:#101a20}
+.news-card-feature .news-card-image{aspect-ratio:1.48}
+.news-card-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,12,14,.08),rgba(4,12,14,.48));pointer-events:none;transition:opacity .3s}
+.news-card-image img{width:100%;height:100%;object-fit:cover;transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s}
+.news-card:hover .news-card-image img{transform:scale(1.07);filter:saturate(1.12)}
+.news-category{position:absolute;z-index:1;top:16px;right:16px;padding:7px 11px;background:rgba(8,17,19,.83);backdrop-filter:blur(8px);color:#fff;font-size:10px;font-weight:800;letter-spacing:.5px;border-right:3px solid var(--news-accent)}
+.news-image-arrow{position:absolute;z-index:1;bottom:14px;left:16px;width:36px;height:36px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.7);border-radius:50%;color:#fff;font:18px Inter,sans-serif;transition:transform .3s,background .3s,color .3s}
+.news-card:hover .news-image-arrow{transform:rotate(45deg);background:#fff;color:#101717}
+.news-card-body{display:flex;flex-direction:column;align-items:flex-start;flex:1;padding:22px 23px 24px}
+.news-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;color:#758080;font:700 10px/1.6 Inter,Cairo,sans-serif;margin-bottom:12px}
+.news-meta-sep{color:#159e9c}
+.news-live-dot{width:7px;height:7px;border-radius:50%;background:#159e9c;box-shadow:0 0 0 4px rgba(21,158,156,.12);animation:news-pulse 2s infinite}
+.news-card h3{font-size:clamp(19px,2vw,24px);line-height:1.55;font-weight:900;margin-bottom:10px;color:#101717}
+.news-card p{font-size:13px;line-height:1.95;color:#606a6a;margin-bottom:22px}
+.news-read-link{margin-top:auto;display:inline-flex;align-items:center;gap:10px;color:#087f7d;font-weight:900;font-size:12px;border-bottom:1px solid rgba(8,127,125,.25);padding-bottom:5px;transition:gap .25s,color .25s}
+.news-read-link:hover{gap:16px;color:#101717}
+.news-footer{display:flex;align-items:center;gap:13px;margin-top:32px;padding-top:20px;border-top:1px solid rgba(16,23,23,.13)}
+.news-footer-mark{font-size:25px;color:#159e9c;animation:news-spin 14s linear infinite}
+.news-footer p{color:#687373;font-size:13px;flex:1}
+.news-footer>a{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:900;color:#101717;padding:10px 0;border-bottom:2px solid #159e9c}
+.news-reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
+.news-reveal.news-visible{opacity:1;transform:translateY(0)}
+.news-grid .news-card:nth-child(2){transition-delay:.1s}.news-grid .news-card:nth-child(3){transition-delay:.2s}
+@keyframes news-pulse{0%,100%{box-shadow:0 0 0 4px rgba(21,158,156,.12)}50%{box-shadow:0 0 0 7px rgba(21,158,156,.03)}}
+@keyframes news-orbit{to{transform:rotate(360deg)}}
+@keyframes news-spin{to{transform:rotate(360deg)}}
+@keyframes news-underline{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:950px){.news-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.news-card-feature{grid-column:1/-1}.news-card-feature .news-card-image{aspect-ratio:2.1}.news-heading{gap:24px}}
+@media(max-width:620px){.latest-news-home{padding:76px 0}.news-heading{grid-template-columns:1fr;gap:16px;margin-bottom:28px}.news-heading h2{font-size:48px}.news-grid{grid-template-columns:1fr;gap:16px}.news-card-feature{grid-column:auto}.news-card-feature .news-card-image,.news-card-image{aspect-ratio:1.55}.news-card-body{padding:20px}.news-card h3{font-size:21px}.news-footer{align-items:flex-start;flex-wrap:wrap}.news-footer p{flex-basis:calc(100% - 45px)}.news-footer>a{margin-inline-start:38px}}
+@media(prefers-reduced-motion:reduce){.latest-news-home:before,.news-live-dot,.news-footer-mark,.news-heading h2 em:after{animation:none!important}.news-reveal{opacity:1;transform:none;transition:none}.news-card,.news-card-image img,.news-image-arrow{transition:none!important}}
+</style>
 </head>
 <body>
 
@@ -207,6 +254,62 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 <section class="purpose"><div class="container"><div class="purpose-title"><div class="kicker"><span class="ta-ar" lang="ar">لماذا نعمل؟</span><span class="ta-en" lang="en">WHY WE EXIST</span></div><h2 class="ta-ar" lang="ar">نحو مشهد فني احترافي ومستدام في صعيد مصر.</h2><h2 class="ta-en" lang="en">Towards a professional and sustainable arts scene in Upper Egypt.</h2></div>
 <div class="purpose-grid"><article class="purpose-card"><h3 class="ta-ar" lang="ar">الهدف</h3><h3 class="ta-en" lang="en">Goal</h3><p class="ta-ar" lang="ar">إتاحة ممارسة الفنون الأدائية لفناني صعيد مصر، دون الحاجة إلى السفر خارج الإقليم، من خلال فرص حقيقية للتدريب والإنتاج والممارسة الفنية.</p><p class="ta-en" lang="en">To make performing arts practice accessible to artists in Upper Egypt through real opportunities for training, production and artistic practice.</p></article><article class="purpose-card"><h3 class="ta-ar" lang="ar">الرسالة</h3><h3 class="ta-en" lang="en">Mission</h3><p class="ta-ar" lang="ar">بناء بيئة فنية احترافية تتيح للفنانين تطوير مهاراتهم، وتدعم استدامة الفنانين والفرق المسرحية، وتحول الشغف بالفن من الهواية إلى مسار مهني مستدام.</p><p class="ta-en" lang="en">To build a professional artistic environment that develops skills, supports the sustainability of artists and theatre troupes, and turns passion into sustainable professional practice.</p></article><article class="purpose-card"><h3 class="ta-ar" lang="ar">الرؤية</h3><h3 class="ta-en" lang="en">Vision</h3><p class="ta-ar" lang="ar">أن يصبح صعيد مصر مركزًا فنيًا مؤثرًا يمتلك مشهدًا مستدامًا للفنون الأدائية، ويمنح فنانيه فرصًا احترافية تضاهي ما هو متاح في المراكز الثقافية الكبرى.</p><p class="ta-en" lang="en">For Upper Egypt to become an influential arts centre with a sustainable performing arts scene and professional opportunities comparable to major cultural centres.</p></article></div></div></section>
 <section class="festival"><div class="container festival-inner"><div class="festival-badge"><span class="ta-ar" lang="ar">مهرجان المنيا المسرحي الدولي</span><span class="ta-en" lang="en">MINYA INTERNATIONAL THEATRE FESTIVAL</span></div><h2 class="ta-ar" lang="ar">من المنيا إلى العالم.<br/><span>المسرح يعبر الحدود.</span></h2><h2 class="ta-en" lang="en">From Minya to the world.<br/><span>Theatre crosses borders.</span></h2><p class="ta-ar" lang="ar">مهرجان المنيا المسرحي الدولي منصة للقاء والتبادل بين الفنانين والتجارب المسرحية، ونافذة يطل منها صعيد مصر على المشهد المسرحي المصري والدولي.</p><p class="ta-en" lang="en">Minya International Theatre Festival is a platform for exchange between artists and theatre practices, connecting Upper Egypt with the wider Egyptian and international theatre scene.</p><div class="festival-meta"><div class="meta"><strong>2022</strong><small class="ta-ar" lang="ar">البداية</small><small class="ta-en" lang="en">Established</small></div><div class="meta"><strong>2024</strong><small class="ta-ar" lang="ar">مهرجان المنيا للعروض المسرحية</small><small class="ta-en" lang="en">Minya Theatre Festival</small></div><div class="meta"><strong>2025+</strong><small class="ta-ar" lang="ar">الطابع الدولي</small><small class="ta-en" lang="en">International platform</small></div></div><a class="btn btn-outline" href="/mitf"><span class="ta-ar" lang="ar">اكتشف المهرجان</span><span class="ta-en" lang="en">Discover the festival</span></a></div></section>
+
+<section class="latest-news-home" id="latest-news-home" aria-labelledby="latest-news-title">
+  <div class="container">
+    <div class="news-topline" aria-hidden="true"><span></span><span class="news-topline-label">TEATRO AL SAEED · LATEST UPDATES</span><span></span></div>
+    <div class="news-heading news-reveal">
+      <div>
+        <div class="kicker"><span class="ta-ar" lang="ar">من قلب الصعيد، إلى العالم</span><span class="ta-en" lang="en">FROM UPPER EGYPT TO THE WORLD</span></div>
+        <h2 id="latest-news-title"><span class="ta-ar" lang="ar">آخر <em>الأخبار</em></span><span class="ta-en" lang="en">Latest <em>News</em></span></h2>
+      </div>
+      <p><span class="ta-ar" lang="ar">تابع أحدث إعلانات تياترو الصعيد، فرص المشاركة، وأخبار مشروعاتنا الفنية والثقافية.</span><span class="ta-en" lang="en">Discover the latest announcements, open calls, and updates from Teatro Alsaeed’s artistic and cultural projects.</span></p>
+    </div>
+    <div class="news-grid">
+      <article class="news-card news-card-feature news-reveal">
+        <a class="news-card-image" href="/mitf-2027#application-form" aria-label="التقديم للفرق المسرحية الدولية">
+          <img src="/images/festival/2027/festival-2027-hero.jpg" alt="خشبة مسرح بأجواء مصرية" loading="lazy" width="1536" height="864">
+          <span class="news-category"><span class="ta-ar" lang="ar">دعوة مفتوحة</span><span class="ta-en" lang="en">OPEN CALL</span></span>
+          <span class="news-image-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="news-card-body">
+          <div class="news-meta"><span class="news-live-dot"></span><span class="ta-ar" lang="ar">مهرجان المنيا المسرحي الدولي</span><span class="ta-en" lang="en">Minya International Theatre Festival</span><span class="news-meta-sep">•</span><time datetime="2026-12-15">15.12.2026</time></div>
+          <h3><span class="ta-ar" lang="ar">فتح باب التقديم للفرق المسرحية الدولية</span><span class="ta-en" lang="en">International theatre companies: applications are open</span></h3>
+          <p><span class="ta-ar" lang="ar">قدّم عرضك للمشاركة في الدورة الرابعة من المهرجان، من 5 إلى 12 أبريل 2027 في المنيا.</span><span class="ta-en" lang="en">Apply to the festival’s fourth edition, taking place in Minya from 5–12 April 2027.</span></p>
+          <a class="news-read-link" href="/mitf-2027#application-form"><span class="ta-ar" lang="ar">تفاصيل التقديم</span><span class="ta-en" lang="en">Application details</span><span aria-hidden="true">←</span></a>
+        </div>
+      </article>
+      <article class="news-card news-reveal">
+        <a class="news-card-image" href="/poster-competition-2027" aria-label="مسابقة تصميم البوستر الرسمي">
+          <img src="/images/festival/2027/poster-design-competition.jpg" alt="مشهد تصميم فني لمسابقة البوستر" loading="lazy" width="1200" height="900">
+          <span class="news-category"><span class="ta-ar" lang="ar">مسابقة تصميم</span><span class="ta-en" lang="en">DESIGN CALL</span></span>
+          <span class="news-image-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="news-card-body">
+          <div class="news-meta"><span class="ta-ar" lang="ar">للمصممين الشباب</span><span class="ta-en" lang="en">For emerging designers</span><span class="news-meta-sep">•</span><time datetime="2026-11-01">01.11.2026</time></div>
+          <h3><span class="ta-ar" lang="ar">صمّم البوستر الرسمي للدورة الرابعة</span><span class="ta-en" lang="en">Design the official festival poster</span></h3>
+          <p><span class="ta-ar" lang="ar">شارك برؤيتك البصرية تحت شعار «أبعد من الحدود»، ونافس على جائزة مالية قدرها 2000 جنيه مصري.</span><span class="ta-en" lang="en">Submit your visual interpretation of “Beyond Borders” and compete for a prize of EGP 2,000.</span></p>
+          <a class="news-read-link" href="/poster-competition-2027"><span class="ta-ar" lang="ar">اقرأ شروط المسابقة</span><span class="ta-en" lang="en">Read the competition brief</span><span aria-hidden="true">←</span></a>
+        </div>
+      </article>
+      <article class="news-card news-reveal">
+        <a class="news-card-image" href="/mitf-2027" aria-label="الدورة الرابعة من مهرجان المنيا المسرحي الدولي">
+          <img src="/images/festival/2027/monodrama.jpg" alt="فنان يؤدي عرضًا مسرحيًا تحت إضاءة مركزة" loading="lazy" width="1200" height="900">
+          <span class="news-category"><span class="ta-ar" lang="ar">احفظ الموعد</span><span class="ta-en" lang="en">SAVE THE DATE</span></span>
+          <span class="news-image-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="news-card-body">
+          <div class="news-meta"><span class="ta-ar" lang="ar">5 – 12 أبريل 2027</span><span class="ta-en" lang="en">5–12 April 2027</span><span class="news-meta-sep">•</span><span>Minya, Egypt</span></div>
+          <h3><span class="ta-ar" lang="ar">أبعد من الحدود</span><span class="ta-en" lang="en">Beyond Borders</span></h3>
+          <p><span class="ta-ar" lang="ar">أسبوع من اللقاءات والتجارب المسرحية التي تجمع فنانين وجمهورًا من ثقافات مختلفة في المنيا.</span><span class="ta-en" lang="en">A week of theatre, encounters, and exchange bringing artists and audiences from different cultures to Minya.</span></p>
+          <a class="news-read-link" href="/mitf-2027"><span class="ta-ar" lang="ar">اكتشف المهرجان</span><span class="ta-en" lang="en">Discover the festival</span><span aria-hidden="true">←</span></a>
+        </div>
+      </article>
+    </div>
+    <div class="news-footer news-reveal"><span class="news-footer-mark" aria-hidden="true">✳</span><p><span class="ta-ar" lang="ar">حكايات جديدة، ومساحات جديدة للفن.</span><span class="ta-en" lang="en">New stories. New spaces for art.</span></p><a href="/news"><span class="ta-ar" lang="ar">كل الأخبار</span><span class="ta-en" lang="en">All news</span><span aria-hidden="true">↗</span></a></div>
+  </div>
+</section>
+
 <section class="impact"><div class="container"><div class="impact-grid"><div class="impact-item"><strong>2014</strong><span class="ta-ar" lang="ar">منذ التأسيس</span><span class="ta-en" lang="en">Since</span><p class="ta-ar" lang="ar">بداية رحلة الفرقة</p><p class="ta-en" lang="en">The troupe’s journey began</p></div><div class="impact-item"><strong>600+</strong><span class="ta-ar" lang="ar">ليلة عرض</span><span class="ta-en" lang="en">Performance nights</span><p class="ta-ar" lang="ar">من أرشيف التجربة المسرحية</p><p class="ta-en" lang="en">Across our theatre journey</p></div><div class="impact-item"><strong>23</strong><span class="ta-ar" lang="ar">دفعة أكاديمية</span><span class="ta-en" lang="en">Academy groups</span><p class="ta-ar" lang="ar">تخرجت من الأكاديمية</p><p class="ta-en" lang="en">Graduated from the academy</p></div><div class="impact-item"><strong>+31</strong><span class="ta-ar" lang="ar">عرضًا مسرحيًا</span><span class="ta-en" lang="en">31+ productions</span><p class="ta-ar" lang="ar">ضمن أرشيف الفرقة</p><p class="ta-en" lang="en">In the troupe archive</p></div></div></div></section>
 <section class="community"><div class="community-grid"><div class="community-image"></div><div class="community-copy"><div class="kicker"><span class="ta-ar" lang="ar">الفن والمجتمع</span><span class="ta-en" lang="en">ART &amp; COMMUNITY</span></div><h2 class="ta-ar" lang="ar">الفن يبدأ<br/>حين يجد من يصنعه ومن يشاركه.</h2><h2 class="ta-en" lang="en">Art begins<br/>when makers and audiences meet.</h2><p class="ta-ar" lang="ar">نؤمن بأن بناء المشهد الفني لا يحدث على الخشبة وحدها؛ بل في التدريب، والشارع، والقرية، والمساحة المستقلة، وبين الفنان والجمهور.</p><p class="ta-en" lang="en">We believe an arts scene is built beyond the stage — through training, communities, villages, independent spaces, artists and audiences.</p><div class="quote lang-ar" lang="ar">«لأن الفن ليس حكرًا على المركز.»</div><div class="quote lang-en" lang="en">“Because art does not belong to the centre alone.”</div></div></div></section>
 <section class="cta"><div class="container"><h2 class="ta-ar" lang="ar">حلمك مشروع.</h2><h2 class="ta-en" lang="en">Your dream is a project.</h2><p class="ta-ar" lang="ar">سواء كنت فنانًا، أو فرقة، أو مؤسسة، أو صاحب مشروع ثقافي — نبحث دائمًا عن مساحات جديدة للتعاون وصناعة الفن.</p><p class="ta-en" lang="en">Whether you are an artist, troupe, institution or cultural project, we are always open to new ways of collaborating and creating.</p><a class="btn" href="/contact"><span class="ta-ar" lang="ar">ابدأ الحوار</span><span class="ta-en" lang="en">Start a conversation</span></a></div></section>
@@ -313,6 +416,21 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
   navH();addEventListener('resize',navH);addEventListener('load',navH);
   ['year','siteYear'].forEach(function(id){var y=d.getElementById(id);if(y)y.textContent=new Date().getFullYear();});
   apply(stored(),false);
+})();
+</script>
+
+
+<script id="latest-news-home-animation">
+(function(){
+  var items=document.querySelectorAll('#latest-news-home .news-reveal');
+  if(!items.length)return;
+  if(!('IntersectionObserver' in window)){items.forEach(function(item){item.classList.add('news-visible')});return;}
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){entry.target.classList.add('news-visible');observer.unobserve(entry.target);}
+    });
+  },{threshold:.12,rootMargin:'0px 0px -35px 0px'});
+  items.forEach(function(item){observer.observe(item)});
 })();
 </script>
 
