@@ -239,6 +239,22 @@ footer{padding:55px 0 30px;background:#050606}
 .edition-open:hover{background:#2bb3b1;color:#071010}
 @media(max-width:700px){.festival-editions-nav{top:62px}.festival-editions-inner{justify-content:flex-start;padding:8px 14px}.festival-edition-link{min-width:116px;padding:8px 11px}.festival-edition-link .lang-ar,.festival-edition-link .lang-en{font-size:10px}.edition-open{width:100%;justify-content:center}}
 
+
+/* VOLUNTEER RECRUITMENT */
+.volunteer-call{padding:100px 0;background:linear-gradient(135deg,#111722,#080909 65%);border-top:1px solid rgba(255,255,255,.1);border-bottom:1px solid rgba(255,255,255,.1)}
+.volunteer-call-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}
+.volunteer-call-art{width:100%;border:1px solid rgba(255,255,255,.16);box-shadow:0 24px 80px rgba(0,0,0,.35)}
+.volunteer-call-copy h2{font-size:clamp(36px,5vw,62px);line-height:1.2;font-weight:900;margin:12px 0 20px}
+.volunteer-call-copy h2 span{color:#e2ad4b}
+.volunteer-call-copy p{color:#c1c8d0;line-height:2;font-size:17px;max-width:580px}
+.volunteer-call-meta{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0}
+.volunteer-call-meta span{border:1px solid rgba(226,173,75,.4);padding:7px 12px;color:#f3d38c;font-size:13px;font-weight:700}
+.volunteer-call-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.volunteer-call .volunteer-btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;background:#dca849;color:#101827;font-weight:900;border:1px solid #dca849}
+.volunteer-call .volunteer-btn:hover{background:#fff;border-color:#fff}
+.volunteer-call .volunteer-note{font-size:13px;color:#9ca7b4;margin-top:14px}
+@media(max-width:800px){.volunteer-call{padding:68px 0}.volunteer-call-grid{grid-template-columns:1fr;gap:28px}.volunteer-call-art{order:0}.volunteer-call-copy{order:1}}
+
 </style>
 
 
@@ -484,6 +500,27 @@ body.site-en :is(.ta-ar,.lang-ar,.ar){display:none!important}
 <div class="number"><strong>04</strong><span class="ta-ar" lang="ar">الدورة القادمة</span><span class="ta-en" lang="en">Next edition</span></div>
 <div class="number"><strong>2027</strong><span class="ta-ar" lang="ar">أبريل · الدورة الرابعة</span><span class="ta-en" lang="en">April · 4th edition</span></div>
 </div></div>
+</section>
+
+
+<section class="volunteer-call" id="volunteer">
+  <div class="container volunteer-call-grid">
+    <div class="volunteer-call-copy">
+      <div class="kicker"><span class="ta-ar" lang="ar">انضم إلى فريقنا · 2027</span><span class="ta-en" lang="en">JOIN OUR TEAM · 2027</span></div>
+      <h2 class="ta-ar" lang="ar">فتح باب <span>التطوع.</span></h2>
+      <h2 class="ta-en" lang="en">Volunteer <span>with us.</span></h2>
+      <p class="ta-ar" lang="ar">المهرجان مش عروض وبس؛ هو كمان فريق من الناس الشغوفة اللي بتصنع التجربة من أول استقبال الضيوف لحد آخر لحظة على المسرح. لو عمرك 18 سنة أو أكثر، وعندك حماس تشتغل مع فريق بيحب الفن، سجّل اهتمامك بالتطوع وشاركنا صناعة الدورة الرابعة من مهرجان المنيا المسرحي الدولي.</p>
+      <p class="ta-en" lang="en">A festival is more than performances — it is a team of passionate people creating the experience, from welcoming guests to the final moment on stage. If you are 18 or older and excited to work with an arts-loving team, register your interest and help shape the fourth edition of the Minya International Theatre Festival.</p>
+      <div class="volunteer-call-meta"><span>5–12 أبريل 2027</span><span>المنيا · مصر</span><span>18 سنة فأكثر</span></div>
+      <div class="volunteer-call-actions">
+        <a class="volunteer-btn" href="https://docs.google.com/forms/d/1sQbsasiFbWigIi_tLc_Xfu_jg4jooIT50qnWnythQiA/viewform" target="_blank" rel="noopener"><span class="ta-ar" lang="ar">سجّل كمتطوع ↗</span><span class="ta-en" lang="en">Register as a volunteer ↗</span></a>
+        <a class="btn btn-outline" href="https://docs.google.com/forms/d/1sQbsasiFbWigIi_tLc_Xfu_jg4jooIT50qnWnythQiA/preview" target="_blank" rel="noopener"><span class="ta-ar" lang="ar">معاينة الاستمارة</span><span class="ta-en" lang="en">Preview the form</span></a>
+      </div>
+      <p class="volunteer-note ta-ar" lang="ar">سيتم التواصل مع المرشحين وفقًا لاحتياجات فرق العمل ومدى التفرغ.</p>
+      <p class="volunteer-note ta-en" lang="en">Applicants will be contacted according to team needs and availability.</p>
+    </div>
+    <img class="volunteer-call-art" src="images/volunteer-call.svg" alt="فتح باب التطوع في مهرجان المنيا المسرحي الدولي 2027" loading="lazy" width="1200" height="720">
+  </div>
 </section>
 
 <section class="final">
