@@ -55,7 +55,7 @@ class _TeatroBootstrapState extends State<TeatroBootstrap> {
           ),
         ),
       ),
-      locale: Locale(_english ? 'en' : 'ar'),
+      locale: Locale(english ? 'en' : 'ar'),
       supportedLocales: const [Locale('ar'), Locale('en')],
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
@@ -153,13 +153,13 @@ class _TeatroShellState extends State<TeatroShell> {
           children: [
             const Icon(Icons.theaters, color: _accent),
             const SizedBox(width: 10),
-            Text(_english ? 'TEATRO ALSAEED' : 'تياترو الصعيد'),
+            Text(english ? 'TEATRO ALSAEED' : 'تياترو الصعيد'),
           ],
         ),
         actions: [
           TextButton(
             onPressed: widget.onLanguageChanged,
-            child: Text(_english ? 'عربي' : 'EN'),
+            child: Text(english ? 'عربي' : 'EN'),
           ),
           const SizedBox(width: 8),
         ],
@@ -172,26 +172,26 @@ class _TeatroShellState extends State<TeatroShell> {
           NavigationDestination(
             icon: const Icon(Icons.home_outlined),
             selectedIcon: const Icon(Icons.home),
-            label: _english ? 'Home' : 'الرئيسية',
+            label: english ? 'Home' : 'الرئيسية',
           ),
           NavigationDestination(
             icon: const Icon(Icons.article_outlined),
             selectedIcon: const Icon(Icons.article),
-            label: _english ? 'News' : 'الأخبار',
+            label: english ? 'News' : 'الأخبار',
           ),
           NavigationDestination(
             icon: const Icon(Icons.theater_comedy_outlined),
             selectedIcon: const Icon(Icons.theater_comedy),
-            label: _english ? 'Shows' : 'العروض',
+            label: english ? 'Shows' : 'العروض',
           ),
           NavigationDestination(
             icon: const Icon(Icons.event_outlined),
             selectedIcon: const Icon(Icons.event),
-            label: _english ? 'Festival' : 'المهرجان',
+            label: english ? 'Festival' : 'المهرجان',
           ),
           NavigationDestination(
             icon: const Icon(Icons.menu),
-            label: _english ? 'More' : 'المزيد',
+            label: english ? 'More' : 'المزيد',
           ),
         ],
       ),
