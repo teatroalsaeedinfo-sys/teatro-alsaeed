@@ -333,7 +333,6 @@ class HomePage extends StatelessWidget {
                       trailing: row['production_year']?.toString(),
                     )),
             ],
-          ),
         );
       },
     );
