@@ -20,3 +20,5 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+
+  url_launcher: ^6.3.2
