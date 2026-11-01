@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#101a2b">
+  <title>لوحة إدارة تياترو الصعيد</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#101a2b;--navy2:#18263c;--blue:#3565a8;--gold:#d7ad62;--bg:#f3f5f8;--ink:#172033;--muted:#687386;--line:#e1e6ed;--white:#fff;--danger:#b33d45;--success:#16734b}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Cairo",sans-serif}
+    button,input,textarea,select{font:inherit}button{cursor:pointer}
+    .top{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px;box-shadow:0 4px 18px #101a2b22}
+    .brand{display:flex;align-items:center;gap:13px}.mark{width:42px;height:42px;border:1px solid #d7ad6288;border-radius:13px;display:grid;place-items:center;color:var(--gold);font-size:23px}.brand h1{font-size:18px;margin:0;font-weight:800}.brand p{font-size:12px;color:#b9c4d4;margin:2px 0 0}
+    .top-actions{display:flex;gap:10px;align-items:center}.who{font-size:12px;color:#c5d0df;direction:ltr}
+    .wrap{max-width:1440px;margin:auto;padding:26px 22px}.login-wrap{max-width:430px;margin:8vh auto}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 28px #1720330a}
+    h2{font-size:20px;margin:0 0 6px}.sub{color:var(--muted);font-size:13px;margin:0 0 20px;line-height:1.8}
+    .field{display:flex;flex-direction:column;gap:6px;margin-bottom:14px}.field label{font-size:13px;font-weight:700}.field input,.field textarea,.field select{width:100%;border:1px solid #d8dee8;border-radius:10px;padding:11px 12px;background:#fff;color:var(--ink);outline:none}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px #3565a81a}.field textarea{min-height:105px;resize:vertical}.field small{font-size:11px;color:var(--muted)}.check{display:flex;align-items:center;gap:9px;padding:8px 0}.check input{width:18px;height:18px}
+    .btn{border:0;border-radius:10px;padding:10px 16px;font-weight:700;font-size:13px;transition:.15s}.btn-primary{background:var(--blue);color:#fff}.btn-primary:hover{background:#294f87}.btn-gold{background:var(--gold);color:#172033}.btn-ghost{background:#ffffff16;color:#fff;border:1px solid #ffffff2c}.btn-light{background:#edf1f6;color:#24334a}.btn-danger{background:#fff0f0;color:var(--danger)}.btn:disabled{opacity:.55;cursor:not-allowed}
+    .msg{padding:11px 13px;border-radius:10px;font-size:13px;margin:12px 0;display:none;line-height:1.7}.msg.show{display:block}.msg.error{background:#fff0f0;color:#9d2e38}.msg.ok{background:#eaf7f0;color:#17643f}.msg.info{background:#edf4ff;color:#244d83}
+    .layout{display:grid;grid-template-columns:245px minmax(0,1fr);gap:20px}.side{background:var(--navy);border-radius:17px;padding:13px;height:max-content;position:sticky;top:18px}.navbtn{width:100%;text-align:right;background:transparent;border:0;color:#d4dce8;padding:11px 13px;border-radius:10px;margin:2px 0;font-weight:600;font-size:13px}.navbtn.active,.navbtn:hover{background:#ffffff18;color:#fff}.nav-title{font-size:11px;color:#8291a8;padding:9px 13px 4px}
+    .content-head{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:16px}.content-head h2{margin:0}.toolbar{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.search{border:1px solid var(--line);border-radius:10px;padding:9px 12px;min-width:210px;background:#fff}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px}.stat b{font-size:23px;display:block}.stat span{font-size:12px;color:var(--muted)}
+    .tablebox{background:#fff;border:1px solid var(--line);border-radius:15px;overflow:auto}.table{width:100%;border-collapse:collapse;min-width:620px}.table th,.table td{padding:12px 14px;text-align:right;border-bottom:1px solid #edf0f4;font-size:12px;vertical-align:middle}.table th{background:#f8fafc;color:#596579;font-weight:800}.table tr:last-child td{border-bottom:0}.table tbody tr:hover{background:#fafcff}.titlecell{font-weight:700;max-width:360px}.muted{color:var(--muted)}.pill{display:inline-block;border-radius:20px;padding:3px 9px;font-size:10px;background:#edf1f6;color:#46546a}.pill.published{background:#e7f6ee;color:#17643f}.pill.draft{background:#fff5df;color:#865c0a}.pill.archived,.pill.closed{background:#f1f1f1;color:#666}.actions{display:flex;gap:6px;white-space:nowrap}.smallbtn{border:0;border-radius:8px;padding:6px 9px;font-size:11px;font-weight:700}.empty{text-align:center;color:var(--muted);padding:40px 16px}
+    .editor{display:none;margin-bottom:18px}.editor.open{display:block}.editor-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 14px}.field.full{grid-column:1/-1}.field img{max-width:180px;max-height:110px;object-fit:contain;border-radius:8px;border:1px solid var(--line);margin-top:5px}.uploadline{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.uploadline input{max-width:260px;padding:7px}.footer-actions{display:flex;gap:9px;justify-content:flex-start;padding-top:10px;border-top:1px solid var(--line)}
+    .hidden{display:none!important}.loading{opacity:.65;pointer-events:none}.hint{font-size:12px;color:var(--muted);line-height:1.8}
+    @media(max-width:850px){.layout{grid-template-columns:1fr}.side{position:static;display:flex;overflow:auto;gap:4px}.nav-title{display:none}.navbtn{white-space:nowrap;width:auto}.stats{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:560px){.top{padding:14px}.brand h1{font-size:15px}.wrap{padding:16px 12px}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.content-head{align-items:flex-start;flex-direction:column}.stats{gap:8px}.who{display:none}.panel{padding:18px}}
+  </style>
+</head>
+<body>
+<header class="top">
+  <div class="brand"><div class="mark">ت</div><div><h1>لوحة إدارة تياترو الصعيد</h1><p>Teatro AlSaeed · Content Management</p></div></div>
+  <div class="top-actions"><span class="who" id="userEmail"></span><button id="logoutBtn" class="btn btn-ghost hidden">تسجيل الخروج</button></div>
+</header>
+
+<main id="loginView" class="login-wrap panel">
+  <h2>تسجيل دخول الإدارة</h2>
+  <p class="sub">لوحة خاصة بفريق تياترو الصعيد. الدخول متاح للحسابات التي أضافتها الإدارة فقط.</p>
+  <form id="loginForm">
+    <div class="field"><label for="email">البريد الإلكتروني</label><input id="email" type="email" autocomplete="username" required></div>
+    <div class="field"><label for="password">كلمة المرور</label><input id="password" type="password" autocomplete="current-password" required></div>
+    <button class="btn btn-primary" type="submit" style="width:100%">دخول آمن</button>
+  </form>
+  <div id="loginMsg" class="msg"></div>
+  <p class="hint">لا يوجد إنشاء حساب عام من هذه الصفحة. يجب إنشاء حساب الإدارة من Supabase ثم منحه صلاحية في جدول admin_members.</p>
+</main>
+
+<main id="noAccessView" class="login-wrap panel hidden">
+  <h2>الحساب غير مصرح له</h2>
+  <p class="sub">تم تسجيل الدخول بنجاح، لكن هذا الحساب غير موجود في قائمة مديري تياترو الصعيد.</p>
+  <div class="msg info show">اطلب من مالك المشروع إضافة بريدك إلى جدول <b>admin_members</b> من لوحة Supabase.</div>
+  <button id="noAccessLogout" class="btn btn-light">تسجيل الخروج</button>
+</main>
+
+<main id="appView" class="wrap hidden">
+  <section class="stats" id="stats"></section>
+  <div class="layout">
+    <aside class="side" id="nav">
+      <div class="nav-title">إدارة المحتوى</div>
+      <button class="navbtn active" data-section="news_posts">الأخبار</button>
+      <button class="navbtn" data-section="productions">العروض المسرحية</button>
+      <button class="navbtn" data-section="festival_editions">دورات المهرجان</button>
+      <button class="navbtn" data-section="festival_events">جدول الفعاليات</button>
+      <button class="navbtn" data-section="workshops">الورش</button>
+      <button class="navbtn" data-section="open_calls">دعوات المشاركة</button>
+      <button class="navbtn" data-section="app_announcements">إعلانات التطبيق</button>
+    </aside>
+    <section>
+      <div class="content-head">
+        <div><h2 id="sectionTitle">الأخبار</h2><div class="hint" id="sectionHint">إدارة الأخبار المنشورة والمسودات.</div></div>
+        <div class="toolbar"><input class="search" id="searchInput" placeholder="ابحث في المحتوى..."><button id="addBtn" class="btn btn-primary">+ إضافة جديد</button></div>
+      </div>
+      <div id="appMsg" class="msg"></div>
+      <section id="editor" class="panel editor">
+        <div class="editor-head"><h2 id="editorTitle">إضافة محتوى</h2><button id="closeEditor" class="btn btn-light">إغلاق</button></div>
+        <form id="recordForm"><div id="formFields" class="formgrid"></div>
+          <div class="footer-actions"><button type="submit" class="btn btn-primary" id="saveBtn">حفظ المحتوى</button><button type="button" class="btn btn-light" id="cancelBtn">إلغاء</button></div>
+        </form>
+      </section>
+      <div class="tablebox"><table class="table"><thead id="tableHead"></thead><tbody id="tableBody"></tbody></table></div>
+    </section>
+  </div>
+</main>
+
+<script type="module">
+import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.118.0/+esm';
+
+const SUPABASE_URL = 'https://cusdjhfdhimoucjvxsmr.supabase.co';
+const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_3TMqOmzhy8kTr0MMGGhwuA_eqhcTfI-';
+const supabase = createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+  auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true }
+});
+
+const $ = (id) => document.getElementById(id);
+const sections = {
+  news_posts: { title:'الأخبار', hint:'إدارة الأخبار والمقالات التي تظهر على الموقع والتطبيق.', table:'news_posts', columns:['title_ar','status','published_at'], fields:[
+    f('title_ar','العنوان بالعربية','text',true),f('title_en','العنوان بالإنجليزية'),f('slug','الرابط المختصر (Slug)','text',true),f('excerpt_ar','ملخص بالعربية','textarea'),f('excerpt_en','ملخص بالإنجليزية','textarea'),f('body_ar','نص الخبر بالعربية','textarea',true,true),f('body_en','نص الخبر بالإنجليزية','textarea',false,true),f('cover_image_url','صورة الغلاف','image',false,true),f('status','حالة النشر','select',true,false,['draft','published','archived']),f('featured','خبر مميز','checkbox'),f('published_at','تاريخ النشر','datetime')
+  ]},
+  productions: { title:'العروض المسرحية', hint:'أرشيف إنتاجات تياترو الصعيد وصورها وبياناتها.', table:'productions', columns:['title_ar','production_year','status'], fields:[
+    f('title_ar','اسم العرض بالعربية','text',true),f('title_en','اسم العرض بالإنجليزية'),f('slug','الرابط المختصر (Slug)','text',true),f('synopsis_ar','نبذة بالعربية','textarea'),f('synopsis_en','نبذة بالإنجليزية','textarea'),f('production_year','سنة الإنتاج','number'),f('director_ar','المخرج بالعربية'),f('director_en','المخرج بالإنجليزية'),f('poster_url','بوستر العرض','image',false,true),f('gallery_urls','روابط صور إضافية (كل رابط في سطر)','textarea',false,true),f('trailer_url','رابط الفيديو','url'),f('status','حالة الظهور','select',true,false,['draft','published','archived']),f('featured','عرض مميز','checkbox'),f('sort_order','ترتيب العرض','number')
+  ]},
+  festival_editions: { title:'دورات المهرجان', hint:'بيانات كل دورة وشعارها وتواريخها وصورة الغلاف.', table:'festival_editions', columns:['edition_number','title_ar','year','status'], fields:[
+    f('edition_number','رقم الدورة','number',true),f('year','السنة','number',true),f('title_ar','اسم الدورة بالعربية','text',true),f('title_en','اسم الدورة بالإنجليزية'),f('slug','الرابط المختصر (Slug)','text',true),f('slogan_ar','الشعار بالعربية'),f('slogan_en','الشعار بالإنجليزية'),f('description_ar','الوصف بالعربية','textarea',false,true),f('description_en','الوصف بالإنجليزية','textarea',false,true),f('starts_on','تاريخ البداية','date'),f('ends_on','تاريخ النهاية','date'),f('venue_ar','المكان بالعربية'),f('venue_en','المكان بالإنجليزية'),f('hero_image_url','صورة الغلاف الرئيسية','image',false,true),f('status','حالة الظهور','select',true,false,['draft','published','archived'])
+  ]},
+  festival_events: { title:'جدول الفعاليات', hint:'العروض والافتتاح والختام والندوات والأنشطة داخل كل دورة.', table:'festival_events', columns:['title_ar','event_type','starts_at','is_published'], fields:[
+    f('edition_id','الدورة التابعة لها','edition',true),f('event_type','نوع الفعالية','select',true,false,['performance','workshop','opening','closing','talk','screening','other']),f('title_ar','اسم الفعالية بالعربية','text',true),f('title_en','اسم الفعالية بالإنجليزية'),f('description_ar','الوصف بالعربية','textarea',false,true),f('description_en','الوصف بالإنجليزية','textarea',false,true),f('venue_ar','المكان بالعربية'),f('venue_en','المكان بالإنجليزية'),f('starts_at','موعد البداية','datetime'),f('ends_at','موعد النهاية','datetime'),f('cover_image_url','صورة الفعالية','image',false,true),f('is_published','إظهار للجمهور','checkbox'),f('sort_order','ترتيب العرض','number')
+  ]},
+  workshops: { title:'الورش', hint:'إدارة الورش والمدربين ومواعيد التسجيل.', table:'workshops', columns:['title_ar','trainer_ar','starts_at','status'], fields:[
+    f('festival_edition_id','الدورة المرتبطة (اختياري)','edition'),f('title_ar','اسم الورشة بالعربية','text',true),f('title_en','اسم الورشة بالإنجليزية'),f('slug','الرابط المختصر (Slug)','text',true),f('trainer_ar','اسم المدرب بالعربية'),f('trainer_en','اسم المدرب بالإنجليزية'),f('description_ar','الوصف بالعربية','textarea',false,true),f('description_en','الوصف بالإنجليزية','textarea',false,true),f('starts_at','موعد البداية','datetime'),f('ends_at','موعد النهاية','datetime'),f('venue_ar','المكان بالعربية'),f('venue_en','المكان بالإنجليزية'),f('cover_image_url','صورة الورشة','image',false,true),f('registration_url','رابط التسجيل','url'),f('status','الحالة','select',true,false,['draft','published','closed'])
+  ]},
+  open_calls: { title:'دعوات المشاركة', hint:'فتح وإغلاق باب التقديم للمهرجان والأنشطة.', table:'open_calls', columns:['title_ar','opens_at','closes_at','status'], fields:[
+    f('festival_edition_id','الدورة المرتبطة (اختياري)','edition'),f('title_ar','عنوان الدعوة بالعربية','text',true),f('title_en','عنوان الدعوة بالإنجليزية'),f('slug','الرابط المختصر (Slug)','text',true),f('description_ar','تفاصيل الدعوة بالعربية','textarea',false,true),f('description_en','تفاصيل الدعوة بالإنجليزية','textarea',false,true),f('opens_at','بداية التقديم','datetime'),f('closes_at','نهاية التقديم','datetime'),f('application_url','رابط استمارة التقديم','url'),f('status','الحالة','select',true,false,['draft','published','closed'])
+  ]},
+  app_announcements: { title:'إعلانات التطبيق', hint:'رسائل تظهر في التطبيق، تمهيدًا لربطها بخدمة الإشعارات.', table:'app_announcements', columns:['title_ar','is_published','publish_at'], fields:[
+    f('title_ar','عنوان الإعلان بالعربية','text',true),f('title_en','عنوان الإعلان بالإنجليزية'),f('message_ar','نص الإعلان بالعربية','textarea',true,true),f('message_en','نص الإعلان بالإنجليزية','textarea',false,true),f('target_url','الرابط عند الضغط','url'),f('is_published','إظهار الإعلان','checkbox'),f('publish_at','موعد النشر','datetime')
+  ]}
+};
+function f(name,label,type='text',required=false,full=false,options=[]){return {name,label,type,required,full,options};}
+let currentSection='news_posts', editingId=null, currentUser=null, records=[], editionOptions=[];
+
+function showMsg(el,text,type='info'){el.textContent=text;el.className='msg show '+type;}
+function hideMsg(el){el.textContent='';el.className='msg';}
+function view(name){['loginView','noAccessView','appView'].forEach(id=>$(id).classList.toggle('hidden',id!==name));}
+function toInputDate(value,type){if(!value)return '';if(type==='date')return String(value).slice(0,10);return String(value).slice(0,16);}
+function slugify(value){return String(value||'').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\u0600-\u06ff]+/g,'-').replace(/^-|-$/g,'').slice(0,90);}
+function statusLabel(value){const map={published:'منشور',draft:'مسودة',archived:'مؤرشف',closed:'مغلق',true:'ظاهر',false:'مخفي',performance:'عرض مسرحي',workshop:'ورشة',opening:'افتتاح',closing:'ختام',talk:'ندوة',screening:'عرض فيلم',other:'أخرى'};return map[String(value)]||String(value??'—');}
+function safeCell(value){return value===null||value===undefined||value===''?'—':String(value);}
+async function verifyAdmin(user){
+ const {data,error}=await supabase.from('admin_members').select('role').eq('user_id',user.id).maybeSingle();
+ if(error)throw error;return data;
+}
+async function loadEditions(){
+ const {data,error}=await supabase.from('festival_editions').select('id,edition_number,title_ar').order('year',{ascending:false});
+ if(error)throw error;editionOptions=data||[];
+}
+async function loadRecords(){
+ const config=sections[currentSection];
+ const orderColumn=config.table==='festival_editions'?'year':config.table==='festival_events'?'starts_at':config.table==='workshops'?'starts_at':config.table==='open_calls'?'created_at':config.table==='app_announcements'?'created_at':config.table==='productions'?'sort_order':'created_at';
+ let query=supabase.from(config.table).select('*').order(orderColumn,{ascending:false,nullsFirst:false}).limit(150);
+ const {data,error}=await query;if(error)throw error;records=data||[];renderTable();
+}
+function renderStats(){
+ const counts=[['news_posts','الأخبار'],['productions','العروض'],['festival_editions','دورات المهرجان'],['festival_events','الفعاليات']];
+ $('stats').replaceChildren(...counts.map(([table,label])=>{const card=document.createElement('div');card.className='stat';const n=document.createElement('b');n.textContent='…';const t=document.createElement('span');t.textContent=label;card.append(n,t);supabase.from(table).select('*',{count:'exact',head:true}).then(({count,error})=>{n.textContent=error?'—':String(count??0)});return card;}));
+}
+function renderTable(){
+ const config=sections[currentSection], head=$('tableHead'), body=$('tableBody');head.replaceChildren();body.replaceChildren();
+ const hr=document.createElement('tr');[...config.columns,''].forEach((col)=>{const th=document.createElement('th');th.textContent=col===''?'إجراءات':config.fields.find(x=>x.name===col)?.label||col;hr.append(th)});head.append(hr);
+ const term=$('searchInput').value.trim().toLowerCase();
+ const filtered=records.filter(row=>!term||Object.values(row).some(v=>String(v??'').toLowerCase().includes(term)));
+ if(!filtered.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=config.columns.length+1;td.className='empty';td.textContent=records.length?'لا توجد نتائج مطابقة.':'لا يوجد محتوى بعد. ابدأ بإضافة أول سجل.';tr.append(td);body.append(tr);return;}
+ filtered.forEach(row=>{
+  const tr=document.createElement('tr');
+  config.columns.forEach(col=>{const td=document.createElement('td');let val=row[col];if(col==='status'||col==='is_published'){const badge=document.createElement('span');badge.className='pill '+(String(val));badge.textContent=statusLabel(val);td.append(badge);}else if(col.endsWith('_at')||col.endsWith('_on')){td.textContent=val?new Date(val).toLocaleString('ar-EG'):'—';}else{td.textContent=safeCell(val);if(col==='title_ar'||col==='edition_number')td.className='titlecell';}tr.append(td);});
+  const actions=document.createElement('td'),wrap=document.createElement('div');wrap.className='actions';
+  const edit=document.createElement('button');edit.className='smallbtn btn-light';edit.textContent='تعديل';edit.addEventListener('click',()=>openEditor(row));
+  const del=document.createElement('button');del.className='smallbtn btn-danger';del.textContent='حذف';del.addEventListener('click',()=>deleteRecord(row.id));
+  wrap.append(edit,del);actions.append(wrap);tr.append(actions);body.append(tr);
+ });
+}
+function makeField(def,value){
+ const wrap=document.createElement('div');wrap.className='field'+(def.full?' full':'');
+ const label=document.createElement('label');label.textContent=def.label+(def.required?' *':'');wrap.append(label);
+ let input;
+ if(def.type==='textarea'){input=document.createElement('textarea');input.value=Array.isArray(value)?value.join('\n'):value??'';}
+ else if(def.type==='select'){input=document.createElement('select');const blank=document.createElement('option');blank.value='';blank.textContent='اختر...';input.append(blank);def.options.forEach(opt=>{const o=document.createElement('option');o.value=opt;o.textContent=statusLabel(opt);input.append(o)});input.value=value??'';}
+ else if(def.type==='edition'){input=document.createElement('select');const blank=document.createElement('option');blank.value='';blank.textContent='اختر الدورة...';input.append(blank);editionOptions.forEach(e=>{const o=document.createElement('option');o.value=e.id;o.textContent='الدورة '+e.edition_number+' — '+e.title_ar;input.append(o)});input.value=value??'';input.required=def.required;}
+ else if(def.type==='checkbox'){input=document.createElement('input');input.type='checkbox';input.checked=Boolean(value);const line=document.createElement('label');line.className='check';line.append(input,document.createTextNode(def.label));wrap.replaceChildren(line);input.dataset.field=def.name;return wrap;}
+ else if(def.type==='image'){
+  const row=document.createElement('div');row.className='uploadline';input=document.createElement('input');input.type='url';input.placeholder='رابط الصورة أو ارفع ملفًا';input.value=value??'';
+  const file=document.createElement('input');file.type='file';file.accept='image/jpeg,image/png,image/webp,image/avif';
+  file.addEventListener('change',async()=>{const picked=file.files?.[0];if(!picked)return;if(picked.size>10*1024*1024){showMsg($('appMsg'),'حجم الصورة يجب ألا يتجاوز 10 ميجابايت.','error');file.value='';return;}try{file.disabled=true;const ext=(picked.name.split('.').pop()||'jpg').toLowerCase().replace(/[^a-z0-9]/g,'');const path=currentSection+'/'+crypto.randomUUID()+'.'+ext;const {error}=await supabase.storage.from('public-media').upload(path,picked,{cacheControl:'3600',upsert:false,contentType:picked.type});if(error)throw error;const {data}=supabase.storage.from('public-media').getPublicUrl(path);input.value=data.publicUrl;showMsg($('appMsg'),'تم رفع الصورة بنجاح. احفظ السجل لتثبيت الرابط.','ok');}catch(e){showMsg($('appMsg'),'تعذر رفع الصورة: '+e.message,'error')}finally{file.disabled=false;}});
+  row.append(input,file);wrap.append(row);if(value){const img=document.createElement('img');img.src=value;img.alt='معاينة الصورة';img.loading='lazy';wrap.append(img);}input.dataset.field=def.name;input.required=def.required;return wrap;
+ }
+ else{input=document.createElement('input');input.type=def.type==='number'?'number':def.type==='datetime'?'datetime-local':def.type==='date'?'date':def.type==='url'?'url':'text';input.value=def.type==='datetime'||def.type==='date'?toInputDate(value,def.type):value??'';}
+ input.dataset.field=def.name;input.required=def.required;
+ if(def.type==='text'&&def.name==='title_ar')input.addEventListener('input',()=>{const slug=$('formFields').querySelector('[data-field="slug"]');if(slug&&!slug.dataset.manual)slug.value=slugify(input.value);});
+ if(def.name==='slug'){if(value)input.dataset.manual='1';input.addEventListener('input',()=>input.dataset.manual='1');}
+ wrap.append(input);return wrap;
+}
+async function openEditor(row=null){
+ editingId=row?.id||null;hideMsg($('appMsg'));
+ if(currentSection==='festival_events'||currentSection==='workshops'||currentSection==='open_calls')await loadEditions();
+ $('formFields').replaceChildren(...sections[currentSection].fields.map(def=>makeField(def,row?.[def.name])));
+ $('editorTitle').textContent=editingId?'تعديل المحتوى':'إضافة محتوى جديد';$('saveBtn').textContent=editingId?'حفظ التعديلات':'حفظ المحتوى';$('editor').classList.add('open');$('editor').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function closeEditor(){$('editor').classList.remove('open');$('recordForm').reset();editingId=null;}
+function readForm(){
+ const result={};sections[currentSection].fields.forEach(def=>{const el=$('formFields').querySelector('[data-field="'+def.name+'"]');if(!el)return;let value;
+ if(def.type==='checkbox')value=el.checked;
+ else if(def.type==='number')value=el.value===''?null:Number(el.value);
+ else if(def.type==='datetime')value=el.value?new Date(el.value).toISOString():null;
+ else if(def.type==='date')value=el.value||null;
+ else if(def.name==='gallery_urls')value=el.value.split('\n').map(x=>x.trim()).filter(Boolean);
+ else value=el.value.trim()||null;
+ result[def.name]=value;
+ });
+ if(currentSection==='news_posts'&&result.status==='published'&&!result.published_at)result.published_at=new Date().toISOString();
+ if(currentSection==='app_announcements'&&result.is_published&&!result.publish_at)result.publish_at=new Date().toISOString();
+ if(currentSection==='festival_events'&&result.edition_id==='')throw new Error('اختر دورة المهرجان المرتبطة بالفعالية.');
+ if(currentSection==='news_posts'||currentSection==='productions'||currentSection==='festival_editions'||currentSection==='workshops'||currentSection==='open_calls')if(!result.slug)result.slug=slugify(result.title_ar);
+ if(['news_posts','productions','festival_editions','workshops','open_calls'].includes(currentSection)&&!result.slug)throw new Error('أدخل عنوان المحتوى لإنشاء الرابط المختصر.');
+ if(!editingId&&currentSection==='news_posts')result.created_by=currentUser.id;
+ if(!editingId&&currentSection==='app_announcements')result.created_by=currentUser.id;
+ return result;
+}
+async function saveRecord(event){
+ event.preventDefault();const btn=$('saveBtn');btn.disabled=true;hideMsg($('appMsg'));
+ try{const payload=readForm();let q=supabase.from(sections[currentSection].table);const result=editingId?await q.update(payload).eq('id',editingId).select().single():await q.insert(payload).select().single();if(result.error)throw result.error;showMsg($('appMsg'),editingId?'تم حفظ التعديلات بنجاح.':'تمت إضافة المحتوى بنجاح.','ok');closeEditor();await loadRecords();renderStats();}
+ catch(e){showMsg($('appMsg'),'لم يتم الحفظ: '+(e.message||String(e)),'error');}
+ finally{btn.disabled=false;}
+}
+async function deleteRecord(id){
+ if(!confirm('هل أنت متأكد من حذف هذا السجل؟ لا يمكن التراجع عن الحذف.'))return;
+ try{const {error}=await supabase.from(sections[currentSection].table).delete().eq('id',id);if(error)throw error;showMsg($('appMsg'),'تم حذف السجل.','ok');await loadRecords();renderStats();}
+ catch(e){showMsg($('appMsg'),'تعذر الحذف: '+e.message,'error');}
+}
+async function selectSection(name){
+ currentSection=name;document.querySelectorAll('.navbtn').forEach(b=>b.classList.toggle('active',b.dataset.section===name));
+ $('sectionTitle').textContent=sections[name].title;$('sectionHint').textContent=sections[name].hint;$('searchInput').value='';closeEditor();hideMsg($('appMsg'));
+ try{await loadRecords();}catch(e){showMsg($('appMsg'),'تعذر تحميل البيانات: '+e.message,'error');}
+}
+async function enterApp(user){
+ currentUser=user;$('userEmail').textContent=user.email||'';const member=await verifyAdmin(user);
+ if(!member){view('noAccessView');return;}
+ view('appView');$('logoutBtn').classList.remove('hidden');renderStats();await selectSection('news_posts');
+}
+async function handleLogin(event){
+ event.preventDefault();hideMsg($('loginMsg'));const button=$('loginForm').querySelector('button');button.disabled=true;
+ try{const {data,error}=await supabase.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});if(error)throw error;await enterApp(data.user);}
+ catch(e){showMsg($('loginMsg'),'تعذر تسجيل الدخول: '+e.message,'error');}
+ finally{button.disabled=false;}
+}
+async function logout(){await supabase.auth.signOut();currentUser=null;$('logoutBtn').classList.add('hidden');$('userEmail').textContent='';view('loginView');}
+$('loginForm').addEventListener('submit',handleLogin);
+$('logoutBtn').addEventListener('click',logout);$('noAccessLogout').addEventListener('click',logout);
+$('nav').addEventListener('click',e=>{const btn=e.target.closest('[data-section]');if(btn)selectSection(btn.dataset.section);});
+$('addBtn').addEventListener('click',()=>openEditor());
+$('closeEditor').addEventListener('click',closeEditor);$('cancelBtn').addEventListener('click',closeEditor);
+$('recordForm').addEventListener('submit',saveRecord);$('searchInput').addEventListener('input',renderTable);
+$('userEmail').textContent='';
+const {data:{session}}=await supabase.auth.getSession();
+if(session?.user){try{await enterApp(session.user);}catch(e){showMsg($('loginMsg'),'تعذر التحقق من صلاحيات الحساب: '+e.message,'error');view('loginView');}}
+</script>
+</body>
+</html>
