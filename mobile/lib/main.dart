@@ -55,7 +55,7 @@ class _TeatroBootstrapState extends State<TeatroBootstrap> {
           ),
         ),
       ),
-      locale: Locale(english ? 'en' : 'ar'),
+      locale: Locale(_english ? 'en' : 'ar'),
       supportedLocales: const [Locale('ar'), Locale('en')],
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
@@ -64,7 +64,7 @@ class _TeatroBootstrapState extends State<TeatroBootstrap> {
       ],
       home: widget.configured
           ? TeatroShell(
-              english: english,
+              english: _english,
               onLanguageChanged: () => setState(() => _english = !_english),
             )
           : const SetupRequiredPage(),
