@@ -236,7 +236,7 @@ class _ActivitiesPageState extends State<ActivitiesPage>
                 Text(date, style: const TextStyle(color: _activityAccent)),
               ],
               const SizedBox(height: 12),
-              SelectableText(description, style: const TextStyle(height: 1.7, color: Colors.white80)),
+              SelectableText(description, style: const TextStyle(height: 1.7, color: Colors.white70)),
               if (url != null && url.isNotEmpty) ...[
                 const SizedBox(height: 18),
                 FilledButton.icon(
