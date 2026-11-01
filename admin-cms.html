@@ -168,7 +168,7 @@ function makeField(def,value){
  let input;
  if(def.type==='textarea'){input=document.createElement('textarea');input.value=Array.isArray(value)?value.join('\n'):value??'';}
  else if(def.type==='select'){input=document.createElement('select');const blank=document.createElement('option');blank.value='';blank.textContent='اختر...';input.append(blank);def.options.forEach(opt=>{const o=document.createElement('option');o.value=opt;o.textContent=statusLabel(opt);input.append(o)});input.value=value??'';}
- else if(def.type==='edition'){input=document.createElement('select');const blank=document.createElement('option');blank.value='';blank.textContent='اختر الدورة...';input.append(blank);editionOptions.forEach(e=>{const o=document.createElement('option');o.value=e.id;o.textContent='الدورة '+e.edition_number+' — '+e.title_ar;input.append(o)});input.value=value??'';}
+ else if(def.type==='edition'){input=document.createElement('select');const blank=document.createElement('option');blank.value='';blank.textContent='اختر الدورة...';input.append(blank);editionOptions.forEach(e=>{const o=document.createElement('option');o.value=e.id;o.textContent='الدورة '+e.edition_number+' — '+e.title_ar;input.append(o)});input.value=value??'';input.required=def.required;}
  else if(def.type==='checkbox'){input=document.createElement('input');input.type='checkbox';input.checked=Boolean(value);const line=document.createElement('label');line.className='check';line.append(input,document.createTextNode(def.label));wrap.replaceChildren(line);input.dataset.field=def.name;return wrap;}
  else if(def.type==='image'){
   const row=document.createElement('div');row.className='uploadline';input=document.createElement('input');input.type='url';input.placeholder='رابط الصورة أو ارفع ملفًا';input.value=value??'';
@@ -179,7 +179,7 @@ function makeField(def,value){
  else{input=document.createElement('input');input.type=def.type==='number'?'number':def.type==='datetime'?'datetime-local':def.type==='date'?'date':def.type==='url'?'url':'text';input.value=def.type==='datetime'||def.type==='date'?toInputDate(value,def.type):value??'';}
  input.dataset.field=def.name;input.required=def.required;
  if(def.type==='text'&&def.name==='title_ar')input.addEventListener('input',()=>{const slug=$('formFields').querySelector('[data-field="slug"]');if(slug&&!slug.dataset.manual)slug.value=slugify(input.value);});
- if(def.name==='slug')input.addEventListener('input',()=>input.dataset.manual='1');
+ if(def.name==='slug'){if(value)input.dataset.manual='1';input.addEventListener('input',()=>input.dataset.manual='1');}
  wrap.append(input);return wrap;
 }
 async function openEditor(row=null){
@@ -203,11 +203,9 @@ function readForm(){
  if(currentSection==='app_announcements'&&result.is_published&&!result.publish_at)result.publish_at=new Date().toISOString();
  if(currentSection==='festival_events'&&result.edition_id==='')throw new Error('اختر دورة المهرجان المرتبطة بالفعالية.');
  if(currentSection==='news_posts'||currentSection==='productions'||currentSection==='festival_editions'||currentSection==='workshops'||currentSection==='open_calls')if(!result.slug)result.slug=slugify(result.title_ar);
- if(currentSection==='news_posts'||currentSection==='productions'||currentSection==='festival_editions'||currentSection==='workshops'||currentSection==='open_calls')if(!result.slug)throw new Error('تعذر إنشاء الرابط المختصر. أدخل عنوانًا بالعربية أو الإنجليزية.');
- if(currentSection==='news_posts'||currentSection==='productions'||currentSection==='festival_editions'||currentSection==='workshops'||currentSection==='open_calls')if(!result.slug)throw new Error('الرابط المختصر مطلوب.');
- if(currentSection==='news_posts'||currentSection==='productions'||currentSection==='festival_editions'||currentSection==='workshops'||currentSection==='open_calls')if(!result.slug)throw new Error('اكتب عنوان المحتوى أولًا.');
- if(currentSection==='news_posts')result.created_by=currentUser.id;
- if(currentSection==='app_announcements')result.created_by=currentUser.id;
+ if(['news_posts','productions','festival_editions','workshops','open_calls'].includes(currentSection)&&!result.slug)throw new Error('أدخل عنوان المحتوى لإنشاء الرابط المختصر.');
+ if(!editingId&&currentSection==='news_posts')result.created_by=currentUser.id;
+ if(!editingId&&currentSection==='app_announcements')result.created_by=currentUser.id;
  return result;
 }
 async function saveRecord(event){
