@@ -51,8 +51,6 @@ APK output:
 6. Test on Android devices, generate signed release bundle (AAB), and publish to Google Play.
 
 ## Configuration
-The GitHub Actions workflow expects repository secrets:
-- `SUPABASE_URL`
-- `SUPABASE_PUBLISHABLE_KEY`
+The app contains the Supabase project URL and its **publishable** key as client configuration. Publishable keys are designed for public clients; Row Level Security is the actual access boundary. The app never contains a service-role or secret key.
 
-The workflow builds an APK artifact; it does not publish to Google Play automatically.
+The GitHub Actions workflow builds an APK artifact; it does not publish to Google Play automatically.
