@@ -582,7 +582,7 @@ class ContentCard extends StatelessWidget {
                     width: 94,
                     height: 112,
                     fit: BoxFit.cover,
-                    errorBuilder: (_, __, ___) => _imagePlaceholder(),
+                    errorBuilder: (_, _, _) => _imagePlaceholder(),
                   ),
                 )
               else
