@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 const _supabaseUrl = String.fromEnvironment('SUPABASE_URL');
 const _supabaseKey = String.fromEnvironment('SUPABASE_PUBLISHABLE_KEY');
@@ -18,9 +19,16 @@ Future<void> main() async {
   runApp(TeatroBootstrap(configured: configured));
 }
 
-class TeatroBootstrap extends StatelessWidget {
+class TeatroBootstrap extends StatefulWidget {
   const TeatroBootstrap({super.key, required this.configured});
   final bool configured;
+
+  @override
+  State<TeatroBootstrap> createState() => _TeatroBootstrapState();
+}
+
+class _TeatroBootstrapState extends State<TeatroBootstrap> {
+  bool _english = false;
 
   @override
   Widget build(BuildContext context) {
@@ -47,14 +55,19 @@ class TeatroBootstrap extends StatelessWidget {
           ),
         ),
       ),
-      locale: const Locale('ar'),
+      locale: Locale(_english ? 'en' : 'ar'),
       supportedLocales: const [Locale('ar'), Locale('en')],
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      home: configured ? const TeatroShell() : const SetupRequiredPage(),
+      home: widget.configured
+          ? TeatroShell(
+              english: english,
+              onLanguageChanged: () => setState(() => _english = !_english),
+            )
+          : const SetupRequiredPage(),
     );
   }
 }
@@ -97,7 +110,9 @@ class SetupRequiredPage extends StatelessWidget {
 }
 
 class TeatroShell extends StatefulWidget {
-  const TeatroShell({super.key});
+  const TeatroShell({super.key, required this.english, required this.onLanguageChanged});
+  final bool english;
+  final VoidCallback onLanguageChanged;
 
   @override
   State<TeatroShell> createState() => _TeatroShellState();
@@ -105,14 +120,13 @@ class TeatroShell extends StatefulWidget {
 
 class _TeatroShellState extends State<TeatroShell> {
   int _index = 0;
-  bool _english = false;
-
   @override
   Widget build(BuildContext context) {
+    final english = widget.english;
     final pages = [
-      HomePage(english: _english),
+      HomePage(english: english),
       ContentListPage(
-        english: _english,
+        english: english,
         table: 'news_posts',
         titleAr: 'الأخبار',
         titleEn: 'News',
@@ -121,7 +135,7 @@ class _TeatroShellState extends State<TeatroShell> {
         dateColumn: 'published_at',
       ),
       ContentListPage(
-        english: _english,
+        english: english,
         table: 'productions',
         titleAr: 'العروض',
         titleEn: 'Productions',
@@ -129,8 +143,8 @@ class _TeatroShellState extends State<TeatroShell> {
         subtitleEn: 'Theatre productions archive',
         dateColumn: 'production_year',
       ),
-      FestivalPage(english: _english),
-      MorePage(english: _english),
+      FestivalPage(english: english),
+      MorePage(english: english),
     ];
 
     return Scaffold(
@@ -144,7 +158,7 @@ class _TeatroShellState extends State<TeatroShell> {
         ),
         actions: [
           TextButton(
-            onPressed: () => setState(() => _english = !_english),
+            onPressed: widget.onLanguageChanged,
             child: Text(_english ? 'عربي' : 'EN'),
           ),
           const SizedBox(width: 8),
@@ -233,17 +247,11 @@ class HomePage extends StatelessWidget {
           return const LoadingView();
         }
         if (snapshot.hasError) {
-          return ErrorView(
-            english: english,
-            message: snapshot.error.toString(),
-            onRetry: () => (context as Element).markNeedsBuild(),
-          );
+          return ErrorView(english: english, message: snapshot.error.toString());
         }
         final data = snapshot.data!;
         final festival = data['festival']!.isEmpty ? null : data['festival']!.first;
-        return RefreshIndicator(
-          onRefresh: () async => _load(),
-          child: ListView(
+        return ListView(
             padding: const EdgeInsets.fromLTRB(18, 18, 18, 32),
             children: [
               Container(
@@ -465,7 +473,10 @@ class MorePage extends StatelessWidget {
                 title: Text(item.$2),
                 subtitle: Text(item.$3, style: const TextStyle(fontSize: 11)),
                 trailing: const Icon(Icons.open_in_new, size: 18),
-                onTap: () {},
+                onTap: () async {
+                  final uri = Uri.parse(item.$3);
+                  await launchUrl(uri, mode: LaunchMode.externalApplication);
+                },
               ),
             )),
         const SizedBox(height: 18),
