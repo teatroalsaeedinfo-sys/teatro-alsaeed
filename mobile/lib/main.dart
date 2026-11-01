@@ -132,24 +132,8 @@ class _TeatroShellState extends State<TeatroShell> {
     final english = widget.english;
     final pages = [
       HomePage(english: english),
-      ContentListPage(
-        english: english,
-        table: 'news_posts',
-        titleAr: 'الأخبار',
-        titleEn: 'News',
-        subtitleAr: 'آخر أخبار وأنشطة تياترو الصعيد',
-        subtitleEn: 'Latest news and activities',
-        dateColumn: 'published_at',
-      ),
-      ContentListPage(
-        english: english,
-        table: 'productions',
-        titleAr: 'العروض',
-        titleEn: 'Productions',
-        subtitleAr: 'أرشيف العروض المسرحية',
-        subtitleEn: 'Theatre productions archive',
-        dateColumn: 'production_year',
-      ),
+      TeatroPage(english: english),
+      WorkshopsShowsPage(english: english),
       FestivalPage(english: english),
       MorePage(english: english),
     ];
@@ -182,14 +166,14 @@ class _TeatroShellState extends State<TeatroShell> {
             label: english ? 'Home' : 'الرئيسية',
           ),
           NavigationDestination(
-            icon: const Icon(Icons.article_outlined),
-            selectedIcon: const Icon(Icons.article),
-            label: english ? 'News' : 'الأخبار',
+            icon: const Icon(Icons.groups_2_outlined),
+            selectedIcon: const Icon(Icons.groups_2),
+            label: english ? 'Teatro' : 'تياترو',
           ),
           NavigationDestination(
             icon: const Icon(Icons.theater_comedy_outlined),
             selectedIcon: const Icon(Icons.theater_comedy),
-            label: english ? 'Shows' : 'العروض',
+            label: english ? 'Workshops & Shows' : 'الورش والعروض',
           ),
           NavigationDestination(
             icon: const Icon(Icons.event_outlined),
@@ -210,6 +194,108 @@ String localized(Map<String, dynamic> row, String ar, String en, bool english) {
   final preferred = row[english ? en : ar];
   final fallback = row[english ? ar : en];
   return (preferred ?? fallback ?? '').toString();
+}
+
+class TeatroPage extends StatelessWidget {
+  const TeatroPage({super.key, required this.english});
+  final bool english;
+
+  @override
+  Widget build(BuildContext context) {
+    final sections = [
+      (Icons.groups_outlined, english ? 'The troupe' : 'الفرقة',
+        english ? 'Our artists, productions and creative journey' : 'أخبار الفرقة وفنانيها وإنتاجها المسرحي',
+        'https://teatroalsaeed.org/troupe'),
+      (Icons.school_outlined, english ? 'The academy' : 'الأكاديمية',
+        english ? 'Training programmes and learning opportunities' : 'الورش التدريبية والبرامج التعليمية وفرص التعلم',
+        'https://teatroalsaeed.org/academy'),
+      (Icons.lightbulb_outline, english ? 'Sahara project' : 'مشروع صحارة',
+        english ? 'Reviving the performing arts heritage of Upper Egypt' : 'إحياء تراث الفنون الأدائية في صعيد مصر',
+        'https://teatroalsaeed.org/sahara'),
+    ];
+    return ListView(
+      padding: const EdgeInsets.fromLTRB(18, 20, 18, 30),
+      children: [
+        Text(english ? 'Teatro AlSaeed' : 'تياترو الصعيد',
+          style: const TextStyle(fontSize: 29, fontWeight: FontWeight.w900)),
+        const SizedBox(height: 6),
+        Text(english ? 'News, people and programmes' : 'أخبارنا وفريقنا وبرامجنا',
+          style: const TextStyle(color: Colors.white60, fontSize: 14)),
+        const SizedBox(height: 20),
+        for (final item in sections)
+          Card(
+            margin: const EdgeInsets.only(bottom: 12),
+            child: ListTile(
+              contentPadding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+              leading: Icon(item.$1, color: _accent, size: 30),
+              title: Text(item.$2, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+              subtitle: Padding(
+                padding: const EdgeInsets.only(top: 6),
+                child: Text(item.$3, style: const TextStyle(color: Colors.white60, height: 1.5)),
+              ),
+              trailing: const Icon(Icons.arrow_outward, color: Colors.white54),
+              onTap: () async {
+                final uri = Uri.parse(item.$4);
+                await launchUrl(uri, mode: LaunchMode.externalApplication);
+              },
+            ),
+          ),
+        const SectionHeading(title: ' '),
+        Text(english ? 'Latest news' : 'آخر الأخبار',
+          style: const TextStyle(fontSize: 21, fontWeight: FontWeight.w900)),
+        const SizedBox(height: 10),
+        SizedBox(
+          height: 300,
+          child: ContentListPage(
+            english: english, table: 'news_posts',
+            titleAr: 'الأخبار', titleEn: 'News',
+            subtitleAr: 'آخر أخبار تياترو الصعيد', subtitleEn: 'Latest Teatro AlSaeed news',
+            dateColumn: 'published_at',
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+class WorkshopsShowsPage extends StatefulWidget {
+  const WorkshopsShowsPage({super.key, required this.english});
+  final bool english;
+  @override
+  State<WorkshopsShowsPage> createState() => _WorkshopsShowsPageState();
+}
+
+class _WorkshopsShowsPageState extends State<WorkshopsShowsPage>
+    with SingleTickerProviderStateMixin {
+  late final TabController _tabs = TabController(length: 2, vsync: this);
+  @override
+  void dispose() { _tabs.dispose(); super.dispose(); }
+
+  @override
+  Widget build(BuildContext context) {
+    final en = widget.english;
+    return Column(children: [
+      Padding(
+        padding: const EdgeInsets.fromLTRB(18, 16, 18, 8),
+        child: Align(alignment: AlignmentDirectional.centerStart,
+          child: Text(en ? 'Workshops & performances' : 'الورش والعروض',
+            style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w900))),
+      ),
+      TabBar(controller: _tabs, labelColor: _accent, tabs: [
+        Tab(text: en ? 'Workshops & applications' : 'الورش والتقديم'),
+        Tab(text: en ? 'Performances & archive' : 'العروض والحجز'),
+      ]),
+      Expanded(child: TabBarView(controller: _tabs, children: [
+        ActivitiesPage(english: en),
+        ContentListPage(
+          english: en, table: 'productions',
+          titleAr: 'العروض المسرحية', titleEn: 'Theatre productions',
+          subtitleAr: 'اكتشف عروض تياترو الصعيد', subtitleEn: 'Discover our theatre productions',
+          dateColumn: 'production_year',
+        ),
+      ])),
+    ]);
+  }
 }
 
 class HomePage extends StatelessWidget {
