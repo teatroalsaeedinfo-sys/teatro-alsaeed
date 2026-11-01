@@ -3,8 +3,14 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-const _supabaseUrl = String.fromEnvironment('SUPABASE_URL');
-const _supabaseKey = String.fromEnvironment('SUPABASE_PUBLISHABLE_KEY');
+const _supabaseUrl = String.fromEnvironment(
+  'SUPABASE_URL',
+  defaultValue: 'https://cusdjhfdhimoucjvxsmr.supabase.co',
+);
+const _supabaseKey = String.fromEnvironment(
+  'SUPABASE_PUBLISHABLE_KEY',
+  defaultValue: 'sb_publishable_3TMqOmzhy8kTr0MMGGhwuA_eqhcTfI-',
+);
 const _accent = Color(0xFF2BB3B1);
 
 Future<void> main() async {
