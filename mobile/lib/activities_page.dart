@@ -136,7 +136,7 @@ class _ActivitiesPageState extends State<ActivitiesPage>
       child: ListView.separated(
         padding: const EdgeInsets.all(16),
         itemCount: rows.length,
-        separatorBuilder: (_, __) => const SizedBox(height: 10),
+        separatorBuilder: (_, _) => const SizedBox(height: 10),
         itemBuilder: (context, index) => _card(rows[index], type),
       ),
     );
@@ -178,7 +178,7 @@ class _ActivitiesPageState extends State<ActivitiesPage>
               ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Image.network(image.toString(), width: 86, height: 86, fit: BoxFit.cover,
-                  errorBuilder: (_, __, ___) => _placeholder()),
+                  errorBuilder: (_, _, _) => _placeholder()),
               )
             else
               _placeholder(),
@@ -228,7 +228,7 @@ class _ActivitiesPageState extends State<ActivitiesPage>
               if (image != null && image.isNotEmpty)
                 ClipRRect(borderRadius: BorderRadius.circular(14),
                   child: Image.network(image, width: double.infinity, height: 190, fit: BoxFit.cover,
-                    errorBuilder: (_, __, ___) => const SizedBox.shrink())),
+                    errorBuilder: (_, _, _) => const SizedBox.shrink())),
               const SizedBox(height: 16),
               Text(title, style: const TextStyle(fontSize: 22, fontWeight: FontWeight.w900)),
               if (date.isNotEmpty) ...[
