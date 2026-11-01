@@ -364,7 +364,7 @@ class ContentListPage extends StatelessWidget {
         .from(table)
         .select()
         .eq('status', 'published')
-        .order(dateColumn, ascending: false, nullsFirst: false)
+        .order(dateColumn, ascending: false)
         .limit(50);
     return List<Map<String, dynamic>>.from(rows);
   }
