@@ -154,6 +154,8 @@ class _ActivitiesPageState extends State<ActivitiesPage>
       2 => _value(row, 'description_ar', 'description_en'),
       _ => _value(row, 'message_ar', 'message_en'),
     };
+    final venue = type == 0 || type == 1 ? _value(row, 'venue_ar', 'venue_en') : '';
+    final trainer = type == 0 ? _value(row, 'trainer_ar', 'trainer_en') : '';
     final date = switch (type) {
       0 => _date(row['starts_at']),
       1 => _date(row['starts_at']),
@@ -170,7 +172,7 @@ class _ActivitiesPageState extends State<ActivitiesPage>
     return Card(
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        onTap: () => _details(title, description, date, image?.toString(), actionUrl?.toString(), actionLabel),
+        onTap: () => _details(title, description, date, image?.toString(), actionUrl?.toString(), actionLabel, venue, trainer),
         child: Padding(
           padding: const EdgeInsets.all(14),
           child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -188,6 +190,14 @@ class _ActivitiesPageState extends State<ActivitiesPage>
               if (date.isNotEmpty) ...[
                 const SizedBox(height: 4),
                 Text(date, style: const TextStyle(color: _activityAccent, fontSize: 12)),
+              ],
+              if (venue.isNotEmpty) ...[
+                const SizedBox(height: 4),
+                Text(venue, style: const TextStyle(color: Colors.white54, fontSize: 12)),
+              ],
+              if (trainer.isNotEmpty) ...[
+                const SizedBox(height: 3),
+                Text(en ? 'Trainer: $trainer' : 'المدرب: $trainer', style: const TextStyle(color: Colors.white54, fontSize: 12)),
               ],
               if (description.isNotEmpty) ...[
                 const SizedBox(height: 6),
@@ -213,7 +223,7 @@ class _ActivitiesPageState extends State<ActivitiesPage>
   );
 
   void _details(String title, String description, String date, String? image,
-      String? url, String actionLabel) {
+      String? url, String actionLabel, String venue, String trainer) {
     showModalBottomSheet<void>(
       context: context,
       isScrollControlled: true,
@@ -234,6 +244,11 @@ class _ActivitiesPageState extends State<ActivitiesPage>
               if (date.isNotEmpty) ...[
                 const SizedBox(height: 8),
                 Text(date, style: const TextStyle(color: _activityAccent)),
+              ],
+              if (venue.isNotEmpty || trainer.isNotEmpty) ...[
+                const SizedBox(height: 8),
+                Text([if (trainer.isNotEmpty) (en ? 'Trainer: $trainer' : 'المدرب: $trainer'), if (venue.isNotEmpty) venue].join(' · '),
+                  style: const TextStyle(color: Colors.white60)),
               ],
               const SizedBox(height: 12),
               SelectableText(description, style: const TextStyle(height: 1.7, color: Colors.white70)),
