@@ -181,7 +181,7 @@ class _TeatroShellState extends State<TeatroShell> {
           NavigationDestination(
             icon: const Icon(Icons.theater_comedy_outlined),
             selectedIcon: const Icon(Icons.theater_comedy),
-            label: english ? 'Shows' : 'العروض',
+            label: english ? 'Workshops & Shows' : 'الورش والعروض',
           ),
           NavigationDestination(
             icon: const Icon(Icons.event_outlined),
