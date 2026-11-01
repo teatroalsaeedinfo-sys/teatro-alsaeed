@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'activities_page.dart';
 
 const _supabaseUrl = String.fromEnvironment(
   'SUPABASE_URL',
@@ -473,6 +474,22 @@ class MorePage extends StatelessWidget {
         Text(english ? 'Explore Teatro AlSaeed' : 'اكتشف تياترو الصعيد',
             style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w900)),
         const SizedBox(height: 16),
+        Card(
+          child: ListTile(
+            leading: const Icon(Icons.event_available, color: _accent),
+            title: Text(english ? 'Activities & updates' : 'الأنشطة والتحديثات'),
+            subtitle: Text(english
+                ? 'Workshops, festival events, open calls and app announcements'
+                : 'الورش وفعاليات المهرجان ودعوات المشاركة وإعلانات التطبيق'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => ActivitiesPage(english: english),
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 8),
         ...items.map((item) => Card(
               child: ListTile(
                 leading: Icon(item.$1, color: _accent),
