@@ -4,53 +4,47 @@ Flutter application for Teatro AlSaeed and Minya International Theatre Festival.
 
 ## Architecture
 - Flutter / Dart mobile client.
-- Supabase project: `cusdjhfdhimoucjvxsmr`.
-- Shared content database for the website and Android app.
-- Arabic-first UI with an English language toggle.
-- Public app access is read-only. Content editing belongs in the secured admin dashboard (separate workstream).
+- Dedicated Supabase project: `cusdjhfdhimoucjvxsmr`.
+- Website and app will consume the same published content.
+- Arabic-first interface with an Arabic / English toggle.
+- Public mobile client is read-only. Editing will be handled by a secured admin CMS.
 
 ## Local setup
-Install Flutter stable (Dart 3.9 or newer), then:
+Install Flutter stable with Dart 3.9 or newer:
 
 ```bash
 cd mobile
 flutter create --platforms=android --org org.teatroalsaeed .
 flutter pub get
-flutter run \
-  --dart-define=SUPABASE_URL=https://cusdjhfdhimoucjvxsmr.supabase.co \
-  --dart-define=SUPABASE_PUBLISHABLE_KEY=YOUR_PUBLISHABLE_KEY
+flutter run
 ```
 
-The publishable key is intended for client applications, but it is only safe when every exposed table is protected by RLS. Never put a Supabase secret or service_role key in the app.
+The Supabase project URL and **publishable** key are configured in the app. A publishable key is intended for client-side use; Row Level Security is the access boundary. Never add a Supabase secret or service_role key to Flutter, HTML, or any other public client.
 
 ## Android release
 ```bash
-flutter build apk --release \
-  --dart-define=SUPABASE_URL=https://cusdjhfdhimoucjvxsmr.supabase.co \
-  --dart-define=SUPABASE_PUBLISHABLE_KEY=YOUR_PUBLISHABLE_KEY
+flutter build apk --release
 ```
 
 APK output:
 `build/app/outputs/flutter-apk/app-release.apk`
 
-## Current first milestone
+## Implemented first milestone
 - Home screen with latest published news, productions and festival edition.
 - News list.
 - Productions archive.
 - Festival editions.
-- More links to the existing website.
+- Links to the existing official website.
 - Arabic / English UI toggle.
-- Read-only Supabase access using the publishable key.
+- Live, read-only Supabase queries.
 
-## Next milestones
-1. Admin account bootstrap and protected content management dashboard.
-2. Migrate verified website content into Supabase without deleting the static archive.
-3. Add event schedule, workshops and open-call detail pages.
+## Remaining delivery milestones
+1. Build a protected admin CMS and bootstrap the first owner account.
+2. Audit and migrate verified website content into Supabase without deleting the static archive.
+3. Add event schedules, workshop and open-call details.
 4. Add Firebase Cloud Messaging push notifications.
 5. Add deep links, app icons, privacy/terms screens and accessibility polish.
-6. Test on Android devices, generate signed release bundle (AAB), and publish to Google Play.
+6. Test on Android devices, generate a signed Android App Bundle (AAB), then submit to Google Play after owner approval.
 
-## Configuration
-The app contains the Supabase project URL and its **publishable** key as client configuration. Publishable keys are designed for public clients; Row Level Security is the actual access boundary. The app never contains a service-role or secret key.
-
-The GitHub Actions workflow builds an APK artifact; it does not publish to Google Play automatically.
+## Automation
+GitHub Actions runs Flutter analysis, widget tests and a release APK build on changes to this branch. The APK is uploaded as a workflow artifact; the workflow does not publish to Google Play.
