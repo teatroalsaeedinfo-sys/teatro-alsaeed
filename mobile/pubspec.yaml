@@ -12,6 +12,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   supabase_flutter: ^2.18.3
+  url_launcher: ^6.3.2
 
 dev_dependencies:
   flutter_test:
@@ -21,4 +22,3 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  url_launcher: ^6.3.2
