@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'activities_page.dart';
 
 const _supabaseUrl = String.fromEnvironment(
   'SUPABASE_URL',
@@ -140,15 +141,7 @@ class _TeatroShellState extends State<TeatroShell> {
         subtitleEn: 'Latest news and activities',
         dateColumn: 'published_at',
       ),
-      ContentListPage(
-        english: english,
-        table: 'productions',
-        titleAr: 'العروض',
-        titleEn: 'Productions',
-        subtitleAr: 'أرشيف العروض المسرحية',
-        subtitleEn: 'Theatre productions archive',
-        dateColumn: 'production_year',
-      ),
+      WorkshopsShowsPage(english: english),
       FestivalPage(english: english),
       MorePage(english: english),
     ];
@@ -188,7 +181,7 @@ class _TeatroShellState extends State<TeatroShell> {
           NavigationDestination(
             icon: const Icon(Icons.theater_comedy_outlined),
             selectedIcon: const Icon(Icons.theater_comedy),
-            label: english ? 'Shows' : 'العروض',
+            label: english ? 'Workshops & Shows' : 'الورش والعروض',
           ),
           NavigationDestination(
             icon: const Icon(Icons.event_outlined),
@@ -332,7 +325,6 @@ class HomePage extends StatelessWidget {
                       trailing: row['production_year']?.toString(),
                     )),
             ],
-          ),
         );
       },
     );
@@ -405,53 +397,116 @@ class ContentListPage extends StatelessWidget {
   }
 }
 
+class WorkshopsShowsPage extends StatelessWidget {
+  const WorkshopsShowsPage({super.key, required this.english});
+  final bool english;
+
+  Future<List<List<Map<String, dynamic>>>> _load() async {
+    final client = Supabase.instance.client;
+    final results = await Future.wait<dynamic>([
+      client.from('workshops').select().eq('status', 'published').order('starts_at').limit(40),
+      client.from('productions').select().eq('status', 'published').order('sort_order').limit(40),
+    ]);
+    return results.map((rows) => List<Map<String, dynamic>>.from(rows as List)).toList();
+  }
+
+  @override
+  Widget build(BuildContext context) => FutureBuilder<List<List<Map<String, dynamic>>>>(
+    future: _load(),
+    builder: (context, snapshot) {
+      if (snapshot.connectionState == ConnectionState.waiting) return const LoadingView();
+      if (snapshot.hasError) return ErrorView(english: english, message: snapshot.error.toString());
+      final groups = snapshot.data ?? [[], []];
+      return ListView(padding: const EdgeInsets.fromLTRB(18, 18, 18, 30), children: [
+        Text(english ? 'Workshops & Shows' : 'الورش والعروض',
+            style: const TextStyle(fontSize: 27, fontWeight: FontWeight.w900)),
+        const SizedBox(height: 6),
+        Text(english ? 'Learn, participate and book your theatre experience.'
+            : 'اتعلم، شارك، واحجز مكانك في تجربتك المسرحية.',
+            style: const TextStyle(color: Colors.white60)),
+        SectionHeading(title: english ? 'Workshops' : 'الورش التدريبية'),
+        if (groups[0].isEmpty) EmptyView(english: english)
+        else ...groups[0].map((row) => ContentCard(
+          row: row, english: english, titleAr: 'title_ar', titleEn: 'title_en',
+          descriptionAr: 'description_ar', descriptionEn: 'description_en',
+          imageField: 'cover_image_url',
+          trailing: row['starts_at'] == null ? null : DateTime.tryParse(row['starts_at'].toString())?.toLocal().toString().substring(0, 16),
+        )),
+        SectionHeading(title: english ? 'Our productions' : 'العروض المسرحية'),
+        if (groups[1].isEmpty) EmptyView(english: english)
+        else ...groups[1].map((row) => ContentCard(
+          row: row, english: english, titleAr: 'title_ar', titleEn: 'title_en',
+          descriptionAr: 'synopsis_ar', descriptionEn: 'synopsis_en',
+          imageField: 'poster_url', trailing: row['production_year']?.toString(),
+        )),
+      ]);
+    },
+  );
+}
+
 class FestivalPage extends StatelessWidget {
   const FestivalPage({super.key, required this.english});
   final bool english;
 
-  @override
-  Widget build(BuildContext context) {
-    return FutureBuilder<List<Map<String, dynamic>>>(
-      future: Supabase.instance.client
-          .from('festival_editions')
-          .select()
-          .eq('status', 'published')
-          .order('year', ascending: false),
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) return const LoadingView();
-        if (snapshot.hasError) return ErrorView(english: english, message: snapshot.error.toString());
-        final editions = snapshot.data ?? [];
-        return ListView(
-          padding: const EdgeInsets.all(18),
-          children: [
-            Text(
-              english ? 'Minya International Theatre Festival' : 'مهرجان المنيا المسرحي الدولي',
-              style: const TextStyle(fontSize: 27, fontWeight: FontWeight.w900),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              english ? 'Festival editions, events and activities.' : 'الدورات والفعاليات والأنشطة.',
-              style: const TextStyle(color: Colors.white60),
-            ),
-            const SizedBox(height: 18),
-            if (editions.isEmpty)
-              EmptyView(english: english)
-            else
-              ...editions.map((row) => ContentCard(
-                    row: row,
-                    english: english,
-                    titleAr: 'title_ar',
-                    titleEn: 'title_en',
-                    descriptionAr: 'slogan_ar',
-                    descriptionEn: 'slogan_en',
-                    imageField: 'hero_image_url',
-                    trailing: row['year']?.toString(),
-                  )),
-          ],
-        );
-      },
-    );
+  Future<List<List<Map<String, dynamic>>>> _load() async {
+    final client = Supabase.instance.client;
+    final editions = await client.from('festival_editions').select().eq('status', 'published').order('year', ascending: false).limit(5);
+    final events = await client.from('festival_events').select().eq('is_published', true).order('starts_at').limit(80);
+    final calls = await client.from('open_calls').select().inFilter('status', ['published', 'closed']).order('closes_at').limit(30);
+    return [
+      List<Map<String, dynamic>>.from(editions),
+      List<Map<String, dynamic>>.from(events),
+      List<Map<String, dynamic>>.from(calls),
+    ];
   }
+
+  @override
+  Widget build(BuildContext context) => FutureBuilder<List<List<Map<String, dynamic>>>>(
+    future: _load(),
+    builder: (context, snapshot) {
+      if (snapshot.connectionState == ConnectionState.waiting) return const LoadingView();
+      if (snapshot.hasError) return ErrorView(english: english, message: snapshot.error.toString());
+      final groups = snapshot.data ?? [[], [], []];
+      return ListView(padding: const EdgeInsets.fromLTRB(18, 18, 18, 30), children: [
+        Container(
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(18),
+            gradient: const LinearGradient(colors: [Color(0xFF17413F), Color(0xFF101717)],
+              begin: Alignment.topRight, end: Alignment.bottomLeft),
+            border: Border.all(color: _accent.withValues(alpha: .4)),
+          ),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            const Icon(Icons.theater_comedy, color: _accent, size: 34),
+            const SizedBox(height: 12),
+            Text(english ? 'Minya International Theatre Festival' : 'مهرجان المنيا المسرحي الدولي',
+              style: const TextStyle(fontSize: 24, fontWeight: FontWeight.w900)),
+            const SizedBox(height: 8),
+            Text(english ? 'Festival editions, programme, open calls and news.'
+              : 'دورات المهرجان وبرنامجه وفعالياته ودعوات المشاركة.',
+              style: const TextStyle(color: Colors.white70, height: 1.5)),
+          ]),
+        ),
+        SectionHeading(title: english ? 'Festival editions' : 'دورات المهرجان'),
+        if (groups[0].isEmpty) EmptyView(english: english)
+        else ...groups[0].map((row) => ContentCard(row: row, english: english,
+          titleAr: 'title_ar', titleEn: 'title_en', descriptionAr: 'description_ar',
+          descriptionEn: 'description_en', imageField: 'hero_image_url', trailing: row['year']?.toString())),
+        SectionHeading(title: english ? 'Events & programme' : 'الفعاليات والبرنامج'),
+        if (groups[1].isEmpty) EmptyView(english: english)
+        else ...groups[1].map((row) => ContentCard(row: row, english: english,
+          titleAr: 'title_ar', titleEn: 'title_en', descriptionAr: 'description_ar',
+          descriptionEn: 'description_en', imageField: 'cover_image_url',
+          trailing: row['starts_at'] == null ? null : DateTime.tryParse(row['starts_at'].toString())?.toLocal().toString().substring(0, 16))),
+        SectionHeading(title: english ? 'Open calls' : 'دعوات المشاركة'),
+        if (groups[2].isEmpty) EmptyView(english: english)
+        else ...groups[2].map((row) => ContentCard(row: row, english: english,
+          titleAr: 'title_ar', titleEn: 'title_en', descriptionAr: 'description_ar',
+          descriptionEn: 'description_en', imageField: 'cover_image_url',
+          trailing: row['closes_at'] == null ? null : (english ? 'Deadline: ' : 'آخر موعد: ') + DateTime.tryParse(row['closes_at'].toString())!.toLocal().toString().substring(0, 16))),
+      ]);
+    },
+  );
 }
 
 class MorePage extends StatelessWidget {
@@ -473,6 +528,22 @@ class MorePage extends StatelessWidget {
         Text(english ? 'Explore Teatro AlSaeed' : 'اكتشف تياترو الصعيد',
             style: const TextStyle(fontSize: 26, fontWeight: FontWeight.w900)),
         const SizedBox(height: 16),
+        Card(
+          child: ListTile(
+            leading: const Icon(Icons.event_available, color: _accent),
+            title: Text(english ? 'Activities & updates' : 'الأنشطة والتحديثات'),
+            subtitle: Text(english
+                ? 'Workshops, festival events, open calls and app announcements'
+                : 'الورش وفعاليات المهرجان ودعوات المشاركة وإعلانات التطبيق'),
+            trailing: const Icon(Icons.chevron_right),
+            onTap: () => Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (_) => ActivitiesPage(english: english),
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: 8),
         ...items.map((item) => Card(
               child: ListTile(
                 leading: Icon(item.$1, color: _accent),
@@ -566,7 +637,7 @@ class ContentCard extends StatelessWidget {
                     width: 94,
                     height: 112,
                     fit: BoxFit.cover,
-                    errorBuilder: (_, __, ___) => _imagePlaceholder(),
+                    errorBuilder: (_, _, _) => _imagePlaceholder(),
                   ),
                 )
               else

@@ -1,0 +1,62 @@
+name: Flutter Web Preview
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/app-activities-and-content
+    paths:
+      - "mobile/**"
+      - ".github/workflows/flutter-web-preview.yml"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-preview
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+
+      - name: Generate web platform files
+        working-directory: mobile
+        run: flutter create --platforms=web .
+
+      - name: Install dependencies
+        working-directory: mobile
+        run: flutter pub get
+
+      - name: Analyze Dart code
+        working-directory: mobile
+        run: flutter analyze
+
+      - name: Build web preview
+        working-directory: mobile
+        run: flutter build web --release --base-href /teatro-alsaeed/
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: mobile/build/web
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
