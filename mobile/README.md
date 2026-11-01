@@ -38,7 +38,7 @@ APK output:
 - Arabic / English UI toggle.
 - Live, read-only Supabase queries.
 
-## Remaining delivery milestones
+## Content management\nThe first Arabic admin CMS is available at the repository root as `admin-cms.html`. See [`docs/ADMIN-CMS-SETUP.md`](../docs/ADMIN-CMS-SETUP.md) for creating the first admin account and granting its database role.\n\n## Remaining delivery milestones
 1. Build a protected admin CMS and bootstrap the first owner account.
 2. Audit and migrate verified website content into Supabase without deleting the static archive.
 3. Add event schedules, workshop and open-call details.
