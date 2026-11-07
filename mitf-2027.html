@@ -444,7 +444,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #B5122A;outline-offset:3p
     root.lang=en?'en':'ar';root.dir=en?'ltr':'rtl';
     var btn=d.getElementById('langBtn');
     if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'Switch to Arabic':'التبديل إلى الإنجليزية');}
-    var mb=d.getElementById('menuBtn');if(mb&&!navOpen()){mb.setAttribute('aria-label',en?'Open menu':'فتح القائمة');}
+    var mb=d.getElementById('menuBtn');if(mb){var opened=navOpen();mb.setAttribute('aria-label',opened?(en?'Close menu':'إغلاق القائمة'):(en?'Open menu':'فتح القائمة'));}
     function navOpen(){var n=d.getElementById('navLinks');return !!(n&&n.classList.contains('open'));}
     if(save){try{KEYS.forEach(function(k){localStorage.setItem(k,lang);});}catch(e){}}
     var tm=d.querySelector('meta[name="x-title-en"]');
@@ -464,7 +464,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #B5122A;outline-offset:3p
       d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');var q=x.querySelector('.ta-dd-btn');if(q)q.setAttribute('aria-expanded','false');});
       if(!wasOpen){p.classList.add('open');dd.setAttribute('aria-expanded','true');}return;}
     if(t.closest('#navLinks a')){closeMenu();return;}
-    d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');});
+    d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');var z=x.querySelector('.ta-dd-btn');if(z)z.setAttribute('aria-expanded','false');});
     if(nav&&nav.classList.contains('open')&&!t.closest('#masterNav'))closeMenu();
   });
   d.addEventListener('keydown',function(e){if(e.key==='Escape'){closeMenu();d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');var z=x.querySelector('.ta-dd-btn');if(z)z.setAttribute('aria-expanded','false');});}});
