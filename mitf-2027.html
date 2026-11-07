@@ -444,7 +444,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #B5122A;outline-offset:3p
     root.lang=en?'en':'ar';root.dir=en?'ltr':'rtl';
     var btn=d.getElementById('langBtn');
     if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'Switch to Arabic':'التبديل إلى الإنجليزية');}
-    var mb=d.getElementById('menuBtn');if(mb&&!navOpen()){mb.setAttribute('aria-label',en?'Open menu':'فتح القائمة');}\n    function navOpen(){var n=d.getElementById('navLinks');return !!(n&&n.classList.contains('open'));}
+    var mb=d.getElementById('menuBtn');if(mb&&!navOpen()){mb.setAttribute('aria-label',en?'Open menu':'فتح القائمة');}
+    function navOpen(){var n=d.getElementById('navLinks');return !!(n&&n.classList.contains('open'));}
     if(save){try{KEYS.forEach(function(k){localStorage.setItem(k,lang);});}catch(e){}}
     var tm=d.querySelector('meta[name="x-title-en"]');
     if(tm){if(!window.__arTitle)window.__arTitle=d.title;d.title=en?tm.content:window.__arTitle;}
@@ -453,11 +454,11 @@ a:focus-visible,button:focus-visible{outline:3px solid #B5122A;outline-offset:3p
   window.TeatroLang={get:function(){return b.classList.contains('site-en')?'en':'ar';},set:function(l){apply(l==='en'?'en':'ar',true);}};
 
   var nav=d.getElementById('navLinks'),menu=d.getElementById('menuBtn'),bar=d.getElementById('masterNav');
-  function closeMenu(){if(!nav)return;nav.classList.remove('open');if(menu){menu.setAttribute('aria-expanded','false');menu.textContent='\u2630';}}
+  function closeMenu(){if(!nav)return;nav.classList.remove('open');if(menu){menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label',b.classList.contains('site-en')?'Open menu':'فتح القائمة');menu.textContent='\u2630';}}
   d.addEventListener('click',function(e){
     var t=e.target;if(!t.closest)return;
     if(t.closest('#langBtn')){e.preventDefault();apply(b.classList.contains('site-en')?'ar':'en',true);return;}
-    if(t.closest('#menuBtn')&&nav){e.preventDefault();var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o?'true':'false');menu.textContent=o?'\u00d7':'\u2630';return;}
+    if(t.closest('#menuBtn')&&nav){e.preventDefault();var o=nav.classList.toggle('open');menu.setAttribute('aria-expanded',o?'true':'false');menu.setAttribute('aria-label',o?(b.classList.contains('site-en')?'Close menu':'إغلاق القائمة'):(b.classList.contains('site-en')?'Open menu':'فتح القائمة'));menu.textContent=o?'\u00d7':'\u2630';return;}
     var dd=t.closest('.ta-dd-btn');
     if(dd){e.preventDefault();var p=dd.parentNode,wasOpen=p.classList.contains('open');
       d.querySelectorAll('.ta-dd.open').forEach(function(x){x.classList.remove('open');var q=x.querySelector('.ta-dd-btn');if(q)q.setAttribute('aria-expanded','false');});
