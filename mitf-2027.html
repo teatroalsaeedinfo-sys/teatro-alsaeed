@@ -443,7 +443,8 @@ a:focus-visible,button:focus-visible{outline:3px solid #B5122A;outline-offset:3p
     CLASSES.forEach(function(c){b.classList.toggle(c,en);});
     root.lang=en?'en':'ar';root.dir=en?'ltr':'rtl';
     var btn=d.getElementById('langBtn');
-    if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'Switch to Arabic':'التبديل إلى الإنجليزية');}\n    var mb=d.getElementById('menuBtn');if(mb&&!navOpen()){mb.setAttribute('aria-label',en?'Open menu':'فتح القائمة');}\n    function navOpen(){var n=d.getElementById('navLinks');return !!(n&&n.classList.contains('open'));}
+    if(btn){btn.textContent=en?'AR':'EN';btn.setAttribute('aria-label',en?'Switch to Arabic':'التبديل إلى الإنجليزية');}
+    var mb=d.getElementById('menuBtn');if(mb&&!navOpen()){mb.setAttribute('aria-label',en?'Open menu':'فتح القائمة');}\n    function navOpen(){var n=d.getElementById('navLinks');return !!(n&&n.classList.contains('open'));}
     if(save){try{KEYS.forEach(function(k){localStorage.setItem(k,lang);});}catch(e){}}
     var tm=d.querySelector('meta[name="x-title-en"]');
     if(tm){if(!window.__arTitle)window.__arTitle=d.title;d.title=en?tm.content:window.__arTitle;}
@@ -497,7 +498,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #B5122A;outline-offset:3p
      if(el.tagName==='A'){el.setAttribute('aria-disabled','true');el.setAttribute('tabindex','-1');el.classList.add('application-closed');el.removeAttribute('href');}
      else{el.disabled=true;el.setAttribute('aria-disabled','true');}
     });
-    if(statusSelector){var status=document.querySelector(statusSelector);if(status)status.textContent=closedText;}
+    if(statusSelector){var status=document.querySelector(statusSelector);if(status)status.textContent=document.body.classList.contains('site-en')?closedText:(prefix==='call-'?'أُغلق التقديم للفرق غير المصرية':'أُغلق التقديم للفرق المصرية');}
    }
   }
   tick();window.setInterval(tick,1000);
